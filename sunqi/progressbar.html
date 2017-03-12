@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>progress bar</title>
+</head>
+<body>
+<progress value="0" max="100" id="progressbar"></progress>
+</body>
+</html>
+<script type="text/javascript">
+	var p=0
+	var time=setInterval(function(){
+		p++;
+		progressbar.value=p;
+	},1000)
+</script>
