@@ -1,0 +1,45 @@
+<!doctype html>             
+<html lang="en">      
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+    <button>进度条</button>
+    <div class="test">
+    <div id="progress" style="width:10%"></div>
+    </div>
+	
+	<style type="text/css">  
+    .test{ 
+    width:350px;  
+    height:35px;  
+    border:2px 
+    solid #000;  
+   } 
+   #progress{  
+    float:left;
+    height:35px;  
+    line-height:25px; 
+    text-align:center;  
+    background:#B0C4DE;
+   }  
+   </style> 
+</body>
+</html>
+<script>
+ function start(){  
+    var jindutiao = document.getElementById("progress");  
+    jindutiao.style.width = parseInt(jindutiao.style.width) + 1 + "%";
+    jindutiao.innerHTML = jindutiao.style.width;  
+    if(jindutiao.style.width == "100%"){
+        window.clearInterval(time);  
+    }  
+ }  
+
+    var time = window.setInterval(function(){start();},100); 
+    window.onload = function(){  
+    time;  
+   }  
+	
+</script>
