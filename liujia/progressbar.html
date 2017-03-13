@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>progress bar</title>
+</head>
+<script> 
+var t;   
+function s(c) 
+{   
+	if(c<=100)   
+	{     
+		val.style.width=c+"%";     
+		percent.innerHTML=c+"%";     
+		btn.disabled=true;     
+		btnp.disabled=false;     
+		c=c+1;     
+		t=setTimeout("s("+c+")",500);   
+	}   
+}  
+ function c() 
+{   
+	clearTimeout(t);   
+	val.style.width="0px";   
+	percent.innerHTML="0%";   
+	btn.disabled=false;   
+	btnc.disabled=true;   
+	btnp.disabled=true;   
+	btnp.value='Pause'; 
+}   
+function p() 
+{   
+	var temp;   
+	if('Pause' == btnp.value)   
+		{     
+			clearTimeout(t);     
+			btnp.value='Go on';     
+			btnc.disabled=false;   
+		}   
+		else  
+		{     
+			temp=val.style.width;     
+			btnp.value='Pause';     
+			var k=parseInt(delEnd(temp));     
+			s(k);     
+			btnc.disabled=true;   
+		}   
+} 
+	
+</script>   
+<body> 
+<div id="bar" style="width:300px; height:30px; border:solid 1px; float:left;">  
+<div id="val" style="height:100%; background-color:#03F; width:0px;">
+</div> 
+</div> 
+<div id="percent" style="float:left; line-height:30px;">0%</div> 
+<input id="btn" type="button" value="Start" onClick="s(0)" /> <br /> 
+<input id="btnc" type="button" value="Clear" onClick="c()" disabled /> <br /> 
+<input id="btnp" type="button" value="Pause" onClick="p()" disabled /> <br />
+</body> 
+</html> 
