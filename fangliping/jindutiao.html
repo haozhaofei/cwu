@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>progress bar</title>
+</head>
+<script language="javascript">
+
+    var currentProgress = 0;
+ var time;
+ function begin(){
+  if (currentProgress == 100) {
+   currentProgress = 0;
+  }
+  if (time){
+   clearTimeout(time);
+  }
+  time = window.setTimeout("draw()", 100);
+ }
+ function draw() {
+  currentProgress = currentProgress + 10; 
+  if (currentProgress > 100){
+   currentProgress = 100;
+  }
+  document.getElementById("inner1").style.width = currentProgress + "%";
+  document.getElementById("inner1").style.visibility = "visible";
+  document.getElementById("testProgressText").innerText = (currentProgress + '%');
+  if (currentProgress == 100)
+  {
+   return;
+  }
+  window.setTimeout("draw()", 100);
+ }
+</script>
+
+<body>
+ <div id="testProgress" style="float:left;width:100px;height:12px;border:2px solid;">
+  <span id="inner1" style="width:0%;line-height:12px;visibility:hidden;background-color:#63;height: 12px;">
+  </span>
+ </div>
+  <div id="testProgressText" style="width:50px;height:12px;float:left;">
+  </div>
+ <button onClick="begin()">Test Here</button>
+</body>
+
+</html>
