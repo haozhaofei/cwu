@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style type="text/css">
+#loading{ 
+ background:#FF6100;    
+ height:20px; 
+ z-index:99999;          
+} 
+</style>
+</head>
+
+<body>
+  <div style="border:1px #000 solid; width:200px; height:20px;">
+  <div id="loading" style="width:0%">
+  </div> 
+  </div>
+</body>
+
+<script> 
+ function frame(){
+		 var bar=document.getElementById("loading");
+		 bar.style.width = parseInt(bar.style.width)+1+"%";
+		 if(bar.style.width=="100%")
+		 {
+			 bar.style.width="0%";
+			 frame();
+			// clearInterval(time);
+		 }
+	 }
+var time = setInterval(function(){frame();},100);
+</script>
+
+</html>
