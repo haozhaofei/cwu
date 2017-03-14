@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>倒计时</title>
+	<style type="text/css">
+	p{
+		color:Blue;
+		font-size: 26px;
+		
+	}
+	</style>
+</head>
+<body>
+     <p>倒计时</p>
+     <button id="hour">23</button>时
+     <button id="minute">59</button>分
+     <button id="second">59</button>秒
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <button onclick="stop()">暂停</button>
+</body>
+<script type="text/javascript">
+    var h = 23;
+	var m = 59;
+	var s = 59;
+	var time = setInterval(function(){
+		s--;
+		second.innerHTML = s;
+		minute.innerHTML = m;
+		hour.innerHTML = h;
+		if(s==0&&m!=0)
+		{
+			s=60;
+			m--;
+		}
+			
+		if(m == 0&&h!=0)
+		{
+			m=60;
+			m--;
+			h--;
+		}
+		if(s==0&&m==0&&h==0)
+	    {
+			second.style.color = "red";
+			second.style.fontSize = "35px";   
+			clearInterval(time);		
+		}
+	},1000)
+	
+
+	function stop()
+	{
+		clearInterval(time);
+	}
+
+	
+</script>
+</html>
