@@ -1,0 +1,91 @@
+<!doctype html>
+					<html lang="en">
+					<head>
+						<meta charset="UTF-8">
+						<title>函数的变量定义</title>
+					</head>
+					<body>
+						
+					</body>
+					</html>	
+					<script>
+					//1.js中都是对象
+					//2.除了对象就是方法
+					//3.。前面的都是对象
+
+					//注意点
+					//1.变量名不可以和函数名重复
+					//2.表达式声明的函数没有优先加载，只有传统声明的方法槽可以
+					//3.参数多给了没事，不能少给
+
+
+
+					//三种函数的定义
+					//1.传统的声明的方法
+				  //     function fun1 () {
+						// Document.write(11111);
+					 // }
+					 // var fun11=1000;/
+					 // fun1();
+
+
+					//2.匿名眼熟
+					// var fun2=function(){
+						// Document.write(222222);
+					// }
+					// fun2();//函数的抵用
+
+
+					//3.构造函数定义函数,用不到
+					// var fun3=new function("q","b","return a+b");
+
+
+                    // argumengts 不需要指出参数个数
+
+					// function add(a,b){
+					// 	Document.write(a+b);
+					// 	Document.write(arguments[0]);
+					// }
+					// add(10,30);
+
+
+					//变量作用域
+					// 1.在函数外定义的是全局变量
+					// 2。在函数内部使用var为局部变量，不使用为全局变量
+					// 3.不建议在函数内部使用全局变量
+
+
+					// var name="zhangsan";
+					// function funq(){
+					// 	Document.write("在函数外部："+name+"<br>")；
+					// 	name="lisi";
+					// }
+					// fun1();
+					// document.write("在函数外部："+name+"<br>");
+					//输出zhangsan lisi
+
+
+
+					function fun1(){
+						var name="zhangsan";//局部变量
+						Document.write("在函数外部："+name+"<br>")；
+						name="lisi";
+					}
+					fun1();
+					doctype.write("在函数外部、："+name+"<br>");
+				
+
+
+					// function fun1(){
+					// 	name="zhangsan";//全局变量
+					// 	Document.write("在函数外部："+name+"<br>")；
+					// 	name="lisi";
+					// }
+					// fun1();
+					// doctype.write("在函数外部："+name+"<br>");
+
+
+
+
+
+					</script>				
