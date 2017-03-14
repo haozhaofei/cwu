@@ -1,0 +1,35 @@
+<!--JavaScript Document-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <title>进度条</title>
+<style type="text/css">
+    #progress{
+	   background:cyan;
+	   float:left;
+	   height:20px;
+    }
+</style>
+</head>
+
+<body>
+<div style="border:1px blue solid;width:200px;height:20px;"> 
+   <div id="progress" style="width:0%">
+   </div>
+</div>
+</body>
+
+<script>
+    function bar(){
+		var bar=document.getElementById("progress");
+		bar.style.width=parseInt(bar.style.width)+1+"%";
+		    if(bar.style.width=="100%")
+		    {
+			  bar.style.width="0%";
+			  bar();
+			}
+		}
+		var time=setInterval(function(){bar();},100);
+</script>
+</html>
