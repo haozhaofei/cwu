@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>进度条</title>
+</head>
+<body>
+	<progress max="100" value="0" id="bar">0% saved</progress>
+	<button onclick=start()>开始</button>
+</body>
+</html>
+<script type="text/javascript">
+	var bar=document.getElementById("bar");
+	var m=0;
+
+	function start(){
+    setInterval(function(){
+    	m++;
+    	bar.value=m;
+    },100)
+	}
+</script>

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>倒计时</title>
+</head>
+<body>
+  	<form name="myform" action="">
+        <input type="text" name="hour" value="2"  size="4" style="text-align:center">时
+        <input type="text" name="minute" value="30" size="4" style="text-align:center">分
+        <input type="text" name="second" value="00" size="4" style="text-align:center">秒
+
+    </form>
+    <button onclick=start()>开始</button>
+    <button onclick=stop()>暂停</button>
+
+
+</body>
+</html>
+<script type="text/javascript">
+    var time;
+	function start(){
+	time= setInterval(function() {
+		  var h=document.myform.hour.value;
+          var m=document.myform.minute.value;
+          var s=document.myform.second.value;
+		if(s==0&&m==0){
+			h--;
+			document.myform.hour.value=h;
+			m=60-m;
+		}
+		if(s==0){
+			m--;
+			document.myform.minute.value=m;
+			s=60-s;
+		}
+		s--;
+		document.myform.second.value=s;
+		if(h==0&&m==0&&s==0){
+			clearInterval(time);
+		}
+		
+	},1000);
+	}	
+	function stop(){
+		clearInterval(time);
+	}
+
+</script> 
