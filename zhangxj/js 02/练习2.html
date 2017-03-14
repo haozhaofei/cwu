@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" name="myform">
+		num1:<input type="text" name="num1" /><br/>
+		num2:<input type="text" name="num2" /><br/>
+		结果  :<input type="text" name="res" readonly /><br/>
+
+		<input type="button" onclick="doFun(1)" value="加">
+		<input type="button" onclick="doFun(2)" value="减">
+		<input type="button" onclick="doFun(3)" value="乘">
+		<input type="button" onclick="doFun(4)" value="除">
+	</form>
+</body>
+</html>
+<script>
+	function doFun(n){
+		var num1 = Number(document.myform.num1.value);
+		var num2 = Number(document.myform.num2.value);
+		switch(n){
+			case 1 : var res = num1+"+"+num2+"="+ (num1+num2); break;
+			case 2 : var res = num1+"-"+num2+"="+ (num1-num2); break;
+			case 3 : var res = num1+"*"+num2+"="+ (num1*num2); break;
+			case 4 : var res = num1+"/"+num2+"="+ (num1/num2); break;
+		}
+		document.myform.res.value = res;
+	}
+
+</script>
