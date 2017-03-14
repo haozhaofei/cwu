@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>进度条</title>
+</head>
+
+<body>
+<div style="width:460px;border:1px solid #6C9C2C;height:25px;">
+<div style="width:0px;float:left;height:25px;background-color:#95CA0D;" id="processbar" ></div>
+</div>
+
+<script type="text/javascript">
+	var x=0;
+
+	var mytime = setInterval(function(){
+		x++;
+		document.getElementById("processbar").style.width=x+"%";
+		processbar.innerHTML=processbar.style.width;
+		if(x==100){
+
+			clearInterval(mytime);
+	}
+	},10);
+
+	
+</script>
+</body>
+</html>

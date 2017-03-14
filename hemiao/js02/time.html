@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>倒计时</title>
+</head>
+<body>
+	<button id="minute">1</button>
+	<text>:</text>
+	<button id="second">2</button>
+	<text>:</text>
+	<button id="millisecond">3</button>
+	<button onclick="stop()">暂停</button>
+</body>
+</html>
+<script>
+	var bid1 = document.getElementById('minute');
+	var x = 1;
+	var minute = setInterval(function(){
+		x--;
+		bid1.innerHTML = x;
+		if(x == 0){		
+			clearInterval(minute);
+		}
+	},3000)
+	
+	var bid2 = document.getElementById('second');
+	var y = 2;
+	var second = setInterval(function(){	
+		y--;
+		bid2.innerHTML = j;
+		if(x!=0&&y==0)
+			j=60;
+		if(x==0&&y== 0){			
+			clearInterval(second);
+		}
+	},1000)
+	var bid3 = document.getElementById('millisecond');
+	var m = 3;
+	var millisecond = setInterval(function(){
+		m--;
+		bid3.innerHTML = m;
+		if(m == 0&&(x!=0||y!=0))
+			m=60;
+		if(m == 0&&x==0&&y==0){	
+			clearInterval(millisecond);
+		}
+	},1)
+	function stop(){
+		clearInterval(minute);
+		clearInterval(second);
+		clearInterval(millisecond);
+	}
+</script>
