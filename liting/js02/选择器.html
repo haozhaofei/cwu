@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择器</title>
+</head>
+<body>
+   <ul>
+       <h3>JavaScript实例--全选/全不选/反选</h3>
+       <h4>What fruit do you like?</h4>
+      <div>
+       <li><input type="checkbox">apple</li>
+       <li><input type="checkbox">banana</li>
+       <li><input type="checkbox">orange</li>
+       <li><input type="checkbox">peach</li>
+	   <li><input type="checkbox">watermelon</li>
+	   <li><input type="checkbox">licthi</li>
+	  </div>
+	  <div>
+	   <button onclick="Select(1);">全选</button>
+	   <button onclick="Select(2);">全不选</button>
+	   <button onclick="Select(3);">反选</button>
+	  </div>
+   </ul>
+<script type="text/javascript">
+    function Select(a){
+        var b=document.getElementsByTagName("input");
+        var i=0;
+        while(i<b.length){
+       	    if(a==1)  b[i].checked=true;
+       	    else if(a==2) b[i].checked=false;
+       	    else if(a==3) b[i].checked=!b[i].checked;       	   
+        i++;
+    }	
+    }
+</script>
+</body>
+</html>
