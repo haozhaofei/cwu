@@ -1,0 +1,48 @@
+    <script language="javascript">
+        function SetPorgressBar(pos)
+        {
+            //设置进度条居中
+            var screenHeight = document.body.offsetHeight;
+            var screenWidth =document.body.offsetWidth;
+            ProgressBarSide.style.width = Math.round(screenWidth / 2);
+            ProgressBarSide.style.left = Math.round(screenWidth / 4);
+            ProgressBarSide.style.top = Math.round(screenHeight / 2);
+            ProgressBarSide.style.height = "100px";
+            ProgressBarSide.style.display = "";
+             
+            //设置进度条百分比                       
+            ProgressBar.style.width = pos + "%";
+            ProgressText.innerHTML = pos + "%";
+        }
+
+
+    </script>
+
+    <script>
+    var i=0;
+    var fun;
+    function myRefresh()
+    {     
+        SetPorgressBar(i);
+        i++;
+        if(i<=100)
+        {           
+           fun=setTimeout("myRefresh()",100);
+        }
+        else
+        {
+            window.clearTimeout(fun);
+            //alert("加载完成"); 
+            i=0;       
+        }
+    }    
+    window.onload=myRefresh;
+    </script>
+
+     <div id="ProgressBarSide" style="position: absolute; height: 100px; width: 100px; color: Silver;
+        border-width: 1px; border-style: Solid; display: none">
+        <div id="ProgressBar" style=" font-size:larger; position: absolute; height: 100px; width: 0%; background-color: #FFB6C1">
+        </div>
+        <div id="ProgressText" style="position: absolute; height: 100px; width: 100%;text-align:center; font-size:80px;">
+        </div>
+    </div>
