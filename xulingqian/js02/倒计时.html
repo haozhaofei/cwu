@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>倒计时</title>
+</head>
+<body>
+  	<form name="timer" action="">
+        <input type="text" name="hour" value="24"  >时
+        <input type="text" name="minute" value="00" >分
+        <input type="text" name="second" value="00" >秒
+    </form>
+	<button onclick=start()>开始</button><br>
+    <button onclick=stop()>暂停</button><br>
+    <button onclick=end()>结束</button><br>
+</body>
+</html>
+
+<script type="text/javascript">
+    var time;
+	function start(){
+	time= setInterval(function() {
+		  var h=document.timer.hour.value;
+          var m=document.timer.minute.value;
+          var s=document.timer.second.value;
+		if(s==0&&m==0){
+			h--;
+			document.timer.hour.value=h;
+			m=60-m;
+		}
+		if(s==0){
+			m--;
+			document.timer.minute.value=m;
+			s=60-s;
+		}
+		s--;
+		document.timer.second.value=s;
+		if(h==0&&m==0&&s==0){
+			clearInterval(time);
+		}
+		
+	},1000);
+	}	
+	function stop(){
+		clearInterval(time);
+	}
+	function end(){
+		clearInterval(time);
+		document.timer.hour.value=24;
+		document.timer.minute.value=00;
+		document.timer.second.value=00;
+	}
+</script>
