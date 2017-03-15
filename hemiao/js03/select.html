@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择</title>
+</head>
+<body>
+<h2>你想吃什么</h2>
+<ul>
+	<li><input type="checkbox">披萨</li>
+	<li><input type="checkbox">酸奶</li>
+	<li><input type="checkbox">肉饼</li>
+	<li><input type="checkbox">水果</li>
+	<li><input type="checkbox">甜筒</li>
+	<li><input type="checkbox">蛋糕</li>
+	<button onclick="fun(1)">全选</button>
+	<button onclick="fun(2)">全不选</button>
+	<button onclick="fun(3)">反选</button>
+</ul>
+</body>
+</html>
+
+<script type="text/javascript">
+var list=document.getElementsByTagName('input');
+var m;
+function fun(m){
+	for(var i=0;i<list.length;i++)
+	{
+		if(m==1)
+			list[i].checked=true;
+		else if(m==2)
+			list[i].checked=false;
+		else if(m==3)
+				list[i].checked=!list[i].checked;
+	}
+}
+	
+</script>

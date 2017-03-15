@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="bid">10</button>
+	<button onclick="stop()">暂停</button>
+</body>
+</html>
+<script>
+	var bid=document.getElementById('bid');
+	var m=10;
+	var time=setInterval(function(){
+		m--;
+		bid.innerHTML=m;
+		if(m==0){
+			bid.style.color="red";
+			clearInterval(time);
+		}
+	},1000)
+
+	function stop(){
+		clearInterval(time);
+	}
+</script>

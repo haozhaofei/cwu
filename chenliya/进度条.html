@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>text2</title>
+    <style type="text/css">
+	p{
+		color:#609;
+		font-weight:bold;
+	}
+	
+	#progress{
+		background:#0f0;
+		float:left;
+		height:25px;
+		text-align:center;
+	}
+	</style>
+    
+</head>
+<body>
+    <p>进度条</p>
+    <div style="border:1px #000 solid; width:250px; height:25px;">
+    <div id="progress" style="width:0%">
+    </div>
+    </div>
+    </body>
+</html>
+<script>
+     function kuang(){
+		 var bar=document.getElementById("progress");
+		 bar.style.width = parseInt(bar.style.width)+1+"%";
+		 if(bar.style.width=="100%")
+		 {
+			 bar.style.width="0%";
+			 kuang();
+			// clearInterval(time);
+		 }
+	 }
+	 var time = setInterval(function(){kuang();},100);
+	 
+</script>
+
+</html>

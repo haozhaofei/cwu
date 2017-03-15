@@ -1,0 +1,70 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <title>timer</title>
+</head>
+
+<body>
+<button id="hour">0</button>
+<button id="时">小时</button>
+<button id="minute">1</button>
+<button id="分">分钟</button>
+<button id="second">5</button>
+<button id="秒">秒</button>
+<button  onclick="go()">start</button>
+<button onclick="stop()">stop</button>
+<button id="jixu" onclick="jixu()" style="display: none;">continue</button>
+<div id="result"></div>
+<script>
+     var second=document.getElementById('second');
+	 var minute=document.getElementById('minute');
+	 var hour=document.getElementById('hour');
+	 var h=0;
+	 var m=1;
+	 var s=5;
+         div=document.getElementById('result'),
+         stopState = false;
+    
+	function go(){
+        timeout();
+    }
+ 
+    var time=setInterval(function timeout()
+	  {
+		 s--;
+		 second.innerHTML=s;
+		 minute.innerHTML=m;
+		 hour.innerHTML=h;
+		 if(s==0&&m!=0)
+		 {
+			 s=60;
+			 m--;
+		 }
+		 if(m==0&&h!=0)
+		 {
+			 m=60;
+			 h--;
+		 }
+		 if(h==0&&m==0&&s==0)
+		 {
+			 second.style.color="green";
+			 second.style.fontSize="30px";
+			 clearInterval(time);
+		 }
+	  },1000);
+ 
+    function jixu(){
+        time = Number(document.getElementById('result').innerText);
+        document.getElementById('jixu').style.display = 'none';
+        stopState =false;
+        timeout();
+    }
+	
+    function stop(){
+        document.getElementById('jixu').style.display = '';
+        stopState = true;
+		clearInterval(time);
+    }
+</script>
+</body>
+</html>

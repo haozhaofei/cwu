@@ -1,0 +1,25 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button>进度条</button><br><br>
+	<progress value="0" max="150" id="st"></progress>
+	<script type="text/javascript">
+	var m = 0; 
+	var t=setInterval(function(){
+		m++;
+		//document.getElementById('st');
+		document.getElementById('st').width=m;
+		st.value=m;
+		if(m==150){
+			 clearInterval(t);
+		}
+	},100)  
+	
+</script>
+</body>
+</html>

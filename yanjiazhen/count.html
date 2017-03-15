@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>symple-counter</title>
+</head>
+<body>
+<!--相当于定义了一个模具-->
+	<form  name="myform">
+    <!--文本方框-->
+	num1:<input type="text" name="num1" /><br/><br/>
+	num2:<input type="text" name="num2" /><br/><br/>
+	result:<input type="text" name="end" readonly /><br/><br/>
+    <!--//按钮-->
+	<input type="button" onclick="control(1)" value="add">
+	<input type="button" onclick="control(2)" value="minus">
+	<input type="button" onclick="control(3)" value="rid">
+	<input type="button" onclick="control(4)" value="divide">	
+	</form>
+</body>
+</html>
+<!--定义的js可给值可定义，即操作。-->
+<script type="text/javascript">
+	function control(n){
+		var num1=Number(document.myform.num1.value);
+		var num2=Number(document.myform.num2.value);
+		switch(n)
+		{
+			case 1 : var end=num1+"+"+num2+"="+(num1+num2);break;
+			case 2 : var end=num1+"-"+num2+"="+(num1-num2);break;
+			case 3 : var end=num1+"*"+num2+"="+(num1*num2);break;
+			case 4 : var end=num1+"/"+num2+"="+(num1/num2);break;
+		}
+		document.myform.end.value=end;
+	}
+</script>

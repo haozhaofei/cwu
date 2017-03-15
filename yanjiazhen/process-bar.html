@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>进度条的实现</title>
+<!--设置样式-->
+<style type="text/css">
+.process {
+	width: 390px;
+	border: 2px 
+	solid  #333;
+	height: 20px;
+}
+#processbar {
+	background:#FF0;
+	float: left;
+	height: 100%;
+	text-align: center;
+	line-height: 125%;
+}
+</style>
+
+</head>
+<body>
+<p>进度条的实现:</p><br/>
+<!--设置一个盛放进度条的容器-->
+<div class="process">
+<!--进度条的实现-->
+<div id="processbar" style="width:0%;">
+</div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript"> 
+   function setProcess(){  
+   <!--获取进度条节点并为之设置-->
+   var processbar = document.getElementById("processbar");   
+   <!--进度条的进度提醒以及进度设置-->
+ processbar.style.width = parseInt(processbar.style.width) + 1 + "%";  
+   <!--控制文字的显示-->
+   processbar.innerHTML = processbar.style.width;  
+ <!--进度条停止设置-->
+   if(processbar.style.width == "100%"){      
+  		window.clearInterval(bartimer);    
+   }  
+     } 
+  var bartimer = window.setInterval(function(){
+	  setProcess();
+	  },100);   
+	  <!--window.onload 表示页面加载后立即出现-->
+window.onload = function(){     
+ bartimer;  
+  }   
+</script>

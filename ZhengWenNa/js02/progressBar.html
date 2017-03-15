@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ProgressBar</title>
+</head>
+<body>
+	
+	进度：<progress max="100" value="0" id="bar">0% </progress>
+</body>
+</html>
+<script>
+	var bar=document.getElementById('bar');
+	var size=0;
+    setInterval(function(){
+    	size++;
+    	bar.value=size;
+    },1000)
+	
+</script>

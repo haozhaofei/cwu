@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript 实例--计时器</title>
+</head>
+<body>
+	计时器：<br><br>
+	<button id="hour" disabled>1</button>时
+	<button id="minute" disabled>2</button>分
+	<button id="second" disabled>5</button>秒<br>
+	<button onclick="start(1)">开始</button>
+	<button onclick="start(0)">暂停</button><!-- 并不知道如何实现 -->
+	<button onclick="start(-1)">停止</button>
+
+</body>
+</html>
+<script>
+	
+	
+	var hour = document.getElementById('hour');
+	var minute = document.getElementById('minute');
+	var second = document.getElementById('second');
+			
+	var h=1,m=2,s=5;
+	function start(n){
+		if(n==-1)
+			clearInterval(time);//不知道如何将那个模块的time调到这里
+		else{
+			var time = setInterval(function(){
+				s--;
+				if(m==0&&s==0)
+				{
+					h--;
+					m=59;
+					s=59;
+				}
+				else if (s==0)
+				{
+					m--;
+					s=59;
+				} 
+				hour.innerHTML=h;
+				minute.innerHTML=m;
+				second.innerHTML = s;
+				
+				},1000)
+			}
+			
+	}
+	
+	/*var h=1,m=2,s=5;
+	function run (){
+				s--;
+				if(m==0&&s==0)
+				{
+					h--;
+					m=59;
+					s=59;
+				}
+				else if (s==0)
+				{
+					m--;
+					s=59;
+				} 
+				hour.innerHTML=h;
+				minute.innerHTML=m;
+				second.innerHTML = s;
+				if(n==0) break;
+				},1000)
+			}
+
+	function start(){
+			var time = setInterval(run(),1000);
+			
+	}不知道为什么实现不了RUN函数*/
+</script>
