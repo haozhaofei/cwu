@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进度条</title>
+</head>
+<body>
+    <h3>作业一 进度条</h3>
+    <div style="width:400px;height:30px;border:1px solid green;padding:2px;">
+        <div style="width:0px;height:30px;background-color:#aaa;" id="did"></div>
+    </div>
+    <br/>
+    <button onclick="doStart()">开始</button>
+    <script type="text/javascript">
+    	function doStart(){
+    		var m=0;
+    		var time=setInterval(function(){
+    			m++;
+    			document.getElementById("did").style.width=m+"%";
+    			if(m==100){
+    				clearInterval(time);
+    				alert("over!");
+    			}
+    		},10);
+    	}
+    </script>
+</body>
+</html>
