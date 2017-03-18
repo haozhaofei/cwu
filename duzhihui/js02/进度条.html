@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>进度条</title>
+</head>
+<body>
+	<h2>进度条</h2>
+	<button onclick="start()">开始</button>
+   <div class="wai"> 
+ 	<div id="jindu" style="width:0%;"></div>  
+   </div>  
+  
+
+
+	<style type="text/css">  
+
+.wai{  
+   width:400px;    
+   height:40px; 
+   border:1px solid red;
+	padding: 1px;
+ }
+#jindu{  
+   background-color:yellow;  
+   float:left; 
+   height:40px;  
+   line-height:45px; 
+   text-align:center;  
+
+ }  
+</style>  
+
+	<script type="text/javascript">
+     function start(){
+
+      var a = 0;
+      var time = window.setInterval(function(){
+        a++;
+        var j = document.getElementById("jindu");
+    j.style.width = a + "%";
+    j.innerHTML = j.style.width;  
+    if(j.style.width == "100%"){
+          window.clearInterval(time)} },10); 
+
+     		
+
+     
+	}
+	
+   
+  /*window.onload = function(){  
+    time;
+   }  */
+
+	</script>
+
+
+
+
+
+</body>
+</html>

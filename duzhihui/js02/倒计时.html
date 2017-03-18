@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<button id="h">1</button>
+<button>时</button>
+<button id="m">00</button>
+<button>分</button>
+<button id="s">00</button>
+<button>秒</button>
+<button onclick="run()">开始</button>
+<button onclick="stop()">暂停</button>	
+</body>
+</html>
+<script type="text/javascript">
+	var h = document.getElementById('h');
+	var m = document.getElementById('m');
+	var s = document.getElementById('s');
+	var time;
+	var h1 = 0,m1 = 59,s1 =59;
+	function run(){
+		
+		h.innerHTML = h1;     
+        m.innerHTML = m1;
+        s.innerHTML = s1;
+        s1--;
+        if(s1<0){
+        	s1=59;
+        	m1--;
+        	if(m1<0){
+        		m1=59;
+        		h1--;
+        		if(h1<0){
+        			
+        			alert("结束！");
+        		return;
+        	}
+        	}
+        }
+     time = setTimeout("run()",1000);   
+	
+}
+		function stop(){
+		clearTimeout(time);
+	}
+
+
+
+
+
+
+</script>
+
