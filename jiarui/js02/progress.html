@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div class="container"> 
+   <div id="bar" style="width:0%;"></div>  
+  </div>  
+<style type="text/css">  
+.container{  
+   width:300px;    
+   height:40px;
+   border:1px solid #111;  
+ }
+#bar{  
+   background-color:red;  
+   float:left; 
+   height:40px; 
+ }  
+</style>  
+<script type="text/javascript">  
+  function go(){  
+        var bar = document.getElementById("bar"); 
+        
+    bar.style.width=parseInt(bar.style.width) + 1 + "%";  
+    
+    if(bar.style.width == "100%"){  
+      window.clearTimeout(timeout); 
+      return; 
+    } 
+    var timeout=window.setTimeout("go()",100); 
+  } 
+    window.onload = function(){  
+       go(); 
+    }  
+
+</script> 
+  </body>
+</html>
