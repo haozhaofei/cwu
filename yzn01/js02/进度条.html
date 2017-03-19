@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jindutiao</title>
+</head>
+<body>
+	<h3>进度条</h3>
+	<div style="width:500px;height:40px;border=1px solid #aaa;padding:2px;">
+		<div style="width:0px;height:30px;background-color:pink;" id="dd"></div>
+	 
+
+	 </div> 
+	
+	<button onclick="doStart()">开始</button>
+	<script type="text/javascript">
+		function doStart(){
+			var m=0;
+			var mytime=setInterval(function(){
+					m++;
+					document.getElementById("dd").style.width=m+"%";
+					if(m==100){
+							clearInterval(mytime);
+							alert("over!");
+			}
+
+		},10);
+
+
+	}
+	</script>
+</body>
+</html>

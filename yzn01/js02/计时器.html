@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>倒计时</title>
+       
+    </head>
+    <body>
+        <h3>--倒计时</h3>
+        <form name="myform">
+           <input type="text" size="4" name="hh"/>时 
+           <input type="text" size="4" name="mm"/>分 
+           <input type="text" size="4" name="ss"/>秒 
+           <input type="button" onclick="doStart()" value="开始"/>
+           <input type="button" onclick="doStop()" value="暂停"/>
+           <input type="button" onclick="running()" value="继续"/>
+        </form>
+        <br/>
+        <div style="font-size:30px;" id="dd">00:00:00</div>
+        <script type="text/javascript">
+           //初始化信息
+           var dd = document.getElementById("dd");
+           var h=0,m=0,s=0;
+           var mytime = null;
+           function doStart(){
+                if(mytime==null){
+                    //获取输入框中的值
+                    h = parseInt(document.myform.hh.value);
+                    m = parseInt(document.myform.mm.value);
+                    s = parseInt(document.myform.ss.value);
+                    running();
+                }
+           }
+           
+           //定制执行
+           function running(){
+               //显示
+               dd.innerHTML = h+":"+m+":"+(s<10?"0"+s:s);
+               //定时调用
+               s--;
+               if(s<0){
+                 s=59;
+                 m--;
+                 if(m<0){
+                    m=59;
+                    h--;
+                    if(h<0){
+                        alert("倒计时结束！");
+                        return;
+                    }
+                 }
+               }
+              mytime = setTimeout("running()",1000);
+           }
+           
+           //暂停
+           function doStop(){
+               if(mytime!=null){
+                 clearTimeout(mytime);
+                 mytime=null;
+               }
+           }
+        </script>
+    </body>
+</html>
