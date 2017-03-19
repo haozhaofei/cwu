@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+     p{
+     	color: #90C;
+     	font-weight:bold;
+     }
+	</style>
+</head>
+<body>
+	<blockquote><p>    你喜欢下面哪种水果呢？</p></blockquote>
+	<ul>
+	<li><input type="checkbox" name="fruit"/>苹果</li>
+	<li><input type="checkbox" name="fruit"/>香蕉</li>
+	<li><input type="checkbox" name="fruit"/>荔枝</li>
+	<li><input type="checkbox" name="fruit"/>榴莲</li>
+	<li><input type="checkbox" name="fruit"/>车厘子</li>
+	<li><input type="checkbox" name="fruit"/>木瓜</li>
+	<li><input type="checkbox" name="fruit"/>西瓜</li>
+	<li><input type="checkbox" name="fruit"/>橙子</li>
+	</u1>
+	<button onclick="select(1)">全选</button>
+	<button onclick="select(2)">全不选</button>
+	<button onclick="select(3)">反选</button>
+</body>
+</html>
+<script>
+
+     function select(a){
+     	var list = document.getElementsByTagName("input");
+     	for (var i = 0; i <list.length; i++) {
+     		switch(a)
+     		{
+     			case 1:list[i].checked = true; break;
+     			case 2:list[i].checked = false; break;
+     			case 3:list[i].checked = !list[i].checked; break;
+     		}
+     	}
+     }
+</script>
