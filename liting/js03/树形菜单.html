@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>树形菜单</title>
+  <!--下面是css部分-->
+<style>
+ul {
+  margin: 0;
+  padding: 0;
+}
+.L1 a:link, .L1 a:visited{
+  color: #476074;
+  font-size:15px;
+  display: block;
+  text-decoration: none;
+  height: 24px;
+}
+.L1 a:link span, .L1 a:visited span{
+ padding-left: 15px;
+ height:24px;
+ padding:7px 4px 4px 16px;
+ width:100%;
+}
+.L1 a:hover{
+  color: #000000;
+  font-weight:bold;
+}
+.L1 a:link.active span, .L1 a:hover.active span, .L1 a:active.active span, .L1 a:visited.active span{
+  color: #000000;
+  font-weight:bold;
+}
+.L21 a:link, .L21 a:visited, .L22 a:link, .L22 a:visited, .L3 a:link, .L3 a:visited{
+  color: #444659;
+  height: 24px;
+  font-size:13px;
+  display: block;
+  text-decoration: none;
+  padding-left: 13px;
+}
+.L21 a:link span, .L21 a:visited span, .L22 a:link span, .L22 a:visited span, .L3 a:link span, .L3 a:visited span{
+ vertical-align:middle;
+ padding:7px 0px 0px 16px;
+ width:100%;
+}
+.L3 a:link span, .L3 a:visited span{
+  padding:7px 0px 0px 26px;
+}
+</style>
+</head>
+<!--下面是html部分-->
+<body class="panel" onLoad="init();">
+<div id="sub_tabs" class="sub_tabs"></div>
+ <div id="body">
+<ul id="menu"> 
+<li class="L1"><a href="javascript:c('m01');" id="m01"><span><align="absMiddle"/>fruit</span></a></li>
+<ul id="m01d" style="display:none;" class="U1">
+<li class="L21"><a href="javascript:c('f40');" id="f40"><span><align="absMiddle"/>apple</span></a></li>
+ <ul id="f40d" style="display:none;">
+ <li class="L3"><a href="javascript:c('f42');"><span><align="absMiddle"/>red apple</span></a></li>
+ <li class="L3"><a href="#"><span><align="absMiddle"/>green apple</span></a></li>
+ </ul>
+<li class="L21"><a href="javascript:c('f41');" id="f41"><span><align="absMiddle"/>banana</span></a></li>
+ <ul id="f41d" style="display:none;">
+ <li class="L3"><a href="#"><span><align="absMiddle"/>yellow banana</span></a></li>
+ <li class="L3"><a href="#"><span><align="absMiddle"/>green banana</span></a></li>
+ </ul>
+<li class="L22"><a href="#"><span>pineapple</span></a></li>
+</ul>
+<li class="L1"><a href="javascript:c('m03');" id="m03"><span><align="absMiddle"/>vegetable</span></a></li>
+<ul id="m03d" style="display:none;" class="U1">
+<li class="L21"><a href="javascript:c('f42');" id="f42"><span><align="absMiddle"/>tomato</span></a></li>
+ <ul id="f42d" style="display:none;">
+ <li class="L3"><a href="#"><span><align="absMiddle"/>red tomato</span></a></li>
+ <li class="L3"><a href="#"><span><align="absMiddle"/>green tomato</span></a></li>
+ </ul>
+<li class="L21"><a href="javascript:c('f43');" id="f43"><span><align="absMiddle"/>potato</span></a></li>
+ <ul id="f43d" style="display:none;">
+ <li class="L3"><a href="#"><span><align="absMiddle"/>big potato</span></a></li>
+ <li class="L3"><a href="#"><span><align="absMiddle"/>small potato</span></a></li> 
+ </ul>
+<li class="L22"><a href="#"><span>onion</span></a></li>
+</ul>
+</ul>
+</div>
+<!--下面是js部分-->
+<script language="JavaScript">
+var cur_id,cur_expand;
+var flag=0,sflag=0;
+var $ = function(id) {return document.getElementById(id);};
+function MouseOverBtn(){
+  event.srcElement.className+="Hover";
+}
+function MouseOutBtn(){
+  event.srcElement.className=event.srcElement.className.substr(0,event.srcElement.className.indexOf("Hover"));
+}
+function c(id){
+ var targetid,targetelement;
+ var strbuf;
+ var el=$(id);
+ if(!el)
+   return;
+ targetid=el.id+"d";
+ targetelement=$(targetid);
+ var expandUL=$(cur_expand+"d");
+ var expandLink=$(cur_expand);
+ if (targetelement.style.display=="none")
+ {
+   if(expandUL && expandLink && el.id.substr(0,1)=="m")
+   {
+    expandLink.className="";
+    expandUL.style.display='none';
+   }
+   if(el.id.substr(0,1)=="m")
+    cur_expand=el.id;
+    el.className="active";
+    targetelement.style.display='';
+    menu_flag=0;
+ }
+ else
+ {
+   el.className="";
+   targetelement.style.display="none";
+   menu_flag=1;
+   var links=document.getElementsByTagName("A");
+   for (i=0; i<links.length; i++)
+   {
+    el=links[i];
+    if(el.parentNode.className.toUpperCase()=="L1"&&el.className=="active"&&el.id.substr(0,1)=="m")
+     menu_flag=0;break;
+   }
+ }
+}
+</script>
+ </body>
+</html>
