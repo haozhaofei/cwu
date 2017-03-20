@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+<ul>
+
+<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"> 
+<!--onmouseover 鼠标-->
+<a href="#">学生1</a> 
+<ul> 
+<li><a href="#">姓名：林夕 </a></li> 
+<li><a href="#">性别：女   </a></li>
+<li><a href="#">爱好：钢琴 </a></li> 
+<li><a href="#">星座：狮子 </a></li> 
+</ul> 
+</li> 
+
+
+<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"> 
+<!--onmouseover 鼠标-->
+<a href="#">学生2</a> 
+<ul> 
+<li><a href="#">姓名：胡歌 </a></li> 
+<li><a href="#">性别：男  </a></li>
+<li><a href="#">爱好：表演 </a></li> 
+<li><a href="#">星座：射手 </a></li> 
+</ul> 
+</li> 
+
+<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"> 
+<!--onmouseover 鼠标-->
+<a href="#">学生3</a> 
+<ul> 
+<li><a href="#">姓名：林心如 </a></li> 
+<li><a href="#">性别：女   </a></li>
+<li><a href="#">爱好：唱歌 </a></li> 
+<li><a href="#">星座：天秤 </a></li> 
+</ul> 
+</li> 
+
+ </ul> 
+
+</body>
+</html>
+<script > 
+
+function displaySubMenu(li) {     //displaySubMenu显示子菜单
+ /* 通过getElementsByTagName获取ul,隐藏显示*/
+var subMenu = li.getElementsByTagName("ul")[0];
+subMenu.style.display = "block"; 
+} 
+
+
+function hideSubMenu(li) {    //hideSubMenu隐藏子菜单
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "none"; 
+} 
+
+</script>      
