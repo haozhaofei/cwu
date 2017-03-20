@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>全选/全不选/反选</title>
+</head>
+<body>
+<div id="wrap">
+<input type="button" id="selecte_all" value="全选"/>
+<input type="button" id="selecte_no" value="全不选"/>
+<input type="button" id="selecte_etr" value="反选"/>
+<ul>
+<li><input type="checkbox" class="about" />哲学</li>
+<li><input type="checkbox" class="about" />经济</li>
+<li><input type="checkbox" class="about" />艺术</li>
+<li><input type="checkbox" class="about" />地理</li>
+<li><input type="checkbox" class="about" />法律</li>
+</ul>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+window.onload=init;
+function init(){
+var selecte_all=document.getElementById('selecte_all');
+var selecte_no=document.getElementById('selecte_no');
+var selecte_etr=document.getElementById('selecte_etr');
+var check_list=document.getElementsByClassName('about');
+
+selecte_all.onclick=function(){
+for(i=0;i<check_list.length;i++){
+check_list[i].checked=true;
+};
+}
+
+selecte_no.onclick=function(){
+for(i=0;i<check_list.length;i++){
+check_list[i].checked=false;
+};
+}
+
+selecte_etr.onclick=function(){
+for(i=0;i<check_list.length;i++){
+check_list[i].checked=!check_list[i].checked;
+};
+}
+}
+
+</script>
