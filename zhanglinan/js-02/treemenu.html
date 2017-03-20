@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TreeMenu</title>
+</head>
+<body>
+<ul>
+	<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#">a</a>
+	<ul>
+		<li><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+	</ul>	
+	</li>
+
+	<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#">b</a>
+	<ul>
+		<li><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+	</ul>	
+	</li>
+
+	<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#">c</a>
+	<ul>
+		<li><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+	</ul>	
+	</li>
+</ul>
+	
+</body>
+</html>
+<script>
+	function displaySubMenu(li){
+		var subMenu = li.getElementsByTagName("ul")[0];
+		subMenu.style.display = "block";
+	}
+	function hideSubMenu(li){
+		var subMenu = li.getElementsByTagName("ul")[0];
+		subMenu.style.display = "none";
+	}
+
+</script>
