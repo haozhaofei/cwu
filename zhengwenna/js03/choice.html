@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>choice</title>
+</head>
+<body>
+<form >
+  <legend>你最讨厌的是哪一门科目？</legend>
+    <label>
+      <input type="checkbox" name="CheckboxGroup1" value="概率论" id="CheckboxGroup1_0" >
+      概率论</label>
+    <br>
+    <label>
+      <input type="checkbox" name="CheckboxGroup1" value="数据库" id="CheckboxGroup1_1">
+      数据库</label>
+    <br>
+    <label>
+      <input type="checkbox" name="CheckboxGroup1" value="JavaScript" id="CheckboxGroup1_2" checked="checked">
+      JavaScript</label>
+    <br>
+    <label>
+      <input type="checkbox" name="CheckboxGroup1" value="JSP" id="CheckboxGroup1_3">
+      JSP</label>
+    <br>
+    <label>
+      <input type="checkbox" name="CheckboxGroup1" value="计算机组成原理" id="CheckboxGroup1_1">
+      计算机组成原理</label>
+    <br>
+    <!-- <ul>
+    		<li><input type="checkbox" name="sub">Javascript</li>
+    		<li><input type="checkbox" name="sub">Java</li>
+    		<li><input type="checkbox" name="sub">概率论</li>
+    		<li><input type="checkbox" name="sub">计算机组成原理</li>
+    		<li><input type="checkbox" name="sub">数据库原理及运用</li>
+    		<li><input type="checkbox" name="sub">大学英语读写译</li>
+    	</ul> -->
+    <button onclick="act(1)">全选</button>
+    <button onclick="act(2)">反选</button>
+	<button onclick="act(3)">全不选</button>
+</form>
+	
+</body>
+</html>
+<script type="text/javascript">
+	
+	function act(n){
+		var choice = document.getElementsByTagName('input');
+		for (var i = 0; i<choice.length; i++) {
+			switch(n)
+			{
+				case 1: choice[i].checked=true;break;
+				case 2: choice[i].checked=!choice[i].checked;break;
+				case 3: choice[i].checked=false;break;
+			}
+		};
+	}
+	
+</script>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>all</title>
+  </head>
+  <body>
+    <div id="box1">
+      <button>全选</button>
+      <button>不选</button>
+      <button>反选</button>
+    </div>
+    <div id="box2">
+      <ul>
+        <li>选项1：<input type="checkbox"></li>
+        <li>选项2：<input type="checkbox"></li>
+        <li>选项3：<input type="checkbox"></li>
+        <li>选项4：<input type="checkbox"></li>
+        <li>选项5：<input type="checkbox"></li>
+        <li>选项6：<input type="checkbox"></li>
+        <li>选项7：<input type="checkbox"></li>
+        <li>选项8：<input type="checkbox"></li>
+        <li>选项9：<input type="checkbox"></li>
+ 
+      </ul>
+    </div>
+ 	<button onclick="alert('gondluke')">提交</button>
+  </body>
+</html>
+    <script>
+      window.onload = function(){
+        // 获取所有的按钮
+        var btns = document.getElementsByTagName("button");
+        // 获取所有的选项input
+        var inputs = document.getElementsByTagName("input");
+ 
+        // 全选或者不选的时候 调用此函数
+        function fun(flag){
+          for (var i=0; i<inputs.length;i++) {
+            inputs[i].checked = flag;
+          }
+        }
+ 
+        //获取第一个按钮 “全选”
+        btns[0].onclick = function(){
+          fun(true);
+        }
+ 
+        // 获取第二个按钮 "不选"
+        btns[1].onclick = function(){
+          fun(false);
+        }
+        // 获取第三个按钮 “反选”
+        btns[2].onclick = function(){
+          // 遍历所有的选项，判断每一个选项是否被选中
+          for (var i=0;i<inputs.length;i++) {
+            inputs[i].checked == true ? inputs[i].checked = false : inputs[i].checked = true;
+          }
+        }
+ 
+      }
+    </script>
