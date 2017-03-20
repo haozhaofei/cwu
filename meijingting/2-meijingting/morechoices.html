@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h3>javascript 实例 --全选/全部选</h3>
+	<h4>你喜欢下面哪个？</h4>
+	<ul>
+		<li><input type="checkbox" name="uid" checked/>a
+		<li><input type="checkbox" name="uid" checked/>b
+		<li><input type="checkbox" name="uid" checked/>c
+		<li><input type="checkbox" name="uid" checked/>d
+		<li><input type="checkbox" name="uid" checked/>e
+	</ul>
+	<button onclick="doSelect(1);">全选<tton>
+	<button onclick="doSelect(2);">全不选<tton>
+	<button onclick="doSelect(3);">反选<tton>
+</body>
+<ml>
+<script>
+	function doSelect(b) {
+		var list=document.getElementsByTagName("input");
+		for (var i = 0; i <list.length; i++) {
+		     switch(b) 
+		     {
+		     	case 1: list[i].checked =true;  break;
+		     	case 2: list[i].checked =false;  break;
+		     	case 3: list[i].checked =!list[i].checked; break;
+		     }
+		}
+	}
+</script>
