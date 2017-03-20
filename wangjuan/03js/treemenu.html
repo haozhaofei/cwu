@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TreeMenu</title>
+</head>
+<body>
+<ul>
+	<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#">现代言情</a>
+	<ul>
+		<li><a href="#">霸道总裁爱上我</a></li>
+		<li><a href="#">总裁大人，放肆爱</a></li>
+		<li><a href="#">傲娇总裁，小心爱</a></li>
+	</ul>	
+	</li>
+
+	<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#">古代言情</a>
+	<ul>
+		<li><a href="#">至尊狂后</a></li>
+		<li><a href="#">纨绔九小姐</a></li>
+		<li><a href="#">步步惊心</a></li>
+	</ul>	
+	</li>
+
+	<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#">玄幻言情</a>
+	<ul>
+		<li><a href="#">邪医紫后</a></li>
+		<li><a href="#">绝世神医</a></li>
+		<li><a href="#">毒医弃女</a></li>
+	</ul>	
+	</li>
+</ul>
+	
+</body>
+</html>
+<script>
+	function displaySubMenu(li){
+		var subMenu = li.getElementsByTagName("ul")[0];
+		subMenu.style.display = "block";
+	}
+	function hideSubMenu(li){
+		var subMenu = li.getElementsByTagName("ul")[0];
+		subMenu.style.display = "none";
+	}
+
+</script>

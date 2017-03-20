@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>计时器</title>
+ </head>
+ <body>
+ <!--定义计时器的框架-->
+   	<form name="myform" action="">
+         <input type="text" name="hour" value="10" style="text-align:center" >时
+         <input type="text" name="minute" value="00" style="text-align:center">分
+         <input type="text" name="second" value="00" style="text-align:center">秒
+     </form>
+ <!--开始、暂停、停止按钮的设置-->
+ 	<button onclick=start()>start</button>
+    <button onclick=stop()>pause</button>
+    <button onclick=end()>stop</button>
+ </body>
+ </html>
+ <!--计时器的值得变化-->
+ <script type="text/javascript">
+    var time;
+ 	function start(){
+ 	time= setInterval(function() {
+		  var h = document.myform.hour.value;
+          var m = document.myform.minute.value;
+          var s = document.myform.second.value;
+     		if(s == 0 && m == 0){
+ 			h--;
+ 			document.myform.hour.value = h;
+ 			m = 60-m;
+     		}
+ 		   if(s == 0){
+ 			m--;
+ 			document.myform.minute.value=m;
+ 			s = 60-s;
+ 		    }
+ 		   s--;
+ 		  document.myform.second.value=s;
+ 		  if(h == 0 && m == 0 && s == 0){
+ 			clearInterval(time);
+ 		   }
+ 		
+ 	},1000);
+ 	}	
+ 	function stop(){
+ 		clearInterval(time);
+ 	}
+ 	function end(){
+ 		clearInterval(time);
+ 		document.myform.hour.value=10;
+ 		document.myform.minute.value=00;
+ 		document.myform.second.value=00;
+ 	}
+ </script>
+
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>countdown</title>
+</head>
+<body>
+     <p>countdown</p>
+     <button id="hour">12</button>时
+     <button id="minute">00</button>分
+     <button id="second">00</button>秒
+     <button onclick="start()">开始</button>
+     <button onclick="stop()">暂停</button>
+</body>
+<script type="text/javascript">
+    var time
+    function start(){
+    	var s=59,m=59,h=11;
+        time=setInterval(function (){
+    	second.innerHTML=s;
+    	minute.innerHTML=m;
+    	hour.innerHTML=h;
+    	s--;
+	    while(s==0)
+	    {
+		    m--;
+		    second.innerHTML="00";
+		    s=59;
+		    while(m==0)
+		    {
+		    	h--;
+		    	minute.innerHTML="00";
+		    	m=59;
+		    	while(h==0)
+		    	{
+		    		second.innerHTML="00";
+		    		minute.innerHTML="00";
+		    		hour.innerHTML="00";
+		    		clearInterval(time);
+		    		document.write("\n倒计时结束！")
+
+		    	}
+		    }
+	    }
+    },1000)
+ }
+    function stop(){
+    	clearInterval(time);
+    }
+	
+</script>
+</html>
