@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>树形菜单</title>
+	<style type="text/css">
+	p{
+		color:blue;
+	}
+	</style>
+</head>
+<body>
+<p>挪动你的鼠标吧！</p>
+
+   <div id="did">
+
+    <ul class="one">
+      <li onmousemove="display(this)" onmouseout="hide(this)">浏览
+        <ul> 
+          <li>视图</li>
+          <li>图画</li>
+          <li>动漫</li>
+          <li>格式</li> 
+        </ul>
+      </li><br>
+      
+      <li onmousemove="display(this)" onmouseout="hide(this)">选择吧
+         <ul>
+        
+          <li>严家珍好帅</li>
+          <li>严家珍最帅</li>
+          <li>严家珍超帅</li>
+        
+        </ul>
+
+      </li>
+    </ul>
+</div>	
+</body>
+</html>
+<script>
+	function display(li){
+		var subDid=li.getElementsByTagName("ul")[0];
+		subDid.style.display="block";
+	}
+	function hide(li){
+		var subDid=li.getElementsByTagName("ul")[0];
+		subDid.style.display="none";
+	}
+</script>
