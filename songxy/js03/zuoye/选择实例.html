@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="UTF-8">
+	<title>选择实例</title>
+</head>
+    <body>
+    <h3>JS实例——全选/全不选/反选</h3>
+	<h4>你喜欢一个星期中的哪一天？</h4>
+        <div id="div">
+            <input type="checkbox" />星期一<br />
+		<input type="checkbox" />星期二<br />
+		<input type="checkbox" />星期三<br />
+		<input type="checkbox" />星期四<br />
+		<input type="checkbox" />星期五<br />
+		<input type="checkbox" />星期六<br />
+		<input type="checkbox" />星期天<br /><br />
+        </div>
+        <input type="button" value="全选" onclick="CheckAll()"/>
+        <input type="button" value="全不选" onclick="UnCheck()"/>
+        <input type="button" value="反选" onclick="othercheck()"/>
+        <script>
+            var CheckBox=div.getElementsByTagName('input');
+             
+            //全选
+            function CheckAll(){
+                for(i=0;i<CheckBox.length;i++){
+                	CheckBox[i].checked=true;
+                };
+            };
+             
+            //不选
+            function UnCheck(){
+                for(i=0;i<CheckBox.length;i++){
+                	CheckBox[i].checked=false;
+                };
+            };
+             
+            //反选
+            function othercheck(){
+                for(i=0;i<CheckBox.length;i++){
+                    if(CheckBox[i].checked==true){
+                     CheckBox[i].checked=false;
+                    }
+                    else{ 
+                    	CheckBox[i].checked=true
+                    }
+                }
+            };
+        </script>
+    </body>
+</html>
