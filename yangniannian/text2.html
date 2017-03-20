@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>做一个树形菜单的点击效果</title>
+</head>
+<body>
+    <ul id="menu"> 
+        <li> <a href="https://www.tmall.com/?ali_trackid=2:mm_26632323_6762370_25910656:1490016292_3k4_413400797">
+            美食
+            </a><ul> 
+                <li>美国OCEAN SPRAY 蔓越莓干</li> 
+                <li>澳洲TimTam 巧克力饼干</li> 
+                <li>日本 Calbee 薯条三兄弟</li> 
+            </ul> 
+        </li> 
+        <li>
+        <a href="http://vacations.ctrip.com/?isctrip=T&ouid=vacation"> 
+           旅游
+           </a>
+            <ul> 
+                <li>浙江乌镇</li> 
+                <li>黄姚古镇</li> 
+                <li>婺源古镇</li> 
+            </ul> 
+        </li> 
+        <li>
+        <a href="http://music.163.com/#/user/home?id=287681113"> 
+            音乐
+            </a>
+            <ul> 
+                <li>亲爱的路人-刘若英</li> 
+                <li>听说-刘若英</li> 
+                <li>后来-刘若英</li> 
+            </ul> 
+        </li> 
+        <li>
+        <a href="http://www.bilibili.com/"> 
+            电影
+            </a>
+            <ul> 
+                <li>山楂树之恋</li> 
+                <li>匆匆那年</li> 
+                <li>从你的全世界路过</li> 
+            </ul> 
+        </li> 
+        <li>
+        <a href="http://www.panda.tv/424069"> 
+            游戏
+            </a>
+            <ul> 
+                <li>英雄联盟</li> 
+                <li>守望先锋</li> 
+                <li>炉石传说</li> 
+            </ul> 
+        </li>
+    </ul> 
+    <script type="text/javascript"> 
+    function menu(){ 
+        var elem=document.getElementById("menu"); 
+              
+        var ul=elem.getElementsByTagName("ul") 
+        for(var i=0;i<ul.length;i++){ 
+            ul[i].style.display="none"; 
+        } 
+           
+        var li=elem.getElementsByTagName("li"); 
+        for(var i=0;i<li.length;i++){ 
+            li[i].onmouseover=function(){ 
+                var inli=this.getElementsByTagName("ul"); 
+                for(var j=0;j<inli.length;j++){ 
+                        inli[j].style.display="block"; 
+                } 
+            }; 
+            li[i].onmouseout=function(){ 
+                var inli=this.getElementsByTagName("ul"); 
+                for(var j=0;j<inli.length;j++){ 
+                        inli[j].style.display="none"; 
+                } 
+            } 
+        } 
+          
+  
+    } 
+    window.onload=menu(); 
+    </script> 
+
+</body>
+</html>
