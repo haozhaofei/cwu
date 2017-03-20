@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>树形菜单</title>
+	
+</head>
+<style type="text/css">
+	    
+	    button{
+	    	background-color: white;
+			border: 0px;
+			font-size: 25px;
+	    }
+	    div{
+	    	display: none;
+	    }
+	</style>
+<body>
+    <ul>
+    	<li><button onclick="fun(1)">你喜欢什么音乐</button></li>
+    	<div id="menu1">
+		<ul>
+			<li>摇滚</li>
+			<li>舞曲</li>
+			<li>流行曲</li>
+		</ul>	
+	</div>	
+    	<li><button onclick="fun(2)">你喜欢什么甜品</button></li>
+    	 <div id="menu2">
+		<ul>
+			<li>黑森林蛋糕</li>
+			<li>杨枝甘露</li>
+			<li>汤圆</li>
+		</ul>
+	</div>
+    	<li><button onclick="fun(3)">四大天王</button></li>
+    	 <div id="menu3">
+		<ul>
+			<li>刘德华</li>
+			<li>黎明</li>
+			<li>郭富城</li>
+			<li>张学友</li>
+		</ul>
+	</div>
+	
+    </ul>
+</body>
+</html>
+<script>
+	function fun(m){
+		switch(m){
+			case 1:var menu1=document.getElementById("menu1");
+		           menu1.style.display="block";break;
+		    case 2:var menu2=document.getElementById("menu2");
+		           menu2.style.display="block";break;
+		    case 3:var menu3=document.getElementById("menu3");
+		           menu3.style.display="block";break;
+		}
+		
+	}
+</script>
