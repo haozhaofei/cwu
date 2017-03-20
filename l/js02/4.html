@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<progress max="120" value="0" id="full"></progress> 
+</body>
+</html>
+<script>
+	var full = document.getElementById('full'); //定义一个变量
+	var m = 0; //一开始进度为空
+	 setInterval(function(){
+		m++;
+		full.value = m;
+	},120)  //120是走完整个进度条的速度，具体代表什么还不清楚，尝试过如果把值写大进度条会走得很慢，就把1000改了
+	
+</script>
