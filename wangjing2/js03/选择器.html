@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<h3>多选题</h3>
+<h4>你喜欢吃什么？</h4>
+<ul>
+	<li><input type="checkbox" name="uid">红烧肉</li>
+	<li><input type="checkbox" name="uid">炸鸡</li>
+	<li><input type="checkbox" name="uid">锅包肉</li>
+	<li><input type="checkbox" name="uid">大盘鸡</li>
+	<li><input type="checkbox" name="uid">水煮肉</li>
+</ul>
+	<button onclick="doSelect(1);">全选</button>
+	<button onclick="doSelect(1);">全不选</button>
+	<button onclick="doSelect(1);">反选</button>
+	<script type="text/javascript">
+	  function doSelect(b){
+	  	var list=Document.getElementsByTagName('input');
+	  	for (var i = 0; i <list.length; i++) {
+
+	  		switch(b){
+
+                
+                case 1:list[i].checked=true:break;
+                case 2:list[i].checked=false:break;
+                case 3:list[i].checked=!list[i].checked;break;
+                
+	  		}	  		
+	  			  
+
+</body>
+</html>
