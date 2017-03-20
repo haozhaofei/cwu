@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id="menu">
+		<li>
+			爱豆
+			<ul>
+				<li>鹿晗1</li>
+				<li>鹿晗2</li>
+				<li>鹿晗3</li>
+				<li>鹿晗4</li>
+
+			</ul>
+		</li>
+		<li>
+			friends
+			<ul>
+				<li>zxj</li>
+				<li>zmm</li>
+				<li>lm</li>
+				<li>wqy</li>
+				<li>dzh</li>
+
+			</ul>
+		</li>
+		<li>
+			英雄
+			<ul>
+				<li>大乔</li>
+				<li>小乔</li>
+				<li>貂蝉</li>
+				<li>妲己</li>
+				<li>鲁班</li>
+
+			</ul>
+		</li>
+	</ul>
+	<script type="text/javascript">
+	function menu(){
+		var a=document.getElementById("menu");
+
+		var ul=a.getElementsByTagName("ul");
+		for (var i = 0;i<a.length;  i++) {
+			ul[i].style.display="none";
+		}
+
+		var li=a.getElementsByTagName("li");
+			for (var i = 0;i<li.length;i++) {
+				 li[i].onmouseover=function(){
+						var lli=this.getElementsByTagName("ul")
+						for (var j = 0;j<lli.length ; j++) {
+							lli[j].style.display="block";
+						}
+
+
+				}
+				li[i].onmouseover=function(){
+					var lli=this.getElementsByTagName("ul"); 
+					for(var j=0;j<lli.length;j++){ 
+                        lli[j].style.display="none"; 
+                } 
+				}
+			};
+
+
+
+		}
+	}
+	window.onload=menu();
+
+
+ 
+	</script>
+</body>
+</html>
