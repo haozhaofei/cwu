@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>check all</title>
+</head>
+
+<body>
+ <h3 id="a">Please choose your favorite color from the following!</h3>
+
+ <ul id="b">
+ 	<li><input type="checkbox" name="bid">red</li>
+ 	<li><input type="checkbox" name="bid">blue</li>
+ 	<li><input type="checkbox" name="bid">yellw</li>
+ 	<li><input type="checkbox" name="bid">black</li>
+ 	<li><input type="checkbox" name="bid">white</li>
+ 	<li><input type="checkbox" name="bid">green</li>
+ 	<li><input type="checkbox" name="bid">brown</li>
+ </ul>
+ <button onclick="doSelect(1);">check all</button>
+ <button onclick="doSelect(2);">totally not selected</button>
+ <button onclick="doSelect(3);">reverse selection</button>
+
+</body>
+
+</html>
+
+<script>
+ function doSelect (b) {
+	// body...
+	var list =document.getElementsByTagName('input');
+	for (var i = 0; i<list.length;i++) {
+		switch(b){
+			case 1:list[i].checked = true; break;
+			case 2:list[i].checked = false; break;
+			case 3:list[i].checked = !list[i].checked; break;
+		}
+	}
+ }
+  a.style.color="pink"
+  a.style.fontSize="40px"
+  b.style.color="pink"
+  b.style.fontSize="30px"
+</script>
