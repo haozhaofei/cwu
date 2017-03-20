@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script type="text/javascript">
+   //第一种
+  //var fun1=100;
+   fun1();
+   function fun1(){
+    document.write(111111111);
+   }
+   
+   //第二种
+   //fun2();   放在函数定义之前，不能执行
+   var fun2=function(){
+    document.write(222222222);
+   }
+   fun2();
+
+   //第三种
+   //document.write(fun3(10,20));
+   var fun3=new Function("a","b","return a+b");
+   document.write(fun3(10,20));
+
+</script>
