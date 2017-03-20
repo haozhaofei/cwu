@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全选全不选实例</title>
+</head>
+<body>
+   <h4>请选择下列你喜欢的电视</h4>
+   <ul>
+   	<li><input type ="checkbox"  name="bid"/>电视剧</li>
+   	<li><input type ="checkbox"  name="bid"/>电影  </li>
+  	<li><input type ="checkbox"  name="bid"/>综艺  </li>
+   	<li><input type ="checkbox"  name="bid"/>纪录片</li>
+   	<li><input type ="checkbox"  name="bid"/>  MV  </li>
+   	<li><input type ="checkbox"  name="bid"/>新闻</li>
+
+   </ul>
+	<button onclick="doSelect(1);">全选</button>
+	<button onclick="doSelect(2);">全不选</button>
+	<button onclick="doSelect(3);">反选</button>
+	<script>
+	function doSelect (b) {
+		var list = document.getElementsByTagName('input');
+		for (var i = 0; i <list.length; i++) {
+
+		switch(b)
+		{
+			case 1:list[i].checked=true;break;
+			case 2:list[i].checked=false;break;
+			case 3:list[i].checked=!list[i].checked;break;
+			
+
+
+
+		}
+		};
+	
+	}
+	</script>
+</body>
+</html>
