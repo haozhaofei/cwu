@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+ <html lang="en"> 
+ <head> 
+ 	<meta charset="UTF-8"> 
+ 	<title>Document</title> 
+ </head> 
+ <body> 
+    <println> loading...... </println>
+ 	<progress max="500" value="10" id="progress bar">loading 0% </progress> 
+ </body> 
+ </html> 
+ <script type="text/javascript"> 
+ 	var bar=document.getElementById("progress bar"); 
+ 	var m=0; 
+     setInterval(function(){ 
+     	m++; 
+     	bar.value=m; 
+     },100) 
+ 	 
+ 	 
+ </script> 

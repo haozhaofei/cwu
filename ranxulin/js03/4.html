@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tree menu</title>
+</head>
+<body>
+<div id="t1" style="line-height:50px;" onClick="showhide_obj('title1','icon1')"><font id='icon1'></font>****drink****</div>
+
+<div id="title1"  style="display:none;">
+<span id="menu1_1" onclick="show_this('select1_1')"><font id='select1_1'></font>~apple juice~</span></font><br/>
+<span id="menu1_2" onclick="show_this('select1_2')"><font id='select1_2'></font>~watermelon juice~</span></font><br/>
+<span id="menu1_3" onclick="show_this('select1_3')"><font id='select1_3'></font>~strawberry juice~</span></font><br/>
+<span id="menu1_4" onclick="show_this('select1_4')"><font id='select1_4'></font>~black tea~</span></font><br/>
+<span id="menu1_5" onclick="show_this('select1_5')"><font id='select1_5'></font>~soda water~</span></font><br/>
+</div>
+
+<div id="t2" style="line-height:50px;" onClick="showhide_obj('title2','icon2')"><font id='icon2'></font>****meat****</div>
+
+<div id="title2" style="display:none;">
+<span id="menu2_1" onclick="show_this('select2_1')"><font id='select2_1'></font>~pork~</span></font><br/>
+<span id="menu2_2" onclick="show_this('select2_2')"><font id='select2_2'></font>~mutton~</span></font><br/>
+<span id="menu2_3" onclick="show_this('select2_3')"><font id='select2_3'></font>~beef~</span></font><br/>
+<span id="menu2_4" onclick="show_this('select2_4')"><font id='select2_4'></font>~chicken~</span></font><br/>
+<span id="menu2_5" onclick="show_this('select2_5')"><font id='select2_5'></font>~duck~</span></font><br/>
+</div>
+
+<div id="t3" style="line-height:50px;" onClick="showhide_obj('title3','icon3')"><font id='icon3'></font>****noodles****</div>
+<div id="title3" style="display:none;">
+<span id=menu3_1 onclick="show_this('select3_1')"><font id='select3_1'></font>~macaroni~</span></font><br/>
+<span id=menu3_2 onclick="show_this('select3_2')"><font id='select3_2'></font>~spaghetti~</span></font><br/>
+</div>
+
+     
+
+</body>
+</html>
+
+<script>
+function showhide_obj(obj,icon)
+{
+obj=document.getElementById(obj);
+icon=document.getElementById(icon);
+ if (obj.style.display=="none") 
+  {  
+        div_list = document.getElementsByTagName("div");
+        for (i=0; i< div_list.length;i ++)
+        {
+          thisDiv = div_list[i]; 
+           if(thisDiv.id.indexOf("title")!=-1)
+           {
+           thisDiv.style.display="none";
+           icon.innerHTML = " ";
+           }
+        } 
+ 
+   myfont=document.getElementsByTagName("font");
+   for(i=0;i<myfont.length;i++)
+    {
+    thisfont = myfont[i];
+   }
+     obj.style.display=""; 
+}
+ else
+  {
+   obj.style.display="none";
+   }
+ }
+
+function show_this(obj)
+{
+    obj=document.getElementById(obj);
+    if (obj.id==obj.id) 
+     {
+       blinkicon=document.getElementsByTagName("font");
+       for(x=0;x<blinkicon.length;x++)
+        {
+           if( blinkicon[x].id.indexOf("select")!=-1 && obj.id!=obj )
+            {
+               blinkicon[x].innerHTML=" ";
+            }
+        }
+          obj.innerHTML=">"; 
+     }
+     else
+     {
+           obj.innerHTML=" ";
+     }
+}
+  t1.style.color="red";
+  t1.style.fontSize="40px";
+  t2.style.color="black";
+  t2.style.fontSize="40px";
+  t3.style.color="brown";
+  t3.style.fontSize="40px";
+
+  title1.style.color="pink";
+  title1.style.fontSize="20px";
+  title2.style.color="blue";
+  title2.style.fontSize="20px";
+  title3.style.color="green";
+  title3.style.fontSize="20px";
+
+</script>
