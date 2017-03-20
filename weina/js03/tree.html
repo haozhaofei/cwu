@@ -1,0 +1,66 @@
+/*150801043  韦娜*/
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+
+	    li{
+	    	list-style-type:none;
+	    }
+	    div{
+	    	display: none;
+	    }
+	    button{
+	    	font-size: 20px;
+	    	border: 0px;
+	    	background: none;
+	    }
+	</style>
+</head>
+<body>
+    <ul>
+    	<li><button onclick="fun(1)">水果</button></li>
+    	<div id="did">
+    	    <ul>
+    	    <li>苹果</li>
+    	    <li>梨</li>
+    	    <li>桃子</li>
+    	    <li>香蕉</li>
+    	    <li>草莓</li>	
+    	    </ul>
+    	</div>
+    	<li><button onclick="fun(2)">BBBBBBBBB</button></li>
+    	 <div id="did1">
+    	    <ul>
+    	    	<li>ccccccc</li>
+    	    	<li>ddddddd</li>
+    	    	<li>eeeeeee</li>
+    	    </ul>
+    	 </div>
+    	<li><button onclick="fun(3)">FFFFFFFF</button></li>
+    	 <div id="did2">
+    	     <ul>
+    	     	<li>gggggg</li>
+    	     	<li>hhhhhh</li>
+    	     	<li>iiiiii</li>
+    	     </ul>
+    	 <div>
+    </ul>
+</body>
+</html>
+<script>
+	function fun(m){
+		switch(m){
+			case 1:var did=document.getElementById("did");
+		           did.style.display="block";break;
+		    case 2:var did1=document.getElementById("did1");
+		           did1.style.display="block";break;
+		    case 3:var did2=document.getElementById("did2");
+		           did2.style.display="block";break;
+		}
+		
+	}
+</script>
