@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>TreeMenu</title>
+</head>
+
+<body>
+<ul>
+
+<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"> 
+<a href="#">体育</a> 
+<ul> 
+<li><a href="#">篮球</a></li> 
+<li><a href="#">足球</a></li>
+<li><a href="#">网球</a></li> 
+</ul> 
+</li> 
+
+
+<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"> 
+<a href="#">娱乐</a> 
+<ul> 
+<li><a href="#">唱歌</a></li> 
+<li><a href="#">跳舞</a></li>
+<li><a href="#">玩游戏</a></li> 
+</ul> 
+</li> 
+
+<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+<a href="#">新闻</a> 
+<ul> 
+<li><a href="#">军事</a></li> 
+<li><a href="#">娱乐</a></li>
+<li><a href="#">热点</a></li> 
+</ul> 
+</li> 
+
+ </ul> 
+
+</body>
+</html>
+<script > 
+
+function displaySubMenu(li) {
+var subMenu = li.getElementsByTagName("ul")[0];
+subMenu.style.display = "block"; 
+} 
+
+
+function hideSubMenu(li) {
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "none"; 
+} 
+
+</script>      
