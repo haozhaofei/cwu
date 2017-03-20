@@ -1,0 +1,149 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>信息调查</title>
+
+	 <style type="text/css">
+
+	 p{
+
+		color:#000;
+
+		font-weight:bold;
+
+	}
+
+	#nav a{
+
+		color: #90C;
+
+		font-weight:bold;
+
+	}
+
+	#nav li ul li a{
+
+		clear:both;
+
+		text-decoration:none;
+
+		font-weight:normal;
+
+	}
+
+	li{
+
+		list-style-type:none;
+
+	}
+
+	#nav li ul a:hover{
+
+		background:#9F6;
+
+		color:#00F;
+
+	}
+
+		
+
+	</style>
+
+</head>
+
+<body>
+
+<blockquote><h3> 个人信息调查表   </h3></blockquote>
+
+<div id="nav">
+
+<ul>
+<li onMouseOver="display(this)" onMouseOut="hide(this)"><a herf="javascript:;">籍贯</a>
+
+<div>
+
+<ul>
+
+	<li><a href="#">湖北</a></li>
+
+	<li><a href="#">江西</a></li>
+
+	<li><a href="#">北京</a></li>
+
+	<li><a href="#">江苏</a></li>
+
+	<li><a href="#">贵州</a></li>
+
+</ul>
+
+</div>
+
+</li>
+
+<li onMouseOver="display(this)" onMouseOut="hide(this)"><a herf="javascript:;">性别</a>
+
+
+
+
+
+<ul>
+
+	<li><a href="#">男</a></li>
+
+	<li><a href="#">女</a></li>
+
+</ul>
+
+
+
+</li>
+<li onMouseOver="display(this)" onMouseOut="hide(this)"><a herf="javascript:;">学历</a>
+
+<div>
+
+<ul>
+
+	<li><a href="#">小学</a></li>
+
+	<li><a href="#">中学</a></li>
+
+	<li><a href="#">高中</a></li>
+
+	<li><a href="#">大学</a></li>
+
+	<li><a href="#">研究生</a></li>
+
+</ul>
+
+</div>
+
+</li>
+
+</body>
+
+</html>
+
+<script>
+
+    function display(li){
+
+	var subNav=li.getElementsByTagName("ul")[0];
+
+	subNav.style.display = "block";
+
+    }
+
+	function hide(li){
+
+	var subNav=li.getElementsByTagName("ul")[0];
+
+	subNav.style.display = "none";}
+
+	
+
+</script>

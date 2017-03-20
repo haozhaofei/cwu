@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head><meta charset="UTF-8"></head>
+    <body>
+        <div id="div">
+            <h1>最佳歌手选拔赛</h1>
+            <b>李明</b>
+            <input type="checkbox" /><br />
+            <b>张志</b> 
+            <input type="checkbox" /><br />
+            <b>王涛</b>
+            <input type="checkbox" /><br />
+            <b>田中</b> 
+            <input type="checkbox" /><br />
+           
+        </div>
+        <input type="button" value="全选" onclick="CheckAll()"/><br />
+        <input type="button" value="不选" onclick="UnCheck()"/><br />
+        <input type="button" value="反选" onclick="othercheck()"/><br />
+        <script>
+            var CheckBox=div.getElementsByTagName('input');
+             
+            //全选
+            function CheckAll(){
+                for(i=0;i<CheckBox.length;i++){CheckBox[i].checked=true;};
+            };
+             
+            //不选
+            function UnCheck(){
+                for(i=0;i<CheckBox.length;i++){CheckBox[i].checked=false;};
+                };
+             
+            //反选
+            function othercheck(){
+                for(i=0;i<CheckBox.length;i++){
+                    if(CheckBox[i].checked==true){ CheckBox[i].checked=false;}
+                    else{ CheckBox[i].checked=true}
+                }
+            };
+        </script>
+    </body>
+</html>
