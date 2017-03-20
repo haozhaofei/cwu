@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>例子4（第一遍）</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	//编码目的为了保证数据的完整性
+	var str="http://www.baidu.com";
+	document.write("原地址："+str+"<br>");
+	document.write("编码地："+escape(str)+"<br>");
+	document.write("反编码："+unescape(str)+"<br>");
+
+	var str2="var name=100";
+	eval(str2);		//将参数字符串作为脚本代码来执行
+	alert(name);
+
+
+</script>
