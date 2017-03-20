@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>树形图</title>
+</head>
+<body>
+<h2>树形图</h2>
+    <ul id="caidan"> 
+        <li> 
+            腾讯 
+            <ul> 
+                <li>腾讯QQ</li> 
+                <li>腾讯新闻</li> 
+                <li>腾讯微博</li> 
+            </ul> 
+        </li> 
+        <li> 
+            百度
+            <ul> 
+                <li>百度贴吧</li> 
+                <li>百度词条</li> 
+                <li>百度云</li> 
+            </ul> 
+        </li> 
+        <li> 
+            360
+            <ul> 
+                <li>360安全浏览器</li> 
+                <li>360安全卫士</li> 
+                <li>360卫士</li> 
+            </ul> 
+        </li> 
+    </ul> 
+    <script type="text/javascript"> 
+    function caidan(){ 
+        var elem=document.getElementById("caidan"); 
+              
+        var ul=elem.getElementsByTagName("ul") 
+        for(var i=0;i<ul.length;i++){ 
+            ul[i].style.display="none"; 
+        } 
+           
+        var li=elem.getElementsByTagName("li"); 
+        for(var i=0;i<li.length;i++){ 
+            li[i].onmouseover=function(){ 
+                var inli=this.getElementsByTagName("ul"); 
+                for(var j=0;j<inli.length;j++){ 
+                        inli[j].style.display="block"; 
+                } 
+            }; 
+            li[i].onmouseout=function(){ 
+                var inli=this.getElementsByTagName("ul"); 
+                for(var j=0;j<inli.length;j++){ 
+                        inli[j].style.display="none"; 
+                } 
+            } 
+        } 
+          
+  
+    } 
+    window.onload=caidan(); 
+    </script> 
+
+</body>
+</html>
