@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>复选框</h1>
+	<h2>你喜欢下面那些明星</h2>
+	<ul>
+		<li><input type="checkbox" name="sub">张杰</li>
+		<li><input type="checkbox" name="sub">谢娜</li>
+		<li><input type="checkbox" name="sub">何炅</li>
+		<li><input type="checkbox" name="sub">范冰冰</li>
+		<li><input type="checkbox" name="sub">李易峰</li>
+		<li><input type="checkbox" name="sub">赵丽颖</li>
+	</ul>
+	<button onclick="doselect(1);">全选</button>
+	<button onclick="doselect(2);">全不选</button>
+	<button onclick="doselect(3);">反选</button>
+</body>
+</html>
+<script>
+	function doselect(b){
+		var list = document.getElementsByTagName("input");
+		for(var i=0;i<list.length;i++){
+			switch(b){
+				case 1: list[i].checked = true;break;
+				case 2: list[i].checked = false; break;
+				case 3: list[i].checked = !list[i].checked; break;
+
+			}
+		}
+	}
+</script>
