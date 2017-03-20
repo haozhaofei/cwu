@@ -1,0 +1,38 @@
+<html> 
+<head> 
+<title>process</title> 
+<style type="text/css">  
+.container{  
+   width:450px;  
+   border:1px solid #6C9C2F;  
+   height:25px;  
+ }
+#bar{  
+   background:#95CA0D;  
+   height:100%;    
+ }  
+</style>  
+<script type="text/javascript">
+    function run() {
+        var bar = document.getElementById("bar");
+        var total = document.getElementById("total");
+        bar.style.width = parseInt(bar.style.width) + 1 + "%";
+        if (bar.style.width == "100%") {
+            window.clearTimeout(timeout);
+            return;
+        }
+        var timeout = window.setTimeout("run()", 50);
+    }
+    window.onload = function () {
+        run();
+    }  
+</script> 
+  
+</head> 
+<body> 
+  <div class="container"> 
+   <div id="bar" style="width:0%"; border="all";></div>  
+  </div>  
+  <span id="total"></span> 
+</body> 
+</html>
