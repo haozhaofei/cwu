@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>treemenu</title>
+	<style type="text/css">
+
+	    li{
+	    	list-style-type:none;
+	    }
+	    div{
+	    	display: none;
+	    }
+	    button{
+	    	font-size: 20px;
+	    	border: 5px;
+	    	background: yellow;
+	    }
+	</style>
+</head>
+<body>
+   <li><button onclick="fun(1)">小黄片在这里</button></li>
+    	<div id="a">
+    	    <ul>
+    	    <li>你还真点开看</li>
+    	    <li>其实下一个才是</li>
+    	    <li>不信你试试</li>	
+    	    </ul>
+    	</div>
+    	<li><button onclick="fun(2)">18禁</button></li>
+    	 <div id="b">
+    	    <ul>
+    	    	<li>老司机开车</li>
+    	    	<li>老司机开车</li>
+    	    </ul>
+    	 </div>
+    	<li><button onclick="fun(3)">最后的最后</button></li>
+    	 <div id="c">
+    	     <ul>
+    	     	<li>啥也没有</li>
+    	     	<li>有点失望</li>
+    	     </ul>
+    	 <div>
+    </ul>
+</body>
+</html>
+<script>
+	function fun(m){
+		switch(m){
+			case 1:var a=document.getElementById("a");
+		           a.style.display="block";break;
+		    case 2:var b=document.getElementById("b");
+		           b.style.display="block";break;
+		    case 3:var c=document.getElementById("c");
+		           c.style.display="block";break;
+		}
+		
+	}
+</script>
