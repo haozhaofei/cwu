@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>进度条</title>
+</head>
+
+<body>
+	0
+	<progress max="50" value="0" id="bar">0% saved</progress>50
+	</br>
+	0
+	<progress max="100" value="0" id="bar2">0% saved</progress>100
+</body>
+
+</html>
+
+<script type="text/javascript">
+	var bar=document.getElementById("bar");
+	var m=0;
+    setInterval(function(){
+    	m++;
+    	bar.value=m;
+    },50)	
+</script>
+
+<script type="text/javascript">
+	var bar2=document.getElementById("bar2");
+	var n=0;
+    setInterval(function(){
+    	n++;
+    	bar2.value=n;
+    },100)	
+</script>

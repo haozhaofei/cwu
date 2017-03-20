@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>树形菜单</title>
+
+	<!--菜单不展开-->
+	<style type="text/css">
+		li{
+			list-style-type:none;
+		}
+		div{
+			display: none;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+
+				
+			<li><button onclick="fun(1)"> 小楼</button></li>
+				<div id="xiaolou">
+					<ul>
+						<li><button>一夜</button></li>
+						<li><button onclick="fun(2)">听</button></li>	
+							<div id="ting">
+								<ul>
+									<li><button>春</button></li>
+									<li><button>雨</button></li>
+								</ul>
+							</div>
+					</ul>
+				</div>
+			
+			<li><button onclick ="fun(3)">深巷</li>
+            	<div id ="shenxiang">
+            		<ul>
+                		<li><button>明朝</button></li>
+                    	<li><button onclick="fun(4)">卖</button></li>
+                    	<div id="mai">
+                    		<ul>
+                    			<li><button>杏</button></li>
+                    			<li><button>花</button></li>
+                    		</ul>
+                    	</div>
+                	</ul>
+				</div>           
+		</ul>
+
+</body>
+</html>
+
+<script>
+	function fun(m){
+		switch(m){
+			case 1:var a=document.getElementById("xiaolou");
+					xiaolou.style.display = "block"; break;
+			case 2:var b=document.getElementById("ting");
+					ting.style.display = "block"; break;
+			case 3:var c=document.getElementById("shenxiang");
+					shenxiang.style.display = "block"; break;
+			case 4:var d = document.getElementById("mai");
+					mai.style.display = "block"; break;
+		}
+		
+	}
+</script>
