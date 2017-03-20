@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择列表</title>
+</head>
+<body>
+
+<h1>
+你最喜欢玩什么英雄
+</h1>
+
+<ul>
+	<li><input type="checkbox">妲己</li>
+	<li><input type="checkbox">貂蝉</li>
+	<li><input type="checkbox">后裔</li>
+	<li><input type="checkbox">诸葛亮</li>
+	<li><input type="checkbox">狄仁杰</li>
+	<li><input type="checkbox">王昭君</li>
+	<li><input type="checkbox">孙悟空</li>
+	<li><input type="checkbox">荆轲</li>
+	<button onclick="fun(1)">全选</button>
+	<button onclick="fun(2)">全不选</button>
+	<button onclick="fun(3)">反选</button>
+</ul>
+
+</body>
+</html>
+
+<script type="text/javascript">
+var list=document.getElementsByTagName('input');
+var m;
+function fun(m){
+	for(var i=0;i<list.length;i++)
+	{
+		if(m==1)
+			list[i].checked=true;
+		else if(m==2)
+			list[i].checked=false;
+		else if(m==3)
+				list[i].checked=!list[i].checked;
+	}
+}
+	
+</script>
