@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript实例</title>
+</head>
+<body>
+<center><h1>作业完成情况</h1></center>
+    <p><input type="checkbox" name="" value="">DateBase</p> 
+    <p><input type="checkbox" name="" value="">JavaScript</p>
+    <p><input type="checkbox" name="" value="">JSP</p>
+    <p><input type="checkbox" name="" value="">概率论与数理统计</p>
+    <p><input type="checkbox" name="" value="">计算机组成原理</p>
+    <p><input type="checkbox" name="" value="">计算机美术设计</p>
+    <p><input type="checkbox" name="" value="">英语</p>
+    <button onclick="fun(1)">全选</button>
+    <button onclick="fun(2)">全不选</button>
+    <button onclick="fun(3)">反选</button>
+	
+</body>
+</html>
+<script>
+    var list=document.getElementsByTagName("input");
+    function fun(m){
+    	for(var i=0;i<list.length;i++){
+    		switch(m){
+    			case 1:list[i].checked=true;break;
+    			case 2:list[i].checked=false;break;
+    			case 3:list[i].checked=!list[i].checked;break;
+    		}
+    	}
+    }
+	
+</script>
