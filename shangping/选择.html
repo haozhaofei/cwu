@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+   <input type="checkbox" name="select" value="bird">鸟<br>
+   <input type="checkbox" name="select" value="dog">狗<br>
+   <input type="checkbox" name="select" value="cat">猫<br>
+   <input type="checkbox" name="select" value="fish">鱼<br>
+   <input type="checkbox" name="select" value="wolf">狼<br>
+   <button onclick="fun(1)">全选</button>
+   <button onclick="fun(2)">全不选</button>
+   <button onclick="fun(3)">反选</button>
+</body>
+</html>
+
+<script type="text/javascript">
+   var list=document.getElementsByName("select");
+   var res=0;
+   function fun(n){
+   	for(var i=0;i<list.length;i++){
+        	switch(n){
+        		case 1:list[i].checked=1;break;
+        		case 2:list[i].checked=0;break;
+        		case 3:list[i].checked=!list[i].checked;break;
+        	}
+        }
+   } 
+</script>
