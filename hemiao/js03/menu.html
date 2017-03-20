@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>树形菜单</title>
+	
+</head>
+<style type="text/css">
+	    
+	    button{
+	    	background-color: white;
+			border: 0px;
+			font-size: 25px;
+	    }
+	    div{
+	    	display: none;
+	    }
+	</style>
+<body>
+    <ul>
+    	<li><button onclick="fun(1)">你喜欢什么颜色</button></li>
+    	<div id="menu1">
+		<ul>
+			<li>白色</li>
+			<li>粉色</li>
+			<li>红色</li>
+		</ul>	
+	</div>	
+    	<li><button onclick="fun(2)">你喜欢什么动物</button></li>
+    	 <div id="menu2">
+		<ul>
+			<li>小狗</li>
+			<li>小猫</li>
+			<li>老虎</li>
+		</ul>
+	</div>
+    	<li><button onclick="fun(3)">你喜欢哪门课程</button></li>
+    	 <div id="menu3">
+		<ul>
+			<li>数据库</li>
+			<li>计算机组成原理</li>
+			<li><概率论</li>
+		</ul>
+	</div>
+	
+    </ul>
+</body>
+</html>
+<script>
+	function fun(m){
+		switch(m){
+			case 1:var menu1=document.getElementById("menu1");
+		           menu1.style.display="block";break;
+		    case 2:var menu2=document.getElementById("menu2");
+		           menu2.style.display="block";break;
+		    case 3:var menu3=document.getElementById("menu3");
+		           menu3.style.display="block";break;
+		}
+		
+	}
+</script>
