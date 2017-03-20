@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+ <head>
+ 	<meta charset="GB2312">
+ 	<title>计时器</title>
+ </head>
+
+ <body>
+
+   	<form name="myform" action="">
+         <input type="text" name="hour" value="1" style="text-align:center" > : h : 
+         <input type="text" name="minute" value="00" style="text-align:center"> : m :
+         <input type="text" name="second" value="00" style="text-align:center"> : s
+     </form>
+
+ 	<button onclick=start()>开始</button>
+    <button onclick=stop()>暂停</button>
+    <button onclick=end()>复位</button>
+ </body>
+ </html>
+
+ <script type="text/javascript">
+    var time;
+ 	function start(){
+ 	time= setInterval(function() {
+		  var h = document.myform.hour.value;
+          var m = document.myform.minute.value;
+          var s = document.myform.second.value;
+     		if(s == 0 && m == 0){
+ 			h--;
+ 			document.myform.hour.value = h;
+ 			m = 60-m;
+     		}
+ 		   if(s == 0){
+ 			m--;
+ 			document.myform.minute.value=m;
+ 			s = 60-s;
+ 		    }
+ 		   s--;
+ 		  document.myform.second.value=s;
+ 		  if(h == 0 && m == 0 && s == 0){
+ 			clearInterval(time);
+ 		   }
+ 		
+ 	},1000);
+ 	}	
+ 	function stop(){
+ 		clearInterval(time);
+ 	}
+ 	function end(){
+ 		clearInterval(time);
+ 		document.myform.hour.value=1;
+ 		document.myform.minute.value=00;
+ 		document.myform.second.value=00;
+ 	}
+ </script>
