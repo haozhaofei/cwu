@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+   <input type="checkbox" name="select" value="Chinese">语文<br>
+   <input type="checkbox" name="select" value="Math">数学<br>
+   <input type="checkbox" name="select" value="English">英语<br>
+   <input type="checkbox" name="select" value="Physical">物理<br>
+   <input type="checkbox" name="select" value="Chemistry">化学<br>
+   <input type="checkbox" name="select" value="Biology">生物<br>
+   <button onclick="fun(1)">全选</button>
+   <button onclick="fun(2)">全不选</button>
+   <button onclick="fun(3)">反选</button>
+</body>
+</html>
+
+<script type="text/javascript">
+   var list=document.getElementsByName("select");
+   var res=0;
+   function fun(n){
+   	for(var i=0;i<list.length;i++){
+        	switch(n){
+        		case 1:list[i].checked=1;break;
+        		case 2:list[i].checked=0;break;
+        		case 3:list[i].checked=!list[i].checked;break;
+        	}
+        }
+   } 
+</script>
