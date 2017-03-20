@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+       <h3>全选-反选-全不选</h3>
+       <h4>魔道祖师</h4>
+       <ul>
+           <li><input type="checkbox" name="uid"/>蓝湛</li>
+           <li><input type="checkbox" name="uid"/>魏婴</li>
+           <li><input type="checkbox" name="uid"/>蓝涣</li>
+           <li><input type="checkbox" name="uid"/>江厌离</li>
+           <li><input type="checkbox" name="uid"/>江澄</li>
+           <li><input type="checkbox" name="uid"/>金光瑶</li>
+           </ul>
+        <button onclick="doSelect(1);">全选</button>
+        <button onclick="doSelect(2);">全不选</button>
+        <button onclick="doSelect(3);">反选</button>
+        <script type="text/javascript">
+            function doSelect(b){
+            var list =document.getElementsByTagName("input");
+            for (var i=0;i<list.length;i++){
+               switch(b){
+                          case 1:list[i].checked=true;break;
+                          case 2:list[i].checked=false;break;
+                          case 3:list[i].checked=!list[i].checked;break;
+               }
+            }
+	}
+</script>
+</body>
+</html>
