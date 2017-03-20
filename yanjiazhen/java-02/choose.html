@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项</title>
+
+</head>
+<body>
+
+
+<h3>你会选择哪个体育项目呢！</h3>
+
+	<input type="checkbox" name="choose" >击剑<br>
+ 	<input type="checkbox" name="choose" >芭蕾<br>
+	<input type="checkbox" name="choose" >拳击<br>
+ 	<input type="checkbox" name="choose" >篮球<br>
+ 	<input type="checkbox" name="choose" >滑冰<br>
+	<input type="checkbox" name="choose" >跆拳道<br>
+	<input type="checkbox" name="choose" >跆拳道<br>
+	<input type="checkbox" name="choose" >艺术体操<br><br>
+
+<button onclick="fun(1)">全选</button>
+<button onclick="fun(2)">全不选</button>
+<button onclick="fun(3)">反选</button>
+
+</body>
+</html>
+<script>
+  
+   function fun(m){
+   	    var odid=document.getElementsByTagName("input");
+   		for(var i=0;i<odid.length;i++){
+        switch(m){
+        			case 1 : odid[i].checked=true;break;
+        			case 2 : odid[i].checked=false;break;
+        			case 3 : odid[i].checked=!odid[i].checked;
+        }
+    }
+   }
+	
+</script>
+
+
