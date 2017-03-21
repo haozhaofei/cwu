@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+       <h3>选择表</h3>>
+       <h3>全选-反选-全不选</h3>
+       <h4>Spexial</h4>
+       <ul>
+           <li><input type="checkbox" name="uid"/>罗宏正</li>
+           <li><input type="checkbox" name="uid"/>连晨翔</li>
+           <li><input type="checkbox" name="uid"/>黄伟晋</li>
+           <li><input type="checkbox" name="uid"/>易柏辰</li>
+           <li><input type="checkbox" name="uid"/>马振桓</li>
+           <li><input type="checkbox" name="uid"/>熊梓淇</li>
+           <li><input type="checkbox" name="uid"/>赵志伟</li>
+
+           </ul>
+        <button onclick="doSelect(1);">全选</button>
+        <button onclick="doSelect(2);">全不选</button>
+        <button onclick="doSelect(3);">反选</button>
+        <script type="text/javascript">
+            function doSelect(b){
+            var list =document.getElementsByTagName("input");
+            for (var i=0;i<list.length;i++){
+               switch(b){
+                          case 1:list[i].checked=true;break;
+                          case 2:list[i].checked=false;break;
+                          case 3:list[i].checked=!list[i].checked;break;
+               }
+            }
+	}
+</script>
+</body>
+</html>
