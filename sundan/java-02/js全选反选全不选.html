@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript--作业</title>
+       
+    </head>
+    <body>
+        <h1>选择下面你喜欢的球！</h1>
+        <ul>
+           <li><input type="checkbox" name="uid"/>足球</li>
+           <li><input type="checkbox" name="uid"/>篮球</li> 
+           <li><input type="checkbox" name="uid"/>乒乓球</li>
+           <li><input type="checkbox" name="uid"/>高尔夫</li>
+           <li><input type="checkbox" name="uid"/>网球</li>
+           <li><input type="checkbox" name="uid"/>羽毛球</li>
+           <li><input type="checkbox" name="uid"/>棒球</li>
+           </ul>
+           <button onclick="doSeleck(1);">全选</button>
+           <button onclick="doSeleck(2);">全不选</button>
+           <button onclick="doSeleck(1);">反选</button>
+           <script type="text/javascript">
+           function doSelect(b){
+            //获取多选框
+            var list=document.getElementsByTagName("input");
+            //遍历 
+            for)(vari=0;i<list.length;i++){
+              switch(b)
+              case 1:list[i].checked=true;
+              break;
+              case 2:list[i].checked=false;
+              break;
+              case 3:list[i].checked=!listt[i].checked;
+              break;
+            }
+           }
+         }
+         </script>
+         </script>
+         </body>
+         </html>
