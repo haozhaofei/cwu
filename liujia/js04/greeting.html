@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>greeting 问候</title>
+</head>
+<body>
+<script language="javaScript"> 
+
+now = new Date(),hour = now.getHours() 
+document.write("<center><font color='#0000FF' size=4><b>")
+
+if(hour < 6){document.write("十点不睡觉是不要脸，两点不睡觉是不要命！")} 
+
+else if (hour < 9){document.write("起床啦起床啦！")} 
+
+else if (hour < 12){document.write("上午要敲代码！")} 
+
+else if (hour < 14){document.write("吃午饭，睡午觉！")} 
+
+else if (hour < 17){document.write("下午要画画！")}  
+
+else if (hour < 22){document.write("洗个澡，敷面膜！")} 
+
+else {document.write("快去睡觉，把手机关掉！")} 
+
+document.write("</b></font></center>")
+
+
+</script>
+
+
+</body>
+</html>
