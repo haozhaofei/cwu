@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双色球</title>
+</head>
+<body>
+ 
+ 
+ 	</div>
+ 
+ </body>
+ </html>
+ 
+ <script type="text/javascript">
+       var array=new Array();
+       for(var i = 0 ; ; i++){ 
+          // 只生成10个随机数 
+       if(array.length<5){ 
+          generateRandom(10); 
+    }else{ 
+      break; 
+   } 
+} 
+
+   for(var i = 0 ; i < array.length; i++){ 
+   	document.write("<br><center><font color=red >");
+   	document.write("产生的红球是"+array[i]+"<br>");
+   }
+   document.write("<br> <font color=blue>"+"产生的蓝球是"+Math.round(Math.random()*100009)%16+"<br>");
+  function generateRandom(){ 
+     var rand = parseInt(Math.random()*100009)%31; 
+     for(var i = 0 ; i < array.length; i++){ 
+          if(array[i] == rand){ 
+               return false; 
+          }      
+     } 
+     array.push(rand); 
+} 
+ </script>

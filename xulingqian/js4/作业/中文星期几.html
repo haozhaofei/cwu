@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>中文星期几</title>
+</head>
+	<style>
+		#did{font-size: 60px;font-weight: bold;}
+	</style>
+<body>
+	<div id="did"></div>
+</body>
+</html>
+<script type="text/javascript">
+
+	setInterval(function(){
+		//创建一个日期对象
+		var date = new Date();
+		var y = date.getFullYear();
+		var m = date.getMonth()+1;
+		var d = date.getDate();
+		var h = date.getHours();
+		var i = date.getMinutes();
+		var s = date.getSeconds();
+		var resDate = y+"-"+m+"-"+d+" "+h+":"+i+":"+s;
+		document.getElementById('did').innerHTML = resDate;
+	},1000);
+
+	var week = new Date() 
+	var w= week.getDay();
+	document.write("<font size=60px>")
+ 	if (w == 0) document.write("星期日")
+ 	if (w == 1) document.write("星期一")
+ 	if (w == 2) document.write("星期二")
+ 	if (w == 3) document.write("星期三")
+ 	if (w == 4) document.write("星期四")
+ 	if (w == 5) document.write("星期五")
+ 	if (w == 6) document.write("星期六")
+ 
+</script>
