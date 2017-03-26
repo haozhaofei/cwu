@@ -1,0 +1,38 @@
+150801057   张芳芳
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>greeting 问候</title>
+</head>
+<body>
+<script language="javaScript"> 
+
+now = new Date(),hour = now.getHours() 
+document.write("<center><font color='#0000FF' size=4><b>")
+
+if(hour < 6){document.write("处于睡眠中")} 
+
+else if (hour < 7){document.write("起床啦起床啦！")} 
+
+else if (hour < 9){document.write("早上好")} 
+
+else if (hour < 12){document.write("上课")} 
+
+else if (hour < 13){document.write("吃饭")} 
+
+else if (hour < 17){document.write("上课")}  
+
+else if (hour < 22){document.write("晚上好")} 
+
+else {document.write("赶紧睡觉，不能玩手机")} 
+
+document.write("</b></font></center>")
+
+
+</script>
+
+
+</body>
+</html>
