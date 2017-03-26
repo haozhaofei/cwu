@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>问候</title>
+	<style type="text/css">
+	div{
+		font-size: 20px;
+                color: orange;
+		font-weight: bold;
+
+	}
+	p{
+		font-size: 20px;
+		color: orange;	
+		font-weight: bold;	
+	}
+	</style>
+</head>
+<body>
+    <p>北京时间：</p>
+	<div id="did"></div>
+
+</body>
+</html>
+<script type="text/javascript">
+
+setInterval(function(){
+		
+		var date = new Date();
+		var y = date.getFullYear();
+		var m = date.getMonth()+1;
+		var d = date.getDate();
+		var h = date.getHours();
+		var i = date.getMinutes();
+		var s = date.getSeconds();
+		var fiDate = y+"-"+m+"-"+d+" "+h+":"+i+":"+s;
+		document.getElementById('did').innerHTML = fiDate;
+	},1000);
+	
+
+	var now=new Date();
+	var hr=now.getHours();
+	document.write("<br><br><center><font size=45 color=green>")
+	if (hr<8&&hr>=5)
+	{document.write("早上好")};
+
+	if (hr>=8&&hr<11)
+	{document.write("上午好")};
+
+	if (hr>=11&&hr<14)
+	{document.write("中午好")};
+
+	if (hr<=17&&hr>=14)
+	{document.write("下午好")};
+
+	if (hr<=23&&hr>=17)
+	{document.write("晚上好")};
+
+
+	if (hr>=0&&hr<5)
+	{document.write("请休息")};
+
+	document.write("</font></center>")
+</script>
