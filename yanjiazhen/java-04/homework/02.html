@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>一周</title>
+	<style>
+	p{
+		font-size: 25px;
+		
+	}
+	div{
+		font-size: 30px;
+		font-weight: bold;
+		color:blue;
+	}
+	}
+	</style>
+</head>
+<body>
+<center>
+<p>今天是：</p>
+	<div id="did"></div>
+	</center>
+	
+</body>
+</html>
+<script>
+	var now=new Date();
+	var a=now.getDay();
+	var today=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+
+	document.getElementById("did").innerHTML=today[a];
+	</script>

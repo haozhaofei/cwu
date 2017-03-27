@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双色球</title>
+	<style>
+	div{
+		width: 40px;
+		height: 40px;
+		
+		border-radius: 50%;
+		background-color: green;
+		float:left;
+		margin-left: 10px;
+		font-size:30px;
+
+	}
+	#one{
+		margin-left: 300px;
+	}
+	#sev{
+		background-color: blue;
+	}
+	</style>
+</head>
+<body>
+
+	<div id="one"></div>
+	<div id="two"></div>
+	<div id="thr"></div>
+	<div id="fou"></div>
+	<div id="fiv"></div>
+	<div id="six"></div>
+	<div id="sev"></div>
+
+
+</body>
+</html>
+<script>
+	var b=[document.getElementById("one"),document.getElementById("two"),document.getElementById("thr"),document.getElementById("fou"),document.getElementById("fiv"),document.getElementById("six"),document.getElementById("sev")];
+	var number;
+	for(var i=0;i<b.length;i++){
+		if(i<6){
+			number=Math.round(Math.random()*31);
+		}else{
+			number=Math.round(Math.random()*16);
+		}
+		if(number<10){
+  	  	b[i].innerHTML="0"+number;
+  	  }else{
+  	  	b[i].innerHTML=number;
+  	  }
+	}
+
+</script>

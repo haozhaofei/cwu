@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>*问候*</title>
+	<style>
+	div{
+		font-size:20px;
+		font-weight:bold;
+	
+	}
+	p{
+		font-size:20px;
+	}
+	</style>
+</head>
+<body>
+
+<p>现在时间是：</p>
+<div id="did"></div>
+
+</body>
+
+</html>
+<script>
+	
+	var time=new Date();
+	var a=time.getHours();
+	var b=time.getMinutes();
+	var now=a+":"+b;
+	document.getElementById('did').innerHTML=now;
+	if(a<=11){
+		document.write("<br>"+"早上好！");
+	}else if(a<=18){
+		document.write("<br>"+"中午好！");
+	}else{
+		document.write("<br>"+"晚上好！");
+	}
+	
+
+</script>
