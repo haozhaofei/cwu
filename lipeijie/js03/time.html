@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+    div{
+        width:200px;
+        height: 150px;
+        border: 1px solid;
+        font-size: 40px;
+    }
+</style>
+<body>
+   <center>
+       <div id="did"></div>
+   </center>
+</body>
+<script>
+    var date=new Date();
+    var did=document.getElementById("did");
+    var h=date.getHours();
+     if(h>=5&&h<=10){                         
+       did.innerHTML="Hello！";
+       did.style.background="pink";
+       
+       }
+      if(h>=12&&h<=16){                     
+        did.innerHTML="Hi!";
+        did.style.background="green";
+      }
+      if(h>=17&&h<=19){                     
+       did.innerHTML="How are you!";
+       did.style.background="red";
+      }
+       if(h>=20&&h<=23){                     
+       did.innerHTML="How is it going！";
+       did.style.background="yellow";
+      }
+</script>
