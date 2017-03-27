@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Greet</title>
+</head>
+
+<style>
+	div{
+		width:250px;
+		border:1px solid black;
+		background-color: gray;
+		font-size:40px;   
+	}
+</style>
+
+<body>
+	<center>
+		<div id="did"></div>
+	</center>
+</body>
+</html>
+
+<script>
+	var date = new Date();
+	var did = document.getElementById("did");
+	var h=date.getHours();
+	if(h>=6 && h<=8){
+		did.innerHTML = "早上好！";
+		did.style.color="pink";
+	}
+	if(h>=8 && h<=10){
+		did.innerHTML = "上午好！";
+		did.style.color="blue";
+	}
+	if(h>=11 && h<=13){
+		did.innerHTML = "中午好！";
+		did.style.color="red";
+	}
+	if(h>=14 && h<=17){
+		did.innerHTML = "下午好！";
+		did.style.color="orange";
+	}
+	if(h>=18 && h<=22){
+		did.innerHTML = "晚上好！";
+		did.style.color="green";
+	}
+	if(h>=23 && h<=24){
+		did.innerHTML = "晚安！";
+		did.style.color="black";
+	}
+</script>
