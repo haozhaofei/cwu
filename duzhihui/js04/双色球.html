@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双色球</title>
+	<h2>双色球</h2>
+</head>
+<style>
+	div{
+		width:50px;height:50px;border-radius:50%;background:red;
+		font-size:30px;
+		float:left;
+		margin:30px;
+	}
+	#blue{
+        background:blue;
+	}
+</style>
+<body>
+<center>
+	<button onclick=fun()>抽奖</button>
+	<div id="red1"></div>
+	<div id="red2"></div>
+	<div id="red3"></div>
+	<div id="red4"></div>
+	<div id="red5"></div>
+	<div id="red6"></div>
+	<div id="blue"></div>
+	</center>
+</body>
+</html>
+<script>
+	function fun(){
+	var num1=Math.round(Math.random()*34+1);
+	document.getElementById('red1').innerHTML = num1;
+	var num2=Math.round(Math.random()*34+1);
+	document.getElementById('red2').innerHTML = num2;
+	var num3=Math.round(Math.random()*34+1);
+	document.getElementById('red3').innerHTML = num3;
+	var num4=Math.round(Math.random()*34+1);
+	document.getElementById('red4').innerHTML = num4;
+	var num5=Math.round(Math.random()*34+1);
+	document.getElementById('red5').innerHTML = num5;
+	var num6=Math.round(Math.random()*34+1);
+	document.getElementById('red6').innerHTML = num6;
+	var num7=Math.round(Math.random()*34+1);
+	document.getElementById('blue').innerHTML = num7;
+	
+}
+
+  
+</script>
