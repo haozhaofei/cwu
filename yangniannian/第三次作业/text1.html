@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Real-time Greetings</title>
+</head>
+	<style>
+		#did{font-size: 60px;font-weight: bold;}
+	</style>
+<body>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+
+	setInterval(function(){
+		var str;
+		var date = new Date();
+		var y = date.getFullYear();
+		var m = date.getMonth()+1;
+		var d = date.getDate();
+		var h = date.getHours();
+		var i = date.getMinutes();
+		var s = date.getSeconds();
+		
+		if(h<11)
+		{
+			str=" 上午好！";
+
+		}
+		
+		else if(h>18){
+			str=" 晚上好!";
+		}
+				
+		else if((h>13)&&(h<18)){
+			str=" 下午好!";
+		}
+
+		else{
+			str=" 中午好!";
+		}
+
+		
+		var resDate = y+"-"+m+"-"+d+" "+h+":"+i+":"+s+str;
+		
+		document.getElementById('did').innerHTML = resDate;
+
+	},1000);
+
+</script>

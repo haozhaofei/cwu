@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Double Chromosphere</title>
+</head>
+<style>
+
+		#red{width:30px;height:30px;border:3px solid red;border-radius: 50%;float:left;}
+		#blue{width:30px;height:30px;border:3px solid blue;border-radius: 50%;float:left;}
+		#one{font-size: 20px;padding: 5px;}
+		#two{font-size: 20px;padding: 5px;}
+		#three{font-size: 20px;padding: 5px;}
+		#four{font-size: 20px;padding: 5px;}
+		#five{font-size: 20px;padding: 5px;}
+		#six{font-size: 20px;padding: 5px;}
+		#seven{font-size: 20px;padding: 5px;}
+	</style>
+<body>
+  <button onclick="fun1()">点击抽奖</button><br>
+
+
+<div id="red">
+<center>
+	<div id="one">
+	</div>
+</center>
+</div>
+
+<div id="red">
+<center>
+	<div id="two">
+	</div>
+</center>
+</div>
+
+<div id="red">
+<center>
+	<div id="three">
+	</div>
+</center>
+</div>
+
+<div id="red">
+<center>
+	<div id="four">
+	</div>
+</center>
+</div>
+
+<div id="red">
+<center>
+	<div id="five">
+	</div>
+</center>
+</div>
+
+<div id="red">
+<center>
+	<div id="six">
+	</div>
+</center>
+</div>
+
+<div id="blue">
+<center>
+	<div id="seven">
+	</div>
+</center>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+   function fun1(){
+	var num1=Math.round(Math.random()*31+0);
+	document.getElementById('one').innerHTML = num1;
+	var num2=Math.round(Math.random()*31+0);
+	document.getElementById('two').innerHTML = num2;
+	var num3=Math.round(Math.random()*31+0);
+	document.getElementById('three').innerHTML = num3;
+	var num4=Math.round(Math.random()*31+0);
+	document.getElementById('four').innerHTML = num4;
+	var num5=Math.round(Math.random()*31+0);
+	document.getElementById('five').innerHTML = num5;
+	var num6=Math.round(Math.random()*31+0);
+	document.getElementById('six').innerHTML = num6;
+	var num7=Math.round(Math.random()*31+0);
+	document.getElementById('seven').innerHTML = num7;
+	
+}
+
+</script>
