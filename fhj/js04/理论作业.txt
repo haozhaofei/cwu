@@ -1,0 +1,95 @@
+  理论作业
+1. JavaScript中常用内置对象都有哪些？
+
+ * Array（数组）
+		var a= new Array(); //创建一个空数组
+		a = new Array(10);  //创建一个数组单元为10个的数组。
+		a = new Array(10,20,30);//创建一个指定数组单元的数组。
+		   
+		a=['a','b','c','d']; //快捷定义数组
+		常用属性：
+			length--获取长度。
+		
+		常用方法：
+			toString() 	把数组转换为字符串，并返回结果。
+			sort() 	对数组的元素进行排序
+			join() 	把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。
+			pop() 删除并返回数组的最后一个元素 
+			push() 向数组的末尾添加一个或更多元素，并返回新的长度。 
+
+			。。。。。
+			
+    * Boolean  布尔值包装类对象
+		方法：toSource() 	返回该对象的源代码。 
+			toString() 	把逻辑值转换为字符串，并返回结果。
+			valueOf() 	返回 Boolean 对象的原始值。
+    * Date
+		var dd = new Date();
+		
+		getDate() 	从 Date 对象返回一个月中的某一天 (1 ~ 31)。
+		getDay() 	从 Date 对象返回一周中的某一天 (0 ~ 6)。
+		getMonth() 	从 Date 对象返回月份 (0 ~ 11)。
+		getFullYear() 	从 Date 对象以四位数字返回年份。 
+		getYear() 	请使用 getFullYear() 方法代替。 
+		getHours() 	返回 Date 对象的小时 (0 ~ 23)。 
+		getMinutes() 	返回 Date 对象的分钟 (0 ~ 59)。
+		getSeconds() 	返回 Date 对象的秒数 (0 ~ 59)。 
+		getMilliseconds() 	返回 Date 对象的毫秒(0 ~ 999)。 
+		getTime() 	返回 1970 年 1 月 1 日至今的毫秒数。
+		同上还有很多set方法用来设置。
+		
+    * Math  对象用于执行数学任务。方法是静态的。
+		abs(x) 	返回数的绝对值。
+		ceil(x) 	对数进行上舍入。
+		floor(x) 	对数进行下舍入。
+		random() 	返回 0 ~ 1 之间的随机数。
+		round(x) 	把数四舍五入为最接近的整数。
+		
+		max(x,y) 	返回 x 和 y 中的最高值。 
+		min(x,y) 	返回 x 和 y 中的最低值。
+		
+    * Number
+		toString();
+		toFixed 把数字转换为字符串，结果的小数点后有指定位数的数字。 
+		
+    * String 子串处理对象
+		anchor() 	创建 HTML 锚。
+		*charAt() 	返回在指定位置的字符。 	
+		charCodeAt()返回在指定的位置的字符的 Unicode 编码。
+		*indexOf() 	检索字符串。 
+		*lastIndexOf() 	从后向前搜索字符串。
+		*replace() 	替换与正则表达式匹配的子串。
+		slice() 	提取字符串的片断，并在新的字符串中返回被提取的部分。
+		split() 	把字符串分割为字符串数组。
+		substr() 	从起始索引号提取字符串中指定数目的字符。
+		*substring() 	提取字符串中两个指定的索引号之间的字符。
+		toLocaleLowerCase() 	把字符串转换为小写。
+		toLocaleUpperCase() 	把字符串转换为大写。
+		*toLowerCase() 	把字符串转换为小写。
+		*toUpperCase() 	把字符串转换为大写。
+	RegExp
+		exec()正则匹配
+		test()
+    * Global
+		escape(string) -- 可对字符串进行编码
+		unescape(string) -- 函数可对通过 escape() 编码的字符串进行解码。
+		encodeURI(URIstring) -- 函数可把字符串作为 URI 进行编码。
+		decodeURI(URIstring) -- 函数可对 encodeURI() 函数编码过的 URI 进行解码。
+		*eval(string) -- 函数可计算某个字符串，并执行其中的的 JavaScript 代码。
+		getClass(javaobj) -- 函数可返回一个 JavaObject 的 JavaClass。
+		*isNaN(x) -- 函数用于检查其参数是否是非数字值。
+		Number(object) --函数把对象的值转换为数字。
+		*parseFloat(string) -- 函数可解析一个字符串，并返回一个浮点数。
+		*parseInt(string, radix)
+
+
+ 2. 如何创建一个数组对象方式有几种。
+
+                var a= new Array(); //创建一个空数组
+		a = new Array(10);  //创建一个数组单元为10个的数组。
+		a = new Array(10,20,30);//创建一个指定数组单元的数组。
+		   
+		a=['a','b','c','d']; //快捷定义数组
+
+
+

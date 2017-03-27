@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>星期</title>
+</head>
+	<style>
+		#did{
+			font-size: 30px;
+			font-weight: solid;
+		}
+	</style>
+<body>
+<center>
+	<div id="did"></div>
+</center>
+</body>
+</html>
+
+<script>
+
+	setInterval(function(){
+		var date = new Date();
+		var a = date.getDay();
+		var y = date.getFullYear();
+		var m = date.getMonth()+1;
+		var d = date.getDate();
+		var h = date.getHours();
+		var i = date.getMinutes();
+		var s = date.getSeconds();
+		var resDate = "亲爱的，今天是 "+y+"-"+m+"-"+d+" "+h+":"+i+":"+s+"   "+"星期"+a;
+		document.getElementById('did').innerHTML = resDate;
+	},1000);
+	
+</script></title>
+</head>
+<body>
+	
