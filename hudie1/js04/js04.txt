@@ -1,0 +1,39 @@
+1. JavaScript中常用内置对象都有哪些？
+Number Boolean String Date Array  Math
+2. 如何创建一个数组对象方式有几种。
+
+
+1.使用原始的方式创建内置对象
+		var myObject = new Object();
+		myObject.name = “lijie”;
+		myObject.age = 20;
+		myObject.say = function(){...}
+	
+	2.直接创建自定义对象
+		var 对象名 = {属性名1：属性值，属性名2：属性值2，…….}
+	
+	*3.使用自定义构造函数创建对象
+		function pen(name,color,price){
+			//对象的name属性
+			this.name = name;
+			//对象的color属性
+			this.color = color;
+			//对象的piece属性
+			this.price = price;
+			//对象的say方法
+			this.say = function(){};
+		}
+		
+		var pen = new pen(“铅笔”,”红色”,20);
+		pen.say();
+
+  1. JavaScript中常用事件都有哪些？
+onclick 鼠标单击事件
+onmouseover 鼠标经过事件
+onmouseout 鼠标移开事件
+onchange 文本框改变事件
+onselect 文本框内容被选中事件
+onfocus 光标聚集
+onblur 光标离开
+onload 网页导入
+onunload 关闭网页
