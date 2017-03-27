@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	div{
+		border:1px solid red;
+		border-radius:50%; 
+		font-size: 100px;
+		text-align: center;
+		line-height: 100px;
+		display: inline;
+	}
+	
+	#blue{
+		border:1px solid blue;
+		border-radius:50%; 
+		font-size: 100px;
+		text-align: center;
+		line-height: 100px;
+	}
+	
+</style>
+<body>
+	<div id="red1"></div>
+	<div id="red2"></div>
+	<div id="red3"></div>	
+	<div id="red4"></div>
+	<div id="red5"></div>
+	<div id="red6"></div>
+	<div id="blue"></div>	
+</body>
+</html>
+<script type="text/javascript">
+	var red1=document.getElementById("red1");
+	var m=Math.round(Math.random()*10000000)%32;
+	if(m>=0&&m<=9)
+ 		red1.innerHTML="0"+m;
+ 	else
+ 		red1.innerHTML=m;
+
+	var red2=document.getElementById("red2");
+ 	m=Math.round(Math.random()*10000000)%32;
+	if(m>=0&&m<=9)
+ 		red2.innerHTML="0"+m;
+ 	else
+ 		red2.innerHTML=m;
+
+	var red3=document.getElementById("red3");
+
+ 	m=Math.round(Math.random()*10000000)%32;
+	if(m>=0&&m<=9)
+ 		red3.innerHTML="0"+m;
+ 	else
+ 		red3.innerHTML=m; 	
+
+	var red4=document.getElementById("red4");
+	m=Math.round(Math.random()*10000000)%32;
+	if(m>=0&&m<=9)
+ 		red4.innerHTML="0"+m;
+ 	else
+ 		red4.innerHTML=m; 
+
+	var red5=document.getElementById("red5");
+ 	m=Math.round(Math.random()*10000000)%32;
+	if(m>=0&&m<=9)
+ 		red5.innerHTML="0"+m;
+ 	else
+ 		red5.innerHTML=m;
+
+ 	var red6=document.getElementById("red6");
+ 	m=Math.round(Math.random()*10000000)%32;
+	if(m>=0&&m<=9)
+ 		red6.innerHTML="0"+m;
+ 	else
+ 		red6.innerHTML=m;
+
+  	var blue=document.getElementById("blue");
+  	m=Math.round(Math.random()*10000000)%17;
+	if(m>=0&&m<=9)
+ 		blue.innerHTML="0"+m;
+ 	else
+ 		blue.innerHTML=m;
+ 	</script>

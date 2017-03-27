@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+     <h3>选出你喜欢的颜色</h3>
+   <ul>
+   <li><input type="checkbox" name="uid"/>黄色</li>
+   <li><input type="checkbox" name="uid"/>蓝色</li>
+   <li><input type="checkbox" name="uid"/>紫色</li>
+   <li><input type="checkbox" name="uid"/>红色</li>
+   <li><input type="checkbox" name="uid"/>黑色</li>
+   </ul>
+   <button onclick="Select(1);">全选</button>
+   <button onclick="Select(2);">全不选</button>
+   <button onclick="Select(3);">反选</button>
+
+</body>
+</html>
+ <script type="text/javascript">
+   function Select(b){
+    var list=Document.getElementsByTagName("input");
+    for(var i=0;i<list.length;i++){
+        switch(b){
+            case 1: list[i].checked=true;break;
+            case 2: list[i].checked=false;break;
+            case 3: list[i].checked=!list[i].checked;break;
+        }
+    }
+   }
+   </script>  
+
+
+
+

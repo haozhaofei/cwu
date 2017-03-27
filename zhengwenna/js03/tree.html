@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tree</title>
+</head>
+<style>
+	 div
+	{
+		display: none;
+	} 
+</style>
+<body>
+	<button onclick="show(1)">小炒</button>
+	<div id="xiaochao">
+	<ul>
+		<li>宫保鸡丁</li>
+		<li>鱼香肉丝</li>
+		<li>辣椒炒肉</li>
+	</ul>
+	</div><br>
+	<button onclick="show(2)">清蒸</button>
+	<div id="qingzheng">
+	<ul>
+		<li>清蒸鱼</li>
+		<li>粉蒸肉</li>
+		<li>清蒸鲍鱼</li>
+	</ul>
+	</div><br>
+</body>
+</html>
+<script type="text/javascript">
+	var xiaochao=document.getElementById('xiaochao');
+	var zheng=document.getElementById('qingzheng');
+	function show(n)
+	{
+		
+		switch(n)
+		{
+			case 1: xiaochao.style.display="block";break;
+			case 2: zheng.style.display="block";break;
+		}
+	}
+
+</script>

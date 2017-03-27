@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全选全不选反选</title>
+</head>
+<body>
+<h3>JavaScript实例--全选全不选</h3>
+<h4>你喜欢下面哪些球</h4>
+<ul>
+   <input type="checkbox" name="select" value="soccer">足球<br>
+   <input type="checkbox" name="select" value="badminton">羽毛球<br>
+   <input type="checkbox" name="select" value="basketball">篮球<br>
+   <input type="checkbox" name="select" value="pingpong">乒乓球<br>
+   <input type="checkbox" name="select" value="tennis">网球<br>
+   <input type="checkbox" name="select" value="football">橄榄球<br>
+ </ul>
+   <button onclick="fun(1)">全选</button>
+   <button onclick="fun(2)">全不选</button>
+   <button onclick="fun(3)">反选</button>
+</body>
+</html>
+
+<script type="text/javascript">
+   var list=document.getElementsByName("select");
+   var res=0;
+   function fun(n){
+   	for(var i=0;i<list.length;i++){
+        	switch(n){
+        		case 1:list[i].checked=1;break;
+        		case 2:list[i].checked=0;break;
+        		case 3:list[i].checked=!list[i].checked;break;
+        	}
+        }
+   } 
+</script>

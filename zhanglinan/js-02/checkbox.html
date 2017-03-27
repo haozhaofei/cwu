@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>checkbox</title>
+</head>
+<body>
+	<h1>javascript复选框</h1>
+		<ul>
+				<li><input type="checkbox" name="sub">1</li>
+				<li><input type="checkbox" name="sub">2</li>
+				<li><input type="checkbox" name="sub">3</li>
+				<li><input type="checkbox" name="sub">4</li>
+				<li><input type="checkbox" name="sub">5</li>
+				<li><input type="checkbox" name="sub">6</li>
+		</ul>
+	    <button onclick="choose(1);">全选</button>
+	    <button onclick="choose(2);">全不选</button>
+	    <button onclick="choose(3);">反选</button>
+</body>
+</html>
+<script>
+	function choose(b){
+		var list=document.getElementsByTagName("input");
+		for (var i = 0; i < list.length; i++) {
+			switch(b)
+			{
+				case 1: list[i].checked=true;break;
+				case 2: list[i].checked=false;break;
+				case 3: list[i].checked=!list[i].checked;break;
+			}
+		}
+	}
+</script>

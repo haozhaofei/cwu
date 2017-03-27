@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TreeMenu</title>
+</head>
+<body>
+<ul>
+	<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#">周一</a>
+	<ul>
+		<li><a href="#">数据库</a></li>
+		<li><a href="#">电影中的人性</a></li>
+		<li><a href="#">体育</a></li>
+	</ul>	
+	</li>
+
+	<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#">周二</a>
+	<ul>
+		<li><a href="#">JavaScript</a></li>
+		<li><a href="#">大学英语读写译</a></li>
+		<li><a href="#">基础日语</a></li>
+	</ul>	
+	</li>
+
+	<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#">周三</a>
+	<ul>
+		<li><a href="#">c语言</a></li>
+		<li><a href="#">计算机组成原理</a></li>
+		<li><a href="#">概率论</a></li>
+	</ul>	
+	</li>
+</ul>
+	
+</body>
+</html>
+<script>
+	function displaySubMenu(li){
+		var subMenu = li.getElementsByTagName("ul")[0];
+		subMenu.style.display = "block";
+	}
+	function hideSubMenu(li){
+		var subMenu = li.getElementsByTagName("ul")[0];
+		subMenu.style.display = "none";
+	}
+
+</script>

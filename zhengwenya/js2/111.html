@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html> 
+ <head> 
+ <title>list.html</title> 
+ <style type="text/css"> 
+  dl{ 
+  height:18px; 
+  overflow:hidden; 
+  } 
+  dd{ 
+  margin:0px; 
+  padding:0px; 
+  } 
+  .close{ 
+  height:18px;
+  overflow:hidden; 
+  } 
+  .open{ 
+  height:80px; 
+  overflow:visible;  
+  } 
+   
+ </style> 
+ <script type="text/javascript"> 
+  
+   function click2(node1){ 
+
+   var nodes=node1.parentNode; 
+   if(nodes.className=="open"){ 
+    nodes.className="close"; 
+   }else{ 
+    nodes.className="open"; 
+   } 
+   } 
+ </script>   
+ </head> 
+ <body> 
+ <br/> 
+ <br/> 
+ <hr/> 
+ <dl> 
+ <dt onclick="click2(this)">SSR</dt> 
+ <dd>huiyeji</dd> 
+ <dd>datiangou</dd> 
+ <dd>cimutongzi</dd> 
+ <dd>yaodaoji</dd> 
+ </dl> 
+ <dl> 
+ <dt onclick="click2(this)">SR</dt> 
+ <dd>huibishou</dd> 
+ <dd>yaohu</dd> 
+ <dd>xuenv</dd> 
+ <dd>yecha</dd> 
+ </dl> 
+ <dl> 
+ <dt onclick="click2(this)">R</dt> 
+ <dd>yingcao</dd> 
+ <dd>shantu</dd> 
+ <dd>shouwu</dd> 
+ <dd>sanweihu</dd> 
+ </dl> 
+ </body> 
+</html>

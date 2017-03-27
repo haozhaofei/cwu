@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <title>双色球</title>
+</head>
+
+<body>
+
+</body>
+</html>
+
+<script>
+	function qiu(){
+
+        var blue=new Array("00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16");
+        var blue_num=Math.floor(Math.random()*15);
+
+        document.getElementById('blue').innerHTML=blue[blue_num];
+      
+        var red=new Array("00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31");
+       
+        var red_num=Math.floor(Math.random()*red.length);
+
+        document.getElementById('r'+i).innerHTML=red[red_num];       
+        
+}
+
+</script>

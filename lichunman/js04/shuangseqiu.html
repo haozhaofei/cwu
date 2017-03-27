@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双色球</title>
+</head>
+<style>
+        div{
+        width:40px;
+        height:40px;
+        border-radius:50%;
+        background-color:red;
+        float:left;
+        margin-left:50px;
+        font-size:30px;
+        text-align: center;
+        padding: 20px;
+        }
+        #seven{
+        background-color:blue;
+        }
+
+    </style>
+<body>
+        <button onclick="fun()">开奖</button>
+
+        <div id="one"></div>
+        <div id="two"></div>
+        <div id="three"></div>
+        <div id="four"></div>
+        <div id="five"></div>
+        <div id="six"></div>
+        <div id="seven"></div>
+</body>
+</html>
+<script type="text/javascript">
+   function fun()
+{
+    var num1=Math.round(Math.random()*31+1);
+    document.getElementById("one").innerHTML = num1;
+    var num2=Math.round(Math.random()*31+1);
+    document.getElementById("two").innerHTML = num2;
+    var num3=Math.round(Math.random()*31+1);
+    document.getElementById("three").innerHTML = num3;
+    var num4=Math.round(Math.random()*31+1);
+    document.getElementById("four").innerHTML = num4;
+    var num5=Math.round(Math.random()*31+1);
+    document.getElementById("five").innerHTML = num5;
+    var num6=Math.round(Math.random()*31+1);
+    document.getElementById("six").innerHTML = num6;
+    var num7=Math.round(Math.random()*16+1);
+    document.getElementById("seven").innerHTML = num7;  
+}
+</script>

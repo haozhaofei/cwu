@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双色球</title>
+</head>
+<style>
+		/*这是双色球的大小*/
+		#red{width:60px;height:60px;background: red;border-radius: 50%;	float:left;margin-left:45px;}
+		#green{width:60px;height:60px;background: green;border-radius: 50%;	float:left;margin-left:45px;}
+
+		/*每个球内数字大小*/
+		#one{text-align: center;font-size: 20px;padding: 20px;}
+		#two{text-align: center;font-size: 20px;padding: 20px;}
+		#three{text-align: center;font-size: 20px;padding: 20px;}
+		#four{text-align: center;font-size: 20px;padding: 20px;}
+		#five{text-align: center;font-size: 20px;padding: 20px;}
+		#six{text-align: center;font-size: 20px;padding: 20px;}
+		#seven{text-align: center;font-size: 20px;padding: 20px;}
+	</style>
+<body>
+ <button onclick="fun1()">开奖</button>
+
+<div id="red">
+
+	<div id="one">
+	</div>
+
+</div>
+
+<div id="red">
+
+	<div id="two">
+	</div>
+
+</div>
+
+<div id="red">
+
+	<div id="three">
+	</div>
+
+</div>
+
+<div id="red">
+
+	<div id="four">
+	</div>
+
+</div>
+
+<div id="red">
+
+	<div id="five">
+	</div>
+
+</div>
+
+<div id="red">
+
+	<div id="six">
+	</div>
+
+</div>
+
+<div id="green">
+
+	<div id="seven">
+	</div>
+
+</div>
+</body>
+</html>
+<script type="text/javascript">
+   function fun1()
+{
+	var num1=Math.round(Math.random()*34+1);
+	document.getElementById('one').innerHTML = num1;
+	var num2=Math.round(Math.random()*34+1);
+	document.getElementById('two').innerHTML = num2;
+	var num3=Math.round(Math.random()*34+1);
+	document.getElementById('three').innerHTML = num3;
+	var num4=Math.round(Math.random()*34+1);
+	document.getElementById('four').innerHTML = num4;
+	var num5=Math.round(Math.random()*34+1);
+	document.getElementById('five').innerHTML = num5;
+	var num6=Math.round(Math.random()*34+1);
+	document.getElementById('six').innerHTML = num6;
+	var num7=Math.round(Math.random()*34+1);
+	document.getElementById('seven').innerHTML = num7;	
+}
+</script>

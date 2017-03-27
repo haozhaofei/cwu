@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>反选实例</title>
+<script type="text/javascript">
+function checkAll(oi)
+{
+	
+	for(var i=0;i<document.getElementsByTagName("input").length;i++){
+		switch(oi){
+			case 1:document.getElementsByTagName("input").item(i).checked=true;
+			break;
+			case 2:document.getElementsByTagName("input").item(i).checked=false;
+			break;
+			case 3:document.getElementsByTagName("input").item(i).checked=!document.getElementsByTagName("input").item(i).checked;
+			break;
+			break;
+		}
+	}
+	
+	
+}
+
+</script>
+</head>
+
+<body>
+<div>
+<p>请选择你喜欢的运动</p>
+</div>
+<ul>
+<li><input type="checkbox" name="uid"/>游泳</li>
+<li><input type="checkbox" name="uid"/>滑雪</li>
+<li><input type="checkbox" name="uid"/>网球</li>
+<li><input type="checkbox" name="uid"/>篮球</li>
+</ul>
+<button onClick="checkAll(1);">全选</button>
+<button onClick="checkAll(2);">全不选</button>
+<button onClick="checkAll(3);">反选</button>
+
+</body>
+</html>

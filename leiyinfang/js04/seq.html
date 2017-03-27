@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双色球</title>
+</head>
+<body>
+
+	<input type="button" value="开始" onclick="f1();">	
+
+	<br/><br/>
+	红球：<div id="red_ball">
+
+	</div>
+	<br/>
+	蓝球：<div id="blue_ball">
+
+	</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	function f1(){
+		var balls=new Array();
+		for(i=0;i<32;i++){
+		balls[i]=i+1;	
+	}
+
+	var bool=new Array();
+	for(j=0;j<32;j++){
+	bool[j]=false;
+	}
+<!--选的红球放到这个数组里面-->
+	var red_ball=new Array();
+	var n=0;
+	for(k=0;k<balls.length;k++){
+		var index=Math.floor(Math.random()*32);
+		if(bool[index]==true){
+		continue;
+		}
+		red_ball[k]=index;
+		bool[index]=true;
+		n++;
+		if(n==6){
+		break;
+		}
+	}
+	var redBall=document.getElementById('red_ball');
+	redBall.innerHTML=red_ball;
+<!--生成蓝球-->
+	var blueBall=document.getElementById('blue_ball');
+	blueBall.innerHTML=Math.floor(Math.random()*17);
+
+}
+</script>

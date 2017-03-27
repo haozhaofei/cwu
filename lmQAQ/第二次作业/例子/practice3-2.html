@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+	<title>变量作用域</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+
+
+	//1.在函数外定义变量为全局变量
+	//2.在函数内部使用了var关键字为局部变量 不用var 为全局变量(不建议这么用全局)
+
+
+	var name = "zhangsan";  //在函数外面声明的变量为全局变量
+	function fun1(){
+		document.write("在函数内部输出外部name:"+name+"<br>");
+		name = "lisi";
+	}
+	fun1();
+	document.write("在函数外部调用name:"+name+"<br>");
+
+
+	
+	function fun2(){
+		var name = "zhangsan";  //在函数内部使用VAR 关键字定义的变是来 局部变量
+		document.write("在函数内部输出外部name:"+name+"<br>");
+		name = "lisi";
+	}
+	fun2();
+	document.write("在函数外部调用name:"+name+"<br>");//没有值输出
+
+
+	function fun3(){
+		name = "zhangsan";  //
+		document.write("在函数内部输出外部name:"+name+"<br>");
+		name = "lisi";
+	}
+	fun3();
+	document.write("在函数外部调用name:"+name+"<br>");
+
+
+</script>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实时问候</title>
+</head>
+<body>
+<center>
+ <h2>实时问候</h2>
+ <div id="1" 
+    style="height: 40px;
+ 	width: 180px;
+ 	background-color: pink;
+ 	text-align: center;
+ 	border:1px solid red;">
+ </div>
+ </center>
+	<script type="text/javascript">
+	//创建对象
+     var d = new Date();
+     var time = document.getElementById('1');
+     var hour = d.getHours();
+     if (hour>=6 && hour<11) {
+     	time.innerHTML="早上好啊！";
+     }else if (hour>=11 && hour<13) {
+     	time.innerHTML="中午好啊！";
+     }else if (hour>=13 && hour<17) {
+     	time.innerHTML="下午好啊！";
+     }else if (hour>=17 && hour<19) {
+     	time.innerHTML="傍晚好啊！";
+     }else if (hour>=19 && hour<23) {
+     	time.innerHTML="晚上好啊！";
+     }else if (hour>=23 && hour<6) {
+     	time.innerHTML="夜深了，快睡啦啦啦！";
+     }
+	</script>
+</body>
+</html>

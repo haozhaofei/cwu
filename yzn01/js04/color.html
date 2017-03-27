@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三色的变化</title>
+	<style>
+		div{
+			width:200px;height:100px;border:2px solid pink;
+		}
+	</style>
+</head>
+<body>
+<button onclick="fun(1)">红</button>
+<button onclick="fun(2)">绿</button>
+<button onclick="fun(3)">黄</button>
+<div id="did"></div>	
+</body>
+</html>
+<script>
+	function fun(m){
+		var odid=document.getElementById("did");
+		switch(m){
+			case 1:
+					odid.style.background="red";
+					break;
+			case 2:
+					odid.style.background="green";
+					break;
+			case 3:
+					odid.style.background="yellow";
+					break;
+
+		}
+	}
+</script>

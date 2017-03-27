@@ -1,0 +1,118 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>treemenu</title>
+
+	<style type="text/css">
+
+
+
+	    li{
+
+	    	list-style-type:none;
+
+	    }
+
+	    div{
+
+	    	display: none;
+
+	    }
+
+	    button{
+
+	    	font-size: 20px;
+
+	    	border: 5px;
+
+	    
+
+	    }
+
+	</style>
+
+</head>
+
+<body>
+
+   <li><button onclick="fun(1)">电影</button></li>
+
+    	<div id="a">
+
+    	    <ul>
+
+    	    <li>大话西游</li>
+
+    	    <li>乘风破浪</li>
+
+    	    <li>歌舞青春</li>	
+
+    	    </ul>
+
+    	</div>
+
+    	<li><button onclick="fun(2)">电视剧</button></li>
+
+    	 <div id="b">
+
+    	    <ul>
+
+    	    	<li>三生三世</li>
+
+    	    	<li>花千骨</li>
+    	    	<li>姗姗来迟</li>
+
+    	    </ul>
+
+    	 </div>
+
+    	<li><button onclick="fun(3)">综艺</button></li>
+
+    	 <div id="c">
+
+    	     <ul>
+
+    	     	<li>我们的挑战</li>
+
+    	     	<li>奔跑吧兄弟</li>
+
+    	     </ul>
+
+    	 <div>
+
+    </ul>
+
+</body>
+
+</html>
+
+<script>
+
+	function fun(m){
+
+		switch(m){
+
+			case 1:var a=document.getElementById("a");
+
+		           a.style.display="block";break;
+
+		    case 2:var b=document.getElementById("b");
+
+		           b.style.display="block";break;
+
+		    case 3:var c=document.getElementById("c");
+
+		           c.style.display="block";break;
+
+		}
+
+		
+
+	}
+
+</script>

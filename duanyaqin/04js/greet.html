@@ -1,0 +1,32 @@
+<!DOCTYPE html >
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>javascript实例</title>
+       
+   </head>
+   <style>
+   		#hid{font-size:60px;text-align:center;}
+   </style>
+<body>
+<h3>javascript实例之实现实时问候</h3>
+<div id="hid">
+</div>
+<script type="text/javascript">
+    //创建一个日期对象
+    var dd= new Date();
+    var st =document.getElementById("hid");
+    var hour =dd.getHours();//获取当前时
+    //alert(hour);
+    if(hour>0 && hour<=12){
+        st.innerHTML="早上好";
+    }else if(hour>12&& hour<=15){
+        st.innerHTML="中午好";
+    }else if(hour>15 && hour<=18){
+        st.innerHTML="下午好";
+    }else if(hour>18 && hour<=24){
+        st.innerHTML="晚上好";
+    }
+    </script>
+</body>
+</html>

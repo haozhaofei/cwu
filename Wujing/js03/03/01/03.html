@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	function fun(){
+		document.write("在函数内部输出外部name:"+name+"<br>");
+		name = "lisi";
+	}
+	fun();
+	document.write("在函数外部调用name:"+name+"<br>");
+
+	function fun1(){
+		var name = "zhangsan";  //在函数内部使用VAR 关键字定义的变是来 局部变量
+		document.write("在函数内部输出外部name:"+name+"<br>");
+		name = "lisi";
+	}
+	fun1();
+	document.write("在函数外部调用name:"+name+"<br>");
+
+	function fun2(){
+		name = "zhangsan";  //
+		document.write("在函数内部输出外部name:"+name+"<br>");
+		name = "lisi";
+	}
+	fun2();
+	document.write("在函数外部调用name:"+name+"<br>");
+</script>

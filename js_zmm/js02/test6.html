@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{width:100px;height: 100px;border: 1px solid red;border-radius: 50%;}
+    </style>>
+</head>
+<body>
+<center>
+    <button onclick="fun1(1)">大大</button>
+    <button onclick="fun1(2)">小小</button>
+    <button onclick="fun1(3)">隐藏</button>
+    <button onclick="fun1(4)">显示</button>
+    <div id="did">
+
+    </div>
+</center>
+    
+</body>
+</html>
+<script type="text/javascript">
+var oDid=document.getElementById('did')
+var width=100,heigth=100,border=1;
+function fun1(m){
+    if(m==1){
+        width+=10;
+        heigth+=10;
+        border+=2;
+        oDid.style.width=width+"px";
+        oDid.style.height=height+"px";
+        oDid.style.border=border+"px";
+        oDid.innerHTML="我要大大大……";
+    }else if(m==2){
+          width-=10;
+        heigth-=10;
+        border-=2;
+        oDid.style.width=width+"px";
+        oDid.style.height=height+"px";
+        oDid.style.border=border+"px solid red";
+        oDid.innerHTML="我要小小小……";
+    }else if(m==3){
+         oDid.style.display="none";
+    }else if(m==4){
+         oDid.style.display="block";
+    }
+}
+</script>

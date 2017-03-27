@@ -1,0 +1,16 @@
+理论作业：
+	   1. JavaScript中常用内置对象都有哪些？
+
+              Window对象
+              Document对象(Document getElementById()...)
+              From对象
+     
+	   2. 如何创建一个数组对象方式有几种。
+              
+              4种。
+              var a= new Array(); //创建一个空数组
+		  a = new Array(10);  //创建一个数组单元为10个的数组。
+		  a = new Array(10,20,30);//创建一个指定数组单元的数组。
+		   
+		  a=['a','b','c','d']; //快捷定义数组
+

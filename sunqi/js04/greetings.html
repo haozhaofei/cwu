@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实时问候</title>
+	<style>
+	#did{
+		font-size: 40px;
+		font-weight: bold;
+	}
+
+	</style>
+</head>
+<body>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+	var date=new Date();
+	var h=date.getHours();
+	//var m=date.getMinutes();
+	//var s=date.getSeconds();
+	if(h>=0&&h<=8)
+	{
+		document.getElementById('did').innerHTML="早上好！"
+	}
+	else if(h>=9&&h<=11)
+	{
+		document.getElementById('did').innerHTML="上午好！"
+	}
+	else if(h>=12&h<=13)
+	{
+		document.getElementById('did').innerHTML="中午好！"
+	}
+	else if(h>=14&&h<=18)
+	{
+		document.getElementById('did').innerHTML="下午好！"
+	}
+	else if(h>=19&&h<=24)
+	{
+		document.getElementById('did').innerHTML="晚上好！"
+	}
+</script>

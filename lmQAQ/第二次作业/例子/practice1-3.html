@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pratice1</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+//第一种函数
+
+function fun1 () {
+	document.write(020);
+}
+fun1();
+//第二种函数
+var fun2=function (){
+	document.write(030);
+}
+fun2();
+//第三种函数
+var fun3 = new Function("a","b","return a+b");
+document.write(fun3(3,2));
+</script>

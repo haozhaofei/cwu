@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业全选/全不选/反选的实例</title>
+</head>
+<body>
+	<h3>请选择你喜欢明星？</h3>
+	<ul>
+		<li><input type="checkbox" name="aa" />胡歌</li>
+			<li><input type="checkbox" name="bb" />李易峰</li>
+
+			<li><input type="checkbox" name="cc" />鹿晗</li>
+
+			<li><input type="checkbox" name="dd" />杨幂</li>
+
+			<li><input type="checkbox" name="ee" />赵丽颖</li>
+	</ul>
+	<button onclick="yy(1);">全选</button>
+	<button onclick="yy(2);">全不选</button>
+	<button onclick="yy(3);">反选</button>
+</body>
+</html>
+<script type="text/javascript">
+	function yy(choice){
+		var li=document.getElementsByTagName("input");
+		for (var i = 0;i<li.length; i++) {
+			switch(choice){
+				case 1:li[i].checked=true;break;
+				case 2:li[i].checked=false;break;
+				case 3:li[i].checked=!li[i].checked;break;
+
+
+
+			}
+			
+		};
+
+
+
+
+	}
+
+</script>

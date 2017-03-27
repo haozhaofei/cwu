@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<center>
+	<div id="did"></div>
+</center>
+</body>
+</html>
+<script>
+     var date=new Date();
+     var did=document.getElementById("did");
+     var h=date.getHours();
+     if(h>=5&&h<=10){
+     	did.innerHTML="Good Morning(*＾-＾*)";
+     }
+     if(h>10&&h<=18){
+        did.innerHTML="Good Afternoon(*＾-＾*)";
+     }
+     if(h>18&&h<=24){
+     	did.innerHTML="Good Evening(*＾-＾*)";
+     }
+</script>

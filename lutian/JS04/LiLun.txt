@@ -1,0 +1,19 @@
+一、理论作业：
+
+      1. JavaScript中常用内置对象都有哪些？
+
+Array（数组）
+Boolean  布尔值包装类对象
+Date
+Math  对象用于执行数学任务。方法是静态的。
+Number
+String 子串处理对象
+Global
+RegExp
+
+      2. 创建一个数组对象方式有几种。
+
+var a= new Array(); //创建一个空数组
+a = new Array(10);  //创建一个数组单元为10个的数组。
+a = new Array(10,20,30);//创建一个指定数组单元的数组。
+a=['a','b','c','d']; //快捷定义数组 

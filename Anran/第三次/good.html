@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实时问候</title>
+</head>
+<body>
+<h3>实时问候</h3>
+<!-- /显示当前星期数及问候/ -->
+<!-- /两个作业做到一起了/ -->
+<div id="hid" style="height:30px;width:600px;background:pink;font-size:19px;text-align:center;line-height:30px" >
+</div>
+	
+</body>
+</html>
+
+<script type="text/javascript">
+    var h= new Date();
+    var st =document.getElementById("hid");
+    var hour =h.getHours();           //获取当前时
+    var myDate = new Date();
+    var str="  ";
+    var week=myDate.getDay();         //获取当前星期几
+    if (week == 0) { 
+        str = "今天是:星期日"; 
+    } else if (week == 1) { 
+        str = "今天是:星期一"; 
+    } else if (week == 2) { 
+        str = "今天是:星期二"; 
+    } else if (week == 3) { 
+        str = "今天是:星期三"; 
+    } else if (week == 4) { 
+        str = "今天是:星期四"; 
+    } else if (week == 5) { 
+        str = "今天是:星期五"; 
+    } else if (week == 6) { 
+        str = "今天是:星期六"; 
+    }  
+    document.write("<font style='font-size:20px;color:purple; margin-left:240px;'>"+str);
+    alert("现在的时间是："+hour+"点");
+    if(hour>0 && hour<=6){
+        st.innerHTML="还没休息啊，夜猫子，该休息啦！";
+    }else if(hour>6 && hour<=9){
+        st.innerHTML="上午好！美好的一天开始，一天之计在于晨！你准备好了吗？";
+    }else if(hour>9 && hour<=12){
+        st.innerHTML="早上好！坚持哦！马上就能吃午饭了哦！";
+    }else if(hour>12 && hour<=15){
+        st.innerHTML="中午好！快快吃午饭~ 为下午提供充足的能量哦！";
+    }else if(hour>15 && hour<=18){
+        st.innerHTML="下午好！坚持！坚持！马上就要下班了哦~";
+    }else if(hour>18 && hour<=21){
+        st.innerHTML="傍晚好！快快离开电脑!";
+    }else if(hour>21 && hour<=24){
+        st.innerHTML="晚上好!早睡早起精神好哦";
+    }
+    </script>

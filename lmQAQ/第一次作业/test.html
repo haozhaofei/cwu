@@ -1,0 +1,42 @@
+<html> 
+<head> 
+<title>进度条</title> 
+<style type="text/css">  
+.container{  
+   width:450px;  
+   border:1px solid #f9906f;  
+   height:25px;  
+ }
+#bar{  
+   background:#f9906f;  
+   float:left; 
+   height:100%;  
+   text-align:center;  
+   line-height:150%; 
+ }  
+</style>  
+<script type="text/javascript">  
+  function run(){  
+        var bar = document.getElementById("bar"); 
+        
+    bar.style.width=parseInt(bar.style.width) + 1 + "%";  
+    
+    if(bar.style.width == "100%"){  
+      window.clearTimeout(timeout); 
+      return; 
+    } 
+    var timeout=window.setTimeout("run()",100); 
+  } 
+    window.onload = function(){  
+       run(); 
+    }  
+</script> 
+  
+</head> 
+<body> 
+  <div class="container"> 
+   <div id="bar" style="width:0%;"></div>  
+  </div>  
+  
+</body> 
+</html>

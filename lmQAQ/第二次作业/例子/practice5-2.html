@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变量作用域</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+
+	//第一种创建对象的方式  使用原始的方式创建内置对象
+	var people = new Object();
+	people.name = "小二";
+	people.sex = "女";
+	people.sanwei = "85 50 85";
+	xiaoqiao.say = function(){
+		return "我是小儿";
+	}
+	console.log(people);
+
+	//第二种声明对象 自定义构造函数创建对象	
+	function person(name,color,price){
+			//对象的name属性
+			this.name = name;
+			//对象的color属性
+			this.color = color;
+			//对象的piece属性
+			this.price = price;
+			//对象的say方法
+			this.say = function(){
+				return "我是下三";
+			};
+		}
+		
+	var person = new person("下三","yellow",20);
+	console.log(person);
+
+	//第三种声明对象的方法
+	//var 对象名 = {属性名1：属性值，属性名2：属性值2，…….}
+	var person = {
+		name:"笑死",
+		age:20,
+		say:function(){
+			return "我是笑死";
+		}
+
+	}
+
+
+</script>
