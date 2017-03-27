@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	var name="zhangsan";
+	function fun1(){
+		document.write("在函数内部输出外部name:"+name+"<br>");
+		name="lisi";
+	}
+	fun1();
+	document.write("在函数外部输出内部name:"+name+"<br>");
+
+	function fun2(){
+		var name1="zs";
+		document.write("在函数内部输出内部name1:"+name1+"<br>");
+		name1="ls";
+	}
+	fun2();
+	//document.write("在函数外部输出内部name1:"+name1+"<br>");
+
+	function fun3(){
+		name2="ww";
+		document.write("在函数内部输出内部name2:"+name2+"<br>");
+		name2="ql";
+	}
+	fun3();
+	document.write("在函数外部输出内部name2:"+name2+"<br>");
+
+
+</script>
