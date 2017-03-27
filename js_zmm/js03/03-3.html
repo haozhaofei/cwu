@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	//重点表达的是在 调用方法时 会自动转换成为对象
+	//bool类型
+	//在调用toString()时，JavaScript会内在地将这个布尔值转换成一个临时的Boolean对象
+	var a=true;
+	//sdocument.write(typeof a+"<br>");
+	document.write(a.toString()="<br>");  //为啥这一句不输出呢？
+
+	//对象类型
+	var b=new Boolean(false);
+	document.write(typeof b+"<br>");
+	document.write(b.toString()+"<br>");
+
+</script>
