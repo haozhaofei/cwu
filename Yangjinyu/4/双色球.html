@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	div{
+		width:45px;
+		height:45px;
+		border-radius:50%;
+		background-color:red;
+		margin-left:50px;
+		font-size:40px;
+		padding:25px;
+	}
+	#blue{
+        background-color:blue;
+	}
+</style>
+<body>
+	<div id="1"></div>
+	<div id="2"></div>
+	<div id="3"></div>
+	<div id="4"></div>
+	<div id="5"></div>
+	<div id="6"></div>
+	<div id="blue"></div>
+</body>
+</html>
+<script type="text/javascript">
+  var a=new Array(document.getElementById("1"),document.getElementById("2"), document.getElementById("3"), document.getElementById("4"),document.getElementById("5"),document.getElementById("6"),document.getElementById("blue"));
+  var i,b;
+  for(i=0;i<a.length;i++){
+  	  if(i<6){
+  	  	b=Math.round(Math.random()*31);
+  	  }else{
+  	  	b=Math.round(Math.random()*16);
+  	  }
+  	  a[i].innerHTML=b;
+  }
+  
+</script>
