@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双色球</title>
+</head>
+        <script>
+            function randomTest(){
+            var numList = [];
+for(var i=0;i<=31;i++){
+   numList[i-1] = i;
+}
+                 for(var i=1;i<=7;i++){
+            var num = Math.floor(Math.random() * (numList.length-(i-1)));
+            document.getElementById('jx'+i).value=numList[num];
+                    numList[num] = numList[numList.length-1-(i-1)];
+                 }
+ }
+ //老师这是网上抄来的，只知道用Math.random产生随机数， 代码有个bug就是蓝球不是0-16
+ 
+
+        </script>
+    </head>
+    <body>
+        <input type="text" id="jx1" />
+
+        <input type="text" id="jx2"/>
+
+        <input type="text" id="jx3"/>
+
+        <input type="text" id="jx4"/>
+
+        <input type="text" id="jx5"/>
+
+        <input type="text" id="jx6"/>
+
+        <input type="text" id="jx7"/>
+
+        <input type="button"value="机选一注双色球" onclick="randomTest()"/>
+
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实时问候</title>
+</head>
+<style>
+		#did{font-size: 60px;font-weight: bold;}
+		#hih{font-size: 60px;font-weight: bold;}
+	</style>
+<body>
+	<div id = "did"></div>
+	<div id = "hih"></div>
+</body>
+</html>
+<script>
+   setInterval(function(){
+    var date = new Date();
+    var st =document.getElementById('did');
+	var y = date.getFullYear();
+	var m = date.getMonth()+1;
+	var d = date.getDate();
+	var h = date.getHours();
+	var i = date.getMinutes();
+	var s = date.getSeconds();
+	var resDate = y+"-"+m+"-"+d+" "+h+":"+i+":"+s;
+	document.getElementById('hih').innerHTML = resDate;
+	
+	if(h>06 && h<09){
+
+        st.innerHTML="早上好！";
+	}else if (h>11 && h<=13) {
+       st.innerHTML="中午好！"; 
+	}else if(h>16 && h<=20){
+		st.innerHTML="晚上好！";
+	}
+},1000)
+</script>

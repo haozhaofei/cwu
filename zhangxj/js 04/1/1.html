@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>变色</title>
+	
+	<style>
+
+		div{width:100px;height:100px;border:1px solid #ccc;}
+	</style>
+	
+</head>
+<body>
+	<button onclick="fun(1)">红</button>
+	<button onclick="fun(2)">绿</button>
+	<button onclick="fun(3)">粉</button>
+	<div id="did">
+	</div>
+</body>
+</html>
+<script>
+	var oDid=document.getElementById('did');
+	function fun(m){
+		
+		switch(m){
+			case 1:oDid.style.background="red";break;
+			case 2:oDid.style.background="green";break;
+			case 3:oDid.style.background="pink";break;
+		}
+	}
+</script>

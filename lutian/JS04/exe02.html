@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <title>中文版星期</title>
+</head>
+<style>
+    div{
+    height:200px;
+    width:200px;
+    border:2px solid red;
+    font-size:20px;
+    text-align:center;
+    line-height:180px}
+</style>
+
+<body>
+<div id="bid">
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+    var date= new Date();
+    var st =document.getElementById("bid");
+    var ss =date.getDay();
+
+    if(ss==0){
+        st.innerHTML="今天是星期日";
+    }else if(ss == 1){
+        st.innerHTML="今天是星期一";
+    }else if(ss ==2){
+        st.innerHTML="今天是星期二";
+    }else if(ss == 3){
+        st.innerHTML="今天是星期三";
+    }else if(ss == 4){
+        st.innerHTML="今天是星期四";
+    }else if(ss == 5){
+        st.innerHTML="今天是星期五";
+    }else if(ss == 6){
+        st.innerHTML="今天是星期六";
+    }
+    </script>

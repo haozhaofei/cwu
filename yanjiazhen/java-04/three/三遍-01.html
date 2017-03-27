@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三遍-01</title>
+	<style>
+	div{
+		width: 100px;
+		height:100px;
+		border:1px solid #ccc;
+	}
+	</style>
+</head>
+<body>
+<button onclick="fun(1)">红</button>
+<button onclick="fun(2)">绿</button>
+<button onclick="fun(3)">蓝</button>
+
+<div id="did"></div>
+	
+</body>
+</html>
+<script>
+	function fun(m){
+		var odid=document.getElementById('did');
+		switch(m){
+			case 1: odid.style.background="red"; break;
+			case 2: odid.style.background="green"; break;
+			case 3: odid.style.background="blue"; break;
+
+		}
+	}
+</script>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三遍-01-2</title>
+	<style></style>
+</head>
+<body>
+<button onclick="fun(1)">红</button>
+<button onclick="fun(2)">绿</button>
+<button onclick="fun(3)">蓝</button>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+	function fun(a){
+ 		var odid=document.getElementById('did')
+ 		switch(a){
+ 			case 1: odid.style.background="red"; break;
+ 			case 2: odid.style.background="green"; break;
+			case 3: odid.style.background="blue"; break;
+ 		}
+	} 
+
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三遍-01-3</title>
+	<style></style>
+</head>
+<body>
+<button onclick="fun(1)">红</button>
+<button onclick="fun(2)">绿</button>
+<button onclick="fun(3)">蓝</button>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+	function fun(a){
+ 		var odid=document.getElementById('did')
+ 		switch(a){
+ 			case 1: odid.style.background="red"; break;
+ 			case 2: odid.style.background="green"; break;
+			case 3: odid.style.background="blue"; break;
+ 		}
+	} 
+
+</script>

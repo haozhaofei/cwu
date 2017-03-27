@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器-1</title>
+	<style>
+	div{
+		font-size:40px;
+		font-weight: bold;
+	}
+	</style>
+</head>
+
+<body>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+setInterval(function(){
+	var date=new Date();
+	var a=date.getFullYear();
+	var b=date.getMonth()+1;
+	var c=date.getDate();
+	var d=date.getHours();
+	var e=date.getMinutes();
+	var f=date.getSeconds();
+	var resDate=a+"-"+b+"-"+c+"-"+d+":"+e+":"+f;
+	document.getElementById('did').innerHTML=resDate;
+},1000);
+
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器2</title>
+	
+</head>
+<style>
+	#did{
+		font-size: 30px;
+		font-weight: bold;
+	}
+	</style>
+<body>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+	setInterval(function(){
+		var time=new Date();
+		var a=time.getFullYear();
+		var b=time.getMonth()+1;
+		var c=time.getDate();
+		var d=time.getHours();
+		var e=time.getMinutes();
+		var f=time.getSeconds();
+		var resdate=a+"-"+b+"-"+c+"-"+d+":"+e+":"+f;
+		document.getElementById('did').innerHTML= resdate；
+
+	},1000);
+</script>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器3</title>
+	
+</head>
+<style>
+	#did{
+		font-size: 30px;
+		font-weight: bold;
+	}
+	</style>
+<body>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+	setInterval(function(){
+		var time=new Date();
+		var a=time.getFullYear();
+		var b=time.getMonth()+1;
+		var c=time.getDate();
+		var d=time.getHours();
+		var e=time.getMinutes();
+		var f=time.getSeconds();
+		var resdate=a+"-"+b+"-"+c+"-"+d+":"+e+":"+f;
+		document.getElementById('did').innerHTML= resdate；
+
+	},1000);
+</script>

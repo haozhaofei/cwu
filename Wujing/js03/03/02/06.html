@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	
+	function fun1(){
+		document.write(111111111);
+	}
+	
+	//fun2();
+	//第二种 匿名/表达式
+	var fun2 = function(){
+		document.write(2222222);
+	}
+	
+	document.write(fun3(10,20));
+	//第三种 构造函数来定义函数
+	var fun3 = new Function("a","b","return a+b");
+</script>

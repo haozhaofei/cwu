@@ -1,0 +1,68 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双色球</title>
+	<h2>双色球</h2>
+</head>
+<style>
+	div{
+		width:40px;height:40px;border:5px solid red;border-radius: 50%;
+		margin-left:45px;font-size:20px;text-align: center; }
+	
+	#b7{
+        border:5px solid blue;
+	}
+</style>
+<body>
+	<button onclick=fun()>抽奖</button>
+	<div id="b1"></div>
+	<div id="b2"></div>
+	<div id="b3"></div>
+	<div id="b4"></div>
+	<div id="b5"></div>
+	<div id="b6"></div>
+	<div id="b7"></div>
+</body>
+</html>
+<script>
+
+	function fun(){
+  		var ssq=new Array(document.getElementById("b1"),
+  			document.getElementById("b2"),
+  			document.getElementById("b3"),
+  			document.getElementById("b4"),
+  			document.getElementById("b5"),
+  			document.getElementById("b6"),
+  			document.getElementById("b7"));
+  	var number;
+  	for(var i=0;i<7;i++){
+  		if(i<6){
+  	  	number=Math.floor(Math.random()*32);
+  	}else{
+  	  	number=Math.floor(Math.random()*17);
+  	}
+  	ssq[i].innerHTML=number;
+  }
+}
+  
+</script>
+
+
+
+
+
+
+
+
+

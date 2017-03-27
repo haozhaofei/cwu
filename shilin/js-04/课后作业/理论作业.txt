@@ -1,0 +1,17 @@
+
+1. JavaScript中常用内置对象都有哪些？
+
+答：Array（数组）、String（子串处理对象）、Date（日期）、Math（用于执行数学任务。方法是静态的）、Boolean、Number、
+Function、Global、Error、RegExp、Object
+
+2. 如何创建一个数组对象方式有几种
+答：
+一、直接字面量定义:
+var arr = [];//创建空数组
+var arr = [1,2,3]//长度为三的数组，内容分别是1，2，3
+
+
+二、new Array
+var arr=new Array();//new一个没有内容的空数组
+var arr=new Array(20);//定义指定大小；长度为20
+var arr=new Array('abc', 'def', 'ghi', 'opq');//定义时赋初值

@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html> 
+ <head> 
+ <title>list.html</title> 
+ <style type="text/css"> 
+  dl{ 
+  height:22px; 
+  overflow:hidden; 
+  } 
+  dd{ 
+  margin:5px; 
+  padding:0px; 
+  } 
+  .close{ 
+  height:20px;
+  overflow:hidden; 
+  } 
+  .open{ 
+  height:150px; 
+  overflow:visible;  
+  } 
+   
+ </style> 
+ <script type="text/javascript"> 
+  
+   function click2(node1){ 
+
+   var nodes=node1.parentNode; 
+   if(nodes.className=="open"){ 
+    nodes.className="close"; 
+   }else{ 
+    nodes.className="open"; 
+   } 
+   } 
+ </script>   
+ </head> 
+ <body> 
+ <br/> 
+ <br/> 
+ <hr/> 
+ <dl> 
+ <dt onclick="click2(this)">SpeXial</dt> 
+ <dd>first generation</dd> 
+ <dd>second generation</dd> 
+ <dd>third generation</dd> 
+ <dd>fourth generation</dd> 
+ </dl> 
+ <dl> 
+ <dt onclick="click2(this)">EXO</dt> 
+ <dd>Singing line</dd> 
+ <dd>Danceing line</dd> 
+ <dd>Face line</dd> 
+ <dd>RAP Line</dd> 
+ </dl> 
+ <dl> 
+ <dt onclick="click2(this)">RTA</dt> 
+ <dd>juniors class</dd> 
+ <dd>youth category</dd> 
+ <dd>foreign line</dd> 
+ </dl> 
+ </body> 
+</html>

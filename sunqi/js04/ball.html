@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双色球抽奖</title>
+	<style type="text/css">
+	 body{
+	 	font-size:25px;
+	 	text-align: center;
+	 }
+     div{
+     	height:50px;
+     	width:50px;
+     	border:1px solid red;
+        border-radius: 50%
+     }
+     #blue{
+     	border: 1px solid blue;
+     }
+	</style>
+</head>
+<body>
+  <h2>本期中奖号为：</h2>
+  <div id="1"></div>
+  <div id="2"></div>
+  <div id="3"></div>
+  <div id="4"></div>
+  <div id="5"></div>
+  <div id="6"></div>
+  <div id="blue"></div>	
+</body>
+</html>
+<script>
+    var num=[];
+    for(i=0;i<num.length;i++)
+    {
+    	num[i]=Math.round(Math.random()*100)%31;
+    }
+    
+	document.getElementById('1').innerHTML=Math.round(Math.random()*100)%31;
+	document.getElementById('2').innerHTML=Math.round(Math.random()*100)%31;
+	document.getElementById('3').innerHTML=Math.round(Math.random()*100)%31;
+	document.getElementById('4').innerHTML=Math.round(Math.random()*100)%31;
+	document.getElementById('5').innerHTML=Math.round(Math.random()*100)%31;
+	document.getElementById('6').innerHTML=Math.round(Math.random()*100)%31;
+	document.getElementById('blue').innerHTML=Math.round(Math.random()*100)%16;
+</script>

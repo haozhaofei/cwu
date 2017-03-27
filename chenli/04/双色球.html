@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	#did{
+		   width:  210px;
+		   height: 200px;
+           margin: 0px auto;
+	    }
+	#one{
+		float: left;
+		width:100px;
+		height:100px;
+		border: 2px solid;
+		border-color: red;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 100px;
+		}
+	#two{
+		float: right;
+		display: block;
+		width:100px;
+		height:100px;
+		border: 2px solid;
+		border-color: blue;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 100px;
+		}
+	button{
+		float: right;
+		margin-left: 400px;
+	      }
+		</style>
+	
+</head>
+<body>
+<div id="did">
+	<div id="one">
+		<script type="text/javascript">
+         do{
+         	var a=Math.random()*100;
+            }
+         while(a>31)
+         document.write(Math.round(a));
+
+		</script>
+	</div>
+	<div id="two">
+		<script type="text/javascript">
+        do{
+         var b=Math.random()*100;
+           }
+        while(b>16 )
+        document.write(Math.round(b));
+		</script>
+	</div>
+	<button onclick="fun()">抽奖</button>
+</div>
+
+</body>
+<script type="text/javascript">
+		function fun()
+		{
+			location=location;
+		}
+</script>
+
+</html>

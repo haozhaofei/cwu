@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pratices</title>
+	<style type="text/css">
+	div{width: 100px;height: 100px;background: yellow}
+
+	</style>
+</head>
+<body>
+	<button onclick="fun1(1)">红</button>
+	<button onclick="fun1(2)">绿</button>
+	<button onclick="fun1(3)">蓝</button>
+	<div id="did">
+		
+	</div>
+</body>
+</html>
+<script>
+    function fun1(m){
+    	var id=document.getmentById(did);
+    	switch(m){
+			case 1 :
+				oDid.style.background = "red";
+			break;
+			case 2 :
+				oDid.style.background = "green";
+			break;
+			case 3 :
+				oDid.style.background = "blue";
+			break;
+		}
+    }
+</script>

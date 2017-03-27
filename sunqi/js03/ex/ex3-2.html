@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	var name="zhangsan";
+	function fun1(){
+		document.write("在函数内部输出外部name:"+name+"<br>");
+		name="lisi";   //改变了全局变量的值
+	}
+	fun1();
+	document.write("在函数外部调用name:"+name+"<br>");
+
+
+	function fun2(){
+		var name1="zs";
+		document.write("在函数内部输出函数内的name1:"+name1+"<br>");
+		name1="lisi";   //改变了局部变量的值
+		document.write("在函数内部再次输出函数内的name1:"+name1+"<br>");
+	}
+	fun2();
+	//document.write("输出函数内的name1:"+name1+"<br>");  不能执行 name1 is not defined
+
+	function fun3(){
+		name2="ww";
+		document.write("在函数内部输出函数内的name2:"+name2+"<br>");
+		name2="ql";     //改变了全局变量的值
+	}
+	fun3();
+	document.write("在函数外输出函数内的name2:"+name2+"<br>");
+</script>

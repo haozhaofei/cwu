@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>星期几</title>
+	<style type="text/css">
+	#did{
+		font-size: 40px;
+
+		}
+	</style>
+</head>
+<body>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+    var did=document.getElementById('did');
+	var date=new Date();
+	var w=date.getDay();
+	switch(w){
+		case 0: did.innerHTML="今天是星期日。";break;
+		case 1: did.innerHTML="今天是星期一。";break;
+		case 2: did.innerHTML="今天是星期二。";break;
+		case 3: did.innerHTML="今天是星期三。";break;
+		case 4: did.innerHTML="今天是星期四。";break;
+		case 5: did.innerHTML="今天是星期五。";break;
+		case 6: did.innerHTML="今天是星期六。";break;
+	}
+
+</script>

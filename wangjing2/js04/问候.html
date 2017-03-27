@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+    div{
+        width:100px;
+        border: 5px solid black;
+        font-size: 500px;
+    }
+</style>
+<body>
+   <center>
+       <div id="did"></div>
+   </center>
+</body>
+<script>
+    var date=new Date();
+    var did=document.getElementById("did");
+    var h=date.getHours();
+     if(h>=6&&h<=10){                         
+       did.innerHTML="Good Morning";
+       did.style.background="red";
+       
+       }
+      if(h>=15&&h<=18){                     
+        did.innerHTML="Good Afternoon!";
+        did.style.background="yellow";
+      }
+      if(h>=19&&h<=22){                     
+       did.innerHTML="Good Evening!";
+       did.style.background="green";
+      }
+</script>

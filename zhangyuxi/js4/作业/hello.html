@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>实时问候</title>
+</head>
+<body>
+            <div id="showTime"></div>
+            <div id="time"></div>
+            <div id="did"></div>
+</body>
+</html>
+<script>               
+        var st=document.getElementById("showTime");
+        var time=document.getElementById("time");
+                
+		var date = new Date();
+		var y = date.getFullYear();
+		var m = date.getMonth()+1;
+		var d = date.getDate();
+		var h = date.getHours();
+		var i = date.getMinutes();
+		var s = date.getSeconds();
+		var resDate = y+"-"+m+"-"+d+" "+h+":"+i+":"+s;
+        document.getElementById('did').innerHTML =resDate;       
+      
+                if(h>6 && h<=9){
+                    st.innerHTML="早上好!";
+                }else if(h>9 && h<=12){
+                    st.innerHTML="上午好!";
+                }else if(h>12 && h<=18){
+                    st.innerHTML="下午好!";
+                }else if(h>18 && h<21){
+                    st.innnerHTML="晚安!";
+                }else if(h>21 && h<=24){
+                    st.innerHTML="夜深了，早点休息!";
+                }else if(h>0 && h<=6){
+                    st.innerHTML="凌晨了，还没睡啊!";
+                }
+            </script>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器时间</title>
+</head>
+	<style>
+		#did{font-size: 60px;font-weight: bold;}
+	</style>
+<body>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+
+	setInterval(function(){
+		//创建一个日期对象
+		var date = new Date();
+		var y = date.getFullYear();
+		var m = date.getMonth()+1;
+		var d = date.getDate();
+		var h = date.getHours();
+		var i = date.getMinutes();
+		var s = date.getSeconds();
+		var time = y+"-"+m+"-"+d+" "+h+":"+i+":"+s;
+		document.getElementById('did').innerHTML = time;
+	},1000);
+    
+	function b(){
+		var date = new Date();
+       var h = date.getHours();
+       if(6<=h&&h<12)
+       {
+       	 document.write("早上好！");
+       }
+       else if(12<=h&&h<17)
+       {
+       	 document.write("下午好！");
+       }
+       else if(17<=h&&h<24)
+       	{
+       	 document.write("晚上好！");
+       }
+       else
+       	{
+       	 document.write("现在是凌晨！");
+       }
+	}
+	
+    b();
+</script>
