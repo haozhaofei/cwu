@@ -1,0 +1,27 @@
+1、JavaScript内置对象
+    * Array（数组）
+		
+    * Boolean  布尔值包装类对象
+		
+    * Date
+		
+    * Math  对象用于执行数学任务。方法是静态的。
+		
+    * Number
+		
+    * String 子串处理对象
+		
+    * Global
+		
+2、
+（1）单纯创建JavaScript数组:
+
+vararr=newArray();
+
+（2）创建JavaScript数组的同时规定数组大小:
+
+vararr=newArray(10);//这里就创建了一个初始化大小为10的数组
+
+（3）直接初始化:
+
+vararr=newArray("茉莉花","喜欢","毛绒玩具");
