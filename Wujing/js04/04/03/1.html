@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<button onclick="fun(1)">red</button>
+		<button onclick="fun(2)">green</button>
+		<button onclick="fun(3)">blue</button>
+		<div id = "do" ></div>
+	</center>
+</body>
+</html>
+<script>
+	var doo = document.getElementById('do');
+	function fun (m) {
+		switch(m){
+			case 1:
+				doo.style.background = "red";
+				break;
+			case 2:
+				doo.style.background = "green";
+				break;
+			case 3 :
+				doo.style.background = "blue";
+			    break;
+
+		}
+		// body...
+	}
+</script>s

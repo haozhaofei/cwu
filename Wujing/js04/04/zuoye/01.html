@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<center>
+		<style>
+			div{
+				width: 60px;
+				height: 30px;
+				border:2px solid red;
+
+
+			}
+		</style>
+	</center>
+</body>
+</html>
+<script type="text/javascript">
+    var h= new Date();
+    var st =document.getElementById("hid");
+    var hour =h.getHours();           //获取当前时
+    var myDate = new Date();
+    var str="  ";
+    var week=myDate.getDay();         //获取当前星期几
+    if (week == 0) {
+        str = "今天是:星期日"; 
+    } else if (week == 1) { 
+        str = "今天是:星期一"; 
+    } else if (week == 2) { 
+        str = "今天是:星期二"; 
+    } else if (week == 3) { 
+        str = "今天是:星期三"; 
+    } else if (week == 4) { 
+        str = "今天是:星期四"; 
+    } else if (week == 5) { 
+        str = "今天是:星期五"; 
+    } else if (week == 6) { 
+        str = "今天是:星期六"; 
+    }  
+     document.write("<font style='font-size:20px;color:purple; margin-left:240px;'>"+str);
+    </script>

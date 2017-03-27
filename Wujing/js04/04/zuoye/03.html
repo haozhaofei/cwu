@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<style>
+		div{
+        width:45px;height:45px;border-radius:50%;border:1px solid red;float:left;margin-left:20px;font-size:34px;
+    }
+    #blue{
+        border:1px solid blue;
+    }
+    button{
+        width:60px;height:30px;margin-top:8px;margin-left:20px;
+    }
+	</style>
+	<center>
+	<div id="red1"></div>
+    <div id="red2"></div>
+    <div id="red3"></div>
+    <div id="red4"></div>
+    <div id="red5"></div>
+    <div id="red6"></div>
+    <div id="blue"></div>
+    </center>
+    <button onclick=start()>开始</button>
+</body>
+</html>
+<script>
+	function start(){
+    var arr=new Array(document.getElementById("red1"),document.getElementById("red2"), document.getElementById("red3"), document.getElementById("red4"),document.getElementById("red5"),document.getElementById("red6"),document.getElementById("blue"));
+    var num;
+    for(var i=0;i<arr.length;i++){
+     	if(i<6){
+      	  num=Math.round(Math.random()*12);
+     	}else{
+     	   num=Math.round(Math.random()*34);
+      	}
+      	if(num<10){
+        	arr[i].innerHTML="0"+num;
+      	}	else{
+        	arr[i].innerHTML=num;
+      	}
+  }
+}
+</script>
