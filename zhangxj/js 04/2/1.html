@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时间显示</title>
+</head>
+<style>
+	#did{font-size: 60px;font-weight: bold;}
+</style>
+<body>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+	setInterval(function(){
+		var date=new Date();
+		var y=date.getFullYear();
+		var m=date.getMonth()+1;
+		var d=date.getDate();
+		var h=date.getHours();
+		var i=date.getMinutes()
+		var s=date.getSeconds();
+		var resDate=y+"-"+m+"-"+d+" "+h+":"+i+":"+s;
+		document.getElementById('did').innerHTML=resDate;
+	},1000);
+</script>
