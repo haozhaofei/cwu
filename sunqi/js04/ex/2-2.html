@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+    <ul>
+    	<li>妲己</li>
+    	<li>孙悟空</li>
+    	<li>亚瑟</li>
+    	<li>孙尚香</li>
+    </ul>
+	
+</body>
+</html>
+<script>
+	var ul=document.getElementsByTagName('li');   //var ul 返回的是一个集合
+	for(k in ul)                 //for...in...语句可以遍历对象中的所有属性或数组中的所有元素
+	{
+		document.write(k+"<br>");
+	}
+//一般不使用for...in...语句，原因是它太啰嗦了，会显示一些我们不想要的数据
+    document.write("----------我是分割线-------------<br>");
+//推荐使用for
+    for(var i=0;i<ul.length;i++)
+    {
+    	document.write(ul[i].innerHTML+"<br>");
+    }
+</script>
