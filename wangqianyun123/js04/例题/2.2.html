@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>li 2 two</title>
+</head>
+<body>
+	<ul>
+		<li>妲己</li>
+		<li>孙尚香</li>
+		<li>后羿</li>
+		<li>安琪拉</li>
+	</ul>
+	
+</body>
+</html>
+<script>
+	var ul=document.getElementsByTagName("li");
+	/*for(k in ul){
+		document.write(k+"<br>");
+	}*/
+	for(var i=0;i<ul.length;i++){
+		document.write(ul[i].innerHTML+"<br>");
+	}
+</script>

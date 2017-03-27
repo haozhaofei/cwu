@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>JavaScript--实例</title>
+       
+    </head>
+    <body>
+        <h3>JavaScript实例--进度条效果</h3>
+        <div style="width:400px;height:30px;border:1px solid #aaa;padding:2px;">
+            <div style="width:0px;height:30px;background-color:blue;" id="did"></div>
+        </div>
+        <br/>
+        <button onclick="doStart()">开始</button>
+        <script type="text/javascript">
+            //
+            function doStart(){
+                var m=0;
+                //定时器，每隔100毫秒调用一次
+                var mytime = setInterval(function(){
+                    m++; //累加
+                    //将累加的数值添加的div的css样式中
+                    document.getElementById("did").style.width=m+"%";
+                    //判断是否结束
+                    if(m==100){
+                        clearInterval(mytime); //关闭定时
+                        alert("over!"); 
+                    }
+                },10);
+            }
+        </script>
+    </body>
+</html>

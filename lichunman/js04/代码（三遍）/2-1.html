@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+     <li>狗</li>
+     <li>猫</li>
+     <li>兔子</li>
+     <li>松鼠</li>		
+	</ul>
+</body>
+</html>
+<script type="text/javascript">
+/*var ul = document.getElementsByTagName('li');
+  for(k in ul){
+    document.write(k+"<br>");
+  }*/
+   var ul=document.getElementsByTagName("li");
+   for(var i=0;i<ul.length;i++){
+   	  document.write(ul[i].innerHTML+"<br>");
+   }
+
+</script>

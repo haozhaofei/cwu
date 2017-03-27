@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+       <h3>Selection</h3>
+       <h4>wangzherongyao</h4>
+       <ul>
+           <li><input type="checkbox" name="uid"/>daqiao</li>
+           <li><input type="checkbox" name="uid"/>xiaoqiao</li>
+           <li><input type="checkbox" name="uid"/>diaochan</li>
+           <li><input type="checkbox" name="uid"/>wangzhaojun</li>
+           <li><input type="checkbox" name="uid"/>sunwukong</li>
+           <li><input type="checkbox" name="uid"/>direnjie</li>
+           </ul>
+        <button onclick="doSelect(1);">check all</button>
+        <button onclick="doSelect(2);">select none</button>
+        <button onclick="doSelect(3);">invert selection</button>
+        <script type="text/javascript">
+            function doSelect(b){
+            var list =document.getElementsByTagName("input");
+            for (var i=0;i<list.length;i++){
+               switch(b){
+                          case 1:list[i].checked=true;break;
+                          case 2:list[i].checked=false;break;
+                          case 3:list[i].checked=!list[i].checked;break;
+               }
+            }
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时间显示</title>
+</head>
+<style>
+	#did{font-size: 60px;font-weight: bold;}
+</style>
+<body>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+	var date=new Date();
+	var day=new Array(7);
+	day[0]="星期日";
+	day[1]="星期一";
+	day[2]="星期二";
+	day[3]="星期三";
+	day[4]="星期四";
+	day[5]="星期五";
+	day[6]="星期六";
+	document.write(day[date.getDay()]);
+</script>

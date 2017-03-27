@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器</title>
+	</head>
+	<style>
+     #did{
+     	font-size: 60px;
+     	font-weight: bold; 
+     	border:2px solid #ccc;
+     }
+	</style>
+	<body>
+	<div id="did"></div>
+	</body>
+</html>
+<script>
+    //第一遍
+ /* setInterval(function() {
+   	var date=new Date();
+    var y=date.getFullYear();
+    var m=date.getMonth();
+    var d=date.getDate();
+    var h=date.getHours();
+    var n=date.getMinutes();
+    var s=date.getSeconds();
+    var timeDate=y+"-"+m+"-"+d+"/"+h+":"+n+":"+s;
+    document.getElementById('did').innerHTML=timeDate;
+   },1000);*/
+
+
+
+    //第二遍
+    /*setInterval(function(){
+    var date=new Date();
+    var y=date.getFullYear();
+    var m=date.getMonth();
+    var d=date.getDate();
+    var h=date.getHours();
+    var i=date.getMinutes();
+    var s=date.getSeconds();
+    var time=y+"-"+m+"-"+d+" "+h+":"+i+":"+s;
+    document.getElementById('did').innerHTML=time;
+	},1000);*/
+
+     
+     //第三遍
+     setInterval(function(){
+     	var date=new Date();
+     	var y=date.getFullYear();
+     	var m=date.getMonth();
+     	var d=date.getDate();
+     	var h=date.getHours();
+     	var i=date.getMinutes();
+     	var s=date.getSeconds();
+     	var time=y+"-"+m+"-"+d+" "+h+":"+i+":"+s;
+     	document.getElementById('did').innerHTLM=time;
+     },1000)
+</script>

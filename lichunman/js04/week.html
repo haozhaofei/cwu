@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>今天星期几</title>
+</head>
+<body>
+	<div id="did"></div>
+</body>
+</html>
+
+<script type="text/javascript">
+	setInterval(function(){
+		
+		var date = new Date();
+		var y = date.getFullYear();//年
+		var m = date.getMonth()+1;//月
+		var d = date.getDate();//日
+		var h = date.getHours();//时
+		var i = date.getMinutes();//分
+		var s = date.getSeconds();//秒
+
+		var resDate = y+"/"+m+"/"+d+" "+h+":"+i+":"+s;
+		var a=new Array('星期日','星期一','星期二','星期三','星期四','星期五','星期六');
+		var d=date.getDay();
+		var str= " 今天是"+a[d];
+		document.getElementById('did').innerHTML = resDate+str;
+	},1000);
+	
+	
+</script>

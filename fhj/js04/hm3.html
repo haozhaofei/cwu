@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双色球</title>
+</head>
+<style>
+		#red{
+			width:100px;
+			height:100px;
+			background: red;
+			border-radius: 50%;
+			float: left;
+		}
+		#blue{
+			width:100px;
+			height:100px;
+			background: blue;
+			border-radius: 50%;
+			float: left;
+		}
+		#x1{font-size: 30px;padding: 15px;}
+		#x2{font-size: 30px;padding: 15px;}
+		#x3{font-size: 30px;padding: 15px;}
+		#x4{font-size: 30px;padding: 15px;}
+		#x5{font-size: 30px;padding: 15px;}
+		#x6{font-size: 30px;padding: 15px;}
+		#x7{font-size: 30px;padding: 15px;}
+	</style>
+<body>
+     <center>
+
+    <button onclick="fun()">点击抽奖</button>
+
+  </center>
+
+
+<div id="red">
+<center>
+	<div id="x1">
+	</div>
+</center>
+</div>
+
+<div id="red">
+<center>
+	<div id="x2">
+	</div>
+</center>
+</div>
+
+<div id="red">
+<center>
+	<div id="x3">
+	</div>
+</center>
+</div>
+
+<div id="red">
+<center>
+	<div id="x4">
+	</div>
+</center>
+</div>
+
+<div id="red">
+<center>
+	<div id="x5">
+	</div>
+</center>
+</div>
+
+<div id="red">
+<center>
+	<div id="x6">
+	</div>
+</center>
+</div>
+
+<div id="blue">
+<center>
+	<div id="x7">
+	</div>
+</center>
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+   function fun(){
+	var num1=Math.round(Math.random()*31+0);
+	document.getElementById('x1').innerHTML = num1;
+	var num2=Math.round(Math.random()*31+0);
+	document.getElementById('x2').innerHTML = num2;
+	var num3=Math.round(Math.random()*31+0);
+	document.getElementById('x3').innerHTML = num3;
+	var num4=Math.round(Math.random()*31+0);
+	document.getElementById('x4').innerHTML = num4;
+	var num5=Math.round(Math.random()*31+0);
+	document.getElementById('x5').innerHTML = num5;
+	var num6=Math.round(Math.random()*31+0);
+	document.getElementById('x6').innerHTML = num6;
+	var num7=Math.round(Math.random()*16+0);
+	document.getElementById('x7').innerHTML = num7;
+	
+}
+
+</script>

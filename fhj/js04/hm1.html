@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>问候</title>
+</head>
+<style>
+		#did{
+			font-size: 30px;
+			font-weight: solid;
+           }
+</style>
+
+<body>
+<center>
+	<div id="did"></div>
+</center>	
+</body>
+</html>
+
+<script>
+		setInterval(function(){
+		var date = new Date();
+		var y = date.getFullYear();
+		var m = date.getMonth()+1;
+		var d = date.getDate();
+		var h = date.getHours();
+		var i = date.getMinutes();
+		var s = date.getSeconds();
+
+    if(h<9)
+		{
+			str="亲爱的，早晨好";
+
+		}
+		else if((h>8)&&(h<12)){
+			str="亲爱的，下午好";
+		}
+		else if((h>13)&&(h<18)){
+			str="亲爱的，下午好";
+		}
+		else {
+			str="亲爱的，晚上好";
+		}
+		
+		var resDate = str+"     "+y+"-"+m+"-"+d+" "+h+":"+i+":"+s;
+		document.getElementById('did').innerHTML = resDate;
+	},1000);
+	
+	
+
+
+</script>

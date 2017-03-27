@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>树形图</title>
+</head>
+<body>
+    <ul id="menu"> 
+        <li> 
+            文件 
+            <ul> 
+                <li>新建文件</li> 
+                <li>打开文件</li> 
+                <li>保存</li> 
+            </ul> 
+        </li> 
+        <li> 
+           编辑
+            <ul> 
+                <li>复制</li> 
+                <li>剪切</li> 
+                <li>粘贴</li> 
+            </ul> 
+        </li> 
+        <li> 
+            工具
+            <ul> 
+                <li>命令面板</li> 
+                <li>代码片段</li> 
+                <li>编译系统</li> 
+            </ul> 
+        </li> 
+    </ul> 
+    <script type="text/javascript"> 
+    function menu(){ 
+        var elem=document.getElementById("menu"); 
+              
+        var ul=elem.getElementsByTagName("ul") 
+        for(var i=0;i<ul.length;i++){ 
+            ul[i].style.display="none"; 
+        } 
+           
+        var li=elem.getElementsByTagName("li"); 
+        for(var i=0;i<li.length;i++){ 
+            li[i].onmouseover=function(){ 
+                var inli=this.getElementsByTagName("ul"); 
+                for(var j=0;j<inli.length;j++){ 
+                        inli[j].style.display="block"; 
+                } //鼠标移上去时显示
+            }; 
+            li[i].onmouseout=function(){ 
+                var inli=this.getElementsByTagName("ul"); 
+                for(var j=0;j<inli.length;j++){ 
+                        inli[j].style.display="none"; 
+                } 
+            } 
+        } 
+          
+  
+    } 
+    window.onload=menu(); 
+    </script> 
+
+</body>
+</html>

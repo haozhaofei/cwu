@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实时问候</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	var date=new Date();
+	var h=date.getHours();
+	
+	if(h>=0&&h<6){
+		document.write("凌晨好！"+"<br>");
+	}else if(h>=6&&h<12){
+		document.write("早上好！"+"<br>");
+	}else if(h>=12&&h<14){
+		document.write("中午好！"+"<br>");
+	}else if(h>=14&&h<18){
+		document.write("下午好！"+"<br>");
+	}else if(h>=18&&h<24){
+		document.write("晚上好！"+"<br>");
+	}
+</script>

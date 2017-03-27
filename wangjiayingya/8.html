@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实时查询星期几</title>
+</head>
+<style>
+	#did{font-weight: bold;}
+</style>
+<body>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+	document.getElementById('did');
+	var date = new Date;
+	var day = date.getDay();
+    if (day == 1)
+    {
+    	document.write("小仙女！你好，今天是星期一哦！");
+    }
+    else if (day == 2)
+    {
+    	document.write("星期二！")
+    }
+    else if (day == 3)
+    {
+    	document.write("星期三！")
+    }
+    else if (day == 4)
+    {
+    	document.write("星期四！")
+    }
+    else if (day == 5)
+    {
+    	document.write("星期五！")
+    }
+    else if (day == 6)
+    {
+    	document.write("星期六！")
+    }
+    else if (day == 7)
+    {
+    	document.write("星期日！")
+    }
+</script>

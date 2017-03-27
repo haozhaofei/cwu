@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+    var name="zhangsan"
+	function fun1 () {
+		document.write("调用函数外面的name"+name"<br>");
+		name="lisi"
+	}
+	fun1 ();
+	document.write("调用函数里面的name"+name"<br>");
+
+
+	
+	function fun2 () {
+		var name1="shusan"
+		document.write("调用函数外面的name"+name1"<br>");
+		var name1="wangzi"
+	}
+	fun2();
+	document.write("调用函数里面的name"+name2"<br>");
+	var name2="lisi"
+	function fun4 () {
+		document.write("调用函数外面的name"+name2"<br>");
+		name2="wanger"
+	}
+	fun4 ();
+	document.write("调用函数里面的name"+name"<br>");
+
+
+	
+	function fun5 () {
+		var name3="mazi"
+		document.write("调用函数外面的name"+name3"<br>");
+		var name3="xiaoli"
+	}
+	fun5();
+	document.write("调用函数里面的name"+name3"<br>");
+</script>

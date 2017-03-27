@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<center>
+	<div id="hid" style="height:60px;width:600px;background:red;font-size:19px;text-align:center;line-height:30px" >
+
+</center>
+</body>
+</html>
+<script>
+    var h= new Date();
+    var st =document.getElementById("hid");
+    var hour =h.getHours();         
+    var myDate = new Date();
+    var str="  ";
+	alert("现在的时间是："+hour+"点");
+    if(hour>0 && hour<=8){
+        st.innerHTML="早上好！";
+    }else if(hour>8&& hour<=13){
+        st.innerHTML="中午好！";
+    }else if(hour>13&& hour<=18){
+        st.innerHTML="晚上好！";
+    }else if(hour>18 && hour<=24){
+        st.innerHTML="已经是深夜了！";
+    }
+    document.write("<font style='font-size:20px;color:purple; margin-left:240px;'>"+str);
+</script>

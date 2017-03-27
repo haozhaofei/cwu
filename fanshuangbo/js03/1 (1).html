@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>
+	<ul>
+		<li><input type="checkbox" name="uid"/>足球</li>
+		<li><input type="checkbox" name="uid"/>篮球</li>
+		<li><input type="checkbox" name="uid"/>羽毛球</li>
+		<li><input type="checkbox" name="uid"/>兵乓球</li>
+		<li><input type="checkbox" name="uid"/>网球</li>
+		<li><input type="checkbox" name="uid"/>橄榄球</li>
+	</ul>
+	<button onclick="doselect(1)">全选</button>
+	<button onclick="doselect(2)">全不选</button>
+	<button onclick="doselect(3)">反选</button>
+</body>
+</html>
+
+<script type="text/javascript">
+	function doselect(b) {
+		var list=document.getElementsByTagName("input");
+		for (var i=0;i<list.length;i++){
+			switch(b){
+				case 1:list[i].checked=true;break;
+				case 2:list[i].checked=false;break;
+				case 3:list[i].checked=!list[i].checked;break;
+			}
+		}
+	}
+	</script>

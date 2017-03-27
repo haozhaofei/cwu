@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	div{
+		width:50px;
+		height:50px;
+		border-radius:50%;
+		background-color:red;
+		margin-left:30px;
+		font-size:40px;
+		float:left;
+	}
+	#one{
+		margin-left:400px;
+	}
+	#seven{
+        background-color:blue;
+	}
+</style>
+<body>
+<center>
+	<div id="one"></div>
+	<div id="two"></div>
+	<div id="three"></div>
+	<div id="four"></div>
+	<div id="five"></div>
+	<div id="six"></div>
+	<div id="seven"></div>
+</center>
+</body>
+</html>
+<script type="text/javascript">
+  var m=new Array(document.getElementById("one"),document.getElementById("two"), document.getElementById("three"), document.getElementById("four"),document.getElementById("five"),document.getElementById("six"),document.getElementById("seven"));
+  var i,n;
+  for(i=0;i<m.length;i++){
+  	  if(i<6){
+  	  	n=Math.round(Math.random()*31);
+  	  }else{
+  	  	n=Math.round(Math.random()*16);
+  	  }
+  	  if(n<10){
+  	  	m[i].innerHTML="0"+n;
+  	  }else{
+  	  	m[i].innerHTML=n;
+  	  }
+  }
+  
+</script>
