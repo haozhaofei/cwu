@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	function add(){
+		var res = 0;
+		for(var i=0;i<arguments.length;i++){
+			res+= arguments[i];
+		}
+		document.write(res+"<br>");
+	}
+
+	add(10,20,30,40,50);
+
+
+	function fun2 () {
+		document.write(arguments[3]+"<br>")
+	}
+	fun2(12,32,45,67,54,45);
+
+
+	function arg1 () {
+		var sun=0;
+		for (var i = arguments.length ; i >= 0; i--) {
+			sun=arguments[i]
+		};
+		document.write(sun+"<br>");
+	}
+	arg1(10,20,30,40,5020,11);
+
+</script>
