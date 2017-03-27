@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双色球</title>
+</head>
+<style>
+	#blue{background-color: blue;}
+	div{
+		background-color: red;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		float: left;
+		margin-left: 5px;
+		font-size: 35px;
+		text-align: center;
+		font-weight: bold;
+	}
+</style>
+<body>
+	<div id="red1"></div>
+	<div id="red2"></div>
+	<div id="red3"></div>
+	<div id="red4"></div>
+	<div id="red5"></div>
+	<div id="red6"></div>
+	<div id="blue"></div>
+	<button onclick=start()>开始</button>
+</body>
+</html>
+<script>
+	function start(){
+		var a = new Array(document.getElementById("red1"),document.getElementById("red2"),document.getElementById("red3"),document.getElementById("red4"),document.getElementById("red5"),document.getElementById("red6"),document.getElementById("blue"));
+		var n;
+		for (var i = 0; i < a.length; i++) {
+			if (i<6) {
+				n = Math.round(Math.random()*31);
+			}
+			else{
+				n = Math.round(Math.random()*16);
+			}
+			if (n<10) {
+				a[i].innerHTML = '0' + n;
+			}
+			else{
+				a[i].innerHTML = n;
+			}
+		}
+
+	}
+</script>
