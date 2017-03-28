@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+		#did{font-size: 20px;font-weight: bold; }
+	</style>
+<body>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+setInterval(function(){
+		//创建一个日期对象
+		var date = new Date();
+		var y = date.getFullYear();
+		var m = date.getMonth()+1;
+		var d = date.getDate();
+		var h = date.getHours();
+		var i = date.getMinutes();
+		var s = date.getSeconds();
+		var resDate = y+"-"+m+"-"+d+" "+h+":"+i+":"+s;
+		document.getElementById('did').innerHTML = resDate;
+		
+	},1000);
+    var time=new Date();
+    var t=time.getHours();
+    document.write("<br><center><font size=80>")
+    if (t<6&&t>11) {
+    	document. write("<font color=pink>"+"早上好！又是开心的一天！")
+    };
+    if(t>=11&&t<14){
+        document. write("<font color=red>"+"中午好！午觉过后又是活力充沛！")
+    };
+    if(t>=14&&t<20){
+        document. write("<font color=green>"+"下午好！")
+    };
+    if(t>=20&&t<24){
+        document. write("<font color=blue>"+"晚上好！这一天就快要结束了哦！")
+    };
+    if(t>=24&&t<6){
+        document. write("<font color=black>"+"都是凌晨了怎么还不睡了，小心变成熊猫眼哦！")
+    };
+</script>
