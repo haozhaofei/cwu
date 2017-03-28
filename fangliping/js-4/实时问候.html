@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>实时问候</title>
+<style>
+did{
+	font-size:60px;
+}
+#wenhou{
+	font-size:70px;
+	font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+<div id="did"></div>
+<div id="wenhou"></div>
+</body>
+</html>
+<script>
+setInterval(function(){
+	var date = new Date();
+		var y = date.getFullYear();
+		var m = date.getMonth()+1;
+		var d = date.getDate();
+		var h = date.getHours();
+		var i = date.getMinutes();
+		var s = date.getSeconds();
+		var resDate = y+"-"+m+"-"+d+" "+h+":"+i+":"+s;
+		document.getElementById('did').innerHTML ="现在的时间是"+resDate;
+		if(h>0&&h<6){
+			document.getElementById('wenhou').innerHTML="现在是睡觉时间哦！";
+			}
+			else if(h>=6&&h<9){
+				document.getElementById('wenhou').innerHTML="早上好！";
+			}else if(h>=9&&h<12){
+				document.getElementById('wenhou').innerHTML="上午好！";
+				}else if(h>=12&&h<14){
+					document.getElementById('wenhou').innerHTML="中午好！";
+				}else if(h>=14&&h<18){
+					document.getElementById('wenhou').innerHTML="下午好！";
+				}else if(h>=18&&h<=23){
+					document.getElementById('wenhou').innerHTML="晚上好！";
+				}
+},1000)
+	
+	
+
+</script>
