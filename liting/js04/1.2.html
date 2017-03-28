@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	div{
+		width:100px;height:100px;border:1px solid black;
+	}
+</style>
+<body>
+	<button onclick="fun(1)">红</button>
+	<button onclick="fun(2)">绿</button>
+	<button onclick="fun(3)">蓝</button>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+	function fun(m){
+	    var oDid=document.getElementById('did');
+		//记住if...else if...else...最后一个else后面是不跟表达式的
+		if(m==1){
+			oDid.style.background="red";
+		}else if(m==2){
+			oDid.style.background="green";
+		}else{
+			oDid.style.background="blue";
+		}
+		//switch语句可以没有default语句
+		// switch(m){
+		// 	case 1:
+		// 	oDid.style.background="red";break;
+		// 	case 2:
+		// 	oDid.style.background="green";break;
+		// 	default:
+		// 	oDid.style.background="blue";
+		// 	// case 3:
+		// 	// oDid.style.background="blue";break;
+		// }
+	}
+</script>
