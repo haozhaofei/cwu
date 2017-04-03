@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>for..in的用法</title>
+</head>
+<body>
+	<ul>
+		<li>民法</li>
+		<li>刑法</li>
+		<li>商法</li>
+	</ul>
+</body>
+</html>
+<script>
+	var a=document.getElementsByTagName('li')
+	/*for(f in a)
+	{
+		document.write(f+"<br>");
+	}*/
+	for(var i=0;i<a.length;i++)
+	{
+		document.write(a[i].innerHTML+"<br>");
+	}
+</script>
