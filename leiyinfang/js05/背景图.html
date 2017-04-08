@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景图</title>
+	<style>
+		#did{
+			background-image: url(images/01.jpg);
+			background-size: cover;
+		}
+	</style>
+</head>
+<body id="did">
+	<input type="button" value="刷新" onclick ="fun1()">
+	
+</body>
+</html>
+<script>
+	function fun1(){
+		var back=document.getElementById('did');
+		back.style.backgroundImage="url(images/02.jpg)";
+
+	}
+</script>
