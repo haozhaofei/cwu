@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>缩略图</title>
+</head>
+<style>
+	#image img {
+		width: 720px;
+		padding:3px;
+
+	}
+	#image1 img{
+		width:170px;
+		height: 150px;
+		padding:3px;
+	}
+	#n2,#n3,#n4{
+		display: none;
+	}
+</style>
+<body>
+	<div id="image">
+		<img src="image/1.png" id="n1" alt="">
+		<img src="image/2.jpg" id="n2" alt="">
+		<img src="image/3.jpg" id="n3" alt="">
+		<img src="image/4.jpg" id="n4" alt="">
+	</div>
+	<div id="image1">
+		<img src="image/1.png" id="m1" onclick="show(1)">
+		<img src="image/2.jpg" id="m2" onclick="show(2)">
+		<img src="image/3.jpg" id="m3" onclick="show(3)">
+		<img src="image/4.jpg" id="m4" onclick="show(4)">
+	</div>
+</body>
+</html>
+
+<script>
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var nimage=document.getElementById("n"+i);
+			var mimage=document.getElementById("m"+i);
+			if(i==x){
+				nimage.style.display="block";
+			}else{
+				nimage.style.display="none";
+			}
+		}
+	}
+</script>
