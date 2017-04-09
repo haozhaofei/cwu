@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加事件方法</title>
+</head>
+<body id="bid">
+	<button onclick="fun1()">主动调用</button>
+	<button id="bid1">被动调用</button>
+	<button id="bid2">添加</button>
+</body>
+</html>
+<script>
+	function fun1(){
+		alert("主动调用");
+	}
+	document.getElementById('bid1').onclick=function(){
+		alert("常用");
+	}
+	var bid2 =document.getElementById("bid2");
+	bid2.addEventListener("click",function(){
+		alert("不常用");
+	})//这里方法第一个参数直接是事件，不用加ON
+</script>
