@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	ul,li{
+		margin:0;padding:0;
+	}
+	ul li{
+		height:30px;margin-top: 10px;background: red;
+	}
+	li:hover{
+		background: blue;
+	}
+</style>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick=function(){
+			this.style.background="cyan";
+		}
+	}
+</script>
