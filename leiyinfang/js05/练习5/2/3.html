@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS事件操作</title>
+</head>
+<body>
+	<button onclick="fun1()">按钮1</button>
+	<button id="nid">按钮2</button>
+	<button id="mid">按钮3</button>
+</body>
+</html>
+
+
+<script>
+	function fun1(){
+		alert("今天是周二");
+	}
+	
+	document.getElementById('nid').onclick = function(){
+		alert("周日已经被我射熄火了,所以今天是周二");
+	}
+
+	var mid = document.getElementById('mid');
+		mid.addEventListener('click',function(){
+			alert('I love you');
+		});
+		
+</script>
