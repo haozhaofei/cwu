@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>用方向键来控制移动</title>
+</head>
+<body>
+请按←↑→↓键，看看效果吧！<br /><br />
+<img id="pic" src="images/5.jpg" style="position:absolute;left=100;top=100">
+</body>
+</html>
+
+<script language="javascript">
+function move(){
+key = event.keyCode;
+x = parseInt(pic.style.left);
+y = parseInt(pic.style.top);
+step = 2;
+if (key == 37)  pic.style.left = x - step;
+if (key == 38)  pic.style.top  = y - step;
+if (key == 39)  pic.style.left = x + step;
+if (key == 40)  pic.style.top  = y + step;
+}
+document.onkeydown=move;
+</script>
