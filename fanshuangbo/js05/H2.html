@@ -1,0 +1,112 @@
+ <!DOCTYPE html>
+
+<html>
+<head>
+<title>字体变大变小</title>
+<meta charset="UTF-8" />
+<style type="text/css">
+
+  #txt {
+
+    font-size: 15px;
+
+  }
+
+  </style>  
+
+</head>
+
+<body>
+
+  <p id="txt">字体变大变小</p>
+
+  <input type="button" id="btn0" value="加粗"/>
+
+  <input type="button" id="btn1" value="A+" />
+
+  <input type="button" id="btn2" value="A-" />
+
+  <input type="button" id="btn3" value="下划线" />
+
+  <input type="button" id="btn4" value="斜体" />
+
+  <script type="text/JavaScript">
+
+    
+
+      var oTxt=document.getElementById("txt");
+
+      var oBtn0=document.getElementById("btn0");
+
+      var oBtn1=document.getElementById("btn1");
+
+      var oBtn2=document.getElementById("btn2");
+
+      var oBtn3=document.getElementById("btn3");
+
+      var oBtn4=document.getElementById("btn4");
+
+      var num=15;
+
+
+       oBtn0.onclick=function(){
+
+        oTxt.style.fontWeight="bold";
+
+       }
+
+          oBtn1.onclick=function(){
+
+        if (num==20) {
+
+          num=20;
+
+        }else{
+
+          num=num+1;
+
+        }
+
+        oTxt.style.fontSize=num+"px";
+
+      }
+
+      oBtn2.onclick=function(){
+
+        if (num==12) {
+
+          num=12;
+
+        }else{
+
+          num=num-1;
+
+        }
+
+        oTxt.style.fontSize=num+"px";
+
+      }
+
+      
+
+        oBtn3.onclick=function(){
+
+        oTxt.style.textDecoration="underline";
+
+       }
+
+        oBtn4.onclick=function(){
+
+        oTxt.style.fontStyle="oblique"
+        
+       }
+
+      
+
+
+
+  </script>
+
+</body>
+
+</html>
