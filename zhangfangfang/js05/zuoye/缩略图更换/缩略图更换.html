@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>缩略图点击换图</title>
+</head>
+<style>
+	div,ul,li,img{
+		padding: 0px;
+		margin: 0px;
+	}
+	#uid img {
+		width: 725px;
+
+	}
+	#did img{
+		width:180px;
+		height: 147px;
+	}
+	#n2,#n3,#n4{
+		display: none;
+	}
+</style>
+<body>
+	<div id="uid">
+		<img src="img/img1.jpg" id="n1" alt="">
+		<img src="img/img2.jpg" id="n2" alt="">
+		<img src="img/img3.jpg" id="n3" alt="">
+		<img src="img/img4.jpg" id="n4" alt="">
+		<img src="img/img5.jpg" id="n5" alt="">
+		<img src="img/img6.jpg" id="n6" alt="">
+	</div>
+	<div id="did" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="img/img1.jpg" id="m1" onclick="show(1)">
+		<img src="img/img2.jpg" id="m2" onclick="show(2)">
+		<img src="img/img3.jpg" id="m3" onclick="show(3)">
+		<img src="img/img4.jpg" id="m4" onclick="show(4)">
+		<img src="img/img5.jpg" id="m5" onclick="show(5)">
+		<img src="img/img6.jpg" id="m6" onclick="show(6)">
+	</div>
+</body>
+</html>
+
+<script>
+	function show(x){
+		for(var i=1;i<=6;i++){
+			var oImg=document.getElementById("m"+i);
+			var sImg=document.getElementById("n"+i);
+			if(i==x){
+				sImg.style.display="block";
+			}else{
+				sImg.style.display="none";
+			}
+		}
+	}
+</script>
