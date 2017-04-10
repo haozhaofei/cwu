@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<button onclick="fun1(this)">点我</button>
+<button id="bid">再点我</button>
+	
+</body>
+</html>
+<script type="text/javascript">
+//主动调用需要传参
+function fun1(bbj){
+	bbj.style.color="blue";
+}
+//被动可以直接使用this
+document.getElementById('bid').onclick=function(){
+	this.style.color="red";
+}
+//onload 表示执行完其他文件
+</script>

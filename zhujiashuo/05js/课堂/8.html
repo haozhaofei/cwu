@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	div,ul,li,img{padding: 0px;margin:0px;}
+	#bid{width: 1920px;}
+	#p2,#p3,#p4{display: none;}
+</style>
+<body>
+	<div id ="bid" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="images/11.jpg" width="500" height="240" id="p1" alt ="">
+		<img src="images/22.jpg" width="500" height="240" id="p2" alt ="">
+		<img src="images/33.jpg" width="500" height="240" id="p3" alt ="">
+		<img src="images/44.jpg" width="500" height="240" id="p4" alt ="">
+	</div>
+</body>
+</html>
+<script>
+	var p = 0;
+	var time = null;
+
+	function doStart(){
+		if (time ==null){
+			time = setInterval(function(){
+				p++;
+				show(p);
+				if(p>=4){
+					p=0;
+				}
+			},1000)
+		}
+	}
+
+	doStart();
+
+	function doStop(){
+		if(time!=null){
+			clearInterval(time);
+		}
+		time = null;
+	}
+
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var img = document.getElementById("p"+i);
+			if(i==x){
+				img.style.display = "block";
+			}else{
+				img.style.display = "none";
+			}
+		}
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	div,ul,li,img{padding: 0px;margin:0px;}
+	#bid{width: 1920px;}
+	#p2,#p3,#p4{display: none;}
+</style>
+<body>
+	<div id ="bid" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="images/11.jpg" width="500" height="240" id="p1" alt ="">
+		<img src="images/22.jpg" width="500" height="240" id="p2" alt ="">
+		<img src="images/33.jpg" width="500" height="240" id="p3" alt ="">
+		<img src="images/44.jpg" width="500" height="240" id="p4" alt ="">
+	</div>
+</body>
+</html>
+<script>
+	var p = 0;
+	var time = null;
+
+	function doStart(){
+		if (time ==null){
+			time = setInterval(function(){
+				p++;
+				show(p);
+				if(p>=4){
+					p=0;
+				}
+			},1000)
+		}
+	}
+
+	doStart();
+
+	function doStop(){
+		if(time!=null){
+			clearInterval(time);
+		}
+		time = null;
+	}
+
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var img = document.getElementById("p"+i);
+			if(i==x){
+				img.style.display = "block";
+			}else{
+				img.style.display = "none";
+			}
+		}
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	div,ul,li,img{padding: 0px;margin:0px;}
+	#bid{width: 1920px;}
+	#p2,#p3,#p4{display: none;}
+</style>
+<body>
+	<div id ="bid" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="images/11.jpg" width="500" height="240" id="p1" alt ="">
+		<img src="images/22.jpg" width="500" height="240" id="p2" alt ="">
+		<img src="images/33.jpg" width="500" height="240" id="p3" alt ="">
+		<img src="images/44.jpg" width="500" height="240" id="p4" alt ="">
+	</div>
+</body>
+</html>
+<script>
+	var p = 0;
+	var time = null;
+
+	function doStart(){
+		if (time ==null){
+			time = setInterval(function(){
+				p++;
+				show(p);
+				if(p>=4){
+					p=0;
+				}
+			},1000)
+		}
+	}
+
+	doStart();
+
+	function doStop(){
+		if(time!=null){
+			clearInterval(time);
+		}
+		time = null;
+	}
+
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var img = document.getElementById("p"+i);
+			if(i==x){
+				img.style.display = "block";
+			}else{
+				img.style.display = "none";
+			}
+		}
+	}
+</script>

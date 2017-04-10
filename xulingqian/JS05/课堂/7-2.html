@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	ul,li{
+		padding: 0px;
+		margin:0px;
+	}
+	ul{
+		width: 100px;
+		border:  1px solid  #ddd; 
+		text-align: center;
+		list-style-type:none;
+		position: relative;
+		display: none; 
+	}
+	ul li{
+		height: 20px;
+		margin-top: 5px;
+		background: #ccc;
+		width:100px;
+		line-height: 30px;
+		font-size: 10px;
+	}
+	li:hover{
+		background: #ccc;
+	}
+</style>
+<body>
+	<ul id="uid">
+		<li>复制</li>
+		<li>粘贴</li>
+		<li>剪切</li>
+		<li>删除</li>
+		<li>重命名</li>
+	</ul>
+	
+</body>
+</html>
+
+<script>
+	window.document.oncontextmenu=function  (ent) {
+		//兼容IE和火狐浏览器兼容
+		var event = ent ||window.event;
+		//获取X坐标的位置
+		var x =event.clientX;
+		//获取Y坐标位置
+		var y=event.clientY;
+		var uid= document.getElementById('uid');
+		uid.style.top=y+"px";
+		uid.style.left=x+"px";
+		uid.style.display="block";
+		//屏蔽浏览器右键
+		return false;
+		
+	}
+</script>

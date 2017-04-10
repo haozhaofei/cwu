@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>右键菜单</title>
+</head>
+<style>
+	ul,li{
+		padding:0px;
+		margin:0px;
+	}
+	ul li{
+		height:20px;
+		margin-top: 2px;
+		background: #eee;
+	}
+	li:hover{
+		background: #abc;
+	}
+	ul{
+		border: 1px solid #000;
+		width:100px;
+		text-align: center;
+		list-style-type: none;
+		display: none;
+		position: relative;
+	}
+</style>
+<body>
+	<ul id="uid">
+		<li>还想用</li>
+		<li>复制、</li>
+		<li>粘贴？</li>
+		<li>没门！</li>
+		<li>自己敲</li>
+	</ul>
+</body>
+</html>
+<script>
+	window.document.oncontextmenu= function (ent) {
+		var event=ent||window.event;
+		var x=event.clientX;
+		var y=event.clientY;
+		var uid=document.getElementById('uid');
+		uid.style.top=y+"px";
+		uid.style.left=x+"px";
+		uid.style.display="block";
+		return false;
+	}
+</script> 

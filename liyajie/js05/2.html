@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>two</title>
+</head>
+<body>
+<h1>js事件操作</h1>
+	<button onclick="fun1()">按钮1</button>
+	<button id="nid">anniu2</button>
+	<button id="mid">anniu3</button>
+</body>
+</html>
+<script>
+	function fun1(){
+		alert("你好");
+	}
+	//被动调用
+	document.getElementById("nid").onclick=function(){
+	alert("再见");
+	}
+	var mid=document.getElementById("mid");
+	mid.addEventListener('click',function(){
+		alert("再也不见");
+	});
+
+</script> 
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>two-2</title>
+</head>
+<body>
+	<button onclick="fun()">anniu01</button>
+	<button id="two">anniu02</button>
+	<button id="three">anniu03</button>
+</body>
+</html>
+<script>
+	function fun(){
+		alert("你好");
+	}
+	document.getElementById("two").onclick=function(){
+		alert("再见");
+	}
+	var three= document.getElementById('three');
+	three.addEventListener("click",function(){
+		alert("再也不见");
+	})
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>two-3</title>
+</head>
+<body>
+<h1>js的事件操作</h1>
+<p>qing双击！</p>
+	<button ondblclick="fun()">yaya1</button>
+	<button id="haha">yaya2</button>
+	<button id="hehe">yaya3</button>
+</body>
+</html>
+<script>
+	function fun(){
+		alert("你好");
+	}
+	document.getElementById("haha").ondblclick=function(){
+		alert("再见");
+	}
+	var yaya2=document.getElementById("hehe");
+	yaya2.addEventListener("dblclick",function(){
+		alert("再也不见");
+	})
+</script>

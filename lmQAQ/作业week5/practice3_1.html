@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this在主调和被调中</title>
+</head>
+<body>
+	<button onclick="fun1(this)">1</button>
+	<button id="min">2</button>
+</body>
+</html>
+<script>
+//主动调用不能直接获取，用参数代传
+	function fun(gio){
+		gio.style.color="pink";
+	}
+	//被动调用能直接获取
+	document.getElementById(min).onclick=function(){
+		this.style.color="green";
+	}
+</script>

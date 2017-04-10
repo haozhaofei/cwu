@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易编辑器</title>
+</head>
+<body>
+	<center>
+		<button id="t1">加粗</button>
+		<button id="t2">下划线</button>
+		<button id="t3">倾斜</button>
+		<button id="t4">字体变大</button>
+		<button id="t5">字体变小</button>
+		<div><textarea id='text' rows="10" cols="30"></textarea></div>
+	</center>
+</body>
+</html>
+<script type="text/javascript">
+	var i=0;
+	document.getElementById("t1").onclick=function () {
+		var a=["bold","normal"];
+		document.getElementById("text").style.fontWeight=a[i%2];
+		i++;
+	}
+	var j=0;
+	document.getElementById("t2").onclick=function () {
+		var b=["underline","none"];
+		document.getElementById("text").style.textDecoration=b[j%2];
+		j++;
+	}
+	var t=0;
+	document.getElementById("t3").onclick=function () {
+		var c=["oblique","normal"];
+		document.getElementById("text").style.fontStyle=c[t%2];
+		t++;
+	}
+	var size=10;
+	document.getElementById("t4").onclick=function () {
+		size+=10;
+		document.getElementById("text").style.fontSize=size+"px";
+	}
+	document.getElementById("t5").onclick=function () {
+		size-=10;
+		document.getElementById("text").style.fontSize=size+"px";
+	}
+</script>
