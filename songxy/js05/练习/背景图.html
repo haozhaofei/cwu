@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>切换背景图</title>
+</head>
+<style>
+	div,ul,li,img{padding: 0px;margin:0px;}
+	#did{width: 384px;}
+	#m2,#m3,#m4{display: none;}
+</style>
+<body>
+    <input id="change" type="button" value="切换"> 
+    <p></p>
+	<div id="did">
+		<img src="C:\Users\Administrator\Desktop\背景图\7f3763e90690ebe4d1a4730e436b81b9.jpg" width="500" height="380" id="m1" alt="">
+		<img src="C:\Users\Administrator\Desktop\背景图\9cea4961c8017bc84f20e1dae8809a46.jpg" width="500" height="380" id="m2" alt="">
+		<img src="C:\Users\Administrator\Desktop\背景图\19a776c545db9a92aaf9e20fac43dc0f.jpg" width="500" height="380" id="m3" alt="">
+		<img src="C:\Users\Administrator\Desktop\背景图\7780f718401d56ae5986b51c57cbf71d.jpeg" width="500" height="380" id="m4" alt="">
+	</div>	
+</body>
+</html>
+<script>
+
+	var m = 0;
+	var time = null;
+    var cha=document.getElementById('change');
+	cha.onclick=function(){
+				m++;
+				show(m);
+				if(m >=4){
+					m = 0;
+				}
+		
+	}
+
+	//显示图片,隐藏三个,显示一个
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var img = document.getElementById("m"+i);
+			if(i == x){
+				img.style.display = "block";
+			}else{
+				img.style.display = "none";
+			}
+		}
+	}
+</script>
