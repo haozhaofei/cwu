@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>缩略图</title>
+</head>
+<style>
+	div,ul,li,img{
+		padding: 0px;
+		margin: 0px;
+	}
+	
+	#p2,#p3,#p4,#p5,#p6{display:none;}
+</style>
+<body>
+	<div>
+		<img src="images/1.jpg" id="p1">
+		<img src="images/2.jpg" id="p2">
+		<img src="images/3.jpg" id="p3">
+		<img src="images/4.jpg" id="p4">
+		<img src="images/5.jpg" id="p5">
+		<img src="images/6.jpg" id="p6">
+	</div>
+	<div>
+		<img src="images/1.jpg" width="100" onclick="show(1)">
+		<img src="images/2.jpg" width="100" onclick="show(2)">
+		<img src="images/3.jpg" width="100" onclick="show(3)">
+		<img src="images/4.jpg" width="100" onclick="show(4)">
+		<img src="images/5.jpg" width="100" onclick="show(5)">
+		<img src="images/6.jpg" width="100" onclick="show(6)">
+	</div>
+</body>
+</html>
+
+<script>
+	function show(x){
+		for(var i=1;i<=6;i++){
+			var img=document.getElementById("p"+i);
+			if(i==x){
+				img.style.display="block";
+			}else{
+				img.style.display="none";
+			}
+		}
+	}
+</script>
+
+/*第一次效果出来了，可是之后再测试图片又加载不出来，不知道是为什么。。。QAQ*/
