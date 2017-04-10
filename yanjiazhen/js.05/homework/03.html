@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易编辑器</title>
+	<style>
+	
+	button{
+		margin-bottom: 20px;
+
+	}
+	</style>
+</head>
+<body>
+	
+		<button>加粗</button>
+		<button>变大</button>
+		<button>变小</button>
+		<button>下划线</button>
+     	<button>倾斜</button>
+		<textarea id="text" row="60" cols="20"></textarea>
+
+	
+</body>
+</html>
+<script>
+	var ttt=document.getElementById("text");
+	var but=document.getElementsByTagName("button");
+	but[0].onclick=function(){
+		ttt.style.fontWeight="bold";
+	}
+	but[1].onclick=function(){
+		ttt.style.fontSize="larger";
+	}
+	but[2].onclick=function(){
+		ttt.style.fontSize="smaller";
+	}
+	but[3].onclick=function(){
+		ttt.style.textDecoration="underline";
+	}
+	but[4].onclick=function(){
+		ttt.style.fontStyle="oblique";;
+	}
+</script>

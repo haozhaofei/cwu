@@ -1,0 +1,54 @@
+
+
+<!doctype html>             
+<html lang="en">      
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button id="bid1">1</button>
+    <button>时</button>
+    <button id="bid2">00</button>
+    <button>分</button>
+    <button id="bid3">00</button>
+    <button>秒</button>
+    <button onclick="begin()">开始</button>
+    <button onclick="pause()">暂停</button>
+
+</body>
+</html>
+<script>
+    var bid1 = document.getElementById('bid1');
+    var bid2 = document.getElementById('bid2');
+    var bid3 = document.getElementById('bid3');
+    var h = 1;
+    var m = 00;
+    var s = 00;
+    var time;
+    function begin(){
+        time = setInterval(function (){  
+        bid1.innerHTML = h;  
+        bid2.innerHTML = m;
+        bid3.innerHTML = s;
+        s--;
+        if(s<0){
+            s=59;
+            m--;
+            if(m<0){
+                m=59;
+                h--;
+                if(h<0){
+                    clearInterval(time);
+                    alert("end");
+                }
+            }
+        }
+    },1000)
+    }
+
+    function pause(){
+        clearInterval(time);
+    }
+
+</script>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双色球</title>
+</head>
+<style>
+		#red{width:60px;height:60px;background: red;border-radius: 50%;}
+		#green{width:60px;height:60px;background: green;border-radius: 50%;}
+		#whi{font-size: 20px;padding: 20px;}
+		#who{font-size: 20px;padding: 20px;}
+		#whp{font-size: 20px;padding: 20px;}
+		#wha{font-size: 20px;padding: 20px;}
+		#whs{font-size: 20px;padding: 20px;}
+		#whd{font-size: 20px;padding: 20px;}
+		#whf{font-size: 20px;padding: 20px;}
+	</style>
+<body>
+
+    <button onclick="fun1()">抽奖</button>
+
+<div id="red">
+<center>
+	<div id="whi">
+	</div>
+</center>
+</div>
+
+<div id="red">
+<center>
+	<div id="who">
+	</div>
+</center>
+</div>
+
+<div id="red">
+<center>
+	<div id="whp">
+	</div>
+</center>
+</div>
+
+<div id="red">
+<center>
+	<div id="wha">
+	</div>
+</center>
+</div>
+
+<div id="red">
+<center>
+	<div id="whs">
+	</div>
+</center>
+</div>
+
+<div id="red">
+<center>
+	<div id="whd">
+	</div>
+</center>
+</div>
+
+<div id="green">
+<center>
+	<div id="whf">
+	</div>
+</center>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+   function fun1(){
+	var num1=Math.round(Math.random()*34+1);
+	document.getElementById('whi').innerHTML = num1;
+	var num2=Math.round(Math.random()*34+1);
+	document.getElementById('who').innerHTML = num2;
+	var num3=Math.round(Math.random()*34+1);
+	document.getElementById('whp').innerHTML = num3;
+	var num4=Math.round(Math.random()*34+1);
+	document.getElementById('wha').innerHTML = num4;
+	var num5=Math.round(Math.random()*34+1);
+	document.getElementById('whs').innerHTML = num5;
+	var num6=Math.round(Math.random()*34+1);
+	document.getElementById('whd').innerHTML = num6;
+	var num7=Math.round(Math.random()*34+1);
+	document.getElementById('whf').innerHTML = num7;
+	
+}
+
+</script>

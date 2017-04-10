@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script language="JavaScript" type="text/JavaScript">
+function showhide_obj(obj,icon)
+{
+obj=document.getElementById(obj);
+icon=document.getElementById(icon);
+ if (obj.style.display=="none") 
+  { 
+      
+        div_list = document.getElementsByTagName("div");
+        for (i=0; i< div_list.length;i ++)
+        {
+          thisDiv = div_list[i]; 
+           if(thisDiv.id.indexOf("title")!=-1)
+           {
+           
+           thisDiv.style.display="none";
+           icon.innerHTML = "+";
+           }
+        } 
+ 
+   myfont=document.getElementsByTagName("font");
+   for(i=0;i<myfont.length;i++)
+    {
+    thisfont = myfont[i];
+   }
+    icon.innerHTML="-";
+    obj.style.display=""; 
+}
+ else
+  {
+
+   icon.innerHTML="+";
+   obj.style.display="none";
+   }
+ }
+
+function show_this(obj)
+{
+    obj=document.getElementById(obj);
+    if (obj.id==obj.id) 
+     {
+       blinkicon=document.getElementsByTagName("font");
+       for(x=0;x<blinkicon.length;x++)
+        {
+           if( blinkicon[x].id.indexOf("select")!=-1 && obj.id!=obj )
+            {
+               blinkicon[x].innerHTML=" ";
+            }
+        }
+          obj.innerHTML=">"; 
+     }
+     else
+     {
+           obj.innerHTML=" ";
+     }
+}
+//-->
+</script>
+</head>
+
+<body>
+
+<div  onClick="showhide_obj('title1','icon1')"><font id='icon1'>+</font>AAAAAAA</div>
+<div id="title1"  style="display:none;">
+<span id="menu1_1"  onclick="show_this('select1_1')"><font id='select1_1'></font>
+aa</span></font><br />
+<span id="menu1_2" onclick="show_this('select1_2')"><font id='select1_2'></font>A</span></font><br />
+<span id="menu1_3" onclick="show_this('select1_3')"><font id='select1_3'></font>B</span></font><br />
+</div>
+<div  onClick="showhide_obj('title2','icon2')"><font id='icon2'>+</font>BBBBB</div>
+<div id="title2" style="display:none;">
+<span id="menu2_1" onclick="show_this('select2_1')"><font id='select2_1'></font>B</span></font><br />
+<span id="menu2_2" onclick="show_this('select2_2')"><font id='select2_2'></font>C</span></font><br />
+<span id="menu2_3" onclick="show_this('select2_3')"><font id='select2_3'></font>D</span></font><br />
+</div>
+<div  onClick="showhide_obj('title3','icon3')"><font id='icon3'>+</font>EEEEE</div>
+<div id="title3" style="display:none;">
+<span id=menu3_1 onclick="show_this('select3_1')"><font id='select3_1'></font>G</span></font><br />
+<span id=menu3_2 onclick="show_this('select3_2')"><font id='select3_2'></font>H</span></font><br />
+<span id=menu3_3 onclick="show_this('select3_3')"><font id='select3_3'></font>I</span></font><br />
+
+</body>
+</html>

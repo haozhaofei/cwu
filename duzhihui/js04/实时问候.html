@@ -1,0 +1,50 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实时问候</title>
+</head>
+	<style>
+		div{
+			
+			font-weight: bold;
+			font-size: 30px;
+		}
+	</style>
+<body>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+
+	setInterval(function(){
+		var say;
+		var date = new Date();
+		var y = date.getFullYear();
+		var m = date.getMonth()+1;
+		var d = date.getDate();
+		var h = date.getHours();
+		var i = date.getMinutes();
+		var s = date.getSeconds();
+		if(h<11)
+		{
+			say="上午好！";
+
+		}
+		else if((h>13)&&(h<18)){
+			say="下午好";
+		}
+		else if(h>18){
+			say="晚上好";
+		}
+		else{
+			say="中午好";
+		}
+		var nowdate = y+"-"+m+"-"+d+" "+h+":"+i+":"+s+say;
+		
+		document.getElementById('did').innerHTML = nowdate;
+
+	},1000);
+	
+</script>

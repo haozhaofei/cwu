@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script>
+
+function f1(){
+	alert('aaa');
+    var balls=new Array();
+<!--添加1到33个红球-->
+    for(i=0;i<33;i++){
+    	balls[i]=i+1;	
+    }
+<!--false表示红球没被选过  防止重选-->
+    var bool=new Array();
+    for(j=0;j<33;j++){
+        bool[j]=false;
+    }
+<!--选的红球放到这个数组里面-->
+    var red_ball=new Array();
+    var n=0;
+    for(k=0;k<balls.length;k++){
+    var index=Math.floor(Math.random()*34);
+    if(bool[index]==true){
+    	continue;
+    }
+    red_ball[k]=index;
+    bool[index]=true;
+    n++;
+    if(n==6){
+        break;
+    }
+    }
+    var redBall=document.getElementById('red_ball');
+    redBall.innerHTML=red_ball;
+<!--生成蓝球-->
+    var blueBall=document.getElementById('blue_ball');
+    blueBall.innerHTML=Math.floor(Math.random()*17);
+}
+</script>
+</head>	
+<body>
+<div>
+<input type="button" value="双色球" onclick="f1();"/>	
+</div>
+<br/>
+红球：<div id="red_ball">
+</div>
+<br/>
+蓝球：<div id="blue_ball">
+</div>
+</body>
+</html>

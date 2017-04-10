@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>例子1（第三遍）</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	function fun1(){
+		document.write(222222222);
+	}
+
+	var fun2=function(){
+		document.write(3333333333);
+	}
+
+	var fun3=new Function("a","b","return a+b");
+
+	fun1();
+	fun2();
+	document.write(fun3(120,30));
+
+	
+
+</script>

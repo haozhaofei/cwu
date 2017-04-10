@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实时问候</title>
+</head>
+<style>
+	#did{font-size: 60px;font-weight: bold;}
+</style>
+<body>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+    document.getElementById('did');
+    var h = new Date();
+    var hour = h.getHours();
+    if(hour < 6){
+    	document.write("凌晨好!");}
+    else if (hour < 9){
+    	document.write("早上好!别忘记吃早餐哦~！");}
+    else if (hour < 12){
+    	document.write("上午好!");}
+    else if (hour < 14){
+    	document.write("中午好!");}
+    else if (hour < 17){
+    	document.write("下午好!");}
+    else if (hour < 19){
+    	document.write("傍晚好!");}
+    else if (hour < 22){
+    	document.write("晚上好!劳累了一天早点休息哦~！");}
+</script>

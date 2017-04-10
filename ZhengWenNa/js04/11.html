@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	#did{
+		border: 1px solid red;
+		width: 100px;
+		height: 100px;
+	}
+</style>
+<body>
+	<button onclick="fun(1)">红</button>
+	<button onclick="fun(2)">绿</button>
+	<button onclick="fun(3)">蓝</button>
+<div id="did"></div>
+</body>
+</html>
+<script>
+	function fun(n)
+	{
+		var did=document.getElementById('did');
+		switch(n)
+		{
+			case 1:did.style.background="red" ;break;
+			case 2:did.style.background="green" ;break;
+			case 3:did.style.background="blue"; break;
+		}
+	}
+</script>

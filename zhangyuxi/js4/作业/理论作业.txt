@@ -1,0 +1,9 @@
+常用的内置对象有：Array（数组）、String（子串处理对象）、Date（日期）、Math（用于执行数学任务。方法是静态的）、Boolean、Number、
+Function、Global、Error、RegExp、Object
+创建一个数组对象方式：
+1.var arr = [];
+  var arr = [1,2,3]；
+2.new Array
+ var arr=new Array();
+ var arr=new Array(20);
+ var arr=new Array('abc', 'def', 'ghi', 'opq');

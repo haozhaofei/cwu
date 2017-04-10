@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{width: 100px;height: 100px;border:1px solid red;border-radius: 50%;
+			}
+	</style>
+</head>
+<body>
+	<center>
+		<button onclick="fun(1)">大</button>
+		<button onclick="fun(2)">小</button>
+		<button onclick="fun(3)">隐藏</button>
+		<button onclick="fun(4)">显示</button>
+		<div id="did">
+			
+		</div>
+	</center>
+</body>
+</html>
+<script>
+	var fid = document.getElementById('did');
+	var width = 100,height = 100,border = 1;
+	function fun (m) {
+		if (m == 1){
+			width+=10;
+			height+=10;
+			border+=2;
+			fid.style.width = width + "px";
+			fid.style.height = height + "px";
+			fid.style.border = border + "px solid red";
+			fid.innerHTML = "我要变大";
+		}
+		else if (m == 2){
+			width-=10;
+			height-=10;
+			border-=2;
+			fid.style.width = width + "px";
+			fid.style.height = height + "px";
+			fid.style.border = border + "px solid #ff0088";
+			fid.innerHTML = "我要变小";
+		}
+		else if(m == 3){
+			fid.style.display = "none";
+		}
+		else if (m == 4){
+			fid.style.display = "block";
+		}
+		// body...
+	}
+</script>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+      <h3>全选/全不选</h3>
+      <h4>你喜欢下面哪些球</h4>
+      <ul>
+      	  <li><input type="checkbox" name="uid"/>足球</li>
+      	  <li><input type="checkbox" name="uid"/>羽毛球</li>
+      	  <li><input type="checkbox" name="uid"/>篮球</li>
+      	  <li><input type="checkbox" name="uid"/>乒乓球</li>
+      	  <li><input type="checkbox" name="uid"/>网球</li>
+      	  <li><input type="checkbox" name="uid"/>橄榄球</li>
+      </ul>
+      <button onelick="doSelect(1);">全选</button>
+      <button onelick="doSelect(2);">全不选</button>
+      <button onelick="doSelect(3);">反选</button>
+      <script type="text/javascript">
+            function doSelect(b){
+              var list = document.getElementByTagName("input");
+              for (var i = 0; i < list.length; i++) {
+              	switch[b]
+              	    case 1: list[i].checked = true;break;
+              	    case 2: list[i].checked = false;break;
+              	    case 3: list[i].checked = !list[i].checked;break;
+              };
+            }
+        
+
+
+      </script>
+	       
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+ <head>
+<title>Loading</title> 
+<!--定义进度条的样式-->
+<style type="text/css"> 
+body{ 
+text-align:center; 
+} 
+.graph{ 
+width:450px; 
+border:1px solid #000000; 
+height:25px; 
+} 
+#bar{ 
+display:block; 
+background:#CCCCFF; 
+float:left; 
+height:100%; 
+text-align:center; 
+} 
+#barNum{ 
+position:absolute; 
+} 
+</style> 
+<script type="text/javascript"> 
+function $(obj){ 
+return document.getElementById(obj); 
+} 
+function go(){ 
+$("bar").style.width = parseInt($("bar").style.width) + 1 + "%"; 
+$("bar").innerHTML = $("bar").style.width; 
+if($("bar").style.width == "100%"){ 
+window.clearInterval(bar); 
+} 
+
+} 
+var bar = window.setInterval("go()",50); 
+window.onload = function(){ 
+bar; 
+} 
+</script> 
+</head> 
+<body> 
+<div class="graph"> 
+<strong id="bar" style="width:1%;"></strong> 
+</div> 
+</body> 
+</html> 

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>定时器时间（1）</title>
+<style>
+#did{
+	font-size:60px;font-weight:bold;}
+</style>
+</head>
+
+<body>
+<div id="did"></div>
+</body>
+</html>
+<script>
+setInterval(function(){
+	var date=new Date();
+	var y=date.getFullYear();
+	var m=date.getMonth()+1;
+	var d=date.getDay();
+	var h=date.getHours();
+	var i=date.getMinutes();
+	var s=date.getSeconds();
+	var rasDate=y+"-"+m+"-"+d+" "+h+":"+i+":"+s;
+	document.getElementById('did').innerHTML=rasDate;},1000);
+	//id记得加引号
+
+</script>

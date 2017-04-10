@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景色</title>
+</head>
+<body id="did">
+	
+</body>
+</html>
+<script>
+	//第一种方法
+	var back=document.getElementById('did');	
+	var index=Math.ceil(Math.random()*1000)%3;
+	if(index==0){
+		back.style.background="red";
+	}else if(index==1){
+		back.style.background="green";
+	}else{
+		back.style.background="blue";
+	}
+	//第二种方法
+/*
+	var arr=["red","green","blue"];
+	var index=Math.ceil(Math.random()*1000)%3;
+	document.getElementsByTagName('body')[0].style.background=arr[index];
+	//第三种方法
+	//var back=document.getElementById('did');
+	//back.style.background=arr[index];
+ */
+</script>

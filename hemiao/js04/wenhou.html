@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实时问候</title>
+</head>
+<style type="text/css">
+	#wenhou{
+		font-size: 60px;
+		font-weight: bold;
+	}
+</style>
+<body>
+	<div id="wenhou"></div>
+</body>
+
+</html>
+<script>
+	var wenhou=document.getElementById("wenhou");
+	var date=new Date();
+	var h=date.getHours();
+	if(h>0&&h<=8)
+		wenhou.innerHTML="亲,早上好";
+	else if(h>8&&h<12)
+		wenhou.innerHTML="亲,上午好";
+	else if(h>=12&&h<=13)
+		wenhou.innerHTML="亲,中午好";
+	else if(h>13&&h<18)
+		wenhou.innerHTML="亲,下午好";
+	else if(h>=18&&h<=24)
+		wenhou.innerHTML="亲,晚上好";
+</script>

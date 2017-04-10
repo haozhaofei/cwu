@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Do you know today is ?</title>
+</head>
+<style type="text/css">
+div{
+
+	width: 100px;
+	height: 100px;
+	margin:auto;
+	background-color: red;
+	text-align: center; 
+	line-height: 100px;
+	font-size: 20px;
+}
+</style>
+<body>
+<div id='did'></div>
+	
+</body>
+</html>
+<script type="text/javascript">
+   var date=new Date();
+   var d=date.getDay();
+   var a=new Array('星期日','星期一','星期二','星期三','星期四','星期五','星期六');
+   var str=a[d];
+   document.getElementById("did").innerHTML=str;
+</script>

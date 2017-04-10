@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chose</title>
+</head>
+<body>
+	<h3>chose something you want</h3>
+<ul>
+<li><input type="checkbox" name="uid"/>大宝</li>
+<li><input type="checkbox" name="uid"/>娥佩兰</li>
+<li><input type="checkbox" name="uid"/>珍贵水</li>
+<li><input type="checkbox" name="uid"/>muji</li>
+<li><input type="checkbox" name="uid"/>真果粒</li>
+<li><input type="checkbox" name="uid"/>小雏菊</li>
+</ul>
+
+<button onclick="doSelect(1)">全选</button>
+<button onclick="doSelect(2)">全不选</button>
+<button onclick="doSelect(3)">反选</button>
+
+<script type="text/JavaScript">
+function doSelect(b){
+
+var list=document.getElementsByTagName("input");
+for (var i=0;i<list.length;i++){
+
+	switch(b){
+
+		case 1:list[i].checked =true;break;
+		case 2:list[i].checked =false;break;
+		case 3:list[i].checked =!list[i].checked;break;
+	}
+ }
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html> 
+ <head> 
+ <title>list.html</title> 
+ <style type="text/css"> 
+  dl{ 
+  height:18px; 
+  overflow:hidden; 
+  } 
+  dd{ 
+  margin:0px; 
+  padding:0px; 
+  } 
+  .close{ 
+  height:18px;
+  overflow:hidden; 
+  } 
+  .open{ 
+  height:80px; 
+  overflow:visible;  
+  } 
+   
+ </style> 
+ <script type="text/javascript"> 
+  
+   function click2(node1){ 
+
+   var nodes=node1.parentNode; 
+   if(nodes.className=="open"){ 
+    nodes.className="close"; 
+   }else{ 
+    nodes.className="open"; 
+   } 
+   } 
+ </script>   
+ </head> 
+ <body> 
+ <br/> 
+ <br/> 
+ <hr/> 
+ <dl> 
+ <dt onclick="click2(this)">1菜单条1</dt> 
+ <dd>菜单1</dd> 
+ <dd>菜单2</dd> 
+ <dd>菜单3</dd> 
+ <dd>菜单4</dd> 
+ </dl> 
+ <dl> 
+ <dt onclick="click2(this)">2菜单条2</dt> 
+ <dd>菜单11</dd> 
+ <dd>菜单22</dd> 
+ <dd>菜单33</dd> 
+ <dd>菜单44</dd> 
+ </dl> 
+ <dl> 
+ <dt onclick="click2(this)">3菜单条3</dt> 
+ <dd>菜单123</dd> 
+ <dd>菜单234</dd> 
+ <dd>菜单345</dd> 
+ <dd>菜单456</dd> 
+ </dl> 
+ </body> 
+</html>

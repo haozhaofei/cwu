@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>进度条</title>
+    
+</head>
+<body>
+    <p>进度条</p>
+    <body>
+<div style="width:200px;border:1px solid #6C9C2C;height:20px;">
+<div style="width:0px;float:left;height:20px;background-color:#95CA0D;" id="process" ></div>
+</div>
+    </body>
+</html>
+<script>
+     var x=0;
+
+	var mytime = setInterval(function(){
+		x++;
+		document.getElementById("process").style.width=x+"%";
+		process.innerHTML=process.style.width;
+		if(x==100){
+
+			clearInterval(mytime);
+	}
+	},100);
+	 
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择</title>
+</head>
+<body>
+<h2>选择器</h2>
+<h2>你喜欢什么以下哪个明星</h2>
+<ul>
+	<li><input type="checkbox">李易峰</li>
+	<li><input type="checkbox">鹿晗</li>
+	<li><input type="checkbox">吴亦凡</li>
+	<li><input type="checkbox">张艺兴</li>
+	<li><input type="checkbox">霍建华</li>
+	<li><input type="checkbox">胡歌</li>
+	<button onclick="fun(1)">全选</button>
+	<button onclick="fun(2)">全不选</button>
+	<button onclick="fun(3)">反选</button>
+</ul>
+</body>
+</html>
+
+<script type="text/javascript">
+var list=document.getElementsByTagName('input');
+var m;
+function fun(m){
+	for(var i=0;i<list.length;i++)
+	{
+		if(m==1)
+			list[i].checked=true;
+		else if(m==2)
+			list[i].checked=false;
+		else if(m==3)
+				list[i].checked=!list[i].checked;
+	}
+}
+	
+</script>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>WhatDay</title>
+</head>
+
+<style>
+	div{
+		font-size: 50px;
+	}
+</style>
+
+<body>
+
+<center>
+	<div id="did"></div>
+</center>
+	
+</body>
+</html>
+
+<script type="text/javascript">
+	var date = new Date();
+	var d = date.getDay();
+	var a = new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saterday');
+	var str = a[d];
+	document.getElementById("did").innerHTML=str;
+</script>

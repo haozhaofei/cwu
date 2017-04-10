@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+     <li>西游记</li>
+     <li>红楼梦</li>
+     <li>三国演义</li>
+     <li>水浒传</li>		
+	</ul>
+</body>
+</html>
+<script>  
+   var ul=document.getElementsByTagName("li");
+   // for(k in ul){
+   //    document.write(k+"<br>");
+   // }
+   for(var i=0;i<ul.length;i++){
+   	  document.write(ul[i].innerHTML+"<br>");
+   }
+
+</script>

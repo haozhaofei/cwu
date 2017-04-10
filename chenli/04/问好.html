@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+		#did{font-size: 60px;margin: 200px auto;text-align: center;}
+	</style>
+<body>
+	<div id="did">
+		<script type="text/javascript">
+      var d = new Date();
+      var time = d.getHours();
+
+		if (time<8) 
+	   {
+		document.write("<b>早上好</b>！")
+	   }
+	   else if (time>8&&time<12)
+	   {
+		document.write("<b>上午好！</b>")
+	   }
+	   else if(time>12&&time<14)
+	   {
+		document.write("<b>中午好！</b>")
+	   }
+	   else if(time>14&&time<18)
+	   {
+		document.write("<b>下午好！</b>")
+	   }
+	   else
+	   {
+		document.write("<b>晚上好！</b>")
+	   }
+	
+</script>
+	</div>
+</body>
+</html>

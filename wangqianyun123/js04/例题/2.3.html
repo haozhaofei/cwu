@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>li 2 three</title>
+</head>
+<body>
+	<ul>
+		<li>apple</li>
+		<li>ball</li>
+		<li>banana</li>
+		<li>pear</li>
+	</ul>
+</body>
+</html>
+<script>
+	var ul=document.getElementsByTagName("li");
+	for(k in ul){
+		document.write(k+"<br>");
+
+	}
+	for(var i=0;i<ul.length;i++){
+		document.write(ul[i].innerHTML+"<br>");
+	}
+</script>

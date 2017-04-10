@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>xialacaidan</title>
+</head>
+<style type="text/css">
+	p{
+		font-size: 40px;
+	}
+	li{
+		font-size: 30px;
+		font-color:#000;
+	}
+</style>
+
+<body>
+<blockquote><p>      海贼王      </p></blockquote>
+
+
+<li onMouseOver="display(this)" onMouseOut="hide(this)"><a herf="javascript:;">草帽海贼团</a>
+
+<div>
+<ul>
+	<li><a href="#">路飞</a></li>
+	<li><a href="#">索隆</a></li>
+	<li><a href="#">香吉士</a></li>
+</ul>
+</div>
+</li>
+<li onMouseOver="display(this)" onMouseOut="hide(this)"><a herf="javascript:;">革命军</a>
+<div>
+<ul>
+	<li><a href="#">龙</a></li>
+	<li><a href="#">伊万科夫</a></li>
+	<li><a href="#">暴君熊</a></li>
+</ul>
+</div>
+</li>
+
+<li onMouseOver="display(this)" onMouseOut="hide(this)"><a herf="javascript:;">海军本部</a>
+<div>
+<ul>
+	<li><a href="#">藤虎</a></li>
+	<li><a href="#">青雉</a></li>
+	<li><a href="#">赤犬</a></li>
+</ul>
+</div>
+</li>
+</body>
+</html>
+<script>
+    function display(li){
+	var subNav=li.getElementsByTagName("ul")[0];
+	subNav.style.display = "block";
+    }
+	function hide(li){
+	var subNav=li.getElementsByTagName("ul")[0];
+	subNav.style.display = "none";}
+	
+</script>

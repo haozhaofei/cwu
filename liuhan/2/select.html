@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Select</title>
+</head>
+<body>
+<div>
+	
+	<h2>“小楼一夜听春雨”中你最喜欢哪几个字？</h2>
+	<font size="4">
+	<ul>
+
+		<li><input type="checkbox" /> 小</li>
+		<li><input type="checkbox" /> 楼</li>
+		<li><input type="checkbox" /> 一</li>
+		<li><input type="checkbox" /> 夜</li>
+		<li><input type="checkbox" /> 听</li>
+		<li><input type="checkbox" /> 春</li>
+		<li><input type="checkbox" /> 雨</li>
+
+	</ul>
+
+	<!--按钮-->
+	<button onclick="doSelect(1)">全选</button>
+	<button onclick="doSelect(2)">反选</button>
+	<button onclick="doSelect(3)">全不选</button>
+	 </font>
+
+	<script type="text/javascript">
+
+		function doSelect(m){
+
+			//获取所有的选项
+			var list = document.getElementsByTagName("input");
+
+			//遍历每一个选项，判断是否被选中
+			for (var i = 0; i<list.length; i++) {
+				switch(m){
+					case 1: list[i].checked = true; break;   		    //全选
+					case 2: list[i].checked = !list[i].checked; break;  //反选
+					case 3: list[i].checked = false; break;				//不选
+				}
+			}
+		}
+
+		
+	</script>
+	<script type="text/javascript">
+		div{
+			boder:1px solid yellow;
+		}
+	</script>
+
+</div>
+</body>
+</html>

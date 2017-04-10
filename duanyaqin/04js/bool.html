@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>双色球</title>
+
+
+</head>
+
+<style>
+
+	div{
+
+		width:50px;height:50px;border-radius:50%;border:1px solid red;float:left;margin-left:5px;font-size:40px;
+
+	}
+
+	#blue{
+
+        border:1px solid blue;
+
+	}
+
+	button{
+
+		width:60px;height:30px;margin-top:8px;margin-left:20px;
+
+	}
+
+
+
+</style>
+
+<body>
+
+	<h1 text align="center">双色球</h1>
+
+<div id="red1" style="text-align:center;"></div>
+
+	<div id="red2"></div>
+
+	<div id="red3"></div>
+
+	<div id="red4"></div>
+
+	<div id="red5"></div>
+
+	<div id="red6"></div>
+
+	<div id="blue"></div>
+
+
+	<button onclick=start()>开始</button>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+
+function start(){
+
+  var arr=new Array(document.getElementById("red1"),document.getElementById("red2"), document.getElementById("red3"), document.getElementById("red4"),document.getElementById("red5"),document.getElementById("red6"),document.getElementById("blue"));
+
+  var num;
+
+  for(var i=0;i<arr.length;i++){
+
+  	  if(i<6){
+
+  	  	num=Math.round(Math.random()*33);
+
+  	  }else{
+
+  	  	num=Math.round(Math.random()*16);
+
+  	  }
+
+  	  if(num<10){
+
+  	  	arr[i].innerHTML="0"+num;
+
+  	  }else{
+
+  	  	arr[i].innerHTML=num;
+
+  	  }
+
+  }
+
+}
+
+</script>

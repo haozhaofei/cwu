@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #datePicker {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;;
+            border-radius: 10px;
+            border: 1px solid #5098a5;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #number {
+            height: 100px;
+            float: left;
+            margin-top: 20px;
+        }
+
+        #number span {
+            display: block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 30px;
+            border: 2px solid red;
+            color: red;
+            font-weight: bold;
+            float: left;
+            margin-top: 15px;
+            margin-right: 10px;
+        }
+
+        #buleBall {
+            height: 100px;
+            margin-top: 21px;
+            float: left;
+        }
+
+        #buleBall span {
+            display: block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 30px;
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            float: left;
+            margin-top: 15px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div style="overflow:hidden;">
+        <div id="number"></div>
+        <div id="buleBall"></div>
+    </div>
+    <div id="datePicker">点击按钮</div>
+</div>
+
+
+
+</body>
+</html>
+<script>
+    //循环产生0-31数字
+    var arr = [];
+    function num() {
+        for (var i = 0; i < 32; i++) {
+            arr.push(i);
+        }
+        confusion();
+    }
+    var arrty= new Array(arr);
+    //伪随机方法
+    function confusion(){
+        for(var i=0;i<32;i++){
+            arrty[i]=i;
+        }
+        arrty.sort(function(){ return 0.5 - Math.random() });
+//        var str=arrty.join();
+        arrAy()
+    }
+   // 将随机获取的数据添加到页面上去
+    function arrAy() {
+        var array = getRandomArrayElements(arrty, 6);
+        array.sort(function (a, b) {//数组排序
+            return a > b ? 1 : -1;
+        });
+        var htm = "";
+        for (var i = 0; i < array.length; i++) {
+            htm += '<span>' + array[i] + '</span>';
+        }
+
+        document.getElementById('number').innerHTML = htm;
+    }
+
+    //  从1-36中随机取出其中6个参数
+    function getRandomArrayElements(arr, count) {
+        var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index;
+        while (i-- > min) {
+            index = Math.floor((i + 1) * Math.random());
+            temp = shuffled[index];
+            shuffled[index] = shuffled[i];
+            shuffled[i] = temp;
+        }
+        return shuffled.slice(min);
+    }
+
+    //随机获取一个蓝球的方法
+    function blueBall() {
+        var html = "";
+        var array = [];
+
+        for (var k = 1; k < 17; k++) {
+            array.push(k);
+        }
+        //随机生成蓝色球的算法
+        var n = Math.floor(Math.random() * array.length);
+
+        if (n != "0") {//去除获取到的篮球数为0的
+            html += '<span>' + n + '</span>';
+        }
+
+        document.getElementById('buleBall').innerHTML = html;
+    }
+
+    window.onload = function () {
+        var datePicker = document.getElementById("datePicker");
+        datePicker.onclick = function () {
+            num();//点击按钮生成0-31的数字方法
+            blueBall();//点击后获取随机蓝球的方法
+        };
+    }
+
+</script>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>three</title>
+</head>
+<body>
+	<button onclick="fun(this)">点击</button>
+	<button id="bid">再次点击</button>
+</body>
+</html>
+<script>
+//主调用不可直接获取bixu传参数!!!!
+function fun(bb){
+	bb.style.color="azure";
+}
+document.getElementById("bid").onclick=function(){
+	this.style.color="teal";
+}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>three-2</title>
+</head>
+<body>
+	<button ondblclick="fun(this)">传参</button>
+	<button id="did">直接调用</button>
+</body>
+</html>
+<script>
+	function fun(aa){
+			aa.style.color="azure";
+	}
+	document.getElementById("did").ondblclick=function(){
+		this.style.color="blue";
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>three-3</title>
+</head>
+<body>
+	<button onclick="fun(this)">qqqq</button>
+	<button id="oo">wwww</button>
+</body>
+</html>
+<script>
+	function fun(kk){
+		kk.style.color="teal";
+	}
+	document.getElementById("oo").onclick=function(){
+		this.style.color="red";
+	}
+</script>

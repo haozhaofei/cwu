@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+   	#did{width: 50px;height: 150px;font-size: 100px;font-weight: bold;color: pink;}
+</style>
+<body>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+
+   var date=new Date();
+   var d=date.getDay();
+   var a=new Array('*星期天','*星期一','*星期二','*星期三','*星期四','*星期五','*星期六');
+   var str=a[d];
+   document.getElementById("did").innerHTML=str;
+</script>

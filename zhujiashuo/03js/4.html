@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+<ul>
+
+<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"> 
+<a href="#">学生信息</a> 
+<ul> 
+<li><a href="#">学号</a></li> 
+<li><a href="#">院系</a></li>
+<li><a href="#">专业</a></li> 
+</ul> 
+</li> 
+
+
+<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"> 
+<a href="#">教室信息</a> 
+<ul> 
+<li><a href="#">教师编号</a></li> 
+<li><a href="#">课程</a></li>
+<li><a href="#">职称</a></li> 
+</ul> 
+</li> 
+
+<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+<a href="#">学校简介</a> 
+<ul> 
+<li><a href="#">创建史</a></li> 
+<li><a href="#">发展方向</a></li>
+<li><a href="#">未来</a></li> 
+</ul> 
+</li> 
+
+ </ul> 
+
+</body>
+</html>
+<script > 
+
+function displaySubMenu(li) {
+var subMenu = li.getElementsByTagName("ul")[0];
+subMenu.style.display = "block"; 
+} 
+
+
+function hideSubMenu(li) {
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "none"; 
+} 
+
+</script>      

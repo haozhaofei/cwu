@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>菜单</title>
+	
+</head>
+<style type="text/css">
+	    
+	    button{
+	    	background-color: orange;
+			border: 5px;
+			font-size: 30px;
+	    }
+	    div{
+	    	display: none;
+	    }
+	</style>
+<body>
+
+
+<blockquote><p>     下拉菜单    </p></blockquote>
+    <ul>
+    	<li><button onclick="fun(1)">你喜欢哪个女明星</button></li>
+    	<div id="menu1">
+		<ul>
+	<li>杨幂</li>
+	<li>刘诗诗</li>
+	<li>赵丽颖</li>
+	</ul>	
+	</div>	
+    	<li><button onclick="fun(2)">你喜欢哪个男明星</button></li>
+    	 <div id="menu2">
+	<ul>
+	<li>李易峰</li>
+	<li>鹿晗</li>
+	<li>胡歌</li>
+	</ul>
+	</div>
+    	<li><button onclick="fun(3)">你喜欢哪个综艺</button></li>
+    	 <div id="menu3">
+	<ul>
+	<li>跑男</li>
+	<li>快乐大本营</li>
+	<li>最强大脑</li>
+	</ul>
+	</div>
+	
+    </ul>
+</body>
+</html>
+<script>
+	function fun(m){
+		switch(m){
+			case 1:var menu1=document.getElementById("menu1");
+		           menu1.style.display="block";break;
+		    case 2:var menu2=document.getElementById("menu2");
+		           menu2.style.display="block";break;
+		    case 3:var menu3=document.getElementById("menu3");
+		           menu3.style.display="block";break;
+		}
+		
+	}
+</script>

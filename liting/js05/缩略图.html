@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>缩略图点击并替换</title>
+</head>
+<style>
+	/*div,img{
+		padding:0;margin:0;
+	}*/
+	#bid img{
+		width:600px;height:450px;
+	}
+	#did img{
+		width:145px;height:100px;
+	}
+	#m2,#m3,#m4{
+		display:none;
+	}
+</style>
+<body>
+<center>
+	<div id="bid">
+		<img src="images/11.jpg" id="m1">
+		<img src="images/22.jpg" id="m2">
+		<img src="images/33.jpg" id="m3">
+		<img src="images/44.jpg" id="m4">
+	</div>
+	<div id="did">
+		<img src="images/11.jpg" id="n1" onclick="show(1)">
+		<img src="images/22.jpg" id="n2" onclick="show(2)">
+		<img src="images/33.jpg" id="n3" onclick="show(3)">
+		<img src="images/44.jpg" id="n4" onclick="show(4)">
+	</div>
+</center>
+</body>
+</html>
+<script>
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var bImg=document.getElementById('m'+i);
+			var dImg=document.getElementById('n'+i);
+			if(i==x){
+				bImg.style.display="block";
+			}else{
+				bImg.style.display="none";
+			}
+		}
+	}
+</script>

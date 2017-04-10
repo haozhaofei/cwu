@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{width: 100px;height: 100px;border:1px solid #ccc;}
+	</style>
+</head>
+<body>
+	<button onclick="fun1(1)">红</button>
+	<button onclick="fun1(2)">绿</button>
+	<button onclick="fun1(3)">蓝</button>
+	<button onclick="fun1(4)">pink </button>
+	<button onclick="fun1(5)">white</button>
+	<button onclick="fun1(6)">purple</button>
+	<div id="did">
+		
+	</div>
+</body>
+</html>
+<script>
+	function fun1(m){
+		//获取DID元素
+		var oDid = document.getElementById('did');
+		switch(m){
+			case 1 :
+				oDid.style.background = "red";
+			break;
+			case 2 :
+				oDid.style.background = "green";
+			break;
+			case 3 :
+				oDid.style.background = "green";
+			break;
+			case 4 :
+				oDid.style.background = "pink";
+			break;
+			case 5 :
+				oDid.style.background = "white";
+			break;
+			case 6 :
+				oDid.style.background = "purple";
+			break;
+		}
+		
+	}
+</script>

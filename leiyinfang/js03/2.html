@@ -1,0 +1,60 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>树形菜单</title>
+	<style type="text/css">
+
+	    li{
+	    	list-style-type:none;
+	    }
+	    #ren{
+	    	display: none;
+	    	color: blue;
+	    	font-size: 20px;
+	    }
+	    #sport{
+	    	display:none;
+	    	color: green;
+	    	font-size: 20px;
+	    }
+	    button{
+	    	font-size: 26px;
+	    	background: red;
+	    }
+	</style>
+</head>
+<body>
+    <ul>
+    	<li><button onclick="fun(1)">人员管理</button></li>
+    	<div id="ren">
+    	    <ul>
+    	    <li>工资待遇</li>
+    	    <li>出勤天数</li>
+    	    <li>提成业绩</li>	
+    	    </ul>
+    	</div>
+    	<li><button onclick="fun(2)">运动</button></li>
+    	 <div id="sport">
+    	    <ul>
+    	    	<li>篮球</li>
+    	    	<li>排球</li>
+    	    	<li>乒乓球</li>
+    	    </ul>
+    	 </div>
+    </ul>
+</body>
+</html>
+<script>
+	function fun(m){
+		switch(m){
+			case 1:var ren=document.getElementById("ren");
+		           ren.style.display="block";break;
+		    case 2:var sport=document.getElementById("sport");
+		           sport.style.display="block";break;
+
+		}
+		
+	}
+</script>

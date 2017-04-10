@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+    <button onclick="fun1()">star</button>
+   
+
+</body>
+</html>
+<script>
+function fun1() {
+	// body...
+	
+    for(var i=1;i<6;i++){
+    	document.write("<font color=red>"+"红球 "+i+" :");
+        document.write("<font color=red>"+Math.round(Math.random()*100009)%31+"<br>");}
+   
+    	document.write("<font color=blue>"+"蓝球1 "+" :");
+        document.write("<font color=blue>"+Math.round(Math.random()*100009)%16+"<br>");
+
+}
+
+</script>

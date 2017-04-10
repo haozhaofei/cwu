@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复选框</title>
+</head>
+<body>
+   <h3>你最喜欢以下哪部电影</h3>
+   <ul>
+   <li><input type="checkbox" name="select" >变形金刚</li>
+   <li><input type="checkbox" name="select" >美国队长</li>
+   <li><input type="checkbox" name="select" >金刚狼</li>
+   <li><input type="checkbox" name="select" >钢铁侠</li>
+   <li><input type="checkbox" name="select" >X战警</li>
+   </ul>
+   <button onclick="Select(1)">全选</button>
+   <button onclick="Select(2)">取消全选</button>
+   <button onclick="Select(3)">反选</button>
+
+</body>
+</html>
+
+<script type="text/javascript">
+   var list=document.getElementsByName("select");
+
+   function Select(n){
+    for(var i=0;i<list.length;i++){
+            switch(n){
+                case 1:list[i].checked=true;break;
+                case 2:list[i].checked=false;break;
+                case 3:list[i].checked=!list[i].checked;break;
+            }
+        }
+   } 
+</script>

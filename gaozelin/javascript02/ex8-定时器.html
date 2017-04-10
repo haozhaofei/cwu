@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器</title>
+</head>
+<body>
+	<button id="bid">5</button>
+	<button onclick="stop()">暂停</button>
+</body>
+</html>
+<script>
+
+	//多次执行一个动作
+	/*setInterval(function(){
+		console.log(1);
+	},1000)*/
+    
+    //单次执行
+	/*setTimeout(function(){
+		console.log(1);
+	},1000)*/
+
+	var bid = document.getElementById('bid');
+
+	var m = 5;
+	var time = setInterval(function(){
+		m--;
+		bid.innerHTML = m;
+		if(m == 0){
+			bid.style.color = "red";
+			bid.style.fontSize ="30px";
+			clearInterval(time);
+		}
+	},1000)
+	
+	
+	function stop(){
+		clearInterval(time);
+	}
+</script>

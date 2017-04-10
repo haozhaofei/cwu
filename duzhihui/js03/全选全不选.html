@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<h3>你喜欢下列哪些乐器?</h3>
+<u1>
+	<li><input type="checkbox" name="art" >钢琴</li>
+	<li><input type="checkbox" name="art" >吉他</li>
+	<li><input type="checkbox" name="art" >小提琴</li>
+	<li><input type="checkbox" name="art" >尤克里里</li>
+</u1>	
+<button onclick="select(1);">全选</button>
+<button onclick="select(2);">全不选</button>
+<button onclick="select(3);">反选</button>
+<script type="text/javascript">
+	function select (a) {
+		var list = document.getElementsByTagName('input');
+		for(var i=0;i<list.length;i++){
+			switch(a){
+				case 1: list[i].checked = true; break;
+				case 2: list[i].checked = false; break;
+				case 3: list[i].checked = !list[i].checked; break;
+
+			}
+		}
+	}
+
+
+
+</script>
+</body>
+</html>

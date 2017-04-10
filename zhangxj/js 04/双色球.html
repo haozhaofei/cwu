@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双色球</title>
+	<h2>双色球</h2>
+</head>
+<style>
+	div{
+		width:40px;height:40px;border-radius:50%;background:red;
+		margin-left:13px;font-size:32px;float:left;
+	}
+
+	#blueBall{
+        background:blue;
+	}
+</style>
+<body>
+	<button onclick=fun()></button+>
+	<div id="redBall1"></div>
+	<div id="redBall2"></div>
+	<div id="redBall3"></div>
+	<div id="redBall4"></div>
+	<div id="redBall5"></div>
+	<div id="redBall6"></div>
+	<div id="blueBall"></div>
+</body>
+</html>
+<script>
+
+	function fun(){
+  		var arr=new Array(document.getElementById("redBall1"),document.getElementById("redBall2"), document.getElementById("redBall3"), document.getElementById("redBall4"),document.getElementById("redBall5"),document.getElementById("redBall6"),document.getElementById("blueBall"));
+  	var number;
+  	for(var i=0;i<7;i++){
+  		if(i<6){
+  	  	number=Math.round(Math.random()*32);
+  	}else{
+  	  	number=Math.round(Math.random()*17);
+  	}
+  	arr[i].innerHTML=number;
+  }
+}
+  
+</script>

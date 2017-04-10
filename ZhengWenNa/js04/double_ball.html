@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双色球</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	var a=[];
+	for (var i = 0; i<7; i++) {
+		var c=(Math.round(Math.random()*100))%32;
+		
+			while(true)
+			{
+				for(var j=0;j<i;j++)
+					if(c==a[j])
+					{	c=(Math.round(Math.random()*100))%32;
+						break;
+					}
+				if(i==j)
+					break;
+			}
+		
+		a[i]=c;
+	}
+	var b=Math.round(Math.random()*100)%17;
+	document.write(a+"   "+b);
+
+</script>

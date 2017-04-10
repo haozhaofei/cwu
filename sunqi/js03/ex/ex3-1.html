@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	//1.在函数外定义变量为全局变量
+	//2.在函数内使用了var关键字为全局变量，不用var为全局变量（不建议这么用全局变量）
+	var name="zhangsan";       //在函数外面声明的变量为全局变量
+	function fun1(){
+		document.write("在函数内部输出外部name:"+name+"<br>");
+		name="lisi";       //改变全局变量的值
+	}
+	fun1();
+	document.write("在函数外部调用name:"+name+"<br>");
+
+
+
+	function fun2(){
+		var name1="zs";   //在函数内部使用var关键字定义的变量是局部变量
+		document.write("在函数内部输出外部name1："+name1+"<br>");
+		name1="ls";
+	}
+	fun2();
+	//document.write("在函数外部调用name1:"+name1+"<br>");   不能执行name1 is not defined
+
+	function fun3(){
+		name2="ww";
+		document.write("在函数内部输出外部name2："+name2+"<br>");
+		name2="ql";
+	}
+	fun3();
+	document.write("在函数外部调用name2:"+name2+"<br>")
+</script>

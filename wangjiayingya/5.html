@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>树形</title>
+</head>
+<body>
+<div id="nav">
+<ul>
+<li onMouseOver="display(this)" onMouseOut="hide(this)"><a herf="javascript:;">语言</a>
+
+
+<ul>
+    <li><a href="#">中文</a></li>
+    <li><a href="#">英文</a></li>
+    <li><a href="#">日文</a></li>
+    <li><a href="#">法文</a></li>
+    <li><a href="#">意大利文</a></li>
+</ul>
+
+</li>
+<li onMouseOver="display(this)" onMouseOut="hide(this)"><a herf="javascript:;">国籍</a>
+<div>
+<ul>
+    <li><a href="#">中国</a></li>
+    <li><a href="#">美国</a></li>
+    <li><a href="#">日本</a></li>
+    <li><a href="#">法国</a></li>
+    <li><a href="#">意大利</a></li>
+</ul>
+</div>
+</li>
+
+<li onMouseOver="display(this)" onMouseOut="hide(this)"><a herf="javascript:;">中国</a>
+<div>
+<ul>
+    <li><a href="#">长城</a></li>
+    <li><a href="#">故宫</a></li>
+</ul>
+</div>
+</li>
+</body>
+</html>
+<script>
+    function display(li){
+    var subNav=li.getElementsByTagName("ul")[0];
+    subNav.style.display = "block";
+    }
+    function hide(li){
+    var subNav=li.getElementsByTagName("ul")[0];
+    subNav.style.display = "none";}
+    
+</script>

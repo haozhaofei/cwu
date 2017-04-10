@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>树形菜单</title>
+	<style type="text/css">
+	
+	</style>
+</head>
+<body>
+	<ul id="menu">
+		<li onMouseOver="display(this)" onMouseOut="hide(this)">
+			<a href="javascript:;">学生管理</a>
+			<ul>
+				<li><a href="#">学籍信息</a></li>
+				<li><a href="#">成绩查询</a></li>
+				<li><a href="#">学生选课</a></li>
+				<li><a href="#">学生课表</a></li>
+			</ul>
+		</li>
+		<li onMouseOver="display(this)" onMouseOut="hide(this)">
+			<a href="javascript:;">人员管理</a>
+			<ul>
+				<li><a href="#">工资待遇</a></li>
+				<li><a href="#">出勤天数</a></li>
+				<li><a href="#">提成业绩</a></li>
+			</ul>
+		</li>
+		<li onMouseOver="display(this)" onMouseOut="hide(this)">
+			<a href="javascript:;">D盘</a>
+			<ul>
+				<li><a href="#">专业课</a></li>
+				<li><a href="#">安装包</a></li>
+				<li><a href="#">表格</a></li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>
+<script>
+    function display(li){
+	var subNav=li.getElementsByTagName("ul")[0];
+	subNav.style.display = "block";
+    }
+	function hide(li){
+	var subNav=li.getElementsByTagName("ul")[0];
+	subNav.style.display = "none";}
+	
+</script>

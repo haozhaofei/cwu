@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>抽奖</title>
+	<style>
+		#front{width:50px;height:50px;border:2px solid red;border-radius: 50%;margin:20px;float:left;}
+		#one{font-size: 20px;font-weight:bold;text-align: center;margin-top: 13px;}
+		#two{font-size: 20px;font-weight:bold;text-align: center;margin-top: 13px;}
+		#three{font-size: 20px;font-weight:bold;text-align: center;margin-top: 13px;}
+		#four{font-size: 20px;font-weight:bold;text-align: center;margin-top: 13px;}
+		#five{font-size: 20px;font-weight:bold;text-align: center;margin-top: 13px;}
+		#six{font-size: 20px;font-weight:bold;text-align: center;margin-top: 13px;}
+		#later{width:50px;height:50px;border:2px solid green;border-radius: 50%;margin:20px;float:left;}
+		#seven{font-size: 20px;font-weight:bold;text-align: center;margin-top: 13px;}
+	</style>
+</head>
+<body>
+	<div id="front">
+		<div id="one"></div>
+	</div>
+	<div id="front">
+		<div id="two"></div>
+	</div>
+	<div id="front">
+		<div id="three"></div>
+	</div>
+	<div id="front">
+		<div id="four"></div>
+	</div>
+	<div id="front">
+		<div id="five"></div>
+	</div>
+	<div id="front">
+		<div id="six"></div>
+	</div>
+	<div id="later">
+		<div id="seven"></div>
+	</div>
+</body>
+</html>
+<script>
+	var odid=document.getElementById("front");
+		//odid.style.float="left";
+	var inner=document.getElementById("one");
+		a1=Math.round(Math.random()*1000001)%32;
+		inner.innerHTML=a1;		
+		inner.style.color="red";
+
+
+	var a2=Math.round(Math.random()*1000001)%32;
+	    inner=document.getElementById("two");
+		inner.innerHTML=a2;		
+		inner.style.color="red";
+
+	var a3=Math.round(Math.random()*1000001)%32;
+		inner=document.getElementById("three");
+		inner.innerHTML=a3;		
+		inner.style.color="red";
+	var a4=Math.round(Math.random()*1000001)%32;
+		inner=document.getElementById("four");
+		inner.innerHTML=a4;		
+		inner.style.color="red";
+	var a5=Math.round(Math.random()*1000001)%32;
+		inner=document.getElementById("five");
+		inner.innerHTML=a5;		
+		inner.style.color="red";
+	var a6=Math.round(Math.random()*1000001)%32;
+		inner=document.getElementById("six");
+		inner.innerHTML=a6;		
+		inner.style.color="red";
+	var b1=Math.round(Math.random()*1000001)%17;
+		inner=document.getElementById("seven");
+	    odid=document.getElementById("later");
+		inner.innerHTML=b1;		
+		inner.style.color="green";
+
+
+	
+		
+</script>

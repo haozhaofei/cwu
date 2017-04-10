@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>下拉菜单</title>
+    <h3>树形菜单点击效果</h3>
+    <style>#list{ 
+        width:80px;
+        height:80px;
+        display:none;
+    }
+  </style>
+  <script type="text/javascript">
+   window.onload=function(){
+   var allBtn=document.getElementById('btn');  
+   var allList=document.getElementById('list'); 
+   allBtn.onclick=function()  {   
+    if(allList.style.display=='none')
+        {  allList.style.display='block';  }
+    else{ allList.style.display='none';    }; 
+     }}</script>
+     </head>
+</head>
+<body>
+    <input type="button" id="btn" value="人员管理"/>
+    <div id="list">
+                <p><a href="">工资待遇</a></p>
+                <p><a href="">出勤天数</a></p>
+                <p><a href="">提成业绩</a></p>
+    </div>
+                <p><a href="">上一步</a><a href="">              下一步</a></p>
+                
+</body>
+</html>
+
+

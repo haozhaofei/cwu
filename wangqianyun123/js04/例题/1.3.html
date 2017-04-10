@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>例一 three</title>
+	<style>
+		div{width:100px; height:100px; border:1px solid black;}
+	</style>
+
+</head>
+<body>
+	<button onclick="fun1(1)">红</button>
+	<button onclick="fun1(2)">绿</button>
+	<button onclick="fun1(3)">蓝</button>
+	<div id="did">
+		
+	</div>
+</body>
+</html>
+<script>
+	function fun1(m){
+		var odid=document.getElementById("did");
+		switch(m){
+			case 1:
+				odid.style.background="red";
+				break;
+			case 2:
+				odid.style.background="green";
+				break;
+			case 3:
+				odid.style.background="blue";
+				break;
+		}
+	}
+</script>

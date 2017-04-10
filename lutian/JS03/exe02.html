@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>树形菜单</title>
+</head>
+<body>
+    <span id="sample"></span>  
+</body>
+</html>
+
+    <script>  
+        var sampleExpanded = true;   
+        function sampleOnClick()  
+        {  
+            sampleExpanded = ! sampleExpanded;  
+            sampleRefreshUI();  
+        }  
+          
+        function sampleRefreshUI()  
+        {  
+            var html = "<a href='javascript:sampleOnClick()' > ";  
+            if(sampleExpanded)  
+            {   
+                html += "总菜单<br/>";  
+                html += "</a>";  
+                html += " ---------子菜单1<br/>";  
+                html += " ---------子菜单2<br/>";  
+                html += " ---------子菜单3<br/>";  
+            }  
+            else  
+            {   
+                html += "总菜单<br/>";  
+                html += "</a>";  
+            }     
+              
+            document.getElementById("sample").innerHTML = html;       
+        }  
+          
+        sampleRefreshUI();  
+    </script>  
