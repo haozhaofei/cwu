@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<ul>
+<li>时诗</li>
+<li>龟梨和也</li>
+<li>石原里美</li>
+<li>上田龟也</li>
+</ul>
+</body>
+<script>
+/*
+这个还是不太明白，而且遍历不出来
+var ul = document.getElementByTagName('li');
+for(k in ul){
+	document.write(k+"<br>");
+}*/
+
+var ul=document.getElementsByTagName('li');
+for(var i=0;i<ul.length;i++)
+{
+	document.write(ul[i].innerHTML+"<br>");
+}
+
+
+</script>
+</html>

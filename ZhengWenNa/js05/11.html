@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>刷新随机换背景</title>
+</head>
+<body id="bid">
+	
+</body>
+</html>
+<script>
+	var color=['black','blue','pink'];
+	var ran=Math.round(Math.random()*10)%3;
+	var bid=document.getElementById('bid');
+	bid.style.background=color[ran];
+</script>

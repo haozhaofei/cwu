@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<progress max="100" value="0" id="bar">0% saved</progress>
+</body>
+</html>
+<script type="text/javascript">
+	var bar=document.getElementById("bar");
+	var m=0;
+    setInterval(function(){
+    	m++;
+    	bar.value=m;
+    },100)
+	
+	
+</script>

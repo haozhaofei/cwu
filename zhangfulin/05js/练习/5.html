@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>提示</title>
+</head>
+<style>
+	ul,li{
+		padding:0px;
+		margin:0px;
+	}
+	ul li{
+		height:40px;
+		margin-top: 10px;
+		background: #eee;
+	}
+	li:hover{
+		background: #abc;
+	}
+</style>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName('li');
+	for (var i = list.length - 1; i >= 0; i--) {
+		list[i].ondblclick=function(){
+			this.style.background="#cba";
+		}
+	};
+</script>

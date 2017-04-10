@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	div{
+		width:1000px;
+		height:720px;
+		margin:auto;
+		background-image:url(images/1.jpg);
+		background-repeat:no-repeat;
+       	background-size:1000px; 
+       	display: none;
+      }
+</style>
+<body>
+   <div id="did"></div>
+   <button id="bid">背景图</button>
+</body>
+<script type="text/javascript">
+	document.getElementById("bid").onclick=function(){
+        document.getElementById("did").style.display="block";
+        this.style.display="none";
+	}
+</script>

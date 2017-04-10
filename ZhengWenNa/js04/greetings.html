@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>问候</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	var date = new Date();//先创建内置对象
+	var hour= date.getHours();
+	if(hour>6||hour<11)
+		document.write("早上好！");
+	else if(hour>=11||hour<14)
+		document.write("中午好！");
+	else if(hour>=14||hour<18) 
+		document.write("下午好！");
+	else
+		document.write("晚上好！");
+</script>

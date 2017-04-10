@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击一个按钮在浏览器出一张背景图</title>
+</head>
+<style type="text/css">
+	*{
+		padding:0px;
+		margin:0px;
+	}
+</style>
+<body>
+<button onclick="fun()">按钮</button>
+</body>
+</html>
+<script>
+var b=document.getElementsByTagName('body')[0];
+function fun(){
+	b.style.backgroundImage="url(images/1.jpg)";
+
+}
+</script>

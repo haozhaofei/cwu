@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+      <ul>
+      	<li>貂蝉</li>
+      	<li>后羿</li>
+      	<li>猴子</li>
+      	<li>大乔</li>
+      </ul>
+</body>
+</html>
+<script>
+    //var ul 返回的是一个集合
+    //我们在写特效的时候不用for in 原因是他太啰嗦了，总是不给我想要的。
+    //for in 可以遍历对象中的所有属性和数组中的所有元素。
+    /*var ul=document.getElementByTagName('li');
+     for (k in ul){
+	      document.weite(k+"<br>");
+     }; */
+     //推荐大家使用for
+     var ul=document.getElementsByTagName('li');
+     for(var i=0;i<ul.length;i++){
+     	   document.write(ul[i].innerHTML+"<br>");
+     }
+ </script>

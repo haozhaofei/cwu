@@ -1,0 +1,21 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>更换背景</title>
+</head>
+<body>
+	<button id="bid">更换背景</button>
+</body>
+</html>
+<script>
+	var img=['url(images/1.jpg)','url(images/2.jpg)','url(images/3.jpg)','url(images/4.jpg)','url(images/5.jpg)','url(images/6.jpg)']; 
+	var body=document.getElementsByTagName("body");
+	document.getElementById('bid').onclick=function(){
+		var index=Math.ceil(Math.random()*1000)%4;
+	
+		body[0].style.background=img[index];
+	}
+	
+</script>

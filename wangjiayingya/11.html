@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景图</title>
+</head>
+<style>
+	div,ul,li,img{padding: 0px;margin:0px;}
+	#did{width: 384px;}
+
+</style>
+<body>
+	<div> 
+		<img src="images/photo1.jpg" width="384" height="240" id="did" alt="">
+	</div>	
+	<button onclick="doStart()">点击换背景</button>
+</body>
+</html>
+<script type = "text/javascript">
+
+	var i = 1;
+	function doStart(){
+		i++;
+		if (i>5) {
+			i=1;
+		}
+		document.getElementById("did").src="images/photo"+i+".jpg";
+	}
+
+</script>

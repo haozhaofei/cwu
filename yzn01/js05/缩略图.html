@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	#did img{
+		width:560px;height:460px;
+	}
+	#mid img{
+		width:100px;height:50px;border:2px solid pink ;
+	}
+	#a1,#a2,#a3,#a4{
+		display:none;
+	}
+</style>
+<body>
+<center>
+	<div id="did" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="images/04.jpg" id="a1">
+		<img src="images/03.jpg" id="a2">
+		<img src="images/05.jpg" id="a3">
+		<img src="images/06.jpg" id="a4">
+	</div>
+	<div id="mid" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="images/04.jpg" id="y1" onmouseover="show(1)">
+		<img src="images/03.jpg" id="y2" onmouseover="show(2)">
+		<img src="images/05.jpg" id="y3" onmouseover="show(3)">
+		<img src="images/06.jpg" id="y4" onmouseover="show(4)">
+	</div>
+</center>
+</body>
+</html>
+<script>
+	var a= 0;
+	var time = null;
+	function doStart(){
+		if(time == null){
+			time = setInterval(function(){
+				a++;
+				show(a);
+				if(a >=4){
+					a = 0;
+				}
+			},1000)
+		}
+	}
+	doStart();
+	function doStop(){
+		if(time != null){
+			clearInterval(time);
+		}
+		time = null;
+	}
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var bg=document.getElementById("a"+i);
+			var dg=document.getElementById("y"+i);
+			if(i==x){
+				bg.style.display="block";
+			}else{
+				bg.style.display="none";
+			}
+		}
+	}
+</script>

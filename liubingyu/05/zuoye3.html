@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>缩略图</title>
+</head>
+<style>
+	div,ul,li,img{
+		padding: 0px;
+		margin: 0px;
+	}
+	
+	#p2,#p3,#p4{display:none;}
+</style>
+<body>
+	<div>
+		<img src="images/01.jpg" id="p1">
+		<img src="images/02.jpg" id="p2">
+		<img src="images/03.jpg" id="p3">
+		<img src="images/04.jpg" id="p4">
+	</div>
+	<div>
+		<img src="images/01.jpg" width="100" onclick="show(1)">
+		<img src="images/02.jpg" width="100" onclick="show(2)">
+		<img src="images/03.jpg" width="100" onclick="show(3)">
+		<img src="images/04.jpg" width="100" onclick="show(4)">
+	</div>
+</body>
+</html>
+
+<script>
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var img=document.getElementById("p"+i);
+			if(i==x){
+				img.style.display="block";
+			}else{
+				img.style.display="none";
+			}
+		}
+	}
+</script>

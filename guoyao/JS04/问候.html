@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <title>实时问候</title>
+    </head>
+    <body>
+            <div id="showTime"></div>
+            <div id="time"></div>
+            <script>
+               
+                var st=document.getElementById("showTime");
+                var time=document.getElementById("time");
+                
+                var dt=new Date();
+                var h=dt.getHours();    //获得当前的小时
+                var gd=dt.getDate();    //获得当天是这个月中的某一天
+                var gday=dt.getDay();    //获得当天是这个周中的某一天
+                var gm=dt.getMonth()+1;   //获得月份
+                var gfy=dt.getFullYear();    //返回四位数的年份
+                var gmt=dt.getMinutes();    //获得分钟
+                var gs=dt.getSeconds();        //获得秒数
+                var gms=dt.getMilliseconds();//获得Date对象的毫秒数
+                var gt=dt.getTime();        //获得1970.1.1至今的毫秒数
+                
+                time.innerHTML=gfy+"年"+gm+"月"+gd+"日"+"星期"+gday+"&nbsp;"+h+"时"+gmt+"分"+gs+"秒"+gms+"毫秒"
+                
+                
+                if(h>6 && h<=9){
+                    st.innerHTML="早上好!";
+                }else if(h>9 && h<=12){
+                    st.innerHTML="上午好!";
+                }else if(h>12 && h<=18){
+                    st.innerHTML="下午好!";
+                }else if(h>18 && h<21){
+                    st.innnerHTML="晚安!";
+                }else if(h>21 && h<=24){
+                    st.innerHTML="夜深了，早点休息!";
+                }else if(h>0 && h<=6){
+                    st.innerHTML="凌晨了，还没睡啊!";
+                }
+            </script>
+    </body>
+</html>

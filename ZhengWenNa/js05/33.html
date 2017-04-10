@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加事件方法</title>
+</head>
+<body id="bid">
+	<button onclick="fun1(this)">主动调用</button>
+	<button id="bid1">被动调用</button>
+
+</body>
+</html>
+<script>
+	function fun1(a){
+		a.style.background="pink";
+	}
+	document.getElementById('bid1').onclick=function(){
+		this.style.background="pink";
+	}
+
+</script>

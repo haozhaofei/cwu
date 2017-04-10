@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	div{width: 200px;height: 200px;border:2px solid #ccc;}
+
+	</style>
+</head>
+<body>
+   <button onclick="fun1(1)">blue</button>
+   <button onclick="fun1(2)">red</button>
+   <button onclick="fun1(3)">green</button>
+   <div id="bid">
+   </div>
+</body>
+</html>
+<script>
+	function fun1(m){
+		var obid =document.getElementById('bid')
+		switch(m){
+			case 1 :
+			obid.style.background="blue";
+			break;
+			case 2 :
+			obid.style.background="red";
+			break;
+			case 3 :
+			obid.style.background="green";
+			break;
+		}
+	}
+
+</script>

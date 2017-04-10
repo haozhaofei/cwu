@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>缩略图</title>
+</head>
+<style>
+	#nid img{
+		width:348px;height:240px;
+	}
+	#mid img{
+		width:85px;height:50px;border:10px solid white;
+	}
+
+</style>
+<body>
+<center>
+	<div id="nid" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="images/1.jpg" id="m1">
+		<img src="images/2.jpg" id="m2">
+		<img src="images/3.jpg" id="m3">
+		<img src="images/4.jpg" id="m4">
+	</div>
+	<div id="mid" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="images/1.jpg" id="n1" onmouseover="show(1)">
+		<img src="images/2.jpg" id="n2" onmouseover="show(2)">
+		<img src="images/3.jpg" id="n3" onmouseover="show(3)">
+		<img src="images/4.jpg" id="n4" onmouseover="show(4)">
+	</div>
+</center>
+</body>
+</html>
+<script>
+	var m = 0;
+	var time = null;
+
+	function doStart(){
+		if(time == null){
+			time = setInterval(function(){
+				m++;
+				show(m);
+				if(m >=4){
+					m = 0;
+				}
+			},1000)
+		}
+	}
+	doStart();
+	function doStop(){
+		if(time != null){
+			clearInterval(time);
+		}
+		time = null;
+	}
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var imgl=document.getElementById("m"+i);
+			var img=document.getElementById("n"+i);
+			if(i==x){
+				imgl.style.display="block";
+			}else{
+				imgl.style.display="none";
+			}
+		}
+	}
+</script>

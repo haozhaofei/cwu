@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>显示中文的星期几</title>
+<style>
+#did{
+	font-size:70px;
+	font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+<div id="did"></div>
+</body>
+</html>
+<script>
+setInterval(function(){
+var date=Date();
+var w=new Array[7];
+w[0]="星期一";
+w[1]="星期二";
+w[2]="星期三";
+w[3]="星期四";
+w[4]="星期五";
+w[5]="星期六";
+w[6]="星期日";
+document.getElementById("did").innerHTML("今天是"+w[date.getDay()]+"!");
+},1000);
+
+
+</script>

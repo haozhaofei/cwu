@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片浏览</title>
+	<style>
+	body{
+		width:100%;
+		padding:0;
+		margin-top:30px;
+		margin-left: 600px;
+	}
+	div{
+		padding: 0px;
+		margin: 0px;
+	}
+
+	#m1,#m2,#m3,#m4{
+		display:none;
+	}
+	#two img{
+		margin-top:10px;
+		width:42px;
+		height:42px;
+	}
+	
+	</style>
+</head>
+<body>
+	<div id="one">
+		<img src="images/18.jpg" id="m1">
+		<img src="images/20.jpg" id="m2">
+		<img src="images/33.jpg" id="m3">
+		<img src="images/36.jpg" id="m4">
+		<img src="images/37.jpg" id="m5">
+	</div>
+	<div id="two">
+		<img src="images/18.jpg" onmouseover="stop(1)" onmouseout="start()">
+		<img src="images/20.jpg" onmouseover="stop(2)" onmouseout="start()">
+		<img src="images/33.jpg" onmouseover="stop(3)" onmouseout="start()">
+		<img src="images/36.jpg" onmouseover="stop(4)" onmouseout="start()">
+		<img src="images/37.jpg" onmouseover="stop(5)" onmouseout="start()">
+	</div>
+</body>
+</html>
+<script>
+	function show(x){
+		for(var i=1;i<6;i++){
+			if(x==i){
+				document.getElementById('m'+i).style.display="block";
+			}else{
+				document.getElementById('m'+i).style.display="none";
+			}
+		}
+	}
+	var m=1;
+	var time=null;
+	function start(){
+		if(time==null){
+			time=setInterval(function(){
+				m++;
+				show(m);
+				if(m>=5){
+					m=1
+				}
+			},1000)
+		}
+	}
+	start();
+	//鼠标移动到上方，大图停止移动，点击某小图则显示大图
+	function stop(m){
+		if(time!=null){
+			show(m);
+			clearInterval(time);
+		}
+		time=null;
+	}
+</script>
