@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击一个按钮在浏览器出一张背景图</title>
+</head>
+<style>
+	div{
+		width:640px;
+		height:1137px;
+		margin:auto;
+		background-repeat:no-repeat; 
+       	display: none;
+      }
+</style>
+<body>
+   <div id="did">
+  <img src="images/02.jpg" width="640" height="1137" id="m1" alt="">
+   </div>
+   <button id="mid">点我有惊喜</button>
+   
+</body>
+<script type="text/javascript">
+	document.getElementById("mid").onclick=function(){
+        document.getElementById("did").style.display="block";
+        this.style.display="none";
+	}
+</script>
