@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易编辑器</title>
+</head>
+<style>
+#editor{height:500px;weight:50px; border:1px solid black;}
+</style>
+<body>
+	<select id="size">
+         <option value="1">Small</option>
+         <option value="2">Normal</option>
+         <option value="3">Big</option>
+    </select>
+    <input type="button" value="加粗"   id="cu">
+    <input type="button" value="倾斜"   id="xie">
+    <input type="button" value="下划线" id="low">
+
+    <div id="editor" class="editable"></div>
+
+</body>
+</html>
+<script>
+	window.onload=function(){
+		document.getElementById('editor').contentEditable=true;
+		document.getElementById('size').onchange=function(){
+			var s=parseInt(document.getElementById('size').value);
+			document.execCommand('FontSize',false,s);
+		}
+	    document.getElementById('xie').onclick=function(){
+			  document.getElementById("editor").style.fontStyle = "italic";
+		}
+    	document.getElementById('cu').onclick=function(){ 
+    	      document.execCommand('bold');
+    }
+    	document.getElementById('low').onclick=function(){
+			document.execCommand('Underline');
+    }
+}
+</script>
