@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Js操作事件</title>
+</head>
+<body>
+	<button onclick="fun1()">按钮1</button>
+	<button id="did">按钮2</button>
+	<button id="bid">按钮3</button>
+</body>
+</html>
+<script>
+	function fun1(){
+		alert("今天是周三")；
+	}
+	document.getElementById("did").onclick=function(){
+		alert("今天我心情还不错")；
+	}
+	var bid=document.getElementById("bid");
+	    bid.addEventListener('click',function(){
+	    	alert(" I love you");
+	    });
+</script>

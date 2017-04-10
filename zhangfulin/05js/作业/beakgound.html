@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<button id="change">点我换背景</button>
+</body>
+</html>
+<script>
+	var img=['url(images/01.jpg)','url(images/02.jpg)','url(images/03.jpg)','url(images/04.jpg)','url(images/11.jpg)','url(images/22.jpg)','url(images/33.jpg)','url(images/44.jpg)']
+	var body=document.getElementsByTagName("body");
+	document.getElementById('change').onclick=function(){
+		var ran=Math.round(Math.random()*10)%8
+		body[0].style.backgroundImage=img[ran];
+	}
+</script>
