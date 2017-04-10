@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>主调被调的区别</title>
+<style>
+	button{
+		width: 200px;
+		height:50px;
+	}
+</style>
+	<script>
+	window.onload = function(){
+		function fun(a){
+			a.style.color = 'yellow';
+			//没有成功
+		}
+
+		document.getElementById('bid').onclick = function(){
+			this.style.color = "green";
+		}
+	}
+</script>
+</head>
+
+
+<body>
+	<button onclick="fun1(this)">主调</button>
+	<button id="bid">被调</button>
+</body>
+</html>
+
+
+
+<!--
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>主调被调的区别</title>
+<style>
+	button{
+		width: 200px;
+		height:50px;
+	}
+</style>
+	<script>
+	window.onload = function(){
+		function fun(a){
+			a.style.color = 'yellow';
+			//没有成功
+		}
+
+		document.getElementById('bid').onclick = function(){
+			this.style.color = "green";
+		}
+	}
+</script>
+</head>
+
+<body>
+	<button onclick="fun1(this)">主调</button>
+	<button id="bid">被调</button>
+</body>
+</html>
+-->
+
+
+<!--
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>主调被调的区别</title>
+<style>
+	button{
+		width: 200px;
+		height:50px;
+	}
+</style>
+	<script>
+	window.onload = function(){
+		function fun(a){
+			a.style.color = 'yellow';
+		}
+
+		document.getElementById('bid').onclick = function(){
+			this.style.color = "green";
+		}
+	}
+</script>
+</head>
+
+
+<body>
+	<button onclick="fun1(this)">主调</button>
+	<button id="bid">被调</button>
+</body>
+</html>
+-->
