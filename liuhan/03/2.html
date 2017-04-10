@@ -1,0 +1,86 @@
+<!--    Q1:????单引号与处双引号的区别  -->
+
+<!--  遍历-->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>遍历一</title>
+</head>
+<body>
+	<ul>
+		<li>一</li>
+		<li>二</li>
+		<li>叁</li>
+		<li>肆</li>
+	</ul>
+</body>
+</html>
+<script>
+	//var ul 返回的是一个集合
+
+	//for in 可以遍历对象中的所有属性或数组中的所有元素
+	/*var ul = document.getElementsByTagName('li');
+	for(k in ul){
+		documenet.write(k+"<br>");
+	}*/
+
+	//for 
+	var ul = document.getElementsByTagName('li');
+	for(var i=0; i<ul.length; i++){
+		document.write(ul[i].innerHTML+"<br>");  // ！HTML大写
+	}   
+	//innerHTML 是指将一段HTML代码或文本插入到一个HTML元素，新插入的值会覆盖当前值
+</script>
+
+
+<!--  第二遍  遍历
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>遍历二</title>
+</head>
+<body>
+	<ul>
+		<li>一</li>
+		<li>二</li>
+		<li>三</li>
+		<li>四</li>
+	</ul>
+</body>
+</html>
+
+<script>
+	var ul = document.getElementsByTagName('li');
+	for(var i=0; i<ul.length; i++){
+		document.write(ul[i].innerHTML+"<br>");
+	}   
+	
+</script>
+-->
+
+<!-- 第三遍  遍历
+
+-->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>遍历三</title>
+</head>
+<body>
+	<ul>
+		<li>四</li>
+		<li>三</li>
+		<li>二</li>
+		<li>一</li>
+	</ul>
+</body>
+</html>
+<script>
+	var ul = document.getElementsByTagName('li');
+	for(var i=0; i<ul.length; i++){
+		document.write(ul[i].innerHTML+"<br>");
+	}
+</script>
