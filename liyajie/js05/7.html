@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>seven</title>
+	<style>
+	ul,li{padding:0px;margin:0px;}
+	ul{width:80px;border:1px solid green;
+		text-align: center;list-style-type: none;position:relative;display:none;}
+	ul li{
+		height:30px;margin-top:5px;background:green;
+		width:80px;line-height:30px;font-size:15px;
+	}
+	li:hover{background:teal;}
+	</style>
+</head>
+<body>
+	<ul id="uid">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+</body>
+</html>
+<script>
+	window.document.oncontextmenu=function(ent){
+		var event=ent || window.event;
+		var x=event.clientX;
+		var y=event.clientY;
+		var uid=document.getElementById("uid");
+		uid.style.top=y+"px";
+		uid.style.left=x+"px";
+		uid.style.display="block";
+		return false;
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>seven-2</title>
+	<style>
+	ul,li{padding: 0px;margin:0px;}
+	ul{width:100px;border:1px solid green;text-align: center;list-style-type: none;position: relative;display:none;
+
+	}
+	ul li{height: 30px;margin-top: 10px;background: green; width: 100px;line-height: 30px;font-size: 14px;
+	}
+	li:hover{
+		background: blue;
+	}
+	</style>
+</head>
+<body>
+	<ul id="did">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+</body>
+</html>
+<script>
+	window.document.oncontextmenu=function(ent){
+		var event= ent || window.event;
+		var x=event.clientX;
+		var y=event.clientY;
+		var q=document.getElementById("did");
+		q.style.top=y+"px";
+		q.style.left=x+"px";
+		q.style.display="block";
+		return false;
+
+	}
+</script>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>seven-3</title>
+	<style>
+	ul,li{padding:0px;margin:0px;}
+	ul{width:80px;border:1px solid azure;
+		text-align: center;list-style-type: none;position:relative;display:none;}
+	ul li{
+		height:30px;margin-top:5px;background:azure;
+		width:80px;line-height:30px;font-size:15px;
+	}
+	li:hover{background:teal;}
+	</style>
+</head>
+<body>
+	<ul id="uid">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+</body>
+</html>
+<script>
+	window.document.oncontextmenu=function(ent){
+		var event=ent || window.event;
+		var x=event.clientX;
+		var y=event.clientY;
+		var uid=document.getElementById("uid");
+		uid.style.top=y+"px";
+		uid.style.left=x+"px";
+		uid.style.display="block";
+		return false;
+	}
+</script>
