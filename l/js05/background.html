@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>刷新换背景</title>
+</head>
+<body>
+	<button id="did">刷新</button>
+</body>
+</html>
+<script>
+	var img=['url(img/01.jpg)','url(img/02.jpg)','url(img/03.jpg)'];
+	var body=document.getElementsByTagName("body");
+	document.getElementById('did').onclick=function()
+	{
+		var change=Math.round(Math.random()*10)%3; //三张图片随机换
+		body[0].style.backgroundImage=img[change]; //数组下标从0开始
+	}
+
+	
+</script>
