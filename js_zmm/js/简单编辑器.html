@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<center>
+	<p id="pid">我是一行神奇的字！</p>
+	<button id="m1" onclick="fun(1)">加粗</button>
+	<button id="m2" onclick="fun(2)">下划线</button>
+	<button id="m3" onclick="fun(3)">倾斜</button>
+	<button id="m4" onclick="fun(4)">变大</button>
+	<button id="m5" onclick="fun(5)">变小</button>
+	</center>
+</body>
+</html>
+<script>
+	var pid=document.getElementById("pid");
+	var size=10;
+	function big(){
+		size=size+10;
+		return size;
+	}
+	function small(){
+		size=size-10;
+		return size;
+	}
+	function fun(x){
+		switch(x){
+			case 1:pid.style.fontWeight="bold";break;
+			case 2:pid.style.textDecoration = "underline";break;
+			case 3:break;
+			case 4:pid.style.fontSize=big()+"px";break;
+			case 5:pid.style.fontSize=small()+"px";break;
+		}
+	}
+</script>
