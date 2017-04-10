@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Window方法测试--关闭页面前提示</title>
+</head>
+<body>
+	<p>window.onbeforeunload 方法的测试：在关闭页面前弹出提示
+</body>
+</html>
+<script>
+	 window.onbeforeunload = function(){
+	 	return "确定要关闭此页面？？？？？";
+	 	/*火狐--关闭时没有提示直接关闭，
+	 	但刷新页面时出现弹框，内容：“此页面像询问您是否要离开 - 您输入的数据可能不会被保存。”
+	 	360--关闭页面时出现提示"确定要关闭此页面？？？？？离开此页/留在此页"
+		刷新页面时出现是否要重新加载此页面？
+	 	*/
+	}
+</script>
+
+<!--
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	window.onbeforeunload测试
+</body>
+</html>
+<script>
+	window.onbeforeunload = function(){
+		return "是否要离开？";
+	}
+</script>
+-->
+<!--
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	window.onbeforeunload测试
+</body>
+</html>
+<script>
+	window.onbeforeunload = function(){
+		return "是否要离开？";
+	}
+</script>
+
+-->

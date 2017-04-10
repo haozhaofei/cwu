@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>刷新更换页面背景颜色</title>
+</head>
+<body id="did">
+	
+</body>
+</html>
+<script>
+	var arr  = ['blue','green','yellow','pink','orange','gray','cyan'];
+	var index = Math.ceil(Math.random()*10000)%7;
+	var back = document.getElementById('did');
+	back.style.background = arr[index];
+</script>
+
+
+
+<!--
+<script>
+	var arr = ['yellow','pink','green','blue'];  
+	var index = Math.ceil(Math.random()*1000)%4;
+	var back = document.getElementById("did");
+	back.style.background = arr[index];
+</script>
+
+<script>
+	var arr=['yellow','green','blue']; //定义三个颜色
+	var index = Math.ceil(Math.random()*1000)%3;  //index是0~2的随机数
+	var back = document.getElementById("did"); //获取页面
+	back.style.background = arr[index]; 
+</script>
+
+-->

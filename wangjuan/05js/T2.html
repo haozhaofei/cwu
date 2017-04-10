@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击一个按钮在浏览器出一张背景图</title>
+</head>
+<body>
+	<button id="onclick">点击</button>
+</body>
+</html>
+<script>
+	var img=['url(images/1.jpg)','url(images/2.jpg)','url(images/3.jpg)','url(images/4.jpg)'];
+	var body=document.getElementsByTagName('body');
+	document.getElementById('onclick').onclick=function() {
+		// body...
+		var a=Math.round(Math.random()*10)%4;
+		body[0].style.backgroundImage=img[a];
+	}
+
+
+</script>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>缩略图</title>
+</head>
+<style>
+    body{
+
+    	background-color:pink;
+    }
+
+	div,img{
+		padding:0px;
+		margin:0px;
+	}
+	#did{
+		left:20px;
+		width: 683px;
+		border: 7px solid #CFCFCF;
+	} 
+	#p2,#p3,#p4,#p5,#p6,#p7{
+		display: none;
+	}
+</style>
+<center>
+<body>
+	<div id="did" >
+		<img src="image/1.jpg" width="683px" height="384px" id="p1" alt="">
+		<img src="image/2.jpg" width="683px" height="384px" id="p2" alt="">
+		<img src="image/3.jpg" width="683px" height="384px" id="p3" alt="">
+		<img src="image/4.jpg" width="683px" height="384px" id="p4" alt="">
+		<img src="image/5.jpg" width="683px" height="384px" id="p5" alt="">
+		<img src="image/6.jpg" width="683px" height="384px" id="p6" alt="">
+		<img src="image/7.jpg" width="683px" height="384px" id="p7" alt="">
+	</div>
+	<div>
+		<img src="image/1.jpg" width="100px" height="50px" onclick="show(1)" alt="">
+		<img src="image/2.jpg" width="100px" height="50px" onclick="show(2)" alt="">
+		<img src="image/3.jpg" width="100px" height="50px" onclick="show(3)" alt="">
+		<img src="image/4.jpg" width="100px" height="50px" onclick="show(4)" alt="">
+		<img src="image/5.jpg" width="100px" height="50px" onclick="show(5)" alt="">
+		<img src="image/6.jpg" width="100px" height="50px" onclick="show(6)" alt="">
+		<img src="image/7.jpg" width="100px" height="50px" onclick="show(7)" alt="">
+	</div></center>
+</body>
+</html>
+<script>
+	function show(n)
+	{
+		for(i=1;i<8;i++)
+		{
+			var img=document.getElementById('p'+i);
+			if(i == n) img.style.display="block";
+			else img.style.display="none";
+		}
+	}
+</script> 

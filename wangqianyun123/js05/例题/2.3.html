@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>li 2 three</title>
+</head>
+<body>
+	<button onclick="fun()">按钮1</button>	
+	<button id="nid">按钮2</button>	
+	<button id="mid">按钮3</button>	
+	
+</body>
+</html>
+<script>
+	//js事件操作
+	//主动调用
+	function fun(){
+		alert("1111111111");
+	}
+	//被动调用
+	document.getElementById('nid').onclick=function(){
+		alert("22222222222");
+	}
+	var mid=document.getElementById('mid');
+	mid.addEventListener('click',function(){
+		alert("333333333333");
+	})
+
+</script>
