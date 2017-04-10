@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="fun1()">按钮1</button>
+	<button id="bid">按钮2</button>
+    <button id="did">按钮3</button>
+</body>
+</html>
+<script>
+	function fun1(){
+		alert("Guten Tag!");
+	}
+
+	document.getElementById('bid').onclick=function(){
+		alert("Wie heissen Sie?");
+	}
+
+	var did=document.getElementById('did');
+	did.addEventListener('click',function(){
+		alert("Mein Name ist Liting!");
+	});
+</script>
