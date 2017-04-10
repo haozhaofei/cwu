@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易编辑器</title>
+</head>
+<style>
+textarea{
+		width:700px;
+		height:500px;
+		border:2px solid green;
+		margin-top:20px;
+		margin-bottom: 20px;
+	}
+</style>
+<body>
+   <center>
+     <div><textarea id="mid"></textarea></div>
+   	<button id="b1">加粗</button>
+    <button id="b2">下划线</button>
+    <button id="b3">倾斜</button>
+    <button id="b4">字体变大</button>
+    <button id="b5">字体变小</button>
+  
+   </center>
+</body>
+<script type="text/javascript">
+    var i=0;
+    document.getElementById("b1").onclick=function(){
+       var a=["bold","normal"];
+       document.getElementById("mid").style.fontWeight=a[i%4];
+       i++;
+    }
+    
+    var j=0;
+    document.getElementById("b2").onclick=function(){
+    	var b=["underline","none"];
+    	document.getElementById("mid").style.textDecoration=b[j%4];
+    	j++;
+    }
+    var t=0;
+    document.getElementById("b3").onclick=function(){
+    	var c=["oblique","normal"];
+    	document.getElementById("mid").style.fontStyle=c[t%4];
+    	t++;
+    } 
+    
+    var size=10;
+    document.getElementById("b4").onclick=function(){
+    	size+=20;
+    	document.getElementById("mid").style.fontSize=size+"px";
+    } 
+     document.getElementById("b5").onclick=function(){
+    	size-=10;
+    	document.getElementById("mid").style.fontSize=size+"px";
+    } 
+</script>
