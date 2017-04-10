@@ -1,0 +1,23 @@
+
+<!doctype html>
+<html lang="en">
+<script>
+//预先加载
+	window.onload=function(){
+			function fun1(a){
+			a.style.background="pink";
+		}//由于预先加载，document还没有传值过来
+		document.getElementById('bid1').onclick=function(){
+			this.style.background="pink";
+		}
+	}
+</script>
+<head>
+	<meta charset="UTF-8">
+	<title>添加事件方法</title>
+</head>
+<body id="bid">
+	<button onclick="fun1(this)">主动调用</button>
+	<button id="bid1">被动调用</button>
+</body>
+</html>
