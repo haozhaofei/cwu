@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>eight</title>
+	<style>
+	div,ul,li,img{padding: 0px;margin:0px;}
+	#did{
+		width: 384px;
+	}
+	#n2,#n3,#n4{display: none;}
+	</style>
+</head>
+<body>
+	<div id="did" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="image/01.jpg" width="384"; height="240" id="n1" alt="">
+		<img src="image/02.jpg" width="384"; height="240" id="n2" alt="">
+		<img src="image/03.jpg" width="384"; height="240" id="n3" alt="">
+		<img src="image/04.jpg" width="384"; height="240" id="n4" alt="">
+	</div>
+</body>
+</html>
+<script>
+	var n=0;
+	var time=null;
+	function doStart(){
+		if(time==null){
+			time=setInterval(function(){
+				n++;
+				show(n);
+				if(n>=4)
+				{
+					n=0;
+				}
+			},1000)
+		}
+	}
+	doStart();
+
+	function doStop(){
+		if(time!=null){
+			clearInterval(time);
+		}
+		time=null;
+	}
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var img=document.getElementById("n"+i);
+			if(i==x){
+				img.style.display="block";
+			}else{
+				img.style.display="none"
+			}
+		}
+	}
+
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>eight-2</title>
+	<style>
+	div,img{padding: 0px;margin:0px;}
+	#did{width:384px;}
+	#m2,#m3,#m4{display: none}
+	</style>
+</head>
+<body>
+	<div id="did" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="image/01.jpg" width="384"height"240" id="m1" >
+		<img src="image/02.jpg" width="384"height"240" id="m2" >
+		<img src="image/03.jpg" width="384"height"240" id="m3" >
+		<img src="image/04.jpg" width="384"height"240" id="m4" >
+	</div>
+</body>
+</html>
+<script>
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var pic=document.getElementById("m"+i);
+			if(i==x){
+				pic.style.display="block";
+			}else{
+				pic.style.display="none";
+			}
+
+		}
+	}
+	var m=0;
+	var time=null;
+	function doStart(){
+		if(time==null){
+			time=setInterval(function(){
+				m++;
+				show(m);
+				if(m>=4){
+					m=0;
+				}
+
+			},1000)
+		}
+	}
+	doStart();
+	function doStop(){
+		if(time!=null){
+			clearInterval(time);
+		}
+		time=null;
+	}
+
+</script>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>eight-3</title>
+</head>
+<style>
+	div,img{padding: 0px;margin: 0px;}
+	#did{width:384px;}
+	#m2,#m3,#m4{
+		display:none;
+	}
+</style>
+<body>
+	<div id="did" onmouseover="doStop()" onmouseout="doStart()" >
+		<img src="image/01.jpg" width="384" height="240" id="m1">
+		<img src="image/02.jpg" width="384" height="240" id="m2">
+		<img src="image/03.jpg" width="384" height="240" id="m3">
+		<img src="image/04.jpg" width="384" height="240" id="m4">
+		
+	</div>
+</body>
+</html>
+<script>
+	function show(x){
+		for(var i=1;i<=4;i++){
+		var pict=document.getElementById("m"+i);
+		if(i==x){
+			pict.style.display="block";
+		}else{
+			pict.style.display="none";
+		}
+	}
+	}
+	var m=0;
+	var time=null;
+	function doStart(){
+		if(time==null){
+			time=setInterval(function(){
+				m++;
+				show(m);
+				if(m>=4){
+					m=0;
+				}
+			},1000)
+			}
+		}
+		doStart();
+		function doStop(){
+			if(time!=null){
+				clearInterval(time);
+			}
+			time=null;
+		}
+	}
+</script>
