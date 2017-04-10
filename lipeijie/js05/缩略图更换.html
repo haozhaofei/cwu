@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>缩略图更换</title>
+<style>
+	#one img {
+		width: 720px;
+		padding:3px;
+
+	}
+	#two img{
+		width:170px;
+		height: 150px;
+		padding:3px;
+	}
+	#p2,#p3,#p4{
+		display: none;
+	}
+</style>
+<body>
+	<div id="did">
+		<img src="img/2.jpg" width="720px" height="400px" id="p1" alt="">
+		<img src="img/08.jpg" width="720px" height="400px" id="p2" alt="">
+		<img src="img/09.jpg" width="720px" height="400px" id="p3" alt="">
+		<img src="img/10.jpg" width="720px" height="400px" id="p4" alt="">
+	</div>
+	<div>
+		<img src="img/2.jpg" width="171px" height="96px" onclick="show(1)" alt="">
+		<img src="img/08.jpg" width="171px" height="96px" onclick="show(2)" alt="">
+		<img src="img/09.jpg" width="171px" height="96px" onclick="show(3)" alt="">
+		<img src="img/10.jpg" width="171px" height="96px" onclick="show(4)" alt="">
+	</div>
+</body>
+</html>
+<script>
+
+	function show(n)
+	{
+		for(i=1;i<5;i++)
+		{
+			var img=document.getElementById('p'+i);
+			if(i == n) img.style.display="block";
+			else img.style.display="none";
+		}
+
+	}
+
+</script> 
