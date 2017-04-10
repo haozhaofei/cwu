@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<body>
+		<div id="did">
+			<img id="mid"src="" id="m1" alt="">
+		</div>
+			<img src="" id="m1" alt="">
+			<img src="" id="m1" alt="">
+			<img src="" id="m1" alt="">
+			<img src="" id="m1" alt="">
+	</body>
+</body>
+</html>
+<script>
+	var list =document.getElementById('list').getElementsByTagName('img');
+	for(var i=0;i<list.length;i++){
+		list[i].onmouseover=function(){
+			document.getElementById("mid").src=this.src;
+		}
+	}
+</script>
