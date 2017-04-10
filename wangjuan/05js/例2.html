@@ -10,19 +10,21 @@
 	<button id="mid">按钮3</button>
 </body>
 </html>
+
+
 <script>
-	//主动调用(代码可读性比较好)
+
+	//主动调用
 	function fun1(){
-		alert('Todat is Tuesday');
+		alert("I am beautiful!");
 	}
-	//被动调用（代码可以分离，适合比较大的项目）
-	document.getElementById('nid').onclick=function(){
-		alert("被动调用");
+	//被动调用
+	document.getElementById('nid').onclick = function(){
+		alert("I am very beautiful!");
 	}
 
 	var mid = document.getElementById('mid');
-	//加事件
-	mid.addEventListener('click',function(){
-		alert("被动调用2")
-	})
+		mid.addEventListener('click',function(){
+			alert('I am very very beautiful!');
+		});
 </script>
