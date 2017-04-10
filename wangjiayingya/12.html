@@ -2,41 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>编辑器</title>
+	<title>Document</title>
 </head>
-<style>
-	#did{
-		width:400px;height:200px;border:10px solid black
-	}
-</style>
 <body>
-    <center>
-	<textarea id='did'></textarea><br>
-	<button>加粗</button>
-	<button>下划线</button>
-	<button>倾斜</button>
-	<button>字体变大</button>
-	<button>字体变小</button><br>
-	</center>
+	
+<center>
+<div align="center" style="height:360; width:400; background-color:menu; border:outset menu">
+<br>
+<br>
+<div contenteditable align="left" style="height:250; width:350; background-color:white; padding:2;">
+</div>
+<input type="button" value="粗体"  onclick='document.execCommand("Bold");'>
+<input type="button" value="斜体" onclick='document.execCommand("Italic");'>
+<input type="button" value="下划线" onclick='document.execCommand("Underline");'>
+<input type=button value="字体变大" onclick=document.execCommand('FontSize',false,9)>
+<input type=button value="字体变小" onclick=document.execCommand('FontSize',false,2)>
+<br>
+</div>
+</center>
 </body>
 </html>
-<script>
-	var text=document.getElementById('text');
-	var button=document.getElementsByTagName('button');
-	
-    button[0].onclick=function () {
-		text.style.fontWeight="bold";
-	}
-	button[1].onclick=function () {
-		text.style.textDecoration="underline";
-	}
-	button[2].onclick=function () {
-		text.style.fontStyle="oblique";
-	}
-	button[3].onclick=function () {
-		text.style.fontSize="larger";
-	}
-	button[4].onclick=function () {
-		text.style.fontSize="smaller";
-	}
-</script>
