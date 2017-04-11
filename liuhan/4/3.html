@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>主调和被调</title>
+</head>
+<style>
+	button{
+		width: 200px;
+		height:50px;
+	}
+</style>
+<body>
+
+	<button onclick="fun1(this)">主动调用</button>
+	<button id="bid">被动调用</button>
+
+</body>
+</html>
+<script>
+	function fun1(c){
+		c.style.color = 'cyan';
+	}
+	document.getElementById('bid').onclick = function(){
+		alert("hello!");
+		this.style.color = 'gray';
+	}
+
+</script>
+<!--
+<script>
+	function fun1(b){
+		b.style.color = 'pink';
+	}
+
+	document.getElementById('bid').onclick = function(){
+		this.style.color = 'blue';
+	}
+</script>
+-->
+<!--
+<script>
+	//主动调用 不能直接获取，需要传参
+	function fun1(a){
+		a.style.color = "green";
+	}
+	//被动调用可以直接使用this
+	document.getElementById("bid").onclick = function(){
+		this.style.color = "yellow";
+	}
+</script>
+-->

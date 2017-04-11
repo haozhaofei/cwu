@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>编辑器</title>
+	<style>
+	body{
+		font-size: 20px;
+		
+	}
+	#edit{
+		border:1px solid black;
+		height:300px;
+		width:300px;
+		padding:10px;
+		margin-top: 10px;
+	}
+	#did{
+		margin-top: 20px;
+		width:300px;
+		border:1px solid black;
+		padding:10px;
+	}
+</style>
+
+</head>
+<body>
+	<div id="did">
+	<span>字号：</span>
+	<select id="size">
+		<option value="1">小</option>
+		<option value="5">中</option>
+		<option value="10">大</option>
+	</select>
+		<input type="button" value="B" id="bold">
+		<input type="button" value="I" id="italic">
+		<input type="button" value="U" id="underline">
+	</div>
+	<div id="edit"></div>
+	
+</body>
+</html>
+<script>
+	window.onload=function(){
+		document.getElementById('edit').contentEditable=true;
+		document.getElementById('size').onchange=function(){
+			var s=parseInt(document.getElementById('size').value);
+			document.getElementById('edit').focus();
+			document.execCommand('FontSize',false,s);
+		}
+		document.getElementById('bold').onclick=function(){
+			document.getElementById('edit').focus();
+			document.execCommand('Bold');
+		}
+		document.getElementById('italic').onclick=function(){
+			document.getElementById('edit').focus();
+			document.execCommand('Italic');
+		}
+		document.getElementById('underline').onclick=function(){
+			document.getElementById('edit').focus();
+			document.execCommand('Underline');
+		}
+	}
+</script>

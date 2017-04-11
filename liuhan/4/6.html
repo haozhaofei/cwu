@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>单击/双击列表变色</title>
+</head>
+<style>	
+	ul,li{padding:0;margin:0;}  /*并列*/
+	ul li{height:60px;margin-top:30px;background:red;}/*ul下的li,li最初的颜色*/
+	li:hover{background:orange;}/*鼠标移上去时li的颜色*/
+</style>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>
+<script>
+	var list = document.getElementsByTagName('li');
+	for(var i=0; i<list.length; i++){
+		list[i].ondblclick = function(){//双击
+			this.style.background = 'yellow';
+		} //li被双击后的颜色
+	}
+</script>
+
+<!--<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	ul,li{padding:0;margin:0;}
+	ul li{height:40px;margin-top: 20px;background:green;}
+	li:hover{background:orange;}
+</style>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>
+<script>
+	var list = document.getElementsByTagName('li');
+	for (var i=0; i<list.length; i++){
+		list[i].onclick = function(){//单击
+			this.style.background = "yellow";
+		}
+	}
+</script>
+-->
+
+<!--
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	ul,li{padding:0;margin:0;}
+	ul li{height:50px;margin-top:30px;background:blue;}
+	li:hover{background:#000;}
+</style>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>
+<script>
+	var list = document.getElementsByTagName('li');
+	for(var i=0; i<list.length; i++){
+		list[i].ondblclick = function(){
+			this.style.background = 'gray';
+		}
+	}
+	
+</script>
+-->

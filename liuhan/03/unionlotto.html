@@ -1,0 +1,94 @@
+<!doctype html>         <!--3. 做一个双色球彩票抽奖;  红:0-31  蓝:0-16-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UnionLotto-双色球</title>
+	<style >
+		#r1{
+			width:90px;
+			height:90px;
+			border:2px solid red;
+			border-radius: 50%;
+			text-align: center;
+			background: red;
+		}
+		#r2{
+			width:90px;
+			height:90px;
+			border:2px solid red;
+			border-radius: 50%;
+			text-align: center;
+			background: red;
+		}
+		#r3{
+			width:90px;
+			height:90px;
+			border:2px solid red;
+			border-radius: 50%;
+			text-align: center;
+			background: red;
+		}
+		#r4{
+			width:90px;
+			height:90px;
+			border:2px solid red;
+			background: red;
+			border-radius: 50%;
+			text-align: center;
+		}
+		#r5{
+			width:90px;
+			height:90px;
+			border:2px solid red;
+			border-radius: 50%;
+			text-align: center;
+			background: red;
+		}
+		#r6{
+			width:90px;
+			height:90px;
+			border:2px solid red;
+			border-radius: 50%;
+			text-align: center;
+			background: red;
+		}
+		#blue{
+			width:90px;
+			height:90px;
+			border:2px solid blue;
+			border-radius: 50%;
+			text-align: center;
+			background: blue;
+		}
+	</style>
+	
+</head>
+<body><font size="9">
+<center>
+<p>双色球
+	<button onclick="fun()">开奖</button>
+	<div id ="r1"></div>
+	<div id ="r2"></div>
+	<div id ="r3"></div>
+	<div id ="r4"></div>
+	<div id ="r5"></div>
+	<div id ="r6"></div>
+	<div id ="blue"></div>
+	</font>
+</center>
+</body>
+</html>
+<script>
+
+	function fun () {
+		
+		r1.innerHTML = Math.round(Math.random()*100009)%32;
+		r2.innerHTML = Math.round(Math.random()*100009)%32;
+		r3.innerHTML = Math.round(Math.random()*100009)%32;
+		r4.innerHTML = Math.round(Math.random()*100009)%32;
+		r5.innerHTML = Math.round(Math.random()*100009)%32;
+		r6.innerHTML = Math.round(Math.random()*100009)%32;
+		blue.innerHTML = Math.round(Math.random()*100009)%17;
+	
+	}
+</script>

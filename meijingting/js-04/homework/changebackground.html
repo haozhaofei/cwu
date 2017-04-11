@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>changebackground</title>
+</head>
+
+<style>
+	body{
+		background-image: url(images/3.jpg);		
+	}
+</style>
+
+<body>
+
+	<button id="bid">换背景</button>
+
+</body>
+</html>
+
+<script>
+	var imgArr =['url(images/4.jpg)','url(images/5.jpg)','url(images/案例2.jpg)','url(images/案例3.jpg'];
+	var body = document.getElementsByTagName("body");
+
+	document.getElementById("bid").onclick = function(){
+		var index = Math.round(Math.random()*1000)%4;
+		body[0].style.backgroundImage = imgArr[index];
+	}
+</script>

@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>编辑器</title>
+
+</head>
+
+<body> 
+    <textarea id='text' rows="10" cols="30"></textarea>
+    <br> 
+    <br>
+    <button onclick="fun1(1)">下划线</button>
+	<button onclick="fun1(2)">加粗</button>
+    <button onclick="fun1(3)">倾斜</button>
+    <button onclick="fun1(4)">字体变大</button>
+    <button onclick="fun1(5)">字体变小</button>
+
+
+</body>
+
+</html>
+
+<script>
+    
+	var text=document.getElementById('text');
+
+	var button=document.getElementsByTagName('button');
+
+	function fun1(1) {
+
+		text.style.fontWeight="bold";
+
+	}
+
+	function fun1(2) {
+
+		text.style.textDecoration="underline";
+
+	}
+
+	function fun1(3) {
+
+		text.style.fontStyle="oblique";
+
+	}
+
+	function fun1(4) {
+
+		text.style.fontSize="larger";
+
+	}
+
+	function fun1(5) {
+
+		text.style.fontSize="smaller";
+
+	}
+
+</script>

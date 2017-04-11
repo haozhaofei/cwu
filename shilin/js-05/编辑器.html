@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易编辑器</title>
+</head>
+<style>
+	div{
+		width:10px;
+		height:10px;
+		border:1px solid red;
+		background-color: red;
+		position: relative;
+	}
+</style>
+<body>
+	<div></div>
+</body>
+</html>
+<script>
+	var div=document.getElementsByTagName('div');
+	document.onkeypress=function(event){
+		var e = event || window.event ;
+		var x=div[0].clientX;
+		var y=div[0].clientY;
+		if(e&& e.keyCode==37)
+		{
+			x-=20;
+			div[0].style.left=x+"px";
+			alert(x);
+		}
+		if(e&& e.keyCode==38){
+			y-=20;
+			div[0].style.top=y+"px";
+			alert(y);
+		}
+		if(e&& e.keyCode==39){
+			x+=20;
+			div[0].style.left=x+"px";
+			alert(x);
+		}
+		if(e&& e.keyCode==40){
+			y+=20;
+			div[0].style.left=y+"px";
+			alert(y);
+		}
+	};
+</script>

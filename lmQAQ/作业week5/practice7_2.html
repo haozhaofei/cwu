@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>右击菜单</title>
+</head>
+<style type="text/css">
+ul,li{padding: 0px;margin:0px;}
+ul{width: 100px;border:1px solid #ccc;text-align: center;list-style-type: none;position: relative;display: none;}
+ul li{height: 30px;margin-top: 10px;background: #ccc; width: 100px;line-height: 30px;font-size: 14px;}
+	li:hover{background: #fc0;}
+</style>
+<body>
+	<ul id="mid">
+		<li>cici</li>
+		<li>coco</li>
+		<li>nana</li>
+		<li>lily</li>
+		<li>joy</li>
+	</ul>
+</body>
+</html>
+<script>
+	window.document.oncontextmenu=function(ent){
+		var event=ent||window.event;
+		var x=event.clientX;
+		var y=event.clientY;
+		var uid=document.getElementById('mid');
+		uid.style.top=y+"px";
+		uid.style.left=x+"px";
+		uid.style.display="block";
+		uid.style.top=x+"px";
+		return false;
+	}
+</script>

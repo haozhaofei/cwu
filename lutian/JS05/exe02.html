@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <title>编辑器</title>
+</head>
+
+<body>
+<div style="margin:0 auto; border:1px gray solid; width:350px; height:30px; margin-bottom:30px; margin-top:30px; size:25px" align="center">
+	<button id="btn1" onclick="f1()">粗体</button>
+	<button id="btn2" onclick="f2()">斜体</button>
+	<button id="btn3" onclick="f3()">下划线</button>
+	<button id="btn4" onclick="f4()">字体变大</button>
+	<button id="btn5" onclick="f5()">字体变小</button>
+</div>
+
+<div id="div1" style="width:400px; height:500px; overflow:hidden; margin:0 auto">
+	<textarea  cols="31" rows="100" name="text" id="text"  style="font-size:24px; margin-left:0; text-align:left; ">  </textarea>
+</div>
+</body>
+</html>
+<script>
+
+ 	var otext=document.getElementById("text");
+	var obtn1=document.getElementById("btn1");
+	var obtn2=document.getElementById("btn2");
+	var obtn3=document.getElementById("btn3");
+	var obtn4=document.getElementById("btn4");
+	var obtn5=document.getElementById("btn5");
+	
+	function f1(){
+
+		otext.style.fontWeight=700;
+	}
+	function f2(){
+
+		otext.style.fontStyle="italic";
+	}
+	function f3(){
+
+		otext.style.textDecoration="underline";
+	}
+	function f4(){
+
+		otext.style.fontSize=48+"px";
+	}
+	function f5(){
+
+		otext.style.fontSize=24+"px";
+	}
+</script>

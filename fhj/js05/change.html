@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>change</title>
+</head>
+<style>
+	div,ul,li,img{
+		padding: 0px;
+		margin: 0px;
+	}
+	#uid img {
+		width: 743px;
+ 
+	}
+	#did img{
+		width:180px;
+		height: 120px;
+	}
+	#n2,#n3,#n4{
+		display: none;
+	}
+</style>
+<body>
+<center>
+	<div id="uid">
+		<img src="images/1.jpg" id="n1" alt="">
+		<img src="images/2.jpg" id="n2" alt="">
+		<img src="images/3.jpg" id="n3" alt="">
+		<img src="images/4.jpg" id="n4" alt="">
+	</div>
+
+	<div id="did" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="images/1.jpg" id="m1" onclick="show(1)">
+		<img src="images/2.jpg" id="m2" onclick="show(2)">
+		<img src="images/3.jpg" id="m3" onclick="show(3)">
+		<img src="images/4.jpg" id="m4" onclick="show(4)">
+	</div>
+</body>
+</center>
+</html>
+
+<script>
+	function show(a){
+		for(var i=0;i<4;i++){
+			var aimg=document.getElementById("m"+i);
+			var bimg=document.getElementById("n"+i);
+			if(i==a){
+				bImg.style.display="block";
+			}else{
+				bImg.style.display="none";
+			}
+		}
+	}
+</script>

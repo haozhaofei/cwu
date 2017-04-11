@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <title>缩略图</title>
+<style>
+#big{  width:500px; height:300px; overflow:hidden; margin-bottom:30px};
+</style>
+</head>
+
+<body>
+	<div  id="big"  >
+		<img  src="images/1.jpg"  width="500px" height="300px" id="bigImag"/>
+	</div>
+	
+	<div style=" width:90px; height:70px; float:left; margin-left:10px">
+		<img  src="images/1.jpg"  width="90px" height="70px" onmouseover="f0();"/>
+	</div>
+	<div style=" width:90px; height:70px; float:left; margin-left:10px">
+		<img  src="images/2.jpg"  width="90px" height="70px" onmouseover="f1();"/>
+	</div>
+	<div  style="width:90px; height:70px; float:left; margin-left:10px">
+	 	<img  src="images/3.jpg"  width="90px" height="70px" onmouseover="f2();"/>
+	</div>
+	<div  style=" width:90px; height:70px; float:left; margin-left:10px">
+		<img  src="images/4.jpg"  width="90px" height="70px" onmouseover="f3();"/>
+	</div>
+</body>
+</html>
+<script>
+	function f0(){
+		var bigimage=document.getElementById("bigImag");
+		var big=document.getElementById("big");
+		bigimage.src="img/a.jpg";
+	}
+	function f1(){	
+		var bigimage=document.getElementById("bigImag");
+		var big=document.getElementById("big");
+		bigimage.src="img/b.jpg";
+	}
+	function f2(){
+		var bigimage=document.getElementById("bigImag");
+		var big=document.getElementById("big");
+		bigimage.src="img/c.jpg";
+	}
+	function f3(){
+		var bigimage=document.getElementById("bigImag");
+		var big=document.getElementById("big");
+		bigimage.src="img/d.jpg";
+	}
+</script>

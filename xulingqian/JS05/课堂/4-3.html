@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script type="text/javascript">
+	//主动调用不能直接获取，需要传参	
+	function fun1(obj)  {
+	obj.style.color="red";
+	}
+    window.onload = function(){
+	//主动调用不能直接获取，需要传参
+
+	//被动调用可以直接使用this
+	document.getElementById('bid').onclick= function(){
+		this.style.color="yellow";
+	}
+}
+</script>
+<body>
+	<button onclick="fun1(this)">按钮1</button>
+	<button id="bid">按钮2</button>
+</body>
+</html>

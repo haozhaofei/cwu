@@ -1,0 +1,466 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body id="bid">
+	
+</body>
+</html>
+<script>
+//1（1）
+	//定义三个颜色
+	var arr = ["red","green","blue"];
+	var index = Math.ceil(Math.random()*1000)%3;
+	//获取的是一个集合(集合里面包含了多个对象)
+	//document.getElementsByTagName('body')[0].style.background = arr[index];
+
+	//获取的是一个对象
+	var back = document.getElementById('bid');
+	back.style.background = arr[index];
+//1（2）
+	var arr = ["red","green","blue"];
+	var index = Math.ceil(Math.random()*1000)%3;
+	var back = document.getElementById('bid');
+	back.style.background = arr[index];
+//1（2）
+	var arr = ["red","green","blue"];
+	var index = Math.ceil(Math.random()*1000)%3;
+	var back = document.getElementById('bid');
+	back.style.background = arr[index];
+
+</script>
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS事件操作</title>
+</head>
+<body>
+	<button onclick="fun1()">按钮1</button>
+	<button id="nid">按钮2</button>
+	<button id="mid">按钮3</button>
+</body>
+</html>
+
+
+<script>
+//2（1）
+	/**
+		1.事件源
+		2.事件
+		3.处理程序
+		主动优点:代码的可读性比较好
+		被动优点:代码可以分离,适合比较大的项目
+	**/
+	//主动调用
+	function fun1(){
+		alert("今天是周二");
+	}
+	//被动调用
+	document.getElementById('nid').onclick = function(){
+		alert("周日已经被我射熄火了,所以今天是周二");
+	}
+
+	var mid = document.getElementById('mid');
+		mid.addEventListener('click',function(){
+			alert('I love you');
+		});
+//2（2）
+	function fun1(){
+		alert("今天是周二");
+	}
+	document.getElementById('nid').onclick = function(){
+		alert("周日已经被我射熄火了,所以今天是周二");
+	}
+
+	var mid = document.getElementById('mid');
+		mid.addEventListener('click',function(){
+			alert('I love you');
+		});
+//2（3）
+	function fun1(){
+		alert("今天是周二");
+	}
+	document.getElementById('nid').onclick = function(){
+		alert("周日已经被我射熄火了,所以今天是周二");
+	}
+
+	var mid = document.getElementById('mid');
+		mid.addEventListener('click',function(){
+			alert('I love you');
+		});
+</script>
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="fun1(this)">点我</button>
+	<button id="bid">在点我</button>
+</body>
+</html>
+<script>
+//3（1）
+	//主调用不能直接获取,需要传参
+	function fun1(obj){
+		obj.style.color = "blue";
+	}
+	//别动调用可以直接使用this
+	document.getElementById('bid').onclick = function(){
+		this.style.color = "red";
+	}
+//3（2）
+	function fun1(obj){
+		obj.style.color = "blue";
+	}
+	document.getElementById('bid').onclick = function(){
+		this.style.color = "red";
+	}
+//3（3）
+	function fun1(obj){
+		obj.style.color = "blue";
+	}
+	document.getElementById('bid').onclick = function(){
+		this.style.color = "red";
+	}
+</script>
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+//4（1）
+	//等所有的文档加载完在执行
+	window.onload = function(){
+		//主调用不能直接获取,需要传参
+		function fun1(obj){
+			obj.style.color = "blue";
+		}
+		//别动调用可以直接使用this
+		document.getElementById('bid').onclick = function(){
+			this.style.color = "red";
+		}
+	}
+//4（2）
+	window.onload = function(){
+		function fun1(obj){
+			obj.style.color = "blue";
+		}
+		document.getElementById('bid').onclick = function(){
+			this.style.color = "red";
+		}
+	}	
+//4（3）
+	window.onload = function(){
+		function fun1(obj){
+			obj.style.color = "blue";
+		}
+		document.getElementById('bid').onclick = function(){
+			this.style.color = "red";
+		}
+	}	
+</script>
+</head>
+
+
+<body>
+	<button onclick="fun1(this)">点我</button>
+	<button id="bid">在点我</button>
+</body>
+</html>
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+
+<script>
+//5（1）
+	window.onbeforeunload = function(){
+		return "我看看你关不关?";
+	}
+//5（2）
+	window.onbeforeunload = function(){
+		return "我看看你关不关?";
+	}
+//5（3）
+	window.onbeforeunload = function(){
+		return "我看看你关不关?";
+	}
+</script>
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	ul,li{padding: 0px;margin:0px;}
+	ul li{height: 30px;margin-top: 10px;background: #ccc;}
+	li:hover{background: #fc0;}
+</style>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	
+</body>
+</html>
+<script>
+//6（1）
+	//获取所有的LI集合
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].ondblclick = function(){
+			this.style.background = "#f0c";
+		}
+	}
+//6（2）
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].ondblclick = function(){
+			this.style.background = "#f0c";
+		}
+	}
+//6（3）
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].ondblclick = function(){
+			this.style.background = "#f0c";
+		}
+	}
+</script>
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	ul,li{padding: 0px;margin:0px;}
+	ul{width:100px;border:1px solid #ccc;text-align: center;list-style-type: none;position: relative;display: none;}
+	ul li{height: 30px;margin-top: 10px;background: #ccc; width: 100px;line-height: 30px;font-size: 14px;}
+	li:hover{background: #fc0;}
+</style>
+<body>
+	<ul id="uid">
+		<li>复制</li>
+		<li>粘贴</li>
+		<li>剪切</li>
+		<li>亚瑟</li>
+		<li>大桥</li>
+	</ul>
+	
+</body>
+</html>
+<script>
+//7（1）
+	window.document.oncontextmenu=function(ent){
+		//兼容IE和火狐浏览器兼容
+		var event= ent || window.event;
+		//获取X坐标的位置
+		var x=event.clientX;
+		//获取Y坐标的位置
+		var y=event.clientY;
+		var uid = document.getElementById('uid');
+		uid.style.top = y+"px";
+		uid.style.left = x+"px";
+		uid.style.display = "block";
+		//屏蔽浏览器右键
+		return false;
+	}
+//7（2）
+	window.document.oncontextmenu=function(ent){
+		var event= ent || window.event;
+		var x=event.clientX;
+		var y=event.clientY;
+		var uid = document.getElementById('uid');
+		uid.style.top = y+"px";
+		uid.style.left = x+"px";
+		uid.style.display = "block";
+		return false;
+	}
+//7（3）
+	window.document.oncontextmenu=function(ent){
+		var event= ent || window.event;
+		var x=event.clientX;
+		var y=event.clientY;
+		var uid = document.getElementById('uid');
+		uid.style.top = y+"px";
+		uid.style.left = x+"px";
+		uid.style.display = "block";
+		return false;
+	}
+</script>
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	div,ul,li,img{padding: 0px;margin:0px;}
+	#did{width: 384px;}
+	#m2,#m3,#m4{display: none;}
+</style>
+<body>
+
+	<div id="did" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="images/01.jpg" width="384" height="240" id="m1" alt="">
+		<img src="images/02.jpg" width="384" height="240" id="m2" alt="">
+		<img src="images/03.jpg" width="384" height="240" id="m3" alt="">
+		<img src="images/04.jpg" width="384" height="240" id="m4" alt="">
+	</div>	
+</body>
+</html>
+<script>
+//8（1）
+	var m = 0;
+	var time = null;
+
+	function doStart(){
+		if(time == null){
+			time = setInterval(function(){
+				m++;
+				show(m);
+				if(m >=4){
+					m = 0;
+				}
+			},1000)
+		}
+		
+	}
+
+	doStart();
+
+	function doStop(){
+		if(time != null){
+			clearInterval(time);
+		}
+		time = null;
+	}
+
+
+
+	//显示图片  目的就是隐藏三个,显示其中的一个
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var img = document.getElementById("m"+i);
+			if(i == x){
+				img.style.display = "block";
+			}else{
+				img.style.display = "none";
+			}
+		}
+	}
+//8（2）
+	var m = 0;
+	var time = null;
+
+	function doStart(){
+		if(time == null){
+			time = setInterval(function(){
+				m++;
+				show(m);
+				if(m >=4){
+					m = 0;
+				}
+			},1000)
+		}
+		
+	}
+
+	doStart();
+
+	function doStop(){
+		if(time != null){
+			clearInterval(time);
+		}
+		time = null;
+	}
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var img = document.getElementById("m"+i);
+			if(i == x){
+				img.style.display = "block";
+			}else{
+				img.style.display = "none";
+			}
+		}
+	}
+//8（3）
+	var m = 0;
+	var time = null;
+
+	function doStart(){
+		if(time == null){
+			time = setInterval(function(){
+				m++;
+				show(m);
+				if(m >=4){
+					m = 0;
+				}
+			},1000)
+		}
+		
+	}
+
+	doStart();
+
+	function doStop(){
+		if(time != null){
+			clearInterval(time);
+		}
+		time = null;
+	}
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var img = document.getElementById("m"+i);
+			if(i == x){
+				img.style.display = "block";
+			}else{
+				img.style.display = "none";
+			}
+		}
+	}
+</script>

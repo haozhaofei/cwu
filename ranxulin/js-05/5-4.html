@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>图片</title>
+
+</head>
+
+<style>
+
+	div,img{
+
+		padding:0px;
+
+		margin:0px;
+
+	}
+
+	#did{
+
+		left:20px;
+
+		width: 690px;
+
+		height: 384px;
+
+		border: 5px solid #f0c;
+
+	} 
+	#bid{
+		left: 20px;
+
+		padding-top: 20px;
+	}
+
+	#tu2,#tu3,#tu4{
+
+		display: none;
+
+	}
+
+
+</style>
+
+<body>
+
+	<div id="did">
+
+		<img src="01.JPG" width="690px" height="384px" id="tu1" alt="">
+
+		<img src="02.JPG" width="690px" height="384px" id="tu2" alt="">
+
+		<img src="03.JPG" width="690px" height="384px" id="tu3" alt="">
+
+		<img src="04.JPG" width="690px" height="384px" id="tu4" alt="">
+
+	</div>
+
+	<div id="bid">
+
+		<img src="01.JPG" width="170px" height="96px" onclick="fun(1)" alt="">
+
+		<img src="02.JPG" width="170px" height="96px" onclick="fun(2)" alt="">
+
+		<img src="03.JPG" width="170px" height="96px" onclick="fun(3)" alt="">
+
+		<img src="04.JPG" width="170px" height="96px" onclick="fun(4)" alt="">
+
+	</div>
+
+</body>
+
+</html>
+
+<script>
+
+
+
+	function fun(n)
+
+	{
+
+		for(i=1;i<5;i++)
+
+		{
+
+			var img=document.getElementById('tu'+i);
+
+			if(i == n) img.style.display="block";
+
+			else img.style.display="none";
+
+		}
+
+
+
+	}
+
+
+
+</script> 

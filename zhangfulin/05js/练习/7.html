@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>幻灯片</title>
+</head>
+<style>
+	div,img{
+		padding:0px;
+		margin:0px;
+	}
+	div{
+		width: 600px;
+	}
+	#p2,#p3,#p4,#p5{
+		display: none;
+	}
+</style>
+<body><center>
+	<div id="did" onmouseout="dostart()">
+	<!-- <script>for(i=1;i<=20;i++) { </script>
+		<img src=("img/"+<script>i</script>".jpg") width="1366px" height="768px" id=("p"+<script>i</script>) alt=""> -->
+		<img src="img/1.jpg" width="683px" height="384px" id="p1" alt="">
+		<img src="img/2.jpg" width="683px" height="384px" id="p2" alt="">
+		<img src="img/3.jpg" width="683px" height="384px" id="p3" alt="">
+		<img src="img/4.jpg" width="683px" height="384px" id="p4" alt="">
+		<img src="img/5.jpg" width="683px" height="384px" id="p5" alt="">
+	</div></center>
+</body>
+</html>
+<script>
+	var x=1;
+	var time=null;
+
+	function dostart() {
+		if(time==null)
+		{
+			time = setInterval(function(){
+				show(x);
+				x++;
+				if(x>5)
+					x=1;
+			},500)
+		}	
+	}
+
+	dostart();
+
+	document.getElementById('did').onmouseover=function () {
+		if(time !=null)
+			clearInterval(time);
+		time=null;
+
+	}
+	function show(n){
+		for(i=1;i<6;i++)
+		{
+			var img=document.getElementById('p'+i);
+			if(i == n){
+				img.style.display="block";
+			}
+			else {
+				img.style.display="none";
+			}
+		}
+	}
+
+</script> 

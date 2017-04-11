@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击出背景</title>
+</head>
+<style>
+	div{
+		text-align: center;
+	}
+</style>
+<body>
+	<div>
+	<input type="button" value="点这里添加背景" id="bid" onclick="background()" />
+	</div>
+</body>
+</html>
+<script>
+	function background(){
+		document.body.style.backgroundImage="URL(images/1.jpg)"
+	}
+</script>

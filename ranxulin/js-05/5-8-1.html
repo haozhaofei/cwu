@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	ul,li,img,div{padding: 0px;margin:0px;}
+	#did{width: 390px;}
+	#m2,#m3,#m4{display: none;}
+</style>
+<body>
+	<div id="bid" onmousedown="doStop()" onmouseout="dostart()">
+		<img src="images/01.jpg" width="390" height="240" id="m1" alt="">
+		<img src="images/02.jpg" width="390" height="240" id="m2" alt="">
+		<img src="images/02.jpg" width="390" height="240" id="m3" alt="">
+		<img src="images/04.jpg" width="390" height="240" id="m4" alt="">
+	</div>
+</body>
+</html>
+<script>
+	var m=0;
+	var time=null;
+	function doStart () {
+         time = setInterval(function  () {
+         	// body...
+         	m++;
+         	show(m);
+         	if (m >=4) {
+         		m = 0;
+         	}
+         },1000)
+		// body...
+	}
+	doStart();
+	function doStop () {
+		if (time !=null) {
+			clearInterval(time);
+		}
+		time = null;
+		// body...
+	}
+	function show (x) {
+		for (var i = 1; i <= 4; i++) {
+			var img = document.getElementById("m"+i);
+			if (i==x) {
+				img.style.display = "block";
+			}
+			else{
+				img.style.display = "none";
+			}
+		}
+		// body...
+	}
+</script>

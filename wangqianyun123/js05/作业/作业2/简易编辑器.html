@@ -1,0 +1,23 @@
+
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>简易编辑器</title>
+</head>
+<body>
+ 	<center>
+ 		<div align="center" style="height:400; width:400;background-color:menu;border:outset menu";>
+ 		<br>
+ 		<br>
+ 		<div contenteditable align="left" style="height:300; width:350;background-color:white;padding:2;"> 			
+ 		</div>
+ 		<input type="button" value="加粗" onclick='document.execCommand("Bold");'>
+ 		<input type="button" value="斜体" onclick='document.execCommand("Italic");'>
+ 		<input type="button" value="下划线" onclick='document.execCommand("Underline");'>
+		<input type=button value="字体变大" onclick=document.execCommand('FontSize',false,14)>
+		<input type=button value="字体变小" onclick=document.execCommand('FontSize',false,1)>	
+		<br>
+ 		</div>
+ 	</center>>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	   <button>加粗</button>
+	   <button>下划线</button>
+	   <button>倾斜</button>
+	   <button>字体变大</button>
+	   <button>字体变小</button>
+	   <textarea  id="did" cols="30" rows="10"></textarea>
+</body>
+</html>
+<script>
+var did=document.getElementById('did');
+var button=document.getElementsByTagName('button')
+button[0].onclick=function(){
+	did.style.fontWeight="bold";
+}
+button[1].onclick=function(){
+	did.style.textDecoration="underline";
+}
+button[2].onclick=function(){
+	did.style.fontStyle="oblique";
+}
+button[3].onclick=function(){
+	did.style.fontSize="larger";
+}
+button[4].onclick=function(){
+	did.style.fontSize="smaller";
+}
+</script>
