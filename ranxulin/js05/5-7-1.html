@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	ul,li{padding: 0px;margin:0px;}
+	ul{width:100px;border:1px solid #ccc;text-align: center;list-style-type: none;position: relative;display: none;}
+	ul li{height: 30px;margin-top: 10px;background: #ccc; width: 100px;line-height: 30px;font-size: 14px;}
+	li:hover{background: #fc0;}
+</style>
+<body>
+	<ul id="uid">
+		<li>复制</li>
+		<li>粘贴</li>
+		<li>剪切</li>
+		<li>删除</li>
+		<li>其他</li>
+	</ul>
+</body>
+</html>
+<script>
+	window.document.oncontextmenu=function(ent){
+		var event= ent || window.event;
+		var x=event.clientX;
+		var y=event.clientY;
+		var uid = document.getElementById('uid');
+		uid.style.top = y+"px";
+		uid.style.left = x+"px";
+		uid.style.display = "block";
+		return false;
+	}
+</script>
