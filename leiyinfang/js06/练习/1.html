@@ -1,0 +1,20 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变大写</title>
+</head>
+<body>
+	变成大写:<input type="text" onkeypress="test(this)">
+</body>
+</html>
+<script>
+	function test(obj){
+
+		 obj.value=obj.value.toUpperCase();
+
+		// obj.value = "写不了";
+		// console.log(obj.value);
+	}
+</script>
