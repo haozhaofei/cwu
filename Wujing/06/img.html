@@ -1,0 +1,65 @@
+<!doctype html> 
+ <html lang="en"> 
+ <head> 
+ 	<meta charset="UTF-8"> 
+ 	<title>taobaojiemian</title> 
+ </head> 
+ <style> 
+ 	div,ul,li,img{padding: 0px;margin: 0px;} 
+ 	#uid img {width: 420px;height: 240px;} 
+ 	#did img{width: 100px;height: 80px;border: none;border: 1px solid blue;} 
+ 	#bid {width:300px;height: 300px;overflow: hidden;position:absolute;display: none;}
+ </style> 
+ <body> 
+ 	<div id="uid" > 
+ 		<img src="images/11.jpg" id="img" alt=""> 
+ 	</div> 
+ 	<div id="did" > 
+ 		<img src="images/11.jpg" onmouseover="show(1)" alt=""> 
+ 		<img src="images/22.jpg" onmouseover="show(2)" alt=""> 
+ 		<img src="images/33.jpg" onmouseover="show(3)" alt=""> 
+ 		<img src="images/44.jpg" onmouseover="show(4)" alt=""> 
+ 	</div> 
+ 	<div id="bid">
+ 		<img src="images/11.jpg" id="bImg" alt="">
+ 	</div>
+ </body> 
+ </html> 
+ 
+ 
+ <script> 
+ 	function show(i){ 
+ 		var img = document.getElementById('img'); 
+ 		var bImg = document.getElementById('bImg');
+ 			if(i == 1){ 
+ 					img.src="images/11.jpg"; 
+ 					bImg.src="images/11.jpg";
+ 			}else if(i == 2){ 
+ 					img.src="images/22.jpg"; 
+ 					bImg.src="images/22.jpg";			 
+ 			}else if(i == 3){ 
+ 					img.src="images/33.jpg"; 
+ 					bImg.src="images/33.jpg";
+ 			}else if(i == 4){ 
+ 				 
+ 					img.src="images/44.jpg"; 
+ 			 		bImg.src="images/44.jpg";
+ 			} 
+ 			img.onmouseover = function(){
+			bid.style.display = "block";
+			bid.style.top = this.offsetTop+"px";
+			bid.style.left = this.offsetWidth+this.offsetLeft+10+"px";
+			}
+			img.onmouseout = function(){
+				bid.style.display = "none";
+			}
+			img.onmousemove = function(ent){
+				var event = ent || window.event;
+				var x = event.clientX - this.offsetLeft;
+				var y = event.clientY - this.offsetTop;
+				bid.scrollTop = y*5-150;
+				bid.scrollLeft = x*5-150;
+			}
+ 		 
+ 	} 
+ </script> 
