@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div style="width:500px;height:500px;background:pink"></div>
+	<div id="bid" style="width:500px;height:500px;background:yellow"></div>
+</body>
+</html>
+<script>
+	window.onscroll=function(){
+		/*document.documentElement.scrollTop;
+		document.documentElement.scrollLeft;*/
+		var scrollTop=0;
+		if(document.documentElement&&document.documentElement.scrollTop){
+			scrollTop=document.documentElement.scrollTop;
+		}else if(document.body){
+			scrollTop=document.body.scrollTop;
+		}
+		document.getElementById('bid').innerHTML=scrollTop;
+	}
+</script>

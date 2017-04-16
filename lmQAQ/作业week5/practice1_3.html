@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景随机变色</title>
+</head>
+<body id="did">
+	
+</body>
+</html>
+<script>
+	var col=["blue","green","pink"];
+	var num=Math.ceil(Math.random()*1000)%3;
+	var back=document.getElementById('did');
+	back.style.background=col[num];
+</script>

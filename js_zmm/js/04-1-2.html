@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<button onclick="fun1()">Apple</button>
+<button  id="dead">死变态</button>
+<button id="butt">按钮</button>
+</body>
+</html>
+<script type="text/javascript">
+	//事件源  事件  处理方式
+	//主动添加事件，优点：代码可读性较好
+	//被动添加事件，优点：便于分离，适合较大的项目
+	//下面是主动调用：
+	function fun1(){
+		alert("I am a big Apple!");
+	}
+
+	//下面是两种被动调用：
+	document.getElementById("dead").onclick=function(){
+		alert("又点人家？？？？！");
+	}
+	var Id=document.getElementById("butt");
+	Id.addEventListener("click",function(){
+		alert("You are right! I miss you so much!");
+	})
+</script>

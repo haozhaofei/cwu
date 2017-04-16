@@ -1,0 +1,129 @@
+<!--一  设置三个按钮改变矩形的背景颜色-->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		div{
+				width: 100px;
+				height: 100px;
+				border: 1px solid yellow;
+		}
+	</style>
+
+</head>
+<body>
+	<button onclick="fun1(1)"> 蓝</button>
+	<button onclick="fun1(2)"> 绿</button>
+	<button onclick="fun1(3)"> 粉</button>
+	<div id="did">
+		
+	</div>
+</body>
+</html>
+<script>
+	function fun1(m){      //!!不要漏掉函数名fun1
+
+		var oDid = document.getElementById('did');  //获取id 要用单引号
+
+		switch(m){
+			case 1: oDid.style.background = "blue"; //!!颜色要加引号
+			break;  //!!不要漏掉break
+
+			case 2: oDid.style.background = "green";
+			break;
+
+			case 3:oDid.style.background = "pink";
+			break;
+
+		}
+	}
+</script>
+
+
+
+<!--第二遍
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>two</title>
+	
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			border:2px solid blue;
+		}
+	</style>
+</head>
+<body>
+<center>
+	<button onclick = "fun1(1)">green</button>
+	<button onclick = "fun1(2)">pink</button>
+	<button onclick = "fun1(3)">yellow</button>
+	<div id ="d">
+
+	</div>
+</center>
+</body>
+</html>
+<script>
+	function fun1(m){
+		var od = document.getElementById('d');
+		switch(m){
+			case 1 : od.style.background = "green";
+			break;
+
+			case 2 : od.style.background = "pink";
+			break;
+
+			case 3 : od.style.background = "yellow";
+			break;
+		}
+	}
+</script>
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style >
+		div{
+			width:200px;
+			height:200px;
+			border:2px solid blue;
+			border-radius: 50%;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<button onclick = "fun3(1)">green</button>
+		<button onclick = "fun3(2)">pink</button>
+		<button onclick = "fun3(3)">yellow</button>
+		<div id = "d">
+
+		</div>
+	</center>
+</body>
+</html>
+<script>
+	function fun3(m){
+		var did = document.getElementById("d");
+		switch(m){
+			case 1 : did.style.background = "green";
+			break;
+			case 2 : did.style.background = "pink";
+			break;
+			case 3 : did.style.background = "yellow";
+			break;
+		}
+
+	}
+</script>

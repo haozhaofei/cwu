@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击改变字体样式</title>
+</head>
+<style type="text/css">
+	#hid{font-size: 30px;font-weight:15px;font-style: normal;}
+</style>
+<body>
+	<p id="pid">Say something</p>
+	<button onclick="fun1()">加粗</button>
+	<button onclick="fun2()">下滑线</button>
+	<button onclick="fun3()">倾斜</button>
+	<button onclick="fun4()">字体变大</button>
+	<button onclick="fun5()">字体变小</button>
+</body>
+</html>
+<script>
+    var fid=document.getElementById('pid');
+    var size=30;
+
+    
+	function fun1(){
+		fid.style.fontWeight="bold";
+		
+	}
+	function fun2(){
+		fid.style.textDecoration = "underline";
+	}
+	function fun3(){
+       fid.style.fontStyle="italic";
+	}
+	function fun4(){
+		size+=10;
+		fid.style.fontSize=size+"px";
+	}
+	function fun5(){
+		size-=10;
+		fid.style.fontSize=size+"px";
+	}
+</script>

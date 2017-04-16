@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	//重点表达的是在调用方法时 会自动转换为对象
+	//布尔类型
+	//在调用toString()时JavaScript会内在地将这个布尔值转换成临时的boolean对象
+
+
+	var a = true;
+	document.write(typeof a + '<br>');  //输出 a 的类型
+	document.write(a.toString() + '<br>');  //输出 a 的值
+
+	//对象类型
+	var b = new Boolean(false);    // boolean类型的对象
+	document.write(typeof b + "<br>"); //输出 b 的类型
+	document.write(b.toString() + "<br>"); //输出 b 的值
+</script>
+
+
+<!--  第二遍
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	var a = true;
+	document.write(typeof a + "<br>");
+	document.write(a.toString()+ "<br>");
+
+	var b = new Boolean(false);
+	document.write(typeof b + "<br>");
+	document.write(b.toString()+ "<br>");
+</script>
+-->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	var a = true;
+	document.write(typeof a + "<br>");
+	document.write(a.toString()+ "<br>");
+
+	var b = new Boolean(true);
+	document.write(typeof b+ "<br>");
+	document.write(b.toString()+ "<br>");
+</script>

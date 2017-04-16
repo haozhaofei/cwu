@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>右键菜单</title>
+</head>
+<style>
+	ul,li{padding: 0;margin: 0;}
+	ul{
+		width: 100px;
+		text-align: center;
+		border: 1px solid #ccc;
+		list-style-type: none;
+		position: relative;
+		display: none;
+	}
+
+	ul li{
+		height: 30px;
+		width: 100px;
+		line-height: 30px;
+		margin-top: 10px;
+		font-size: 14px;
+		background: #ccc;
+	}
+	li:hover{background: orange;}
+</style>
+<body>
+<h2>右键菜单</h2>
+	<ul id="uid">
+		<li>哈</li>
+		<li>哈</li>
+		<li>ha</li>
+		<li>ha</li>
+		<li>ha</li>
+	</ul>
+</body>
+</html>
+<script>
+	window.document.oncontextmenu = function(m){
+		var event = m || window.event;
+
+		var x = event.clientX;
+		var y = event.clientY;
+
+		var uid = document.getElementById('uid');
+
+		uid.style.top = y+'px';
+		uid.style.left = x+'px';
+		uid.style.display = 'block';
+
+		return false;
+	}
+</script>

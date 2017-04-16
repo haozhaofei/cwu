@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<select id="province" onchange="change()">
+	</select>
+
+	<select id="city">
+	</select>
+</body>
+</html>
+<script type="text/javascript">
+	var p;
+	var c;
+	window.onload=function(){
+	p=document.getElementById("province");
+	c=document.getElementById("city");
+	p[0]=new Option("---- 省份 ----",0);
+	p[1]=new Option("甘肃省",1);
+	p[2]=new Option("山东省",2);
+	p[3]=new Option("山西省",3);
+	c[0]=new Option("---- 城市 ----",0);
+}
+
+	function change() {
+
+	var index=document.getElementById("province").selectedIndex;
+	switch (index) {
+	case 0:
+	c[0]=new Option("---- 城市 ----",0);
+	break;
+
+	case 1:
+	c[0]=new Option("兰州",0);
+	c[1]=new Option("庆阳",1);
+	c[2]=new Option("陇南",2);
+	c[3]=new Option("酒泉",3);
+	break;
+
+	case 2:
+	c[0]=new Option("济南",0);
+	c[1]=new Option("德州",1);
+	c[2]=new Option("青岛",2);
+	c[3]=new Option("烟台",3);
+	break;
+
+	case 3:
+	c[0]=new Option("太原",0);
+	c[1]=new Option("大同",1);
+	c[2]=new Option("忻州",2);
+	c[3]=new Option("临汾",3);
+	break;
+}
+}
+
+</script>

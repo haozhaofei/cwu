@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双击</title>
+</head>
+<style>
+	ul,li{padding: 0px;margin:0px;}
+	ul li{height: 30px;margin-top: 10px;background: #ccc;}
+	li:hover{background: #fc0;}
+</style>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>
+<script>
+	var lis=document.getElementsByTagName('li');
+	for (var i = 0; i < lis.length; i++) {
+		lis[i].ondblclick=function(){
+			lis[i].style.color="pink";
+		}
+	};
+</script>

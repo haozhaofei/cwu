@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>change background image</title>
+</head>
+<body>
+	<button id="did">更换</button>
+</body>
+</html>
+<script>
+	var img=['url(images/1.jpg)','url(images/2.jpg)','url(images/3.jpg)'];
+	
+	var body=document.getElementsByTagName("body");
+	document.getElementById('did').onclick=function()
+	{
+		var change=Math.round(Math.random()*10)%3; 
+		body[0].style.backgroundImage=img[change]; 
+	}
+
+	
+</script>

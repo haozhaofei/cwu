@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>缩略图</title>
+</head>
+<style>
+    #big img{
+        width:649px;height:440px;
+    }
+    #small img{
+        width:140px;height:100px;
+    }
+    #m2,#m3,#m4{
+        display:none;
+    }
+</style>
+<body>
+<center>
+<h4>缩略图切换</h4>
+    <div id="big">
+        <img src="C:\Users\Administrator\Desktop\背景图\7f3763e90690ebe4d1a4730e436b81b9.jpg" id="m1">
+        <img src="C:\Users\Administrator\Desktop\背景图\9cea4961c8017bc84f20e1dae8809a46.jpg" id="m2">
+        <img src="C:\Users\Administrator\Desktop\背景图\19a776c545db9a92aaf9e20fac43dc0f.jpg" id="m3">
+        <img src="C:\Users\Administrator\Desktop\背景图\7780f718401d56ae5986b51c57cbf71d.jpeg" id="m4">
+    </div>
+    <br>
+    <div id="small">
+        <img src="C:\Users\Administrator\Desktop\背景图\7f3763e90690ebe4d1a4730e436b81b9.jpg" id="n1" onclick="show(1)">
+        <img src="C:\Users\Administrator\Desktop\背景图\9cea4961c8017bc84f20e1dae8809a46.jpg" id="n2" onclick="show(2)">
+        <img src="C:\Users\Administrator\Desktop\背景图\19a776c545db9a92aaf9e20fac43dc0f.jpg" id="n3" onclick="show(3)">
+        <img src="C:\Users\Administrator\Desktop\背景图\7780f718401d56ae5986b51c57cbf71d.jpeg" id="n4" onclick="show(4)">
+    </div>
+</center>
+</body>
+</html>
+<script>
+    var m = 0;
+    var time = null;
+
+    function doStart(){
+        if(time == null){
+            time = setInterval(function(){
+                m++;
+                show(m);
+                if(m >=4){
+                    m = 0;
+                }
+            },1000)
+        }
+        
+    }
+
+    doStart();
+
+    function doStop(){
+        if(time != null){
+            clearInterval(time);
+        }
+        time = null;
+    }
+
+
+    function show(x){
+        for(var i=1;i<=4;i++){
+            var bigimg=document.getElementById("m"+i);
+            var smallimg=document.getElementById("n"+i);
+            if(i==x){
+                bigimg.style.display="block";
+            }else{
+                bigimg.style.display="none";
+            }
+        }
+    }
+</script>

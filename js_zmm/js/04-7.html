@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	ul,li{padding: 0px;margin: 0px}
+	ul{width: 100px;border: 1px solid #ccc;text-align: center;list-style-type: none;position: relative;display: none;}
+	ul li{height: 30px;margin-top: 10px;background: #ccc; width: 100px;line-height: 30px;font-size: 14px;}
+	li:hover{background: #fc0;}
+
+	</style>
+</head>
+<body>
+	<ul id="did">
+		<li>复制</li>
+		<li>粘贴</li>
+		<li>剪切</li>
+		<li>帮助</li>
+		<li>查看</li>
+	</ul>
+</body>
+</html>
+<script>
+	window.document.oncontextmenu=function(ent){
+		//兼容IE和火狐浏览器
+		var event=ent||window.event;
+		var x=event.clientX;
+		var y=event.clientY;
+		var did=document.getElementById("did");
+		did.style.top=y+"px";
+		did.style.left=x+"px";
+		did.style.display="block";
+		return false;
+	}
+</script>

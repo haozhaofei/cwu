@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易编辑器</title>
+</head>
+<body>
+    <div align="center" style="height:250; width:150; background-color:pink; border:outset menu">
+<br>
+<br>
+<div contenteditable align="left" style="height:250; width:350; background-color:white; padding:2;">
+</div>
+	<button>加粗</button>
+	<button>下划线</button>
+	<button>倾斜</button>
+	<button>字体变大</button>
+	<button>字体变小</button><br>
+	<textarea id='text' rows="10" cols="30"></textarea>
+</body>
+</html>
+<script>
+	var text=document.getElementById('text');
+	var button=document.getElementsByTagName('button');
+	button[0].onclick=function () {
+		text.style.fontWeight="bold";
+	}
+	button[1].onclick=function () {
+		text.style.textDecoration="underline";
+	}
+	button[2].onclick=function () {
+		text.style.fontStyle="oblique";
+	}
+	button[3].onclick=function () {
+		text.style.fontSize="larger";
+	}
+	button[4].onclick=function () {
+		text.style.fontSize="smaller";
+	}
+</script>

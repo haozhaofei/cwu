@@ -1,0 +1,57 @@
+<!--3.简易编辑器(加粗,下滑线,倾斜,字体变大/变小) -->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易编辑器</title>
+</head>
+<style>
+	#edit{
+		border: 2px solid #000;
+		height: 450px;
+		width: 800px;
+		padding: 10px;
+		margin: auto;
+	}
+	textarea{
+		border: 1px solid #000;
+		padding: 10px;
+		margin-top: 10px;
+		margin-left: 10px;
+		width: 760px;
+		height: 390px;
+	}
+</style>
+<body>
+	<div id="edit">
+	设置：
+		<button>加粗</button>
+		<button>下划线</button>
+		<button>倾斜</button>
+		<button>增大字号</button>
+		<button>减小字号</button>
+		<textarea id="text"></textarea>
+	</div>
+</body>
+</html>
+<script>
+	var text=document.getElementById('text');
+	
+	var button=document.getElementsByTagName('button');
+	
+	button[0].onclick=function () {
+		text.style.fontWeight="bold";
+	}
+	button[1].onclick=function () {
+		text.style.textDecoration="underline";
+	}
+	button[2].onclick=function () {
+		text.style.fontStyle="oblique";
+	}
+	button[3].onclick=function () {
+		text.style.fontSize="larger";
+	}
+	button[4].onclick=function () {
+		text.style.fontSize="smaller";
+	}
+</script>
