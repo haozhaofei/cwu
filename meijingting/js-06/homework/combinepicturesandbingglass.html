@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>combine pictures with big glass 缩略图和放大镜的结合</title>
+<style type="text/css">
+	div,img{
+		margin: 0;
+		padding: 0;
+		margin-top: 5px;
+	}
+	#p1,#p3,#p4{
+		display: none;
+	}
+	#dp1,#dp2,#dp3,#dp4{
+		width:300px;height: 300px;position: absolute;display: none;overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<div>
+	<img src="img/渐变构成8.jpg" width="384" height="240" id="p1">
+	<img src="img/渐变构成9.jpg" width="384" height="240" id="p2">
+	<img src="img/渐变构成10.jpg" width="384" height="240" id="p3">
+	<img src="img/渐变构成12.jpg" width="384" height="240" id="p4">
+
+</div>
+<div id="dp1"><img src="img/渐变构成8.jpg"></div>
+<div id="dp2"><img src="img/渐变构成9.jpg"></div>
+<div id="dp3"><img src="img/渐变构成10.jpg"></div>
+<div id="dp4"><img src="img/渐变构成12.jpg"></div>
+
+<div id="display">
+	<img src="img/渐变构成8.jpg"  width="95" height="60" onclick="show(1)">
+	<img src="img/渐变构成9.jpg" width="95" height="60" onclick="show(2)">
+	<img src="img/渐变构成10.jpg" width="95" height="60" onclick="show(3)">
+	<img src="img/渐变构成12.jpg" width="95" height="60" onclick="show(4)">
+</div>
+	
+</body>
+</html>
+<script>
+		function show(x){
+		for( var i=1; i<=4; i++){
+			var img = document.getElementById("p"+i);
+			if(i == x){
+				img.style.display = "block";
+			}else{
+				img.style.display = "none";
+			}
+		}
+	}
+	var p1 = document.getElementById('p1');
+	var dp1 = document.getElementById('dp1');
+	//当鼠标移上去 显示图片并指定上边距 和左边距
+	p1.onmouseover = function(){
+		dp1.style.display = "block";
+		dp1.style.top = this.offsetTop+"px";
+		dp1.style.left = this.offsetWidth + this.offsetLeft+ 10+"px";
+	}
+
+	//当鼠标离开隐藏
+	p1.onmouseout = function(){
+		dp1.style.display = "none";
+	}
+
+	//当鼠标移动的时候 获取鼠标的位置
+	p1.onmousemove = function(ent){
+		var event = window.event || ent;
+		var x = event.clientX - this.offsetLeft;
+		var y = event.clientY - this.offsetTop;
+		//*5:是因为要和放大的图片的宽度是一样的
+		//-150:是因为要在被放大的图片DIV的一半
+		dp1.scrollTop = y*2-100;
+		dp1.scrollLeft = x*2-100;
+	}
+	/*var p1=document.getElementById('p1');
+	var p2=document.getElementById('p2');
+	var p3=document.getElementById('p3');
+	var p4=document.getElementById('p4');
+
+	var dp1=document.getElementById('dp1');
+	var dp2=document.getElementById('dp2');
+	var dp3=document.getElementById('dp3');
+	var dp4=document.getElementById('dp4');
+
+	p1.onmouseover=function(){
+		dp1.style.display="block";
+		dp1.style.top=this.offsetTop+"px";
+		dp1.style.left=this.offsetWidth +this.offsetLeft+10+"px";
+	}
+	p2.onmouseover=function(){
+		dp2.style.display="block";
+		dp2.style.top=this.offsetTop+"px";
+		dp2.style.left=this.offsetWidth +this.offsetLeft+10+"px";
+	}
+	p3.onmouseover=function(){
+		dp3.style.display="block";
+		dp3.style.top=this.offsetTop+"px";
+		dp3.style.left=this.offsetWidth +this.offsetLeft+10+"px";
+	}
+	p4.onmouseover=function(){
+		dp4.style.display="block";
+		dp4.style.top=this.offsetTop+"px";
+		dp4.style.left=this.offsetWidth +this.offsetLeft+10+"px";
+	}
+
+
+	p1.onmouseout=function(){
+			dp1.style.display="none";
+		}
+	p2.onmouseout=function(){
+			dp2.style.display="none";
+		}
+	p3.onmouseout=function(){
+			dp3.style.display="none";
+		}
+	p4.onmouseout=function(){
+			dp4.style.display="none";
+		}
+
+    p1.onmousemove=function(ent){
+		var event=window.event || ent;
+
+		// 兼容浏览器
+		var x-event.clientX-this.offsetLeft;
+		var y=event.clientY-this.offsetTop;
+		dp1.scrollTop=y*5-150;
+		dp1.scrollLeft=x*5-150;
+
+	}
+	p2.onmousemove=function(ent){
+		var event=window.event || ent;
+
+		// 兼容浏览器
+		var x-event.clientX-this.offsetLeft;
+		var y=event.clientY-this.offsetTop;
+		dp2.scrollTop=y*5-150;
+		dp2.scrollLeft=x*5-150;
+
+	}
+	p3.onmousemove=function(ent){
+		var event=window.event || ent;
+
+		// 兼容浏览器
+		var x-event.clientX-this.offsetLeft;
+		var y=event.clientY-this.offsetTop;
+		dp3.scrollTop=y*5-150;
+		dp3.scrollLeft=x*5-150;
+
+	}
+	p4.onmousemove=function(ent){
+		var event=window.event || ent;
+
+		// 兼容浏览器
+		var x-event.clientX-this.offsetLeft;
+		var y=event.clientY-this.offsetTop;
+		dp4.scrollTop=y*5-150;
+		dp4.scrollLeft=x*5-150;
+
+	}*/
+
+
+
+</script>

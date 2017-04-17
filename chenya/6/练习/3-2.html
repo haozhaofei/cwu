@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>金</li>
+		<li>木</li>
+		<li>水</li>
+		<li>火</li>
+		<li>土</li>
+	</ul>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName('li');
+	for (var i=0; i <list.length; i++) {
+		list[i].onclick=function  () {
+			alert(this.innerHTML);
+		}
+	}
+</script>

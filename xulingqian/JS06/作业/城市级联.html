@@ -1,0 +1,51 @@
+<html>
+<head>	
+		<meta charset="UTF-8">
+	<title></title>
+<title>This is a test!</title>
+</head>
+<body>
+<form name="frm">
+<select name="s1" onChange="redirec(document.frm.s1.options.selectedIndex)">
+<option selected>请选择</option>
+<option value="1">北京</option>
+<option value="2">江苏</option>
+<option value="3">广州</option>
+</select>
+
+<select name="s2">
+<option value="请选择" selected>请选择</option>
+</select>
+</form>
+<script language="javascript">
+//获取一级菜单长度
+var select1_len = document.frm.s1.options.length;
+var select2 = new Array(select1_len);
+//把一级菜单都设为数组
+for (i=0; i<select1_len; i++)
+{ select2[i] = new Array();}
+//定义基本选项
+select2[0][0] = new Option("请选择", " ");
+
+select2[1][0] = new Option("东城区", " ");
+select2[1][1] = new Option("西城区", " ");
+select2[1][2] = new Option("朝阳区", " ");
+
+select2[2][0] = new Option("徐州", " ");
+select2[2][1] = new Option("南京", " ");
+select2[2][2] = new Option("苏州", " ");
+
+select2[3][0] = new Option("惠州", " ");
+select2[3][1] = new Option("东莞", " ");
+select2[3][2] = new Option("佛山", " ");
+//联动函数
+function redirec(x)
+{
+var temp = document.frm.s2;
+for (i=0;i<select2[x].length;i++)
+{ temp.options[i]=new Option(select2[x][i].text,select2[x][i].value);}
+temp.options[0].selected=true;
+}
+</script>
+</body>
+</html>

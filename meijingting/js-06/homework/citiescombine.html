@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>城市级联</title>
+
+</head>
+
+<body>
+
+		<select id="province" name="province" >
+
+			<option value="">--请选择--</option>
+
+			<option value="1" >北京</option>
+			<option value="2">河北</option>
+			<option value="3">江苏</option>
+			<option value="4" >天津</option>
+			<option value="5">山西</option>
+			<option value="6" >内蒙古</option>
+		
+
+		</select>
+
+		<select id="city" name="city">
+
+			<option value="">--请选择--</option>
+		</select>
+
+</body>
+
+</html>
+
+<script>
+var data=new Array();
+data[1]=["朝阳区","西城区","东城区","大兴区","通州区","海淀区","昌平区"];
+data[2]=["石家庄","保定","邯郸","邢台"];
+data[3]=["南京","无锡","盐城","江阴","苏州"];
+data[4]=["河东区","河西区","河北区","南开区"];
+data[5]=["太原","大同","吕梁","运城"];
+data[6]=["呼和浩特","包头","乌海","赤峰","通辽"];
+//获取时间并添加change事件
+
+
+	var province=document.getElementById("province");
+
+	var city=document.getElementById("city");
+
+     province.onchange=function(){
+     	v=this.value;
+     	city.length=0;
+     	//遍历对应的市区信息
+     	for(var i=0;i<data[v].length;i++){
+     		city.add(new Option(data[v][i],i));
+     	}
+     }
+
+</script>

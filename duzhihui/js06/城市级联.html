@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+<select name="select" id="did1">
+	<option value="">请选择</option>
+	<option value="1">北京</option>
+	<option value="2">安徽</option>
+	<option value="3">天津</option>
+	<option value="4">新疆</option>
+	<option value="5">广东</option>
+</select>
+<select id="did2"></select>
+</body>
+
+</html>
+<script>
+	var data=new Array();
+	data[1]=["海淀区","朝阳区","丰台区","昌平区"];
+	data[2]=["阜阳","合肥","芜湖","黄山"];
+	data[3]=["河东区","河西区","河北区","南开区"];
+	data[4]=["昌吉","乌鲁木齐","吐鲁番","伊犁"];
+	data[5]=["广州","深圳","东莞","佛山"];
+	var did1=document.getElementById("did1");
+	var did2=document.getElementById("did2");
+	did1.onchange=function(){
+		var num=this.value;
+		did2.length=0;
+		for(var i=0;i<data[num].length;i++){
+			did2.add(new Option(data[num][i],i));
+		}
+	}
+</script>
