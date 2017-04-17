@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scroll方法</title>
+</head>
+<body>
+	<div style="width:500px;height:500px;background:#ccc;"></div>
+	<div id="bid" style="width:500px;height:500px;background:#bbb;"></div>
+</body>
+</html>
+<script>
+	//为当前页面添加滚动条事件
+	window.onscroll=function(){
+		var scrollTop=0;
+	if(document.documentElement&&document.documentElement.scrollTop)
+	{
+		scrollTop=document.documentElement.scrollTop;
+	}
+	else if(document.body){
+		scrollTop=document.body.scrollTop;
+	}
+	document.getElementById('bid').innerHTML=scrollTop;
+	}
+	
+</script>
