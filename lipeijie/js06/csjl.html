@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>城市级联</title>
+</head>
+<style>
+	*{
+		margin-top: 0px;
+		padding: 0px;
+	}
+</style>
+<body>
+<center>
+	<form>
+		<select id="province" onchange="choose(this)" >
+			<option selected="selected">--请选择--</option>
+			<option >北京</option>
+			<option >新疆</option>
+			<option >江苏</option>
+		</select>
+		<select id="city">
+			<option>--请选择--</option>
+		</select>
+	</form>
+	<center>
+</body>
+</html>
+<script>
+	var province=document.getElementById('province');
+	var city=document.getElementById('city');
+	function choose(obj){
+		var opt=obj.value;
+		   if(opt=="北京"){
+			city.options[0] = new Option("朝阳区");  
+			city.options[1] = new Option("海淀区");
+			city.options[2] = new Option("东城区");
+			city.options[3] = new Option("西城区");
+		}
+			else if(opt=="新疆"){
+			city.options[0] = new Option("乌鲁木齐");  
+			city.options[1] = new Option("伊犁哈萨克自治州");
+			city.options[2] = new Option("阿勒泰");
+			city.options[3] = new Option("阿克苏");
+		}
+			else if(opt=="江苏")
+		{
+			city.options[0] = new Option("南京市");  
+			city.options[1] = new Option("无锡市");
+			city.options[2] = new Option("苏州市");
+			city.options[3] = new Option("徐州市");
+}
+
+		else if(opt=="--请选择--"){
+			for (var i = 0; i < 4; i++) {
+				city.options.remove(i);
+			};//清空之前的值
+			city.options[0] = new Option("--请选择--");
+		}
+	}
+	
+</script>
