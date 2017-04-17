@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>放大镜</title>
+	<h3>鼠标移上图片查看细节</h3>
+</head>
+<style>
+	#bigpic{
+		width: 400px;
+		height: 400px;
+		position: absolute;
+		display: none;
+		overflow: hidden; /*将超出规定大小(400px*400px)的部分隐藏起来*/
+	}
+</style>
+<body>
+
+	<img id="pic" src="images/1.jpg" width="342"alt="">
+
+	<div id="bigpic">
+		<img src="images/1.jpg" alt="">
+	</div>
+</body>
+</html>
+<script>
+	var pic = document.getElementById("pic");
+	var bigpic = document.getElementById("bigpic");
+
+	pic.onmouseover = function(){
+		bigpic.style.display = "block";
+		bigpic.style.top = this.offsetTop + "px";
+		bigpic.style.left = this.offsetLeft + this.offsetWidth + 10 + "px";
+	}
+
+	pic.onmouseout = function(){
+		bigpic.style.display = "none";
+	}
+
+	pic.onmousemove = function(ent){
+		var event = window.event || ent;
+
+		var x = event.clientX - this.offsetLeft;
+		var y = event.clientY - this.offsetTop;
+
+		bigpic.scrollTop = y*4-200;
+		bigpic.scrollLeft = x*4-200;
+	}
+</script>
