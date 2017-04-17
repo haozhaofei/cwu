@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>img</title>
+	<style>
+		div,img,ul,li{padding: 0px;margin:0px;}
+		#m1 img{width: 385px;height: 240px;}
+		#list img{width:93px;height:50px;}
+		#did img{width:500px;height:500px;overflow:hidden; position:absolute;display:none;}
+	</style>
+</head>
+<body>
+	<div id="bid">
+		<img id="m1" src="images/01.jpg">
+	</div>
+	<div id="list">
+		<img src="images/01.jpg" id="m2">
+		<img src="images/02.jpg" id="m2">
+		<img src="images/03.jpg" id="m2">
+		<img src="images/04.jpg" id="m2">
+	</div>
+	<div id="did">
+		<img id="m3" src="images/01.jpg">
+	</div>
+</body>
+</html>
+
+<script>
+	//放大镜
+	var m1 = document.getElementById("m1");
+	var m3 = document.getElementById("m3");
+	var did=document.getElementById("did");
+	
+	m1.onmouseover = function(){
+		did.style.display = "block";
+		did.style.top = this.offsetTop+"px";
+		did.style.left = this.offsetWidth + this.offsetLeft+ 10+"px";
+	}
+	m1.onmouseout = function(){
+		did.style.display = "none";
+	}
+	m1.onmousemove = function(ent){
+		var event = window.event || ent;
+		var x = event.clientX - this.offsetLeft;
+		var y = event.clientY - this.offsetTop;
+		did.scrollTop = y*5-150;
+		did.scrollLeft = x*5-150;
+	}
+	//list
+	var list= document.getElementById("list").getElementsByTagName("img");
+	for(var i=0;i<list.length;i++){
+		list[i].onmouseover = function(){
+			m1.src=this.src;
+			m3.src=this.src;
+		}
+	}
+</script>
