@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>衣服</li>
+		<li>裤子</li>
+		<li>裙子</li>
+		<li>鞋子</li>
+		<li>包包</li>
+		<li>饰品</li>
+	</ul>
+</body>
+</html>
+<script>
+	var list = document.getElementsByTagName('li');
+	for (var i = 0; i < list.length; i++) {
+         list[i].onclick=function () {
+         	// body...
+           	alert(this.innerHTML);
+       }              
+	}
+</script>
