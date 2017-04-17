@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>例03-this事件认识</title>
+</head>
+<body>
+	<ul>
+		<li>绅士</li>
+		<li>丑八怪</li>
+		<li>初学者</li>
+		<li>认真的雪</li>
+		<li>动物世界</li>
+	</ul>
+</body>
+</html>
+<script>
+	//获取li集合、this代表的是本对象（点击谁就是谁）
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			alert(this.innerHTML);
+		}
+	}
+</script>
