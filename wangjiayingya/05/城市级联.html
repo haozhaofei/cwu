@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>城市级联</title>
+</head>
+<body>
+    <center>
+	<select id="province" onchange="change()"></select>
+	<select id="country"></select>
+	</center>
+</body>
+</html>
+<script type="text/javascript">
+    var a,b;
+	window.onload = function(){
+		a = document.getElementById("province");
+		a[0] = new Option('省份',0);
+		a[1] = new Option('黑龙江省',1);
+		a[2] = new Option('吉林省',2);
+		a[3] = new Option('辽宁省',3);
+
+		b = document.getElementById("country");
+		b[0] = new Option('城市',0);
+	}
+
+	function change(){
+		var index = document.getElementById("province").selectedIndex;
+		switch(index){
+			case 0 : b[0] = new Option('城市',0); break;
+			case 1 : b[0] = new Option('哈尔滨',0);
+			         b[1] = new Option('齐齐哈尔',1);
+			         b[2] = new Option('牡丹江',2); 
+			         b[3] = new Option('佳木斯',3); break;
+			case 2 : b[0] = new Option('长春',0);
+			         b[1] = new Option('四平',1);
+			         b[2] = new Option('松原',2); break;
+			case 3 : b[0] = new Option('沈阳',0);
+			         b[1] = new Option('大连',1);
+			         b[2] = new Option('鞍山',2);
+			         b[3] = new Option('抚顺',3); break;
+		}
+	}
+
+</script>

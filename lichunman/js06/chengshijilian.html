@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>城市级联</title>
+</head>
+<body>
+	<select name="sid" id="sid">
+		<option value="">-请选择-</option>
+		<option value="1">河北省</option>
+		<option value="2">内蒙古</option>
+		<option value="3">辽宁省</option>
+		<option value="4">吉林</option>
+		<option value="5">辽宁</option>
+	</select>
+	<select id="cid"></select>
+	<script type="text/javascript">
+		var data = new Array();
+		data[1] =['石家庄','唐山','秦皇岛','邯郸','邢台','保定','张家口','承德','沧州','廊坊','衡水'];
+		data[2] = ['呼和浩特','包头','乌海','赤峰','通辽','鄂尔多斯','呼伦贝尔','巴彦淖尔','乌兰察布','兴安','锡林郭勒','阿拉善'];
+		data[3] = ['沈阳','大连','鞍山','抚顺','本溪','丹东','锦州','营口','阜新','辽阳','盘锦','铁岭','朝阳','葫芦岛'];
+		data[4] = ['长春','吉林','四平','辽源','通化','白山','松原','白城','延边'];
+		data[5] = ['沈阳','大连','鞍山','抚顺','本溪','丹东','锦州','营口','阜新','辽阳','盘锦','铁岭','朝阳','葫芦岛'];
+
+		var sid = document.getElementById("sid");
+		var cid = document.getElementById("cid");
+		sid.onchange = function(){
+			v = this.value;
+			cid.length = 0;
+			for(var i=0;i<data[v].length;i++){
+				cid.add(new Option(data[v][i],i));
+			}
+		}
+	</script>
+	
+</body>
+</html>

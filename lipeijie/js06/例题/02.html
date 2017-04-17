@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	#did1,#did2{width: 400px;height: 400px;background: green;}
+	#did2{background: blue;}
+</style>
+<body>
+	<div id="did1">
+		
+	</div>
+	<div id="did2"></div>
+</body>
+</html>
+<script>
+	window.onscroll=function(){
+		var num=0;
+		if(document.documentElement&&document.documentElement.scrollTop){
+			num=document.documentElement.scrollTop;
+		}else if(document.body){
+			num=document.body.scrollTop;
+		}
+		document.getElementById("did2").innerHTML=num;
+	}
+</script>

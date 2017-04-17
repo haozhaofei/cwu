@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-3</title>
+</head>
+<body>
+<ul>
+    <li>JSP</li>
+    <li>JS</li>
+    <li>数据库原理</li>
+    <li>计算机组成原理</li>
+    <li>概率论</li>
+</ul>
+</body>
+</html>
+<script type="text/javascript">
+    var list=document.getElementsByTagName("li");
+    for(var i=0;i<list.length;i++){
+        list[i].onclick=function(){
+            alert(this.innerHTML);
+        }
+    }  
+</script>
+
+
+
