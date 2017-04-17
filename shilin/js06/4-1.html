@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#bid{width:200px;height: 200px;position: absolute;display: none;overflow: hidden;}
+	</style>
+</head>
+<body>
+	<img id="mid" src="images/2.jpeg" alt="" width="384">
+	<div id="bid">
+		<img src="images/2.jpeg" alt="">
+	</div>
+</body>
+</html>
+
+<script>
+	var mid = document.getElementById('mid');
+	var bid = document.getElementById('bid')
+	mid.onmouseover = function(){
+		bid.style.display = "block";
+		bid.style.top = this.offsetTop+"px";
+		bid.style.left = this.offsetWidth + this.offsetLeft+ 10+"px";
+	}
+	mid.onmouseout = function(){
+		bid.style.display = "none";
+	}
+	mid.onmousemove = function(ent){
+		var event = window.event || ent;
+		var x = event.clientX - this.offsetLeft;
+		var y = event.clientY - this.offsetTop;
+		bid.scrollTop = y*2-150;
+		bid.scrollLeft = x*2-150;
+	}
+</script>

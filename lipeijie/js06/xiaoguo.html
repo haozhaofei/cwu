@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>幻灯片淘宝效果</title>
+</head>
+<style>
+		*{
+			padding:0px;
+			margin:0px;
+		}
+		#mid{
+			width: 385px;
+			height: 240px;
+		}
+		#list img{
+			width:93px;
+			height:50px;
+		}
+		#did {
+			width:350px;
+			height:300px;
+			position:absolute;
+			display: none;
+			overflow:hidden;
+		}
+	</style>
+</head>
+<body>
+	
+	<img id="mid" src="img/1.jpg" id="m1" alt="">
+	<div id="list">
+		<img src="img/1.jpg" alt="">
+		<img src="img/2.jpg" alt="">
+		<img src="img/3.jpg" alt="">
+		<img src="img/4.jpg" alt="">
+	</div>
+	<div id="did">
+		<img src="img/1.jpg" width="1366px" height="768px"  >
+	</div>
+</body>
+</html>
+
+<script>
+	var list= document.getElementById("list").getElementsByTagName("img");
+	var mid=document.getElementById("mid");
+	var did=document.getElementById("did");
+	var n;
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			mid.src = this.src;
+			n=i;
+		}
+	}
+	mid.onmouseover=function(){
+		did.getElementsByTagName("img")[0].src = mid.src;
+		did.style.display="block";
+		did.style.top=mid.offsetTop+"px";
+		did.style.left=mid.offsetLeft+mid.offsetWidth+10+"px";
+	}
+	mid.onmouseout=function(){
+		did.style.display="none";
+	}
+	mid.onmousemove=function(ent){
+		var event=window.event || ent;
+		var x=event.clientX;
+		var y=event.clientY;
+		did.scrollTop=y*4-192.5;
+		did.scrollLeft=x*4-120;
+	}
+</script> 

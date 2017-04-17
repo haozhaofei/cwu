@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	#editor{
+		width: 400px;
+		height: 200px;
+		border:1px solid #ccc;}
+</style>
+<body>
+	<div id="edit">
+	<span>字体大小：</span>
+	<select id="size">
+		<option value="4">小</option>
+		<option value="5">正常</option>
+		<option value="6">大</option>
+	</select>
+		<input type="button" value="加粗" id="bold">
+		<input type="button" value="倾斜" id="italic">
+		<input type="button" value="下划线" id="underline">
+	</div>
+	<div id="editor" class="editable"></div>	
+</body>
+</html>
+<script>
+	window.onload=function(){
+		document.getElementById('editor').contentEditable=true;
+		document.getElementById('size').onchange=function(){
+			var s=parseInt(document.getElementById('size').value);
+			document.getElementById('editor').focus();
+			document.execCommand('FontSize',false,s);
+		}
+		document.getElementById('bold').onclick=function(){
+			document.getElementById('editor').focus();
+			document.execCommand('Bold');
+		}
+		document.getElementById('italic').onclick=function(){
+			document.getElementById('editor').focus();
+			document.execCommand('Italic');
+		}
+		document.getElementById('underline').onclick=function(){
+			document.getElementById('editor').focus();
+			document.execCommand('Underline');
+		}
+	}
+</script>
+</html>
