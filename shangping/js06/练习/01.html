@@ -1,0 +1,17 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	输入变大写：<input type="text" id="did">
+</body>
+</html>
+<script>
+	var did=document.getElementById("did");
+	did.onkeypress=function(){
+		this.value=this.value.toUpperCase();
+	}
+</script>

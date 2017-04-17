@@ -1,0 +1,55 @@
+--1
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body id="did">
+	
+</body>
+</html>
+<script>
+	var arr=["pink","green","cyan"];
+	var index=Math.ceil(Math.random()*1000)%3;
+    var back=document.getElementById('did');
+    back.style.background=arr[index];
+</script>
+
+
+--2
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body id="did">
+	
+</body>
+</html>
+<script>
+	var arr=["pink","green","cyan"];
+	var index=Math.ceil(Math.random()*1000)%3;
+    var back=document.getElementById('did');
+    back.style.background=arr[index];
+</script>
+
+
+--3
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body id="did">
+	
+</body>
+</html>
+<script>
+	var arr=["pink","green","cyan"];
+	var index=Math.ceil(Math.random()*1000)%3;
+    var back=document.getElementById('did');
+    back.style.background=arr[index];
+</script>
