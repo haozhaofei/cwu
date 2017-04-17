@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	变成大写:<input type="text" onkeypress="test(this)">
+</body>
+</html>
+<script>
+//1（1）
+	function test(obj){
+		obj.value = "这会你啥也写不了了,不信你试试....";
+		console.log(obj.value);
+	}
+
+//1（2）
+	function test(obj){
+		obj.value = "这会你啥也写不了了,不信你试试....";
+		console.log(obj.value);
+	}
+
+//1（3）
+	function test(obj){
+		obj.value = "这会你啥也写不了了,不信你试试....";
+		console.log(obj.value);
+	}
+</script>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scroll方法</title>
+</head>
+<body>
+	<div style="width:500px;height:500px;background:#ccc;"></div>
+	<div id="bid" style="width:500px;height:500px;background:#ddd;"></div>
+</body>
+</html>
+<script>
+//2（1）
+	/*window.onscroll=function(){
+		document.documentElement.scrollTop;//获取滚动条的上距离
+		document.documentElement.scrollLeft;//滚动条的左距离
+	}*/
+
+
+	window.onscroll=function(){
+				//var top = document.documentElement.scrollTop;//获取滚动条的上距离
+                var scrollTop=0;     
+                if(document.documentElement&&document.documentElement.scrollTop){     
+                    scrollTop=document.documentElement.scrollTop;  
+                }else if(document.body){     
+                    scrollTop=document.body.scrollTop;                   
+                } 
+                
+                document.getElementById("bid").innerHTML = scrollTop;
+    }
+
+//2（2）
+	window.onscroll=function(){
+				//var top = document.documentElement.scrollTop;//获取滚动条的上距离
+                var scrollTop=0;     
+                if(document.documentElement&&document.documentElement.scrollTop){     
+                    scrollTop=document.documentElement.scrollTop;  
+                }else if(document.body){     
+                    scrollTop=document.body.scrollTop;                   
+                } 
+                
+                document.getElementById("bid").innerHTML = scrollTop;
+    }
+
+//2（3）
+	window.onscroll=function(){
+				//var top = document.documentElement.scrollTop;//获取滚动条的上距离
+                var scrollTop=0;     
+                if(document.documentElement&&document.documentElement.scrollTop){     
+                    scrollTop=document.documentElement.scrollTop;  
+                }else if(document.body){     
+                    scrollTop=document.body.scrollTop;                   
+                } 
+                
+                document.getElementById("bid").innerHTML = scrollTop;
+    }
+</script>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this事件认识</title>
+</head>
+<body>
+	<ul>
+		<li>刚好遇见你</li>
+		<li>爱情</li>
+		<li>为什么相爱的人不能在一起</li>
+		<li>因为爱情</li>
+		<li>这就是爱</li>
+	</ul>
+</body>
+</html>
+
+<script>
+//3（1）
+	//获取li集合  刻舟求剑  this代表的是本对象(点击谁就是谁了)
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			alert(this.innerHTML);
+			//alert(list[i].innerHTML);
+		}
+	}
+
+
+//3（2）
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			alert(this.innerHTML);
+		}
+	}
+
+
+//3（3）
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			alert(this.innerHTML);
+		}
+	}
+
+</script>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#did{width:300px;height: 300px;position: absolute;display: none;overflow: hidden;}
+	</style>
+</head>
+<body>
+	<img id="mid" src="images/11.jpg" alt="" width="384">
+	<div id="did">
+		<img src="images/11.jpg" alt="">
+	</div>
+</body>
+</html>
+
+<script>
+//4（1）
+	var mid = document.getElementById('mid');
+	var did = document.getElementById('did');
+	//当鼠标移上去 显示图片并指定上边距 和左边距
+	mid.onmouseover = function(){
+		did.style.display = "block";
+		did.style.top = this.offsetTop+"px";
+		did.style.left = this.offsetWidth + this.offsetLeft+ 10+"px";
+	}
+
+	//当鼠标离开隐藏
+	mid.onmouseout = function(){
+		did.style.display = "none";
+	}
+
+	//当鼠标移动的时候 获取鼠标的位置
+	mid.onmousemove = function(ent){
+		var event = window.event || ent;
+		var x = event.clientX - this.offsetLeft;
+		var y = event.clientY - this.offsetTop;
+		//*5:是因为要和放大的图片的宽度是一样的
+		//-150:是因为要在被放大的图片DIV的一半
+		did.scrollTop = y*5-150;
+		did.scrollLeft = x*5-150;
+	}
+
+//4（2）
+	var mid = document.getElementById('mid');
+	var did = document.getElementById('did');
+	mid.onmouseover = function(){
+		did.style.display = "block";
+		did.style.top = this.offsetTop+"px";
+		did.style.left = this.offsetWidth + this.offsetLeft+ 10+"px";
+	}
+
+	mid.onmouseout = function(){
+		did.style.display = "none";
+	}
+	mid.onmousemove = function(ent){
+		var event = window.event || ent;
+		var x = event.clientX - this.offsetLeft;
+		var y = event.clientY - this.offsetTop;
+		did.scrollTop = y*5-150;
+		did.scrollLeft = x*5-150;
+	}
+
+
+//4（3）
+	var mid = document.getElementById('mid');
+	var did = document.getElementById('did');
+	mid.onmouseover = function(){
+		did.style.display = "block";
+		did.style.top = this.offsetTop+"px";
+		did.style.left = this.offsetWidth + this.offsetLeft+ 10+"px";
+	}
+
+	mid.onmouseout = function(){
+		did.style.display = "none";
+	}
+	mid.onmousemove = function(ent){
+		var event = window.event || ent;
+		var x = event.clientX - this.offsetLeft;
+		var y = event.clientY - this.offsetTop;
+		did.scrollTop = y*5-150;
+		did.scrollLeft = x*5-150;
+	}
+</script>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body,ul,li,img,div{padding: 0px;margin: 0px;}
+		#did{width:400px;height: 400px;position: relative;background: #ccc;}
+		#mid{width:40px;height: 40px;position: absolute;background: red;top:250px;left:100px;}
+		#pd0,#pd1,#pd2,#pd3,#pd4,#pd5{display: none;position: absolute;}
+	</style>
+</head>
+<body>
+	<div id="did">
+		<img src="images/pd.png" id="pd0" alt="">
+		<img src="images/pd.png" id="pd1" alt="">
+		<img src="images/pd.png" id="pd2" alt="">
+		<img src="images/pd.png" id="pd3" alt="">
+		<img src="images/pd.png" id="pd4" alt="">
+		<img src="images/pd.png" id="pd5" alt="">
+		<div id="mid"></div>
+	</div>
+</body>
+</html>
+
+<script>
+//5（1）
+	var mid = document.getElementById('mid');
+	window.onkeydown = function(ent){
+		var event = window.event || ent;
+		switch(event.keyCode){
+			case 37 :  //左
+				mid.style.left = Math.max(0,mid.offsetLeft - 5)+"px";
+			break;
+			case 38 : //上
+				mid.style.top = Math.max(0,mid.offsetTop - 5)+"px";
+			break;
+			case 39 : //右
+				mid.style.left = Math.min(360,mid.offsetLeft + 5)+"px";
+			break;
+			case 40 : //下
+				mid.style.top = Math.min(360,mid.offsetTop + 5)+"px";
+			break;
+			case 32 :
+				fire(mid.offsetLeft+18,mid.offsetTop);
+			break;
+		}
+	}
+
+
+	//打飞机/炮弹发射
+	function fire(x,y){
+		for(var i=0;i<6;i++){
+			var pd = document.getElementById('pd'+i);
+			if(pd.style.display != "block"){
+				pd.style.top = y+"px";
+				pd.style.left = x+"px";
+				pd.style.display = "block";
+				return;
+			}
+		}
+	}
+
+	//游戏的主程序
+	function running(){
+		for(var i=0;i<6;i++){
+			var pd = document.getElementById('pd'+i);
+			if(pd.style.display == "block"){
+				pd.style.top = pd.offsetTop -25 +"px";
+				if(pd.offsetTop < -20){
+					pd.style.display = "none";
+				}
+			}
+		}
+		setTimeout("running()",33);
+	}
+
+	running();
+
+//5（2）
+	var mid = document.getElementById('mid');
+	window.onkeydown = function(ent){
+		var event = window.event || ent;
+		switch(event.keyCode){
+			case 37 : 
+				mid.style.left = Math.max(0,mid.offsetLeft - 5)+"px";
+			break;
+			case 38 :
+				mid.style.top = Math.max(0,mid.offsetTop - 5)+"px";
+			break;
+			case 39 : 
+				mid.style.left = Math.min(360,mid.offsetLeft + 5)+"px";
+			break;
+			case 40 : 
+				mid.style.top = Math.min(360,mid.offsetTop + 5)+"px";
+			break;
+			case 32 :
+				fire(mid.offsetLeft+18,mid.offsetTop);
+			break;
+		}
+	}
+	function fire(x,y){
+		for(var i=0;i<6;i++){
+			var pd = document.getElementById('pd'+i);
+			if(pd.style.display != "block"){
+				pd.style.top = y+"px";
+				pd.style.left = x+"px";
+				pd.style.display = "block";
+				return;
+			}
+		}
+	}
+	function running(){
+		for(var i=0;i<6;i++){
+			var pd = document.getElementById('pd'+i);
+			if(pd.style.display == "block"){
+				pd.style.top = pd.offsetTop -25 +"px";
+				if(pd.offsetTop < -20){
+					pd.style.display = "none";
+				}
+			}
+		}
+		setTimeout("running()",33);
+	}
+	running();
+
+
+//5（3）
+	var mid = document.getElementById('mid');
+	window.onkeydown = function(ent){
+		var event = window.event || ent;
+		switch(event.keyCode){
+			case 37 : 
+				mid.style.left = Math.max(0,mid.offsetLeft - 5)+"px";
+			break;
+			case 38 :
+				mid.style.top = Math.max(0,mid.offsetTop - 5)+"px";
+			break;
+			case 39 : 
+				mid.style.left = Math.min(360,mid.offsetLeft + 5)+"px";
+			break;
+			case 40 : 
+				mid.style.top = Math.min(360,mid.offsetTop + 5)+"px";
+			break;
+			case 32 :
+				fire(mid.offsetLeft+18,mid.offsetTop);
+			break;
+		}
+	}
+	function fire(x,y){
+		for(var i=0;i<6;i++){
+			var pd = document.getElementById('pd'+i);
+			if(pd.style.display != "block"){
+				pd.style.top = y+"px";
+				pd.style.left = x+"px";
+				pd.style.display = "block";
+				return;
+			}
+		}
+	}
+	function running(){
+		for(var i=0;i<6;i++){
+			var pd = document.getElementById('pd'+i);
+			if(pd.style.display == "block"){
+				pd.style.top = pd.offsetTop -25 +"px";
+				if(pd.offsetTop < -20){
+					pd.style.display = "none";
+				}
+			}
+		}
+		setTimeout("running()",33);
+	}
+	running();
+</script>
