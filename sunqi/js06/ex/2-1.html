@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scrool方法</title>
+</head>
+<body>
+	<div style="width:500px; height:500px;background:#ccc;">
+	</div>
+	<div id="bid" style="width:500px;height:500px;background:#ddd;"></div>
+</body>
+</html>
+<script>
+    //scroll 滚动事件(常用延迟加载、瀑布流技术)
+    //瀑布流 简单说就是当用户拉动滚动条，当滚动条快要到达页面底部位置时候，我们就让页面加载一部分新的内容。
+	/*window.onscroll=function(){
+		document.documentElement.scrollTop;//获取滚动条的上距离
+		document.documentElement.scrollLeft;//滚动条的左距离
+	}*/
+	window.onscroll=function(){
+		//为当前页面添加滚动条事件
+		//var top=document.documentElement.scrollTop;//获取滚动条的上距离
+		var scrollTop=0;
+		if(document.documentElement&&document.documentElement.scrollTop){
+			scrollTop=document.documentElement.scrollTop;
+		}
+		else if(document.body){
+			scrollTop=document.body.scrollTop;
+		}
+		document.getElementById("bid").innerHTML=scrollTop;
+	}
+</script>

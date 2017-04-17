@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+        #did{
+        	width: 300px;
+        	height:300px;
+        	position:absolute;
+        	display: none;
+        	overflow: hidden;
+        }
+	</style>
+</head>
+<body>
+	<img id="mid" src="images/11.jpg" width="384">
+	<div id="did">
+	    <img src="images/11.jpg" alt="">
+	</div>
+</body>
+</html>
+<script>
+	var mid=document.getElementById("mid");
+	var did=document.getElementById("did");
+	//当鼠标移上去 显示图片 并指定上边距和左边距
+	mid.onmouseover=function(){
+		did.style.display="block";
+		did.style.top=this.offsetTop+"px";
+		did.style.left=this.offsetWidth+this.offsetLeft+10+"px";
+	}
+	//当鼠标移动的时候，获取鼠标的位置
+	mid.onmousemove=function(ent){
+		//使兼容
+		var event=window.event||ent;
+		var x=event.clientX-this.offsetLeft;
+		var y=event.clientY-this.offsetTop;
+		did.scrollTop=y*5-150;
+		did.scrollLeft=x*5-150
+	}
+	//当鼠标离开时隐藏
+	mid.onmouseout=function(){
+		did.style.display="none";
+	}
+</script>

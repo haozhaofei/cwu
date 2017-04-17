@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<!--懒的找一样大小的图片了，所以只能还用这些图片了，(*^__^*) 嘻嘻……-->
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+    *{
+    	padding: 0px;
+    	margin:0px;
+    }
+    #did img{
+    	width:93px;
+    	height:50px;
+    }
+    #rid{
+    	width:300px;
+    	height:300px;
+    	position: absolute;
+    	display: none;
+    	overflow: hidden;
+    }
+	</style>
+</head>
+<body>
+	<img src="images/11.jpg" id="mid" width="385" >
+	<div id="did">
+		<img src="images/11.jpg" >
+		<img src="images/22.jpg" >
+		<img src="images/33.jpg" >
+		<img src="images/44.jpg" >
+	</div>
+	<div id="rid">
+		<img src="images/11.jpg" id="rmg">
+	</div>
+</body>
+<script type="text/javascript">
+    var mid=document.getElementById('mid');
+    var list=document.getElementById('did').getElementsByTagName('img');
+    var rid=document.getElementById("rid");
+    var rmg=document.getElementById("rmg");
+    for(var i=0;i<list.length;i++)
+    {
+    	list[i].onmouseover=function(){       //幻灯片效果
+    		mid.src=this.src;
+    		rmg.src=this.src;
+    	}
+    }
+    mid.onmouseover=function(){
+    	rid.style.display="block";   //移上去显示
+    	rid.style.top=this.offsetTop+"px";   //获取位置
+    	rid.style.left=this.offsetWidth+this.offsetLeft+10+"px";
+    }
+    mid.onmouseout=function(){
+    	rid.style.display="none";    //鼠标移开消失
+    }
+    mid.onmousemove=function(ent){       //当鼠标移动的时候 获取鼠标的位置  
+        var event=window.event||ent;
+        var x=event.clientX-this.offsetLeft;
+        var y=event.clientY-this.offsetTop;
+        rid.scrollTop=y*5-150;
+        rid.scrollLeft=x*5-150;  	
+    }
+
+</script>
+</html>
