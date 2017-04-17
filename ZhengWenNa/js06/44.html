@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>放大镜</title>
+</head>
+<style>
+	#mid{
+		width:137px;
+		height:77px;
+	}
+	#did{
+		width:327px;
+		height:192px;
+		position:absolute;
+		display: none;
+		overflow:hidden;
+	}
+</style>
+<body>
+	<img id="mid" src="img/2.jpg" >
+	<div id="did">
+		<img src="img/2.jpg" width="653px" height="384px"  >
+	</div>
+</body>
+</html>
+<script>
+	var did=document.getElementById('did');
+	var mid=document.getElementById('mid');
+	mid.onmouseover=function(){
+		did.style.display="block";
+		did.style.top=mid.offsetTop+"px";
+		did.style.left=mid.offsetLeft+mid.offsetWidth+10+"px";
+	}
+	mid.onmouseout=function(){
+		did.style.display="none";
+	}
+	mid.onmousemove=function(ent){
+		var e=window.event || ent;
+		var x=e.clientX;
+		var y=e.clientY;
+		did.scrollTop=y*5-38;
+		did.scrollLeft=x*5-69;
+	}
+</script>

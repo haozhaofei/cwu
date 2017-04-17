@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this事件</title>
+</head>
+<style>
+	
+</style>
+<body>
+
+	<ul>
+		<li>轻音乐：</li>
+		<li>kiss the rain</li>
+		<li>whispers of the rain</li>
+		<li>rain flow in you</li>
+		
+	</ul>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName('li');
+	for(i=0;i<list.length;i++)
+	{
+		list[i].onclick=function(){
+			//alert(this.innerHTML);
+			alert(list[i].innerHTML);
+		}
+	}
+</script>
