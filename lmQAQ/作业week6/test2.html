@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>城市级联</title>
+</head>
+<body>
+  <select name="sid" id="sid">
+    <option value="">请选择</option>
+    <option value="1">北京</option>
+    <option value="2">上海</option>
+    <option value="3">广州</option>
+  </select>
+  <select id="cid"></select>
+  <script type="text/javascript">
+  var data=new  Array();
+  data[1]=["海淀","平谷","朝阳","东城","西城"];
+  data[2]=["静安","虹口","徐汇","嘉定","奉贤"];
+  data[3]=["越秀","黄埔","荔湾","天河","白云"];
+
+  var sid=document.getElementById('sid');
+  var cid=document.getElementById('cid');
+  sid.onchange=function(){
+    v=this.value;
+    cid.length=0;
+    for (var i = 0; i < data[v].length; i++) {
+      cid.add(new Option(data[v][i],i));
+    }
+  }
+  </script>
+</body>
+</html>
