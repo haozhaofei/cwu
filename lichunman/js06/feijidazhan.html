@@ -1,38 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>Document</title>
+        <title>飞机大战</title>
         <style>
-            div{
-            	margin:0px;
-            	padding:0px;
-            }
+            div{margin:0px;padding:0px;}
             
-		#did{
-			width:500px;
-			height: 500px;
-			position: relative;
-			background: url('./images/bg2.png') no-repeat;
-            overflow:hidden;
-         }
-		#mid{
-			width:40px;
-			height: 80px;
-			position: absolute;
-			background: black;
-			top:400px;
-			left:220px;
-		}
-
-		#pd0,#pd1,#pd2,#pd3,#pd4,#pd5{
-			display: none;
-			position: absolute;
-		}
+		#did{width:500px;height: 500px;position: relative;background: url('./images/bg2.png') no-repeat;
+             overflow:hidden;}
+		#mid{width:40px;height: 40px;position: absolute;background: black;top:400px;left:220px;}
+		#pd0,#pd1,#pd2,#pd3,#pd4,#pd5{display: none;position: absolute;}
            
         </style>
     </head>
-    <center>
     <body>
         <div id="did">
 		<img src="images/pd.png" id="pd0" alt="">
@@ -43,8 +23,7 @@
 		<img src="images/pd.png" id="pd5" alt="">
 		<div id="mid"></div>
 	</div>
-	</body>
-	</center>
+	    </body>
 </html>
 <script>
     var mid = document.getElementById('mid');
