@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>four</title>
+	<style>
+	#did{
+		width:200px;
+		height:200px;
+		position:absolute;
+		display:none;
+		overflow:hidden;
+
+		}
+	</style>
+</head>
+<body>
+	<img id="mid" src="images/04.jpg" width="384">
+	<div id="did">
+	<img src="images/04.jpg">
+	</div>
+</body>
+</html>
+<script>
+	var mid=document.getElementById("mid");
+	var did=document.getElementById("did");
+	// 放大镜显示，显示图片与原图等高，宽是往右挪的宽
+	mid.onmouseover=function(){
+		did.style.display="block";
+		did.style.top=this.offsetTop+"px";
+		did.style.left=this.offsetWidth+this.offsetLeft+10+"px";
+	}
+	mid.onmouseout=function(){
+		did.style.display="none";
+	}
+	mid.onmousemove=function(ent){
+		//兼容问题处理
+		var event=window.event||ent;
+		var x=event.clientX-this.offsetLeft;
+		var y=event.clientY-this.offsetTop;
+		
+//*后的数必须小于等于原图的大小，——的数根据实际情况改变
+		did.scrollTop=y*1-100;
+		did.scrollLeft=x*2-255;
+	}
+</script>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>four-2</title>
+	<style>
+	#two{
+		width:200px;
+		height:200px;
+		position: absolute;
+		display:none;
+		overflow: hidden;
+	}
+	</style>
+</head>
+<body>
+
+	<img id="one" src="images/1.bmp" width="300">
+	<div id="two">
+	<img src="images/1.bmp">
+	</div>
+</body>
+</html>
+<script>
+	var one=document.getElementById("one");
+	var two=document.getElementById("two");
+
+	one.onmouseover=function(){
+		two.style.display="block";
+		two.style.top=this.offsetTop+"px";
+		two.style.left=this.offsetWidth+this.offsetLeft+10+"px";
+		}
+	one.onmouseout=function(){
+		two.style.display="none";
+	}
+	one.onmousemove=function(ent){
+		var event=window.event||ent;
+		var x=event.clientX-this.offsetLeft;
+		var y=event.clientY-this.offsetTop;
+		two.scrollTop=y*2-180;
+		two.scrollLeft=x*2-160
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>three-3</title>
+	<style>
+		#sec{
+			width:300px;
+			height:300px;
+			display:none;
+			position:absolute;
+			overflow:hidden;
+		}
+	</style>
+</head>
+
+<body>
+<img id="fir" src="images/33.jpg" width="400" >
+	<div id="sec">
+	<img src="images/33.jpg" ></div>
+</body>
+</html>
+<script>
+	var one=document.getElementById("fir");
+	var two=document.getElementById("sec");
+	one.onmouseover=function(){
+		two.style.display="block";
+		two.style.top=this.offsetTop+"px";
+		two.style.left=this.offsetLeft+this.offsetWidth+"px";
+	}
+	one.onmouseout=function(){
+		two.style.display="none";
+	}
+	one.onmousemove=function(ent){
+		var event=window.event||ent;
+		var x=event.clientX-this.offsetLeft;
+		var y=event.clientY-this.offsetTop;
+	
+		two.scrollTop=y*5-150;
+		two.scrollLeft=x*5-150;
+	}
+</script>

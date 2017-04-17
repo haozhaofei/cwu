@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scroll使用方法（滚动事件）</title>
+</head>
+<body>
+<p>滚动条显示所在行数：</p>
+	<div style="width:500px;height:590px;background:azure;"></div>
+	<div id="bid" style="width:500px;height:500px;background:teal;">	
+	</div>
+</body>
+</html>
+<script>
+	/*window.onscroll=function(){
+		
+		document.write(document.documentElement.scrollTop);
+		document.documentElement.scrollLeft;
+	}*/
+
+	window.onscroll=function(){
+		var scrollTop=0;
+		if(document.documentElement&&document.documentElement.scrollTop){
+			scrollTop=document.documentElement.scrollTop;
+		}else if(documment.body){
+			scrollTop=document.body.scrollTop;
+		}
+		document.getElementById("bid").innerHTML=scrollTop;
+	}
+
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>two-2</title>
+</head>
+<body>
+<p>滚动条显示所在行数：</p>
+	<div style="width:500px; height:500px;background:gray;"></div>
+	<div  id="mid" style="width:300px; height:200px;background:green;"></div>
+</body>
+</html>
+<script>
+	window.onscroll=function(){
+		var scrollTop=0;
+		if(document.documentElement&&document.documentElement.scrollTop){
+			scrollTop=document.documentElement.scrollTop;
+		}else if(document.body)
+		{  
+			scrollTop=document.body.scrollTop;
+		}
+		document.getElementById("mid").innerHTML=scrollTop;
+	}
+</script>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>two-3</title>
+</head>
+<style>
+	div{
+		width:400px;
+		height:400px;
+		background:azure;
+	}
+	#two{
+		background:teal;
+	}
+</style>
+<body>
+	<p>滚动条显示所在行数：</p>
+	<div></div>
+	<div id="two"></div>
+</body>
+</html>
+<script>
+	window.onscroll=function(){
+		var scrollTop=0;
+		if(document.documentElement&&document.documentElement.scrollTop){
+			scrollTop=document.documentElement.scrollTop;
+		}else if(document.body){
+			scrollTop=document.body.scrollTop;
+		}
+		document.getElementById("two").innerHTML=scrollTop;
+	}
+</script>
