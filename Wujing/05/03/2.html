@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="fun1()">1</button>
+	<button id="nid">2</button>
+	<button id="mid">3</button>
+</body>
+</html>
+<script>
+	function fun1 () {
+		alert("taday is Mon");
+	}
+	document.getElementById('nid').onclick = function(){
+		alert("小乔好美");
+	}
+	var mid = document.getElementById('mid');
+	   mid.addEventListener('click',function(){
+	   		alert('我喜欢小乔');
+	   });
+</script>

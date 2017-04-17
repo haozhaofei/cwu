@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>城市级联</title>
+</head>
+<body>
+	<select name="sid" id="sid">
+		<option value="">-请选择-</option>
+		<option value="1">北京</option>
+		<option value="2">内蒙古</option>
+		<option value="3">黑龙江</option>
+		<option value="4">吉林</option>
+		<option value="5">辽宁</option>
+	</select>
+	<select id="cid"></select>
+	<script type="text/javascript">
+		var data = new Array();
+		data[1] = ["朝阳区","海淀区","怀柔区","昌平区"];
+		data[2] = ["呼和浩特","呼伦贝尔","包头","鄂尔多斯"];
+		data[3] = ["哈尔滨","大庆","佳木斯","齐齐哈尔"];
+		data[4] = ["长春","白城","四平"];
+		data[5] = ["沈阳","大连","丹东","葫芦岛"];
+
+		//获取sid并添加change事件
+		var sid = document.getElementById("sid");
+		var cid = document.getElementById("cid");
+		sid.onchange = function(){
+			v = this.value;
+			cid.length = 0;
+			for(var i=0;i<data[v].length;i++){
+				cid.add(new Option(data[v][i],i));
+			}
+		}
+	</script>
+	
+</body>
+</html>

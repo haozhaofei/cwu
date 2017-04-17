@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript实例--无缝滚动（背景移动-实现地图显示）-2</title>
+	
+</head>
+<style>
+		div{
+			margin: 0px;
+			padding: 0px;
+		}
+		#did{
+			width: 500px;
+			height: 500px;
+			background: url("images/bg2.png") no-repeat 0px -1036px;
+			border: 1px solid blue;
+			position: relative;
+			overflow: hidden;
+		}
+	</style>
+	<body>
+		<div id="did">
+			
+		</div>
+		
+	</body>
+</html>
+		<script>
+			var did = document.getElementById("did");
+			var bgh=-1036;
+
+			//游戏主线程
+			function running(){
+				bgh+=2;
+				if(bgh>=-268){
+					bgh=-1036;
+				}
+				did.style.backgroundPosition="0px "+bgh+"px"; //"0px "中有空格
+                                
+                 setTimeout("running()",33);
+				
+				
+			}
+
+			running();	
+		</script>

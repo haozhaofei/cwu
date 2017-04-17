@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件调用</title>
+</head>
+<body>
+	<button onclick="fun1()">1</button>
+	<button id="min">2</button>
+	<button id="mon">3</button>
+</body>
+</html>
+<script>
+	function fun1(){
+		alert("happy");
+	}
+
+	document.getElementById('min').onclick=function(){
+		alert("sad");
+	}
+
+	var mon=document.getElementById('mon');
+	mon.addEventListener('click',function(){
+		alert("susan");
+	});
+</script>

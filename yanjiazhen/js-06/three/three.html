@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>three</title>
+<body>
+	<p>this事件认识</p>
+</body>
+<p>请点餐：</p>
+<ul>
+	<li>1.麻辣烫</li>
+	<li>2.烤串</li>
+	<li>3.臭豆腐</li>
+	<li>4.辣条</li>
+	<li>5.烤翅</li>
+</ul>
+</html>
+<script>
+	var li=document.getElementsByTagName("li");
+
+	for(var i=0;i<li.length;i++){
+	li[i].onclick=function(){
+		alert(this.innerHTML);
+	}
+}</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>three-two</title>
+</head>
+<body>
+<p>请选择游戏类</p>
+	<ul>
+		<li>1.蜘蛛纸牌</li>
+		<li>2.开心消消乐</li>
+		<li>3.找地雷</li>
+		<li>4.城管来了</li>
+		<li>5.保卫萝卜</li>
+
+	</ul>
+</body>
+</html>
+<script>
+	var choose=document.getElementsByTagName("li");
+	for(var i=0;i<choose.length;i++){
+		choose[i].onclick=function(){
+			alert(this.innerHTML)
+		}
+	}
+</script>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>three-3</title>
+</head>
+<body>
+	<p>请选择你想学习的课程</p>
+	<ul>
+	
+		<li>1.数据库</li>
+		<li>2.数据结构</li>
+		<li>3.数字电路</li>
+		<li>4.数据组成原理</li>
+		<li>5.度不想选</li>
+	</ul>
+</body>
+</html>
+<script>
+	var some=document.getElementsByTagName("li");
+	for(var i=0;i<some.length;i++){
+		some[i].onclick=function(){
+			alert(this.innerHTML);
+		}
+	}
+</script>

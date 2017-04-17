@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易编辑器(加粗,下滑线,倾斜,字体变大/变小) </title>
+</head>
+<style>
+	#second{
+		margin-top: 10px;
+	}
+	div{
+		margin-left: 450px;
+	}
+</style>
+<body>
+  <div>
+	<button onclick="fun1()">加粗</button>
+	<button onclick="fun2()">下划线</button>
+	<button onclick="fun3()">倾斜</button>
+	<button onclick="fun4()">字体变大</button>
+	<button onclick="fun5()">字体变小</button>
+ </div>
+ <div id="second">
+	<textarea rows="10" cols="40" id="txt"></textarea>
+ </div>
+
+</body>
+</html>
+<script>
+	var txt=document.getElementById('txt');
+	function fun1(){
+		txt.style.fontWeight="bold";	
+	}
+	function fun2(){
+		txt.style.textDecoration="underline";
+	}
+	function fun3(){
+		txt.style.fontStyle="italic";
+	}
+	function fun4(){
+		txt.style.fontSize="2em";
+	}
+	function fun5(){
+		txt.style.fontSize="0.5em";
+	}
+</script>

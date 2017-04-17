@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="fun1(this)">1</button>
+	<button id="min">2</button>
+</body>
+</html>
+<script>
+	window.onload=function(){
+		function fun1(hui){
+			hui.style.color="pink";
+		}
+
+		document.getElementById('min').onclick=function(){
+			this.style.color="green";
+		}
+	}
+</script>

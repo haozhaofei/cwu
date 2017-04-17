@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>1.abc</li>
+		<li>2.def</li>
+		<li>3.ghi</li>
+		<li>4.jkl</li>
+		<li>5.mno</li>
+	</ul>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick=function(){
+			alert(this.innerHTML);
+		}
+		
+	}
+</script>

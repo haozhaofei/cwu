@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#did1,#did2{padding: 0px;margin: 0px;}
+		#n4,#n2,#n3{margin-left: 3px;}
+		#m2,#m3,#m4{display: none;}
+	</style>
+</head>
+<body>
+	<div id="did1" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="photos/nice.png" width="440" height="240" id="m1">
+		<img src="photos/好多花.png" width="440" height="240" id="m2">
+		<img src="photos/good.png" width="440" height="240" id="m3">
+		<img src="photos/抱倩云.png" width="440" height="240" id="m4">
+	</div>
+	<div id="did2" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="photos/nice.png" width="102" height="75" id="n1"   onmouseover="show(1)">
+		<img src="photos/好多花.png" width="102" height="75" id="n2"   onmouseover="show(2)">
+		<img src="photos/good.png" width="102" height="75" id="n3"   onmouseover="show(3)">
+		<img src="photos/抱倩云.png" width="102" height="75" id="n4"   onmouseover="show(4)">
+	</div>
+</body>
+</html>
+<script>
+	var m=0;
+	var time=null;
+	function doStart(){
+		if(time==null)
+		time=setInterval(function(){
+			m++;
+			show(m);
+			if(m>=4)
+				{m=0;}
+		},1000)
+	}
+	doStart();
+	function doStop(){
+		if(time!=null){clearInterval(time);}
+		
+		time=null;
+	}
+	function show(x){
+		for(var i=1;i<=4;i++)
+		{
+			var img=document.getElementById("m"+i);
+			if(x==i)
+			{
+				
+				img.style.display="block";
+			}
+			else{
+				img.style.display="none";
+			}
+		}
+	}
+
+</script>

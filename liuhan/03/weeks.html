@@ -1,0 +1,31 @@
+<!doctype html>          <!--2. 显示中文的星期几。-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>中文显示星期</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	var date = new Date();
+	var w = date.getDay();
+	//var w = 7;
+	switch (w){
+		case 1: document.write("星期一");
+		break;
+		case 2: document.write("星期二");
+		break;
+		case 3: document.write("星期三");
+		break;
+		case 4: document.write("星期四");
+		break;
+		case 5: document.write("星期五");
+		break;
+		case 6: document.write("星期六");
+		break;
+		case 7: document.write("星期天");
+		break;
+	}
+</script>

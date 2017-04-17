@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文本框内禁止输入</title>
+</head>
+<body>
+	输入文本：<input type="text" onkeypress="fun(this)">
+</body>
+</html>
+<script>
+	function fun(m){
+		m.value = "无法输入";
+		console.log(m.value);
+	}
+</script>
+<!--
+<script>
+	function fun(obj){
+		obj.value = "禁止输入";
+		console.log(obj.value);
+	}
+</script>
+
+
+<script>
+	function fun(m){
+		m.value = "该文本框禁止输入";
+		console.log(m.value);
+	}
+</script>
+-->

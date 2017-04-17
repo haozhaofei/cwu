@@ -1,0 +1,64 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+    #mid{
+    	width:400px;
+    	height:460px;
+    }
+    #tu{
+		width:100px;
+		height:90px;
+	}
+	#bid{
+		width:150px;
+		height:150px;
+		overflow:hidden; 
+		position:absolute;
+		display:none;
+    }
+</style>
+<body>
+	<img id="mid" src="images/2.jpeg" >
+	<div id="did">
+	    <img src="images/2.jpeg"  id="tu">
+		<img src="images/7.jpeg"  id="tu">
+		<img src="images/3.jpeg"  id="tu">
+		<img src="images/4.jpeg"  id="tu">
+	</div>
+	<div id="bid">
+		<img src="images/2.jpeg" id="dm">
+	</div>
+</body>
+</html>
+<script>
+     var mid=document.getElementById("mid");
+     var dm=document.getElementById("dm");
+	 var list=document.getElementById("did").getElementsByTagName("img");
+	for(var i=0;i<list.length;i++){
+		list[i].onmouseover=function(){
+			mid.src=this.src;
+			dm.src=this.src;
+		}
+	}
+    var bid=document.getElementById("bid");
+    mid.onmouseover=function(){
+        bid.style.display="block";
+        bid.style.top=this.offsetTop+"px";
+        bid.style.left=this.offsetWidth+this.offsetLeft+10+"px";
+    }
+    mid.onmouseout=function(){
+    	bid.style.display="none";
+    }
+    mid.onmousemove=function(ent){
+        var event=window.event || ent;
+        var x=event.clientX-this.offsetLeft;
+        var y=event.clientY-this.offsetTop;
+        bid.scrollTop=y*2-60;                  
+        bid.scrollLeft=x*2-100;
+    }
+</script>

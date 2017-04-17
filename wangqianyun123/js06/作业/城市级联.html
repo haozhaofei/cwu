@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>城市级联</title>
+</head>
+<body>
+	<h3 id="hid">城市选择</h3>
+	<select name="sid" id="sid">
+		<option value="">--请选择--</option>
+		<option value="1">北京</option>
+		<option value="2">河北</option>
+		<option value="3">天津</option>
+		<option value="4">河南</option>
+		<option value="5">山西</option>
+	</select>
+	<select name="cid" id="cid"></select>
+
+	<script>
+		var data=new Array();
+		data[1]=["西城区","朝阳区","昌平区","海淀区"];
+		data[2]=['石家庄','保定','邯郸','邢台'];
+		data[3]=['河东区','河西区','河北区','南开区'];
+		data[4]=['郑州','开封','洛阳','周口'];
+		data[5]=['太原','大同','吕梁','运城'];
+
+		var sid=document.getElementById('sid');
+		var cid=document.getElementById('cid');
+
+		sid.onchange=function(){
+			v=this.value;
+			cid.length=0;
+
+			for(var i=0;i<data[v].length;i++){
+				cid.add(new Option(data[v][i],i));
+			}
+		} 
+	</script>
+</body>
+</html>

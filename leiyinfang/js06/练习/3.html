@@ -1,0 +1,26 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this</title>
+</head>
+<body>
+	<ul>
+		<li>我的</li>
+		<li>你的</li>
+		<li>他的的</li>
+		<li>大家的</li>
+	</ul>
+</body>
+</html>
+
+<script>
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			alert(this.innerHTML);
+		}
+	}
+
+</script>

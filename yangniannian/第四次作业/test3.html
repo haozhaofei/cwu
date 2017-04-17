@@ -1,0 +1,54 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>缩略图点击并替换显示</title>
+</head>
+<style>
+	#one img {
+		width: 720px;
+		padding:3px;
+
+	}
+	#two img{
+		width:170px;
+		height: 150px;
+		padding:3px;
+	}
+	#n2,#n3,#n4{
+		display: none;
+	}
+</style>
+<body>
+	<div id="one">
+		<img src="img/01.jpg" width="683px" height="384px" id="n1" alt="">
+		<img src="img/02.jpg" width="683px" height="384px" id="n2" alt="">
+		<img src="img/03.jpg" width="683px" height="384px" id="n3" alt="">
+		<img src="img/04.jpg" width="683px" height="384px" id="n4" alt="">
+	</div>
+	<div id="two">
+		<img src="img/01.jpg" width="171px" height="96px" id="m1" onclick="show(1)">
+		<img src="img/02.jpg" width="171px" height="96px" id="m2" onclick="show(2)">
+		<img src="img/03.jpg" width="171px" height="96px" id="m3" onclick="show(3)">
+		<img src="img/04.jpg" width="171px" height="96px" id="m4" onclick="show(4)">
+	</div>
+</body>
+</html>
+
+<script>
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var nimage=document.getElementById("n"+i);
+			var mimg=document.getElementById("m"+i);
+			if(i==x)
+			{
+				nimage.style.display="block";
+			}
+			else
+			{
+				nimage.style.display="none";
+			}
+		}
+	}
+</script>

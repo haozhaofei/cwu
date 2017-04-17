@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>幻灯片+放大镜</title>
+</head>
+<style>
+	div,ul,li,img{padding: 0px;margin:0px;}
+	#did{width: 384px;}
+	#m2,#m3,#m4{display: none;}
+	#i1,#i2,#i3,#i4{display: none;}
+	#mid1,#mid2,#mid3,#mid4{padding: 8px;float: left;}
+	#big{width:300px;height: 300px;position: absolute;display: none;overflow: hidden;}
+</style>
+
+<body>
+
+	<div id="did" onmouseout="doStart()" onmouseover="doBig()" >
+		<img src="images/11.jpg" width="384" id="m1" alt="">
+		<img src="images/22.jpg" width="384" id="m2" alt="">
+		<img src="images/33.jpg" width="384" id="m3" alt="">
+		<img src="images/44.jpg" width="384" id="m4" alt="">
+	</div>
+	<div id="big">
+		<img src="images/11.jpg" id="i1" alt="">
+		<img src="images/22.jpg" id="i2" alt="">
+		<img src="images/33.jpg" id="i3" alt="">
+		<img src="images/44.jpg" id="i4" alt="">
+	</div>	
+	<div id="mid1" onclick="doStop1(1)" onmouseout="doStart()">
+	<img src="images/11.jpg" width="80" height="48" alt="">
+</div>
+<div id="mid2" onclick="doStop1(2)" onmouseout="doStart()">
+	<img src="images/22.jpg" width="80" height="48" alt="">
+</div>
+<div id="mid3" onclick="doStop1(3)" onmouseout="doStart()">
+	<img src="images/33.jpg" width="80" height="48" alt="">
+</div>
+<div id="mid4" onclick="doStop1(4)" onmouseout="doStart()">
+	<img src="images/44.jpg" width="80" height="48" alt="">
+</div>
+
+</body>
+</html>
+<script>
+    var did = document.getElementById('did');
+    var big = document.getElementById('big');
+	
+	var m = 0;
+	var time = null;
+    
+    //显示图片  目的就是隐藏三个,显示其中的一个
+	function show1(x){
+		for(var i=1;i<=4;i++){
+			var img = document.getElementById("m"+i);
+			if(i == x){
+				img.style.display = "block";
+			}else{
+				img.style.display = "none";
+			}
+		}
+	}
+
+	function show2(x){
+		for(var i=1;i<=4;i++){
+			var img = document.getElementById("i"+i);
+			if(i == x){
+				img.style.display = "block";
+			}else{
+				img.style.display = "none";
+			}
+		}
+	}
+
+	function doStart(){
+		big.style.display="none";
+		if(time == null){
+			time = setInterval(function(){
+				m++;
+				show1(m);
+				if(m >=4){
+					m = 0;
+				}
+			},1000)
+		}
+		
+	}
+
+	doStart();
+
+    function doStop1(y){
+		if(time != null){
+			show1(y);
+			m=y;
+			clearInterval(time);//调用setInterval()函数时所获得的返回值，使用该返回标识符作为参数，可以取消该setInterval()所设定的定时执行操作。
+		}
+		time = null;
+	}
+    
+
+    function doStop2(y){
+		if(time != null){
+			show2(y);
+			if (y==0) {
+				show2(4);
+			};
+			clearInterval(time);//调用setInterval()函数时所获得的返回值，使用该返回标识符作为参数，可以取消该setInterval()所设定的定时执行操作。
+		}
+		time = null;
+	}
+
+
+	function doBig(){
+    	big.style.display="block";
+    	big.style.top=did.offsetTop+"px";
+    	big.style.left=did.offsetLeft+did.offsetWidth+10+"px";
+    	doStop2(m);
+    }
+
+	
+    
+    did.onmousemove=function(ent){
+    	var event=window.event || ent;
+    	var x=event.clientX-this.offsetLeft;
+    	var y=event.clientY-this.offsetTop;
+    	big.scrollTop=y*5-150;
+    	big.scrollLeft=x*5-150;
+    }
+
+	
+</script>

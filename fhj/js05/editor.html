@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>editor</title>
+</head>
+<body>
+	
+<center>
+
+<div unselectable="on" align="center" style="
+height:360px; 
+width:400px; 
+background-color:menu; 
+">
+<br>
+<div id="did" contenteditable align="left" style=" 
+	height:250px; 
+	width:350px; 
+	background-color:white;
+	font-face:Arial; 
+	padding:2; 
+	border:inset powderpink; 
+	scrollbar-base-color:powderpink; 
+	overflow-auto;">
+</div>
+<input type="button" value="粗体" unselectable="on" onclick='document.execCommand("Bold"); did.focus();'>
+<input type="button" value="斜体" unselectable="on" onclick='document.execCommand("Italic"); did.focus();'>
+<input type="button" value="下划线" unselectable="on" onclick='document.execCommand("Underline"); did.focus();'>
+<input type=button value="黑体" onclick=document.execCommand('FontName',false,'黑体')>
+<input type=button value="9号字" onclick=document.execCommand('FontSize',false,9)>
+<input type=button value="红色字" onclick=document.execCommand('ForeColor',false,'#ff0000')>
+<br>
+</div>
+</center>
+
+</body>
+</html>
+<script>
+	
+</script>

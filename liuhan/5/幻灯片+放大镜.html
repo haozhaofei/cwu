@@ -1,0 +1,83 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>幻灯片+放大镜</title>
+</head>
+<style>
+		div,img,ul,li{
+			padding: 0;
+			margin: 0;
+		}
+		#did img{
+			width: 342px;
+			height: 192px;  /*240px*/
+		}
+		#list img{
+			width:83px;/*93px;*/
+			height:40px;/*50px;*/
+		}
+		#bigpic{
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			display: none;
+			overflow: hidden; 
+		}
+
+	</style>
+<body>
+	<!--幻灯片大图-->
+	<div id="did">
+		<img id="mid" src="images/1.jpg" alt="">
+	</div>
+	<!--缩略图-->
+	<div id="list">
+		<img src="images/1.jpg" id="m1" alt="">
+		<img src="images/2.jpg" id="m1" alt="">
+		<img src="images/3.jpg" id="m1" alt="">
+		<img src="images/4.jpg" id="m1" alt="">
+	</div>
+	<!--放大镜大图-->
+	<div id="bigpic">
+		<img src="images/1.jpg" id="p1" alt="">
+	</div>
+</body>
+</html>
+
+<script>
+	//幻灯片-js
+	
+	var mid = document.getElementById("mid");
+	var p1 = document.getElementById("p1");
+	var bigpic = document.getElementById("bigpic");
+
+	var list= document.getElementById("list").getElementsByTagName("img");
+	for(var i=0;i<list.length;i++){
+		list[i].onmouseover = function(){
+			mid.src = this.src;  //幻灯片大图
+			p1.src = this.src;  //放大镜大图
+		}
+	}
+	//鼠标移上mid(幻灯片大图)时,显示放大的图片并设置其出现的位置
+	mid.onmouseover = function(){
+		bigpic.style.display = "block";
+		bigpic.style.top = this.offsetTop + "px";
+		bigpic.style.left = this.offsetLeft + this.offsetWidth + 10 + "px";
+	}
+	//鼠标从mid(幻灯片大图)上移开时,放大镜大图隐藏
+	mid.onmouseout = function(){
+		bigpic.style.display = "none";
+	}
+	//鼠标在mid(幻灯片大图)上移动时
+	mid.onmousemove = function(ent){
+		var event = window.event || ent;
+
+		var x = event.clientX - this.offsetLeft;
+		var y = event.clientY - this.offsetTop;
+
+		bigpic.scrollTop = y*4-200;//4：4=bigpic的宽度/mid的宽度
+		bigpic.scrollLeft = x*4-200;//-200：=bigpic图片div的一半
+	}
+</script>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>城市级联</title>
+</head>
+<style>
+	#province{
+		float: left;
+	}
+	#c1,#c2,#c3{
+		display: none;
+	}
+</style>
+<body>
+	<select name="城市" id="province" >
+		<option value="">请选择</option>
+		<option value="1">北京</option>
+		<option value="2">山东省</option>
+		<option value="3">河南省</option>
+	</select>
+	<select id="c1" >
+		<option value="">请选择</option>
+		<option value="东城区">东城区</option>
+		<option value="朝阳区">朝阳区</option>
+		<option value="海淀区">海淀区</option>
+		<option value="西城区">西城区</option>
+		<option value="其他区">其他区</option>
+	</select>
+	<select id="c2" >
+		<option value="">请选择</option>
+		<option value="济南市">济南市</option>
+		<option value="菏泽市">菏泽市</option>
+		<option value="青岛市">青岛市</option>
+		<option value="烟台市">烟台市</option>
+		<option value="潍坊市">潍坊市</option>
+		<option value="其他市">其他市</option>
+	</select>
+	<select id="c3" >
+			<option value="">请选择</option>
+		<option value="郑州市">郑州市</option>
+		<option value="开封市">开封市</option>
+		<option value="洛阳市">洛阳市</option>
+		<option value="商丘市">商丘市</option>
+		<option value="其他市">其他市</option>
+	</select>
+</body>
+</html>
+<script>
+	province.onchange = function(){
+		for(var i=1;i<=3;i++){
+			if(i == this.value){
+				document.getElementById("c"+i).style.display = "block";
+			}else{
+				document.getElementById("c"+i).style.display = "none";
+			}
+		}
+	}
+</script>

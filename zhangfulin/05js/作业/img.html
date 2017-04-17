@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	div,img{
+		padding: 0px;
+		margin: 0px;
+	}
+	#bid{
+		left: 20px;
+		width: 683px;
+		border: 7px solid #CFCFCF;
+	}
+	#p2,#p3,#p4,#p5,#p6,#p7{
+		display: none;
+	}
+</style>
+<body>
+<div id="bid">
+	<img src="images/01.jpg" width="683px" height="384px" id="p1" alt="">
+	<img src="images/02.jpg" width="683px" height="384px" id="p2" alt="">
+	<img src="images/03.jpg" width="683px" height="384px" id="p3" alt="">
+	<img src="images/04.jpg" width="683px" height="384px" id="p4" alt="">
+	<img src="images/11.jpg" width="683px" height="384px" id="p5" alt="">
+	<img src="images/22.jpg" width="683px" height="384px" id="p6" alt="">
+	<img src="images/33.jpg" width="683px" height="384px" id="p7" alt="">
+</div>
+<div id="did">
+	<img src="images/01.jpg" width="136" height="77px" onclick="show(1)" 
+	alt="">
+	<img src="images/02.jpg" width="136" height="77px" onclick="show(2)"
+	alt="">
+	<img src="images/03.jpg" width="136" height="77px" onclick="show(3)"
+	alt="">
+	<img src="images/04.jpg" width="136" height="77px" onclick="show(4)"
+	alt="">
+	<img src="images/11.jpg" width="136" height="77px" onclick="show(5)"
+	alt="">
+	<img src="images/22.jpg" width="136" height="77px" onclick="show(6)"
+	alt="">
+	<img src="images/33.jpg" width="136" height="77px" onclick="show(7)"
+	alt="">
+</div>
+</body>
+</html>
+<script>
+	function show(n){
+		for (i=1;i<7;i++) 
+		{
+			var img=document.getElementById('p'+i);
+			if(i==n){
+				img.style.display="block";
+			}else{
+				img.style.display="none"
+			}
+	    }
+	}
+</script>

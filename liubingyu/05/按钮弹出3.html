@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+  <button onclick="fun1()">one</button>
+  <button id="nid">two</button>
+  <button id="mid">three</button>
+	
+</body>
+</html>
+<script>
+  function fun1(){
+  	alert("WE win");
+  }
+  document.getElementById('nid').onclick = function(){
+  	alert("the best Team,WE");
+  }
+  var mid = document.getElementById('mid');
+      mid.addEventListener('click',function(){
+      	alert('KEEP YOUER DEAMER');
+      });
+</script>

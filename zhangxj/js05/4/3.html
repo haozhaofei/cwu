@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="fun1(this)">点我</button>
+	<button id="bid">再点我</button>
+</body>
+</html>
+<script>
+	window.onload=function(){
+		function fun1(obj){
+		obj.style.color="red";
+		}
+
+		document.getElementById('bid').onclick=function(){
+			this.style.color="blue";
+		}	}
+</script>

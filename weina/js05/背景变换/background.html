@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	div{width: 1000px;height: 800px;}
+	</style>
+</head>
+
+<body>
+
+    <input type="button" value="换图片" onclick="background()" />
+    <img  src="images/09.jpg" id='picture1' onclick="background()"/>
+    <input id="Radio1" type="radio"  value="05" onclick="background(this)"/>
+    <input id="Radio2" type="radio"  value="06" onclick="background(this)"/>
+    <input id="Radio3" type="radio"  value="07" onclick="background(this)"/>
+    <input id="Radio4" type="radio"  value="08" onclick="background(this)"/>
+
+</body>
+</html>
+<script>
+	  function background(radio) {
+		document.getElementById('picture1').setAttribute('src', 'images/' + radio.getAttribute('value') + '.jpg');
+	}
+</script>

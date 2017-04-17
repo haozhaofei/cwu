@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this事件循环弹框</title>
+</head>
+<body>
+<ul>
+	<li>刚好遇见你</li>
+	<li>一人我饮酒醉</li>
+	<li>醉吧那佳人成双对</li>
+	<li>两眼是独相随</li>
+</ul>
+	
+</body>
+</html>
+
+<script>
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			alert(this.innerHTML);
+		}
+	}
+</script>

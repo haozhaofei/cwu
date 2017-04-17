@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	div,ul,li,img{padding: 0px;margin:0px;}
+	#did img{width:800px;height:533px;}
+	#bid img{width:195px;}
+
+	#m2,#m3,#m4{display: none;}
+</style>
+<body>
+
+	<div id="did" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="images/01.jpg"  id="m1" alt="">
+		<img src="images/02.jpg"  id="m2" alt="">
+		<img src="images/03.jpg"  id="m3" alt="">
+		<img src="images/04.jpg"  id="m4" alt="">
+	</div>	
+		<div id="bid" >
+		<img src="images/01.jpg" width="195" height="133" id="a1" onclick="show(1)">
+		<img src="images/02.jpg" width="195" height="133" id="a2" onclick="show(2)">
+		<img src="images/03.jpg" width="195" height="133" id="a3" onclick="show(3)">
+		<img src="images/04.jpg" width="195" height="133" id="a4" onclick="show(4)">
+	</div>	
+</body>
+</html>
+<script>
+
+	//显示图片  目的就是隐藏三个,显示其中的一个
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var simg = document.getElementById("a"+i);
+			var limg = document.getElementById("m"+i);
+			if(i == x){
+				limg.style.display = "block";
+			}else{
+				limg.style.display = "none";
+			}
+		}
+	}
+</script>

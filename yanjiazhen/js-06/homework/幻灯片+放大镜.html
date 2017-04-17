@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>幻灯片+放大镜</title>
+	<style>
+	div,img{
+		padding:0px;
+		margin:0px;
+	}
+	#did img{
+		width:300px;
+		height:200px;	
+	}
+	#list img{
+		width:72px;
+		height:40px;
+	}
+	#fang {
+		width:200px;
+		height:200px;
+		position:absolute;
+		overflow: hidden;
+		display:none;
+
+	}
+	</style>
+</head>
+<body>
+<center>
+	<div id="did">
+		<img src="images/01.jpg" id="one">
+	</div>
+	<div id="list">
+		<img src="images/01.jpg" onmouseover="m(1)">
+		<img src="images/02.jpg" onmouseover="m(2)">
+		<img src="images/03.jpg" onmouseover="m(3)">
+		<img src="images/04.jpg" onmouseover="m(4)">
+	</div>
+	<div id="fang">
+		<img src="images/01.jpg" id="two">
+	</div>
+	</center>
+</body>
+</html>
+<script>
+	function m(i){
+		var one=document.getElementById("one");
+		var two=document.getElementById("two");
+		if(i==1){
+				one.src="images/01.jpg";
+				two.src="images/01.jpg";
+		} else if(i==2){
+				one.src="images/02.jpg";
+				two.src="images/02.jpg";
+		}else if(i==3){
+				one.src="images/03.jpg";
+				two.src="images/03.jpg";
+		}else if(i==4){
+				one.src="images/04.jpg";
+				two.src="images/04.jpg";
+		}
+
+		one.onmouseover=function(){
+			fang.style.display="block";
+			fang.style.top = this.offsetTop+"px";
+			fang .style.left = this.offsetWidth + this.offsetLeft+ 10+"px";
+		}
+		one.onmouseout=function(){
+			fang.style.display="none";
+		}
+		one.onmousemove = function(ent){
+			var event = window.event || ent;
+			var x = event.clientX - this.offsetLeft;
+			var y = event.clientY - this.offsetTop;
+			fang.scrollTop = y*1.5-100;
+			fang.scrollLeft = x*1-100;
+		}
+			
+		}
+	
+	
+
+</script>

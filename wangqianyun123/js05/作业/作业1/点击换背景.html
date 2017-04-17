@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击按钮换背景图</title>
+	<style>
+		#did{width: 1024px;height: 563px;background-position: center; }
+	</style>
+</head>
+<body id='did'>
+	<center>
+		<button onclick="fun1()" id="mid">请点击</button>
+	<center>
+</body>
+</html>
+<script>
+	var back=document.getElementById('did');
+	function fun1(){
+		var m=Math.ceil(Math.random()*1000)%3+1;
+		if(m==1){
+			back.style.backgroundImage="url(images/001.jpg)";
+		}else if(m==2){
+			back.style.backgroundImage="url(images/002.jpg)";
+		}else if(m==3){
+			back.style.backgroundImage="url(images/003.jpg)";
+		}else{
+			back.style.backgroundImage="url(images/004.jpg)";
+		}
+	}
+
+
+
+</script>

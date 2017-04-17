@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+    div,img{padding:0px;margin:0px;}
+    #m1,#m2,#m3,#m4,#m5{display:none;}
+</style>
+<body>
+    <div>
+        <img src="images/1.jpg" id="m0">
+        <img src="images/2.jpg" id="m1">
+        <img src="images/3.jpg" id="m2">
+        <img src="images/4.jpg" id="m3">
+        <img src="images/5.jpg" id="m4">
+        <img src="images/6.jpg" height="300" id="m5">
+    </div>
+   <div>
+        <img src="images/1.jpg" width="70" onmousemove="stop(0)" onmouseout="auto()">
+        <img src="images/2.jpg" width="70" onmousemove="stop(1)" onmouseout="auto()">
+        <img src="images/3.jpg" width="70" onmousemove="stop(2)" onmouseout="auto()">
+        <img src="images/4.jpg" width="70" onmousemove="stop(3)" onmouseout="auto()">
+        <img src="images/5.jpg" width="70" onmousemove="stop(4)" onmouseout="auto()">
+        <img src="images/6.jpg" width="70" onmousemove="stop(5)" onmouseout="auto()">
+    </div>
+</body>
+<script type="text/javascript">
+    function show(x){
+        for(var i=0;i<6;i++){
+            if(i==x){
+                document.getElementById("m"+i).style.display="block";
+            }else{
+                document.getElementById("m"+i).style.display="none";
+            }
+        }
+    }
+    var m=0;
+    var time=null;
+    function auto(){
+        if(time==null){
+            time=setInterval(function(){
+                show(m);
+                m++;
+                if(m>5){
+                 m=0;
+                }
+             },1000)
+        }
+    }
+    auto();
+    function stop(m){
+        if(time!=null){
+            show(m);
+            clearInterval(time);
+        }
+        time=null;
+    }
+
+</script>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取滚动条位置</title>
+</head>
+<style type="text/css">
+
+	#did{width:1000px;height:1000px;background:#ddd;}
+</style>
+<body>
+    
+	<div id="did"></div>
+</body>
+</html>
+<script>
+	 window.onscroll=function(){
+                var scrollTop=0;     
+                if(document.documentElement&&document.documentElement.scrollTop){     
+                    scrollTop=document.documentElement.scrollTop;  
+                }else if(document.body){     
+                    scrollTop=document.body.scrollTop;                   
+                } 
+                
+                document.getElementById("did").innerHTML = scrollTop;
+            }
+</script>

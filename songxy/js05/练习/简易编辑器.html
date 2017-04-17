@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简易编辑器</title>
+    <center>
+    <h3>简易编辑器</h3>
+    </center>
+</head>
+<style>
+    div{height: 400px;width: 500px}
+</style>
+<body>
+ <center>
+<br>
+<div id="foo" contenteditable align="left" style="height:250; width:350; background-color:#FFEBCD;font-face:Arial; padding:2; border:inset powderblue; scrollbar-base-color:powderblue; overflow-auto;">
+</div>
+<br>
+<input type="button" value="粗体" unselectable="on" onclick='document.execCommand("Bold"); foo.focus();'>
+<input type="button" value="斜体" unselectable="on" onclick='document.execCommand("Italic"); foo.focus();'>
+<input type="button" value="下划线" unselectable="on" onclick='document.execCommand("Underline"); foo.focus();'>
+<br>
+<br>
+<input type=button value="变大" onclick=document.execCommand('FontSize',false,9)>
+<input type=button value="变小" onclick=document.execCommand('FontSize',false,5)>
+<input type=button value="变红" onclick=document.execCommand('ForeColor',false,'red')>
+<br>
+<br>
+<input type=button value="撤消" onclick=document.execCommand('Undo')>
+</div>
+</center>  
+</body>
+</html>

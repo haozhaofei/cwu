@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>缩略图点击并替换显示</title>
+</head>
+<style type="text/css">
+	#first{
+		width:500px;
+		height:300px;
+		margin-left:400px;
+		border:1px solid blue;
+	}
+	#second {
+		display: inline;
+		margin-left:400px;
+	}
+	#second img{
+		margin-top: 10px;
+		margin-right: 30px;
+	}
+	#second img:hover{
+		border:1px solid blue;
+	}
+</style>
+<body>
+	<div id="first">
+		<img src="images/1.jpg" width="500" height="300" id="big">
+	</div>
+	<div id="second">
+	<img src="images/1.jpg" width="100" height="60"  id="m1">
+	<img src="images/2.jpg" width="100" height="60" id="m2">
+	<img src="images/3.jpg" width="100" height="60" id="m3">
+	<img src="images/4.jpg" width="100" height="60" id="m4">
+	</div>
+</body>
+</html>
+<script>
+    var big=document.getElementById('big');
+    var m1=document.getElementById('m1');
+    var m2=document.getElementById('m2');
+    var m3=document.getElementById('m3');
+    var m4=document.getElementById('m4');
+    m1.onclick=function(){
+    	big.src=this.src;
+    }
+    m2.onclick=function(){
+    	big.src=this.src;
+    }
+    m3.onclick=function(){
+    	big.src=this.src;
+    }
+    m4.onclick=function(){
+    	big.src=this.src;
+    }
+
+</script>

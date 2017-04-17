@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   
+</head>
+
+<body OnLoad="setObj();focus()">
+<div id="mydiv" style="position:absolute; left:0px; top:80px;">
+  <img src="images/01.jpg">
+</div></body>
+</html>
+
+<script language="JavaScript">
+var key=0
+var timer
+function setObj()
+{
+    ietype = (document.layers) ? 1 : 0;                   
+//判断浏览器类型
+    divObj = (ietype)? document.mydiv : mydiv.style       
+//获取指定的div
+    Xpos = parseInt(divObj.left);                         
+//获取div的X坐标
+    Ypos = parseInt(divObj.top);                          
+//获取div的Y坐标
+    document.onkeydown = keyDown;                         
+//设置按键事件
+    document.onkeyup = keyUp;                             
+//设置键盘弹起的事件
+    if (ietype) document.captureEvents(Event.keydown | Event.keyup);
+}
+function keyDown(e)                                      
+//按键的操作
+{
+    key = (ietype)? e.which : event.keyCode
+    //判断用户按下的键，注意此键盘包括方向键和小键盘（数字键）
+    if (key == 108 || key == 37) moveObj(1,2);
+    if (key == 114 || key == 39) moveObj(1,3);
+    if (key == 100 || key == 40) moveObj(1,4);
+    if (key == 117 || key == 38) moveObj(1,5);
+}
+function keyUp(e)                                       
+//按键弹起的操作
+{
+    key=0;clearTimeout(timer);
+}
+function moveObj(t,u)                                   
+//移动图片的方法
+{
+    clearTimeout(timer)
+if (t==1){
+        //根据移动的键，改变div的X和Y坐标
+if (u==2){divObj.left = Xpos-=5;timer = setTimeout("moveObj(1,2)", 40);}
+if (u==3){divObj.left = Xpos+=5;timer = setTimeout("moveObj(1,3)", 40);}
+if (u==4){divObj.top = Ypos+=5;timer = setTimeout("moveObj(1,4)", 40);}
+if (u==5){divObj.top = Ypos-=5;timer = setTimeout("moveObj(1,5)", 40);}
+       }
+}
+</script>

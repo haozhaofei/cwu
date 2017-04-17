@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>li 4 two</title>
+	<script>
+	//等所有文档加载完再执行
+		window.onload=function(){
+			function fun1(obj){
+				obj.style.color = "blue";
+			}//这个没有效果
+			
+			document.getElementById('bid').onclick = function(){
+				this.style.color = "green";
+			}
+		}
+	</script>
+
+</head>
+<body>
+	<button onclick="fun1(this)">点我</button>
+	<button id="bid">再点我</button>
+
+</body>
+</html>

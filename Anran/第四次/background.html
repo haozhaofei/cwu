@@ -1,0 +1,20 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景图</title>
+</head>
+<body>
+	<button id="change">背景图 出！</button>
+</body>
+</html>
+<script>
+	var img=['url(image/1.jpg)'];
+	var body=document.getElementsByTagName("body");
+	document.getElementById('change').onclick=function(){
+		var did=Math.round(Math.random()*10)%3;
+		body[0].style.backgroundImage=img[did];
+	}
+	
+</script>

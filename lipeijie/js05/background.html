@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景变换</title>
+</head>
+<body>
+	<button id="did">小仙女，点击这里换背景</button>
+</body>
+</html>
+<script>
+	var img=['url(img/01.jpg)','url(img/02.jpg)','url(img/001.jpg)','url(img/06.jpg)'];
+	var body=document.getElementsByTagName("body");
+	document.getElementById('did').onclick=function()
+	{
+		var change=Math.round(Math.random()*10)%4; 
+		body[0].style.backgroundImage=img[change];
+	}
+
+	
+</script>

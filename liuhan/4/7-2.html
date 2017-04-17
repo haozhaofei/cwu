@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>右键菜单</title>
+</head>
+
+<style>
+	ul,li{padding:0;margin:0;}
+
+	ul{
+		width:100px;    /*宽度*/
+		border:1px solid #ccc;  /*边框*/
+		text-align:center; /*文字居中分布*/
+		list-style-type:none;  /**/
+		position:relative;	/*相对定位*/
+		display:none;  /**/
+	}
+	ul li{
+		height:30px;   /*高度*/
+		width:100px;	/*宽度*/
+		margin-top:10px; 	/*上边距*/
+		line-height:30px;	/*行高*/
+		font-size: 14px;	/*字体*/
+		background: #ccc;		/*背景色*/
+
+	}
+	li:hover{background:green;}
+</style>
+
+<body>
+<h1>右键菜单-测试</h1>
+	<ul id="uid">
+		<li>页面另存为…</li>
+		<li>查看页面元素</li>
+		<li>查看页面信息</li>
+		<li>查看页面源代码</li>
+		<li>全选</li>
+	</ul>
+</body>
+</html>
+<script>
+	window.document.oncontextmenu = function(m){
+		var event = m || window.event;   //使兼容
+	
+		var x = event.clientX;  //获取x,y坐标
+		var y = event.clientY;
+
+		var uid = document.getElementById("uid");
+
+		uid.style.top = y + 'px';
+		uid.style.left = x + 'px';
+
+		uid.style.display ='block';   //
+		return false;// 屏蔽浏览器本身的右键菜单
+	}
+</script>

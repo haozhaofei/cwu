@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	ul,li{padding: 0px;margin: 0px;}
+	ul li{height: 40px;margin-top: 20px;background-color: #000;}
+	li:hover{background: #ccc;}
+</style>
+<body>
+    <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+	</ul>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName('li');
+	for (var i = 0; i <list.length; i++) {
+        list[i].ondblclick=function  () {
+        	// body...
+        	this.style.background="#f0c";
+        }
+	};
+</script>

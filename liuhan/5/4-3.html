@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>放大镜3</title>
+</head>
+	<style>
+		#bpic{
+			width: 500px;
+			height: 500px;
+			position: absolute;
+			display: none;
+			overflow: hidden;
+			border-radius: 50%;
+		}
+	</style>
+<body>
+	<h3>鼠标移上图片查看细节</h3>
+	<img id="pic" src="images/3.jpg"  width="342"alt="">
+	<div id="bpic">
+		<img src="images/3.jpg" alt="">
+	</div>
+</body>
+</html>
+<script>
+	var pic = document.getElementById("pic");
+	var bpic = document.getElementById("bpic");
+
+	pic.onmouseover = function(){
+		bpic.style.display = "block";
+		bpic.style.top = this.offsetTop+"px";
+		bpic.style.left = this.offsetLeft + this.offsetWidth +10 +"px";
+	}
+
+	pic.onmouseout =function(){
+		bpic.style.display = "none";
+	}
+
+	pic.onmousemove = function(ent){
+		var event = window.event || ent;
+
+		var x = event.clientX - this.offsetLeft;
+		var y = event.clientY - this.offsetTop;
+
+		bpic.scrollTop = y*4-250;
+		bpic.scrollLeft = x*4-250;
+	}
+</script>
