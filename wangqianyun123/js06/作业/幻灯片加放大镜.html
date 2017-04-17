@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>幻灯片加放大镜</title>
+	<style>
+		#mid{width: 395px;height: 240px;}
+		#list img{width:93px;height:60px;}
+		#did{width: 300px;height: 300px;position: absolute;display: none;overflow: hidden;}
+	</style>
+</head>
+<body>
+	<img id="mid" src="images/11.jpg" alt="">
+	<div id="list">
+		<img src="images/11.jpg" alt="">
+		<img src="images/22.jpg" alt="">
+		<img src="images/33.jpg" alt="">
+		<img src="images/44.jpg" alt="">
+	</div>
+	<div id="did">
+		<img src="images/11.jpg" alt="" id="iid">
+	</div>
+</body>
+</html>
+
+<script>
+
+	
+	var list= document.getElementById("list").getElementsByTagName("img");
+	for(var i=0;i<list.length;i++){
+		list[i].onmouseover = function(){	
+			var did=document.getElementById("did");
+			mid.src = this.src;	
+		}
+	}
+	var mid=document.getElementById("mid");
+	var did=document.getElementById("did");
+	mid.onmouseover=function(){
+		iid.src = mid.src;
+		did.style.display='block';
+		did.style.top=this.offsetTop+"px";
+		did.style.left=this.offsetLeft+this.offsetWidth+10+"px";
+	}
+
+	mid.onmouseout=function(){
+		did.style.display="none";
+	}
+
+	mid.onmousemove=function(ent){
+		var event=window.event||ent;
+		var x=event.clientX-this.offsetLeft;
+		var y=event.clientY-this.offsetTop;
+
+		did.scrollTop=y*5-150;
+		did.scrollLeft=x*5-150;
+	}
+
+</script>
