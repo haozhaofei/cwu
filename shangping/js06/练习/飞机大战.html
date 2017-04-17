@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>咻咻咻</title>
+</head>
+<style>
+   #did{width:400px;
+   	    height:400px;
+   	    position:relative;
+        background:url("images/bg2.png"); 
+       }
+   #mid{width:50px;height:50px;background:gray;position:absolute; top:200px;left:200px;}
+   #pd1,#pd2,#pd3,#pd4,#pd5,#pd6{display:none;position:absolute;}
+   #fid{
+   	    position:absolute;
+   	    top:100px; 
+   	    left:300px;
+   	   }
+</style>
+<body>
+<div id="did">
+    <image src="images/pd.png" id="pd1">
+    <image src="images/pd.png" id="pd2">
+    <image src="images/pd.png" id="pd3">
+    <image src="images/pd.png" id="pd4">
+    <image src="images/pd.png" id="pd5">
+    <image src="images/pd.png" id="pd6">
+    <div id="mid"></div>
+</div>
+<div id="fid">
+	<image src="images/plane.jpg" width="50">   //飞机显示不出来。。。
+</div>
+</body>
+</html>
+<script type="text/javascript">
+   var mid=document.getElementById("mid");
+   window.onkeydown=function(ent){
+      var event=window.event || ent;              
+      switch(event.keyCode){
+        case 37: mid.style.left=Math.max(0,mid.offsetLeft-5)+"px";      
+                 break;
+        case 38: mid.style.top=Math.max(0,mid.offsetTop-5)+"px";
+                 break;
+        case 39: mid.style.left=Math.min(mid.offsetLeft+5,350)+"px";
+                 break;
+        case 40: mid.style.top=Math.min(mid.offsetTop+5,350)+"px";
+                break;
+        case 13: fire(mid.offsetLeft,mid.offsetTop);
+                break;
+      }
+   }
+   
+   function fire(x,y){                                //确定子弹发射的位置
+         for(var i=1;i<=6;i++){
+            var pd=document.getElementById("pd"+i);
+            if(pd.style.display!="block"){
+                pd.style.left=x+25+"px";
+                pd.style.top=y+"px";
+                pd.style.display="block";
+                return;                               //没有"return"只有一发子弹
+            }
+        }
+   }
+   var did=document.getElementById("did");
+   var fid=document.getElementById("fid");
+   var m=-1136;                                     //-1536为图片的高度,400为div的高度,-1536+400=-1136
+   function running(){     
+        m+=2;                                         //背景图移动
+        if(m>-400){                
+            m=-1136;
+        }
+        did.style.backgroundPosition="0px "+m+"px"; 
+ 
+        
+        fid.style.left=fid.offsetLeft-2+"px";      //飞机移动
+        if(fid.offsetLeft==0||fid.offsetTop==300){
+        	fid.style.display="none";
+        	alert("game over!")
+        }
+        for(var i=1;i<=6;i++){                        //子弹发射
+            var pd=document.getElementById("pd"+i);
+            if(pd.style.display=="block"){
+                pd.style.top=pd.offsetTop-5+"px";
+                if(pd.offsetTop<0){                   //进行子弹的重复利用
+                    pd.style.display="none";
+                }
+               if((pd.offsetLeft>fid.offsetLeft&&pd.offsetLeft<fid.offsetLeft+fid.offsetWidth)&&pd.offsetTop==fid.offsetTop){   
+               	//打中飞机
+               	   setInterval(function(){                     //飞机跌落
+               	   	 fid.style.top=fid.offsetTop+20+"px";
+               	   	 if(fid.offsetTop==300){            
+               	   	    alert("wonderful");
+               	      }
+               	   },50)
+               	   
+                }
+            }
+            
+        } 
+         
+     setTimeout("running()",50);                     //一次定时
+   }
+   running();
+   </script>

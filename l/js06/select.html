@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	 #fid{
+	 	width: 300px;
+	 	height: 300px;
+	 	position: absolute;
+	 	display: none;
+	 	overflow: hidden;
+	 }
+
+	  #mini{
+		width:90px;
+		height:60px;
+	}
+	</style>
+</head>
+<body>
+	<img id="mid" src="images/11.jpg" alt=""
+	width="384">
+	<div id="did"> 
+		<img src="images/11.jpg" alt="" id="mini">
+		<img src="images/22.jpg" alt="" id="mini">
+		<img src="images/33.jpg" alt="" id="mini">
+		<img src="images/44.jpg" alt="" id="mini">
+	</div>
+	<div id="fid">
+		<img src="images/11.jpg" alt="" id="max">
+	</div>
+</body>
+</html>
+
+<script>
+/*
+	did标签表示可供选择的四个小图
+	mid是选中的那一张大图
+	fid是放大镜功能
+	如果不给fid中的图片再赋予一个id的话（就是31行的id=max），可以放大的只有第一张图了
+
+*/
+	var mid=document.getElementById('mid');
+	var max=document.getElementById('max');
+	var list=document.getElementById("did").getElementsByTagName("img");
+
+	for(var i=0;i<list.length;i++){
+		list[i].onmouseover=function(){
+			mid.src=this.src;
+			max.src=this.src;
+		}
+	}
+
+	var fid=document.getElementById("fid");
+	mid.onmouseover=function(){
+		fid.style.display="block";
+		fid.style.top=this.offsetTop+"px";
+		fid.style.left=this.offsetWidth +this.offsetLeft+10+"px";
+	}
+
+	mid.onmouseout=function(){
+		fid.style.display="none";
+	}
+
+	mid.onmousemove = function(ent){
+		var event = window.event || ent;
+		var x = event.clientX - this.offsetLeft;
+		var y = event.clientY - this.offsetTop;
+			
+		fid.scrollTop=y*5-150;
+		fid.scrollLeft=x*5-150;
+	}
+</script>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>我想知道你是谁</li>
+		<li>知道不知道又咋了</li>
+		<li>安全感啊，不知道没有安全感</li>
+		<li>或许吧，但是知道就没了神秘感</li>
+		<li>嗯。。你决定吧</li>
+	</ul>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName("li");
+	for(var i=0;i<list.length;i++)
+	{
+		list[i].onclick=function(){
+			alert(this.innerHTML);
+		}
+	}
+</script>

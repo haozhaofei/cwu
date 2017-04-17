@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+   #did{width:400px;height:400px;background:#ccc;position:relative;}
+   #mid{width:50px;height:50px;background:#000;position:absolute; top:300px;left:50px;}
+   #pd1,#pd2,#pd3,#pd4,#pd5,#pd6{display:none;position:absolute;}
+</style>
+<body>
+<div id="did">
+    <image src="images/pd.png" id="pd1">
+    <image src="images/pd.png" id="pd2">
+    <image src="images/pd.png" id="pd3">
+    <image src="images/pd.png" id="pd4">
+    <image src="images/pd.png" id="pd5">
+    <image src="images/pd.png" id="pd6">
+    <div id="mid"></div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+   var mid=document.getElementById("mid");
+   window.onkeydown=function(ent){
+      var event=window.event || ent;              //兼容性
+      switch(event.keyCode){
+        case 37: mid.style.left=Math.max(0,mid.offsetLeft-5)+"px";      //必须加“px”
+                 break;
+        case 38: mid.style.top=Math.max(0,mid.offsetTop-5)+"px";
+                 break;
+        case 39: mid.style.left=Math.min(mid.offsetLeft+5,350)+"px";
+                 break;
+        case 40: mid.style.top=Math.min(mid.offsetTop+5,350)+"px";
+                break;
+        case 13: fire(mid.offsetLeft,mid.offsetTop);
+                break;
+      }
+   }
+   
+   function fire(x,y){                   //确定子弹发射的位置
+         for(var i=1;i<=6;i++){
+            var pd=document.getElementById("pd"+i);
+            if(pd.style.display!="block"){
+                pd.style.left=x+25+"px";
+                pd.style.top=y+"px";
+                pd.style.display="block";
+                return;                 //"return"只有一发子弹
+            }
+        }
+   }
+   function running(){                    //子弹发射
+        for(var i=1;i<=6;i++){
+            var pd=document.getElementById("pd"+i);
+            if(pd.style.display=="block"){
+                pd.style.top=pd.offsetTop-5+"px";
+                if(pd.offsetTop<0){             //进行子弹的重复利用
+                    pd.style.display="none";
+                }
+            }
+            
+        }   
+     setTimeout("running()",50);             //一次定时
+   }
+   running();
+</script>

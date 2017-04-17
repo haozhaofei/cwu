@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+   #did{
+       width:500px;
+       height:500px;
+       background:url("images/bg2.png"); 
+       position:relative;            
+   }
+</style>
+<body>
+    <div id="did"></div>
+</body>
+</html>
+<script type="text/javascript">
+     var did=document.getElementById("did");
+     var m=-1036;                   
+     function running(){
+        m+=2; 
+        if(m>-500){                
+            m=-1036;
+        }
+        did.style.backgroundPosition="0px "+m+"px";        
+        setTimeout("running()",50);                        //单次定时
+     }
+     running();
+</script>
