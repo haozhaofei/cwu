@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cascading</title>
+</head>
+<style>
+	#province{
+		float:left;
+	}
+	#city1,#city2{
+		display:none;
+		float:left;
+		margin-left:20px;
+	}
+</style>
+<body>
+	<form>
+	<select id="province">
+	<option value="">省份</option>
+	<option value="1">北京</option>
+	<option value="2">河北</option>
+	</select>
+	<select id="city1">
+	<option>东城区</option>
+	<option>西城区</option>
+	<option>宣武区</option>
+	<option>海淀区</option>
+	<option>崇文区</option>
+	</select>
+	<select id="city2">
+	<option>石家庄</option>
+	<option>张家口</option>
+	<option>沧州</option>
+	<option>承德</option>
+	
+	</select>
+	</form>
+</body>
+</html>
+<script>
+	province.onchange=function(){
+		for(var i=1;i<=2;i++){
+			if(i==this.value){
+				document.getElementById("city"+i).style.display="block";
+			}else{
+				document.getElementById("city"+i).style.display="none";}
+		}
+	}
+	
+</script>

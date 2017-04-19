@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this事件认识</title>
+</head>
+<body>
+<ul>
+	<li>刚好遇见你</li>
+	<li>千年等一回</li>
+	<li>这就是爱</li>
+	<li>因为爱情</li>
+	<li>匆匆那年</li>
+</ul>
+	
+</body>
+</html>
+
+<script>//获取li集合 This代表的是本对象(点击谁就是谁了)
+	var list=document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function  () {
+			alert(this.innerHTML);
+		}
+	}
+</script>

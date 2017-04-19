@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body,ul,li,img,div{padding: 0px;margin: 0px;}
+		#did{width:400px;height: 400px;position: relative;background: #f0c;}
+		#mid{width:40px;height: 40px;position: absolute;background: pink;top:250px;left:100px;}
+		#pd0,#pd1,#pd2,#pd3,#pd4,#pd5{display: none;position: absolute;}
+	</style>
+</head>
+<body>
+	<div id="did">
+		<img src="images/6.png" id="pd0" alt="">
+		<img src="images/6.png" id="pd1" alt="">
+		<img src="images/6.png" id="pd2" alt="">
+		<img src="images/6.png" id="pd3" alt="">
+		<img src="images/6.png" id="pd4" alt="">
+		<img src="images/6.png" id="pd5" alt="">
+		<div id="mid"></div>
+	</div>
+</body>
+</html>
+
+<script>
+	var mid = document.getElementById('mid');
+	window.onkeydown = function(ent){
+		var event = window.event || ent;
+		switch(event.keyCode){
+			case 37 :  //左
+				mid.style.left = Math.max(0,mid.offsetLeft - 5)+"px";
+			break;
+			case 38 : //上
+				mid.style.top = Math.max(0,mid.offsetTop - 5)+"px";
+			break;
+			case 39 : //右
+				mid.style.left = Math.min(360,mid.offsetLeft + 5)+"px";
+			break;
+			case 40 : //下
+				mid.style.top = Math.min(360,mid.offsetTop + 5)+"px";
+			break;
+			case 32 :
+				fire(mid.offsetLeft+18,mid.offsetTop);
+			break;
+		}
+	}
+
+
+	//打飞机/炮弹发射
+	function fire(x,y){
+		for(var i=0;i<6;i++){
+			var pd = document.getElementById('pd'+i);
+			if(pd.style.display != "block"){
+				pd.style.top = y+"px";
+				pd.style.left = x+"px";
+				pd.style.display = "block";
+				return;
+			}
+		}
+	}
+
+	//游戏的主程序
+	function running(){
+		for(var i=0;i<6;i++){
+			var pd = document.getElementById('pd'+i);
+			if(pd.style.display == "block"){
+				pd.style.top = pd.offsetTop -25 +"px";
+				if(pd.offsetTop < -20){
+					pd.style.display = "none";
+				}
+			}
+		}
+		setTimeout("running()",33);
+	}
+
+	running();
+</script>

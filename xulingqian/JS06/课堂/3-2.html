@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this事件认识</title>
+</head>
+<body>
+	<ul>
+		<li>因为</li>
+		<li>所以</li>
+		<li>这就是爱</li>
+		<li>因为爱情</li>
+		<li>情非得已</li>
+	</ul>
+</body>
+</html>
+<script>
+	var list =document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++)
+	{
+		list[i].onclick = function(){
+			alert(this.innerHTML);
+		}
+	}
+</script>

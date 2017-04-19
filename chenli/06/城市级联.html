@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>城市级联</title>
+</head>
+<body>
+	<select name="sel1" id="sel1">
+		<option value="">请选择</option>
+		<option value="1">北京</option>
+		<option value="2">湖北</option>
+		<option value="3">湖南</option>
+		<option value="4">河北</option>
+	</select>
+	<select id="sel2"></select>
+</body>
+</html>
+<script>
+	var data =new Array();
+	data[1]=["朝阳区","海淀区","丰台区","东城区","西城区"];
+	data[2]=["武汉","安安","平平"];
+	data[3]=["长沙","常德","岳阳","株洲","湘潭"];
+	data[4]=["石家庄","廊坊","秦皇岛","承德","唐山"];
+	var sel1=document.getElementById("sel1");
+	var sel2=document.getElementById("sel2");
+	sel1.onchange=function(){
+		v=this.value;
+		sel2.length=0;
+		for(var i=0;i<data[v].length;i++){
+			sel2.add(new Option(data[v][i],i));
+		}
+	}
+</script>

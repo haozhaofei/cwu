@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>choosecity</title>
+</head>
+<body>
+	<select id="province" onchange="change()">
+	</select>
+
+	<select id="city">
+	</select>
+</body>
+</html>
+<script type="text/javascript">
+	var p;
+	var c;
+	window.onload=function(){
+	p=document.getElementById("province");
+	c=document.getElementById("city");
+	p[0]=new Option("---- 省份 ----",0);
+	p[1]=new Option("w1",1);
+	p[2]=new Option("w2",2);
+	p[3]=new Option("w3",3);
+	c[0]=new Option("---- 城市 ----",0);
+}
+	function change() {
+	var index=document.getElementById("province").selectedIndex;
+	switch (index) {
+	case 0:
+	c[0]=new Option("---- 城市 ----",0);
+	break;
+	case 1:
+	c[0]=new Option("a",0);
+	c[1]=new Option("b",1);
+	c[2]=new Option("c",2);
+	c[3]=new Option("d",3);
+	break;
+	case 2:
+	c[0]=new Option("a",0);
+	c[1]=new Option("b",1);
+	c[2]=new Option("c",2);
+	c[3]=new Option("d",3);
+	break;
+	case 3:
+	c[0]=new Option("a",0);
+	c[1]=new Option("b",1);
+	c[2]=new Option("c",2);
+	c[3]=new Option("d",3);
+	break;
+}
+}
+</script>
