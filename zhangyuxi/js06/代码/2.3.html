@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scroll方法</title>
+</head>
+<body>
+	<div style="width:500px;height:500px;background:#ccc;"></div>
+	<div id="bid" style="width:500px;height:500px;background:#ddd;"></div>
+</body>
+</html>
+<script>
+	/*window.onscroll=function(){
+		document.documentElement.scrollTop;
+		document.documentElement.scrollLeft;
+	}*/
+
+
+	window.onscroll=function(){
+				//var top = document.documentElement.scrollTop;
+                var scrollTop=0;     
+                if(document.documentElement&&document.documentElement.scrollTop){     
+                    scrollTop=document.documentElement.scrollTop;  
+                }else if(document.body){     
+                    scrollTop=document.body.scrollTop;                   
+                } 
+                
+                document.getElementById("bid").innerHTML = scrollTop;
+    }
+</script>

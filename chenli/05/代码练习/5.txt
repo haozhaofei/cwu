@@ -1,0 +1,50 @@
+--1
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	window.onbeforeunload=function(){
+		return "Wohin gehen Sie?";
+	}
+</script>
+
+--2
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	window.onbeforeunload=function(){
+		return "Wohin gehen Sie?";
+	}
+</script>
+
+--3
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	window.onbeforeunload=function(){
+		return "Wohin gehen Sie?";
+	}
+</script>

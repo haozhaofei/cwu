@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this事件的认识</title>
+</head>
+<body>
+<ul>
+	<li>动物世界</li>
+    <li>方圆几里</li>
+    <li>丑八怪</li>
+    <li>认真的雪</li> 
+</ul>
+		
+</body>
+</html>
+
+<!-- 一定要用this,this表示本对象，点击谁就是谁 -->
+<script>
+var list=document.getElementsByTagName('li');
+for (var i = 0 ; i < list.length ; i++) {
+		list[i].onclick=function(){
+			// alert("傻逼");
+			 alert(this.innerHTML);
+			// this.HTML 表示弹框中弹出标签一样的文字
+		}
+	};	
+
+</script>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript实例</title>
+</head>
+<style>
+	body,img,div{
+		margin: 0;padding: 0;
+	}
+	#did{
+		width: 400px;height:400px;
+		background:url('./images/bg2.png') no-repeat 0px -1036px;
+		border:1px solid blue;
+		position: relative;overflow: hidden;
+	}
+	#mid{
+		width:40px;height:40px;position:absolute;background: red;top:0px;left:150px;
+	}
+	#pd0,#pd1,#pd2,#pd3,#pd4,#pd5{
+		display:none;position: absolute;
+	}
+</style>
+<body>
+	<div id="did">
+		<img src="images/pd.png" id="pd0">
+		<img src="images/pd.png" id="pd1">
+		<img src="images/pd.png" id="pd2">
+		<img src="images/pd.png" id="pd3">
+        <img src="images/pd.png" id="pd4">
+        <img src="images/pd.png" id="pd5">
+	</div>
+	<div id="mid"></div>
+</body>
+<script>
+	var did=document.getElementById('did');
+	var mid=document.getElementById('mid');
+	var bgh=-1036;
+	window.onkeydown=function(ent){
+		var event=window.event||ent;
+		switch(event.keyCode){
+			case 37:
+			mid.style.left=Math.max(0,mid.offsetLeft-5)+"px";break;
+			case 38:
+			mid.style.top=Math.max(0,mid.offsetTop-5)+"px";break;
+			case 39:
+			mid.style.left=Math.min(360,mid.offsetLeft+5)+"px";break;
+			case 40:
+			mid.style.top=Math.min(360,mid.offsetTop+5)+"px";break;
+			case 32:
+			fire(mid.offsetLeft+15,mid.offsetTop);break;
+		}
+	}
+    function fire(x,y){
+    	for(var i=0;i<6;i++){
+    		var pd=document.getElementById('pd'+i);
+    		if(pd.style.display!="block"){
+    			pd.style.top=y+"px";
+    			pd.style.left=x+"px";
+    			pd.style.display="block";
+    			return;
+    		}
+    	}
+    }
+	function run1(){
+		bgh+=2;
+		if(bgh>=-268){
+			bgh=-1036;
+		}
+		did.style.backgroundPosition="0px "+bgh+"px";//"0px "必须要空格
+		setTimeout('run1()',33);
+	}
+	run1();
+	function run2(){
+		for(var i=0;i<6;i++){
+			var pd=document.getElementById('pd'+i);
+			if(pd.style.display=="block"){
+				pd.style.top=pd.offsetTop+25+"px";
+				if(pd.offsetTop>500){
+					pd.style.display="none";
+				}
+			}
+		}
+		setTimeout('run2()',33);
+	}
+	run2();
+</script>
+</html>
