@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新浪军事新闻</title>
+	<style>
+		*{
+		 	padding:0;
+		 	margin:0;
+ 			}
+		header,nav,main,aside,footer,article,section,figure,figcaption{
+ 			display: block; 
+ 			}
+ 		.clearfix:before,
+ 		.clearfix:after {
+   			content: " ";
+ 	    	display: table;
+ 			}
+ 		.clearfix:after {
+ 			clear: both;
+ 			}
+
+ 		.clearfix {
+ 		  	*zoom: 1;
+ 			}
+
+		 #all{
+		 	max-width:1050px;
+		 	margin:20px auto 0;
+		 	}
+		 main{
+		 	float:left;
+		 	width:640px;
+		 	height: 360px;
+		 	margin:15px 0 30px 0;
+		 	position: absolute;
+		 	border: 1px solid #000;
+		 	}
+		 aside{
+		 	float:right;
+		 	width:380px;
+		 	margin:15px 0 30px 0;	
+		 	}
+		 h1 img{
+		 	width:330px;
+		 	height: 60px;
+		 	}
+		 li{
+		 	display:inline-block;	
+		 	}
+		 ul{
+		 	background-color:navy;
+		 	width:100%;
+		 	height: 20px;
+		 	padding:12px;
+			}
+		 header a{
+		 	text-decoration:none;
+		 	color: #fff;
+		 	border-right: 0.5px solid #fff;
+		 	padding-left: 12px;
+		 	padding-right: 12px;
+		 	font-size: 14px;
+		 	}
+		 header div{
+		 	/*float: right;*/
+		 	position: absolute;
+		 	height: 16px;
+		 	top:23px;
+		 	left: 1030px;	
+		 	}
+		 header div img{
+		 	height: 16px;
+		 	}
+ 
+		 main img{
+		 	width:640px;
+		 	height: 360px;
+			}
+		 #p2,#p3,#p4,#p5{
+		 		display: none;
+		 	}
+		 #left,#right{
+		 	position: relative;
+		 	background-color: rgba(200,200,200,0.7);
+		 	width:40px;
+		 	height:40px;
+		 	border-radius: 50%;
+		 	z-index: 5px;
+		 	}
+		 #left{
+		 	left:10px;
+		 	top:-200px;
+		 	}
+		 #right{
+		 	left:590px;
+		 	top:-240px;
+		 	}
+		 #text{
+		 	position: relative;
+		 	z-index: 6px;
+		 	height: 80px;
+		 	width: 100%;
+		 	top:-165px;
+		 	background-color: rgba(0,0,0,0.5);
+		 	font-size: 24px;
+		 	color: #fff;
+		 	line-height: 80px; 	
+		 	}
+		 aside div{
+		 	text-align: 80px;
+		 	margin-bottom: 20px;
+		 	}
+		 aside .red{
+		 	color: red;
+		 	}
+		 aside p,aside h3{
+		 	line-height: 28px;
+		 	} 
+	</style>
+</head>
+<body>
+<div id="all">
+ 		<header role="banner">
+ 			<h1><img src="images/slogan6.png" alt="新浪军事"></h1>
+ 			<div>
+ 				<p style="margin-top:20px">
+ 				<img src="images/btn_addfav_news.png">
+ 				<span style="font-size: 12px; color: #333;font-family: "宋体";">设为书签</span>
+ 				<img src="images/sjbi.jpg">
+ 				<span style="font-size: 12px; color: #333;font-family: "宋体";">手机版</span>
+ 				</p>
+ 			</div>
+ 			<ul>
+ 				<li><a href="#"> 首页</a></li>  
+ 				<li><a href="#">滚动</a></li>  
+ 				<li><a href="#">图片</a></li>  
+ 				<li><a href="#">深度</a></li> 
+ 				<li><a href="#">《出鞘》</a></li>  
+ 				<li><a href="#">大国博弈</a></li>   
+ 				<li><a href="#">军史</a></li> 
+ 				<li><a href="#">东海局势</a></li>  
+ 				<li><a href="#">南海局势</a></li>   
+ 				<li><a href="#">新闻排行</a></li>  
+ 				<li><a href="#">航空</a></li>   
+ 				<li><a href="#">回顾</a></li>   
+ 			</ul>
+ 			
+ 		</header>	
+ 		<main>
+ 			<div >
+ 				<img src="images/01.jpg" width="683px" height="384px" id="p1" alt="">
+ 				<img src="images/02.jpg" width="683px" height="384px" id="p2" alt="">
+ 				<img src="images/03.gif" width="683px" height="384px" id="p3" alt="">
+ 				<img src="images/04.jpg" width="683px" height="384px" id="p4" alt="">
+ 				<img src="images/05.jpg" width="683px" height="384px" id="p5" alt="">
+ 			</div>
+ 			<div id="left" onclick="show(1)"></div>
+ 			<div id="right" onclick="show(2)"></div>
+ 			<div id="text">这是我们的伟大时代！庆祝中国海军成立68周年</div>
+ 		</main>
+ 		<aside>
+ 			<div>
+ 				<h3>首艘国产航母即将下水 船坞已注水</h3>
+ 				<p class="red">
+ 				<a herf="#">独家解析：国产航母开工3年就下水多项性能超辽宁号</a></p>
+ 				<p>001A航母下水有何意义 将令中国成全天候航母国家
+ 				辽宁号舰载机安全起降咋保障 可能和这个装备有关
+ 				国产航母早已具备下水条件 战力强悍难被导弹击沉</p>
+ 			</div>
+ 			<div>	
+ 				<p class="red">菲防长登上南沙中业岛 我外交部严重不满已提出交涉</p>
+ 				<p>美前高官：美国若玩弄一个中国政策 代价由台湾承担</p>
+ 				<p>韩国雾霾严重怪中国？韩专家：简直是在国际上丢脸</p>
+ 			</div>
+ 			<div>
+ 				<h3>美副总统：卡尔文森航母数日内抵日本海</h3>
+ 				<p class="red">美军卡尔文森号航母北上朝鲜出师不利 F18战机失事</p>
+ 				<p>美期待中国助解决朝核问题 朝鲜称可将美韩化为灰烬</p>
+ 				<p>俄战略轰炸机一周内4次抵近美海岸 秀肌肉一箭三雕</p>
+ 			</div>
+ 		</aside>		
+ 	</div>
+</body>
+</html>
+<script>
+ 	function show (n) {
+ 		var t;
+ 		var list=["这是我们的伟大时代！庆祝中国海军成立68周年","日本自卫队F15J拼命延寿！还指望它们对抗中国","贴近实战！解放军武直19和米171刷白肚皮伪装","还要参观中国舰！杜特尔特登上俄瓦良格巡洋舰","崭新巨舰提前看！国产航母下水前高清靓照曝光"];
+ 		for(i=1;i<6;i++)
+ 		{
+ 			var img=document.getElementById('p'+i);
+ 			if(img.style.display!="none") t=i;
+ 		}
+ 		switch(n){
+ 			case 1:{
+ 				if(t==1)t=6;
+ 				t--;
+ 				for(i=1;i<=5;i++)
+ 				{
+ 					img=document.getElementById('p'+i);
+ 					if(i == t) img.style.display="block";
+ 					else img.style.display="none";
+ 				}
+ 				document.getElementById("text").innerHTML=list[t-1];
+ 				break;
+ 			}
+ 			case 2:{
+ 				if(t==5) t=0;
+ 				t++;
+ 				for(i=1;i<=5;i++)
+ 				{
+ 					img=document.getElementById('p'+i);
+ 					if(i == t) img.style.display="block";
+ 					else img.style.display="none";
+ 				}
+ 				document.getElementById("text").innerHTML=list[t-1];
+ 				break;
+ 			}
+ 		}
+ 	}
+ </script> 
