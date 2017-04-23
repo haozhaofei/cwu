@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>my page</title>
+	<style>
+	#big{
+		width:1100px;
+		height:800px;
+		float: left;	
+		position:relative;
+		margin-left:100px;
+		border: 5px solid azure;
+	}
+	/*列表上方样式*/
+	#pic1 a{		
+		width:330px;
+		height:60px;
+		background-image: url(images/1.png);
+		background-repeat:no-repeat;
+		display: block;
+	}
+
+	#pic2,#pic3{
+		float:right;
+		margin-top:25px;
+		width:80px;
+		height:22px;
+		}	
+	#pic2 a{
+		margin-bottom:20px;
+		position:absolute;	
+	}
+	#pic a:hover{
+		color:red;
+	}
+
+	/*对链接的样式设计*/
+	ul{
+		width:1000;
+		height:50px;
+		margin-top: 70px;
+		background: azure;
+	}
+	li{
+		width:70px;
+		margin-left:33px;
+		list-style-type: none;
+		text-align:center;
+		font-size: 20px;
+		margin-top: 10px;
+		border-right: 2px solid white;
+		float:left;	
+	}
+	ul li a{
+		text-decoration:none;
+	}
+	li:hover{
+		background:yellow;
+		text-decoration:underline;
+	}
+	
+	/*对js图片的样式设计*/
+	#image{
+		width:550px;
+		height:500px;
+		margin-top: 20px;
+		margin-left:20px;
+		float:left;
+		position: relative;
+	}
+	#m1,#m2,#m3,#m4{
+		width:550px;
+		height:500px;
+	}
+	#m2,#m3,#m4{
+		display:none;
+	}
+	/*图片上的左右箭头*/
+	#left,#right{
+		top:50%;
+		width:30px;
+		height:30px;
+		position:absolute;
+	}
+	#left{	
+		left:0px;
+	}
+	#right{	
+		right:0px;
+	}
+	/*对文字样式的编辑*/
+	#word{
+		width: 400px;
+		float: left;
+		margin-left:30px;
+	}
+	span{
+		color:red;
+	}
+	h2 a,h3 a{
+		color:#0CC;
+		text-decoration:none;
+	}
+	h2 a:hover,h3 a:hover{
+		color:red;
+		text-decoration:underline;
+	}
+	</style>
+</head>
+<body>
+<div id="big">
+	<div id="pic">
+		<div id="pic1" style="float:left">
+		<a href="http://mil.news.sina.com.cn/"></a>
+		</div>
+		<div id="pic2">
+		<img src="images/0.jpg">
+		<a href="http://www.baidu.com">搜索</a>
+		</div>
+		<div id="pic3">
+		<img src="images/2.png">
+		<a href="http://www.baidu.com">页面</a>
+		</div>
+	</div>
+	<ul>
+		<li><a href="http://www.baidu.com">体育</a></li>
+		<li><a href="http://www.baidu.com">芭蕾</a></li>
+		<li><a href="http://www.baidu.com">搏击</a></li>
+		<li><a href="http://www.baidu.com">击剑</a></li>
+		<li><a href="http://www.baidu.com">轮滑</a></li>
+		<li><a href="http://www.baidu.com">彩带</a></li>
+		<li><a href="http://www.baidu.com">瑜伽</a></li>
+		<li><a href="http://www.baidu.com">跆拳道</a></li>
+		<li><a href="http://www.baidu.com">健美操</a></li>
+	</ul>
+	<div id="image">
+	<img src="images/8.png" onclick="left()" id="left">
+		<img src="images/6.bmp" id="m1">
+		<img src="images/5.bmp" id="m2">
+		<img src="images/2.bmp" id="m3">
+		<img src="images/8.bmp" id="m4">
+	<img src="images/9.png" onclick="right()" id="right">
+	</div>
+	<div id="word">
+		<h2><a href="http://www.baidu.com">体育运动的重要性</a></h2>
+		<p>体育运动具有<span>强身健体</span>、<span>娱乐</span>，另外还有<span>教育</span>、<span>政治</span>、<span>经济</span>等功能。也可以说所处的历史阶段不同，体育就具有不同的功能，但是自从体育产生以来，强身健体及其娱乐自始至终是体育的主要功能。体育是一种复杂的社会文化现象，以身体活动为基本手段，增强体质、增进健康及其培养人的各种心理品质为目的。</p>
+		<h3><a href="http://www.baidu.com">体育运动的正确方式</a></h3>
+		<p><span>必要的热身</span>极为必要的伸展运动,不要超负荷的举重,不要过激运动,逐步增加运动强度,动作频率不要太急,动作要规范,合理的饮食,水分的必要补充,状态不佳时降低运动量或停止锻炼</p>
+		<h3><a href="http://www.baidu.com">选择适合你的体育项目</a></h3>
+		<p><span>选择一项适合你的体育项目是很有必要的</span>,每个人的身体素质不同，需要锻炼的地方囊也不同，下面这些项目总有适合你的，例如蹲坐力量练习,跨马步，散步，间隔练习，俯卧撑，深蹲，等等总有一项适合你</p>
+	</div>
+</div>
+</body>
+</html>
+<script>
+     var m=1;
+	function right(){
+		m++;
+		if(m>4){
+			m=1;
+		}
+		show(m);
+		
+
+	}
+	function left(){
+		m--;
+		if(m<1){
+			m=4;
+		}
+		show(m);
+		
+	}
+
+	function show(x){
+        for(var i=1;i<5;i++){
+			var img=document.getElementById('m'+i);
+			if(i==x){
+				img.style.display="block";
+			}
+			else{
+				img.style.display="none";
+			}
+		}
+	}
+
+
+</script>
