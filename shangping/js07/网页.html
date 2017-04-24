@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新浪新闻</title>
+	<style>
+		*{
+		 	padding:0;
+		 	margin:0;
+ 			}
+		header,nav,main,aside,footer,article,section,figure,figcaption{
+ 			display: block; 
+ 			}
+ 		.clearfix:before,
+ 		.clearfix:after {
+   			content: " ";
+ 	    	display: table;
+ 			}
+ 		.clearfix:after {
+ 			clear: both;
+ 			}
+ 		.clearfix {
+ 		  	*zoom: 1;
+ 			}
+		 #all{
+		 	max-width:1050px;
+		 	margin:20px auto 0;
+		 	}
+		 main{
+		 	float:left;
+		 	width:640px;
+		 	height: 360px;
+		 	margin:15px 0 30px 0;
+		 	position: absolute;
+		 	border: 1px solid #000;
+		 	}
+		 aside{
+		 	float:right;
+		 	width:380px;
+		 	margin:15px 0 30px 0;	
+		 	}
+		 h1 img{
+		 	width:230px;
+		 	height: 60px;
+		 	}
+		 li{
+		 	display:inline-block;	
+		 	}
+		 ul{
+		 	background-color:navy;
+		 	width:100%;
+		 	height: 20px;
+		 	padding:12px;
+			}
+		 header a{
+		 	text-decoration:none;
+		 	color: #fff;
+		 	border-right: 0.5px solid #fff;
+		 	padding-left: 12px;
+		 	padding-right: 12px;
+		 	font-size: 14px;
+		 	}
+		 header div{
+		 	/*float: right;*/
+		 	position: absolute;
+		 	height: 16px;
+		 	top:23px;
+		 	left: 1030px;	
+		 	}
+		 header div img{
+		 	height: 16px;
+		 	}
+ 
+		 main img{
+		 	width:640px;
+		 	height: 360px;
+			}
+		 #p2,#p3,#p4,#p5{
+		 		display: none;
+		 	}
+		 #left,#right{
+		 	position: relative;
+		 	background-color: rgba(200,200,200,0.7);
+		 	width:40px;
+		 	height:40px;
+		 	border-radius: 50%;
+		 	z-index: 5px;
+		 	}
+		 #left{
+		 	left:10px;
+		 	top:-200px;
+		 	}
+		 #right{
+		 	left:590px;
+		 	top:-240px;
+		 	}
+		 #text{
+		 	position: relative;
+		 	z-index: 6px;
+		 	height: 80px;
+		 	width: 100%;
+		 	top:-165px;
+		 	background-color: rgba(0,0,0,0.5);
+		 	font-size: 24px;
+		 	color: #fff;
+		 	line-height: 80px; 	
+		 	}
+		 aside div{
+		 	text-align: 80px;
+		 	margin-bottom: 20px;
+		 	}
+		 aside .red{
+		 	color: red;
+		 	}
+		 aside p,aside h3{
+		 	line-height: 28px;
+		 	} 
+	</style>
+</head>
+<body>
+<div id="all">
+ 		<header role="banner">
+ 			<h1><img src="images/logo.png" alt="新浪新闻"></h1>
+ 			<ul>
+ 				<li><a href="#"> 首页</a></li>  
+ 				<li><a href="#">百家</a></li>  
+ 				<li><a href="#">财经</a></li>  
+ 				<li><a href="#">娱乐</a></li> 
+ 				<li><a href="#">体育</a></li>  
+ 				<li><a href="#">互联网</a></li>   
+ 				<li><a href="#">时尚</a></li> 
+ 				<li><a href="#">汽车</a></li>  
+ 				<li><a href="#">国内</a></li>   
+ 				<li><a href="#">国际</a></li>  
+ 				<li><a href="#">军事</a></li>   
+ 				<li><a href="#">游戏</a></li>   
+ 			</ul>
+ 			
+ 		</header>	
+ 		<main>
+ 			<div >
+ 				<img src="images/01.jpg" width="683px" height="384px" id="p1" alt="">
+ 				<img src="images/02.jpg" width="683px" height="384px" id="p2" alt="">
+ 				<img src="images/03.gif" width="683px" height="384px" id="p3" alt="">
+ 				<img src="images/04.jpg" width="683px" height="384px" id="p4" alt="">
+ 				<img src="images/05.jpg" width="683px" height="384px" id="p5" alt="">
+ 			</div>
+ 			<div id="right" onclick="show(1)"></div>
+ 			<div id="left" onclick="show(2)"></div>
+ 			<div id="text">学习他——不断追求航天梦</div>
+ 		</main>
+
+ 		<aside>
+ 			<div>
+ 				<h3>国家主席习近平同美国总统特朗普通电话</h3>
+ 				<p>
+ 				<li><a href="#">坚决维护党中央权威  </a></li>
+ 				<li><a href="#">航天寄语  </a></li>
+ 				<li><a href="#">漫评  </a></li>
+ 				<li><a href="#">网络空间命运共同体  </a></li>
+ 				<li><a href="#">走群众路线</a></li>
+ 				</p>
+ 			</div>
+ 			<div>	
+ 				<h3>李克强：一个国家养成全民阅读习惯非常重要</h3>
+ 				<p> 				
+ 				<li><a href="#">山东考察“路线图”  </a></li>
+ 				<li><a href="#">张德江会见普京  </a></li>
+ 				<li><a href="#">雄安新区让中国雄容安</a></li>
+ 				</p>
+ 			</div>
+ 			<div>
+ 				<h3>法国大选：勒庞马克龙进入下一轮 将角逐总统</h3>
+                <p> 				
+ 				<li><a href="#">法国总统大选将如何撼动全球局势？</a></li>
+ 				</p> 			
+ 				</div>
+ 				<div>	
+ 				<h3>今年高考多地合并录取批次 这些地方取消三本</h3>
+ 				<p> 				
+ 				<li><a href="#">卓伟自曝被郭德纲群殴 有狗仔被打到坐轮椅</a></li><br>
+ 				<li><a href="#">科学家：“阿波罗”登月真实性证据满满，月球上有大量遗留物</a></li>
+ 				<li><a href="#">朝鲜建军节准备核试验？ 韩媒：朝已安排居民避难</a></li>
+s 				</p>
+ 			</div>
+ 		</aside>		
+ 	</div>
+</body>
+</html>
+<script>
+ 	function show (n) {
+ 		var t;
+ 		var list=["学习他——不断追求航天梦","中国一女学生在南非遭豹子扑袭惊险瞬间","尼泊尔“活死人”脸部涂满颜料被封为圣人","匈牙利放牧季","合起来就是胖！大熊猫龙凤胎得名“月月”“半半”"];
+ 		for(i=1;i<6;i++)
+ 		{
+ 			var img=document.getElementById('p'+i);
+ 			if(img.style.display!="none") t=i;
+ 		}
+ 		switch(n){
+ 			case 1:{
+ 				if(t==1)t=6;
+ 				t--;
+ 				for(i=1;i<=5;i++)
+ 				{
+ 					img=document.getElementById('p'+i);
+ 					if(i == t) img.style.display="block";
+ 					else img.style.display="none";
+ 				}
+ 				document.getElementById("text").innerHTML=list[t-1];
+ 				break;
+ 			}
+ 			case 2:{
+ 				if(t==5) t=0;
+ 				t++;
+ 				for(i=1;i<=5;i++)
+ 				{
+ 					img=document.getElementById('p'+i);
+ 					if(i == t) img.style.display="block";
+ 					else img.style.display="none";
+ 				}
+ 				document.getElementById("text").innerHTML=list[t-1];
+ 				break;
+ 			}
+ 		}
+ 	}
+ </script> 
