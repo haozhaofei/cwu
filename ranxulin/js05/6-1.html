@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片</title>
+</head>
+<style>
+	div,img{
+		padding:0px;
+		margin:0px;
+	}
+	#did{
+		left:20px;
+		width: 690px;
+		height: 384px;
+		border: 5px solid #f0c;
+	} 
+	#bid{
+		left: 20px;
+		padding-top: 20px;
+	}
+	#tu2,#tu3,#tu4{
+		display: none;
+	}
+	#aid{
+		width:200px;height: 200px;position: absolute;display: none;overflow: hidden;
+	}
+</style>
+<body>
+	<div id="did">
+		<img src="images/2.JPG" width="690px" height="384px" id="tu1" alt="">
+		<img src="images/3.JPG" width="690px" height="384px" id="tu2" alt="">
+		<img src="images/4.JPG" width="690px" height="384px" id="tu3" alt="">
+		<img src="images/5.JPG" width="690px" height="384px" id="tu4" alt="">
+	</div>
+	<div id="bid">
+		<img src="images/2.JPG" width="170px" height="96px" onclick="fun(1)" alt="">
+		<img src="images/3.JPG" width="170px" height="96px" onclick="fun(2)" alt="">
+		<img src="images/4.JPG" width="170px" height="96px" onclick="fun(3)" alt="">
+		<img src="images/5.JPG" width="170px" height="96px" onclick="fun(4)" alt="">
+	</div>
+	<div id="aid">
+		<img src="images/2.jpeg" alt="">
+	</div>
+</body>
+</html>
+<script>
+	function fun(n)
+	{
+		for(i=1;i<5;i++)
+		{
+			var img=document.getElementById('tu'+i);
+
+			if(i == n) img.style.display="block";
+
+			else img.style.display="none";
+	        var did = document.getElementById('did');
+	        var aid = document.getElementById('aid')
+	        did.onmouseover = function(){
+	     	aid.style.display = "block";
+	    	aid.style.top = this.offsetTop+"px";
+	     	aid.style.left = this.offsetWidth + this.offsetLeft+ 10+"px";
+	          }
+	        did.onmouseout = function(){
+	      	aid.style.display = "none";
+        	} 
+	        did.onmousemove = function(ent){
+	     	var event = window.event || ent;
+	      	var x = event.clientX - this.offsetLeft;
+		    var y = event.clientY - this.offsetTop;
+		    aid.scrollTop = y*2-150;
+		    aid.scrollLeft = x*2-150;
+	}			
+		}
+	}
+</script> 
