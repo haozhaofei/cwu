@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新浪军事</title>
+</head>
+<style type="text/css">
+    ul,li{padding: 0px;margin: 0px;}
+	#front{height: 40px;width: 1100px;}
+	#front h3{margin-top: -15px;}
+	#small{float:right;}
+	#one{height: 10px;width: 30px;float:left;}
+	#two,#three,#front p{height: 5px;width: 5px;}
+	#one,#two,#three,#front p{margin-top:-60px;display: inline-block;text-decoration: none;color: black;}
+	#banner{height: 40px;width: 1100px;background: green}
+    ul li{width:80px;height:40px;display: inline-block;text-align: center;border-right: 1px solid #f3f3fa;}
+	ul li a{text-decoration: none;color: #fff;line-height: 40px;}
+	li:hover{text-decoration: underline;background:#009100; }
+	#main{margin-top: 10px;position: absolute;width: 1100px;}
+    #did{float: left;}
+
+	#arrRight a,#arrLeft a{text-decoration: none;color: #fff;font-weight:bold; }
+	#arrRight,#arrLeft{display:block;}
+	#arrLeft{width: 30px;height: 30px;position:absolute;z-index: 2;float: left;top: 150px;left:10px;}
+	#arrRight{float: right;position:absolute;z-index: 2;float: right; top: 150px;right: 400px;}
+	
+	#m2,#m3,#m4,#m5{z-index: 1;display: none;}
+	#right{width: 420px;margin-left: 10px;margin-right: 10px;float: right;position: relative;line-height: 11px;}
+	#right a{text-decoration: none;color:black;}
+	#right a:hover{text-decoration: underline;color: red;}
+    #aaa h4 a,#bbb h4 a,#ccc h4 a{color: red;}
+
+</style>
+<body>
+	<div id="wrapper">
+		<header id="front">
+			
+			<img src="01.jpg" height="30px" width="90px" alt="one">
+			<div id="small">
+				<img src="08.jpg" height="30px" width="30px"  alt="two">
+				<p><small><a href="">设为书签</a></small></p>
+				<img src="07.jpg" height="30px" width="30px" alt="three">
+				<p><small><a href="">手机版</a></small></p>
+			</div>
+		</header>
+		<header id="banner">
+			<ul class="topmenu">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">滚动</a></li>
+				<li><a href="#">图片</a></li>
+				<li><a href="#">深度</a></li>
+				<li><a href="#">《出鞘》</a></li>
+				<li><a href="#">大国博弈</a></li>
+				<li><a href="#">军史</a></li>
+				<li><a href="#">东海局势</a></li>
+				<li><a href="#">新闻排行</a></li>
+				<li><a href="#">航空</a></li>
+				<li><a href="#">回顾</a></li>
+			</ul>
+		</header>
+		<main id="main">
+			<div id='did'>
+				<div>
+					<img src="02.jpg" height="380px" width="640px" alt="" id="m1">
+					<img src="03.jpg" height="380px" width="640px" alt="" id="m2">
+					<img src="04.jpg" height="380px" width="640px" alt="" id="m3">
+					<img src="05.jpg" height="380px" width="640px" alt="" id="m4">
+					<img src="06.jpg" height="380px" width="640px" alt="" id="m5">
+				</div>
+				<div id="arrLeft">
+					<p id="arrL"><a href="#"></a></p>
+				</div>
+				<div id="arrRight">
+					<p id="arrR"><a href="#"></a></p>
+				</div>
+			
+			</div>
+			
+			<div id="right">
+				<div id="aaa">
+					<h3><a href="#">
+						媒体：中国第三艘航母或以惊人速度亮相
+					</a></h3>
+					<h4><a href="#">
+						中国首艘国产航母下水已箭在弦上 就是三四天的事
+					</a></h4>
+					<p><a href="#">
+					    德称中国还不是航母强国 001A航母将带来尊重和敬畏</a></p>
+					<p><a href="#">
+						国产航母舰岛比之辽宁舰有三项大变化 一设计可隐身
+					</a></p>
+					<p><a href="#">
+					    上合组织将接收印巴 中俄哈吉塔五国边境互裁减军力</a></p>
+				</div>
+				<div id="bbb">
+					<h4><a href="#">
+						美将领称中国打不起现代化战争 美媒批美军该清醒了
+					</a></h4>
+					<p><a href="#">
+						俄媒评世界十佳战机大跌眼镜 中国新机甩对手几条街
+					</a></p>
+					<p><a href="#">
+						一国获印度35亿援助 却欲拿去买20架歼10称性价比高
+					</a></p>
+				</div>
+				<div id="ccc">
+					<h3><a href="#">
+						朝鲜：美航母是肥硕变态动物 将一举击沉
+					</a></h3>
+					<h4><a href="#">
+						朝警告澳:再追随美就用核武打你 朝中社不点名批中国
+					</a></h4>
+					<p><a href="#">
+						中国从巴基斯坦获一要塞40年经营权 令五角大楼不安
+					</a></p>
+					<p><a href="#">
+						印度放豪言称税改助GDP增速破8超中国 又被美媒打脸
+					</a></p>
+				</div>
+			</div>
+		</mian>
+</body>
+</html>
+<script>
+    var arrowLeftList=document.getElementById("arrL");
+	var arrowRightList=document.getElementById("arrR");
+	var num=1;
+	
+		arrowRightList.onclick=function(){
+		num++;
+		if(num==5){
+			num=1;
+		}
+		show(num);
+	}
+	
+		arrowLeftList.onclick=function(){
+			num--;
+		if(num==0){
+			num=5;
+		}
+		show(num);
+		}
+	
+	function show(x){
+		for(var i=1;i<=5;i++){
+			var img=document.getElementById("m"+i);
+			if(i==x){
+				img.style.display="block";
+			}else{
+				img.style.display="none";
+			}
+		}
+	}
+	
+</script>
