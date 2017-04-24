@@ -1,0 +1,54 @@
+<html>
+    <head>
+    <title>javascript 级联菜单</title>
+        <script language="javaScript">
+        var dt = new Array();                                      //  模拟的测试数据
+        dt[0] = new Array('0','--请先选择省份--');
+        var gd = new Array();
+        gd[0] = new Array('0','广州');
+        gd[1] = new Array('1','深圳');
+        gd[2] = new Array('2','中山');
+        var sd = new Array();
+        sd[0] = new Array('0','济南');
+        sd[1] = new Array('1','青岛');
+        sd[2] = new Array('2','威海');
+      
+        function showCity(pe){                                  //  动态加载1级菜单
+            for (var i=0;i<pe.length;i++){   
+                document.m.city.options[i] = new Option(pe[i][1],pe[i][0]);
+            }
+        }
+
+        function choose(){                                          //  动态加载2级菜单 
+            var tag = document.m.p.value;
+            switch(tag){
+                case '0': init(); showCity(dt); break;
+                case '1': init(); showCity(gd); break;        
+                case '2': init(); showCity(sd); break;
+            }
+       }
+       function init(){                                                  //  初始化2级菜单  
+           var len = document.m.city.options.length;
+           for(var i=0;i<len;i++){
+               document.m.city.remove(i);
+           }
+       }
+       function flush(){                                               //  解决页面刷新,初始化1级菜单
+           document.m.p.options[0].selected=true ;  
+       }
+       </script>
+   </head>
+   <body onload="flush()">
+       <form name="m">
+           <select name="p" onchange="choose()">
+               <option value="0" selected>--省份--</option>
+               <option value="1">广东</option>
+               <option value="2">山东</option>
+           </select>
+
+           <select name="city">
+               <option value="0">--城市--</option>
+           </select>
+        </form>
+    </body>
+</html>
