@@ -1,0 +1,612 @@
+<!--1（1）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>DOM</title>
+</head>
+<body>
+
+      <h1 id="hid">hello world</h1>
+      <a href="http://www.cwu.com">女子学院</a>
+</body>
+</html>
+<script>
+
+      //DOM:1.HTML DOM  2.XML DOM
+      //我们今天学习的是: DOM -> BOM
+      //DOM :文档对象模型
+      //DOM能做什么: 可以通过 JavaScript，您可以重构整个 HTML 文档。您可以添加、移除、改变或重排页面上的项目。
+
+      /**
+            1.整个文档是一个文档节点 
+            2.每个 HTML 标签是一个元素节点 
+            3.包含在 HTML 元素中的文本是文本节点 
+            4.每一个 HTML 属性是一个属性节点 
+            5.注释属于注释节点 
+      **/
+</script>
+<!--1（2）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>DOM</title>
+</head>
+<body>
+
+      <h1 id="hid">hello world</h1>
+      <a href="http://www.cwu.com">女子学院</a>
+</body>
+</html>
+<script>
+</script>
+<!--1（3）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>DOM</title>
+</head>
+<body>
+
+      <h1 id="hid">hello world</h1>
+      <a href="http://www.cwu.com">女子学院</a>
+</body>
+</html>
+<script>
+</script>
+
+
+<!--2（1）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+</head>
+<body>
+      <ul>
+            <li>爱情买卖</li>
+            <li>爱情转移</li>
+            <li>爱你不是两三天</li>
+            <li>纤夫的爱</li>
+      </ul>
+
+      <h3 id="hid">为爱痴狂</h3>
+</body>
+</html>
+
+<script>
+
+      /**
+            节点信息包含三种
+            节点信息
+            每个节点都拥有包含着关于节点某些信息的属性。这些属性是：
+            nodeName（节点名称） 
+            nodeValue（节点值） 
+            nodeType（节点类型） 
+
+
+            元素 1 
+            属性 2 
+            文本 3 
+            注释 8 
+            文档 9 
+
+      **/
+      var oUl = document.getElementsByTagName('li')[0];
+      //alert(oUl.nodeType);
+      var oHid = document.getElementById("hid");
+      //alert(oHid.nodeType);   //1.元素类型
+      //alert(oHid.firstChild.nodeType)  //3:本文类型
+</script>
+<!--2（2）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+</head>
+<body>
+      <ul>
+            <li>爱情买卖</li>
+            <li>爱情转移</li>
+            <li>爱你不是两三天</li>
+            <li>纤夫的爱</li>
+      </ul>
+
+      <h3 id="hid">为爱痴狂</h3>
+</body>
+</html>
+
+<script>
+      var oUl = document.getElementsByTagName('li')[0];
+      //alert(oUl.nodeType);
+      var oHid = document.getElementById("hid");
+      //alert(oHid.nodeType);  
+      //alert(oHid.firstChild.nodeType)  
+</script>
+<!--2（3）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+</head>
+<body>
+      <ul>
+            <li>爱情买卖</li>
+            <li>爱情转移</li>
+            <li>爱你不是两三天</li>
+            <li>纤夫的爱</li>
+      </ul>
+
+      <h3 id="hid">为爱痴狂</h3>
+</body>
+</html>
+
+<script>
+      var oUl = document.getElementsByTagName('li')[0];
+      //alert(oUl.nodeType);
+      var oHid = document.getElementById("hid");
+      //alert(oHid.nodeType);  
+      //alert(oHid.firstChild.nodeType)  
+</script>
+
+<!--3（1）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+</head>
+<body>
+      <iframe src="1.html" frameborder="1"></iframe>
+      <iframe src="2.html" frameborder="1"></iframe>
+      <iframe src="1.html" frameborder="1"></iframe>
+      <iframe src="http://www.jd.com" frameborder="1"></iframe>
+      <button onclick="change()">变变变</button>
+</body>
+</html>
+<script>
+      function change(){
+            window.frames[1].document.getElementById('hid').style.color = "red";
+      }
+</script>
+<!--3（2）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+</head>
+<body>
+      <iframe src="1.html" frameborder="1"></iframe>
+      <iframe src="2.html" frameborder="1"></iframe>
+      <iframe src="1.html" frameborder="1"></iframe>
+      <iframe src="http://www.jd.com" frameborder="1"></iframe>
+      <button onclick="change()">变变变</button>
+</body>
+</html>
+<script>
+      function change(){
+            window.frames[1].document.getElementById('hid').style.color = "red";
+      }
+</script>
+<!--3（3）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+</head>
+<body>
+      <iframe src="1.html" frameborder="1"></iframe>
+      <iframe src="2.html" frameborder="1"></iframe>
+      <iframe src="1.html" frameborder="1"></iframe>
+      <iframe src="http://www.jd.com" frameborder="1"></iframe>
+      <button onclick="change()">变变变</button>
+</body>
+</html>
+<script>
+      function change(){
+            window.frames[1].document.getElementById('hid').style.color = "red";
+      }
+</script>
+
+
+<!--4（1）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+</head>
+<body>
+      <iframe src="https://sale.jd.com/act/8OuyNbeoZaXfqDhL.html" frameborder="0" width="100%" height="2000"></iframe>
+</body>
+</html>
+<!--4（2）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+</head>
+<body>
+      <iframe src="https://sale.jd.com/act/8OuyNbeoZaXfqDhL.html" frameborder="0" width="100%" height="2000"></iframe>
+</body>
+</html>
+<!--4（3）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+</head>
+<body>
+      <iframe src="https://sale.jd.com/act/8OuyNbeoZaXfqDhL.html" frameborder="0" width="100%" height="2000"></iframe>
+</body>
+</html>
+
+
+<!--5（1）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+</head>
+<body>
+      <button onclick="window.open('http://www.baidu.com','','width=500,height=400')">芝麻开门</button>
+</body>
+</html>
+<script>
+
+      var res = confirm("今天你微笑了吗?");
+      if(res){
+            alert("呵呵呵...");
+      }else{
+            alert("55555555555555555555555");
+      }
+
+      //输入框
+      prompt("请输入你的三围");
+</script>
+<!--5（2）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+</head>
+<body>
+      <button onclick="window.open('http://www.baidu.com','','width=500,height=400')">芝麻开门</button>
+</body>
+</html>
+<script>
+
+      var res = confirm("今天你微笑了吗?");
+      if(res){
+            alert("呵呵呵...");
+      }else{
+            alert("55555555555555555555555");
+      }
+      prompt("请输入你的三围");
+</script>
+<!--5（3）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+</head>
+<body>
+      <button onclick="window.open('http://www.baidu.com','','width=500,height=400')">芝麻开门</button>
+</body>
+</html>
+<script>
+
+      var res = confirm("今天你微笑了吗?");
+      if(res){
+            alert("呵呵呵...");
+      }else{
+            alert("55555555555555555555555");
+      }
+      prompt("请输入你的三围");
+</script>
+
+
+<!--6（1）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+</head>
+<body>
+      <button onclick="window.open('http://www.baidu.com','','width=500,height=400')">芝麻开门</button>
+</body>
+</html>
+<script>
+
+      var res = confirm("今天你微笑了吗?");
+      if(res){
+            alert("呵呵呵...");
+      }else{
+            alert("55555555555555555555555");
+      }
+      prompt("请输入你的三围");
+</script>
+<!--6（2）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+</head>
+<body>
+      <button onclick="window.open('http://www.baidu.com','','width=500,height=400')">芝麻开门</button>
+</body>
+</html>
+<script>
+
+      var res = confirm("今天你微笑了吗?");
+      if(res){
+            alert("呵呵呵...");
+      }else{
+            alert("55555555555555555555555");
+      }
+      prompt("请输入你的三围");
+</script>
+<!--6（3）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+</head>
+<body>
+      <button onclick="window.open('http://www.baidu.com','','width=500,height=400')">芝麻开门</button>
+</body>
+</html>
+<script>
+
+      var res = confirm("今天你微笑了吗?");
+      if(res){
+            alert("呵呵呵...");
+      }else{
+            alert("55555555555555555555555");
+      }
+      prompt("请输入你的三围");
+</script>
+
+
+<!--7（1）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Navigator 对象</title>
+</head>
+<body>
+      
+</body>
+</html>
+
+<script>
+      //对象包含有关浏览器的信息。
+
+      with(document) {
+                 write ("你的浏览器信息：<ul>");
+                 write ("<li>代码："+navigator.appCodeName+"</li>");
+                 write ("<li>名称："+navigator.appName+"</li>");
+                 write ("<li>版本："+navigator.appVersion+"</li>");
+                 write ("<li>语言："+navigator.language+"</li>");
+                 write ("<li>编译平台："+navigator.platform+"</li>");
+                 write ("<li>用户表头："+navigator.userAgent+"</li>");
+                 write ("</ul>");
+            }
+</script>
+<!--7（2）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Navigator 对象</title>
+</head>
+<body>
+      
+</body>
+</html>
+
+<script>
+      with(document) {
+                 write ("你的浏览器信息：<ul>");
+                 write ("<li>代码："+navigator.appCodeName+"</li>");
+                 write ("<li>名称："+navigator.appName+"</li>");
+                 write ("<li>版本："+navigator.appVersion+"</li>");
+                 write ("<li>语言："+navigator.language+"</li>");
+                 write ("<li>编译平台："+navigator.platform+"</li>");
+                 write ("<li>用户表头："+navigator.userAgent+"</li>");
+                 write ("</ul>");
+            }
+</script>
+<!--7（3）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Navigator 对象</title>
+</head>
+<body>
+      
+</body>
+</html>
+
+<script>
+
+      with(document) {
+                 write ("你的浏览器信息：<ul>");
+                 write ("<li>代码："+navigator.appCodeName+"</li>");
+                 write ("<li>名称："+navigator.appName+"</li>");
+                 write ("<li>版本："+navigator.appVersion+"</li>");
+                 write ("<li>语言："+navigator.language+"</li>");
+                 write ("<li>编译平台："+navigator.platform+"</li>");
+                 write ("<li>用户表头："+navigator.userAgent+"</li>");
+                 write ("</ul>");
+            }
+</script>
+
+
+
+<!--8（1）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Screen 对象</title>
+</head>
+<body>
+      
+</body>
+</html>
+<script>
+      //Screen 对象包含有关客户端显示屏幕的信息。
+
+
+      document.write("宽度"+screen.width+"<br>");
+      document.write("高度"+screen.height+"<br>");
+      document.write("有效宽度"+screen.availWidth+"<br>");
+      document.write("有效高度"+screen.availHeight+"<br>");
+</script>
+<!--8（2）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Screen 对象</title>
+</head>
+<body>
+      
+</body>
+</html>
+<script>
+      document.write("宽度"+screen.width+"<br>");
+      document.write("高度"+screen.height+"<br>");
+      document.write("有效宽度"+screen.availWidth+"<br>");
+      document.write("有效高度"+screen.availHeight+"<br>");
+</script>
+<!--8（3）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Screen 对象</title>
+</head>
+<body>
+      
+</body>
+</html>
+<script>
+      document.write("宽度"+screen.width+"<br>");
+      document.write("高度"+screen.height+"<br>");
+      document.write("有效宽度"+screen.availWidth+"<br>");
+      document.write("有效高度"+screen.availHeight+"<br>");
+</script>
+
+
+<!--9（1）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>History 对象</title>
+</head>
+<body>
+      <button onclick="history.back()">回退</button>
+      <button onclick="history.go(1)">回退2</button>
+</body>
+</html>
+<script>
+      //History 对象包含用户（在浏览器窗口中）访问过的 URL。
+</script>
+<!--9（2）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>History 对象</title>
+</head>
+<body>
+      <button onclick="history.back()">回退</button>
+      <button onclick="history.go(1)">回退2</button>
+</body>
+</html>
+<script>
+</script>
+<!--9（3）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>History 对象</title>
+</head>
+<body>
+      <button onclick="history.back()">回退</button>
+      <button onclick="history.go(1)">回退2</button>
+</body>
+</html>
+<script>
+</script>
+
+
+
+<!--10（1）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>History 对象</title>
+</head>
+<body>
+      
+</body>
+</html>
+<script>
+      //History 对象包含用户（在浏览器窗口中）访问过的 URL。
+
+      document.write(location.pathname); //可设置或返回当前 URL 的路径部分。
+
+</script>
+<!--10（2）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>History 对象</title>
+</head>
+<body>
+      
+</body>
+</html>
+<script>
+    document.write(location.pathname);
+
+</script>
+<!--10（3）-->
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>History 对象</title>
+</head>
+<body>
+      
+</body>
+</html>
+<script>
+    document.write(location.pathname);
+
+</script>
