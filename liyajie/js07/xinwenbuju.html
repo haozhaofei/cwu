@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>军事新闻</title>
+</head>
+<style>
+    *{margin:0px;padding:0px;}
+    body{ width:1000px;margin:0 auto;} 
+    .list{background:#004100;height:52px;margin:10px auto;}
+	li{list-style:none; float:left;line-height:30px;text-align:center;margin-left:5px;padding:10px 0px;}
+	.list a{color:#ccc;text-decoration:none;font-size:14px;border-right:1px solid #ccc;padding:0px 15px;}
+	li:hover{background:green;text-decoration:underline; color:#ccc;}
+	#did{border:2px solid black;width:640px;height:360px;position:relative;float:left;}
+    #m1,#m2,#m3,#m4{display:none;}
+    #mid1{width:50px;height:50px;position:absolute;top:45%;left:0px; }
+    #mid2{width:50px;height:50px;position:absolute;top:45%;right:0px;}
+    #pa{width:640px; height:60px;position:absolute;bottom:0px;background-color:rgba(10%,20%,30%,0.5);}
+    #pa a{text-decoration:none;font-size:20px;color:#fff;}
+    #pa a:hover{text-decoration:underline; }
+    #p2,#p3,#p4{display:none;}
+    #mu{position:absolute;bottom:5px;left:5px;}
+    .one,.two{width:340px;float:left;margin-left:16px;}
+    .one{border-bottom:2px dashed #ccc;}
+    h2{font-size:18px;padding-top:5px;}
+    p{font-size:14px;padding-top:5px;}
+    .one a,.two a,.logo a{color:black;text-decoration:none;}
+    .title a,.title1 a{color:red;}
+    .title1,.two h2{padding-top:21px;}
+    .bottom{padding-bottom:21px;}
+    .one a:hover,.two a:hover,.logo a:hover{text-decoration:underline;color:red;}
+    .logo{width:1000px;height:45px;}
+    .logo1{height: 22px;width:90px;float:right;background:url("images/5.jpg");background-repeat:no-repeat; background-position:  0px 0px;margin-top:22px;}
+    .logo1 p{font-size:12px;width:65px;height:20px;text-align:right;}
+    .logo2{width:67px;height:20px;font-size:12px;float:right;margin-top:24px;}
+</style>
+<body>
+   <div class="logo">
+   		<img src="images/logo.png">
+   	    <div class="logo1">
+   	    	 <p><a href="#" style="vertical-align:center">手机版</a><p>
+   	    </div>
+   	    <div class="logo2">
+   			 <img src="images/1.png"><a></a>
+   			 <a href="#">设为标签</a>
+   	    </div>
+   </div>
+   <div class="list">
+		<li><a href="#">首页</a></li>
+		<li><a href="#">滚动</a></li>
+		<li><a href="#">图片</a></li>
+		<li><a href="#">深度</a></li>
+		<li><a href="#">《出鞘》</a></li>
+		<li><a href="#">大国博弈</a></li>
+		<li><a href="#">军史</a></li>
+		<li><a href="#">东海局势</a></li>
+		<li><a href="#">南海局势</a></li>
+		<li><a href="#">新闻排行</a></li>
+		<li><a href="#">航空</a></li>
+		<li><a href="#">回顾</a></li>
+   </div>
+   <div id="did">
+   	<img src="images/1.jpg" id="m0" width="640" height="360">
+   	<div id="pa">
+   	<p id="p1"><a href="#">国产航母今日举行下水仪式？和辽宁舰有何不同</a></p>
+   	<p id="p2"><a href="#">今天能下水不？中国国产航母已刷油漆，在等节点</a></p>
+   	<p id="p3"><a href="#">船坞开始注水了？此时此刻国产航母的最新爆照</a></p>
+   	<p id="p4"><a href="#">4.23日和4.18日找不同！国产航母今日最新靓照</a></p>
+   	</div>
+   	<img src="images/1.jpg" id="m1">
+   	<img src="images/2.jpg" id="m2">
+   	<img src="images/3.jpg" id="m3">
+   	<img src="images/4.jpg" id="m4">
+   	<img src="images/2.png" id="mid2" onclick="forward()">
+   	<img src="images/4.png" id="mid1" onclick="back()">
+   	<div id="mu">
+   	<img src="images/3.png" onmouseover="show(1)">
+   	<img src="images/3.png" onmouseover="show(2)">
+   	<img src="images/3.png" onmouseover="show(3)"> 
+   	<img src="images/3.png" onmouseover="show(4)"> 
+   	</div>
+   </div>
+   <div class="one">
+   	 <h2><a href="#">中国095核潜艇开工建造2020年交付海军</a></h2>
+   	 <p class="title"><a href="#">中国无人机远程转场创历史</a><a href="#">德媒：中国军力世界第三</a></p>
+   	 <p><a href="#">天舟一号与天宫二号成功对接</a><a href="#">中国飞船技术领先俄美</a></p>
+   	 <p><a href="#">印度总说加尔各答级完胜中国052D 他们哪来的底气？</a></p>
+   	 <p><a href="#">外媒称日本正完成对中国包围网 </a><a href="#">军国主义进日本教材</a></p>
+   	 <p class="title1"><a href="#">菲防长登上南沙中业岛 我外交部严重不满已提出交涉</a></p>
+   	 <p><a href="#">美前高官：美国若玩弄一个中国政策 代价由台湾承担</a></p>
+   	 <p class="bottom"><a href="#">韩国雾霾严重怪中国？韩专家：简直是在国际上丢脸</a></p>
+   	 </div>
+   	 <div class="two">
+   	   <h2><a href="#">美副总统：卡尔文森航母数日内抵日本海</a></h2>
+       <p class="title"><a href="#">美军卡尔文森号航母北上朝鲜出师不利 F18战机失事</a></p>
+       <p><a href="#">美期待中国助解决朝核问题</a><a href="#">朝鲜称可将美韩化为灰烬</a></p>
+       <p><a href="#">俄战略轰炸机一周内4次抵近美海岸</a><a href="#">秀肌肉一箭三雕</a></p>
+     </div>
+  
+</body>
+</html>
+<script>
+   var i=1;
+   var img=document.getElementById("m0");
+   var list=document.getElementById("pa").getElementsByTagName("p");
+   function forward(){
+   	 i++;
+   	 if(i>4){
+   	 	i=1;
+   	 }
+     img.src=document.getElementById("m"+i).src;
+     for(var j=0;j<list.length;j++){
+     	if(j==i-1){
+          list[j].style.display="block";
+     	}else{
+     	  list[j].style.display="none";
+     	}
+     }
+
+   }
+   function back(){
+   	 i--;
+   	 if(i<1){
+   	 	i=4;
+   	 }
+   	 img.src=document.getElementById("m"+i).src;
+   	 for(var j=0;j<list.length;j++){
+     	if(j==i-1){
+          list[j].style.display="block";
+     	}else{
+     	  list[j].style.display="none";
+     	}
+     }
+   }
+   function show(x){
+     i=x;
+     img.src=document.getElementById("m"+i).src;
+     for(var j=0;j<list.length;j++){
+     	if(j==i-1){
+          list[j].style.display="block";
+     	}else{
+     	  list[j].style.display="none";
+     	}
+     }
+   }
+</script>
