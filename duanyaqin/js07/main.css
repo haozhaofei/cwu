@@ -1,0 +1,126 @@
+ *{ 
+ 	padding:0; 
+ 	margin:0; 
+ 	} 
+ header,nav,main,aside,footer,article,section,figure,figcaption{ 
+ display: block;  
+ } 
+ 
+ 
+ /* html5boilerplate.com Clearfix 
+10 --------------------------------- */ 
+ .clearfix:before, 
+ .clearfix:after { 
+   content: " "; 
+   display: table; 
+ } 
+ 
+ 
+ .clearfix:after { 
+   clear: both; 
+ } 
+ 
+ 
+ /* 
+  * For IE 6/7 only 
+  * Include this rule to trigger hasLayout and contain floats. 
+  */ 
+ .clearfix { 
+   *zoom: 1; 
+ } 
+ /* 这之前学的是固定的格式*/ 
+ #all{ 
+ 	max-width:1050px; 
+ 	margin:20px auto 0; 
+ 	} 
+ main{ 
+ 	float:left; 
+ 	width:640px; 
+ 	height: 360px; 
+ 	margin:15px 0 30px 0; 
+ 	position: absolute; 
+ 	border: 1px solid #000; 
+ 	} 
+ aside{ 
+ 	float:right; 
+ 	width:380px; 
+ 	margin:15px 0 30px 0;	 
+ 	} 
+ h1 img{ 
+ 	width:316px; 
+ 	height: 33px;  	} 
+ li{ 
+ 	display:inline-block;	 
+ 	} 
+ ul{ 
+ 	background-color:rgb(0,65,0); 
+ 	width:100%; 
+ 	height: 20px; 
+ 	padding:12px; 
+ 	} 
+ header a{ 
+ 	text-decoration:none; 
+ 	color: #fff; 
+ 	border-right: 0.5px solid #fff; 
+ 	padding-left: 12px; 
+ 	padding-right: 12px; 
+ 	font-size: 14px; 
+ 	} 
+ header div{ 
+ 	/*float: right;*/ 
+ 	position: absolute; 
+ 	height: 16px; 
+ 	top:23px; 
+ 	left: 1030px; 
+ 	 
+ } 
+ header div img{ 
+ 	height: 16px; 
+ } 
+ 
+ 
+ main img{ 
+ 	width:640px; 
+ 	height: 360px; 
+ } 
+ #p2,#p3,#p4,#p5{ 
+ 		display: none; 
+ } 
+ #left,#right{ 
+ 	position: relative; 
+ 	background-color: rgba(200,200,200,0.7); 
+ 	width:40px; 
+ 	height:40px; 
+ 	border-radius: 50%; 
+ 	z-index: 5px; 
+ } 
+ #left{ 
+ 	left:10px; 
+ 	top:-200px; 
+ } 
+ #right{ 
+ 	left:590px; 
+ 	top:-240px; 
+ } 
+ #text{ 
+ 	position: relative; 
+ 	z-index: 6px; 
+ 	height: 80px; 
+ 	width: 100%; 
+ 	top:-165px; 
+ 	background-color: rgba(0,0,0,0.5); 
+ 	font-size: 24px; 
+ 	color: #fff; 
+ 	line-height: 80px; 
+ 	 
+ } 
+ aside div{ 
+ 	text-align: 80px; 
+ 	margin-bottom: 20px; 
+ } 
+ aside .red{ 
+ 	color: red; 
+ } 
+ aside p,aside h3{ 
+ 	line-height: 28px; 
+ } 

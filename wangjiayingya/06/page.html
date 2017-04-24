@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>page</title>
+</head>
+<style>
+body{
+  width: 900px;
+  margin: 0 auto;
+}
+  .list{
+    background:black;
+    width:700px;
+    height:52px;
+    margin:50px auto;
+    margin-left: 200px;
+  }
+  .list a{
+    color:#ccc;
+    text-decoration:none;
+    font-size:14px;
+    padding:0px 18px;
+  }
+  li{
+    list-style:none; float:left;
+    line-height:30px;
+    margin-left:5px;
+    padding:10px 0px;
+  }
+  .one{
+    border-bottom:2px dashed #ccc;
+    width:380px;
+    float:right;
+    
+  }
+  .one a:hover,.list a:hover{
+    text-decoration:underline;
+    color:red;js
+  }
+  .one a{color:black;
+    text-decoration:none;
+  }
+  #m1,#m2,#m3{
+    display:none;
+  }
+  #nid {
+    width:300px;
+    height:240px;
+    float:right;
+  }
+
+</style>
+
+<body>
+  <div class="list">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">新闻</a></li>
+    <li><a href="#">经济</a></li>
+    <li><a href="#">教育</a></li>
+    <li><a href="#">军事</a></li>
+    <li><a href="#">社会</a></li>
+    <li><a href="#">生活</a></li>
+    <li><a href="#">电影</a></li>
+    <li><a href="#">购物</a></li>
+    <li><a href="#">娱乐</a></li>
+   </div>
+   <div class="one">
+     <p class="title"><a href="#">还有不到十天  这种银行卡的使用将会发生变化</a></p>
+     <p><a href="#">达康书记的宠妻日常</a><a href="#">《大话西游》你不知道的细节</a></p>
+     <p><a href="#">王思聪车展连买两辆豪车</a><a href="#">古惑仔齐聚留影惹大家怀念</a></p>
+     <p><a href="#">高圆圆倪妮骑车凹造型</a><a href="#">春天学她们穿一双花边鞋</a></p>
+     <p class="title1"><a href="#">下水倒计时 中国首艘航母准备好了吗？</a></p>
+     <p><a href="#">最惨5连胜？湖人名宿心很乱 前三签保得住吗？</a></p>
+     <p class="bottom"><a href="#">司机开车竟睡着撞向无辜路人</a><a href="#">成史上难题</a></p> 
+     <p><a href="#">所有证据都必须经过查证属实</a></p>     
+     <p class="title"><a href="#">凡是知道案件情况的人都有作证的义务</a></p>
+
+     </div> 
+
+  <div id="nid" onmouseover="doStop()" onmouseout="doStart()">
+    <img src="imgs/1.jpg" id="m1">
+    <img src="imgs/2.jpg" id="m2">
+    <img src="imgs/3.jpg" id="m3">
+  </div>
+ 
+  
+</body>
+</html>
+<script>
+  var m = 0;
+  var time = null;
+
+  function doStart(){
+    if(time == null){
+      time = setInterval(function(){
+        m++;
+        show(m);
+        if(m >=3){
+          m = 0;
+        }
+      },1000)
+    }
+  }
+  doStart();
+  function doStop(){
+    if(time != null){
+      clearInterval(time);
+    }
+    time = null;
+  }
+  function show(x){
+    for(var i=1;i<=3;i++){
+      var imgl=document.getElementById("m"+i);
+      if(i==x){
+        imgl.style.display="block";
+      }else{
+        imgl.style.display="none";
+      }
+    }
+  }
+</script>

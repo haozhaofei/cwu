@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>li 2 two</title>
+</head>
+<body>
+	<ul>
+		<li>111111</li>
+		<li>222222</li>
+		<li>333333</li>
+		<li>444444</li>
+	</ul>
+	<h3 id="hid">5555555</h3>
+</body>
+</html>
+<script>
+/*
+	1  元素类型
+	3  文本类型
+*/
+	var oUl=document.getElementsByTagName('li')[0];
+	// alert(oUl.nodeName);
+	// alert(oUl.nodeValue);
+	// alert(oUl.nodeType);
+	alert(oUl.firstChild.nodeType);
+</script>

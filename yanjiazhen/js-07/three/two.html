@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TWO</title>
+</head>
+<body>
+	<ul>
+		<li>吃</li>
+		<li>不吃</li>
+		<li>选择</li>
+		<li>不给</li>
+	</ul>
+	<h3 id="did">记住你是要减肥的人呐！</h3>
+</body>
+</html>
+<script>
+	var myol=document.getElementsByTagName("li")[0];
+	var mydid=document.getElementById("did");
+	//先试试获取节点名称哈！
+	document.write("列表的节点名称是："+myol.nodeName+"<br>");
+	document.write("标题的节点名称是："+mydid.nodeName+"<br><br>");
+	//在试试获取节点值哈！
+	document.write("列表的节点值是："+myol.nodeValue+"<br>");
+	document.write("标题的节点值是："+mydid.nodeValue+"<br><br>");
+	//最后试试获取节点leixing哈！
+	document.write("列表的节点值是："+myol.nodeType+"<br>");
+	document.write("标题的节点值是："+mydid.nodeType+"<br>");
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>two-2</title>
+</head>
+<body>
+
+	<p>严家珍好帅啊！</p>
+</body>
+</html>
+<script>
+	var myp=document.getElementsByTagName("p");
+	document.write("段落的类型是："+myp.nodeType+"<br>");
+	document.write("段落的名称是："+myp.nodeName+"<br>");
+	document.write("段落的zhi是："+myp.nodeValue+"<br>");
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>two-3</title>
+</head>
+<body>
+	<div id="did">aaaaa</div>
+</body>
+</html>
+<script>
+	var mydid=document.getElementsByTagName("did");
+	document.write("div的类型是："+mydid.nodeType+"<br>");
+	document.write("div的名称是："+mydid.nodeName+"<br>");
+	document.write("div的值是："+mydid.nodeValue+"<br>");
+</script>

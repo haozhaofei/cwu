@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新浪网页</title>
+</head>
+<style>
+	.daohang{width:1200px;height: 40px;background-color: #005500;}
+	.daohang ul li{float: left;margin-top: 5px;margin-left:5px;margin-right:5px;line-height:30px;;border-right:1px solid #FFFFFF;padding-left:10px;padding-right: 10px;color: white;}
+	.linkRed{color: red;}
+	#lefts{position: absolute;left:75px;top: 400px;}
+	#rights{position: absolute;left: 810px;top: 400px;}
+	
+</style>
+
+
+
+<body>
+<div id="all" style="margin: 0 auto; width: 1200px;">
+
+
+		<div id="left" style="float: left; display:table-cell;">
+		<img style="margin-top:20px;" border="0" src="images/header-sina.png" height:20px;alt="新浪军事网">
+		</div>
+		
+	    <div id="right" style="float: right; display:table-cell;">
+		<img style="margin-top: 30px; width=25px; height:25px; " border="0" src="images/tubiao1.png" alt="设为书签">设为书签
+		<img style="margin-top: 30px; width=25px; height:25px; " border="0" src="images/tubiao2.png" alt="手机版">手机版
+		</div>
+
+		<div class="daohang" style="margin-top:5px;" >
+			<ul class="nav udv-clearfix" data-sudaclick="nav">
+		        <li>首页</li>
+		        <li>滚动</li>
+		        <li>图片</li>
+		        <li>深度</li>
+		        <li>《出鞘》</li>
+		       	<li>大国博弈</li>
+		       	<li>军史</li>
+		        <li>东海局势</li>
+		        <li>南海局势</li> 
+		        <li>新闻排行</li>
+		        <li>航空</li>
+		        <li>回顾</li>
+			</ul>
+		</div>
+
+		<div id="picture">
+			<img id="p1" style="float:left; margin-top:15px; width=760px ;height:500px; " border="1"  src="images/plane.jpg">
+			<div id="btn">
+				<div id="b1" onmouseover="show(1)"></div>
+				<div id="b2" onmouseover="show(2)"></div>
+				<div id="b3" onmouseover="show(3)"></div>
+			</div>
+		</div>
+		<div id="lefts" onclick="play(1)">
+			<button><</button>
+		</div>
+		<div id="rights" onclick="play(2)">
+			<button>></button>
+		</div>
+		
+
+		<div class="news" style="float: right;margin-top:20px; width:400px;">
+	        <div class="new1" data-sudaclick="foucs_news">
+					<h2 align="center">
+						<a target="_blank" >国产航母被指下水试航时间曝光</a>
+					</h2>
+					<h4>
+						<a target="_blank" class="linkRed">美最强航母选在中国航母下水前海试</a> 
+						<a target="_blank" class="linkRed" >性能甩人几条街</a>
+					</h4>
+						<p>
+							<a target="_blank" >中国军官谈首艘国产航母：不是最先进却符合我们需求</a>
+						</p>
+						<p>
+							<a target="_blank" >英称中国第6艘071坞登已开工</a> 
+							<a target="_blank" >俄战机雷达在中国惨败</a>
+						</p>
+						<p>
+							<a target="_blank" >军报披露中国或正在研发第6代战机 可轻松击败F22</a>
+						</p>
+			</div>
+
+			<div class="new2" style="margin-top:40px;">
+				<p>
+					<a target="_blank" class="linkRed" >美双航母将部署朝鲜周边</a> 
+					<a target="_blank" class="linkRed">中方被指向中朝边境临增兵</a>
+				</p>
+				<p>
+					<a target="_blank" >朝若再核试中美反应将空前</a> 
+					<a target="_blank" >导弹发射失败或因美干扰</a>
+				</p>
+				<p>
+					<a target="_blank" >韩国超4成受访者支持打朝鲜</a> 
+					<a target="_blank" >支持萨德候选人全面反超</a>
+				</p>
+			</div>
+
+			<div class="new3" style="margin-top:40px;">
+						
+				<h2>
+					<a target="_blank" class="linkRed" href="" >日称中国舰队抵近日卫星发射场</a> 
+				</h2>
+				<p>
+					<a target="_blank" >我海军飞豹战机被曝曾在南海缠斗美军F18</a> 
+					<a target="_blank" >并将其驱离</a>
+				</p>
+				<p>
+					<a target="_blank" >中国火箭军将接装改进版东风16</a> 
+					<a target="_blank" >或令美F35大单受重挫</a>
+				</p>
+				<p>
+					<a target="_blank" >中华台北改中国台北意味什么：</a> 
+					<a target="_blank" >台湾回归开始倒计时</a>
+				</p>
+            </div>
+    </div>
+</body>
+</html>
+
+
+<script>
+	function show(i){
+		var b1 = document.getElementById('b1');
+		var b2 = document.getElementById('b2');
+		var b3 = document.getElementById('b3');
+		var pic = document.getElementById('p1');
+		if (i==1) {
+			pic.src="images/plane.jpg"
+			if (b1.style.background=="green") {
+				b1.style.background="gray";
+			}else{
+				b1.style.background="green";
+				b2.style.background="gray";
+				b3.style.background="gray"
+			}
+			
+		}else if (i==2) {
+			pic.src="images/a.jpg"
+			if (b2.style.background=="green") {
+				b2.style.background="gray";
+			}else{
+				b1.style.background="gray";
+				b2.style.background="green";
+				b3.style.background="gray";
+			}
+		}else if (i==3) {
+			pic.src="images/b.jpg"
+			if (b3.style.background=="green") {
+				b3.style.background="gray";
+			}else{
+				b1.style.background="gray";
+				b2.style.background="gray";
+				b3.style.background="green";
+			}
+		
+		}
+	}
+		var m=3;
+		var n=2;
+	function play(a){
+		var pic = document.getElementById('p1');
+		if (m<1) {m=3;}
+		if (n>3) {n=1;}
+		if (a==1) {
+			show(m);
+			m--;
+		}else if (a==2) {
+			show(n);
+			n++
+		}
+	}
+</script>
