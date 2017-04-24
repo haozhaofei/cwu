@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景移动</title>
+	<style>
+	div{
+		margin:0px;
+		padding:0px;
+	}
+	#did{
+		width:500px;
+		height:500px;
+		background: url("./images/bg2.png") no-repeat 0px -1036px;
+		border:1px solid teal;
+		position:relative;
+		overflow: hidden;
+	}
+	</style>
+</head>
+<body>
+
+	<h1>无缝连接滚动背景图：</h1>
+	<div id="did"></div>
+	
+</body>
+</html>
+<script>
+	var did=document.getElementById("did");
+	var bgh=-1036;
+	function  running(){
+		bgh+=2;
+		if(bgh>=-268){
+			bgh=-1036;
+		}
+		//这里有个坑，0px后面要留个空格
+		did.style.backgroundPosition="0px "+bgh+"px";
+		setTimeout("running()",10);
+	}
+	running();
+</script>

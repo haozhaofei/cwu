@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>放大镜2</title>
+</head>
+<style>
+	#did{
+		width: 400px;
+		height: 400px;
+		position: absolute;
+		display: none;
+		overflow: hidden;
+	}
+</style>
+<body>
+	<h3>鼠标移上图片可查看图片细节</h3>
+	<img id="mid" src="images/2.jpg" width="342" alt="">
+	<div id="did">
+		<img src="images/2.jpg" alt="">
+	</div>
+</body>
+</html>
+<script>
+	var mid = document.getElementById("mid");
+	var did = document.getElementById("did");
+
+	//鼠标移上图片时
+	mid.onmouseover = function(){
+		did.style.display = "block";   //显示图片
+		did.style.top = this.offsetLeft + "px";
+		did.style.left = this.offsetWidth + this.offsetLeft + +10+"px"; //mid图片的宽度+ mid图片到左边框的距离+10px(mid与did图片的间隔)
+	}
+
+	//鼠标从图片上移开时
+	mid.onmouseout = function(){
+		did.style.display = "none";
+	}
+
+	//鼠标在图片上移动时
+	mid.onmousemove = function(ent){
+		var event = window.event || ent;
+		var x = event.clientX - this.offsetLeft;//鼠标的横坐标 - mid图片到左边框的距离
+		var y = event.clientY - this.offsetTop;//鼠标的纵坐标 - mid图片到上边框的距离
+
+		did.scrollTop = y*4-200; //4：4=did的宽度/mid的宽度
+		did.scrollLeft = x*4-200; //-200：=did图片div的一半
+	}
+</script>

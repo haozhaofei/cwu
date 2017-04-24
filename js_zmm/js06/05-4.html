@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	#did{
+		width: 400px;height: 400px;position:absolute;display: none;overflow:hidden;
+	}
+</style>
+<body>
+	<img id="mid" src="photos/nice.png" alt="" width="192px">
+	<div id="did">
+		<img src="photos/nice.png" alt="">
+	</div>
+</body>
+</html>
+<script>
+	var did=document.getElementById("did");
+	var mid=document.getElementById("mid");
+	mid.onmouseover=function(){
+		did.style.display="block";
+		did.style.top=this.offsetTop+"px";
+		did.style.left=this.offsetLeft+this.offsetWidth+10+"px";
+	}
+	mid.onmouseout=function(){
+		did.style.display="none";
+	}
+	mid.onmousemove=function(ent){
+		var event= window.event || ent;
+		var x=event.clientX-this.offsetLeft;
+		var y=event.clientY-this.offsetTop;
+		did.scrollTop=y*10-200;
+		did.scrollLeft=x*10-200;
+	}
+</script>

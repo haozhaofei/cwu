@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>window对象</title>
+</head>
+<body>
+	<iframe src="22.html"></iframe>
+	<iframe src="http://www.jd.com" frameborder="1"></iframe>
+	<button>改变第一个窗口的按钮</button>
+</body>
+</html>
+<script>
+	document.getElementsByTagName('button')[0].onclick=function(){
+		window.frames[0].document.getElementById('bid').style.background="red";
+	}
+</script>

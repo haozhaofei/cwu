@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript实例--无缝滚动（背景移动-实现地图显示）-2</title>
+</head>
+<style>
+	div{
+		padding:0;
+		margin: 0;
+	}
+	#bid{
+		width:500px;
+		height:500px;
+		border: 1px solid green;
+		background: url('images/bg2.png') no-repeat 0px -1036px;/*图片w*h=512px*1536px*/
+		position: relative;
+		overflow: hidden; /*超出border的部分隐藏*/
+	}
+</style>
+<body>
+	<div id="bid"></div>
+</body>
+</html>
+<script>
+	var bid = document.getElementById("bid");
+	var bgh = -1036;
+
+	function running(){
+		bgh += 2;
+		if(bgh >= -268){  //-268是？？
+			bgh = -1036;  //-1036 ??
+		}
+		bid.style.backgroundPosition = "0px "+ bgh + "px";
+
+		setTimeout("running()",33);
+	}
+
+	running();
+</script>

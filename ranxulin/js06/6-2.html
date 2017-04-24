@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>choosecity</title>
+	<style>
+      #city{
+      	font-size: 25px;
+      	color: pink;
+      	padding-left: 20px;
+      	padding-right: 20px;
+      }
+      #province{
+      	font-size: 25px;
+      	color: red;
+      	padding-left: 20px;
+      	padding-right: 20px;
+      }
+	</style>
+</head>
+<body>
+    <br>
+    有*标志的为必填选项
+    <br><br>
+	<select id="province" onchange="change()">
+	</select>
+	<select id="city">
+	</select>
+</body>
+</html>
+<script type="text/javascript">
+	var p;
+	var c;
+	window.onload=function(){
+	p=document.getElementById("province");
+	c=document.getElementById("city");
+	p[0]=new Option("  *省份 ",0);
+	p[1]=new Option("贵州",1);
+	p[2]=new Option("河南",2);
+	p[3]=new Option("河北",3);
+	c[0]=new Option("  *城市 ",0);
+}
+	function change() {
+	var index=document.getElementById("province").selectedIndex;
+	switch (index) {
+	case 0:
+	c[0]=new Option("！城市 ",0);
+	break;
+	case 1:
+	c[0]=new Option("-安顺",0);
+	c[1]=new Option("-六盘水",1);
+	c[2]=new Option("-铜仁",2);
+	c[3]=new Option("-遵义",3);
+	break;
+	case 2:
+	c[0]=new Option("-洛阳",0);
+	c[1]=new Option("-郑州",1);
+	c[2]=new Option("-开封",2);
+	c[3]=new Option("-焦作",3);
+	break;
+	case 3:
+	c[0]=new Option("-石家庄",0);
+	c[1]=new Option("-秦皇岛",1);
+	c[2]=new Option("-唐山",2);
+	c[3]=new Option("-邯郸",3);
+	break;
+}
+}
+</script>

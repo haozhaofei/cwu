@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-this事件认识</title>
+</head>
+<body>
+点击目录弹出对话框：
+	<ul>
+		<li>刚</li>
+		<li>好</li>
+		<li>遇</li>
+		<li>见</li>
+		<li>你</li>
+	</ul>
+</body>
+</html>
+<script>
+	var list = document.getElementsByTagName("li");
+	for(var i=0; i<list.length; i++){
+		list[i].onclick = function(){
+			alert(this.innerHTML);
+		}
+	}
+</script>

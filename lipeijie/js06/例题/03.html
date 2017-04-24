@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>他登上了王座 </li>
+		<li>但是他的儿子死了</li>
+		<li>后来他的皇后离开了他</li>
+		<li>这个王感到生活无趣</li>
+		<li>他在皇宫自杀了</li>
+	</ul>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName("li");
+	for(var i=0;i<list.length;i++)
+	{
+		list[i].onclick=function(){
+			alert(this.innerHTML);
+		}
+	}
+</script>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this事件认识</title>
+</head>
+<body>
+<ul>
+	<li>等你的季节</li>
+	<li>因为爱情</li>
+	<li>千年等一回</li>
+	<li>一眼万年</li>
+	<li>千里之外</li>
+</ul>
+	
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			alert(this.innerHTML);
+		}
+	}
+</script>

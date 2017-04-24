@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>li 3 one</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+<ul>
+	<li>南山南</li>
+	<li>七月上</li>
+	<li>因为爱情</li>
+	<li>传奇</li>
+
+</ul>
+	
+
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick=function(){
+			alert(this.innerHTML);
+
+		}
+		
+	}
+</script>

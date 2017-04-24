@@ -1,0 +1,75 @@
+<html lang="en">  
+
+<head>  
+
+    <meta charset="UTF-8">  
+
+    <title>城市级联</title>  
+
+</head>  
+
+<body>   
+
+    <select id="sType" onchange="change()"></select>  
+
+    <select id="sMenu"></select>  
+
+    <script>  
+
+        //定义城市类别和数组  
+
+        var menuType = ["-- 请 选 择 --","北 京 市","上 海 市","江苏省","浙江省","山东省"];  
+
+        var menu = [  
+
+          ["-- 市 区 --"],
+            ["海淀区","朝阳区","昌平区","大兴区"],  
+            ["黄埔区","静安区","徐汇区","长宁区"],  
+            ["南京市","苏州市","无锡市","盐城市"],
+            ["杭州市","宁波市","温州市","绍兴市"],
+            ["济南市","青岛市","枣庄市","烟台市"],  
+        ]  
+
+        var sType = document.getElementById("sType");  
+        var sMenu = document.getElementById("sMenu");  
+        var str = "";  
+
+        //将数组内容复制到标签中  
+        for(var n=0;n<menuType.length;n++){  
+
+            str+="<option value='"+n+"'>"+menuType[n]+"</option>"  
+
+        }  
+
+        sType.innerHTML=str;  
+
+        var str = "";  
+
+        //显示列表  
+
+        for(var n=0;n<menu[0].length;n++){  
+
+            str+="<option>"+menu[0][n]+"</option>";  
+
+        }  
+
+        sMenu.innerHTML=str;  
+
+        function change() {  
+
+            sMenu.innerHTML=""; 
+            str="" ;
+            for(var n=0;n<menu[sType.value].length;n++){  
+
+                str+="<option>"+menu[sType.value][n]+"</option>";  
+
+            }  
+
+            sMenu.innerHTML=str;  
+        }  
+
+    </script>  
+
+</body>  
+
+</html> 

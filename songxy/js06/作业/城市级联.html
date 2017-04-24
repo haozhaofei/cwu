@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>城市级联</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>  
+function scity(pname, cname, sf, cs){  
+    var province = ['湖南','北京','浙江','广东省'];  
+  
+    document.write('<select onchange = "selectc(this)" id = "pro" name = "'+pname+'">');  
+    document.write('<option value="">---省份---</option>');  
+    var a = 0;  
+    for(var i = 0; i < province.length; i++){  
+        if(typeof(sf)!="undefined"){  
+            if(province[i] == sf){  
+                var sel = 'selected';  
+                a = i;  
+            }else{  
+                var sel = '';  
+            }  
+        }else{  
+            var sel = '';  
+        }  
+        document.write('<option '+sel+' value="'+province[i]+'">'+province[i]+'</option>')  
+    }  
+    document.write("</select>");  
+      
+      
+    document.write('<select id = "city" name = "'+cname+'">');  
+    document.write('<option value="">---城市---</option>');  
+    document.write("</select>");  
+      
+  
+    if(a > 0)  
+        selectc(document.getElementById("pro"), a, cs);  
+}  
+    var citys = new Array(  
+        new Array('长沙','常德','怀化'),  
+        new Array('丰台区','海淀区','朝阳区'),  
+        new Array('杭州','温州','扬州'),  
+        new Array('广州','深圳','东莞')  
+    );  
+      
+    function selectc(pobj, a, cs){    
+        if(typeof(a)!='undefined'){  
+            var index = a;  
+        }else{  
+            var index = pobj.selectedIndex -1;  
+        }  
+          
+        var cobj = document.getElementById("city");  
+        cobj.innerHTML = "";  
+          
+        if(index >=0){  
+            for(var i=0; i<citys[index].length; i++){  
+                if(typeof(cs) != 'undefined'){  
+                    if(citys[index][i] == cs)  
+                        var sel = 'selected';  
+                    else  
+                        var sel = '';  
+                }  
+                var option = document.createElement('option');  
+                var text = citys[index][i];  
+                option.value = text;  
+                option.selected = sel;  
+                option.innerHTML = text;  
+                cobj.appendChild(option);  
+            }  
+        }else{  
+            var option = document.createElement('option');  
+            option.value = '';  
+            option.innerHTML = '---选择城市---';  
+            cobj.appendChild(option);  
+        }  
+    }  
+      
+//调用显示  
+scity('province', 'city', '广东省','清远')  
+</script>  

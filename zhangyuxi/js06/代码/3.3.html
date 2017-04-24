@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this事件认识</title>
+</head>
+<body>
+	<ul>
+		<li>刚好</li>
+		<li>成全</li>
+		<li>命运</li>
+		<li>成都</li>
+		<li>理想</li>
+	</ul>
+</body>
+</html>
+
+<script>
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			alert(this.innerHTML);
+			//alert(list[i].innerHTML);
+		}
+	}
+
+</script>

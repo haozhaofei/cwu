@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	#did,#mid,#m1,#m2,#m3,#m4,#m5,#m6{padding: 0px;margin: 0px;}
+	#did{background: url("photos/打飞机背景.png"  ) no-repeat 0px -1036px;
+	 width: 400px;
+	 height: 400px;
+	 position: relative;
+	 border: 1px solid blue;
+	 overflow: hidden;}
+	#mid{width: 40px;height: 40px;position:absolute;background:red; left: 200px;top:300px;}
+	#m1,#m2,#m3,#m4,#m5,#m6{display: none;position: absolute;}
+</style>
+
+<body>
+        <div id="did">
+            <img src="photos/子弹.png" id="m1" alt="">
+		<img src="photos/子弹.png" id="m2" alt="">
+		<img src="photos/子弹.png" id="m3" alt="">
+		<img src="photos/子弹.png" id="m4" alt="">
+		<img src="photos/子弹.png" id="m5" alt="">
+		<img src="photos/子弹.png" id="m6" alt="">
+		<div id="mid"></div>
+        </div>
+
+       <script type="text/javascript">
+
+
+        var did2= document.getElementById("did");
+           var bgh=-1036;
+           function brunning(){
+                bgh+=2;
+                if(bgh>=-268){
+                    bgh=-1036;
+                }
+                did2.style.backgroundPosition="0px "+bgh+"px";
+                
+                
+                
+                setTimeout("brunning()",33);
+           }
+           brunning();
+
+       </script>
+</body>
+</html>
+
+<script>
+	var mid=document.getElementById("mid");
+	window.onkeydown=function(ent){
+		var ev=window.event||ent;
+
+		switch(ev.keyCode){
+			case 37:mid.style.left=Math.max(mid.offsetLeft-5,0)+"px";break;
+			case 38:mid.style.top=Math.max(mid.offsetTop-5,0)+"px";break;
+			case 39:mid.style.left=Math.min(mid.offsetLeft+5,360)+"px";break;
+			case 40:mid.style.top=Math.min(mid.offsetTop+5,360)+"px";break;
+			case 13:fire(mid.offsetLeft+20,mid.offsetTop);break;
+		}
+	}
+
+
+	var fire=function(x,y){
+		for(var i=1;i<=6;i++){
+			var m=document.getElementById("m"+i);
+			if(m.style.display!="block"){
+				m.style.left=x+"px";
+				m.style.top=y+"px";
+				m.style.display="block";
+			}
+		}
+
+	}
+
+
+	var running=function(){
+		for(var i=1;i<=6;i++){
+			var m=document.getElementById("m"+i);
+			if(m.style.display=="block"){
+				m.style.top=m.offsetTop-25+"px";
+				if(m.offsetTop<-20){
+					m.style.display="none";
+				}
+			}
+		}
+		setTimeout("running()",30);
+	}
+	running();
+	
+</script>

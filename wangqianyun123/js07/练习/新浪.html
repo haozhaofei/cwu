@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	
+	ul,li{padding: 0px;margin: 0px;}
+	#front{height: 40px;width: 1050px;}
+	#one,#front h3,#two,#three,#front p{display: inline-block;}
+	#one a,#front h3 a,#two a,#three a,#front p a{text-decoration: none;color: black;}
+	#front h3{margin-top: -15px;}
+	#small{float:right;}
+	#banner{height:40px;width: 1050px;background: #006000;padding-left: 10px;}
+	ul li{width:80px;height:40px;display: inline-block;text-align: center;border-right: 1px solid #f3f3fa;}
+	ul li a{text-decoration: none;color: #fff;line-height: 40px;}
+	li:hover{text-decoration: underline;background:#009100; }
+	#main{margin-top: 10px;position: absolute;width: 1050px;}
+	#did{width: 640px;height:400px;float: left;}
+	#oid{width:640px;position: absolute;margin-top: -79px;background:rgba(0,0,0,0.7);}
+	#oid h2 a{padding-left:10px;text-decoration: none;color: #fff;line-height: 37px;}
+	#oid h2 a:hover{text-decoration: underline;}
+
+	#arrRight a,#arrLeft a{text-decoration: none;color: #fff;font-weight:bold; }
+	#arrRight,#arrLeft{display:block;}
+	#arrLeft{width: 30px;height: 30px;position:absolute;z-index: 2;float: left;top: 150px;left:10px;}
+	#arrRight{float: right;position:absolute;z-index: 2;float: right; top: 150px;right: 420px;}
+	
+	#m2,#m3,#m4{z-index: 1;display: none;}
+
+	#right{width: 390px;margin-left: 10px;margin-right: 10px;float: right;position: relative;line-height: 11px;}
+	#right a{text-decoration: none;color:black;}
+	.shousou,.guochan,.meiguo{display: inline-block;}
+	
+	#right a:hover{text-decoration: underline;color: red;}
+	#shousou h3 a,#guochan h4 a,#meiguo h3 a{color: red;}
+	#shousou h3 a:hover,#guochan h4 a:hover,#meiguo h3 a:hover{color: #ce0000;}
+	#meiguo {border-top: 1px dashed grey;}
+</style>
+<body>
+	<div id="wrapper">
+		<header id="front">
+			
+			<img src="img/01.png" id="one">
+			<h3><a href="">新浪军事</a></h3>
+		
+			<div id="small">
+				<img src="img/02.png" alt="two">
+				<p><small><a href="">设为书签</a></small></p>
+				<img src="img/03.png" alt="three">
+				<p><small><a href="">手机版</a></small></p>
+			</div>
+			
+		</header>
+		<header id="banner">
+			<ul class="topmenu">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">滚动</a></li>
+				<li><a href="#">图片</a></li>
+				<li><a href="#">深度</a></li>
+				<li><a href="#">《出鞘》</a></li>
+				<li><a href="#">大国博弈</a></li>
+				<li><a href="#">军史</a></li>
+				<li><a href="#">东海局势</a></li>
+				<li><a href="#">新闻排行</a></li>
+				<li><a href="#">航空</a></li>
+				<li><a href="#">回顾</a></li>
+			</ul>
+		</header>
+		<main id="main">
+			<div id='did'>
+				<div>
+					<img src="img/123.jpg" alt="" id="m1">
+					<img src="img/124.jpg" alt="" id="m2">
+					<img src="img/125.jpg" alt="" id="m3">
+					<img src="img/126.jpg" alt="" id="m4">
+				</div>
+				<div id="arrLeft">
+					<p id="arrL"><a href="#">〈</a></p>
+				</div>
+				<div id="arrRight">
+					<p id="arrR"><a href="#">〉</a></p>
+				</div>
+			
+				<div id="oid">
+					<h2><a href="#">国产航母船坞内的水基本已经注满！图可见水位。</a></h2>
+				</div>
+			</div>
+			
+			<div id="right">
+				<div id="shousou">
+					<h3><a href="#">
+						首艘国产航母即将下水 船坞已注水
+					</a></h3>
+					<p><a href="#">
+						独家解析：国产航母开工3年就下水 多项性能超辽宁号
+					</a></p>
+					<p><a href="#">
+					001A航母下水有何意义 将令中国成全天候航母国家</a></p>
+					<p><a href="#">
+						辽宁号舰载机安全起降咋保障 可能和这个装备有关
+					</a></p>
+					<p><a href="#">
+					国产航母早已具备下水条件 战力强悍难被导弹击沉</a></p>
+				</div>
+				<div id="guochan">
+					<h4><a href="#">
+						国产航母编队防空能力有多强：368枚导弹组六层火网
+					</a></h4>
+					<p><a href="#">
+						解读国产航母：为什么继续采用滑跃起飞和常规动力
+					</a></p>
+					<p><a href="#">
+						中国海军成立68周年：目前已成功实现战略转型(图)
+					</a></p>
+				</div>
+				<div id="meiguo">
+					<h3><a href="#">
+						美国副总统:卡尔文森航母数日内抵日本
+					</a></h3>
+					<p><a href="#">
+						美军航母出乌龙令韩失望 川普曾称韩国是中国一部分
+					</a></p>
+					<p><a href="#">
+						菲律宾防长登中业岛被中国警告 菲方程每次去都这样
+					</a></p>
+					<p><a href="#">
+						俄战略轰炸机一周内4次抵近美海岸 秀肌肉一箭三雕
+					</a></p>
+				</div>
+			</div>
+		</mian>
+		
+	</div>
+</body>
+</html>
+<script>
+	var arrowLeftList=document.getElementById("arrL");
+	var arrowRightList=document.getElementById("arrR");
+	var num=1;
+	
+		arrowRightList.onclick=function(){
+		num++;
+		if(num==4){
+			num=1;
+		}
+		show(num);
+	}
+	
+		arrowLeftList.onclick=function(){
+			num--;
+		if(num==0){
+			num=4;
+		}
+		show(num);
+		}
+	
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var img=document.getElementById("m"+i);
+			if(i==x){
+				img.style.display="block";
+			}else{
+				img.style.display="none";
+			}
+		}
+	}
+	
+</script>

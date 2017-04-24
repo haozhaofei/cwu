@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	div,img{padding: 0px;margin: 0px;margin-left:10px;}
+	#list img{width: 80px;height: 64px;margin-left: 0px;}
+	#did img,#did{width:320px; height:256px;}
+	#sid{width: 200px;height: 200px;position:absolute;display: none;overflow: hidden;}
+</style>
+<body>
+	<div id="did" >
+		<img src="photos/就是他.jpg" alt="" id="mid" id="m">
+	</div>
+
+
+	<div id="sid" >
+	<img src="photos/就是他.jpg" alt="" id="lid">
+	</div>
+
+
+	<div id="list">
+		<img src="photos/就是他.jpg" alt="" id="m">
+		<img src="photos/爱心.jpg" alt="" id="m">
+		<img src="photos/奥特曼.jpg" alt="" id="m">
+		<img src="photos/小白.jpg" alt="" id="m">
+	</div>
+</body>
+</html>
+<script>
+	var list=document.getElementById("list").getElementsByTagName("img");
+	for(var i=0;i<list.length;i++){
+		list[i].onmouseover=function(){
+			document.getElementById("mid").src=this.src;
+			document.getElementById("lid").src=this.src;
+		}
+	}
+	var did=document.getElementById("did");
+	var sid=document.getElementById("sid");
+
+	did.onmouseover=function(){
+		sid.style.display="block";
+		sid.style.top=this.offsetTop+"px";
+		sid.style.left=this.offsetLeft+document.getElementById("mid").offsetWidth+10+"px";
+	}
+	did.onmouseout=function(){
+		sid.style.display="none";
+	}
+	did.onmousemove=function(ent){
+		var event=window.event||ent;
+		var x=event.clientX-this.offsetLeft;
+		var y=event.clientY-this.offsetTop;
+		sid.scrollLeft=x*4-100;
+		sid.scrollTop=y*4-100;
+	}
+</script>

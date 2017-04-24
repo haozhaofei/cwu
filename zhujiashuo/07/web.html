@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>军事新闻</title>
+</head>
+<style type="text/css">
+    *{
+	padding:0;
+	margin:0;
+	}
+	#all{
+	max-width:1050px;
+	margin:20px auto 0;
+    }
+    #mark{
+    	margin: 0 0 0 650px;
+    }
+    .nav {
+   	 	max-height: 43px;
+   	 	line-height: 43px;
+    	padding-left: 0px;
+    	background-color: #004100;
+    	font-size: 14px;
+    }
+    #one {
+    	width:640px;
+		height: 360px;
+		margin:-280px 0 30px 150px;
+		position: absolute;
+	    border:1px solid #000000;
+	}
+	li{
+		color: white;
+		display: inline-block;
+		padding-left: 20px;
+		border: right;
+	} 
+ #ok p{
+ 	text-align: right;
+ 	font-size: 15px;
+ 	margin-top: 5px;
+ } 
+ #ok h2{font-size: 20px;
+ 	margin-top: 20px;
+ 	color: red;
+ }
+ #m2,#m3,#m4,#m5{display: none;}
+#left,#right{
+	position: relative;
+	width:40px;
+	height:40px;
+	border-radius: 50%;
+	z-index: 5px;
+}
+#left{
+	left:170px;
+	top:-125px;
+}
+#right{
+	left:730px;
+	top:-160px;
+}
+</style>
+     
+
+
+<body class="main">
+<div id="all">
+    <img src="image/slogan6.png" height="60px" width="330px" alt="" >
+   <div id="mark">
+				<img src="image/mark.png" width="15" height="16">
+				<span>设为书签</span>
+				<img src="image/phone.jpg">
+				<span>手机版</span>
+	</div>
+	<ul class="nav">
+		<li>首页</li>
+		<li>滚动</li>
+		<li>图片</li>
+		<li>深度</li>
+		<li>《出鞘》</li>
+		<li>大国博弈</li>
+		<li>军史</li>
+		<li>东海局势</li>
+		<li>南海局势</li>
+        <li>新闻排行</li>
+        <li>航空</li>
+        <li>回顾</li>
+	</ul>
+	
+	<div id ="ok" >
+		<h2 align="right">美拟建10艘福特航母 中国或在此期间反超</h2>
+			<p>
+				<a>中国造多少航母才不怵美</a>
+				<a>已有700艘战舰3000架军机</a>
+			</p>
+			<p>
+				<a>张召忠解读国产航母动力</a>
+				<a>下水前还有这些工作需完成</a>
+			</p>
+
+			<p>
+				<a>歼20隐身超强因装备它？</a>
+            	<a>俄升级航母仍远不及辽宁舰</a>
+            </p>
+            <p>
+            	<a>俄新轰炸机还未出世就落后轰20</a>
+             	<a>可用航发换中国技术</a>
+            </p>
+    </div>
+
+    <div id="ok" >
+    	<p>
+    		<a>菲防长今日登南海中业岛(图)</a> 
+    		<a>菲渔民称遭中国海警射击</a>
+    	</p>
+		<p>
+			<a>中俄支持联合国谴责朝鲜射导弹</a> 
+			<a>韩国人恨美国骂日本</a>
+		</p>
+		<p>
+			<a>乐天99家中国门店已停业87家</a> 
+			<a >特朗普和中国都赢了</a>
+		</p>
+	</div>
+	<div id="ok">
+		<h2 align="right"><a>美称中国今年建首艘095核潜艇 性能超美</a></h2>
+		<p>
+			<a>该国曾叫嚣封死中国沿海 如今造航母却买中方设备  </a>
+		</p>
+		<p>
+			<a>澳专家评天舟一号：美国都没做到</a> 
+			<a>美俄想用得求中国</a>
+		</p>
+		<p>
+			<a>中美之争的舞台在朝鲜还是南海？答案竟然是这里</a>
+		</p>
+	</div>
+	</div>
+	
+	<div class="p1">
+		<div class="scroll">
+		
+			<div id ="one">
+				<img src="image/01.jpg"  alt="苍苍白发为国忧！中国老院士专家登辽宁号航母" id="m1" />
+			
+				<img src="image/02.jpg"  alt="舰岛缩小上双波段相控阵！中国002航母何时现身" id="m2">
+			
+				<img src="image/03.jpg"  alt="银翼杀手！首见两架割裂迷彩歼20战机编队飞行" id="m3" />
+			
+				<img width="640" height="360" src="image/04.gif"alt="俄机配中国弹！解放军米17直升机打AKD9导弹" id="m4" />
+			
+				<img src="image/05.jpg"  alt="想不想来辆！解放军加长轴距版猛士越野车亮相" id="m5" />
+			</div>
+            <div id="left" onclick="change(1)">
+            	<img src="image/left.png">
+            </div>
+			<div id="right" onclick="change(2)">
+				<img src="image/right.png">
+			</div>
+	    </div>
+		
+	</div>
+
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    var t;
+	function change(x){
+		for(var i=1;i<=5;i++){
+			var img = document.getElementById("m"+i);
+			if(img.style.display!="none") t=i;
+		}
+		switch(x){
+			case 1:{
+				if(t==1)t=5;
+				t--;
+				for(i=1;i<=5;i++)
+				{
+					img=document.getElementById('m'+i);
+					if(i == t) img.style.display="block";
+					else img.style.display="none";
+				}
+				break;
+			}
+			case 2:{
+				if(t==5) t=0;
+				t++;
+				for(i=1;i<=5;i++)
+				{
+					img=document.getElementById('m'+i);
+					if(i == t) img.style.display="block";
+					else img.style.display="none";
+				}
+				break;
+			}
+		}
+	}
+</script>

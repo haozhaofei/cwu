@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单验证</title>
+</head>
+<body>
+	<form action="背景移动.html" method="post" name="myform" onsubmit="return doSubmit()">
+		请输入账号：<input type="text" name="myname" onfocus="checkMyname()"><br>
+		请输入密码：<input type="text" name="mypass" onblur="checkMypass()"><br>
+		<input type="submit" value="提交">
+	</form>
+</body>
+</html>
+<script>
+	function doSubmit(){
+		return checkMyname()&&checkMypass
+	}
+	function checkMyname(){
+		var name=document.myform.myname.value;
+		if(name.match(/^\w{5,10}$/)==null){
+			alert("账号的有效字符在5-10位之间")
+			return false;
+		}
+		return true;
+	}
+function checkMypass(){
+		var pass=document.myform.mypass.value;
+		if(pass.match(/^\w{8,20}$/)==null){
+			alert("密码的有效字符在8-20位之间")
+			return false;
+		}
+		return true;
+	}
+
+</script>

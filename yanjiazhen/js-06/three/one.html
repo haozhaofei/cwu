@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易变大写</title>
+</head>
+<body>
+	我会变大写：<input type="text" onkeypress="text(this)">
+
+</body>
+</html>
+<script>
+	function text(sui){
+		//suibian.value="现在你什么也写不了了哈哈~";
+		//console.log(suibian.value);
+	sui.value=sui.value.toUpperCase();
+
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>one-2</title>
+</head>
+<body>
+	<br>我会变小写：<input type="text" onkeypress="test(this)">
+</body>
+</html>
+<script>
+	function test(ok){
+		ok.value=ok.value.toLowerCase()  ;
+		console.log(ok.value);
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>one-3</title>
+</head>
+<body>
+	<br>看我变身为小写:<input type="text" onkeypress="change(this)">
+</body>
+<script>
+	function change(ya){
+		ya.value="我中病毒，无法运行！";
+		console.log(ya.value);
+
+	}
+</script>
+</html>

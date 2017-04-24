@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>list and this</title>
+</head>
+<body>
+	<ul>
+		<li>星星还亮着几颗</li>
+		<li>时间的歌</li>
+		<li>留下足迹</li>
+		<li>我回及得你</li>
+	</ul>
+</body>
+</html>
+<script>
+	var ui=document.getElementsByTagName('li');
+	for (var i = 0; i < ui.length; i++) {
+		ui[i].onclick=function(){
+			this.style.fontStyle="italic";
+		}
+	};
+</script>

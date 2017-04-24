@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>零食级联</title>
+	<style>
+	#eat{
+		margin-right:10px;
+		color:teal;
+	}
+	#cho{
+		color:azure;
+	}
+	</style>
+</head>
+<body>
+<center>
+<h2>任君选择：</h2>
+	<select name="eat" id="eat">
+		<option value="1">零食</option>
+		<option value="2">水果</option>
+		<option value="3">饮料</option>
+		<option value="4">酸奶</option>
+		<option value="5">糕点</option>
+	</select>
+	<select id="cho"></select>
+	</center>
+</body>
+
+</html>
+<script>
+
+	var list=new Array();
+	list[1]=["辣条","泡爪","烤肠","果冻"];
+	list[2]=["菠萝","木瓜","苹果","香蕉"];
+	list[3]=["奶茶","汽水","果汁","奶泡"];
+	list[4]=["柠檬","红枣","原味","西柚"];
+	list[5]=["绿豆酥","马卡龙","红豆糕","千层饼"];
+	var eat=document.getElementById("eat");
+	var cho=document.getElementById("cho");
+	eat.onchange=function(){
+		v=this.value;
+		cho.length=0;
+		for(var i=0;i<list[v].length;i++){
+			cho.add(new Option(list[v][i],i));
+		}
+	}
+</script>

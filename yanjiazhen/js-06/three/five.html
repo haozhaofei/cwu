@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>five</title>
+	<style>
+	body,div,img{
+		padding:0px;
+		margin: 0px;
+	}
+	#did{
+		width:400px;
+		height:400px;
+		position:relative;
+		background:azure;
+	}
+	#mid{
+		width:40px;
+		height:40px;
+		position:absolute;
+		background:teal;
+		top:250px;
+		left:100px;
+	}
+	#pd0,#pd1,#pd2,#pd3,#pd4,#pd5{
+		display:none;
+		position:absolute;}
+	</style>
+</head>
+<body>
+	<p>炮弹发射</p>
+	<div id="did">
+		<img src="images/pd.png" id="pd0">
+		<img src="images/pd.png" id="pd1">
+		<img src="images/pd.png" id="pd2">
+		<img src="images/pd.png" id="pd3">
+		<img src="images/pd.png" id="pd4">
+		<img src="images/pd.png" id="pd5">
+		<div id="mid"></div>
+	</div>
+</body>
+</html>
+<script>
+	function running(){
+		for(var i=0;i<6;i++){
+			var pd=document.getElementById("pd"+i);
+			if(pd.style.display=="block"){
+				pd.style.top=pd.offsetTop-25+"px";
+				if(pd.offsetTop<-20){
+					pd.style.display="none";
+				}
+			}
+
+		}
+		//单次定时执行指定函数
+		setTimeout("running()",33)
+	}
+	running();
+//炮弹发射
+function fire(x,y){
+	for(var i=0;i<6;i++){
+		var pd=document.getElementById("pd"+i);
+		if(pd.style.display!="block"){
+			pd.style.top=y+"px";
+			pd.style.left=x+"px";
+			pd.style.display="block";
+			return;
+		}
+	}
+
+}
+var mid=document.getElementById("mid");
+window.onkeydown=function(ent){
+	var event=window.event||ent;
+	//鉴定键盘码alert(event.keyCode);
+	switch(event.keyCode){
+		//左箭头
+		case 37 : mid.style.left=Math.max(0,mid.offsetLeft-5)+"px";
+		
+		break;
+			//上箭头
+		case 38 : mid.style.top=Math.max(0,mid.offsetTop-5)+"px";
+		break;
+			//右箭头
+		case 39 : mid.style.left=Math.min(360,mid.offsetLeft+5)+"px";
+		break;
+			//下箭头
+		case 40 : mid.style.top=Math.min(360,mid.offsetTop+5)+"px";
+		break;
+			//回车
+		case 13 : fire(mid.offsetLeft+18,mid.offsetTop);
+		break;
+	}
+}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>five-2</title>
+	<style>
+	body,div,img{
+		padding:0px;
+		margin:0px;
+	}
+	#did{width:400px;
+		height:400px;
+		position:relative;
+		background: teal;
+	}
+	#mid{
+		width:40px;
+		height:40px;
+		position:absolute;
+		top:180px;
+		left:180px;
+		background: azure;
+	}
+	#pd0,#pd1,#pd2,#pd3,#pd4,#pd5{
+		display:none;
+		position:absolute;
+	}
+	</style>
+</head>
+<center>
+<body>
+	<div id="did">
+	<img src="images/pd.png" id="pd0">
+	<img src="images/pd.png" id="pd1">
+	<img src="images/pd.png" id="pd2">
+	<img src="images/pd.png" id="pd3">
+	<img src="images/pd.png" id="pd4">
+	<img src="images/pd.png" id="pd5">
+		<div id="mid">
+			
+		</div>
+	</div>
+
+</body>
+</center>
+</html>
+<script>
+	function running(){
+		for(var i=0;i<6;i++){
+			var pd=document.getElementById("pd"+i);
+			if(pd.style.display=="block"){
+				pd.style.top=pd.offsetTop-25+"px";
+				if(pd.offsetTop<-20){
+					pd.style.display="none";
+				}
+			}
+		}
+	setTimeout("running()",33);
+	}
+	running();
+
+	function fire(x,y){
+		for(var i=0;i<6;i++){
+			var pd=document.getElementById("pd"+i);
+			if(pd.style.display!="block"){
+				pd.style.top=y+"px";
+				pd.style.left=x+"px";
+				pd.style.display="block";
+				return;
+			}
+		}
+	}
+	var mid = document.getElementById("mid");
+	window.onkeydown = function(ent){
+		var event = window.event || ent;
+		switch(event.keyCode){
+			case 37:mid.style.left=Math.max(0,mid.offsetLeft-5)+"px";break;
+			case 38:mid.style.top=Math.max(0,mid.offsetTop-5)+"px";break;
+			case 39:mid.style.left=Math.min(360,mid.offsetLeft+5)+"px";break;
+			case 40:mid.style.top=Math.min(360,mid.offsetTop+5)+"px";break;
+			case 13:fire(mid.offsetLeft+18,mid.offsetTop);break;
+		}
+	}
+</script>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>five-3</title>
+	<style>
+	body,div,img{
+		padding:0px;
+		margin:0px;
+	}
+	#did{width:400px;
+		height:400px;
+		position:relative;
+		background: teal;
+	}
+	#mid{
+		width:40px;
+		height:40px;
+		position:absolute;
+		top:180px;
+		left:180px;
+		background: azure;
+	}
+	#pd0,#pd1,#pd2,#pd3,#pd4,#pd5{
+		display:none;
+		position:absolute;
+	}
+	</style>
+</head>
+<center>
+<body>
+	<div id="did">
+	<img src="images/pd.png" id="pd0">
+	<img src="images/pd.png" id="pd1">
+	<img src="images/pd.png" id="pd2">
+	<img src="images/pd.png" id="pd3">
+	<img src="images/pd.png" id="pd4">
+	<img src="images/pd.png" id="pd5">
+		<div id="mid">
+			
+		</div>
+	</div>
+
+</body>
+</center>
+</html>
+<script>
+	function running(){
+		for(var i=0;i<6;i++){
+			var pd=document.getElementById("pd"+i);
+			if(pd.style.display=="block"){
+				pd.style.top=pd.offsetTop-25+"px";
+				if(pd.offsetTop<-20){
+					pd.style.display="none";
+				}
+			}
+		}
+	setTimeout("running()",33);
+	}
+	running();
+
+	function fire(x,y){
+		for(var i=0;i<6;i++){
+			var pd=document.getElementById("pd"+i);
+			if(pd.style.display!="block"){
+				pd.style.top=y+"px";
+				pd.style.left=x+"px";
+				pd.style.display="block";
+				return;
+			}
+		}
+	}
+	var mid = document.getElementById("mid");
+	window.onkeydown = function(ent){
+		var event = window.event || ent;
+		switch(event.keyCode){
+			case 37:mid.style.left=Math.max(0,mid.offsetLeft-5)+"px";break;
+			case 38:mid.style.top=Math.max(0,mid.offsetTop-5)+"px";break;
+			case 39:mid.style.left=Math.min(360,mid.offsetLeft+5)+"px";break;
+			case 40:mid.style.top=Math.min(360,mid.offsetTop+5)+"px";break;
+			case 13:fire(mid.offsetLeft+18,mid.offsetTop);break;
+		}
+	}
+</script>

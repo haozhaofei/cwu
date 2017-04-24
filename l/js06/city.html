@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>城市级联</title>
+<style >
+	#shi,#qu{
+		font-size: 23px;
+	}
+</style>
+</head>
+<body>
+	<select name="shi" id="shi">
+		<option value="">请选择</option>
+		<option value="1">中山</option>
+		<option value="2">北京</option>
+		<option value="3">济南</option>
+		<option value="4">三亚</option>
+	</select>
+	<select id="qu"></select>
+
+
+</body>
+</html>
+<script type="text/javascript">
+	var data=new Array();
+	data[1]=["石岐区","东区","南区","西区"];
+	data[2]=["朝阳区","海淀区","昌平区","东城区"];
+	data[3]=["历下区","市中区","天桥区","历城区"];
+	data[4]=["海棠区","吉阳区","天涯区","崖州区"];
+
+	var shi=document.getElementById("shi");
+	var qu =document.getElementById("qu");
+	shi.onchange=function(){
+		k=this.value;
+		qu.length=0;
+		for(var i=0;i<data[k].length;i++){
+			qu.add(new Option(data[k][i],i))
+		}
+	}		
+</script>

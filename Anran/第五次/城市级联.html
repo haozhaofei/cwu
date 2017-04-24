@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script language="javascript">
+ function change(){
+ var List = new Array();
+ List['新疆'] = ['乌鲁木齐','昌吉','哈密','阿克苏','伊犁','和田','喀什','克拉玛依','库尔勒'];
+ List['山东省'] = ['济南','烟台','蓬莱','德州','青岛','聊城','临沂','菏泽','淄博'];
+ List['西藏省'] = ['拉萨','阿里','昌都','林芝','那曲','日喀则','山南'];
+ List['云南省'] = ['昆明','大理','保山','楚雄','东川','个旧','景洪','开远','丽江'];
+ List['海南省'] = ['海口','陵水','琼海','三亚','通什','万宁'];
+ var index = document.form1.province.value;
+ var newoption1;
+ document.form1.city.options.length = 0;
+ for(var i in List[index]){
+  newoption1 = new Option(List[index][i],List[index][i]);
+  document.form1.city.options.add(newoption1);
+ }
+ }
+</script>
+</head>
+
+<body>
+<center>
+<form action="" name="form1" method="post">
+ <select name="province" onchange="change()">
+ <option>请选择省份</option>
+ <OPTION value="新疆">新疆</OPTION>
+ <OPTION value="山东省">山东省</OPTION>
+ <OPTION value="西藏省">西藏省</OPTION>
+ <OPTION value="云南省">云南省</OPTION>
+ <OPTION value="海南省">海南省</OPTION>
+ </select>
+ <select name="city">
+ <option>请选择城市</option>
+ </select>
+</form>
+</center>
+</body>
+</html>

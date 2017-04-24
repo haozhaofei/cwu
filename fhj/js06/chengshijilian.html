@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chengshijilian</title>
+	<h3>城市级联</h3>
+</head>
+<body>
+	<select name="select" id="sid">
+	<option value="">请选择</option>
+	<option value="1">北京</option>
+	<option value="2">上海</option>
+	<option value="3">河南</option>
+	<option value="4">河北</option>
+	<option value="5">山东</option>
+	<option value="6">山西</option>
+	<option value="7">内蒙古</option>
+</select>
+<select id="cid"></select>
+</body>
+</html>
+<script>
+var data =new Array();
+data[1]=["海淀区","朝阳区","东城区","西城区","昌平区","丰台区"];
+data[2]=["静安","长宁","虹口","黄浦","宝山"];
+data[3]=["郑州","洛阳","商都","开封","驻马店"];
+data[4]=["石家庄","保定","邯郸","邢台"];
+data[5]=["济南","青岛","日照","菏泽"];	
+data[6]=["太原","大同","吕梁","运城","忻州"];
+data[7]=["呼和浩特","包头","赤峰","呼伦贝尔","鄂尔多斯"];
+
+
+var sid=document.getElementById("sid");
+var cid=document.getElementById("cid");
+sid.onchange=function(){
+v=this.value;
+cid.length=0;
+
+for(var i=0;i<data[v].length;i++){
+	cid.add(new Option(data[v][i],i));
+}
+
+}
+</script >

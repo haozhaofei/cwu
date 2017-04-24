@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>城市级联</title>
+	<style>
+		#chen,#zhen{
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<select name="chen" id="chen">
+		<option value="">请选择</option>
+		<option value="1">北京</option>
+		<option value="2">福建</option>
+		<option value="3">河北</option>
+		<option value="4">江西</option>
+	</select>
+	<select id="zhen"></select>
+<script type="text/javascript">
+	var data=new Array();
+	data[1]=["朝阳区","海淀区","西城区","昌平区"];
+	data[2]=["宁德","福鼎","蕉城","南宁","漳州"];
+	data[3]=["保定","石家庄","承德","衡水"];
+	data[4]=["南昌","九江","上饶","鹰潭"];
+
+	var chen=document.getElementById("chen");
+	var zhen=document.getElementById("zhen");
+	chen.onchange=function(){
+		v=this.value;
+		zhen.length=0;
+		for(var i=0;i<data[v].length;i++){
+			zhen.add(new Option(data[v][i],i))
+		}
+	}
+</script>
+	
+</body>
+</html>

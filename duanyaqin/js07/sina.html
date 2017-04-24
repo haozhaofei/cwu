@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="icon" href="img/logo.jpg" />
+	<title>新浪军事报道</title>
+	<link rel="stylesheet" href="main.css" />
+</head>
+<body>
+<div id="all">
+	<header role="banner">
+	<h1><img src="img/logo.png" alt="新浪军事"></h1>
+	<div>
+		<img src="img/mark.png">
+		<span>书签</span>
+		<img src="img/phone.png">
+		<span>手机版</span>
+			</div>
+		<ul>
+			<li><a href="http://mil.news.sina.com.cn/">首页</a></li>
+			<li><a href="http://mil.news.sina.com.cn/">滚动</a></li>
+			<li><a href="http://mil.news.sina.com.cn/">图片</a></li>
+			<li><a href="http://mil.news.sina.com.cn/">深度</a></li>
+			<li><a href="http://mil.news.sina.com.cn/">出鞘</a></li>
+			<li><a href="http://mil.news.sina.com.cn/">大国博弈</a></li>
+			<li><a href="http://mil.news.sina.com.cn/">军史</a></li>
+			<li><a href="http://mil.news.sina.com.cn/">东海局势</a></li>
+			<li><a href="http://mil.news.sina.com.cn/">新闻排行</a></li>
+			<li><a href="http://mil.news.sina.com.cn/">南海局势</a></li>
+			<li><a href="http://mil.news.sina.com.cn/">航空</a></li>
+			<li><a href="http://mil.news.sina.com.cn/">回顾</a></li>
+			</ul>
+		</header>
+
+	<main>
+		<div>
+			<img src="img/1.jpg" width="683px" height="384px" id="p1" alt="">
+			<img src="img/2.gif" width="683px" height="384px" id="p2" alt="">
+			<img src="img/3.jpg" width="683px" height="384px" id="p3" alt="">
+			<img src="img/4.jpg" width="683px" height="384px" id="p4" alt="">
+			<img src="img/5.jpg" width="683px" height="384px" id="p5" alt=""> 
+			</div>
+			<div id="left" onclick="change(1)"></div> 
+			<div id="right" onclick="change(2)"></div>
+			<div id="text">
+			这是我们的伟大时代!庆祝中国海军成立68周年</div>
+	</main>
+	<aside>
+		<div>
+			<h3>中国095核潜艇开工建造 2020年交付海军</h3> 
+			<p class="red">美副总统：卡尔文森航母数日内抵日本海</p> 
+ 				<p>天舟一号与天宫二号成功对接 中国飞船技术领先俄美</p> 
+ 				<p>印度总说加尔各答级完胜中国052D 他们哪来的底气？</p> 
+ 				<p>外媒称日本正完成对中国包围网 军国主义进日本教材</p>
+ 		</div>
+ 			<div>	 
+ 				<p class="red">菲防长登上南沙中业岛 我外交部严重不满已提出交涉</p> 
+ 				<p>美前高官：美国若玩弄一个中国政策 代价由台湾承担</p> 
+ 				<p>韩国雾霾严重怪中国？韩专家：简直是在国际上丢脸</p> 
+ 			</div> 
+ 			<div> 
+ 				<h3>美副总统：卡尔文森航母数日内抵日本海</h3> 
+ 				<p class="red">美军卡尔文森号航母北上朝鲜出师不利 F18战机失事</p> 
+ 				<p>美期待中国助解决朝核问题 
+朝鲜称可将美韩化为灰烬</p> 
+ 				<p>俄战略轰炸机一周内4次抵近美海岸 秀肌肉一箭三雕</p> 
+ 			</div> 
+ 		</aside>		 
+ 	</div> 
+ </body> 
+ </html> 
+</body>
+</html>
+<script> 
+ 	function change (n) { 
+ 		var t; 
+
+ 		var list=["这是我们的伟大时代！庆祝中国海军成立68周年","日本自卫队F15J拼命延寿！还指望它们对抗中国","贴近实战！解放军武直19和米171刷白肚皮伪装","还要参观中国舰！杜特尔特登上俄瓦良格巡洋舰","崭新巨舰提前看！国产航母下水前高清靓照曝光"]; 
+ 		for(i=1;i<6;i++) 
+ 		{ 
+ 			var img=document.getElementById('p'+i); 
+ 			if(img.style.display!="none") t=i; 
+ 		} 
+ 		switch(n){ 
+ 			case 1:{ 
+ 				if(t==1)t=6; 
+ 				t--; 
+ 				for(i=1;i<=5;i++) 
+ 				{ 
+ 					img=document.getElementById('p'+i); 
+ 					if(i == t) img.style.display="block"; 
+					else img.style.display="none"; 
+ 				} 
+ 				document.getElementById("text").innerHTML=list[t-1]; 
+			break; 
+	} 
+ 			case 2:{ 
+ 				if(t==5) t=0; 
+ 				t++; 
+			for(i=1;i<=5;i++) 
+ 				{ 
+ 					img=document.getElementById('p'+i); 
+ 					if(i == t) img.style.display="block"; 
+ 					else img.style.display="none"; 
+ 				} 
+ 				document.getElementById("text").innerHTML=list[t-1]; 
+ 				break; 
+ 			} 
+ 		} 
+ 	} 
+</script> 
