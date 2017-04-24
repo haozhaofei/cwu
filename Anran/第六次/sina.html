@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新浪军事</title>
+</head>
+
+<style>
+	*{
+	padding:0;
+	margin:0;
+}
+	header{
+		height:45px;
+		width: 1020px;
+		}
+	header,nav{
+		display: block; 
+	}
+	.imgl{
+		position:absolute;
+		float:left;
+		left:15px;
+		}
+	.imgr{
+		position:absolute;
+		left:800px;
+		margin-top: 15px;
+	}
+	nav ul{
+		display:block; 
+		height:40px;
+		background: #004100;
+		width: 1020px;
+		margin-left:20px;
+		margin-top: 15px;
+	}
+		
+	ul li {
+		float:left;
+		list-style-type: none;
+		font-size: 13px;
+		line-height: 2;
+		margin-top: 7px;
+		}
+	li a{
+		color: white;
+		text-decoration: none;
+		border-right: 0.5px solid #f6f6f6;
+		padding-right: 15px;
+	}
+	ul span{
+			padding:10px 12px;
+			margin:5px 4px;
+		}
+	ul span:hover{
+		background: #528e17;
+		text-decoration:underline white;
+	}
+	.img{
+			position: absolute;
+			width: 640px;
+			height:360px;
+			border: 1px solid black;
+			margin-left: 20px;
+			margin-top: 10px;
+	}
+	#img2,#img3,#img4{display: none;}
+	#next{
+		position:absolute;
+		font-size: 50px;
+		left: 580px;
+		text-decoration: none;
+		font-weight: bold;
+		top:150px;
+		color: #7d7e86;
+	}
+	#prev{
+		position:absolute;
+		font-size: 50px;
+		left: 20px;
+		text-decoration: none;
+		font-weight: bold;
+		top:150px;
+		color:#7d7e86;
+		}
+	.rfont{
+		position: absolute;
+		left:690px;
+	}
+	.rfont a{
+		font-size:13px;
+		display: block;
+		line-height: 4px;
+		color:black;
+		text-decoration: none;
+	}
+	.rfont a:hover{
+		color:red;
+		text-decoration: underline;
+	}
+	#pc{
+		color: red;
+		font-size: 13px;
+	}
+	#p1,#p2,#p3{
+		margin-top: 8px;
+	}
+	.rfont h3{
+		line-height: 41px;
+		}
+	.fgx{
+		color: #aaa;
+	}
+</style>
+
+<body>
+<header>
+	<div class="imgl"><img src="images/img1.png"></div>
+	<div class="imgr">
+		<img src="images/jie.jpg" class="imgr1">
+	</div>
+</header>
+<nav>
+	<ul>
+		<li><span><a href="">首页</a></span></li>
+		<li><span><a href="">滚动</a></span></li>
+		<li><span><a href="">图片</a></span></li>
+		<li><span><a href="">深度</a></span></li>
+		<li><span><a href="">《出鞘》</a></span></li>
+		<li><span><a href="">大国博弈</a></span></li>
+		<li><span><a href="">军史</a></span></li>
+		<li><span><a href="">东海局势</a></span></li>
+		<li><span><a href="">南海局势</a></span></li>
+		<li><span><a href="">新闻排行</a></span></li>
+		<li><span><a href="">航空</a></span></li>
+		<li><span><a href="">回顾</a></span></li>
+	</ul>
+</nav>
+
+	<div class="img">
+		<img src="images/01.jpg" alt="国产航母吊运小艇检查坞内情况：确保安全下水" id="img1">
+		<img src="images/02.jpg" alt="东海舰队第一艘052D驱逐舰！厦门舰今年将入役" id="img2">
+		<img src="images/03.jpg" alt="火炮技术比中国差远：越南105毫米自行卡车炮" id="img3">
+		<img src="images/04.jpg" alt="听着这名字给中国都不要！俄射菊花反坦克导弹" id="img4">
+        <a href="#" id="prev"><</a>
+        <a href="#" id="next">></a>
+	</div>
+	<div class="rfont">
+		<h3 >美称中国建超级核潜艇生产线 3年造12艘</h3>
+		<div id="p1">
+			<a href="" id="pc">卡尔文森号原计划访澳大利亚 朝鲜称不会被此事吓倒</a><br>
+			<a href="">美国官方提三招制朝鲜 在韩部署核武、斩首与渗透</a><br>
+			<a href="">卡尔文森号赴朝鲜半岛 辽宁舰正在黄渤海区域训练</a><br>
+			<a href="">美最新航母福特号或将服役 中国这型舰建造如下饺子</a><br><br>
+		</div>
+
+		<div id="p2">
+			<a href="" id="pc">英媒称美空袭叙利亚毁美俄互信 军事冲突只差毫厘</a><br>
+			<a href="">美媒披露战斧导弹攻叙详情 59枚导弹命中1枚故障</a><br>
+			<a href="">美战斧突袭叙机场大出风头 中国长剑导弹更胜一筹</a><br>
+		</div>
+
+		<div class="fgx">
+		<span>-------------------------------------------------------------<span>
+		</div>
+
+		<h3>媒体：中国第三艘航母或以惊人速度亮相</h3>
+		<div id="p3">
+		<a href="" id="pc">中国首艘国产航母下水已箭在弦上 就是三四天的事</a><br>
+		<a href="">国产航母舰岛比之辽宁舰有三项大变化 一设计可隐身</a><br>
+		<a href="">俄媒评世界十佳战机大跌眼镜</a><br>
+		</div>
+
+	</div>
+
+<script>
+	var prev=document.getElementById("prev");
+	var next=document.getElementById("next");
+	var img=document.getElementById("img");
+	var num=1;
+		prev.onclick=function(){
+		num++;
+		if(num==4){
+			num=1;
+		}
+		show(num);
+	}
+	
+	next.onclick=function(){
+		num--;
+		if(num==0){
+			num=4;
+		}
+		show(num);
+		}
+	
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var img=document.getElementById("img"+i);
+			if(i==x){
+				img.style.display="block";
+			}else{
+				img.style.display="none";
+			}
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iframe</title>
+</head>
+<body>
+	<iframe src="http://www.baidu.com" frameborder="1"></iframe>
+	<iframe src="http://www.sina.com" frameborder="1"></iframe>
+	<iframe src="http://www.youku.com" frameborder="1"></iframe>
+	<iframe src="practice1-1.html" frameborder="1"></iframe>
+	<button onclick="change()">click</button>
+</body>
+</html>
+<script>
+	function change(){
+		window.iframe[1].document.getElementById('hid').style.color="blue";
+	}
+</script>
