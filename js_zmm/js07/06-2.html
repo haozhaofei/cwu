@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>啦啦啦啦啦啦</li>
+		<li>哦哦哦哦哦哦哦</li>
+		<li>呵呵呵呵呵呵</li>
+		<li>哈哈哈哈哈哈</li>
+		<li>嗯嗯嗯嗯恩恩</li>
+	</ul>
+	<h3 id="hid">呃呃呃呃呃呃</h3>
+</body>
+</html>
+<script>
+	/**
+	节点信息包含三种：
+	每个节点都包含关于节点某些信息的属性。这些属性是：
+	     1：nodeName(节点名称)
+	     2：nodeValue(节点值)
+	     3：nodeType(节点类型)
+	节点类型由以下数字表示：
+	      1  “元素”
+	      2  “属性”
+	      3  “文本”
+	      8  “注释”
+	      9  “文档”
+	**/
+	var oUl=document.getElementsByTagName("li")[0];
+	//alert(oUl.nodeType);
+	var oHid=document.getElementById("hid");
+	//alert(oHid.nodeType);
+	alert(oHid.lastChild.nodeType)
+</script>
