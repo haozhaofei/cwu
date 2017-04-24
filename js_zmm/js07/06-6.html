@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	//Navigator对象，包含有关浏览器的信息 。
+	with(document){
+		write("你的浏览器的信息：<ul>");
+		write("<li>返回浏览器的代码名:"+navigator.appCodeName+"</li>");
+		write("<li>返回浏览器的名称："+navigator.appName+"</li>");
+		write("<li>返回浏览器的平台和版本信息："+navigator.appVersion+"</li>");
+		write("<li>返回浏览器的语言："+navigator.language+"</li>");
+		write("<li>返回浏览器的语言："+navigator.userLanguage+"</li>");
+		write("<li>返回运行浏览器的操作系统平台："+navigator.platform+"</li>");
+		write("<li>返回客户机发送给服务器user-agent头部的值:"+navigator.userAgent+"</li>");
+	}
+</script>
