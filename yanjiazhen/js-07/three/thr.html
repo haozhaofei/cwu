@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>打开别人的页面！</title>
+	<style>
+	iframe{
+		margin-right:10px;
+	}
+	</style>
+</head>
+<body>
+	<iframe src="one.html" frameboder="0"></iframe>
+	<iframe src="one.html" frameboder="1"></iframe>
+	<iframe src="one.html" frameboder="2"></iframe>
+	<br>
+	<button onclick="change()">变身</button>
+</body>
+</html>
+<script>
+	function change(){
+		window.frames[1].document.getElementById("did").style.color="azure";
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>three-2</title>
+</head>
+<body>
+<br>
+	<iframe src="http://www.baidu.com"></iframe>
+	<iframe src="http://www.taobao.com"></iframe>
+	<iframe src="one.html"></iframe>
+	<br>
+	<button onclick="change()">change color</button>
+</body>
+</html>
+<script>
+	function change(){
+		window.frames[2].document.getElementById("did").style.color="yellow";
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>three-3</title>
+</head>
+<body>
+<br>
+	<iframe src="http://www.kugou.com"></iframe>
+	<iframe src="http://www.baidu.com"></iframe>
+	<iframe src="http://www.pigaiwang.com"></iframe>
+	<br>
+	<button onclick="change
+	()">试试</button>
+</body>
+</html>
+<script>
+	function change(){
+		window.frames[0].style.background="azure";
+	}
+</script>

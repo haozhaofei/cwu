@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>幻灯片+放大镜</title>
+</head>
+<style>
+	#mid{
+		width:500px;
+	}
+	#m1,#m2,#m3,#m4{
+		width:120px;height:80px;
+	}
+	#bid{
+		width:300px;height: 300px;overflow:hidden;position:absolute;display: none;
+	}
+</style>
+<body>
+<center>
+	<img src="images/11.jpg" id="mid">
+	<div id="bid">
+		<img src="images/11.jpg" id="nid">
+	</div>
+	<div id="did">
+		<img src="images/11.jpg" id="m1">
+		<img src="images/22.jpg" id="m2">
+		<img src="images/33.jpg" id="m3">
+		<img src="images/44.jpg" id="m4">
+	<div>
+</center>
+</body>
+</html>
+<script>
+	var mid=document.getElementById('mid');
+	var bid=document.getElementById('bid');
+	var list=document.getElementById('did').getElementsByTagName('img');
+	for(var i=0;i<list.length;i++){
+		list[i].onmouseover=function(){
+			mid.src=this.src;
+			nid.src=this.src;
+		}
+	}
+	mid.onmouseover=function(){
+		bid.style.display="block";
+		bid.style.top=this.offsetTop+"px";
+		bid.style.left=this.offsetWidth+this.offsetLeft+10+"px";
+	}
+	mid.onmouseout=function(){
+		bid.style.display="none";
+	}
+	mid.onmousemove=function(ent){
+		var event=window.event||ent;
+		var x=event.clientX-this.offsetLeft;
+		var y=event.clientY-this.offsetTop;
+		bid.scrollTop=y*4-150;
+		bid.scrollLeft=x*4-150;
+	}
+</script>
