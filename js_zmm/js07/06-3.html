@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<iframe src="06-1.html" name="main" frameborder="1"></iframe>
+	<iframe src="05-4.html" frameborder="1"></iframe>
+	<iframe src="http://www.jd.com" frameborder="1"></iframe>
+	<button id="bid">变变变</button>
+</body>
+</html>
+<script>
+    var bid=document.getElementById("bid");
+    bid.onclick=function(){
+    	alert("111");
+    	window.frames["main"].document.getElementById("hid").style.color="red";
+
+    }
+</script>

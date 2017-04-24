@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this事件认识</title>
+</head>
+<body>
+	<ul>
+		<li>刚好遇见你</li>
+		<li>爱情转移</li>
+		<li>为什么相爱相杀</li>
+		<li>红豆</li>
+		<li>明天你好</li>
+	</ul>
+</body>
+</html>
+<script>
+
+
+    //第一遍
+	/*var list=document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick=function(){
+			alert(this.innerH)
+		}
+	}*/
+
+     
+     //第二遍
+	/*var list=document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick=function(){
+			alert(this.innerH)
+		}
+	}*/
+	
+     //第三遍
+	var list=document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick=function(){
+			alert(this.innerH)
+		}
+	}
+	
+</script>
