@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新浪微博</title>
+</head>
+<style>
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+
+li{
+	   float:left;
+	   width:100px;
+	   background:#063;
+	   height: 40px;
+	   color:white; 
+	   border-right:1px solid #fff;
+	   font-size: center;
+   }
+
+
+   }
+   ul{
+   		padding: 15px
+   }
+
+
+  #cos{
+	  	width:650px;
+	  	float:left;
+	    margin-top: 8px;
+	    padding: 15px;
+	    position:relative;
+  }
+
+  #did,#bid{
+	  	width:400px;
+	  	float:left;
+	  	 margin-top: 8px;
+	  	 padding: 30px;
+	  	 border: 1px;
+	  	 border-style: none none dashed none;
+  }
+  .button{
+  	     border-radius: 50%;
+         position:absolute;
+         right: 5%;
+         top: 50%;
+         font-size: 50px;
+         color: #fff;
+
+     }
+     #n2,#n3,#n4{
+     	display: none;
+     }
+     #text{
+			font-size: 22px;
+			font-weight: bold;
+			margin-top: -90px;
+			color:#fff;
+		}
+	</style>
+<body>
+	<div style="background-color:write;height:60px">	
+	   <p style="float:left;width:0px;">
+
+	   <img src="images/slogan6.png" alt=""> 
+
+	   </p>
+		<p style="float:right;width:400px;">	
+		                                                                     
+			<img src="images/btn_addfav_news.png" alt="" >设置书签
+			<img src="images/sjbi.jpg" alt="">手机版
+
+		</p>
+	</div>
+
+	<nav role="navvigation">
+		<ul type="none">
+			<li>首页</li>
+			<li>图片</li>
+			<li>深度</li>
+			<li>《出鞘》</li>
+			<li>大国博弈</li>
+			<li>军史</li>
+			<li>东海局势</li>
+			<li>新闻排行</li>
+			<li>航空</li>
+			<li>回顾</li>
+		</ul>
+	</nav>
+
+	 <div id="cos">
+     <img src="images/01.jpg" alt="" id="n1">
+     <button class="button" onclick="show(1)">》</button>
+  
+  	 <img src="images/02.jpg" alt="" id="n2">
+     <img src="images/04.jpg" alt="" id="n3">
+     <img src="images/05.jpg" alt="" id="n4">
+
+     <div id="text">今天能下水不？中国国产航母已刷油漆</div>
+     </div>
+     
+
+     <div id="did">
+     <h2 >首艘国产航母今日或下水 船坞已始注水</h2>
+     <h4><a href="" style="color:red;">独家解析：国产航母开工3年就下水 多项性能超辽宁号</a></h4>
+
+
+     <p>
+		001A航母下水有何意义 将令中国成全天候航母国家
+
+	辽宁号舰载机安全起降咋保障 可能和这个装备有关
+
+		国产航母早已具备下水条件 战力强悍难被导弹击沉
+     </p>
+
+
+    <h4><a href="" style="color:red;">国产航母编队防空能力有多强：368枚导弹组六层火网</a></h4>
+
+
+   <p>解读国产航母：为什么继续采用滑跃起飞和常规动力
+
+		中国海军成立68周年：目前已成功实现战略转型(图)
+   </p>
+
+     </div>
+</body>
+</html>
+<script>
+    var m=2;
+    var arr=["今天能下水不？中国国产航母已刷油漆", "在等节点,船坞开始注水了？此时此刻国产航母的最新曝照","国产航母今日举行下水仪式：和辽宁舰有何不同","4.23日和4.18日找不同！国产航母今日最新靓照"]
+    function show(n){
+		if(n==1){
+			for(var i=1;i<=4;i++){
+					var img = document.getElementById("n"+i);
+					if(i == m){
+						img.style.display = "block";
+						document.getElementById('text').innerHTML=arr[i-1];
+					}else{
+						img.style.display = "none";
+					}	
+			}
+			m++;
+			if(m==4){
+				m=1;
+			}
+		}
+	}
+
+</script>
