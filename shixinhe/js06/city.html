@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>城市级联</title>
+</head>
+<body>
+	<select name="sid" id="sid">
+		<option value="">-请选择-</option>
+		<option value="1">北京市</option>
+		<option value="2">广西省</option>
+		<option value="3">广东省</option>
+	</select>
+	<select id="cid"></select>
+	<script type="text/javascript">
+		var data = new Array();
+		data[1] = ["东城区","西城区","朝阳区","海淀区","丰台区","怀柔区","昌平区","大兴区","石景山区"];
+		data[2] = ["南宁市","桂林市","柳州市","北海市","防城港市"];
+		data[3] = ["广州市","东莞市","钦州市"];
+
+		var sid = document.getElementById("sid");
+		var cid = document.getElementById("cid");
+		sid.onchange = function(){
+			v = this.value;
+			cid.length = 0;
+			for(var i=0;i<data[v].length;i++){
+				cid.add(new Option(data[v][i],i));
+			}
+		}
+	</script>
+	
+</body>
+</html>
