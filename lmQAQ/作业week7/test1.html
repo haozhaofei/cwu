@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网页模仿</title>
+</head>
+<style type="text/css">
+	.lan{height:43px;width:1000px;line-height:43px;padding-left:0px;overflow:hidden;background-color:#004100;font-size:14px;font-family:"Microsoft YaHei"}
+	.lan li{float:left;list-style:none;padding-left: 6px}
+    .lan a{color:#FFFFFF;float:left;padding:0 14px;text-decoration:none}
+    .lan a:hover{background-color:#528e17;text-decoration:underline}
+    .lan .link{border-right:#528e17 solid 1px;border-right-height:14px}
+
+    .k1{height: 10px;width: 1000px;}
+    .pictures{width:638px;height:360;float: left;}
+    .c1{z-index:100;}
+
+    #d2,#d3,#d4{display: none;}
+    .t1{margin-top:-58px;width:638px;height:55px;position: absolute;z-index:101;background:black; opacity: 0.6;}
+    .t1 p{margin: 5px 0px 0px 5px;}
+    .t1 a{width:638px;height:30px;text-decoration: none;color: #fff;font-size:20px;font-family:"Microsoft YaHei"}
+    .t1 a:hover{text-decoration: underline}
+    
+    .dot{position: absolute;z-index:102;width: 638px;height: 10px;margin: 340px 0px 2px 5px;display:block}
+    .current{width: 29px;height: 5px;background-color: #ADADAD;float: left;margin: 4px 5px 0px 2px}
+    .current:hover{background-color: #53FF53}
+
+    .next1{position: absolute;z-index:103;margin: 155px 0px 2px 5px;font-size: 25px;font-weight: 5px;width: 30px;height: 30px;display:block;}
+    .next1 a,.next2 a{text-decoration: none;color: #fff;font-weight:bold; }
+    .next2{position: absolute;z-index:103;margin: 155px 0px 2px 615px;font-size: 30px;font-weight: 5px;width: 30px;height: 30px;display:block;}
+    .right{width: 340px;height: 360px;float: left;margin-left:20px;font-family:"Microsoft YaHei";}
+    .right a{text-decoration:none;color:#000000}
+    .right a:hover{text-decoration: underline;color:#F00;}
+
+    
+    .linkRed{color:#F00;}
+    .news p{font-size:14px;margin: 0px 0px 5px 0px}
+    .news h2{font-size:18px;margin: 0px 0px 10px 0px}
+
+    .k2{height: 15px;width: 340px;}
+    .dish{width: 340px;height:15px;border-bottom:1px;border-bottom-style:dashed;}
+
+
+</style>
+
+<body>
+	<ul class="lan">
+		<li><a href="http://mil.news.sina.com.cn/" class="link">首页</a></li>
+		<li><a href="http://roll.mil.news.sina.com.cn/col/zgjq/index.shtml" class="link">滚动</a></li>
+        <li><a href="http://slide.mil.news.sina.com.cn/" class="link">图片</a></li>
+        <li><a href="http://mil.news.sina.com.cn/jssd/" class="link">深度</a></li>
+        <li><a href="http://slide.mil.news.sina.com.cn/s_list_8_62085.html" class="link">《出鞘》</a></li>
+       <li><a href="http://mil.news.sina.com.cn/dgby/" class="link">大国博弈</a></li>
+       <li><a href="http://mil.news.sina.com.cn/jshm/" class="link">军史</a></li>
+        <li><a href="http://roll.mil.news.sina.com.cn/s_zghjxldyd_all/index.shtml" class="link">东海局势</a></li>
+        <li><a href="http://mil.news.sina.com.cn/nz/nhjszxdt/" class="link">南海局势</a></li> 
+        <li><a href="http://mil.news.sina.com.cn/hotnews/Daily/" class="link">新闻排行</a></li>
+        <li><a href="http://sky.news.sina.com.cn/" class="link">航空</a></li>
+        <li class="noLine"><a href="http://mil.news.sina.com.cn/oldnews/">回顾</a></li>
+	</ul>
+
+
+	<div class="k1"></div>
+	<div id="pictures" class="pictures">
+		<div id="d1" class="c1">
+			<img src="images/1.jpg" height="358" width="638">
+			<div id="t1" class="t1">
+			     <p><a href="http://slide.mil.news.sina.com.cn/h/slide_8_33676_50058.html" target="_blank" class="a1">国产航母船坞内的水基本已经注满！图可见水位</a></p>
+			</div>
+		</div>
+        <div id="d2" class="c1">
+			<img src="images/2.jpg" height="358" width="638">
+			<div id="t3" class="t1">
+				<p><a href="http://slide.mil.news.sina.com.cn/h/slide_8_33676_50055.html" target="_blank" class="a1">这是彩排仪式？国产航母吊机向坞内吊一艘小船</a></p>
+			</div>
+		</div>
+		<div id="d3" class="c1">
+		    <img src="images/3.jpg" height="358" width="638">
+			<div id="t3" class="t1">
+			    <p><a href="http://slide.mil.news.sina.com.cn/h/slide_8_203_50048.html" target="_blank" class="a1">国产001A航母船坞正在注水：今日下水可能性大</a></p>
+			</div>
+		</div>
+		<div id="d4" class="c1">
+			<img src="images/4.jpg" height="358" width="638">
+			<div id="t4" class="t1">
+				<p><a href="http://slide.mil.news.sina.com.cn/h/slide_8_33676_50035.html" target="_blank" class="a1">国产航母今日举行下水仪式？和辽宁舰有何不同</a></p>
+			</div>
+		</div>
+	</div>
+    <div class="dot" id="dot">
+        <span class="current" title="第1页" id="page1" onclick="fun2(1)"></span>
+        <span class="current" title="第2页" id="page2" onclick="fun2(2)"></span>
+        <span class="current" title="第3页" id="page3" onclick="fun2(3)"></span>
+        <span class="current" title="第4页" id="page4" onclick="fun2(4)"></span>
+    </div>
+
+    <div id="next1" class="next1">
+    	<p id="nL"><a href="#">〈</a></p>
+    </div>
+    <div id="next2" class="next2">
+    	<p id="nR"><a href="#">〉</a></p>
+    </div>
+	<div class="right">
+        <div class="news">
+			<div>
+			<h2><a href="http://mil.news.sina.com.cn/2017-04-23/doc-ifyepsch2654804.shtml">首艘国产航母即将下水 船坞已注水</a></h2>
+
+			<p><a href="http://mil.news.sina.com.cn/jssd/2017-04-23/doc-ifyepsec0409485.shtml"style="color:#F00;margin-bottom:12px">独家解析：国产航母开工3年就下水</a> <a href="http://mil.news.sina.com.cn/jssd/2017-04-23/doc-ifyepsec0410436.shtml" style="color:#F00;margin-bottom:12px">多项性能超辽宁号</a></p>
+
+			<p><a href="http://mil.news.sina.com.cn/china/2017-04-23/doc-ifyepsec0426196.shtml">001A航母下水有何意义 将令中国成全天候航母国家</a></p>
+			<p><a href="http://mil.news.sina.com.cn/2017-04-23/doc-ifyepsec0408046.shtml">辽宁号舰载机安全起降咋保障 可能和这个装备有关</a></p>
+			<p><a href="http://mil.news.sina.com.cn/jssd/2017-04-23/doc-ifyepsch2659959.shtml">国产航母早已具备下水条件</a> 
+			<a href="http://mil.news.sina.com.cn/jssd/2017-04-23/doc-ifyepsec0421439.shtml">战力强悍难被导弹击沉</a></p>
+			</div>
+			<div class="k2"></div>
+
+			<div>
+			<p><a href="http://mil.news.sina.com.cn/jssd/2017-04-23/doc-ifyepsch2664754.shtml" style="color:#F00;margin-bottom:12px">国产航母编队防空能力有多强：368枚导弹组六层火网</a></p>
+            <p><a href="http://mil.news.sina.com.cn/jssd/2017-04-23/doc-ifyepsec0421040.shtml">解读国产航母：为什么继续采用滑跃起飞和常规动力</a></p>
+            <p><a href="http://mil.news.sina.com.cn/china/2017-04-23/doc-ifyepsec0416822.shtml">中国海军成立68周年：目前已成功实现战略转型(图)</a></p>
+            </div>
+
+            <div class="dish"></div>
+
+            <div style="margin:15px 0px 0px 0px">
+            <h2><a href="http://mil.news.sina.com.cn/china/2017-04-23/doc-ifyepsec0418044.shtml">美国副总统:卡尔文森航母数日内抵日本</a></h2>
+            <p><a href="http://mil.news.sina.com.cn/china/2017-04-23/doc-ifyepsec0427582.shtml"  style="color:#F00;margin-bottom:12px">美军航母出乌龙令韩失望 川普曾称韩国是中国一部分</a></p>
+            <p><a href="http://mil.news.sina.com.cn/china/2017-04-23/doc-ifyepsra5240852.shtml">菲律宾防长登中业岛被中国警告 菲方程每次去都这样</a></p>
+            <p><a href="http://mil.news.sina.com.cn/dgby/2017-04-22/doc-ifyepsch2456704.shtml">俄战略轰炸机一周内4次抵近美海岸</a> 
+            <a href="http://mil.news.sina.com.cn/china/2017-04-22/doc-ifyepsra5137799.shtml">秀肌肉一箭三雕</a></p>
+            </div>
+		</div>
+	</div>
+</body>
+</html>
+<script>
+    var next2=document.getElementById("nR");
+	var next1=document.getElementById("nL");
+
+    function fun2(x){
+		for(var i=1;i<=4;i++){
+			var img = document.getElementById("d"+i);
+			if(i == x){
+				img.style.display = "block";
+			}else{
+				img.style.display = "none";
+			}
+		}
+	}
+    var num=1;
+    next2.onclick=function(){
+		num++;
+		if(num==4){
+			num=1;
+		}
+		fun2(num);
+	}
+	
+	next1.onclick=function(){
+			num--;
+		if(num==0){
+			num=4;
+		}
+		fun2(num);
+		}
+	
+	
+		
+
+	
+</script>
