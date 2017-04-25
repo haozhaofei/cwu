@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新浪</title>
+</head>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	ul.wai,ul.wai ul{
+	list-style-type:none;/*去掉项目符号*/
+	margin-left:20px;
+	margin-top:10px;
+	}
+ul.wai li{
+	display:inline-block;/*外侧水平显示*/
+	width:65px;
+		}
+ul.wai li:hover ul{
+	margin:auto;/*鼠标移上时 默认形式显示*/
+	}
+ul.wai a{
+	display:block;
+	width:75px;
+	color:	#FFFFFF;	
+	text-decoration:none;
+	text-align:center;
+	}
+ul.wai a:hover{
+	background-color:#F90;
+	}
+#menu{
+	height: 25px;
+	width: 1100px;
+	background: #006400;
+}
+#img{
+	width: 424px;
+	height: 280px;
+	margin-left: 20px;
+	margin-top: 40px;
+}
+#m2,#m3,#m4,#m5{display: none;}
+#news{
+	margin-right: 280px;
+	margin-top: -370px;
+    float: right;
+    position: relative;
+    line-height: 30px;
+}
+#news a{color: black;}
+#news a:hover{color: red;}
+#news1{margin-top: 10px;}
+#news2{margin-top: 10px;}
+#news3{margin-top: 10px;}
+#news1 h4 a,#news2 h4 a,#news3 h4 a{color: red;}
+#title{
+	margin-left: 20px;
+    margin-top: 40px;}
+#title h2 a{color: red;}
+#title h2 a:hover{background-color:	#87CEFA}
+	</style>
+<body>
+	<header>
+		<p><img src="image\head.jpg" alt=""></p>
+		<div id="menu">
+		<ul class="wai">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">滚动</a></li>
+			<li><a href="#">图片</a></li>
+			<li><a href="#">深度</a></li>
+			<li><a href="#">《出鞘》</a></li>
+			<li><a href="#">大国博弈</a></li>
+			<li><a href="#">军史</a></li>
+			<li><a href="#">东海局势</a></li>
+			<li><a href="#">南海局势</a></li>
+			<li><a href="#">新闻排行</a></li>
+			<li><a href="#">航空</a></li>
+			<li><a href="#">回顾</a></li>
+		</ul>
+		</div>
+	</header>
+	<main id="main">
+	<div id="img" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="image\1.jpg" alt="" id="m1">
+		<img src="image\2.jpg" alt="" id="m2">
+		<img src="image\3.jpg" alt="" id="m3">
+		<img src="image\4.jpg" alt="" id="m4">
+		<img src="image\5.jpg" alt="" id="m5">
+	</div>
+	<div id="title">
+		<h2><a href="">国产航母吊运小艇检查坞内情况：确保安全下水</a></h2>
+	</div>
+	<div id="news">
+		<div id="news1">
+			<h3><a href="#">媒体：中国第三艘航母或以惊人速度亮相</a></h3>
+			<h4><a href="#">中国首艘国产航母下水已箭在弦上 就是三四天的事</a></h4>
+			<p><a href="#">德称中国还不是航母强国</a><a href="#">001A航母将带来尊重和敬畏</a></p>
+			<p><a href="#">国产航母舰岛比之辽宁舰有三项大变化 一设计可隐身</a></p>
+			<p><a href="#">上合组织将接收印巴 中俄哈吉塔五国边境互裁减军力</a></p>
+		</div>		
+		<div id="news2">
+			<h4><a href="#">美将领称中国打不起现代化战争 美媒批美军该清醒了</a></h4>
+			<p><a href="#">俄媒评世界十佳战机大跌眼镜</a><a href="#">中国新机甩对手几条街</a></p>
+			<p><a href="#">一国获印度35亿援助 却欲拿去买20架歼10称性价比高</a></p>
+		</div>
+		<div id="news3">
+			<h3><a href="#">朝鲜：美航母是肥硕变态动物 将一举击沉</a></h3>
+			<h4><a href="#">朝警告澳:再追随美就用核武打你</a><a href="#">朝中社不点名批中国</a></h4>
+			<p><a href="#">中国从巴基斯坦获一要塞40年经营权 令五角大楼不安</a></p>
+			<p><a href="#">印度放豪言称税改助GDP增速破8超中国 又被美媒打脸</a></p>
+		</div>
+	</div>
+	</main>
+</body>
+</html>
+<script>
+
+	var m = 0;
+	var time = null;
+
+	function doStart(){
+		if(time == null){
+			time = setInterval(function(){
+				m++;
+				show(m);
+				if(m >=5){
+					m = 0;
+				}
+			},1000)
+		}
+		
+	}
+
+	doStart();
+
+	function doStop(){
+		if(time != null){
+			clearInterval(time);
+		}
+		time = null;
+	}
+
+
+
+	//显示图片  目的就是隐藏三个,显示其中的一个
+	function show(x){
+		for(var i=1;i<=5;i++){
+			var img = document.getElementById("m"+i);
+			if(i == x){
+				img.style.display = "block";
+			}else{
+				img.style.display = "none";
+			}
+		}
+	}
+</script>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sina-新浪军事</title>
+
+	<link type="text/css" rel="stylesheet" href="css/main.css">
+
+</head>
+<body><div id="page">
+	<!--biaotou begin-->
+<div id="biaotou">
+	<div id="btleft">
+		<img src="img/sina.jpg" alt="">
+	</div>
+	<div id="btright">
+		<img src="img/shuqian.jpg" width="26" height="33"alt=""><span><font size=2>设为书签</font></span>
+		<img src="img/phone.jpg" alt=""><span><font size=2>手机版</font></span>
+		
+	</div>
+</div>	<!--biaotou end-->
+
+	<!--导航 begin-->
+	<div id="ulid">
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">滚动</a></li>
+			<li><a href="#">图片</a></li>
+			<li><a href="#">深度</a></li>
+			<li><a href="#">《出鞘》</a></li>
+			<li><a href="#">大国博弈</a></li>
+			<li><a href="#">军史</a></li>
+			<li><a href="#">东海局势</a></li>
+			<li><a href="#">南海局势</a></li>
+			<li><a href="#">新闻排行</a></li>
+			<li><a href="#">航空</a></li>
+			<li><a href="#">回顾</a></li>
+		</ul>
+	</div> <!--ulid-->
+	<!--导航 end-->
+
+<!--幻灯片-->
+	<div id="xiangce">
+		
+			
+		<div id="did">
+			<img src="img/01.jpg" width="600" height="384" id="mid" alt="国产航母船坞内的水基本已经注满！图可见水位">
+		</div>
+
+		<div id="wenzi">
+			<p id="p1"><a>国产航母船坞内的水基本已经注满！图可见水位</a></p>
+			<p id="p2"><a>这是彩排仪式？国产航母吊机向坞内吊一艘小船</a></p>
+			<p id="p3"><a>国产001A航母船坞正在注水：今日下水可能性大</a></p>
+			<p id="p4"><a>国产航母今日举行下水仪式？和辽宁舰有何不同</a></p>
+			<p id="p5"><a>今天能下水不？中国国产航母已刷油漆 在等节点</a></p>
+		</div>
+
+		<div id="list">
+			<img src="img/01.jpg" id="m1" alt="">
+			<img src="img/02.jpg" id="m1" alt="">
+			<img src="img/03.jpg" id="m1" alt="">
+			<img src="img/04.jpg" id="m1" alt="">
+			<img src="img/05.jpg" id="m1" alt="">
+		</div>
+
+		<div id="arrow">
+			<img src="img/left.png" id="lt" onclick="prev()">
+			<img src="img/right.png" id="rt" onclick="next()">
+ 		</div>
+
+	</div>
+
+	<!--	<div id="list">
+		<div id="m"></div>
+		<div id="m"></div>
+		<div id="m"></div>
+		<div id="m"></div>
+		<div id="m"></div>
+	</div>
+		
+		<img src="img/news2.jpg" width="600" height="384" id="m2" alt="这是彩排仪式？国产航母吊机向坞内吊一艘小船">
+		<img src="img/news3.jpg" width="600" height="384" id="m3" alt="国产001A航母船坞正在注水：今日下水可能性大">
+		<img src="img/news4.jpg" width="600" height="384" id="m4" alt="国产航母今日举行下水仪式？和辽宁舰有何不同">
+		<img src="img/news5.jpg" width="600" height="384" id="m5" alt="今天能下水不？中国国产航母已刷油漆 在等节点">
+		-->
+
+	
+	<!--<script type="text/javascript" src="main.js"></script>-->
+<!--幻灯片 end-->
+
+<!--文字部分-->
+	<div id="news">
+
+		<div id="news1"><h3><a href="#"><center>首艘国产航母即将下水 船坞已注水</center></a></h3>
+		<p><a href="#"><font color="red">独家解析：国产航母开工3年就下水 多项性能超辽宁号</font></a></p>
+		<p><a href="#">001A航母下水有何意义 将令中国成全天候航母国家</a></p>
+		<p><a href="#">辽宁号舰载机安全起降咋保障 可能和这个装备有关</a></p>
+		<p><a href="#">国产航母早已具备下水条件 战力强悍难被导弹击沉</a></p></div>
+
+		<div id="news2"><p><a href="#"><font color="red">国产航母编队防空能力有多强：368枚导弹组六层火网</font></a></p>
+		<p><a href="#">解读国产航母：为什么继续采用滑跃起飞和常规动力</a></p>
+		<p><a href="#">中国海军成立68周年：目前已成功实现战略转型(图)</a></p></div>
+			<img src="img/line.png" alt="">
+		<div id="news3"><h3><a href="#">美国副总统:卡尔文森航母数日内抵日本</a></h3>
+		<p><a href="#"><font color="red">美军航母出乌龙令韩失望 川普曾称韩国是中国一部分</font></a></p>
+		<p><a href="#">菲律宾防长登中业岛被中国警告 菲方程每次去都这样</a></p>
+		<p><a href="#">俄战略轰炸机一周内4次抵近美海岸 秀肌肉一箭三雕</a></p></div>
+		
+	</div>
+<!--文字部分 end-->
+
+</div></body>
+</html>
+<script>
+	var list= document.getElementById("list").getElementsByTagName("img");
+	for(var i=0;i<list.length;i++){
+		list[i].onmouseover = function(){
+			document.getElementById("mid").src = this.src;
+		}
+	}
+</script>
+
