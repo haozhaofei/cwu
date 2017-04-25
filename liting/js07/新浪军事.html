@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sina military news</title>
+</head>
+<style>
+	#wai{
+		padding: 0;margin: 0;
+		width: 1350px;height: 1000px;
+	}
+	#logo{
+		margin-left: 170px;
+		margin-right: 500px;
+	}
+	a:link{
+		color: black;text-decoration: none;
+	}
+	a:hover{
+		color: red;text-decoration: underline;
+	}
+	#menu{
+		display: inline-block;
+		margin-left: 170px;margin-top: 5px;
+		width: 1020px;height: 45px;
+		background: #004100; 
+	}
+	#menu li{
+		margin-left: 10px;margin-right: 10px;
+		display: inline;border-right: 1px solid #fff;
+	}
+	#menu a{
+		color: #fff;padding: 5px 3px;
+	}
+	#menu a:hover{
+		color: #528e27;text-decoration: underline;
+	}
+	#bid{
+		display: none;width: 640px;height: 360px;
+	}
+	#cid{
+		width: 650px;height: 370px;border: 1px solid black;
+		margin-left: 170px;margin-top: 15px;
+	}
+	button{
+		color: ivory;border: 0;width: 35px;height: 35px;
+		border-radius: 50%;margin-left: 5px;margin-top: 15px;
+	}
+	#left{
+		position: absolute;left: 173px;top: 280px;
+	}
+	#right{
+		position: absolute;left: 788px;top: 280px;
+	}
+	#news{
+		position: absolute;left: 850px;top: 110px;
+		line-height: 0.7;
+	}
+	#news h1 a{
+		font-size :18px;margin-left :8px;color: black;
+	}
+	#news span a{
+		color: red;
+	}
+	#news a:hover{
+		color: red;
+	}
+	#news p a{
+		color:black;font-size: 15px;
+	}
+	#second{
+		padding-top: 15px;padding-bottom: 10px;
+	}
+	#third{
+		padding-top: 0px;border-top: 1px dashed #c6c6c6;
+	}
+</style>
+<body>
+<div id="wai">
+	<img src="images/logo.jpg" id="logo">
+	<img src="images/biaoqian.jpg" id="biaoqian"><a href="#">设为书签</a>
+	<img src="images/mobilephone.jpg" id="mobilephone"><a href="#">手机版</a>
+	<div id="menu">
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">滚动</a></li>
+			<li><a href="#">图片</a></li>
+			<li><a href="#">深度</a></li>
+			<li><a href="#">《出鞘》</a></li>
+			<li><a href="#">大国博弈</a></li>
+			<li><a href="#">军史</a></li>
+			<li><a href="#">东海局势</a></li>
+			<li><a href="#">南海局势</a></li>
+			<li><a href="#">新闻排行</a></li>
+			<li><a href="#">航空</a></li>
+			<li><a href="#">回顾</a></li>
+		</ul>
+	</div>
+	<div id="bid">
+		<img src="images/1.jpg" id="m1" alt="">
+		<img src="images/2.jpg" id="m2" alt="">
+		<img src="images/3.jpg" id="m3" alt="">
+		<img src="images/4.jpg" id="m4" alt="">
+		<img src="images/5.jpg" id="m5" alt="">
+	</div>
+	<div id="cid">
+		<button id="left" onclick="left()"><</button>
+		<img src="images/1.jpg" width="650" height="370" id="m0">
+		<button id="right" onclick="right()">></button>
+	</div>
+	<div id="news">
+		<div id="first">
+			<h1><a href="#">媒体：中国第三艘航母或以惊人速度亮相</a></h1>
+			<span class="red"><a href="#">中国首艘国产航母下水已箭在弦上 就是三四天的事</a></span>
+			<p><a href="#">德称中国还不是航母强国 001A航母将带来尊重和敬畏</a></p>
+			<p><a href="#">国产航母舰岛比之辽宁舰有三项大变化 一设计可隐身</a></p>
+			<p><a href="#">上合组织将接收印巴 中俄哈吉塔五国边境互裁减军力</a></p>
+		</div>
+		<div id="second">
+			<span class="red"><a href="#">美将领称中国打不起现代化战争 美媒批美军该清醒了</a></span>
+			<p><a href="#">俄媒评世界十佳战机大跌眼镜 中国新机甩对手几条街</a></p>
+			<p><a href="#">一国获印度35亿援助 却欲拿去买20架歼10称性价比高</a></p>
+		</div>
+		<div id="third">
+			<h1><a href="#">朝鲜：美航母是肥硕变态动物 将一举击沉</a></h1>
+			<span class="red"><a href="#">朝警告澳:再追随美就用核武打你 朝中社不点名批中国</a></span>
+			<p><a href="#">中国从巴基斯坦获一要塞40年经营权 令五角大楼不安</a></p>
+			<p><a href="#">印度放豪言称税改助GDP增速破8超中国 又被美媒打脸</a></p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<script>
+	var img=document.getElementById('m0');
+	var i=1;
+	function left(){
+		i--;
+		if(i==0){
+			i=5;
+		}
+		var m=document.getElementById('m'+i);
+		img.src=m.src;
+	}
+	function right(){
+		i++;
+		if(i==6){
+			i=1;
+		}
+		var m=document.getElementById('m'+i);
+		img.src=m.src;
+	}
+</script>
