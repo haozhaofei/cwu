@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li><input type="checkbox" value="人之初"> 人之初 </li>
+		<li><input type="checkbox" value="性本善"> 性本善 </li>
+		<li><input type="checkbox" value="性相近"> 性相近 </li>
+		<li><input type="checkbox" value="习相远"> 习相远 </li>
+		<li><input type="text" value="苟不教"> 苟不教</li>
+	</ul>
+
+	<button onclick="doSelect()">chose</button>
+</body>
+</html>
+
+<script>
+	
+	function doSelect(){
+		//获取所有input
+		var list = document.getElementsByTagName('input');
+		var arr = new Array();
+		for(var i=0;i<list.length;i++){
+			//判断那些是选中的 并且必须是 checkbox
+			if(list[i].checked && list[i].type == "checkbox"){
+				arr[arr.length] = list[i].value;
+			}
+		}
+		alert(arr);
+	}
+</script>
