@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>frame</title>
+</head>
+<body>
+	<iframe src="1.1.html" frameborder="1"></iframe>
+	<iframe src="2.1.html" frameborder="1"></iframe>
+	<iframe src="1.1.html" frameborder="1"></iframe>
+	<iframe src="http://www.baidu.com" frameborder="1"></iframe>
+	<button onclick="change()">变</button>
+</body>
+</html>
+<script>
+	function change(){
+		window.frames[1].document.getElementById('hid').style.color="red";
+	}
+</script>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>节点3</title>
+</head>
+<body>
+	<h3 id="hid">目录</h3>
+	<ul>
+		<li>京东</li>
+		<li>新浪</li>
+		<li>百度</li>
+	</ul>
+</body>
+</html>
+<script>
+	var li = document.getElementsByTagName("li");
+	alert(li.nodeType);  //undefined
+	var list = document.getElementsByTagName("li")[0];
+	alert(list.nodeType);  //1  元素类型
+
+	var hid = document.getElementById("hid");
+	alert(hid.nodeType);
+	alert(hid.firstChild.nodeType);
+</script>

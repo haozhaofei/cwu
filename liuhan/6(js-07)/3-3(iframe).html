@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iframe3</title>
+</head>
+<style>
+	iframe{width: 400px;height: 300px;border: 1px solid #000;}
+</style>
+<body>
+	<iframe src="2(节点).html"></iframe>
+	<button onclick="change()">更改'网页'颜色</button>
+</body>
+</html>
+<script>
+	function change(){
+		window.frames[1].document.getElementById("hid").style.color = "yellow";
+	}
+</script>
