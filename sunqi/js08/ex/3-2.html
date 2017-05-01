@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<a href="http://www.baidu.com" id="aid">百度</a>
+	<button onclick="doChange()">变</button>
+</body>
+</html>
+<script>
+	function doChange(){
+		var aid=document.getElementById('aid');
+		aid.title="凡客"; /*title 属性规定关于元素的额外信息。
+        这些信息通常会在鼠标移到元素上时显示一段工具提示文本（tooltip text）。*/
+		aid.href="http://www.vancl.com";
+		aid.innerHTML="凡客";
+	}
+</script>
