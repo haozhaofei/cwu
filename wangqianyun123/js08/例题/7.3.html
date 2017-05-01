@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>7 three</title>
+</head>
+<body>
+	<ul>
+		<li><input type="checkbox" value="11111">11111</li>
+		<li><input type="checkbox" value="22222">22222</li>
+		<li><input type="checkbox" value="33333">33333</li>
+		<li><input type="checkbox" value="44444">44444</li>
+		<li><input type="checkbox" value="55555">55555</li>
+	</ul>
+	<button onclick="doSelect()">Your answer</button>
+</body>
+</html>
+<script>
+	function doSelect(){
+		var list=document.getElementsByTagName('input');
+		var arr=new Array();
+		for(var i=0;i<list.length;i++){
+			if(list[i].checked&&list[i].type=='checkbox'){
+				arr[arr.length]=list[i].value;
+			}
+		}
+		alert(arr);
+	}
+	
+</script>

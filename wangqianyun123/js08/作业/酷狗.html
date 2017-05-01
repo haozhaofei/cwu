@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>酷狗音乐</title>
+</head>
+<style>
+	*{margin:0px;padding: 0px;}
+	#wrapper{width: 100%;}
+	#banner{width: 100%;height:40px;background: #2f2f2f;}
+ 	#banner ul,li{padding: 0px;margin: 0px;list-style: none;display: inline-block;line-height: 40px;}
+	#banner a{text-decoration: none;color: white;}
+	#one{margin-left:120px;float: left;}
+	#two{margin-right:120px;float:right;}
+	#one ul li{height:40px ;text-align: center;width:100px ;float: left;}
+	#one ul li:hover{background: #0080ff;}
+	#one ul li ul li{background: #2f2f2f;}
+	#one ul li ul li:hover{background: #3c3c3c;}
+	.midUl li{display: none;}
+	.more:hover .midUl li{display: block;}
+	#two li{font-size: 11px;width: 60px;height: 40px;float: right;}
+	#two li a:hover{color: #0080ff;}
+	
+	#header{margin: 10px 120px;height: 40px;}
+	.m1{float: left;}
+	.input1{margin: 8px 0 0 35px;line-height:20px;color: #bebebe;float: left;width:200px;}
+	#header ul,li{padding: 0px;margin: 0px;list-style: none;display: inline-block;line-height: 40px;}
+	#header a{text-decoration: none;color: #9d9d9d;}
+	#header a:hover{color: #0080ff;}
+	#header ul li{width: 75px;font-size: 11px;}
+	.border{border-right: 1px solid #ccc ; }
+	.headerUl{float: left;margin-left:120px;}
+	#header ul,li{float:left;}
+	.inOne,.inTwo{height: 40px;line-height: 40px;width: 50px;text-align: center;font-size: 12px;}
+	.inOne{float:left;color: #fff;background:#2894ff; margin:0 5px; }
+	.inOne:hover{background: #0080ff;}
+	
+	.inTwo{border:1px solid #bebebe;color: #9d9d9d;float: right;}
+	.inTwo:hover{border:1px solid #0080ff;color: #0080ff;}
+</style>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<img src="img/logo.png" alt="" class="m1">
+			<input type="text" placeholder="陈一发 童话镇" class="input1">
+			<div class="headerUl">
+				<ul>
+					<li><a href="#">客服中心</a></li>
+					<li><a href="#">招贤纳士</a></li>
+					<li class="border"><a href="#">会员中心</a></li>
+				</ul>
+			</div>
+			<div class="inOne">
+				<p><a href="#" class="aa">登录</a></p>
+			</div>
+			<div class="inTwo">
+				<p><a href="#">注册</a></p>
+			</div>
+		</div>
+
+		<div id="banner">
+			<div id="one">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">榜单</a></li>
+					<li><a href="#">下载客户端</a></li>
+					<li class="more"><a href="#">更多</a>
+						<ul class="midUl">
+							<li><a href="#">电台</a></li>
+							<li><a href="#">MV</a></li>
+							<li><a href="#">歌单</a></li>
+							<li><a href="#">歌手</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="two">
+				<ul>
+					<li><a href="#">音乐直播</a></li>
+					<li><a href="#">酷狗LIVE</a></li>
+					<li><a href="#">音乐人</a></li>
+					<li><a href="#">游戏</a></li>
+					<li><a href="#">商城</a></li>
+				</ul>
+			</div>	
+		</div>
+
+
+	</div>
+</body>
+</html>
