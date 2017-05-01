@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>酷狗首页</title>
+</head>
+<style>
+	#mainpage{
+		width: 100%;
+		min-width: 1000px;
+		margin: 0 ;
+		padding: 0 ;
+		position: relative;
+	}
+	#logo{
+		padding: 0 0 0 125px;
+	}
+	#search {
+		position: relative;
+		margin-left: 325px;
+		margin-top: -68px;
+		width: 298px;
+		height: 34px;
+		border: 1px solid #ccc;
+		line-height: 34px;
+	}
+	#search input{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 249px;
+		height: 24px;
+		line-height: 24px;
+		border: none;
+		margin-left: 14px;
+		padding: 5px 0;
+		color: #666;
+	}
+	#search2{
+		display: none;
+		background: url("");
+	}
+	#topnav{
+		position: absolute;
+		margin-left: 680px;
+		margin-top: -35px;
+	}
+	#topnav ul{
+		border-right: 2px solid #e6e6e6;
+	}
+	#topnav li{
+		float: left;
+		padding-right: 20px;
+		font-size: 12px;
+		color:#777;
+		text-align: right;
+		display: inline-block;
+	}
+	#login{
+		position: relative;
+		margin-left: 270px;
+		margin-top: -7px;
+	} 
+	#btn{
+		width: 48px;
+		height: 28px;
+		line-height: 28px;
+		border: 1px solid #169af3;
+		background-color: #169af3;
+		color: #fff;
+	}
+	#btn2{
+		margin-left: 5px;
+		width: 48px;
+		height: 28px;
+		line-height: 28px;
+		border: 1px solid #ccc;
+		color: #777;
+	}
+	#homemenu{
+		position: relative;
+		margin-top: 25px;
+		width: 100%;
+		height: 55px;
+		background-color: #2c323b;
+	}
+	#menu1{
+		position: absolute;
+		padding-left: 150px;
+
+	}
+	#menu1 li{
+		
+		display: inline-block;
+		font-size: 18px;
+		padding-left: 35px;
+		list-style: none;
+		
+		
+	}
+	#menu1 a{
+			color:#ccc;
+			text-decoration:none;
+			margin-right: 30px;
+			text-align: center;
+		}
+			
+	#menu1 li:hover{
+			background:#0c8ed9;
+			text-decoration:none;
+		    color:#ccc;
+		    
+		}
+	#menu2{
+		display: none;
+
+	}
+	#menu3{
+		position: absolute;
+		padding-left: 800px;
+	}
+	#menu3 a{
+		color:#fff;
+		text-decoration:none;
+		text-align: center;
+		font-size: 14px;
+		font-weight: 2px;
+	}
+	#menu3 li{
+		display: inline-block;
+		list-style: none;
+		margin-right: 13px;
+	}
+	#menu3 a:hover{
+		color: #0c8ed9;
+	}
+	
+	#p1,#p2{
+		width: 100%;
+		height: 345px;
+	}
+	#p2{
+		display: none;
+	}
+	#left{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		margin-top: -220px;
+	}
+	#right{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		margin-top: -220px;
+		padding-left: 1280px;
+	}
+	#download{
+		position: absolute;
+		width:100%;
+		height:60px;
+		text-align: center;
+		margin-top: -64px;
+		background-color:rgba(0,0,0,.3); 
+	}
+	#pc{
+		position: absolute;
+		margin-left: 250px;
+		margin-top: 15px;
+	}
+	#iphone{
+		position: absolute;
+		margin-left: 470px;
+		margin-top: 15px;
+	}
+	#andriod{
+		position: absolute;
+		margin-left: 700px;
+		margin-top: 15px;
+	}
+    #download a{
+    	color:#fff;
+    	font-size: 15px;
+    	text-decoration:none;
+    	text-align: center;
+		font-weight:bold;
+		display: block;
+		padding-left: 140px;
+		margin-top: -25px;
+
+    }
+    #sing{
+    	position: relative;
+    	width: 1000px;
+    	margin: 0 auto;
+    	margin-top: 40px;
+    }
+    #title a{
+    	position: absolute;
+    	text-decoration:none;
+    	padding-left: 500px;
+    	color: #ccc;
+    	margin-top: 10px;
+    }
+    #songlist{
+    	position: absolute;
+    	width:700px;
+		height:330px;
+		
+    }
+    
+    #big{
+
+    }
+    #smalltwo{
+		margin-left: 330px;
+		margin-top: -329px;
+		width: 160px;
+		height: 160px;
+    }
+    #smallthree{
+    	margin-left: 331px;
+		margin-top: 3px;
+		width: 160px;
+		height: 160px;
+    }
+    #smallfour{
+    	margin-left: 497px;
+		margin-top: -322px;
+		width: 160px;
+		height: 160px;
+    }
+
+     #smallfive{
+    	margin-left: 497px;
+		margin-top: 4px;
+		width: 160px;
+		height: 160px;
+    }
+
+    #hotlist{
+
+    	width: 320px;
+    	height: 330px;
+    	margin-left: 690px;
+    }
+    #hotlist a{
+    	position: absolute;
+    	text-decoration:none;
+    	padding-left: 150px;
+    	margin-top: 10px;
+    	color: #ccc;
+
+    }
+    #listone{
+    	margin-bottom: 15px;
+        background-color: #f6f6f6;
+    }
+    #hotlist dt{
+    	padding-left: 40px;
+    	font-weight: 2px;
+    }
+    #list1{
+    	position: absolute;
+    	overflow: hidden;
+    	padding-left: 80px;
+    	margin-top: -90px;
+    	font-size: 14px;
+	}
+	#listtwo{
+		margin-top: -8px;
+    	margin-bottom: 15px;
+        background-color: #f6f6f6;
+    }
+	#list2{
+    	position: absolute;
+    	overflow: hidden;
+    	padding-left: 80px;
+    	margin-top: -85px;
+    	font-size: 14px;
+	}
+	#listthree{
+		margin-top: -8px;
+    	margin-bottom: 15px;
+        background-color: #f6f6f6;
+    }
+	#list3{
+    	position: absolute;
+    	overflow: hidden;
+    	padding-left: 80px;
+    	margin-top: -80px;
+    	font-size: 14px;
+	}
+	#ad{
+		width: 100%;
+		height: 100%;
+		margin-top:50px;
+		padding-left: 155px;
+	}
+
+</style>
+<body>
+	<div id="mainpage">
+		<div id="start">
+			<h1 id="logo">
+				<a href="http://www.kugou.com/">
+					<img src="image/logo.png">
+				</a>
+			</h1>
+			<div id="search">
+				<input type="text" placeholder="陈雅森 温柔乡">
+				<div id="search2">
+					<span>搜索</span>
+				</div>
+			</div>
+			<div id="topnav">
+				<ul>
+					<li>客服中心</li>
+					<li>招贤纳士</li>
+					<li>会员中心</li>
+				</ul>
+				<div id="login">
+					<div id="one">
+						<button id="btn">登录</button>
+						<button href="http://www.kugou.com/reg/web" id="btn2">注册</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="menu">
+			<div id="homemenu">
+				<ul id="menu1">
+					<li><a href="http://www.kugou.com/">首页</a></li>
+					<li><a href="">榜单</a></li>
+					<li><a href="">下载客户端</a></li>
+					<li><a href="" id="more">更多</a></li>
+				</ul>
+				<ul id="menu2">
+					<li><a href="">电台</a></li>
+					<li><a href="">MV</a></li>
+					<li><a href="">歌单</a></li>
+					<li><a href="">歌手</a></li>
+				</ul>
+				<ul id="menu3">
+					<li><a href="">音乐直播</a></li>
+					<li><a href="">酷狗LIVE</a></li>
+					<li><a href="">音乐人</a></li>
+					<li><a href="">游戏</a></li>
+					<li><a href="">商城</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="picture">
+			<div id="play">
+				<img width="1920px" height="445px"src="image/01.jpg" alt="" id="p1">
+				<img width="1920px" height="445px" src="image/02.jpg" alt="" id="p2">
+			</div>
+			<div id="left" onclick="change(1)">
+				<img src="image/left.png">
+			</div>
+			<div id="right" onclick="change(2)">
+				<img src="image/right.png">
+			</div>
+		</div>
+		<div id="download">
+			<div id="pc">
+				<img src="image/pc.png">
+				<a href="" id="">下载PC端</a>
+			</div>
+			<div id="iphone">
+				<img src="image/mac.png">
+				<a href="" id="">下载iphone版</a>
+			</div>
+			<div id="andriod">
+				<img src="image/andriod.png">
+				<a href="" id="">下载Andriod版</a>
+			</div>
+		</div>
+		<div id="sing">
+			<div id="songlist">
+				<div id="title">
+					<img src="image/selectlist.jpg">
+					<a href="" >更多</a>
+				</div>
+				<div id="big">
+					<img src="image/11.png">
+					<a href="">播放</a>
+				</div>
+				<div id="smalltwo">
+					<img src="image/22.png">
+					<a href="">播放</a>
+				</div>
+				<div id="smallthree">
+					<img src="image/33.png">
+					<a href="">播放</a>
+				</div>
+				<div id="smallfour">
+					<img src="image/44.png">
+					<a href="">播放</a>
+				</div>
+				<div id="smallfive">
+					<img src="image/55.png">
+					<a href="">播放</a>
+				</div>
+			</div>
+			<div id="hotlist">
+				<div id="hottitle">
+					<img src="image/hotlist.jpg">
+					<a href="">更多</a>
+				</div>
+				<div id="listone">
+					<div id="photo1">
+						<img width="98px" heigth="98px" src="image/one.jpg">
+						
+					</div>
+					<div id="list1">
+						<dt>酷狗飙升榜</dt>
+						<dd>1.汪苏泷 - 东京铁塔的幸福(Live)</dd>
+						<dd>2.王美琪、汪苏泷 - 东京铁塔的幸福(Live)</dd>
+					</div>
+				</div>
+				<div id="listtwo">
+					<div id="photo2">
+						<img  width="98px" heigth="98px"src="image/two.jpg">
+						
+					</div>
+					<div id="list2">
+						<dt>酷狗TOP500</dt>
+						<dd>1.杨宗纬、张碧晨 - 凉凉</dd>
+						<dd>2.赵雷 - 成都</dd>
+					</div>
+				</div>
+				<div id="listthree">
+					<div id="photo3">
+						<img width="98px" heigth="98px" src="image/three.jpg">
+						
+					</div>
+					<div id="list3">
+						<dt>网络红歌榜</dt>
+						<dd>1.金南岭 - 逆流成河</dd>
+						<dd>2.庄心妍 - 走着走着就散了</dd>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="ad">
+			<img src="image/ad.jpg">
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	 var t;
+	function change(x){
+		for(var i=1;i<=2;i++){
+			var img = document.getElementById("p"+i);
+			if(img.style.display!="none") t=i;
+		}
+		switch(x){
+			case 1:{
+				if(t==1)t=2;
+				t--;
+				for(i=1;i<=2;i++)
+				{
+					img=document.getElementById('p'+i);
+					if(i == t) img.style.display="block";
+					else img.style.display="none";
+				}
+				break;
+			}
+			case 2:{
+				if(t==2) t=0;
+				t++;
+				for(i=1;i<=2;i++)
+				{
+					img=document.getElementById('p'+i);
+					if(i == t) img.style.display="block";
+					else img.style.display="none";
+				}
+				break;
+			}
+		}
+	}
+</script>
