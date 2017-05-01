@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>zhuzhi事件冒泡？</title>
+</head>
+	<style>
+	#big{
+		width:400px;
+		height:400px;
+		background: teal;
+	}
+	#sma{
+		width:40px;
+		height:40px;
+		background: azure;
+	}
+	</style>
+<body>
+	<div id="big"><div id="sma"></div></div>
+	
+</body>
+</html>
+<script>
+	var big=document.getElementById("big");
+	var sma=document.getElementById("sma");
+	big.onclick=function(){
+		alert("点击了大的方框")
+	}
+	sma.onclick=function(ent){
+		var event = window.event || ent;
+		alert("点击了xiao的方框");
+		if(document.all){
+			event.cancelBubble=true;
+		}else{
+			event.stopPropagation();
+		}
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2</title>
+</head>
+	<style>
+	#big{
+		width:300px;
+		height:300px;
+		background: azure;
+	}
+	#sma{
+		width:30px;
+		height:30px;
+		background: teal;
+	}
+	</style>
+<body>
+	<div id="big"><div id="sma"></div></div>
+	
+</body>
+ <script>
+ 	var big=document.getElementById("big");
+	var sma=document.getElementById("sma");
+	big.onclick=function(){
+		alert("点击了大的方框")
+	}
+	sma.onclick=function(ent){
+		var event=window.event||ent;
+		alert("点击了小的方框");
+		if(document.all){
+			event.cancelBubble=true;
+		}else{
+			event.stopPropagation();
+		}
+	}
+ </script>
+
+ <!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3</title>
+</head>
+	<style>
+	#big{
+		width:500px;
+		height:500px;
+		background: azure;
+	}
+	#sma{
+		width:50px;
+		height:50px;
+		background: teal;
+	}
+	</style>
+<body>
+	<div id="big"><div id="sma"></div></div>
+	
+</body>
+ <script>
+ 	var big=document.getElementById("big");
+	var sma=document.getElementById("sma");
+	big.onclick=function(){
+		alert("点击了大的方框")
+	}
+	sma.onclick=function(ent){
+		var event=window.event||ent;
+		alert("点击了小的方框");
+		if(document.all){
+			event.cancelBubble=true;
+		}else{
+			event.stopPropagation();
+		}
+	}
+ </script>
