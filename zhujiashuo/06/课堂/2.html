@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div style="width:500px;heigth:500px;background:pink;"></div>
+	<div id="one" style="width:500px;height:500px;background:#ddd;"></div>
+</body>
+</html>
+<script>
+	window.onesroll= function(){
+		var scrollTop=0;
+		if(document.documentElement&&document.documentElement.scrollTop){
+			scrollTop = document.documentElement.scrollTop;
+		}else if(document.body){
+			scrollTop = document.body.scrollTop;
+		}
+		document.getElementById('one').innerHTML = scrollTop;
+	}
+</script>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div style="width:500px;heigth:500px;background:pink;"></div>
+	<div id="one" style="width:500px;heigth:500px;background:#dd;"></div>
+</body>
+</html>
+<script>
+	window.onscroll = function (){
+		var onesroll = 0;
+		if(document.documentElement&&document.documentElement.scrollTop){
+			scrollTop = document.documentElement.scrollTop;
+		}else if(document.body){
+			scrollTop = document.body.scrollTop;
+		}
+		document.getElementById('one').innerHTML = scrollTop;
+	}
+</script>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div style="width:500px;heigth:500px;background:pink;"></div>
+	<div id="one" style="width:500px;heigth:500px;background:#dd;"></div>
+</body>
+</html>
+<script>
+	window.onscroll = function (){
+		var onesroll = 0;
+		if(document.documentElement&&document.documentElement.scrollTop){
+			scrollTop = document.documentElement.scrollTop;
+		}else if(document.body){
+			scrollTop = document.body.scrollTop;
+		}
+		document.getElementById('one').innerHTML = scrollTop;
+	}
+</script>

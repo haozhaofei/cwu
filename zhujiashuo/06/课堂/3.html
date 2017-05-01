@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<img id ="one"src="images/22.jpg" alt="" width="384">
+	<div id = "two">
+		<img src="images/22.jpg" alt="">
+	</div>
+</body>
+</html>
+<script>
+	var one = document.getElementById('one');
+	var two = document.getElementById('two');
+
+	one.onmouseover = function(){
+		two.style.display = "block";
+		two.style.top = this.offsetTop+"px";
+		two.style.left = this.offWidth+this.offsetLeft+10+"px";
+	}
+
+	one.onmouseout = function(){
+		two.style.display = "none";
+	}
+
+	one.onmouseover = function(ent){
+		var event = window.event||ent;
+		var x= event.clientX-this.offsetLeft;
+		var y = event.client-this.offsetTop;
+
+		two.scrollTop = y*5-150;
+		two.scrollTop = x*5-150;
+
+	}
+</script>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<img id ="one"src="images/22.jpg" alt="" width="384">
+	<div id = "two">
+		<img src="images/22.jpg" alt="">
+	</div>
+</body>
+</html>
+<script>
+	var one = document.getElementById('one');
+	var two = document.getElementById('two');
+
+	one.onmouseover = function(){
+		two.style.display = "block";
+		two.style.top = this.offsetTop+"px";
+		two.style.left = this.offWidth+this.offsetLeft+10+"px";
+	}
+
+	one.onmouseout = function(){
+		two.style.display = "none";
+	}
+
+	one.onmouseover = function(ent){
+		var event = window.event||ent;
+		var x= event.clientX-this.offsetLeft;
+		var y = event.client-this.offsetTop;
+
+		two.scrollTop = y*5-150;
+		two.scrollTop = x*5-150;
+
+	}
+</script>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<img id ="one"src="images/22.jpg" alt="" width="384">
+	<div id = "two">
+		<img src="images/22.jpg" alt="">
+	</div>
+</body>
+</html>
+<script>
+	var one = document.getElementById('one');
+	var two = document.getElementById('two');
+
+	one.onmouseover = function(){
+		two.style.display = "block";
+		two.style.top = this.offsetTop+"px";
+		two.style.left = this.offWidth+this.offsetLeft+10+"px";
+	}
+
+	one.onmouseout = function(){
+		two.style.display = "none";
+	}
+
+	one.onmouseover = function(ent){
+		var event = window.event||ent;
+		var x= event.clientX-this.offsetLeft;
+		var y = event.client-this.offsetTop;
+
+		two.scrollTop = y*5-150;
+		two.scrollTop = x*5-150;
+
+	}
+</script>

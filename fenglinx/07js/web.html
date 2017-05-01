@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	    div,ul,li{
+	    	padding:0;
+	    	margin:0;
+	    }
+		div{
+			padding:0px;
+			margin:0px;
+		}
+		#did{
+			height:600px;
+			width:1320px;
+			border:1px solid #fff;
+		}
+		.logo img{
+    			display: block;
+    			height: 50px;
+    			width: 330px;
+		}
+		.logo{
+			padding: 5px 0 10px 0;
+		}
+		.nav {
+			margin-top:55px;
+		    
+		    height: 40px;
+		    width:1318px;
+		    background-color: #004100;
+		    position: absolute;
+		}
+		.nav li {
+		    float:left;
+		    color:#fff;
+		    font-size: 14px;
+		    margin-right:20px;
+		    margin-left:30px;
+		    margin-top:10px;
+		    padding-right: 15px;
+		    border-right:1px solid #fff;
+
+		}
+		.dh{
+			margin-left:40px;
+		}
+		#uid{
+			height:480px;
+			width:1318px;
+			margin-top: 120px;
+			border:1px solid #fff;
+		}
+		#images{
+			height:460px;
+			width:720;
+			border:1px solid #fff;
+			float:left;
+			position: relative;
+		}
+		#n2,#n3,#n4,#n5{
+			display:none;
+		}
+		#first{
+			float:left;
+			width:570px;
+			height:160px;
+			padding-left: 20px;
+			color:#536;
+		}
+		.num1{
+			color:red;
+			font-size: 14px;
+			margin-left: 30px;
+		}
+		h1{
+			color:black;
+			font-size: 22px;
+			font-weight: bold;
+			margin-left: 30px;
+		}
+		.num2{
+			color:black;
+			font-size: 14px;
+			margin-left: 30px;
+		}
+		#second{
+			float:left;
+			width:570px;
+			height:100px;
+			padding-left: 20px;
+			font-size: 12px;
+			color:#536;
+			margin-top: 13px;
+			margin-bottom: 8px;
+		}
+
+		#xuxian{
+			float:left;
+			width:590px;
+			height:40px;
+			margin-top: 5px;
+		}
+		#third{
+			float:left;
+			width:570px;
+			height:160px;
+			padding-left: 20px;
+			font-size: 12px;
+			color:#536;
+			margin-top: 12px;
+		}
+		#tb{
+			position: absolute;
+			margin-top: 200px;
+		}
+		#text{
+			font-size: 22px;
+			font-weight: bold;
+			margin-top: -90px;
+			color:#fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="did">
+
+		<div class="logo" style="float:left">
+			<img src="images/slogan6.png" />
+		</div>
+		<div style="float:right; height:50px; width:400px;">
+			<p style="float:right; margin-right:30px;">
+			<img src="images/btn_addfav_news.png" style="height:13px" />
+			<span style="font-size: 12px; color: #333;font-family: "宋体";">设为书签</span>
+			<img src="images/sjbi.jpg" style="height:15px" />
+			<span style="font-size: 12px; color: #333;font-family: "宋体";">手机版</span>
+			</p>
+		</div>
+
+
+		<ul class="nav" type="none">
+			<li class="dh">首页</li>
+			<li class="dh">滚动</li>
+			<li class="dh">图片</li>
+			<li class="dh">深度</li>
+			<li class="dh">《出鞘》</li>
+			<li class="dh">大国博弈</li>
+			<li class="dh">军史</li>
+			<li class="dh">东海局势</li>
+			<li class="dh">南海局势</li>
+			<li class="dh">新闻排行</li>
+			<li class="dh">航空</li>
+			<li><回顾</li>
+		</ul>
+
+
+		<div id="uid">
+			<div id="images">
+				<img id="n1" src="images/01.jpg" height="460px"; width="720px" />
+				<img id="n2" src="images/02.jpg" height="460px"; width="720px" />
+				<img id="n3" src="images/03.gif" height="460px"; width="720px" />
+				<img id="n4" src="images/04.jpg" height="460px"; width="720px" />
+				<img id="n5" src="images/05.jpg" height="460px"; width="720px" />
+				<div id="text">今天能下水不？中国国产航母已刷油漆</div>
+			</div>
+			<div>
+				<img id="tb" src="images/tb.jpg" height="20px" width="20px" onclick="show(1)" />
+			</div>
+			<div>
+				<div id="first">
+					<h1>中国095核潜艇开工建造 2020年交付海军</h1>
+					<p class="num1">
+					<span>中国无人机远程转场创历史</span>
+					<span> 德媒：中国军力世界第三</span>
+					</p>
+					<p class="num2">
+					<span>天舟一号与天宫二号成功对接 </span>
+					<span>中国飞船技术领先俄美</span>
+					</p>
+					<p class="num2">印度总说加尔各答级完胜中国052D 他们哪来的底气？</p>
+					<p class="num2">
+					<span>外媒称日本正完成对中国包围网</span>			<span>军国主义进日本教材</span>
+					</p>
+				</div>
+				<div id="second">
+					<p class="num1">菲防长登上南沙中业岛 我外交部严重不满已提出交涉</p>
+					<p class="num2">美前高官：美国若玩弄一个中国政策 代价由台湾承担</p>
+					<p class="num2">韩国雾霾严重怪中国？韩专家：简直是在国际上丢脸</p>
+				</div>
+				<div id="xuxian" style="border-top:1px dashed #cccccc;height: 1px;overflow:hidden">
+					<br>
+				</div>
+				<div id="third">
+					<h1>美副总统：卡尔文森航母数日内抵日本海</h1>
+					<p class="num1">
+					<span>美军卡尔文森号航母北上朝鲜出师不利</span>
+					<span> F18战机失事</span>
+					</p>
+					<p class="num2">
+					<span>美期待中国助解决朝核问题 </span>
+					<span>朝鲜称可将美韩化为灰烬</span>
+					</p>
+					<p class="num2">
+					<span>俄战略轰炸机一周内4次抵近美海岸</span>
+					<span> 秀肌肉一箭三雕</span>
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</body>
+</html>
+<script>
+    var m=2;
+    var arr=["今天能下水不？中国国产航母已刷油漆", "在等节点,船坞开始注水了？此时此刻国产航母的最新曝照","国产001A航母船坞正在注水：今日下水可能性大","国产航母今日举行下水仪式：和辽宁舰有何不同","4.23日和4.18日找不同！国产航母今日最新靓照"]
+    function show(n){
+		if(n==1){
+			for(var i=1;i<=5;i++){
+					var img = document.getElementById("n"+i);
+					if(i == m){
+						img.style.display = "block";
+						document.getElementById('text').innerHTML=arr[i-1];
+					}else{
+						img.style.display = "none";
+					}	
+			}
+			m++;
+			if(m==5){
+				m=1;
+			}
+		}
+	}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+.wenben input{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 249px;
+			height: 24px;
+			line-height: 24px;
+			margin-left: 14px;
+			padding: 5px 0;
+			color: #666;
+		}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>confirm</title>
+</head>
+<body>
+	<button onclick="window.open('http://www.baidu.com','','width=100,height=100')">baidu</button>
+</body>
+</html>
+<script>
+
+	var res = confirm("你爱我吗");//返回值
+	//onfirm() 方法用于显示一个带有指定消息(纯文本)和确定 及取消按钮的对话框
+	//如果用户点击确定按钮，则 confirm() 返回 true。如果点击取消按钮，则 confirm() 返回 false。
+	if(res){
+		alert("我不爱你");
+	}else{
+		alert("我不信");
+	}
+
+	//输入框
+	prompt("告诉我你的爱：");
+</script>

@@ -1,0 +1,36 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>red</li>
+        <li>blue</li>
+        <li>yellow</li>
+    </ul>
+
+    <ol id="oid">
+        <li>爱情转移</li>
+        <li>爱我中华</li>
+    </ol>
+</body>
+</html>
+
+<script>
+    var list = document.getElementsByTagName('li');
+    var list2 = document.getElementsByTagName("ul")[0].getElementsByTagName("li");
+
+    var list3 = document.getElementById("oid").getElementsByTagName("li");
+    //alert(list3.length);
+
+    for(var i=0;i<list2.length;i++){
+        list2[i].onclick = function(){
+            this.style.color = this.innerHTML;
+        }
+    }
+
+
+</script>

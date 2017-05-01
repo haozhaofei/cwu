@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+    <!-- 无序列表 -->
+	<ul>
+		<li>red</li>
+		<li>green</li>
+		<li>yellow</li>
+	</ul>
+	<!-- 有序列表 -->
+	<ol id="oid">
+		<li>flash</li>
+		<li>PS</li>
+	</ol>
+</body>
+</html>
+<script type="text/javascript">
+	var list=document.getElementsByTagName("li");
+	alert(list.length);
+	//注意getElementsByTagName()获取的是一个集合
+	var list2=document.getElementsByTagName("ul")[0].getElementsByTagName("li");
+	alert(list2.length);
+	var list3=document.getElementById("oid").getElementsByTagName("li");
+    alert(list3.length);
+    //被动调用this的使用
+    for(var i=0;i<list2.length;i++){
+    	list2[i].onclick=function(){
+    		this.style.color=this.innerHTML;
+    	}
+    }
+</script>

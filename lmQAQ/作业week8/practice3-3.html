@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<img src="images/HLL-11_xuandong.gif" cwu="images/11.jpg" alt="">
+	<img src="images/HLL-11_xuandong.gif" cwu="images/22.jpg" alt="">
+	<img src="images/HLL-11_xuandong.gif" cwu="images/33.jpg" alt="">
+	<img src="images/HLL-11_xuandong.gif" cwu="images/44.jpg" alt="">
+</body>
+</html>
+
+<script>
+	setTimeout(function(){
+		var list = document.getElementsByTagName('img');
+		for(var i=0;i<list.length;i++){
+			list[i].src = list[i].getAttribute("cwu");
+			list[i].width = "300";
+		}
+	},1000)
+	//做到了单对单
+	//getAttribute() 方法返回指定属性名的属性值。
+</script>

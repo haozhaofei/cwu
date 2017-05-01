@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新浪军事</title>
+</head>
+<style type="text/css">
+	body{
+		max-width:1040px;
+		margin:0 auto;
+	}
+
+	li a {
+		text-decoration:none;
+	}
+	li a:hover{
+		color: red;
+		text-decoration:underline;
+	}
+	li{
+		display: inline;
+	}
+	#hd{
+		background: green;
+		height: 50px;
+
+	}
+	#hd li{	
+		display: inline;
+		line-height: 50px;
+	}
+	#hd li a{
+		color:white;
+		margin-left: 2.6%;
+		margin-top: 1.5%;
+
+	}
+	main{
+		float: left;
+	}
+	#left{
+		position: absolute;
+		margin-top:200px; 
+		margin-left:40px; 
+	}
+	#right{
+		position: absolute;
+		margin-top:200px; 
+		margin-left:-24px;
+	}
+	#img{
+		margin-top:22px; 
+		margin-left:0px;
+		float: left;
+		width: 520px;
+	}
+	#m1{
+		width: 520px;
+		height: 380px;
+	}
+	#m2,#m3,#m4{
+		display: none;
+		width: 520px;
+		height: 380px;
+	}
+	aside{
+		float: right;
+		width: 46%;
+	}
+	#first{
+		font-size: 20px;
+		color: black;
+		font-weight: bold;
+	}
+	#buy,#plane,#second,#third,#hang,#four{
+		color: red;
+	}
+	#four{
+		color: red;
+		font-size: 20px;
+		text-decoration: underline;
+		font-weight: bold;
+	}
+</style>
+<body>
+	<header role="banner">
+		<ul id="hd">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">滚动</a></li>
+			<li><a href="#">图片</a></li>
+			<li><a href="#">《出鞘》</a></li>
+			<li><a href="#">大国博弈</a></li>
+			<li><a href="#">军史</a></li>
+			<li><a href="#">东海局势</a></li>
+			<li><a href="#">南海局势</a></li>
+			<li><a href="#">新闻排行</a></li>
+			<li><a href="#">航空</a></li>
+			<li><a href="#">回顾</a></li>
+		</ul>
+	</header>
+	<main>
+		<button id="left"><</button>
+		<div>
+		<ul id="img">
+		<li><image id="m1" src="1.jpg"></image></li>
+		<li><image id="m2" src="2.jpg"></image></li>
+		<li><image id="m3" src="3.jpg"></image></li>
+		<li><image id="m4" src="4.jpg"></image></li>
+		</ul>
+		</div>
+		<button id="right">></button>
+	</main>
+	<aside>
+		<ul>
+			<li><a id="first" href="#">美称中国建超级核潜艇生产线 3年造12艘</a></li>
+			<p>
+			<li><a id="buy" href="#">中国对俄军购又出现新动向</a></li>
+			<li><a id="plane" href="#">这次是24架米格31战机?</a></li>
+			</p>
+			<p><li><a href="#">俄称中国百万陆军毫无作用却被打脸</a></li>
+				<li><a href="#">歼20配激光设备</a></li>
+			</p>
+			<p><li><a href="#">中国或另起炉灶建核航母</a></li>
+				<li><a href="#">面临两大难题投入或超2千亿</a></li>
+			</p>
+		</ul>
+		<ul>
+			<p><li ><a id="second" href="#">中国何时能解决航发短板 </a></li>
+				<li><a  id="third" href="#">两年内有6大型号将获突破</a></li>
+			</p>
+			<p><li><a href="#">我军多艘战舰装超高音速反舰弹</a></li>
+				<li><a href="#">055配双波段相控阵雷达</a></li>
+			</p>
+			<p><li><a href="#">韩方竟称中国高新技术落后韩</a></li>
+				<li><a href="#">刚说完感谢中国就翻脸</a></li>
+			</p>
+		</ul>
+		<ul>
+			<li><a  id="four" href="#">辽宁舰时隔两月再次演戏 透露一重大信号</a></li>
+			<p><li><a id="hang" href="#">中印国产航母比拼：印航母火力仅为中方50%不堪一击</a></li></p>
+			<p><li><a href="#">安倍政府这个 决定让日本网友急了：这不等于认输吗</a></li></p>
+			<p><li><a href="#">巴铁有3种中国武器让印害怕</a></li>
+			<li><a href="#">美称中国造075舰是浪费</a></li></p>
+		</ul>
+	</aside>
+</body>
+</html>
+<script type="text/javascript">
+	var m=1;
+	var left=document.getElementById('left');
+	var right=document.getElementById('right');
+	doFun();
+	function doFun(){
+		show(m);
+		n=m;
+		left.onclick=function(){	
+			m--;	
+			if(m<=0){
+				m=4;
+			}
+			show(m);
+			n=m;
+		}
+		right.onclick=function(){			
+			n++;	
+			if(n>4){
+				n=1;
+			}
+			show(n);
+		}
+	}
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var img = document.getElementById("m"+i);
+			if(i == x){
+				img.style.display = "block";
+			}else{
+				img.style.display = "none";
+			}
+		}
+	}
+	left.offsetTop=400+"px";
+	left.offsetLeft=100+"px";
+	right.offsetTop=400+"px";
+	right.offsetLeft=640+"px";
+</script>

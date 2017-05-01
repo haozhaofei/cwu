@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8"> 
+	<title>节点2</title>
+</head>
+<body>
+	<ul>
+		<li>百度</li>
+		<li>新浪</li>
+		<li>京东</li>
+	</ul>
+
+	<h3 id="hid">目录</h3>
+</body>
+</html>
+<script>
+	var li = document.getElementsByTagName("li")[0];
+	alert(li.nodeType);  //1 元素类型
+	var hid = document.getElementById("hid");
+	alert(hid.nodeType);  //1元素类型
+	alert(hid.firstChild.nodeType);  //文本类型
+</script>

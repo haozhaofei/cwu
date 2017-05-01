@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>爱情买卖</li>
+		<li>爱情转移</li>
+		<li>爱你不是两三天</li>
+		<li>纤夫的爱</li>
+	</ul>
+
+	<h3 id="hid">为爱痴狂</h3>
+</body>
+</html>
+
+<script>
+
+	/**
+		节点信息包含三种
+		节点信息
+		每个节点都拥有包含着关于节点某些信息的属性。这些属性是：
+		nodeName（节点名称） 
+		nodeValue（节点值） 
+		nodeType（节点类型） 
+
+
+		元素 1 
+		属性 2 
+		文本 3 
+		注释 8 
+		文档 9 
+
+	**/
+	var oUl = document.getElementsByTagName('li')[1];
+	alert(oUl.nodeType);
+	var oHid = document.getElementById("hid");
+	//alert(oHid.nodeType);   //1.元素类型
+	alert(oHid.firstChild.nodeType)  //3:本文类型
+</script>
