@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<img src="photos/卡了.gif" zmm="photos/就是他.jpg" alt="" id="mid">
+</body>
+</html>
+<script type="text/javascript">
+	setTimeout(function(){
+		var mid=document.getElementById("mid");
+		mid.src=mid.getAttribute("zmm");
+		mid.width=300;
+	},1000)
+</script>
