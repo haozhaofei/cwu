@@ -1,0 +1,316 @@
+  <!doctype html>
+  <html lang="en">
+  <head>
+  	<meta charset="UTF-8">
+  	<title> 酷狗音乐-音乐总有新玩法</title>
+  </head>
+  <style>
+  #body{
+  	width: 1800px;
+  	height: 5000px;
+  }
+  {
+	padding: 0px;
+	margin: 0px;
+}
+    #menu1,#top{
+    	width: 1400px;
+    	height: 80px;
+    	background: write;
+
+    }
+    #bid{
+    	width: 1400px;
+    	height: 50px;
+    	background: #000; 
+    }
+    #mid{
+    	width: 1500px;
+    	height: 450px;
+    	background:#063;
+    }
+    #did{
+    	width: 1500px;
+    	height: 90px;
+    	background: white;
+    }
+    #log,#menu{
+    	float: left;
+    	width: 50%;
+    }
+    #line,#tuijian{
+    	float: right;
+    	width: 50%
+    }
+    li{
+    	float: left;
+    	width: 20%;
+    	list-style-type:none;
+    	color:white;
+    }
+  .normal,.icon,.active{
+      color: white;
+  }
+    .secondMenu{
+    	display: none;
+    }
+     #cos{
+	    position:relative;
+	    margin-right:10px; 
+    }
+   #n2,#n3,#n4{
+     	display: none;
+     	height: 500px
+     }
+   .button1{
+  	     border-radius: 50%;
+         position:absolute;
+         left: 90%;
+         top: 50%;
+         font-size: 50px;
+         font-size-color: #A9A9A9;
+         background: repeat;
+
+     }
+     .button2{
+     	border-radius: 50%;
+        position:absolute;
+        left: 5%;
+        top: 50%;
+         font-size: 50px;
+         font-size-color: #A9A9A9;
+         background: repeat;
+
+     }
+     .yonghu{
+     	width: 1400px;
+     	height: 80px;
+        top: 83%;
+        text-align: center;
+     	 position:absolute;
+     	 border-right:1px solid #fff;
+     	 background-color:#DDDDDD;
+         filter:alpha(opacity=50); 
+         -moz-opacity:0.5; 
+         opacity:0.5;
+     }
+     #geshou{
+     	float: left;
+     }
+      #geshou1,#geshou2{
+      	float: left;
+      	width: 148px;
+      	height: 154px;
+      	margin:5px;
+      }
+    #geshou3{
+      	float: left;
+      	width: 311px;
+      	height: 97px;
+
+      }
+      .jing,.re{
+      	font-size: 40px;
+      	color: 0000;
+
+      }
+      a{
+      	TEXT-DECORATION:none;
+      }
+      #part3{
+      	margin-top:20px;
+      	 filter:alpha(opacity=90); 
+         -moz-opacity:0.9; 
+         opacity:0.9;
+      }
+		.c1{
+			margin-top: 60px;
+			margin-right: 50px;
+			color:#fff;
+			font-weight:bold;
+			font-size:16px;
+		}
+		.c2{
+			margin-top: 60px;
+			color:#fff;
+			font-weight:bold;
+			font-size:20px;
+		}
+		.x{
+			font-size: 14px;
+			color:#fff;
+			margin-right: 50px;
+		}
+  </style>
+  <body>
+  <div class="dody">
+  	<div id="top">
+  	     <div id="log">
+  	    	  	    <img src="images/logo.png" alt="" style="float:left;width:25%;"> 
+  	    
+  	    	  		<div style="float:right;width:30%; " ><input type="text" style="margin-top:15px;"><img src="images/ss.png" alt="" style="width:40px;heigh:40px;margin-top:15px;">
+  	    	  		</div> 
+  	      		 </div>
+  	      		
+  	              <div id="line">
+  	                     <div >
+	  	                      <ul >
+	  	    	                    <li><a href="http://www.kugou.com/shop/help/serviceCenter" style="color:#808080;">客服中心</a></li>
+	  	    	                    <li><a href="http://kugou.hirede.com" style="color:#808080;">招贤纳士</a></li>
+	  	    	                    <li><a  href="http://vip.kugou.com/" style="color:#808080;">会员中心 </a></li>
+	  	    	                </ul>
+  	    	                </div>
+  	    	               
+  	    	           
+  	                   <div>
+  	                   		<button>
+  	                   			<a class="login_btn" id="login_btn">登录</a>
+  	                   		</button>
+  	                   		<button>
+  	                   			<a target="_blank" href="http://www.kugou.com/reg/web/" class="regin_btn" id="regin_btn">注册</a> 
+  	                   		</button>
+  	                   		
+  	                   </div>
+  	                        
+  	               </div>
+  	      		  
+    </div>
+  	<div id="bid">
+  		<div id="menu">
+  			 <ul class="homeNav">
+                    <li><a class="normal " href=" http://www.kugou.com/" >首页</a></li>
+                    <li><a class="normal"  href=" http://www.kugou.com/yy/html/rank.html">榜单</a></li>
+                    <li><a class="normal"  id="productCenter" href=" http://download.kugou.com/">下载客户端</a></li>
+                    <li class="more" id="more"><a href="" class="iconMore" id="showMore" >更多</a>
+
+                    <ul class="secondMenu" id="secondMenu">
+	                    <li><a href="http://www.kugou.com/fmweb/html/index.html" class="active">电台</a></li>
+	                    <li><a href="http://www.kugou.com/mvweb/html/"class="active">MV</a></li>
+	                    <li><a href="http://www.kugou.com/yy/html/special.html" class="active">歌单</a></li>
+	                    <li><a href="http://www.kugou.com/yy/html/singer.html" class="active">歌手</a></li>
+                   </ul>
+                    </li>
+                </ul>
+                
+
+  		</div>
+  		<div id="tuijian">
+  			 <ul class="subNav">
+                    <li ><a  href="http://fanxing.kugou.com/?action=spreadIndex&id=3" class="icon"><img src="images/IZM(HYLZ2V(62N(`SK}I}4Y.png" alt="">音乐直播</a></li>
+                    <li><a  href=" http://live.kugou.com/" class="icon "><img src="images/JTX3$3DVNN_T22NXV44AC@F.png" alt="">酷狗LIVE</a></li>
+                    <li><a  href="http://www.kugou.com/imusic/" class="icon"><img src="images/LI8644QLLKK4VC8K8C_]PQX.png" alt="">音乐人</a></li>
+                    <li><a  href="http://games.kugou.com/?f=7" class="icon"><img src="images/QVW4AX$OX{RDT8N[)61}X~A.png" alt="">游戏</a></li>
+                    <li><a  href="http://www.kugou.com/shop" class="icon"><img src="images/V@}CYAM0@J4H((Z{4_D][AC.png" alt="">商城</a></li>
+                    
+                </ul>
+
+  		</div>
+  	</div>
+  		
+	 <div id="cos">
+	     <a href="http://www.kugou.com/" ><img src="images/20160713154957678313.jpg" alt="" id="n1" style="width:1400px;height: 450px;"></a>
+	     <button class="button1" onclick="show(1)">》</button>
+	     <button class="button2" onclick="show(1)">《</button>
+
+	     <img src="images/20170220150607997002.jpg" alt="" id="n2" style="width:1400px;height: 450px;">
+	     <img src="images/20170418221820943245.jpg" alt="" id="n3" style="width:1400px;height: 450px;">
+	     <img src="images/20170424195431805771.jpg" alt="" id="n4" style="width:1400px;height: 450px;">
+	     <div class="yonghu">
+             <div id="part3">
+				<img src="images/pc.png" alt="" />
+				<span class="c1">下载PC版</span>
+				<span class="x">|</span>
+				<img src="images/mac.png" alt="" />
+				<span class="c1">下载iPhone版</span>
+				<span class="x">|</span>
+				<img src="images/andriod.png" alt="" />
+				<span class="c2">下载Android</span>
+		     </div>
+		
+  	      </div>
+  	</div>
+
+
+  	<div id="did">
+  	    <ul  style"type="none"">
+  	    	<li  class="jing" style="float:flet;left:20%;list-style-type:none;color:#696969;">精选歌曲</li>
+  	    	<li   style="float:flet;left:50%;margin-top:10px;list-style-type:none;"><a href="http://www.kugou.com/yy/html/rank.html?from=homepage" style="color:#808080;">更多</a></li>
+  	    	<li  class="jing" style="float:flet;left:70%;list-style-type:none;color:#696969;"><span style="color:bule;color: 0000;">热门</span>歌曲</li>
+  	    	<li  style="float:flet;left:80%;top:50%;margin-top:10px;list-style-type:none;">	<a href="http://www.kugou.com/yy/html/rank.html?from=homepage" style="color:#808080;" >更多</a></li>
+  	    </ul>
+   </div>
+
+
+  		<div id="Ge" style=" background:write;width: 1000px;margin-left:200px; 
+    ">
+  		<div id="geshou"><img src="images/8B%@WD$40%G7C)L3@]FT`7J.png" alt=""></div>
+  		<div id="geshou1">
+	  		<img src="images/_YYU9AOSDIVHIT$R3G~L6T2.png" alt="">
+	  		<img src="images/FJ908$@G$354R4)Z7%K3OA5.png" alt="">
+  		</div>
+  		<div id="geshou2"> 
+            <img src="images/FBTZ3)6`R$QM6}@MP$74K3U.png" alt="">
+	  		<img src="images/B88[$}Z[N7][[FJBXBU1A@1.png" alt="">
+  		</div>
+  		<div id="geshou3">
+  		     <img src="images/23~GQWBHX6XUOA3L_0IJG7X.png" alt="">
+	  		 <img src="images/`ZX3BCCK)J0G_)PL$9@6)(H.png" alt="" style="margin-top:15px; margin-bottom:15px;">
+             <img src="images/2.png" alt="">
+  		</div>
+  		<img src="images/P9`3QO(}V%UE}[BEKW3AQRA.png" alt="" style="width:930px">
+  		</div>
+  		
+  	</div>
+  </div>
+  	
+  </body>
+  </html>
+  <script>
+   
+    var m=2;
+   function show(n){
+    	
+		if(n==1){
+			for(var i=1;i<=4;i++){
+					var img = document.getElementById("n"+i);
+					if(i == m){
+						img.style.display = "block";
+					}else{
+						img.style.display = "none";
+					}	
+			}
+			m++;
+			if(m==4){
+				m=1;
+			}
+		}
+	}
+     
+
+
+    var n= 0;
+	var time = null;
+
+	function doStart(){
+		if(time == null){
+			time = setInterval(function(){
+				n++;
+				show(n)
+				if(n >=4){
+					n= 0;
+				}
+			},500)
+		}
+		
+	}
+
+	doStart();
+
+	function doStop(){
+		if(time != null){
+			clearInterval(time);
+		}
+		time = null;
+	}
+
+	</script>

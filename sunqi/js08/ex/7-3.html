@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li><input type="checkbox" value="a">a</li>
+		<li><input type="checkbox" value="b">b</li>
+		<li><input type="checkbox" value="c">c</li>
+		<li><input type="checkbox" value="d">d</li>
+		<li><input type="checkbox" value="e">e</li>
+	</ul>
+	<button onclick="doSelect()">abcde</button>
+</body>
+</html>
+<script>
+	function doSelect(){
+		var list=document.getElementsByTagName('input');
+	    var arr=new Array();
+	    for(var i=0;i<list.length;i++){
+		    if(list[i].checked && list[i].type == "checkbox"){
+			    arr[arr.length]=list[i].value;
+		    }
+	    }
+	    alert(arr);
+	    }
+</script>

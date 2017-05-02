@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>document对象</title>
+</head>
+<body>
+	<form action=""></form>
+	<form action="" name="myform">
+	<input type="text" name="myname" value="">
+	</form>
+</body>
+</html>
+<script>
+/*all[] 是一个多功能的类似数组的对象，它提供了对文档中所有 HTML 元素的访问*/
+	document.write("<br>文本长度："+document.all.length);
+	document.write(document.all[6]);
+	//alert(document.myform.myname.value);
+	alert(document.forms[1].myname.value);
+</script>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document的all集合 和form集合</title>
+</head>
+<body>
+	<form action=""></form>
+	<form action="" name="myform1">
+		<input type="text" name="myname1" value="">
+	</form>
+</body>
+</html>
+<script>
+	document.write("<br>"+document.all.lenght);
+	//alert(document.myform1.myname1.value);
+	alert(document.forms[1].myname1.value);
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action=""></form>
+	<form action="" name="myform2">
+		<input type="text" name="myname2" value="">
+	</form>
+</body>
+</html>
+<script>
+	document.write("<br>"+document.all.lenght);
+	//alert(document.myform2.myname2.value);
+	alert(document.forms[1].myname2.value);
+</script>

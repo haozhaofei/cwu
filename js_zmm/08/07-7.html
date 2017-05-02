@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	#did{background: yellow;width: 400px;height: 400px;}
+	#mid{background: green;width: 100px; height: 100px;}
+</style>
+<body>
+	<div id="did">
+		<div id="mid">
+			
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	did.onclick=function(){
+		alert("点击了大的div");
+	}
+	mid.onclick=function(ent){
+		var event=window.event||ent;
+		if(document.all){
+			event.cancelBubble=true;
+		}else{
+			event.stopPropagation();
+		}
+		alert("点击了小div");
+	}
+	
+</script>

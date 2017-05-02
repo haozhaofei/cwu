@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<ul>
+	<li>red</li>
+	<li>blue</li>
+	<li>green</li>
+	<li>yellow</li>
+	<li>black</li>
+	<li>pink</li>
+</ul>
+	<ol id="oid">
+		<li>我在江湖！</li>
+		<li>嘿，兄弟！好久不见你在哪里？</li>
+	</ol>
+</body>
+</html>
+<script type="text/javascript">
+	document.write(document.getElementsByTagName("li").length);
+	document.write(document.getElementsByTagName("ul")[0].getElementsByTagName("li").length);
+	document.write(document.getElementById("oid").getElementsByTagName("li").length);
+	var list=document.getElementsByTagName("ul")[0].getElementsByTagName("li");
+	for(var i=0;i<list.length;i++){
+		list[i].onclick=function(){
+			this.style.color=this.innerHTML;
+		}
+		
+	}
+</script>

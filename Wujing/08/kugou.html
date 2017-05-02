@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>酷狗音乐 - 音乐总有新玩法</title>
+	<link rel="shortcut icon" href="photos/timg.jpg" type="image/x-icon"/>
+</head>
+<style type="text/css">
+	*{
+    		margin: 0;
+    		padding: 0;
+	}
+	.mainPage{
+		position: relative;}
+	.header{
+		margin-left: 158px;
+		width: 75%;margin-top: 0px;
+		height: 50px;position: absolute;
+		z-index: 2;}
+	.header .logo{
+		float: left;
+		margin-left: 20px;
+		width: 153px;}
+	.header .login_in{
+		float: right;
+		margin-top: -35px;
+		height: 25px;
+		width: 170px;
+		border-left: 1px solid #ccc;}
+	.login_in .denglu{
+		float: left;
+		width: 50px;
+		height: 30px;
+		background: #0080ff;
+		display: inline-block;
+		text-align: center;
+		line-height: 30px;
+		text-decoration:none;
+		color: #fff;
+		font-size: 14px;
+		margin-left: 60px;}
+	.denglu:hover{
+		background: #0068cc;}
+	.login_in .zhuce{
+		float: right;
+		width: 50px;height: 30px;
+		border:1px solid #ccc;
+		display:inline-block;
+		text-align: center;
+		line-height: 30px;
+		text-decoration:none;
+		color:#7b7b7b;
+		font-size: 14px;}
+	.zhuce:hover{
+		border-color: #0080ff;
+		color:#0080ff; }
+	.search_input{
+		width: 300px;
+		margin-left: 205px;
+		margin-top:20px;
+		position: absolute;
+		margin-top: 4px;
+		height: 40px;}
+	.search_input .input{
+		float: left;
+		height: 30px;
+		width: 255px;}
+	.search_input .search_btn{
+		float: right;
+		margin-top: 7px;}
+	.topNav{
+		height: 30px;
+		width:300px;
+		margin-left: 600px;
+		margin-top: 10px;}
+	.topNav li{
+		float: left;
+		list-style: none;}
+	.topNav li a{
+		text-decoration: none;
+		margin-left: 15px;
+		font-size: 13px;
+		color:#7b7b7b;}
+	.sousuo{font-size: 14px;}
+	.sousuo:hover{color:#0080ff; }
+	.list1 li a:hover{color: #0080ff;}
+	.navWrap{
+		height: 60px;
+		width: 100%;
+		background: #3c3c3c;
+		position: absolute;
+		margin-top: 50px;}
+	.navWrap .homeNav{
+		float: left;
+		height: 57px;
+		line-height: 57px;
+		margin-left: 178px;
+		width: 400px;
+		position: absolute;}
+	.homeNav li{
+		float: left;
+		list-style: none;
+		text-align: center;}
+	.homeNav li a{
+		display: block;
+		padding: 0 20px;}
+	.homeNav li a:hover{background:#0080ff; }
+	.more_1{width: 80px;}
+	.secondNav{
+		float: none;
+		display: none;
+		width: 80px;
+		margin-left: 0px;
+		position: absolute;
+		z-index: 2;}
+	.secondNav li a{
+		width: 39px;
+		background: #3c3c3c;}
+	.more_1:hover .secondNav{
+		display: block;
+		position: absolute;
+		 }
+	.secondNav li a:hover{
+		background: #6c6c6c;}
+	.navWrap .subNav{
+		float: right;
+		height: 57px;
+		line-height: 57px;
+		margin-right: 178px;}
+	.subNav li{
+		float: left;}
+	.subNav li a{
+		display: block;
+		padding: 0 20px;
+		font-size: 13px;
+		color: #bebebe;
+		text-decoration: none;}
+	.homeNav li a{
+		color: #fff;
+		text-decoration: none;}
+	.subNav li a:hover{color: #0080ff;}
+	.shouye{background: #0080ff;}
+	.banner{
+		position: absolute;
+		width: 100%;
+		height: 400px;
+		margin-top: 107px;
+		z-index: 1;}
+	.banner .imgs img{
+		width: 100%;
+		z-index: 1;
+		position: absolute;
+		height: 100%;}
+	#m2{display: none;}
+	.banner .downLoad{
+		height:50px;
+		position: absolute;
+		width: 100%;
+		z-index: 2;
+		margin-top: 350px;
+		text-align: center;
+		line-height: 50px;
+		background: rgba(14,14,14,0.5);}
+	.banner .downLoad a{
+		display: inline-block;
+		width: 200px;
+		color: #fff;
+		text-decoration: none;
+		font-size: 15px;}
+	.part3{
+		width: 80%;
+		margin-left: 158px;
+		position: absolute;
+		z-index: 2;
+		height: 425px;
+		margin-top: 530px;}
+	.part3 .left{
+		width: 682px;
+		float: left;}
+	.left .font{
+		height: 50px;
+		width: 682px;
+		line-height: 50px;}
+	.font h3{
+		float: left;
+		font-weight:lighter;
+		font-size: 30px;}
+	.font h3 span{
+		color: #0080ff;
+		font-weight: lighter;}
+	.font a{
+		float: right;
+		text-decoration: none;
+		font-size: 14px;color: #7b7b7b;}
+	.font a:hover{color: #0080ff;}
+	.left .songList{
+		height: 360px;
+		width: 682px;}
+	.songList .big_left {
+		width: 341px;
+		float: left;}
+	.big_left #span{
+		width: 341px;
+		height: 341px;
+		z-index: 2;
+		background: rgba(14,14,14,0.5);
+		margin-top: 0px;
+		display: none;}
+	.songList .big_left img{
+		width: 341px;
+		position: absolute;
+		z-index: 1;}
+	.big_left div{
+		width:341px;
+		height: 50px;
+		background: rgba(14,14,14,0.5);
+		position: absolute;z-index: 3;
+		margin-top: 291px;}
+	.big_left div p{color: #fff;}
+	.nihao{
+		margin-left: 10px;
+		font-size: 14px;
+		font-weight: bold;
+		margin-top: 5px;}
+	.aa{
+		margin-left: 10px;
+		font-size: 15px;
+		margin-top: 5px;}
+	.little_right{
+		width: 341px;
+		float: right;height: 100%;}
+	
+	.little_right .little_top_left{
+		float: left;width: 150px;
+		position: relative;
+		height: 150px;
+		margin-left: 10px;}
+	.songList .little_right .little_top_left img{
+		width: 165px;
+		position: absolute;
+		z-index: 1;}
+	.little_right .little_top_left #span1{
+		width: 165px;
+		height: 165px;
+		z-index: 2;
+		background: rgba(14,14,14,0.5);
+		margin-top: 0px;
+		display: none;}
+	.little_right .little_top_left div{
+		width:165px;
+		height: 50px;
+		background: rgba(14,14,14,0.5);
+		position: absolute;;z-index: 3;
+		margin-top:100px;}
+	.little_right .little_top_left div p{color: #fff;}
+	.jiawu{
+		margin-left: 10px;
+		font-size: 14px;
+		font-weight: bold;
+		margin-top: 5px;}
+	.hangchi{
+		margin-left: 10px;
+		font-size: 15px;
+		margin-top: 5px;}
+	
+	.little_right .little_top_right{
+		float: left;width: 150px;
+		position: relative;
+		height: 150px;
+		margin-left:23px;}
+	.songList .little_right .little_top_right img{
+		width: 165px;
+		position: absolute;
+		z-index: 1;}
+	.little_right .little_top_right #span2{
+		width: 165px;height: 165px;z-index: 2;
+		background: rgba(14,14,14,0.5);
+		margin-top: 0px;display: none;}
+	.little_right .little_top_right div{
+		width:165px;
+		height: 50px;
+		background: rgba(14,14,14,0.5);
+		position: absolute;z-index: 3;
+		margin-top:100px;}
+	.little_right .little_top_right div p{color: #fff;}
+	.doufeng{
+		margin-left: 10px;
+		font-size: 14px;
+		font-weight: bold;
+		margin-top: 5px;}
+	.xiaoxia{
+		margin-left: 10px;
+		font-size: 15px;
+		margin-top: 5px;}
+
+	.little_right .little_bo_left{
+		float: left;width: 150px;
+		height: 150px;
+		margin-top: 23px;
+		margin-left: 10px;}
+	.songList .little_right .little_bo_left img{
+		width: 165px;
+		position: absolute;
+		z-index: 1;}
+	.little_right .little_bo_left #span3{
+		width: 165px;
+		height: 165px;
+		z-index: 2;
+		background: rgba(14,14,14,0.5);
+		margin-top: 0px;
+		display: none;}
+	.little_right .little_bo_left div{
+		width:165px;
+		height: 50px;
+		background: rgba(14,14,14,0.5);
+		position: absolute;
+		z-index: 3;
+		margin-top:100px;}
+	.little_right .little_bo_left div p{color: #fff;}
+	.shijian{
+		margin-left: 10px;
+		font-size: 14px;
+		font-weight: bold;
+		margin-top: 5px;}
+	.ye{
+		margin-left: 10px;
+		font-size: 15px;
+		margin-top: 5px;}
+	.little_right .little_bo_right{
+		float: left;
+		width: 150px;
+		height: 150px;
+		margin-left: 23px;
+		margin-top: 23px;}
+	.songList .little_right .little_bo_right img{
+		width: 165px;
+		position: absolute;
+		z-index: 1;}
+	.little_right .little_bo_right #span4{
+		width: 165px;
+		height: 165px;
+		z-index: 2;
+		background: rgba(14,14,14,0.5);
+		margin-top: 0px;
+		display: none;}
+	.little_right .little_bo_right div{
+		width:165px;
+		height: 50px;
+		background: rgba(14,14,14,0.5);
+		position: absolute;
+		z-index: 3;
+		margin-top:100px;}
+	.little_right .little_bo_right div p{color: #fff;}
+	.jinqu{
+		margin-left: 10px;
+		font-size: 14px;
+		font-weight: bold;
+		margin-top: 5px;}
+	.nalan{
+		margin-left: 10px;
+		font-size: 15px;
+		margin-top: 5px;}
+	.part3 .right{
+		width: 350px;
+		float: right;}
+	.right .font_2{
+		height: 50px;
+		width: 350px;
+		line-height: 50px;}
+	.font_2 h3{
+		float: left;
+		font-weight:lighter;
+		font-size: 30px;}
+	.font_2 h3 span{
+		color: #0080ff;
+		font-weight: lighter;}
+	.font_2 a{
+		float: right;
+		text-decoration: none;
+		font-size: 14px;
+		color: #7b7b7b;}
+	.font_2 a:hover{color: #0080ff;}
+	.part3 .right .bangdan{
+		width: 350px;
+		height: 340px;}
+	.bangdan .b1,.b2,.b3{
+		height: 100px;
+		background: #f0f0f0;}
+	.b1 .img1 img,.b2 .img2 img,.b3 .img3 img{
+		height: 100px;
+		float: left;}
+	.b1 .wenzi1,.b2 .wenzi2,.b3 .wenzi3{
+		float: left;
+		margin-left: 10px;
+		margin-top: 20px;}
+	.wenzi1 h4,.wenzi2 h4,.wenzi3 h4{
+		font-size: 14px;
+		display: inline-block;}
+	.wenzi1 p,.wenzi2 p,.wenzi3 p{
+		margin-top: 7px;
+		font-size: 14px;}
+	.b2,.b3{margin-top: 20px;}
+</style>
+<body>
+	<div class="mainPage">
+		<div class="header">
+			<h1 class="logo"><a href="http://www.kugou.com/"><img src="photos/logo.png" alt=""></a></h1>
+			<div class="search_input">
+			<input type="text" placeholder="易烊千玺" class="input">
+			 			<div class="search_btn"><i></i><span class="sousuo">搜索</span></div>
+			</div>
+			<div class="topNav">
+				<ul class="list1">
+					<li><a href="#">客服中心</a></li>
+					<li><a href="#">招贤纳士</a></li>
+					<li><a href="#">会员中心</a></li>
+				</ul>
+			</div>
+			<div class="login_in"><a href="#" class="denglu">登录</a><a href="#" class="zhuce">注册</a></div>
+		</div>
+	
+	<div class="navWrap">
+		<div class="nav">
+			<ul class="homeNav">
+				<li><a href="#" class="shouye">首页</a></li>
+				<li><a href="#">榜单</a></li>
+				<li><a href="#">下载客户端</a></li>
+				<li class="more_1"><a href="#">更多</a>
+					<ul class="secondNav">
+					<li><a href="#">电台</a></li>
+					<li><a href="#">MV</a></li>
+					<li><a href="#">歌手</a></li>
+					<li><a href="#">歌单</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<ul class="subNav">
+				<li><a href="#">音乐直播</a></li>
+				<li><a href="#">酷狗LIVE</a></li>
+				<li><a href="#">音乐人</a></li>
+				<li><a href="#">游戏</a></li>
+				<li><a href="#">商城</a></li>
+			</ul>
+		</div>	
+	</div>
+	<div class="banner">
+		<div class="imgs" onmouseout="doStart()" onmouseover="doStop()">
+		<img src="photos/11.jpg" alt="" id="m1">
+		<img src="photos/22.jpg" alt="" id="m2">
+		</div>
+	 	<div class="downLoad">
+	 		<a href="#">下载PC版</a>
+	 		<a href="#">下载iPhone版</a>
+	 		<a href="#">下载Android版</a>
+	 	</div>
+	 </div>
+	 <div class="part3">
+	 	<div class="left">
+	 		<div class="font">
+	 			<h3><span>精选</span>歌单</h3>
+	 			<a href="#">更多</a>
+	 		</div>
+			<div class="songList">
+				<div class="big_left" id="big_left">
+					<img src="photos/大歌单.jpg" alt=""><div id="span"></div>
+					<div>
+					<p class="nihao">你好五月，你好夏天</p>
+					<p class="aa">啊啊</p>
+					</div>
+				</div>
+				<div class="little_right">
+				<div class="little_top_left" id="little_top_left">
+					<img src="photos/little_top.jpg"><div id="span1"></div>
+					<div>
+						<p class="jiawu">做家务必配的…</p>
+						<p class="hangchi">行痴</p>
+					</div>
+				</div>
+				<div class="little_top_right" id="little_top_right">
+					<img src="photos/little_top_right.jpg"><div id="span2"></div>
+					<div>
+						<p class="doufeng">兜风必备音乐…</p>
+						<p class="xiaoxia">笑侠</p>
+					</div>
+				</div>
+				<div class="little_bo_left" id="little_bo_left">
+					<img src="photos/little_bo_left.jpg"><div id="span3"></div>
+					<div>
+						<p class="shijian">时间治愈的是…</p>
+						<p class="ye">烨&锦麟l</p>
+					</div>
+				</div>
+				<div class="little_bo_right" id="little_bo_right">
+					<img src="photos/little_bo_right.jpg"><div id="span4"></div>
+					<div>
+						<p class="jinqu">金曲捞 合辑</p>
+						<p class="nalan">纳蓝独孤</p>
+					</div>
+				</div>
+				</div>
+			</div>
+	 	</div>
+	 	<div class="right">
+	 		<div class="font_2">
+	 			<h3><span>热门</span>榜单</h3>
+	 			<a href="#">更多</a>
+	 		</div>
+			<div class="bangdan">
+				<div class="b1">
+					<div class="img1">
+						<img src="photos/other_1.jpg">
+					</div>
+					<div class="wenzi1">
+						<h4>酷狗飙升榜</h4>
+						<p>1.汪苏泷-东京铁塔的幸福..</p>
+						<p>2.李好-今天等我来(Live)</p>
+					</div>
+				</div>
+				<div class="b2">
+					<div class="img2">
+						<img src="photos/other_2.jpg">
+					</div>
+					<div class="wenzi2">
+						<h4>酷狗TOP500</h4>
+						<p>1.杨宗纬、张碧晨-凉凉</p>
+						<p>2.赵雷-成都</p>
+					</div>
+				</div>
+				<div class="b3">
+					<div class="img3">
+						<img src="photos/other_3.jpg">
+					</div>
+					<div class="wenzi3">
+						<h4>网络红歌榜</h4>
+						<p>1.海绵宝宝</p>
+						<p>2.大鱼</p>
+					</div>
+				</div>
+			</div>
+	 	</div>
+	 </div>
+</div>
+</body>
+</html>
+	<script>
+	var m=0;
+	var time=null;
+	var imgs=document.getElementById("imgs");
+	function doStart(){
+		if(time==null){
+			time=setInterval(function(){
+				m++;
+				show(m);
+				if(m>=2)
+					m=0;
+			},2000)
+
+		}
+	}
+	function doStop(){
+		if (time!=null) {
+			clearInterval(time);
+		};
+		time=null;
+	}
+	doStart();
+	function show(x){
+		for(var i=1;i<=2;i++){
+			var img=document.getElementById("m"+i);
+			if(i==x){
+				img.style.display="block";
+			}else{
+				img.style.display="none";
+			}
+		}
+	}
+	
+	var big_left=document.getElementById("big_left");
+	big_left.onmouseover=function(){
+		document.getElementById("span").style.display="block";
+	}
+	big_left.onmouseout=function(){
+		document.getElementById("span").style.display="none";
+	}
+	var little_top_left=document.getElementById("little_top_left");
+	little_top_left.onmouseover=function(){
+		document.getElementById("span1").style.display="block";
+	}
+	little_top_left.onmouseout=function(){
+		document.getElementById("span1").style.display="none";
+	}
+	var little_top_right=document.getElementById("little_top_right");
+	little_top_right.onmouseover=function(){
+		document.getElementById("span2").style.display="block";
+	}
+	little_top_right.onmouseout=function(){
+		document.getElementById("span2").style.display="none";
+	}
+	var little_bo_left=document.getElementById("little_bo_left");
+	little_bo_left.onmouseover=function(){
+		document.getElementById("span3").style.display="block";
+	}
+	little_bo_left.onmouseout=function(){
+		document.getElementById("span3").style.display="none";
+	}
+	var little_bo_right=document.getElementById("little_bo_right");
+	little_bo_right.onmouseover=function(){
+		document.getElementById("span4").style.display="block";
+	}
+	little_bo_right.onmouseout=function(){
+		document.getElementById("span4").style.display="none";
+	}
+	</script>

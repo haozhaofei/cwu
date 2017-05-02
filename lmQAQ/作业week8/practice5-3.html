@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+		<canvas id="Canvas"></canvas>
+
+		<script type="text/javascript">
+
+		var canvas=document.getElementById('Canvas');
+		var ctx=canvas.getContext('2d');
+		//contextID 指定了您想要在画布上绘制的类型。当前唯一的合法值是 "2d"，它指定了二维绘图，并且导致这个方法返回一个环境对象，该对象导出一个二维绘图 API。
+		ctx.fillStyle='#FF0000';
+		ctx.fillRect(100,100,80,100);
+
+		</script>
+
+</body>
+</html>

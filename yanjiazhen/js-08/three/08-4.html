@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<base href="http://www.sina.com"
+	<meta charset="UTF-8">
+	<title>base对象</title>
+</head>
+<body>
+	<a href="http://www.baidu.com" id="did">
+	百度</a>
+	<a href="08-2.html">html</a>
+	<button onclick="change()">变</button>
+	<br>
+</body>
+</html>
+<script>
+	function change(){
+		var did=document.getElementById("did");
+		did.title="hah";
+		did.href="http://www.vancl.com";
+		did.innerHTML="凡客";
+	}
+</script>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<base href="http:/www.xinlang.com">
+	<meta charset="UTF-8">
+	<title>2</title>
+</head>
+<body>
+	<a href="http://www.kugou.com" id="yoyo">酷狗</a>
+	<a href="www.youyou.com">youyou</a>
+	<button  onclick="bian()">bianhua</button><br>
+</body>
+</html>
+<script>
+	var hh=document.getElementById("yoyo");
+	function bian(){
+		hh.title="taobao";
+		hh.href="http://www.taobao.com";
+		hh.innerHTML="淘宝";
+	};
+</script>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<base href="http://www.kougou.com">
+	<meta charset="UTF-8">
+	<title>3</title>
+</head>
+<body>
+	<a href="http://www.taobao.com" id="gg">淘宝</a>
+	<a href="www.kugou.com">kougou</a>
+	<button  onclick="bian()">bianya</button><br>
+</body>
+</html>
+<script>
+	var rr=document.getElementById("gg");
+	function bian(){
+		rr.title="kugou";
+		rr.href="http://www.kugou.com";
+		rr.innerHTML="酷狗";
+	};
+</script>
