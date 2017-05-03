@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="did">
+		<div id="mid"></div>
+	</div>
+	
+</body>
+</html>
+<script>
+	var did=document.getElementById('did');
+	var mid=document.getElementById('mid');
+	did.onclick=function(){
+		alert("点击了大DIV")；
+		if(document.all){
+			event.cancelBubble=true;
+		}else{
+			event.stopPropagation();
+		}
+	}
+</script>
