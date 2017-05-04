@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	   <style type="text/css">
+	p{
+		color:#609;
+		font-size:24px;
+	}
+	button{
+		border-color:#ff0088;
+		margin:0px;
+		font-weight:bold;
+		background-color:#FFF;
+		
+	}
+	</style>
+</head>
+<body>
+	<button id="hour">1</button>
+	<button id="h">h</button>
+	<button id="min">2</button>
+	<button id="m">m</button>
+	<button id="bid">2</button>
+    <button id="s">s</button>
+	<button onclick="stop()">stop</button>
+</body>
+</html>
+<script>
+var hour = document.getElementById('hour');
+var min = document.getElementById('min');
+var bid = document.getElementById('bid');
+    var h = 1;
+	var m = 2;
+	var s = 2;
+	var time = setInterval(function(){
+		s--;
+		bid.innerHTML = s;
+		min.innerHTML = m;
+		hour.innerHTML = h;
+		if(s == 0&&m!=0)
+		{
+			s=60;
+			m--;
+		}
+			
+		if(m == 0&&h!=0)
+		{
+			m=59;
+			h--;
+		}
+		if(s==0&&m==0&&h==0)
+	    {
+		    
+			bid.style.color = "red";
+			bid.style.fontSize = "30px";           
+			clearInterval(time);		
+		}
+	},1000)
+	function stop(){
+		clearInterval(time);
+	}
+	
+</script>
