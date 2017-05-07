@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多选框移动3</title>
+</head>
+<style>
+	select{width: 200px;height: 400px;}
+</style>
+<body>
+	<select name="" id="sid1" multiple>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+	</select>
+
+	<button onclick="doMove('sid1','sid2')">>></button>
+	<button onclick="doMove('sid2','sid1')"><<</button>
+
+	<select name="" id="sid2" multiple></select>
+</body>
+</html>
+<script>
+	function doMove(a,b){
+		var select1 = document.getElementById(a);
+		var select2 = document.getElementById(b);
+
+		var list = select1.options;
+
+		for(var i=0;i<list.length;i++){
+			if(list[i].selected){
+				
+				list[i].selected == false;
+
+				var ob = list[i];
+				select1.remove(i);
+				select2.add(ob);
+				i--;
+			}
+		}
+	}
+</script>
