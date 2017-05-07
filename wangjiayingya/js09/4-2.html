@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+       ul{
+       	list-style-type:none; 
+       }
+       ul li{
+       	height: 30px;
+       	background: #ccc;
+       	margin-top: 10px;
+       	line-height: 30px;
+       }
+       ul li:hover{
+       	background: purple;
+       }
+       ul li.cc{
+       	background: pink;
+       }
+	</style>
+</head>
+<body>
+	<ul id="uid">
+		<li>小乔 要努力变强</li>
+		<li>夏侯惇 独眼是男人的浪漫</li>
+		<li>妲己 被玩坏了</li>
+		<li>后羿 周日被我射熄火了 所以今天是周一</li>
+		<li>貂蝉 啊~ 非礼呀</li>
+		<li>吕布 我的貂蝉在哪里~</li>
+	</ul>
+	王者荣耀：<input type="text" id="nid" size="10">
+	<button onclick="doAdd()">添加</button>
+
+
+</body>
+</html>
+<script>
+   
+	   function doAdd(){
+    	var name = document.getElementById('nid').value;
+    	var tt = document.createTextNode(name);
+    	var li = document.createElement('li');
+    	var ul = document.getElementById('uid');
+    	li.appendChild(tt);
+    	ul.appendChild(li);
+
+    }
+</script>
