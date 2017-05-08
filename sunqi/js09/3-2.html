@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id="uid">
+		<li>Hello!</li>
+		<li>How are you?</li>
+		<li>Fine.</li>
+		<li>Thanks!</li>
+	</ul>
+</body>
+</html>
+<script>
+	//通过XML DOM获取LI节点
+	var list=document.getElementById('uid').childNodes;
+	for(var i=0;i<list.length;i++){
+		if(list[i].nodeType==1){
+			alert(list[i].firstChild.nodeValue);
+		}
+	}
+</script>
