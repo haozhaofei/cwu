@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id="uid">
+		<li>jdsfkj</li>
+		<li>shdsk</li>
+		<li>jksdhkj</li>
+		<li>dhkshd</li>
+	</ul>
+</body>
+</html>
+<script>
+	//通过HTML DOM 获取所有LI节点
+	var list=document.getElementById('uid').getElementsByTagName('li');
+	//通过XML DOM获取所有的LI节点
+	var list2=document.getElementById('uid').childNodes;
+	for(var i=0;i<list2.length;i++){
+		/*alert(list2[i].nodeType);//3 1 3 1...3(这里的3应该是换行符，属于文本)*/
+		if(list2[i].nodeType==1){
+			alert(list2[i].firstChild.nodeValue);
+		}
+	}
+</script>
