@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>春天到了</title>
+</head>
+<body>
+	<ul id="bid">
+		<li>花红</li>
+		<li>草绿</li>
+		<li>水蓝</li>
+	</ul>
+</body>
+</html>
+<script>
+	var a=document.getElementById('bid').getElementsByTagName('li');
+
+	var b=document.getElementById('bid').childNodes;
+	for (var i = 0; i < b.length; i++) {
+		if (b[i].nodeType==1) {
+		   alert(b[i].firstChild.nodeValue);
+		}
+	}
+</script>

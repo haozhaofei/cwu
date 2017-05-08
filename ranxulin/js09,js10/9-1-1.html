@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>move</title>
+	<style type="text/css">
+       select{width: 80px;height: 80px;font-size:12px; background-color: pink;border: 10px; }
+       #aid{outline-color: yellow; font-color: green; }
+	</style>
+</head>
+<body>
+	<select id="aid1" multiple>
+		<option value="1">红色</option>
+		<option value="2">蓝色</option>
+		<option value="3">粉色</option>
+		<option value="4">棕色</option>
+		<option value="5">金色</option>
+	</select>
+    <button onclick="domove('aid1','aid2')"> >> </button>
+    <button onclick="domove('aid2','aid1')"> << </button>
+	<select id="aid2" multiple></select>
+</body>
+</html>
+<script>
+	function domove (aid1,aid2) {
+		var select1=document.getElementById(aid1);
+		var select2=document.getElementById(aid2);
+		var list=select1.options;
+		for (var i = 0; i < list.length; i++) {
+			if (list[i].selected) {
+				list[i].selected=false;
+				select2.add(list[i]);
+				i--;
+			}
+		}
+	}
+</script>

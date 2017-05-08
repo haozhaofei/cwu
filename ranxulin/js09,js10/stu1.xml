@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<student>
+  <stu>
+    <name>妲己</name>
+    <sex>girl</sex>
+  </stu>
+  <stu>
+    <name>扁鹊</name>
+    <sex>boy</sex>
+  </stu>
+  <stu>
+    <name>橘右京</name>
+    <sex>boy</sex>
+  </stu>
+</student>

@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>酷狗音乐-音乐总有新玩法</title>
+
+</head>
+
+<style>
+
+    *{padding:0px;margin:0px; }
+
+    .title{
+      width:75%;
+      margin:20px auto;
+      position:relative;
+    }
+
+    .search{
+      width:300px;
+      height:36px;
+      border:1px solid #ccc;
+      position:absolute;
+      right:510px;
+      top:0px;
+    }
+
+    input{
+      width:249px;
+      height:24px;
+      padding:5px 12px;
+      border:none;
+    }
+
+    li{
+      float:left;
+      list-style:none;
+      text-align:center;
+      color:white;
+    }
+
+    .search li{
+      width:16px;
+      height:16px;
+      float:right;
+      margin:-24px 12px;
+      background:url("tu/search.png") no-repeat -39px 30%;
+    }
+
+    .search li:hover{
+      background-position:-39px 46%;
+    }
+
+    .title ul{
+      position:absolute;right:130px;
+      top:4px;
+    }
+
+    .title ul li{
+      padding-right:32px;
+      margin-top:5px;
+      color:black;
+      font-size:14px;
+    }
+
+    .denglu{
+      width:50px;
+      height:30px;
+      position:absolute;
+      top:4px;right:60px;
+      background:#169af3;
+      border:1px solid #169af3;
+      border-radius:2px;
+    }
+
+    .title p{
+      color:white;
+      text-align:center;
+      font-size:14px; 
+      padding-top:4px;
+    }
+
+    .denglu:hover{
+      background:blue;
+    }
+
+    .zhuce{
+      width:50px;
+      height:30px;
+      position:absolute;
+      top:4px;right:0px;
+      border:1px solid #ccc;
+      border-radius:2px;
+    }
+
+    .zhuce p{
+      color:black;
+    }
+    .zhuce:hover{
+      border-color:#169af3;
+    }
+
+    .zhuce:hover p{
+      color:#169af3;
+    }
+
+  .list{
+    height:55px;
+    background:black;
+    position:relative;
+  }
+
+    .one li{
+      padding: 17px 30px;
+    }
+    .one li:hover{
+      background:blue;
+    }
+
+  .shouye{
+    background:blue;
+    margin-left:170px;
+  }
+
+  .two li{
+    width:100px;
+    margin-top:18px;
+  }
+
+  .two li{
+    font-size:13px;
+    background:url("tu/sprite.png");
+  }
+
+  .two li:hover,.title li:hover{
+    color:#169af3;
+  }
+
+  .two .first{
+    margin-left:120px;
+    background-position:16px -119px;
+  }
+
+  .two .first:hover{
+    background-position:16px -101px;
+     }
+
+  .two .second{
+    background-position:3px -155px;
+  }
+
+  .two .second:hover{
+    background-position:3px -137px;
+  }
+
+  .two .third{
+    background-position:8px -190px;
+  }
+
+  .two .third:hover{
+    background-position:8px -172px;
+  }
+
+  .two .four{
+    background-position:16px -226px;
+  }
+
+  .two .four:hover{
+    background-position:16px -208px;
+  }
+
+  .two .five{
+    background-position:16px -280px;
+  }
+
+  .two .five:hover{
+    background-position:16px -244px;
+  }
+
+  #p1,#p2,#p3,#p4,#p5{
+    display:none;}
+
+  #did{
+    position:relative;}
+
+  .more{
+    position:absolute;
+    top:0px;left:495px;
+    background:black;
+    display:none;}
+
+  .more li{
+    float:none;
+    padding:8px 40px;}
+
+  .more li:hover{
+    background-color:#252b34;}
+
+  #next{
+    position:absolute;
+    width:70px;
+    height:125px;
+    right:0px;
+    top:40%;
+    background:url("tu/sprite.png");
+    background-position:0px -1125px;
+    display:none;}
+
+  #back{
+    position:absolute;
+    width:70px;
+    height:125px;
+    left:0px;
+    top:40%;
+    background:url("tu/sprite.png");
+    background-position:0px -755px;
+    display:none;}
+
+    .bottom{
+      position:absolute;
+      width:100%;
+      height:60px;
+      background:#000;
+      bottom:3px;
+      opacity:0.4; }
+
+    .bottom li{
+      padding-top:20px;
+      height:60px;}
+
+    .bottom a{
+      text-decoration:none;
+      color:#ccc;
+      padding:0px 70px;
+      font-size:14px;}
+
+    .pc{
+      margin-left:300px;
+      background:url("tu/pc.png") no-repeat 20px 18px;}
+
+    .mac{
+      background:url("tu/mac.png") no-repeat 30px 18px;margin-left:30px;}
+
+    .andriod{
+      background:url("tu/andriod.png") no-repeat 30px 18px;
+      margin-left:30px;}
+
+    .pc:hover{
+      background-position:0px 18px; }
+
+    .circle{
+      position:absolute;bottom:75px;left:46%;}
+
+    .circle li{
+      width:12px;
+      height:10px;
+      margin-right:10px;
+      background:url("tu/sprite.png") no-repeat 0 -37px;}
+
+    .main{
+      width:79%;
+      margin:20px auto;}
+
+    .left{
+      width:64%;
+      float:left;}
+
+    .right{
+      float:left;}
+
+    #d1,#d2,#d3{
+      width:340px;
+      height:98px;
+      background:#f6f6f6;
+      position:relative;}
+
+    #d2{
+      margin-top:17px;
+      margin-bottom:16px;}
+
+    dd,dt{
+      font-size:14px;
+      color:black;}
+
+    dt{
+      font-weight:bold;}
+
+    .right li{
+      width:7px;
+      height:14px;
+      background:url("tu/sprite.png") no-repeat 0 -322px;
+      float:right;
+      margin:50px 10px;}
+
+    .pa{
+      float:right;
+      padding:20px 0px;}
+
+    .pb{
+      float:right;
+      padding:20px 0px;
+      margin-right:42px;}
+
+    .left p a,.right p a{
+      text-decoration:none;
+      color:black;
+      font-size:30px;}
+
+    .left p,.right p{
+      padding-bottom:25px;
+      padding-top:5px;}
+
+    .left .small{
+      font-size:13px;
+      margin-left:510px;}
+
+    .right .small{
+      font-size:13px;
+      margin-left:195px;}
+
+    .small:hover{
+      color:blue;}
+
+    #image1,#image2,#image3,#image4,#image5{
+      position:relative;
+      float:left; }
+
+    .simage1{
+      width:191px;
+      height:30px;
+      position:absolute;
+      top:0px;
+      right:0px;
+      background:url("tu/bk.png");}
+
+    .simage1 .bk
+    {
+      width:14px;
+      height:14px;
+      background:url("tu/sprite.png") 0 -267px;
+      margin-left:110px;
+      margin-top:8px;}
+
+    .simage1 .con{
+      color:white;
+      margin:5px 9px;
+      font-size:13px;}
+
+    .simage2,.simage3{
+      width:325px;
+      height:50px;
+      position:absolute;
+      bottom:3.5px;
+      background:black;
+      opacity:0.8;}
+
+    .simage2 p,.simage3 p{
+      color:#fff;
+      font-size:14px;
+      padding:2px 8px;}
+
+    .simage3{
+      width:160px;
+      left:5px;}
+
+    #hidden1,#hidden2,#hidden3,#hidden4,#hidden5{
+      width:325px;
+      height:325px;
+      position:absolute;
+      top:0px;
+      left:0px;
+      background:rgba(10%,20%,30%,0.5);display:none;}
+
+    #hidden1 li,#hidden2 li,#hidden3 li,#hidden4 li,#hidden5 li{
+      width:36px;
+      height:36px;
+      position:absolute;
+      bottom:8px;
+      right:12px;
+      background:url("tu/sprite.png") 0 -401px;}
+
+    #image1:hover #hidden1{
+      display:block;}
+
+    #hidden2,#hidden3,#hidden4,#hidden5{
+      width:160px;
+      height:160px;left:5px;}
+
+    #image2:hover #hidden2{
+      display:block;}
+
+    #image3:hover #hidden3{
+      display:block;}
+
+    #image4:hover #hidden4{
+      display:block;}
+
+    #image5:hover #hidden5{
+      display:block;}
+
+    #hidd1,#hidd2,#hidd3{
+      position:absolute;
+      width:98px;
+      height:98px;
+      top:0px;
+      left:0px;
+      background:rgba(10%,20%,30%,0.5);display:none;
+    }
+
+    #hidd1 li,#hidd2 li,#hidd3 li{
+      width:36px;
+      height:36px;
+      position:absolute;
+      top:-20px;
+      left:18px;
+      background:url("tu/sprite.png") 0 -401px;
+    }
+
+    #d1:hover #hidd1{
+      display:block;}
+
+    #d2:hover #hidd2{
+      display:block;}
+
+    #d3:hover #hidd3{
+      display:block;
+    }
+    #n1{
+     margin-left: 150px;
+    }
+
+</style>
+
+<body>
+
+  <div class="title">
+
+      <img src="tu/logo.png">
+
+      <ul>
+
+        <li>客服中心</li>
+
+        <li>招贤纳式</li>
+
+        <li style="border-right:1px solid #ccc">会员中心</li>
+
+      </ul>
+
+      <div class="search">
+
+        <input type="text" value="陈德龙 走钢丝的人">
+
+        <li></li>
+
+      </div>
+
+      <div class="denglu">
+
+      <p>登录</p>
+
+      </div>
+
+      <div class="zhuce">
+
+      <p>注册</p>
+
+      </div>
+
+  </div> 
+
+  <div class="list">
+
+  <ul class="one">
+
+    <li class="shouye">首页</li>
+
+    <li>榜单</li>
+
+    <li>下载客户端</li>
+
+    <li onmouseover="list()" onmouseout="disappear()" id="more">更多
+
+      <img src="tu/arrowMored.png" style="padding-left:6px">
+
+    </li>
+
+    </ul>
+
+  <ul class="two">
+
+    <li class="first">直播</li>
+
+    <li class="second">酷狗LIVE</li>
+
+    <li class="third">音乐人</li>
+
+    <li class="four">游戏</li> 
+
+    <li class="five">商城</li>
+
+  </ul>
+
+  </div>
+
+  <div id="did">
+
+      <img id="p0" src="tu/1.jpg" width="130%" height="430px" style="margin-left:-210px"
+
+             onmouseover="show()" onmouseout="no()">
+
+      <img id="p1" src="tu/1.jpg">
+
+      <img id="p2" src="tu/2.jpg">
+
+      <img id="p3" src="tu/3.jpg">
+
+      <img id="p4" src="tu/4.jpg">
+
+      <img id="p5" src="tu/5.jpg">
+
+      <div id="next" onclick="goNext()" onmouseover="show()"></div>
+
+      <div id="back" onclick="goBack()" onmouseover="show()"></div>
+
+      <div class="bottom">
+
+            <li class="pc"><a style="border-right:1px solid #ccc" href="#">下载PC端</a></li>
+
+            <li class="mac"><a style="border-right:1px solid #ccc" href="#">下载iphone端</a></li>
+
+            <li class="andriod"><a href="#">下载Andriod端</a></li>
+
+      </div>
+
+      <ul class="more" onmouseover="list()" onmouseout="disappear()">
+
+    <li>电台</li>
+
+    <li>MV</li>
+
+    <li>歌手</li>
+
+    <li>歌单</li>
+
+  </ul>
+
+  <div class="circle">
+
+    <li onmouseover="show1(1)"></li>
+
+    <li onmouseover="show1(2)"></li>
+
+    <li onmouseover="show1(3)"></li>
+
+    <li onmouseover="show1(4)"></li>
+
+    <li onmouseover="show1(5)"></li>
+
+  </div>
+
+  </div>
+
+  <div class="main">
+
+    <div class="left">
+
+      <p><a  style="color:blue" href="#">精选</a><a href="#">歌单<a class="small" href="#">更多</a></p>
+
+      <div id="image1">
+
+        <img src="tu/aa.jpg" width="325" height="325">
+
+        <div class="simage1">
+
+        <li class="bk"></li>
+
+          <li class="con">132.2万</li>
+
+        </div>
+
+        <div class="simage2">
+
+          <p>那些歌名奇怪但好听的民谣作品</p>
+
+          <p>冷月清萧</p>
+
+        </div>
+
+        <div id="hidden1">
+
+           <li></li>
+
+        </div>
+
+      </div>
+
+      <div id="image2">
+
+        <img src="tu/bb.jpg" width="160" height="160" style="margin-left:5px">
+
+        <div class="simage1">
+
+        <li class="bk"></li>
+
+          <li class="con">42.7万</li>
+
+        </div>
+
+        <div class="simage3">
+
+          <p>爱情是场患得患失的戏</p>
+
+          <p>阿冰</p>
+
+        </div>
+
+         <div id="hidden2">
+
+           <li></li>
+
+        </div>
+
+      </div>
+
+      <div id="image3">
+
+        <img src="tu/cc.jpg" width="160" height="160"style="margin-left:5px">
+
+        <div class="simage1">
+
+        <li class="bk"></li>
+
+          <li class="con">56.8万</li>
+
+        </div>
+
+         <div class="simage3">
+
+          <p>谁说沧桑的歌手才动人</p>
+
+          <p>心动</p>
+
+         </div>
+
+         <div id="hidden3">
+
+           <li></li>
+
+         </div>
+
+      </div>
+
+      <div id="image4">
+
+        <img src="tu/dd.jpg" width="160" height="160" style="margin-left:5px">
+
+        <div class="simage1">
+
+        <li class="bk"></li>
+
+          <li class="con">88.7万</li>
+
+        </div>
+
+        <div class="simage3">
+
+          <p>一听倾心的致命女声</p>
+
+          <p>心动</p>
+
+        </div>
+
+         <div id="hidden4">
+
+           <li></li>
+
+         </div>
+
+      </div>
+
+      <div id="image5">
+
+        <img src="tu/ee.jpg" width="160" height="160" style="margin-left:5px">
+
+        <div class="simage1">
+
+        <li class="bk"></li>
+
+          <li class="con">99.2万</li>
+
+        </div>
+
+         <div class="simage3">
+
+          <p>金曲捞第一期群星合集</p>
+
+          <p>咱也来闯闯</p>
+
+        </div>
+
+         <div id="hidden5">
+
+           <li></li>
+
+         </div>
+
+      </div>
+
+    </div>
+
+    <div class="right">
+
+       <p><a style="color:blue" href="#">热门</a><a href="#">榜单</a><a class="small" href="#">更多</a></p>
+
+       <div id="d1">
+
+          <img src="tu/11.jpg" width="98px" height="98px">
+
+          <li></li>
+
+          <div class="pa">
+
+          <dt>酷音乐流行风向标</dt>
+
+          <dd>1 . 金志文、林萍 - 命运不是辘轳</dd>
+
+          <dd>2 . 王源 - 长大以后的世界</dd>
+
+          </div>
+
+          <div id="hidd1">
+
+            <li></li>
+
+          </div>
+
+       </div>
+
+       <div id="d2">
+
+           <img src="tu/22.jpg" width="98px" height="98px">
+
+           <li></li>
+
+           <div class="pb">
+
+           <dt>酷狗飙升榜</dt>
+
+           <dd>1 . 李行亮 - 皮皮虾我们走</dd>
+
+           <dd>2 . 张碧晨 - 一半一半</dd>
+
+          </div>
+
+          <div id="hidd2">
+
+            <li></li>
+
+          </div>
+
+       </div>
+
+       <div id="d3">
+
+           <li></li>
+
+           <img src="tu/33.jpg" width="98px" height="98px">
+
+           <div class="pb">
+
+           <dt>酷狗TOP500</dt>
+
+           <dd>1 . 杨宗纬、张碧晨 - 凉凉</dd>
+
+           <dd>2 . 赵雷 - 成都</dd>
+
+           </div>
+
+            <div id="hidd3">
+
+              <li></li>
+
+            </div>
+
+       </div>
+
+    </div>
+
+  </div>
+  <div id="n1">
+    <img src="tu/last.jpg" alt="" width="1070" height="130">
+  </div>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+
+     //下拉菜单
+
+      function list(){
+
+        document.getElementById("did").getElementsByTagName("ul")[0].style.display="block";
+
+        document.getElementById("more").getElementsByTagName("img")[0].src="tu/arrow.png";
+
+      }
+
+      function disappear(){
+
+        document.getElementById("did").getElementsByTagName("ul")[0].style.display="none";
+
+        document.getElementById("more").getElementsByTagName("img")[0].src="tu/arrowMored.png";
+
+      }
+
+      //图片放映
+
+     var i=1;
+
+     var img=document.getElementById("p0");
+
+     var time=null;
+
+     function start(){
+
+      if(time==null){
+
+         time=setInterval(function(){
+
+         i++;
+
+             if(i>5){
+
+                i=1;
+
+             }
+
+             img.src=document.getElementById("p"+i).src;
+
+           },3000)
+
+        }
+
+    }
+
+     start();
+
+     var next=document.getElementById("next");
+
+     var back=document.getElementById("back");
+
+     function show(){
+
+      next.style.display="block";
+
+      back.style.display="block";
+
+     }
+
+     function no(){
+
+        next.style.display="none";
+
+      back.style.display="none";
+
+     }
+
+     function goNext(){
+
+      i++;
+
+      if(i>5){
+
+          i=1;
+
+        }
+
+        img.src=document.getElementById("p"+i).src;
+
+        if(time!=null){
+
+           clearInterval(time);
+
+        }
+
+       time=null;
+
+       start();
+
+     }
+
+     function goBack(){
+
+      i--;
+
+      if(i<1){
+
+          i=5;
+
+        }
+
+        img.src=document.getElementById("p"+i).src;
+
+        if(time!=null){
+
+          clearInterval(time);
+
+        }
+
+        time=null;
+
+        start();
+
+     }
+
+     function show1(x){
+
+     i=x;
+
+     img.src=document.getElementById("p"+i).src;
+
+     if(time!=null){
+
+          clearInterval(time);
+
+        }
+
+        time=null;
+
+        start();
+
+   }
