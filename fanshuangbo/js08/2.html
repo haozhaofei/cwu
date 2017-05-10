@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>假装缓存-getAttribute方法</title>
+</head>
+<body>
+	<img src="images/1.gif" yan="images/11.jpg"> 
+	<img src="images/1.gif" yan="images/22.jpg"> 
+	<img src="images/1.gif" yan="images/33.jpg"> 
+	<img src="images/1.gif" yan="images/44.jpg"> 
+</body>
+</html>
+<script>
+	setTimeout(function(){
+		var list=document.getElementsByTagName("img");
+		for(var i=0;i<list.length;i++)
+		{
+			list[i].src=list[i].getAttribute("yan");
+			list[i].width="300";
+		}
+	},500)
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>getAttribute方法</title>
+</head>
+<body>
+	<img src="images/1.gif" jia="images/11.jpg">
+	<img src="images/1.gif" jia="images/22.jpg">
+	<img src="images/1.gif" jia="images/33.jpg">
+	<img src="images/1.gif" jia="images/44.jpg">
+
+</body>
+</html>
+<script>
+	var aa=document.getElementsByTagName("img");
+	setTimeout(function(){
+		for(var j=0;j<aa.length;j++){
+			aa[j].src=aa[j].getAttribute("jia");
+			aa[j].width="500"
+		}
+	},3000)
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>getAttribute方法</title>
+</head>
+<body>
+	<img src="images/1.gif" aha="images/11.jpg">
+	<img src="images/1.gif" aha="images/22.jpg">
+	<img src="images/1.gif" aha="images/33.jpg">
+	<img src="images/1.gif" aha="images/44.jpg">
+
+</body>
+</html>
+<script>
+	var bb=document.getElementsByTagName("img");
+	setTimeout(function(){
+		for(var j=0;j<bb.length;j++){
+			bb[j].src=bb[j].getAttribute("aha");
+			bb[j].width="400"
+		}
+	},3000)
+</script>

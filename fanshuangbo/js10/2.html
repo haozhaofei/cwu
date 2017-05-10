@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加节点</title>
+</head>
+<body>
+	<ul id="uid">
+		<li>有何不可</li>
+		<li>为何不可</li>
+		<li>没有不可</li>
+		<li>不可不可</li>
+		<li>不可又如何</li>
+	</ul>
+	随便输：<input type="text" id="nid" size="10">
+	<button onclick="doAdd()">添加</button>
+</body>
+</html>
+<script>
+	
+	function doAdd(){
+		//获取文本的值
+		var name=document.getElementById("nid").value;
+		//创建文本节点
+		var tt=document.createTextNode(name);
+		//创建元素节点
+		var li=document.createElement("li");
+		var ul=document.getElementById("uid")
+		li.appendChild(tt);
+		ul.appendChild(li);
+	}
+</script>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加2</title>
+	<style>
+	ul li{
+		list-style-type: none;
+		height:30px;
+		margin-top: 10px;
+		background: teal;
+		line-height: 30px;
+	}
+	li:hover{
+		background:seagreen;
+	}
+	ul li.ll{
+		background: azure;
+	}
+	</style>
+</head>
+<body>
+	<ul id="uu">
+		<li>70后</li>
+		<li>80后</li>
+		<li>90后</li>
+		<li>00后</li>
+	</ul>
+	任意添加：<input type="text" id="tt" size="40">
+	<button onclick="add1()">添加</button>
+</body>
+</html>
+<script type="text/javascript">
+	function add1(){
+		//首先要获取input节点的值
+		var name=document.getElementById("tt").value;
+		//其次要创建一个文本
+		var wen=document.createTextNode(name);
+		//然后创建元素的节点
+		var li=document.createElement("li");
+		//获取了ul的值
+		var uu=document.getElementById("uu");
+		//将文本内容添加到节点
+		li.appendChild(wen);
+		//最后将节点放到ul的位
+		uu.appendChild(li);
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加2</title>
+	<style>
+	ul li{
+		list-style-type: none;
+		height:30px;
+		margin-top: 10px;
+		background: azure;
+		line-height: 30px;
+	}
+	li:hover{
+		background:yellow;
+	}
+	ul li.aa{
+		background: teal;
+	}
+	</style>
+</head>
+<body>
+	<ul id="iid">
+		<li>青春</li>
+		<li>散场</li>
+		<li>落幕</li>
+	</ul>
+	<input type="text" id="inp" size="50">
+	<button onclick="add2()">添加</button>
+</body>
+</html>
+<script type="text/javascript">
+function add2()
+	{
+		var name=document.getElementById("inp").value;
+		var nn=document.createTextNode(name);
+		var li=document.createElement("li");
+		var ul=document.getElementById("iid");
+		li.appendChild(nn);
+		ul.appendChild(li);
+	}
+</script>
