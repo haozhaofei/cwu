@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id="uid">
+	    <li>啊啊</li>
+	    <li>哦哦</li>
+		<li>谔谔</li>
+	</ul>
+	<button onclick="doChange()">变</button>
+</body>
+</html>
+<script>
+	function doChange(){
+		var oUid = document.getElementById("uid").childNodes[1];
+		var item = document.createTextNode("依依");
+		oUid.replaceChild(item,oUid.childNodes[0])
+	}
+</script>
