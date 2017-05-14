@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>6-2阻止事件冒泡</title>
+	<style>
+		#did{width:400px;height: 400px;background: #ccc;}
+		#mid{width: 100px;height: 100px;background: yellow;}
+	</style>
+</head>
+<body>
+
+	<div id="did">
+		<div id="mid"></div>
+	</div>
+
+</body>
+</html>
+<script>
+	var did = document.getElementById('did');
+	var mid = document.getElementById('mid');
+
+	did.onclick = function(){
+		alert("点击了大div");
+	}
+
+	mid.onclick = function(ent){
+		var event = window.event || ent;
+		alert("点击了小div");
+		if(document.all){
+			event.cancelBubble = true;
+		}else{
+			event.stopPropagation(); 
+		}
+	}
+</script>

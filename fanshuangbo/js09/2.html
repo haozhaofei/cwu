@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom</title>
+</head>
+<body>
+	<ul id="myul">
+		<li>酸奶</li>
+		<li>牛奶</li>
+		<li>苹果醋</li>
+		<li>汽水</li>
+	</ul>
+</body>
+</html>
+<script>
+	var list=document.getElementById('myul').getElementsByTagName('li');
+	var list1=document.getElementById("myul").childNodes;
+	for(var i=0;i<list1.length;i++){
+		if(list1[i].nodeType==1){
+			alert(list1[i].firstChild.nodeValue);
+		}
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id="myul">
+		<li>数据库</li>
+		<li>数据组成原理</li>
+		<li>概率论</li>
+		<li>JavaScript</li>
+		<li>jsp</li>
+	</ul>
+</body>
+</html>
+<script>
+	var list=document.getElementById('myul').getElementsByTagName("li");
+	//通过xml 获取li节点
+	var list1=document.getElementById("myul").childNodes;
+	for(var i=0;i<list1.length;i++){
+		if(list1[i].nodeType==1){
+			alert(list1[i].firstChild.nodeValue);
+		}
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom</title>
+</head>
+<body>
+	<ul id="iul">
+		<li>查看器</li>
+		<li>控制台</li>
+		<li>调试器</li>
+		<li>样式编辑器</li>
+		<li>性能</li>
+	</ul>
+</body>
+</html>
+<script>
+//XML dom获取方法
+	var list=document.getElementById("iul").childNodes;
+	for(var i=0;i<list.length;i++){
+		if(list[i].nodeType==1){
+			document.write(list[i].firstChild.nodeValue+"<br>")
+		}
+	}
+</script>

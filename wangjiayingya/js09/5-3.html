@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+       ul{
+       	list-style-type:none; 
+       }
+       ul li{
+       	height: 30px;
+       	background: #ccc;
+       	margin-top: 10px;
+       	line-height: 30px;
+       }
+       ul li:hover{
+       	background: purple;
+       }
+       ul li.cc{
+       	background: pink;
+       }
+	</style>
+</head>
+<body>
+	<ul>
+		<li>小乔 要努力变强</li>
+		<li>夏侯惇 独眼是男人的浪漫</li>
+		<li>妲己 被玩坏了</li>
+		<li>后羿 周日被我射熄火了 所以今天是周一</li>
+		<li>貂蝉 啊~ 非礼呀</li>
+		<li>吕布 我的貂蝉在哪里~</li>
+	</ul>
+	<button onclick="doDel()">删除</button>
+	
+
+</body>
+</html>
+<script>
+    var list = document.getElementsByTagName('li');
+    for (var i = 0; i < list.length; i++) {
+	    list[i].onclick = function(){
+             this.setAttribute('class','cc')
+	    }
+}
+function doDel(){
+	var list = document.getElementsByTagName('li');
+	for (var i = 0; i < list.length; i++) {
+		if(list[i].className =='cc'){
+			list[i].parentNode.removeChild(list[i]);
+			i--;
+		}
+	}
+}
+
+ 
+    
+
+</script>

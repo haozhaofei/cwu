@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>taobao9</title>
+	<style>
+		div,img,ul,li{padding: 0px  ;margin: 0px ;}
+		#did img{width: 400px;height: 400px;}
+		#list img{width: 92px;height: 100px;}
+
+
+	</style>
+</head>
+<body>
+	<div id="did">
+	   <img id="mid" src="images/taobao1.jpg" id="m1" alt="">
+	</div>
+
+
+
+
+
+
+	<div id="list">
+		<img src="images/taobao1.jpg" id="m1" alt="">
+		<img src="images/taobao2.jpg" id="m1" alt="">
+		<img src="images/taobao4.jpg" id="m1" alt="">
+		<img src="images/taobao3.jpg" id="m1" alt="">
+	</div>
+</body>
+</html>
+
+<script>
+	
+	var list=document.getElementById("list").getElementsByTagName("img");
+	for(var i=0;i<list.length;i++){
+		list[i].onmouseover= function(){
+			document.getElementById("mid").src = this.src;
+		}
+	}
+
+
+
+
+</script>

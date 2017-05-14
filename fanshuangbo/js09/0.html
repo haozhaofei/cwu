@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>select</title>
+	<style>
+	select{
+		width:100px;
+		height:200px;
+		background-color: azure;
+	}
+	</style>
+</head>
+<body>
+	<select id="s1" multiple="">
+		<option value="1">椒盐饼</option>
+		<option value="2">麻酱饼</option>
+		<option value="3">葱花饼</option>
+		<option value="4">老干妈饼</option>
+	</select>
+	<button onclick="doMove('s1','s2')" >>> </button>
+	<button onclick="doMove('s2','s1')" ><< </button>
+	<select id="s2" multiple=""></select>
+	
+</body>
+</html>
+<script>
+	function doMove(s1,s2){
+		var s1=document.getElementById(s1);
+		var s2=document.getElementById(s2);
+		var list=s1.options;
+		for(var i=0;i<list.length;i++){
+			if(list[i].selected){
+				list[i].selected=false;
+				s2.add(list[i]);
+				i--;
+			}
+		}		
+}
+</script>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2</title>
+	<style>
+		select{
+			width:100px;
+			height:150px;
+		}
+	</style>
+</head>
+<body>
+	<select id="one" multiple>
+		<option value="1">学习</option>
+		<option value="2">看书</option>
+		<option value="3">写作业</option>
+		<option value="4">玩电脑</option>
+	</select>
+	<button onclick="move('one','two')">→</button>
+	<button onclick="move('two','one')">←</button>
+	<select id="two" multiple></select>
+</body>
+</html>
+<script>
+	
+	function move(a,b){
+		var one=document.getElementById(a);
+		var two=document.getElementById(b);
+		var list=one.options;
+			for(var i=0;i<list.length;i++){
+				if(list[i].selected){
+					list[i].selected=false;
+					two.add(list[i]);
+					i--;
+				}
+			}
+	}
+</script>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3</title>
+	<style>
+	select{
+		width:90px;
+		height:100px;
+	}
+	</style>
+</head>
+<body>
+	<select id="first" multiple="">
+		<option value="1">我是1</option>
+		<option value="2">我是2</option>
+		<option value="3">我是3</option>
+		<option value="4">我是4</option>
+	</select>
+	<button onclick="fly('first','second')">>></button>
+	<button onclick="fly('second','first')"><<</button>
+	<select id="second" multiple=""></select>
+</body>
+</html>
+<script>
+	function fly(q,w){
+		var first=document.getElementById(q);
+		var second=document.getElementById(w);
+		var list=first.options;
+		for(var i=0;i<list.length;i++){
+			if(list[i].selected){
+				list[i].selected=false;
+				second.add(list[i]);
+				i--;
+			}
+		}
+	}
+</script>

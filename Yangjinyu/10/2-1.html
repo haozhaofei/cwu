@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{list-style-type: none;}
+		ul li{height: 30px;background: #ccc;margin-top: 10px;line-height: 30px;}
+		ul li:hover{background: #f0c;}
+	</style>
+</head>
+<body>
+	<ul id='uid'>
+		<li>Hi!</li>
+		<li>Hi!</li>
+		<li>Hi!</li>
+		<li>where are you?</li>
+		<li>what?</li>
+		<li>please say it again</li>
+	</ul>
+	话:<input type="text" id="nid" size="30">
+	<button onclick="doAdd()">添加</button>
+</body>
+</html>
+<script>
+function doAdd(){
+	var name=document.getElementById('nid').value;
+	var tt=document.createTextNode(name);//创建文本节点
+	var li=document.createElement('li');
+	var ul=document.getElementById('uid');
+	li.appendChild(tt);//把文本节点追加到li元素节点
+	ul.appendChild(li);
+}
+	
+</script>

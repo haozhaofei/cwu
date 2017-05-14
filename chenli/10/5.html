@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	ul li{ 
+		height: 30px;
+		margin: 10px;
+		background: #ccc;
+		line-height: 30px;
+        list-style-type:none; 
+	}
+
+    ul li:hover{
+    	background: green;
+
+    }
+    ul li.cc{
+    	background: yellow;
+    }
+
+</style>
+<body>
+	<ul>
+		<li>*******</li>
+		<li>&&&&&&&</li>
+		<li>^^^^^^^</li>
+		<li>$$$$$$$$</li>
+		<li>@@@@2222</li>
+	</ul>
+	<input type="text" id="uid"/>
+	<button onclick="del()">添加</button>
+</body>
+</html>
+<script>
+	var name = document.getElementById('uid').value;
+	var li = document.createTextNode("name");
+	var ul = document.createElement("li");
+	li.add(document.getElementById('uid').value);
+	list.add(document.getElementsByTagName(li));
+</script>

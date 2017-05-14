@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>city contact</title>
+</head>
+<body>
+	<h3 id="hid">change事件</h3>
+	<select name="sid" id="sid">
+		<option value="">--请选择--</option>	
+		<option value="1">周杰伦</option>
+		<option value="2">蔡健雅</option>
+		<option value="3">蔡依林</option>
+		<option value="4">陈奕迅</option>
+		<option value="5">薛之谦</option>
+
+	</select>
+	<select id="cid"></select>
+	<script type="text/javascript">
+		var data = new Array();
+	   data[1]=["七里香","告白气球","彩虹","黑色毛衣"];
+	   data[2]=["红色高跟鞋","空白格","别找我麻烦","被驯服的象"];
+	   data[3]=["布拉格广场","大艺术家","花蝴蝶","舞娘"];
+	   data[4]=["不要说话","浮夸","红玫瑰","最佳损友"];
+	   data[5]=["丑八怪","演员","绅士","你还要我怎样"];
+
+     var sid = document.getElementById('sid');
+     var cid = document.getElementById('cid');
+     sid.onchange =function(){
+     	v = this.value;
+     	cid.length=0;
+
+     	for(var i=0; i<data[v].length;i++){
+     		//创建一个下拉项，并且添加到cid中
+     		cid.add(new Option(data[v][i],i));
+     	}
+     }
+
+
+	</script>
+</body>
+</html>

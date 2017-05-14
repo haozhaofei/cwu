@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document对象方法</title>
+</head>
+<body>
+	<ul>
+		<li>azure</li>
+		<li>yellow</li>
+		<li>teal</li>
+	</ul>
+	<ol id="oid">
+		<li>臭豆腐</li>
+		<li>烤串呀</li>
+	</ol>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName("li");
+	var list1=document.getElementsByTagName("ul")[0].getElementsByTagName("li");
+	var list2=document.getElementById("oid").getElementsByTagName("li");
+	for(var i=0;i<list1.length;i++){
+		list1[i].onclick=function(){
+			this.style.color=this.innerHTML;
+		}
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document对象方法2</title>
+</head>
+<body>
+	<ul id="myul">
+	<li>seagreen</li>
+	<li>blue</li>
+	<li>wheat</li>
+	</ul>
+	<ol>
+		<li>chi</li>
+		<li>buchi</li>
+	</ol>
+</body>
+</html>
+<script>
+	//获取有的li节点元素
+	var list=document.getElementsByTagName("li");
+	var list1=document.getElementsByTagName("ol")[0].getElementsByTagName("li");
+	var list2=document.getElementById("myul").document.getElementsByTagName("li");
+	for(var i=0;i<list1.length;i++){
+		list1[i].onclick=function(){
+			this.style.color=this.innerHTML;
+		}
+	}
+</script>

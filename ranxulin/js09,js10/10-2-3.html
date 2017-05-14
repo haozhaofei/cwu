@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+     li{
+     	background: #0ff;
+     	margin-top: 10px;
+     	color: #bad;
+     }
+     ul li:hover{
+     	background: white; 
+     }
+     button:hover{
+     	color:yellow;
+     	background: black;
+     	border: none;
+     }
+     ul li.cc{
+     	background-color: #f0c;
+     }
+     ul{
+     	list-style-type: none; 
+     }
+	</style>
+</head>
+<body>
+	<ul id="bid">
+		<li>现在的你看到的我是蓝色的</li>
+		<li>三天三夜</li>
+		<li>走在冷风中</li>
+		<li>我总是一个人在练习一个人</li>
+		<li>味道</li>
+	</ul>
+	<button onclick="doAdd()">添加歌曲：</button>
+	<input type="text" id="aid" size="40">
+	
+</body>
+</html>
+<script>
+	function doAdd () {
+		var name=document.getElementById('aid').value;
+		var tt=document.createTextNode(name);
+        var li=document.createElement("li");
+        var ul=document.getElementById('bid');
+        li.appendChild(tt);
+        ul.appendChild(li);
+	}
+</script>
