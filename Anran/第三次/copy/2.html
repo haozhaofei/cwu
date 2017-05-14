@@ -5,62 +5,44 @@
 	<title>Document</title>
 </head>
 <body>
-	<ul>
-		<li>妲己</li>
-		<li>孙悟空</li>
-		<li>亚瑟</li>
-		<li>孙尚香</li>
-	</ul>
+	
 </body>
 </html>
-
-<!-- 第一遍 
 <script>
-
-	/*var ul = document.getElementsByTagName('li');
-	for(k in ul){
-		document.write(k+"<br>");
-	}*/
-
-	//推荐大家用 for 
-	var ul = document.getElementsByTagName('li');
-	for(var i=0;i<ul.length;i++){
-		document.write(ul[i].innerHTML+"<br>");
+     //第一遍
+	//1.参数多传了没事 少传了不行
+	function add(){
+		var res = 0;
+		for(var i=0;i<arguments.length;i++){
+			res+= arguments[i];
+		}
+		document.write(res);
 	}
 
+	add(10,20,30,40,50);
 
-</script>-->
-
-<!-- 第二遍 
-<script>
-
-	/*var ul = document.getElementsByTagName('li');
-	for(k in ul){
-		document.write(k+"<br>");
-	}*/
-
-	//推荐大家用 for 
-	var ul = document.getElementsByTagName('li');
-	for(var i=0;i<ul.length;i++){
-		document.write(ul[i].innerHTML+"<br>");
+	/*第二遍
+	//1.参数多传了没事 少传了不行
+	function add(){
+		var res = 0;
+		for(var i=0;i<arguments.length;i++){
+			res+= arguments[i];
+		}
+		document.write(res);
 	}
 
+	add(10,20,30,40,50);*/
 
-</script>-->
-
-<!-- 第三遍 
-<script>
-
-	/*var ul = document.getElementsByTagName('li');
-	for(k in ul){
-		document.write(k+"<br>");
-	}*/
-
-	//推荐大家用 for 
-	var ul = document.getElementsByTagName('li');
-	for(var i=0;i<ul.length;i++){
-		document.write(ul[i].innerHTML+"<br>");
+	/*第三遍
+	//1.参数多传了没事 少传了不行
+	function add(){
+		var res = 0;
+		for(var i=0;i<arguments.length;i++){
+			res+= arguments[i];
+		}
+		document.write(res);
 	}
 
+	add(10,20,30,40,50);*/
 
-</script>-->
+</script>

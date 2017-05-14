@@ -1,62 +1,75 @@
-<!-- 第一次 -->
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style>
+		div{width: 100px;height: 100px;border:1px solid #ccc;}
+	</style>
 </head>
-<body id="bid">
-	
+<body>
+	<button onclick="fun1(1)">红</button>
+	<button onclick="fun1(2)">绿</button>
+	<button onclick="fun1(3)">蓝</button>
+	<div id="did">
+		
+	</div>
 </body>
 </html>
+<!--第一遍
 <script>
-	//定义三个颜色
-	var arr = ["red","green","blue"];
-	var index = Math.ceil(Math.random()*1000)%3;
+	function fun1(m){
+		var oDid = document.getElementById('did');
+		switch(m){
+			case 1 :
+				oDid.style.background = "red";
+			break;
+			case 2 :
+				oDid.style.background = "green";
+			break;
+			case 3 :
+				oDid.style.background = "blue";
+			break;
+		}
+		
+	}
+</script> -->
 
-	var back = document.getElementById('bid');
-	back.style.background = arr[index];
-
-</script>
-
-<!-- 第二次 
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body id="bid">
-	
-</body>
-</html>
+<!--第二遍
 <script>
-	//定义三个颜色
-	var arr = ["red","green","blue"];
-	var index = Math.ceil(Math.random()*1000)%3;
+	function fun1(m){
+		var oDid = document.getElementById('did');
+		switch(m){
+			case 1 :
+				oDid.style.background = "red";
+			break;
+			case 2 :
+				oDid.style.background = "green";
+			break;
+			case 3 :
+				oDid.style.background = "blue";
+			break;
+		}
+		
+	}
+</script> -->
 
-	var back = document.getElementById('bid');
-	back.style.background = arr[index];
-
-</script>-->
-
-<!-- 第三次 
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body id="bid">
-	
-</body>
-</html>
+<!--第三遍
 <script>
-	//定义三个颜色
-	var arr = ["red","green","blue"];
-	var index = Math.ceil(Math.random()*1000)%3;
+	function fun1(m){
+		var oDid = document.getElementById('did');
+		switch(m){
+			case 1 :
+				oDid.style.background = "red";
+			break;
+			case 2 :
+				oDid.style.background = "green";
+			break;
+			case 3 :
+				oDid.style.background = "blue";
+			break;
+		}
+		
+	}
+</script> -->
 
-	var back = document.getElementById('bid');
-	back.style.background = arr[index];
-
-</script>-->

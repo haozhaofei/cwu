@@ -2,36 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>阻止事件冒泡</title>
-	<style>
-		#did{width:400px;height: 400px;background: #ccc;}
-		#mid{width: 100px;height: 100px;background: red;}
-	</style>
+	<title>Document</title>
 </head>
 <body>
-	<div id="did">
-		<div id="mid"></div>
-	</div>
+	<button onclick="window.open('http://www.baidu.com','','width=500,height=400')">芝麻开门</button>
 </body>
 </html>
-
 <script>
-	var did = document.getElementById('did');
-	var mid = document.getElementById('mid');
 
-	did.onclick = function(){
-		alert("点击了大DIV");
+	var res = confirm("今天你微笑了吗?");
+	if(res){
+		alert("呵呵呵...");
+	}else{
+		alert("55555555555555555555555");
 	}
 
-	mid.onclick = function(ent){
-		var event = window.event || ent;
-		alert("点击了小DIV");
-		if(document.all){
-			event.cancelBubble = true;
-		}else{
-			event.stopPropagation(); 
-		}
-	}
+	//输入框
+	prompt("请输入你的三围");
 </script>
 
 <!-- 
@@ -39,72 +26,44 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>阻止事件冒泡</title>
-	<style>
-		#did{width:400px;height: 400px;background: #ccc;}
-		#mid{width: 100px;height: 100px;background: red;}
-	</style>
+	<title>Document</title>
 </head>
 <body>
-	<div id="did">
-		<div id="mid"></div>
-	</div>
+	<button onclick="window.open('http://www.baidu.com','','width=500,height=400')">芝麻开门</button>
 </body>
 </html>
-
 <script>
-	var did = document.getElementById('did');
-	var mid = document.getElementById('mid');
 
-	did.onclick = function(){
-		alert("点击了大DIV");
+	var res = confirm("今天你微笑了吗?");
+	if(res){
+		alert("呵呵呵...");
+	}else{
+		alert("55555555555555555555555");
 	}
 
-	mid.onclick = function(ent){
-		var event = window.event || ent;
-		alert("点击了小DIV");
-		if(document.all){
-			event.cancelBubble = true;
-		}else{
-			event.stopPropagation(); 
-		}
-	}
-</script>
+	//输入框
+	prompt("请输入你的三围");
 </script>
 
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>阻止事件冒泡</title>
-	<style>
-		#did{width:400px;height: 400px;background: #ccc;}
-		#mid{width: 100px;height: 100px;background: red;}
-	</style>
+	<title>Document</title>
 </head>
 <body>
-	<div id="did">
-		<div id="mid"></div>
-	</div>
+	<button onclick="window.open('http://www.baidu.com','','width=500,height=400')">芝麻开门</button>
 </body>
 </html>
-
 <script>
-	var did = document.getElementById('did');
-	var mid = document.getElementById('mid');
 
-	did.onclick = function(){
-		alert("点击了大DIV");
+	var res = confirm("今天你微笑了吗?");
+	if(res){
+		alert("呵呵呵...");
+	}else{
+		alert("55555555555555555555555");
 	}
 
-	mid.onclick = function(ent){
-		var event = window.event || ent;
-		alert("点击了小DIV");
-		if(document.all){
-			event.cancelBubble = true;
-		}else{
-			event.stopPropagation(); 
-		}
-	}
-</script>
- -->
+	//输入框
+	prompt("请输入你的三围");
+</script> -->
