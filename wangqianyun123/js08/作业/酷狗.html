@@ -7,41 +7,110 @@
 <style>
 	*{margin:0px;padding: 0px;}
 	#wrapper{width: 100%;}
-	#banner{width: 100%;height:40px;background: #2f2f2f;}
- 	#banner ul,li{padding: 0px;margin: 0px;list-style: none;display: inline-block;line-height: 40px;}
-	#banner a{text-decoration: none;color: white;}
-	#one{margin-left:120px;float: left;}
-	#two{margin-right:120px;float:right;}
-	#one ul li{height:40px ;text-align: center;width:100px ;float: left;}
+	#header{margin: 15px 170px;height: 40px;}
+	.logo{float: left;width: 153px;}
+	.input1{margin-left:50px;line-height:35px;float: left;width:300px;}
+	#header ul,li{padding: 0px;margin: 0px;list-style: none;display: inline-block;line-height: 40px;}
+	#header ul a{text-decoration: none;color: #6c6c6c;}
+	#header ul a:hover{color: #0080ff;}
+	#header ul li{width: 75px;font-size: 13px;}	
+	.headerUl{float: left;margin-left:105px;}
+	#header ul,li{float:left;}
+	#header .inOne{height: 30px;width: 160px;margin-top:5px;font-size: 12px;display: inline-block;float:right;border-left: 1px solid #ccc ;text-align: center;}
+	.inOne .aa{border:1px solid #2894ff;background:#2894ff;color: #fff;float: left;width: 50px;height:30px;line-height:30px;margin-left: 40px;text-decoration:none;}
+	.inOne .aa:hover{background: #0080ff;}
+	.inOne .bb{width:50px;height:30px;line-height:30px;border:1px solid #bebebe;color: #9d9d9d;margin-left: 10px;float:right;text-decoration:none;}
+	.inOne .bb:hover{border:1px solid #0080ff;color: #0080ff;}
+
+	#banner{padding: 0px;margin: 0px;width: 100%;height:60px;background: #4f4f4f;position: absolute;z-index: 2;}
+ 	#banner ul,li{padding: 0px;margin: 0px;list-style: none;display: inline-block;}
+	#banner #one li a{text-decoration: none;color: white;line-height: 60px;}
+	#banner #two li a{text-decoration: none;color: #adadad;line-height: 60px;}
+	#one{margin-left:170px;float: left;}
+	#two{margin-left:175px;display: inline-block;}
+	#one ul li{height:60px ;text-align: center;width:120px ;float: left;}
 	#one ul li:hover{background: #0080ff;}
 	#one ul li ul li{background: #2f2f2f;}
 	#one ul li ul li:hover{background: #3c3c3c;}
 	.midUl li{display: none;}
 	.more:hover .midUl li{display: block;}
-	#two li{font-size: 11px;width: 60px;height: 40px;float: right;}
-	#two li a:hover{color: #0080ff;}
+	#two li{font-size: 14px;width: 60px;height: 60px;float: left;margin-left: 20px;}
+	#banner #two li a:hover{color: #0080ff;}
+
+	#wrapper #bigImgs{width: 100%;height:440px;z-index: 1;position: absolute;margin-top: 60px;}
+	#wrapper #bigImgs .imgs img{width: 100%;height:440px;position: absolute;z-index: 1;}
+	#wrapper #bigImgs .imgs{padding: 0px;}
+	#m2,#m3{display: none;}
+	#wrapper #bigImgs .downLoad{width: 100%;height: 50px;line-height:50px;background: rgba(14,14,14,0.4);position: absolute;text-align: center;margin-top: 390px;z-index: 2;}
+	#wrapper #bigImgs .downLoad a{text-decoration: none;color: #fff;width: 200px;display: inline-block;}
+	.nav{width: 100%;height: 125px;margin-top: 140px;}
+	#wrapper #bigImgs .nav img{height:125px;width:60px;z-index: 3;position:relative;opacity: 0.6;}
+	#navLeft{float: left;}
+	#navRight{float:right;}
+
+	#wrapper #main{margin-top:520px;margin-left:170px;margin-right:170px;position: absolute;height: 410px;}
+	#mainLeft{float: left;width: 65%;}
+	#mainRight{float: right;width: 32%;}
+	#mainLeft #mainLeftNav h3{display: inline-block;float: left;font-weight: lighter;font-size: 28px;line-height: 60px;height: 60px;}
+	#mainLeft #mainLeftNav h3 span{color: #0080ff;font-weight: lighter;}
+	#mainLeft #mainLeftNav a{display: inline-block;text-decoration: none;float: right;font-size: 14px;color: #7b7b7b;height: 60px;line-height: 60px;}
+	#mainRight #mainRightNav h3{display: inline-block;float: left;font-weight: lighter;font-size: 28px;height: 60px;line-height: 60px;}
+	#mainRight #mainRightNav h3 span{color: #0080ff;font-weight: lighter;}
+	#mainRight #mainRightNav a{display: inline-block;text-decoration: none;float: right;font-size: 14px;color: #7b7b7b;height: 60px;line-height: 60px;} 
 	
-	#header{margin: 10px 120px;height: 40px;}
-	.m1{float: left;}
-	.input1{margin: 8px 0 0 35px;line-height:20px;color: #bebebe;float: left;width:200px;}
-	#header ul,li{padding: 0px;margin: 0px;list-style: none;display: inline-block;line-height: 40px;}
-	#header a{text-decoration: none;color: #9d9d9d;}
-	#header a:hover{color: #0080ff;}
-	#header ul li{width: 75px;font-size: 11px;}
-	.border{border-right: 1px solid #ccc ; }
-	.headerUl{float: left;margin-left:120px;}
-	#header ul,li{float:left;}
-	.inOne,.inTwo{height: 40px;line-height: 40px;width: 50px;text-align: center;font-size: 12px;}
-	.inOne{float:left;color: #fff;background:#2894ff; margin:0 5px; }
-	.inOne:hover{background: #0080ff;}
-	
-	.inTwo{border:1px solid #bebebe;color: #9d9d9d;float: right;}
-	.inTwo:hover{border:1px solid #0080ff;color: #0080ff;}
+	#mainLeftImg{width: 100%;margin-top: 80px;height:320px;}
+	#mainLeftImg .leftmain{width: 320px;position: relative;float: left;height: 320px;}
+	.twoOne{width:320px; height: 320px;z-index: 1;position: absolute;}
+	.twoOne img{width: 320px;position: absolute;z-index:1; }
+	.leftmain:hover #twoOneHover{width: 320px;height:320px;margin-top:0px;z-index: 2;background: rgba(14,14,14,0.3);position: absolute;display: block;}
+	.twoOneWord1{width: 320px;height: 35px;position: absolute;z-index: 2;background: linear-gradient(to right, rgba(14,14,14,0), rgba(14,14,14,0.5));  }
+	.twoOneWord1 a{text-decoration: none;color: #fff;font-size: 14px;float: right;line-height: 35px;margin-right: 10px;}
+	.twoOneWord{width: 320px;height: 50px;background: rgba(14,14,14,0.5);margin-top: 270px;position: absolute;z-index: 2;}
+	.twoOneWord .m11{text-decoration: none;color: #fff;margin-left:10px;font-size: 14px }
+	.twoOneWord .m22{text-decoration: none;color: #e0e0e0;margin-left:10px; font-size: 14px}
+	.twoOnePlay{margin-left:270px;margin-top:275px;position: absolute;z-index: 3;width: 40px;height: 40px;border-radius: 20px;border:1px solid #fff;opacity: 0.8;display: none;}
+	.leftmain:hover .twoOnePlay{display: block;}
+	#mainLeftImg .three{width: 320px;height:150px;float: right;}
+	.threeOne1{float: left;width: 150px;height: 150px;}
+	.threeOne{width: 150px;height: 150px;z-index: 1;position: absolute;}
+	.threeOne1:hover #threeOneHover,.threeTwo1:hover #threeTwoHover,.fourOne1:hover #fourOneHover,.fourTwo1:hover #fourTwoHover{width: 150px;height: 150px;;z-index: 2;background: rgba(14,14,14,0.3);position: absolute;}
+	.threeOneWord{width: 150px;height:50px;z-index: 2;position: absolute;background: rgba(14,14,14,0.5);margin-top: 100px;}
+	.threeOneWord .m11{text-decoration: none;color: #fff;margin-left:10px;font-size: 14px;}
+	.threeOneWord .m22{text-decoration: none;color: #e0e0e0;margin-left:10px;font-size: 14px;}
+	.threeTwo1{float: right;width: 150px;}
+	.threeTwo{width: 150px;height: 150px;z-index: 1;position: absolute;}
+	.threeTwoWord{width: 150px;height: 50px;z-index: 2;position: absolute;background: rgba(14,14,14,0.5);margin-top: 100px;}
+	.threeTwoWord .m11{text-decoration: none;color: #fff;margin-left: 10px;font-size: 14px;}
+	.threeTwoWord .m22{text-decoration: none;color: #e0e0e0;margin-left: 10px;font-size: 14px;}
+	#mainLeftImg .four{width: 320px;height:150px;float: right;margin-top: 20px;}
+	.fourOne1{float: left;width: 150px;}
+	.fourTwo1{float: right;width: 150px;}
+	.fourOne,.fourTwo{width: 150px;height: 150px;z-index: 1;position: absolute;}
+	.fourOneWord,.fourTwoWord{width: 150px;height: 50px;z-index: 2;position: absolute;background: rgba(14,14,14,0.5);margin-top: 100px;}
+	.fourOneWord .m11,.fourTwoWord .m11{text-decoration: none;color: #fff;margin-left: 10px;font-size: 14px;}
+	.fourOneWord .m22,.fourTwoWord .m22{text-decoration: none;color: #e0e0e0;margin-left: 10px;font-size: 14px;}
+	.threeOnePlay,.threeTwoPlay,.fourOnePlay,.fourTwoPlay{margin-left:105px;margin-top:105px;position: absolute;z-index: 3;width: 40px;height: 40px;border-radius: 20px;border:1px solid #fff;opacity: 0.6;display: none;}
+	.threeOne1:hover .threeOnePlay,.threeTwo1:hover .threeTwoPlay,.fourOne1:hover .fourOnePlay,.fourTwo1:hover .fourTwoPlay{display: block;}
+	.threeOneWord1,.threeOneWord1,.threeTwoWord1,.fourOneWord1,.fourTwoWord1{width: 150px;height: 35px;position: absolute;z-index: 2;background: linear-gradient(to right, rgba(14,14,14,0), rgba(14,14,14,0.7)); }
+	.threeOneWord1 a,.threeOneWord1 a,.threeTwoWord1 a,.fourOneWord1 a,.fourTwoWord1 a{text-decoration: none;color: #fff;font-size: 14px;float: right;line-height: 35px;margin-right: 10px;}
+
+	#mainRight #mianRt{width: 100%;}
+	#mainRightOne{width: 100%;height: 100px;margin-top: 80px;background: #f0f0f0;}
+	#mainRightTwo,#mainRightThree{width: 100%;height: 100px;margin-top: 12px;background: #f0f0f0;}
+	.fiveOne,.fiveTwo,.fiveThree{float: left;width: 31%;position: absolute;z-index: 1;}
+	.fiveOne img,.fiveTwo img,.fiveThree img{width: 100px;height: 100px;}
+	#fiveOneWord,#fiveTwoWord,#fiveThreeWord{margin-left: 110px;margin-top:15px;float: left;line-height: 100%;}
+	#fiveOneWord a,#fiveTwoWord a,#fiveThreeWord a{display: block;text-decoration: none;margin-top:7px;color:#5b5b5b;font-size: 14px; }
+	#fiveOneWord a span,#fiveTwoWord a span,#fiveThreeWord a span{color: black;font-weight: bold;}
+	#mainRightOne:hover .fiveOneHover,#mainRightTwo:hover .fiveTwoHover,#mainRightThree:hover .fiveThreeHover{width: 100px;height: 100px; position: absolute;z-index: 2;background: rgba(14,14,14,0.3);}
+	.fiveOnePlay,.fiveTwoPlay,.fiveThreePlay{margin-left:35px;margin-top:35px;position: absolute;z-index: 2;width: 30px;height: 30px;border-radius: 15px;border:1px solid #fff;opacity: 0.8;display: none;}
+	#mainRightOne:hover .fiveOnePlay,#mainRightTwo:hover .fiveTwoPlay,#mainRightThree:hover .fiveThreePlay{display: block;}
+	.mainPng{width:100%;height: 80px;margin: 20px 0;}
 </style>
 <body>
 	<div id="wrapper">
 		<div id="header">
-			<img src="img/logo.png" alt="" class="m1">
+			<h1 class="logo"><a href="http://www.kugou.com/"><img src="img/logo.png" alt=""></a></h1>
 			<input type="text" placeholder="陈一发 童话镇" class="input1">
 			<div class="headerUl">
 				<ul>
@@ -51,10 +120,8 @@
 				</ul>
 			</div>
 			<div class="inOne">
-				<p><a href="#" class="aa">登录</a></p>
-			</div>
-			<div class="inTwo">
-				<p><a href="#">注册</a></p>
+				<a href="#" class="aa">登录</a>
+				<a href="#" class="bb">注册</a>
 			</div>
 		</div>
 
@@ -85,7 +152,218 @@
 			</div>	
 		</div>
 
+		<div id="bigImgs">
+			<div class="imgs" onmouseout="doStart()" onmouseover="doStop()">
+				<img src="img/1.1.jpg" alt="" id="m1">
+				<img src="img/1.2.jpg" alt="" id="m2">
+				<img src="img/1.3.jpg" alt="" id="m3">
+			</div>		
+			
+			<div class="downLoad">
+				<a href="#">下载PC版</a>
+				<a href="#">下载iPhone版</a>
+				<a href="#">下载Android版</a>
+			</div>
+			<div class="nav" onclick="doNext()" onmouseover="doStop()">
+				<img src="img/左.png" alt="" id="navLeft" >
+				<img src="img/右.png" alt="" id="navRight">
+			</div>
+		</div>
+		<div id="main">
+			<div id="mainLeft">
+				<div id="mainLeftNav">
+					<h3><span>精选</span>歌单</h3>
+					<a href="#">更多</a>
+				</div>
+				
+				<div id="mainLeftImg">
+					<div class="leftmain">
+						<div class="twoOne">
+							<img src="img/2.1.jpg" alt="" >
+						</div>
+						
+						<div id="twoOneHover"></div>
+						<div class="twoOneWord1">
+							<a href="#">12.7万</a>
+						</div>
+						<div class="twoOneWord">
+							<p ><a href="#" class="m11">你好五月，你好夏天</a></p>
+							<p><a href="#" class="m22">啊啊</a></p>
+						</div>
+						<a href="#"><img src="img/play.jpg" alt="" class="twoOnePlay"></a>
+					</div>
+					
+					<div class="three">
+						<div class="threeOne1">
+							<img src="img/3.1.jpg" alt="" class="threeOne">
+							<div id="threeOneHover"></div>
+							<div class="threeOneWord1">
+								<p><a href="#">82.5万</a></p>
+							</div>
+							<div class="threeOneWord">
+								<p><a href="#" class="m11">做家务必备的</a></p>
+								<p><a href="#" class="m22">行痴</a></p>
+							</div>
+							<a href="#"><img src="img/play.jpg" alt="" class="threeOnePlay"></a>
+						</div>
+						<div class="threeTwo1">
+							<img src="img/3.2.jpg" alt="" class="threeTwo">
+							<div id="threeTwoHover"></div>
+							<div class="threeTwoWord1">
+								<p><a href="#">15.8万</a></p>
+							</div>
+							<div class="threeTwoWord">
+								<p><a href="#" class="m11">兜风必备音乐…</a></p>
+								<p><a href="#" class="m22">笑侠</a></p>
+							</div>
+							<a href="#"><img src="img/play.jpg" alt="" class="threeTwoPlay"></a>
 
+						</div>						
+					</div>
+					<div class="four">
+						<div class="fourOne1">
+							<img src="img/4.1.jpg" alt="" class="fourOne">
+							<div id="fourOneHover"></div>
+							<div class="fourOneWord1">
+								<p><a href="#">82.6万</a></p>
+							</div>
+							<div class="fourOneWord">
+								<p><a href="#" class="m11">时间治愈的是…</a></p>
+								<p><a href="#" class="m22">烨&锦麟</a></p>
+							</div>
+							<a href="#"><img src="img/play.jpg" alt="" class="fourOnePlay"></a>
+						</div>
+						<div class="fourTwo1">
+							<img src="img/4.2.jpg" alt="" class="fourTwo">
+							<div id="fourTwoHover"></div>
+							<div class="fourTwoWord1">
+								<p><a href="#">799.5万</a></p>
+							</div>
+							<div class="fourTwoWord">
+								<p><a href="#" class="m11">金曲捞 合辑</a></p>
+								<p><a href="#" class="m22">纳蓝独孤</a></p>
+							</div>
+							<a href="#"><img src="img/play.jpg" alt="" class="fourTwoPlay"></a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div id="mainRight">
+				<div id="mainRightNav">
+					<h3><span>热门</span>榜单</h3>
+					<a href="#">更多</a>
+				</div>
+				<div id="mainRt">
+					<div id="mainRightOne">
+						<div class="fiveOne">
+							<img src="img/5.1.jpg" alt="">
+						</div>					
+						<div class="fiveOneHover">
+							<a href="#"><img src="img/play.jpg" alt="" class="fiveOnePlay">
+							</a>		
+						</div>
+
+						<div id="fiveOneWord">
+							<a href="#"><span>酷狗飙升榜</span></a>
+							<a href="#">1.庄心妍-行李</a>
+							<a href="#">2.蔡依林-让爱传出去</a>
+						</div>
+					</div>	
+					<div id="mainRightTwo">
+						<div class="fiveTwo">
+							<img src="img/5.2.jpg" alt="">
+						</div>
+						<div class="fiveTwoHover">
+							<a href="#"><img src="img/play.jpg" alt="" class="fiveTwoPlay">
+							</a>	
+						</div>
+
+						<div id="fiveTwoWord">
+							<p><a href="#"><span>酷狗TOP500</span></a></p>
+							<p><a href="#">1.杨宗纬、张碧晨-凉凉</a></p>
+							<p><a href="#">2.赵雷-成都</a></p>
+						</div>
+					</div>
+					<div id="mainRightThree">
+						<div class="fiveThree">
+							<img src="img/5.3.jpg" alt="">
+						</div>
+						<div class="fiveThreeHover">
+							<a href="#"><img src="img/play.jpg" alt="" class="fiveThreePlay">
+							</a>	
+						</div>
+
+						<div id="fiveThreeWord">
+							<p><a href="#"><span>网络红歌榜</span></a></p>
+							<p><a href="#">1.金南玲-逆流成河</a></p>
+							<p><a href="#">2.神马乐团-爱河</a></p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<a href="#"><img src="img/main.PNG" alt="" class="mainPng"></a>
+		</div>
 	</div>
+
+	
 </body>
 </html>
+<script>
+	var m = 0;
+	num = 0;
+	var time = null;
+	function doStart(){
+		if(time == null){
+			time = setInterval(function(){
+				m++;
+				num=m;
+				show(m);
+				if(m>=3){
+					m=0;
+				}
+
+			},2000)
+		}
+	}
+	doStart();
+	function doStop(){
+		if(time != null){
+			clearInterval(time);
+		}
+		time = null;
+	}
+	
+	var navLeft = document.getElementById('navLeft');
+	var navRight = document.getElementById('navRight');
+	navRight.onclick = function(){
+		num++;
+		if(num == 4){
+			num=1;
+		}
+		show(num);
+	}
+
+	navLeft.onclick = function(){
+		num--;
+		if(num == 0){
+			num = 3;
+		}
+		show(num);
+	}
+
+	function show(x){
+		for(var i=1;i<=3;i++){
+			var img = document.getElementById('m'+i);
+			if(i == x){
+				img.style.display = 'block';
+			}else{
+				img.style.display = 'none';
+			}
+		}
+	}
+
+
+</script>
