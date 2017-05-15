@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	#did{
+		width:300px;
+		height:300px;
+		position: absolute;
+		display: none;
+		overflow: hidden;
+	}
+
+	</style>
+</head>
+<body>
+	<img id="mid" src="images/11.jpg" width="384">
+	<div id="did">
+	    <img src="images/11.jpg" alt="">
+	</div>
+</body>
+</html>
+<script>
+	var mid=document.getElementById('mid');
+	var did=document.getElementById("did");
+	//当鼠标移上去 显示图片并指定上边距和左边距
+	mid.onmouseover=function(){
+		did.style.display="block";
+		did.style.top=this.offsetTop+"px";
+		did.style.left=this.offsetWidth+this.offsetLeft+10+"px";
+	}
+	//当鼠标离开，隐藏
+	mid.onmouseout=function(){
+		did.style.display="none";
+	}
+	//当鼠标移动的时候 获取鼠标的位置
+	mid.onmousemove=function(ent){
+		var event=window.event||ent;
+		var x=event.clientX-this.offsetLeft;
+		var y=event.clientY-this.offsetTop;
+		//*5是因为要和放大的图片(即原图片)的宽度是一样的
+		//-150:是因为要在被放大的图片div的一半
+		did.scrollTop=y*5-150;
+		did.scrollLeft=x*5-150;
+	}
+</script>

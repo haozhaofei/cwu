@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		ul{
+			list-style-type: none;
+		}
+		ul li{
+			height:30px;
+			background: #ccc;
+			line-height: 30px;
+			margin-top: 10px;
+		}
+		ul li:hover{
+			background: yellow;
+		}
+		ul li.cs{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>Hi!</li>
+		<li>Hi!</li>
+		<li>Hi!</li>
+		<li>where are you?</li>
+		<li>what?</li>
+		<li>please say it again</li>
+	</ul>
+	<button onclick="doDel()">delete</button>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick=function(){
+			this.setAttribute('class','cs');
+		}
+	}
+	function doDel(){
+		for(var i=0;i<list.length;i++){
+			if(list[i].className=="cs"){
+				list[i].parentNode.removeChild(list[i]);
+				i--;
+			}
+		}
+	}
+</script>

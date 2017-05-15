@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	div,img,ul,li{
+		padding: 0px;
+		margin:0px;
+	}
+	#did img{
+		width:385px;
+		height:240px;
+	}
+	#list img{
+		width:93px;
+		height:50px;
+	}
+
+	</style>
+</head>
+<body>
+	<div id="did">
+		<img id="mid" src="images/01.jpg">
+	</div>
+	<div id="list">
+		<img src="images/01.jpg" >
+		<img src="images/02.jpg" >
+		<img src="images/03.jpg" >
+		<img src="images/04.jpg" >
+	</div>
+</body>
+</html>
+<script>
+	var list=document.getElementById("list").getElementsByTagName("img")
+	for(var i=0;i<list.length;i++)
+	{
+		list[i].onmouseover=function(){
+			document.getElementById("mid").src=this.src;
+		}
+	}
+
+</script>

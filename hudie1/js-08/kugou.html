@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{
+		margin:0px;
+		padding:0px;
+	}
+    body{
+    	width:1350px;
+    }
+    #top{
+    	position: absolute;
+    	left:165px;
+    	margin-top: 10px;
+    }
+    #search{
+    	display: inline-block;
+    	position: relative;
+    	left:50px;
+    	top:-10px;
+    	width:300px;
+    	height:30px;
+    	border:1px solid #ccc;
+    }
+    #in{
+    	position: relative;
+    	border: none;
+    	left:15px;
+    	top:-1px;
+    	background: #cce8cf;
+    	height:30px;
+    	width: 230px;
+    }
+    #search button{
+    	position: relative;
+    	left:15px;
+    	width:30px;
+    	height:30px;
+    	border:none;
+    	background: none;
+    	font-size: 15px;
+    	text-align: center;
+    }
+    #link{
+    	position: relative;
+    	left:610px;
+    	top:-35px;
+    	width:320px;
+    	border-right: 1px solid #ccc;
+    }
+    #link a{
+    	text-decoration: none;
+    	color: grey;
+    	font-size: 15px;
+    	margin-left: 30px;
+    }
+    #link a:hover{
+    	color:#209df3;
+    }
+    #bt{
+    	position:relative;
+    	left:960px;
+    	top:-60px;
+    }
+    #bt button{
+    	width:50px;
+    	height: 30px;
+    	background: none;
+    	border:1px solid #ccc;
+    	font-size: 15px;
+    }
+    #bt #r{
+    	background-color: #158FE1;
+    	margin-right: 5px;
+    	color:white;
+    }
+    #middle{
+    	position: absolute;
+    	top:80px; 
+    	height:60px;
+    	width:1350px;
+    	background:#2c323b;
+    }
+    #middle li{
+    	display: inline-block;
+    	list-style: none;
+    }
+    #middle #first{
+    	position: relative;
+    	left:175px;
+    	top:18px;
+    }
+    #middle #first a{
+    	color:#ccc;
+    	text-decoration: none;
+    	font-size: 18px;
+    	padding:21px 20px 18px 20px;
+    }
+    #first #one{
+    	background: #0c8ed9;
+    }
+    #middle #first a:hover{
+    	background: #0c8ed9 ;
+    }
+    #h{
+    	display: none;
+    }
+    #middle #second{
+    	position: relative;
+    	left:760px;
+    	top:-25px;
+    }
+    #middle #second li{
+    	list-style: none;
+    	padding:20px;
+    }
+    #second li a{
+    	color:#ccc;
+    	font-size: 15px;
+    	text-decoration: none;
+    }
+    #second li a:hover{
+    	color:#209df3;
+    }
+    #did{
+    	position: relative;
+    	top:140px;
+    }
+    #circle div{
+    	position: relative;
+    	border: 1px solid white;
+    	width:6px;
+    	height:6px;
+    	border-radius: 50%;
+    	background-color: white;
+    	display: inline-block;
+    	left:650px;
+    	margin-right: 5px;
+    	top:35px;
+    	opacity: 0.5;
+    }
+    #upper{
+    	width:60px;
+    	height:120px;
+    	background-color: #262014;
+    	opacity: 0.5;
+    	position: relative;
+    	top:-150px;
+    	display: none;
+    }
+    #upper button{
+    	background: none;
+    	border:none;
+    	font-size: 80px;
+    	color:white;
+    }
+    #next{
+    	width:60px;
+    	height:120px;
+    	background-color: #262014;
+    	opacity: 0.5;
+    	position: relative;
+    	top:-270px;
+    	left:1290px;
+    	display: none;
+    }
+    #next button{
+    	background: none;
+    	border:none;
+    	font-size: 80px;
+    	color:white;
+    }
+    #bottom{
+    	height:60px;
+    	background-color:#262014;
+    	opacity: 0.6;
+    	position: absolute;
+    	top:525px;
+    	width:1350px;
+    }
+    #bottom ul{
+    	margin-left: 340px;
+    }
+    #bottom li{
+    	list-style: none;
+    	display: inline-block;
+    	padding: 15px 30px 20px 30px;
+    }
+    #bottom li a{
+    	font-size: 16px;
+    	color:white;
+    	text-decoration: none;
+    	margin-right: 30px;
+    	border-right: 1px solid #ccc;
+    	padding-right: 50px;
+
+    }
+    #new{
+    	width:1000px;
+    	height:500px;
+    	position: absolute;
+    	left:175px;
+    	top:585px;
+    }
+    #f{
+    	width:650px;
+    	position: absolute;
+    }
+    #title,#remen{
+    	margin:20px 0px;
+    	padding: 5px;
+    	font-size: 30px;
+    }
+    #more{
+    	position: relative;
+    	left:600px;
+    	top:-50px;
+    }
+    #more a{
+        text-decoration: none;
+        color:#ccc;
+    }
+    #more a:hover{
+    	color:#0c8ed9;
+    }
+    #s{
+    	position: relative;
+    	top:100px;
+    }
+    #t{
+    	width: 320px;
+    	position: absolute;
+    	left:330px;
+    	top:100px;
+    }
+    #t div{
+    	display: inline-block;
+    }
+    #sixth{
+    	position: absolute;
+    	left:820px;
+    	top:595px;
+
+    }
+    #another{
+    	position: relative;
+    	left: 160px;
+    	font-size: 16px;
+    	text-decoration: none;
+        color:#ccc;
+    }
+    #song6,#song7,#song8{
+    	width:315px;
+    	height:100px;
+    	background: #f6f6f6;
+    	margin:10px;
+    }
+    .list{
+    	position: relative;
+    	left:110px;
+    	top:-100px;
+
+    }
+	</style>
+</head>
+<body>
+	<div id="top">
+		<img src="images/logo.png" id="logo">
+		<div id="search">
+			<input placeholder="周杰伦 告白气球" type="text" id="in">
+			<button>搜索</button>
+		</div>
+		<div id="link">
+			<a href="">客服中心</a>
+			<a href="">招贤纳士</a>
+			<a href="">会员中心</a>
+		</div>
+		<div id="bt">
+			<button id="r">登录</button>
+			<button>注册</button>
+		</div>
+	</div>
+
+	<div id="middle">
+	    <div id="first">
+	    	<ul>
+	    		<li><a href="" id="one">首页</a></li>
+	    		<li><a href="">榜单</a></li>
+	    		<li><a href="">下载客户端</a></li>
+	    		<li><a href="">更多
+	    		    <ul id="h">
+	    		    	<li><a href="">电台</a></li>
+	    		    	<li><a href="">MV</a></li>
+	    		    	<li><a href="">歌单</a></li>
+	    		    	<li><a href="">歌手</a></li>
+	    		    </ul>
+	    		    </a>
+	    		</li>
+	    	</ul>
+	    </div>
+	   <div id="second">
+	   	<ul>
+	   		<li><a href="">音乐直播</a></li>
+	   		<li><a href="">酷狗LIVE</a></li>
+	   		<li><a href="">音乐人</a></li>
+	   		<li><a href="">游戏</a></li>
+	   		<li><a href="">商城</a></li>
+	   	</ul>
+	   </div>
+	</div>
+
+	<div id="did">
+		<img src="images/20160713154957678313.jpg" width="1350" height="445" id="m">
+	</div>
+	<div id="circle">
+		<div src="images/20160713154957678313.jpg" id="m1"></div>
+		<div src="images/20170220150607997002.jpg" id="m2"></div>
+		<div src="images/20170501104024601764.jpg" id="m3"></div>
+	</div>
+	<div id="upper">
+	    <button id="left"><</button>
+	</div>
+	<div id="next">
+		<button id="right">></button>
+	</div>
+	<div id="bottom">
+		<ul>
+			<li><a href=""><img src="images/pc.png">下载PC版</a></li>
+			<li><a href=""><img src="images/mac.png">下载iPhone版</a></li>
+			<li><a href=""><img src="images/andriod.png">下载Android版</a></li>
+		</ul>
+	</div>
+
+	<div id="new">
+	    <div id="f">
+		    <div id="title">
+			    <font color="009AF4">精选</font>歌单
+		    </div>
+		    <div id="more">
+		    	<a href="">更多</a>
+		    </div>
+		</div>
+		<div id="s">
+			<a href=""><img src="images/20170426164528261834.jpg" width="320" height="305"></a>
+		</div>
+		<div id="t">
+			<div><a href=""><img src="images/20170428143725283488.jpg"></a></div>
+			<div><a href=""><img src="images/20170410210125533199.jpg"></a></div>
+			<div><a href=""><img src="images/20170420004653805837.jpg"></a></div>
+			<div><a href=""><img src="images/20170421230215840014.jpg"></a></div>
+		</div>
+	</div>
+	<div id="sixth">
+    	<div id="remen">
+    	<font color="009AF4">热门</font>榜单
+    	<a  id="another" href=" ">更多</a>
+    	</div>
+          	
+ 	    <div id="song6">
+	        <img  src="images/T1M4h4BKKj1RCvBVdK.jpg" width="100" height="100" >
+	        <div class="list">
+		        <dl>
+		        <dt>酷狗飙升榜</dt>
+		        <dd>1 . 汪苏泷-东京铁塔(Live)</dd>
+		        <dd>2 . 江美琪-东京铁塔(Live)</dd>
+		        <dl>
+	        </div>
+	    </div>
+	    <div id="song7">
+	        <img src="images/T1fHd4BXd_1RCvBVdK.jpg" width="100" height="100" >
+	        <div class="list">
+		        <dl>
+		        <dt>酷狗TOP500</dt>
+		        <dd>1 . 杨宗纬、张碧晨 - 凉凉</dd>
+		        <dd>2 . 赵雷 - 成都</dd>
+		        <dl>
+	        </div>
+	    </div>
+	    <div id="song8">
+	        <img src="images/T1Fpd4BKbg1RCvBVdK.jpg" width="100" height="100" >
+	        <div class="list">
+		        <dl>
+		        <dt>网络红歌榜</dt>
+		        <dd>1 . 金南玲 - 逆流成河</dd>
+		        <dd>2 . 庄心妍 - 走着走着就散了</dd>
+		        <dl>
+	        </div>
+	    </div>
+    </div>   
+	
+</body>
+</html>
+<script>
+    	var list=document.getElementById('circle').getElementsByTagName('div');
+    	var m=document.getElementById('m');
+    	for(var i=0;i<list.length;i++){
+    		list[i].onmouseover=function(){
+    			this.style.width="10px";
+    			this.style.height="10px";
+    			this.style.opacity="1";
+    			m.src=this.getAttribute('src');
+
+    		}
+    		list[i].onmouseout=function(){
+    			this.style.width="6px";
+    			this.style.height="6px";
+    			this.style.opacity="0.5";
+    		}
+    	}
+
+    	var upper=document.getElementById('upper');
+    	var next=document.getElementById('next');
+    	var did=document.getElementById('did');
+    	var bottom=document.getElementById('bottom');
+    	did.onmouseover=function(){
+    		upper.style.display="block";
+    		next.style.display="block";
+    	}
+    	did.onmouseout=function(){
+    		upper.style.display="none";
+    		next.style.display="none";
+    	}
+    	var i=1;
+    	upper.onclick=function(){
+    		i--;
+    		if(i==0){
+    			i=3;
+    		}
+    		m.src=document.getElementById('m'+i).getAttribute('src');
+    	}
+    	next.onclick=function(){
+    		i++;
+    		if(i==4){
+    			i=1;
+    		}
+    		m.src=document.getElementById('m'+i).getAttribute('src');
+    	}
+
+</script>
