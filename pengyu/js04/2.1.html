@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>breakfast</li>
+		<li>lunch</li>
+		<li>dinner</li>
+		<li>atmosphere</li>
+	</ul>
+</body>
+</html>
+<script>
+	/* for in语句会出现
+	 0
+	 1
+	 2
+	 3
+	 item
+	 namedItem
+	 length*/
+	// var ul=document.getElementsByTagName('li');
+	// for(k in ul){
+	// 	document.write(k+"<br>");
+	// }
+	var ul=document.getElementsByTagName('li');
+	for(var i=0;i<ul.length;i++){
+		document.write(ul.[i].innerHTML+"<br>");
+	}
+</script>
