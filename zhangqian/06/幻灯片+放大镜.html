@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>幻灯片+放大镜</title>
+	<style>
+		div,img{
+			padding: 0px;
+			margin: 0px;
+		}
+		
+		#did{
+			width: 300px;
+			height: 300px;
+			position: absolute;
+			display: none;
+			overflow: hidden;
+		}
+		#list img{
+			width: 93px;
+			height: 50px;
+		}
+	</style>
+</head>
+
+<body>
+	<center>
+		<img id="nid" src="class-exercise/images/11.jpg" alt="" width="384">
+	
+		<div id="did">
+			<img id="mid" src="class-exercise/images/11.jpg" alt="">
+		</div>
+	
+		<div id="list">
+			<img src="class-exercise/images/11.jpg" alt="">
+			<img src="class-exercise/images/22.jpg" alt="">
+			<img src="class-exercise/images/33.jpg" alt="">
+			<img src="class-exercise/images/44.jpg" alt="">
+		</div>
+	</center>
+	
+</body>
+</html>
+
+<script>
+	var list=document.getElementById("list").getElementsByTagName("img");
+	for(var i=0;i<list.length;i++){
+		list[i].onmouseover = function(){
+			document.getElementById("mid").src = this.src;//把当前鼠标移上去的对象赋值给获取的对象
+			document.getElementById("nid").src = this.src;
+		}
+	}
+
+	var nid = document.getElementById('nid');
+	var did = document.getElementById('did');
+
+//当鼠标移上去 显示图片并指定上边距和左边距
+	nid.onmouseover = function(){
+		did.style.display = "block";
+		did.style.top = this.offsetTop + "px";
+		did.style.left = this.offsetWidth + this.offsetLeft + 10 + "px";
+	}
+
+//当鼠标离开时隐藏
+	nid.onmouseout = function(){
+		did.style.display = "none";
+	}
+
+//当鼠标移上去的时候 获取鼠标的位置
+	nid.onmousemove = function(ent){
+		var event = window.event||ent;
+		var x = event.clientX - this.offsetLeft;
+		var y = event.clientY - this.offsetTop;
+
+//乘以5是因为要和放大的图片的宽度是一样的
+//减150是因为要在被放大的图片DIV的一半
+		did.scrollTop = y * 5 - 150;
+		did.scrollLeft = x * 5 - 150;
+	}
+</script>

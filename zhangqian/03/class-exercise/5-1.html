@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变量作用域</title>
+</head>
+<body>
+	
+</body>
+</html>
+
+<script>
+	//第一种创建对象的方式 使用原始的方式创建内置对象
+	var xiaoqiao = new Obiect();
+	xiaoqiao.name = "小乔";
+	xiaoqiao.sex = "男";
+	xiaoqiao.sanwei = "85 50 85";
+	xiaoqiao.say = function(){
+		return "我是超级小乔";
+	}
+	console.log(xiaoqiao);
+
+	//第二种声明对象、自定义构造函数创建对象
+	function person(name,color,price){
+		this.name = name;
+		this.color = color;
+		this.price = price;
+		this.say = function(){
+			return "我是程咬金";
+		}
+	}
+	var person = new person("后羿","yellow",20);
+	console.log(person);
+
+	//第三种声明对象的方法
+	//var 对象名 = {属性名1；属性值，属性名2；属性值2，......}
+	var person = {
+		name:"亚瑟",
+		age:22,
+		say:function(){
+			return "我是亚瑟";
+		}
+	}
+</script>

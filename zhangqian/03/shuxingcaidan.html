@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript实例--树形菜单</title>
+</head>
+<body>
+      <li onMouseOver="display(this)" onMouseOut="hide(this)"><a herf="javascript:;">职业</a>
+        <ul>
+          <li><a href="#">学生</a></li>
+          <li><a href="#">老师</a></li>
+          <li><a href="#">司机</a></li>
+          <li><a href="#">会计</a></li>
+        </ul>
+      </li>
+      <li onMouseOver="display(this)" onMouseOut="hide(this)"><a herf="javascript:;">城市</a>
+        <div>
+          <ul>
+            <li><a href="#">上海</a></li>
+            <li><a href="#">天津</a></li>
+            <li><a href="#">北京</a></li>
+            <li><a href="#">深圳</a></li>
+          </ul>
+        </div>
+      </li>
+      <li onMouseOver="display(this)" onMouseOut="hide(this)"><a herf="javascript:;">年份</a>
+        <div>
+          <ul>
+            <li><a href="#">2010年</a></li>
+            <li><a href="#">2011年</a></li>
+            <li><a href="#">2012年</a></li>
+            <li><a href="#">2013年</a></li>
+            <li><a href="#">2014年</a></li>
+            <li><a href="#">2015年</a></li>
+            <li><a href="#">2016年</a></li>
+            <li><a href="#">2017年</a></li>
+          </ul>
+        </div>
+      </li>
+</body>
+</html>
+<script>
+  function display(li){
+    var subNav=li.getElementsByTagName("ul")[0];
+    subNav.style.display = "block";
+  }
+  function hide(li){
+    var subNav=li.getElementsByTagName("ul")[0];
+    subNav.style.display = "none";
+  }
+</script>

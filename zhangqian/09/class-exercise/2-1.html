@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	//1.xml好比水果  HTML 好比苹果
+
+	try //Internet Explorer
+  {
+  xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+  }
+catch(e)
+  {
+  try //Firefox, Mozilla, Opera, etc.
+    {
+    xmlDoc=document.implementation.createDocument("","",null);
+    }
+  catch(e) {alert(e.message)}
+  }
+try 
+  {
+  xmlDoc.async=false;  //true:同步  false:异步
+  xmlDoc.load("stu.xml");
+  	var list = xmlDoc.getElementsByTagName('stu');
+  	for(var i=0;i<list.length;i++){
+  		var res = list[i].getElementsByTagName("name")[0].innerHTML+"<br>";
+  		document.write(res);
+  	}
+  }
+catch(e) {alert(e.message)}
+</script>
