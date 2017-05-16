@@ -1,36 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>全选全不选反选</title>
-</head>
-<body>
-<h3>JavaScript实例--全选全不选</h3>
-<h4>你喜欢下面哪些球</h4>
-<ul>
-   <input type="checkbox" name="select" value="soccer">足球<br>
-   <input type="checkbox" name="select" value="badminton">羽毛球<br>
-   <input type="checkbox" name="select" value="basketball">篮球<br>
-   <input type="checkbox" name="select" value="pingpong">乒乓球<br>
-   <input type="checkbox" name="select" value="tennis">网球<br>
-   <input type="checkbox" name="select" value="football">橄榄球<br>
- </ul>
-   <button onclick="fun(1)">全选</button>
-   <button onclick="fun(2)">全不选</button>
-   <button onclick="fun(3)">反选</button>
-</body>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>JavaScript--实例</title>
+    </head>
+    <body>
+        <h3>JavaScript实例--全选/全不选</h3>
+        <h4>你喜欢下面那些球</h4>
+        <ul>
+            <li><input type="checkbox" name="uid"/> 足球</li>
+            <li><input type="checkbox" name="uid"/> 羽毛球</li>
+            <li><input type="checkbox" name="uid"/> 篮球</li>
+            <li><input type="checkbox" name="uid"/> 乒乓球</li>
+            <li><input type="checkbox" name="uid"/> 网球</li>
+            <li><input type="checkbox" name="uid"/> 橄榄球</li>
+        </ul>
+        <button onclick="doSelect(1);">全选</button>
+        <button onclick="doSelect(2);">全不选</button>
+        <button onclick="doSelect(3);">反选</button>
+        <script type="text/javascript">
+            function doSelect(b){
+                //获取所有多选框
+                var list = document.getElementsByTagName("input");
+                //遍历
+                for(var i=0;i<list.length;i++){
+                    switch(b){
+                        case 1: list[i].checked = true; break;
+                        case 2: list[i].checked = false; break;
+                        case 3: list[i].checked = !list[i].checked; break;
+                    }
+                    
+                }
+            
+            }
+            
+            
+            //var stu = {"name":"\u5f20\u4e09","age":20,"sex":"\u7537","classid":"lamp149"};
+            //document.write(stu.name+":"+stu.age+":"+stu.sex+":"+stu.classid);
+        </script>
+       
+    </body>
 </html>
-
-<script type="text/javascript">
-   var list=document.getElementsByName("select");
-   var res=0;
-   function fun(n){
-   	for(var i=0;i<list.length;i++){
-        	switch(n){
-        		case 1:list[i].checked=1;break;
-        		case 2:list[i].checked=0;break;
-        		case 3:list[i].checked=!list[i].checked;break;
-        	}
-        }
-   } 
-</script>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{list-style-type: none;}
+		ul li{height: 30px;background: #ccc;margin-top: 10px;line-height: 30px;}
+		ul li:hover{background: #f0c;}
+		ul li.cc{background: #fc0;}
+	</style>
+</head>
+<body>
+	<ul id="uid">
+		<li>断桥残雪</li>
+		<li>素颜</li>
+		<li>奇谈</li>
+		<li>老鼠爱大米</li>
+		<li>两只蝴蝶</li>
+		<li>千里之外</li>
+		<li>听妈妈的话</li>
+
+	</ul>
+	歌曲:<input type="text" id="nid" size="30">
+	<button onclick="doAdd()">添加</button>
+</body>
+</html>
+
+<script>
+
+	function doAdd(){
+		//把菜放到盘子里,把盘子放到桌子上,不能把菜直接倒的桌子上...
+		//获取input框的值 
+		var name = document.getElementById('nid').value;
+		//创建文本节点
+		var tt = document.createTextNode(name);
+		//创建元素节点
+		var li = document.createElement("li");
+		//获取UL 元素节点
+		var ul = document.getElementById('uid');
+		//把文本节点追加到li元素节点
+		li.appendChild(tt);
+		//把li元素节点追加到ul元素节点
+		ul.appendChild(li);
+	}
+</script>
