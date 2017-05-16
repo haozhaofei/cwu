@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>节点类型</title>
+</head>
+<body>
+	<ul>
+		<li>爱情转移</li>
+		<li>爱情转移</li>
+		<li>爱情转移</li>
+		<li>爱情转移</li>
+	</ul>
+	<h5 id="hid">包容</h5>
+</body>
+</html>
+<script type="text/javascript">
+ 	var oUl=document.getElementsByTagName('li')[3];
+ 	var oHid=document.getElementById('hid');
+ 	alert(oUl.nodeType);
+ 	alert(oHid.nodeType);
+ 	alert(oHid.firstChild.nodeType);
+</script>
