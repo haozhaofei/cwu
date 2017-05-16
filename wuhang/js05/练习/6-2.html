@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	ul,li{padding:0px;margin:0px;}
+	ul{width:150px; border:1px solid black;list-style:none;text-align:center;position: relative;display:none;}
+	ul li{height:30px;margin-top:5px;background:#ccc;}
+	li:hover{background: blue;}
+</style>
+<body>
+	<ul id="uid">
+		<li>复制</li>
+		<li>粘贴</li>
+		<li>剪切</li>
+		<li>撤销</li>
+		<li>删除</li>
+	</ul>
+</body>
+<script type="text/javascript">
+	window.document.oncontextmenu=function(ent){
+       var event= ent || window.event;  //兼容
+        var x=event.clientX;
+        var y=event.clientY;
+        var uid=document.getElementById("uid");
+        uid.style.display="block";
+        uid.style.top=y+"px";
+        uid.style.left=x+"px";
+    	return false;      //屏蔽浏览器
+	}
+</script>
