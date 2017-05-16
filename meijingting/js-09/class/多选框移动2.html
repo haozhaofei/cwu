@@ -1,0 +1,38 @@
+<!doctype html>
+				<html lang="en">
+				<head>
+					<meta charset="UTF-8">
+					<title>多选框移动2</title>
+					<style type="text/css">
+						select{width: 300px;height: 200px;}
+					</style>
+				</head>
+				<body>
+					<select id="sd1" multiple>
+						<option value="1">蝴蝶</option>
+						<option value="2">蜻蜓</option>
+						<option value="3">蜂鸟</option>
+						<option value="4">天鹅</option>
+						<option value="5">鸭子</option>
+					</select>
+					<button onclick="doMove('sd1','sd2')">>></button>
+
+					<button onclick="doMove('sd2','sd1')">>></button>
+
+					<select id="sd2" multiple=""></select>
+				</body>
+				</html>	
+				<script>
+					function doMove(sd1,sd2){
+						var select1=document.getElementById(sd1);
+						var select2=document.getElementById(sd2);
+						var list=select1.options;
+						for(var i=0;i<list.length;i++){
+							if(list[i].selected){
+								list[i].selected=false;
+								select2.add(list[i]);
+								i--;
+							}
+						}
+					}
+				</script>			

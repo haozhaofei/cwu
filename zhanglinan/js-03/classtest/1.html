@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+div{
+
+width: 130px;
+height: 130px;
+border-color: yellow;
+}
+</style>
+<body>
+<div id="traffic"></div>
+<button onclick="fun(1)">红灯</button>
+<button onclick="fun(2)">绿灯</button>
+<button onclick="fun(3)">黄灯</button>
+
+
+	
+</body>
+</html>
+<script type="text/javascript">
+var square=document.getElementById("traffic");
+function fun(n){
+
+	switch(n){
+		case 1:square.style.background="green";break;
+		case 2:square.style.background="red";break;
+		case 3:square.style.background="orange";break;
+	}
+}
+
+</script>
