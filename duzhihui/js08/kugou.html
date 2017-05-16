@@ -1,0 +1,1093 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>酷狗音乐-首页</title>
+</head>
+<style type="text/css">
+	body{
+		padding: 0px;
+		margin: 0px;
+	}
+     #logo{
+		margin-top: 5px;
+		display: inline-block;
+		float:left;
+		width:200px;
+		margin-left: 170px;
+	}
+	#text{
+		display: inline-block;
+		float:left;
+		width:410px;
+		margin-top: 7px;
+	}
+	ul li{list-style-type: none;}
+	.ul1 li{
+		display: inline-block;
+		float:left;
+		width:100px;
+		margin-top: 15px;
+		font-size: 14px;}
+    ul li a{text-decoration: none;color: #7e7e9e;}
+    #button a{text-decoration: none;color: #7e7e9e;}
+	.ul1 li a:hover{
+		color: #009af3;
+	}
+	.dl,.zc{
+		float: left;display: block;width: 40px;height: 30px;
+		line-height: 30px;border: 1px solid #169af3;border-radius: 2px;text-align: center;margin-top: 6px;
+		}
+	.dl{background: #158fe1; }
+	.zc{
+		margin-left: 10px;margin-top: 6px;color: #7e7e9e;}
+	.dl span{color: white;}
+	.zc span:hover{color: #009af3;}
+	.navWrap{height: 66px;width: 100%;background: #3c3c3c;position: absolute;margin-top: 50px;}
+	.homeNav{float: left;height: 66px;line-height: 66px;margin-left: 178px;width: 400px;position: absolute;margin-top: 1px;}
+	.homeNav li{float: left;list-style: none;text-align: center;}
+	.homeNav li a{display: block;padding: 0 20px;}
+	.homeNav li a:hover{background:#0080ff; }
+	.more{width: 90px;}
+	.secondNav{float: none;width: 90px;margin-left: -38px;position: absolute;z-index: 2;margin-top: 5px;display: none;}
+	.secondNav li a{width: 47px;background: #3c3c3c;}
+	.more:hover .secondNav{display: block;position: absolute;float:none; }
+	.secondNav li a:hover{background: #6c6c6c;}
+	.navWrap .subNav{float: right;height: 44px;line-height: 44px;margin-right: 178px;}
+	.subNav li{float: left; list-style: none;}
+	.subNav li a{display: block;padding: 0 20px;font-size: 13px;color: #bebebe;text-decoration: none;}
+	.homeNav li a{color: #fff;text-decoration: none;}
+	.subNav li a:hover{color: #0080ff;}
+	h1 span{color: #009af2;}
+	.ban{display: inline-block;}
+	.tow1{margin-left: 150px;}
+	.tow1 img,.tow2 img,.tow3 img,.tow4 img,.tow5 img{position: relative;z-index: 1;}
+	.tow1:hover span,.tow2:hover span,.tow3:hover span,.tow4:hover span,.tow5:hover span{display: block;}
+	.tow1 span{position: absolute;width: 348px;height: 348px;background: rgba(14,14,14,0.4);z-index: 2;display: none;margin-left: 150px;}
+    
+	.tow2 span{position: absolute;width: 172px;height: 172px;background: rgba(14,14,14,0.4);z-index: 2;display: none;}
+    .tow3 span{position: absolute;width: 172px;height: 172px;background: rgba(14,14,14,0.4);z-index: 2;display: none;margin-left: 180px;margin-top: -180px;}
+    .tow4 span{position: absolute;width: 172px;height: 172px;background: rgba(14,14,14,0.4);z-index: 2;display: none;}
+    .tow5 span{position: absolute;width: 172px;height: 172px;background: rgba(14,14,14,0.4);z-index: 2;display: none;margin-left: 180px;margin-top: -180px;}
+	.one,.two{display: inline-block;}
+
+	#zi{display: inline-block;}
+	.zhi{margin-left: 150px;}
+	.list{margin-left: 24px;margin-top: 5px;background: #f6f6f6;}
+	#zi span{font-weight: bold;color: black;float: left;margin-top: -35px;}
+	dt{
+		line-height: 30px;
+
+	}
+	.list dt a{text-decoration: none;color: #555;}
+	.list dt a:hover{color: #0080ff;}
+	.list a img:hover{
+		background-image: url("images/111.jpg");
+	}
+	#download{margin-left: 300px;margin-top: -55px;width: 745px;height: 64px;text-align: center;font-size: 22px;
+	}
+	#download a{color: white;font-weight: bold;text-decoration: none;
+	}
+	#h1,#h2{display: inline-block;}
+	#h1{margin-left: 150px;font-weight: 400;}
+	#h2{margin-left: 595px;font-weight: 400;}
+	.img{padding-top: 90px;}
+	#img2,#img3,#img4{display: none;}
+	#next{
+		position:absolute;
+		font-size: 50px;
+		left: 1310px;
+		text-decoration: none;
+		font-weight: bold;
+		top:300px;
+		color: #7d7e86;
+	}
+	#prev{
+		position:absolute;
+		font-size: 50px;
+		left: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		top:300px;
+		color:#7d7e86;
+		}
+	.bofang{width: 20px;height: 19px;}
+	.xiazai{width: 18px;}
+    .item{width:1029px;position: absolute;height: 430px;z-index: 2;margin-top: 20px;margin-left: 158px;}
+    .item .itemleft{float:left;width: 670px;height: 420px;}
+    .leftTitle{height: 50px;line-height: 50px;width: 670px;}
+    .leftTitle h1{float: left;font-weight: 400;}
+    .leftTitle h1 span{color: #0080ff;}
+    .tabT{float: left;width: 430px;font-size: 14px;font-weight: bold;margin-top: 20px;}
+    .tabT a{text-decoration: none;color: #555;}
+	.tabT span{margin-left: 20px;}
+	.playAll{float: right;width: 80px;height: 30px;line-height: 10px;margin-top: 30px;}
+	.playAll span{text-align:center;}
+	.leftContent{height: 360px;width: 670px;}
+	li{list-style: none;}.songName{color: #5b5b5b;font-size: 14px;}
+	.only{display:inline-block;font-size: 7px;width:24px;border: 1px solid #ff5809; border-top-left-radius: 3px;   border-bottom-left-radius: 3px; border-top-right-radius: 3px;border-bottom-right-radius: 3px;color: #ff5809;}
+	.tobiao{display: inline-block;float: right;margin-right: 18px;display: none;}
+	.songTime{color: #3c3c3c;font-size: 15px;margin-right:5px; float: right;}
+	.leftContent a{text-decoration: none;}
+	.leftContent li a:hover .only{display: none;}
+	.leftContent li a:hover .songName{color: #0080ff;}
+	.leftContent li a:hover .songTime{color: #0080ff;}
+	#China,#USA,#Korea,#Japan{height: 300px;margin-top: 30px;border-top: 1px solid #e0e0e0;}
+	#China li,#USA li,#Korea li,#Japan li{margin-top: 15px;}
+	#USA,#Korea,#Japan{display: none;}
+	#China li:hover .tobiao{display: block;}
+	#USA li:hover .tobiao{display: block;}
+	#Korea li:hover .tobiao{display: block;}
+	#Japan li:hover .tobiao{display: block;}
+    .itemright{height: 420px;width: 350px;margin-left: 700px;}
+    .rightTitle{height: 50px;line-height: 50px;width: 350px;}
+    .rightTitle h1{float: left;font-weight: 400;}
+    .rightTitle h1 span{color: #0080ff;}
+    .more{text-decoration: none;color:#4f4f4f;font-size: 15px;float: right;margin-top: 20px;}
+    .rightTitle a:hover{color: #0080ff;}
+     .rightContent{height: 420px;width: 350px;}
+     .top{width: 350px;position: absolute;z-index: 1;height: 205px;margin-top: 20px;}
+     .topimg{width: 320px;height: 205px;}
+     .top_font{width:320px;height: 55px;background: rgba(14,14,14,0.5); position: absolute;z-index: 3;margin-top: 170px;}.top_font p{color: #fff;}
+     .animal{margin-left: 10px;font-size: 14px;font-weight: bold;margin-top: 7px;}.xuezhiqian{margin-left: 10px;font-size: 13px;margin-top: 7px;}
+     .top_content span{position: absolute;width: 320px;height: 205px;z-index: 2;background:rgba(14,14,14,0.5);display: none;margin-top: 20px;}
+     .top_content:hover span{display:block;}
+     .bottom_left_content {height:160px;width: 155px;margin-top: 217px;float: left;margin-left: -100px;}
+	.bottom_right_content{height: 160px;width: 155px;margin-top: 197px;float: right;margin-right:25px;}
+	.bottomleft{width: 150px;float: left;margin-top: 11px;position: absolute;z-index: 1;}
+	.left_font{font-size: 13.5px;display: inline-block;margin-top: 100px;color: #272727;}
+	.tanggu{font-size: 12px;display: inline-block;color: #7b7b7b;margin-top: 0px;}
+	.bottom_left_content span{position: absolute;width: 150px;height: 84px;z-index: 2;background:rgba(14,14,14,0.5);;margin-top: -148px;display: none;}
+	.bottom_left_content:hover span{display:block;}
+	.bottom_right_content span{position: absolute;width: 150px;height: 84px;z-index: 2;background:rgba(14,14,14,0.5);;margin-top: -148px;display: none;}
+	.bottom_right_content:hover span{display:block;}
+	.bottomright{width: 150px;float: right;margin-top: 11px;position: absolute;z-index: 1;}
+	.right_font{font-size: 13.5px;display: inline-block;margin-top: 100px;color: #272727;margin-left: 6px;}
+	.miley{font-size: 12px;display: inline-block;color: #7b7b7b;margin-left: 6px;margin-top: 0px;}
+	.bottom_left:hover p{color: #0080ff;}
+	.bottom_right:hover p{color: #0080ff;}
+	.diantai{
+		position: relative;
+		margin-top: 600px;
+		margin-left: 170px;
+		width: 1008px;
+		height: 350px;
+	}
+	.dt{
+		position: relative;
+		width: 660px;
+		height: 430px;
+	}
+	.dt h1{font-weight: 400;}
+	.hot h1{font-weight: 400;}
+	.dt span{
+		color: #27a1f6;
+	}
+	.dt .gd{
+		font-size: 14px;
+		margin-left: 595px;
+		margin-top: -60px;
+		color: #8e8e8e;
+	}
+	.dt .gd:hover{
+		color: #27a1f6;
+	}
+	.input_img1{
+		width: 700px;
+		height: 160px;
+		z-index: 1;
+		margin-top: 50px;
+	}
+	.input_img2{
+		width: 700px;
+		height: 160px;
+		z-index: 1;
+	}
+	.input_img1 li{
+		display: inline-block;
+	}
+	.input_img2 li{
+		display: inline-block;
+	}
+	.input_img11,.input_img12,.input_img13,.input_img14,.input_img15{
+		width: 120px;
+		height: 120px;
+	}
+	.input_img21,.input_img22,.input_img23,.input_img24,.input_img25{
+		width: 120px;
+		height: 120px;
+	}
+	.input_img1 p,.input_img2 p{
+		font-size: 10px;
+		margin-left: 32px;
+	}
+	.input_img1 .input_img12 p{
+		margin-left: 38px;
+	}
+	.input_img1 .input_img15 p{
+		margin-left: 44px;
+	}
+	.input_img2 .input_img21 p,.input_img24 p{
+		margin-left: 36px;
+	}
+	.input_img2 .input_img22 p,.input_img23 p{
+		margin-left: 42px;
+	}
+	.input_img2 .input_img25 p{
+		margin-left: 26px;
+	}
+	.o1,.o2,.o3,.o4,.o5,.o6,.o7,.o8,.o9,.o10{
+		width: 115px;
+		height: 115px;
+		display: none;
+		background: rgba(14,14,14,0.5);
+		z-index: 2;
+		position: absolute;
+		border-radius: 50%;
+	}
+	.input_img11:hover .o1{
+		display: block;
+	}
+	.input_img11:hover p{
+		color: #009af3;
+	}
+	.input_img12:hover .o2{
+		display: block;
+	}
+	.input_img12:hover p{
+		color: #009af3;
+	}
+	.input_img13:hover .o3{
+		display: block;
+	}
+	.input_img13:hover p{
+		color: #009af3;
+	}
+	.input_img14:hover .o4{
+		display: block;
+	}
+	.input_img14:hover p{
+		color: #009af3;
+	}
+	.input_img15:hover .o5{
+		display: block;
+	}
+	.input_img15:hover p{
+		color: #009af3;
+	}
+	.input_img21:hover .o6{
+		display: block;
+	}
+	.input_img21:hover p{
+		color: #009af3;
+	}
+	.input_img22:hover .o7{
+		display: block;
+	}
+	.input_img22:hover p{
+		color: #009af3;
+	}
+	.input_img23:hover .o8{
+		display: block;
+	}
+	.input_img23:hover p{
+		color: #009af3;
+	}
+	.input_img24:hover .o9{
+		display: block;
+	}
+	.input_img24:hover p{/ 
+		color: #009af3;
+	}
+	.input_img25:hover .o10{
+		display: block;
+	}
+	.input_img25:hover p{
+		color: #009af3;
+	}
+	.icon1,.icon2,.icon3,.icon4,.icon5,.icon6,.icon7,.icon8,.icon9,.icon10{
+		border-radius: 50%;
+		margin-top: 45px;
+		margin-left: 43px;
+	}
+	.hot{
+		position: relative;
+		width: 400px;
+		height: 360px;
+	}
+	.hot li{
+		display: inline-block;
+	}
+	.hot2{
+		position: relative;
+		margin-left: 127px;
+		margin-top: -55px;
+	}
+	.hot h1 span{
+		color: #27a1f6;
+	}
+	.hu1 span:hover{
+		color: #27a1f6;
+	}
+	.hu2 span:hover{
+		color: #27a1f6;
+	}
+	.hu3 span:hover{
+		color: #27a1f6;
+	}
+	.hot1 p{
+		position: relative;
+		font-size: 14px;
+		color: #888;
+		margin-top: -32px;
+		margin-left: 323px;
+	}
+	.hot1 p:hover{
+		color: #27a1f6;
+	}
+	.remen{
+		width: 400px;
+		height: 430px;
+		position: relative;
+		margin-left: 830px;
+		margin-top: -380px;
+	}
+	.remen li{
+		display: inline-block;
+	}
+	.singer{
+		margin-top: -290px;
+		margin-left: 20px;
+	}
+	.name1,.name2,.name3,.name4,.name5{
+		margin-top: -23px;
+		margin-left: 10px;
+		color: white;
+		font-weight: bold;
+		position: absolute;
+		z-index: 3;
+	}
+	.sing1 img{position: relative;z-index: 1;}
+	.sing1 span{width: 160px;height: 160px;position: absolute;z-index: 2;background: rgba(14,14,14,0.4);display: none;}
+	.sing1:hover span{display: block;}
+	.sing2 img{position: relative;z-index: 1;}
+	.sing2 span{width: 160px;height: 160px;position: absolute;z-index: 2;background: rgba(14,14,14,0.4);display: none;}
+	.sing2:hover span{display: block;}
+	.sing3 img{position: relative;z-index: 1;}
+	.sing3 span{width: 104px;height: 105px;position: absolute;z-index: 2;background: rgba(14,14,14,0.4);display: none;}
+	.sing3:hover span{display: block;}
+	.sing4 img{position: relative;z-index: 1;}
+	.sing4 span{width: 104px;height: 105px;position: absolute;z-index: 2;background: rgba(14,14,14,0.4);display: none;}
+	.sing4:hover span{display: block;}
+	.sing5 img{position: relative;z-index: 1;}
+	.sing5 span{width: 104px;height: 105px;position: absolute;z-index: 2;background: rgba(14,14,14,0.4);display: none;}
+	.sing5:hover span{display: block;}
+	.jietu{
+		margin-left: 160px;margin-top: 6px;
+	}
+	.partner{margin-top: 35px;}
+	.partner h1{margin-left: 160px;font-weight: 400;
+	}
+	.partner h1 span{color: #009af4;}
+	.partner_tu{width: 1020px;margin-left: 155px;padding-left: 25px;}
+	.partner_tu img{border: 2px dotted #ccc;margin-top: 20px;}
+	.youq{margin-top: 35px;}
+	.youq h1{margin-left: 160px;font-weight: 400;}
+	.youq h1 span{
+		color: #009af4;}
+	.youq .more_2{
+		font-size: 14px;
+		color: #888;
+		margin-left: 1140px;
+		margin-top: -50px;}
+	.more_2:hover{color: #009af4;}
+	.last{width: 1080px;margin-left: 160px;margin-top: 80px;}
+	.last_l li{width: 120px;display: inline-block;height: 35px;font-size: 12px;}
+	.last_l li:hover{color: #009af3;}
+	.footer{width: 100%;height: 300px;margin-top: 100px; position: absolute;background: #6c6c6c;}
+	.footer .footeritem{height: 50px;width: 100%;line-height: 50px;}
+	.f{margin-left: 130px;}
+	.formal ,.f{display: inline-block;width: 90px;height: 20px;line-height: 20px;border-right:1px solid #e0e0e0;float: left;text-align: center;margin-top: 15px;}
+	.l{display: inline-block;width: 110px;height: 20px;line-height: 20px;float: left;text-align: center;margin-top: 15px;}
+	.formal a ,.f a,.l a{display: inline-block;}
+	.formal a:hover{color: #0080ff;}
+	.f a:hover{color: #0080ff;}
+	.l a:hover{color: #0080ff;}
+	.footer li a {text-decoration: none;color: #e0e0e0;font-size: 13px;}
+	.footercontent{width: 100%;height: 200px;text-align: center;}
+	.footercontent p{display: inline-block;height: 20px;margin-top: 10px;width: 800px;line-height: 20px;font-size: 14px;color: #e0e0e0;} 
+	.footercontent p a{text-decoration: none;font-size: 14px; color: #e0e0e0;}
+</style>
+<body>
+<div class="header">
+   		<div id="logo"><img src="images/logo.png"></div>
+   		<div id="text"><input type="text" placeholder="薛之谦 演员" style="height:28px;width:298px;"></div>
+   		
+   			<ul class="ul1">
+   				<li><a href="">客服中心</a></li>
+   				<li><a href="">招贤纳士</a></li>
+   				<li><a href="">会员中心</a></li>
+   			</ul>
+   		
+   	   <div id="button">
+			<a href="" class="dl"><span>登录</span></a>
+			<a href="" class="zc"><span>注册</span></a>
+		</div> 
+</div>
+<div class="navWrap">
+	<ul class="homeNav">
+			<li id="did"><a href="">首页</a></li>
+			<li><a href="">榜单</a></li>
+			<li><a href="">下载客户端</a></li>
+			<li id="more"><a href="">更多 ^</a>
+				<ul class="secondNav">
+					<li><a href="#">电台</a></li>
+					<li><a href="#">MV</a></li>
+					<li><a href="#">歌手</a></li>
+					<li><a href="#">歌单</a></li>
+				</ul>
+			</li>
+			</ul>
+			<ul class="subNav">
+				<li><a href="#">音乐直播</a></li>
+				<li><a href="#">酷狗LIVE</a></li>
+				<li><a href="#">音乐人</a></li>
+				<li><a href="#">游戏</a></li>
+				<li><a href="#">商城</a></li>
+			</ul>
+	
+</div>
+	<div class="img">
+		<img src="images/1.jpg" alt="" id="img1" width=100% height="430px">
+		<img src="images/2.jpg" alt="" id="img2" width=100% height="430px">
+		<img src="images/3.jpg" alt="" id="img3" width=100% height="430px">
+		<img src="images/4.jpg" alt="" id="img4" width=100% height="430px">
+        <a href="#" id="prev"><</a>
+        <a href="#" id="next">></a>
+        <div id="download" >
+			<a href="">下载PC版</a>
+			<a href="">下载iPhone版</a>
+			<a href="">下载Android版</a>
+		</div>
+	</div>
+	
+	<h1 id="h1"><span>精选</span>歌单</h1>
+	<h1 id="h2"><span>热门</span>榜单</h1>
+	
+	<div class="sg">
+		<div class="one">
+			
+			<a href="" class="tow1"><span></span><img src="images/05.jpg" width="348px" height="348px"></a>
+			<div class="ban">
+				<div>
+					<a href="" class="tow2"><span></span><img src="images/06.jpg" width="172px" height="172px"></a>
+					<a href="" class="tow3"><span></span><img src="images/08.jpg" width="172px" height="172px"></a>	
+				</div>
+				<div>
+					<a href="" class="tow4"><span></span><img src="images/07.jpg" width="172px" height="172px"></a>
+					<a href="" class="tow5"><span></span><img src="images/09.jpg" width="172px" height="172px"></a>
+				</div>
+			</div>
+		</div>
+		<div class="two">
+			<div class="list">
+				<a href=""><img class="rm2" src="images/10.jpg" width="96px" height="96px"></a>
+				<dl id="zi"><span>酷狗飙升榜</span>
+					<dt><a href="">1.庄心妍-我不相信</a></dt>
+					<dt><a href="">2.简弘亦-天问【思美人...</a></dt>
+				</dl>
+			</div>
+			<div class="list">
+				<a href=""><img class="rm2" src="images/11.jpg" width="96px" height="96px"></a>
+					<dl id="zi"><span>酷狗TOP500</span>
+						<dt><a href="">1.杨宗纬、张碧晨-凉凉</a></dt>
+						<dt><a href="">2.赵雷-成都</a></dt>
+					</dl>
+			</div>
+			<div class="list">
+				<a href=""><img class="rm2" src="images/12.jpg" width="96px" height="96px"></a>
+				<dl id="zi"><span>网络红歌榜</span>
+					<dt><a href="">1.金南玲-逆流成河</a></dt>
+					<dt><a href="">2.庄心妍-走着走着就散了</a></dt>
+				</dl>
+			</div>
+			
+		</div>
+		<div class="zhi"><a href=""><img src="img/截屏0.png" width="1028px";></a></div>
+	</div>
+	<div class="item">
+		<div class="itemleft">
+			<div class="leftTitle">
+				<h1 id="h3"><span>新歌</span>首发</h1>
+				<div class="tabT" id="SongtabMenu">
+                 <a href=""><span class="MenuItem " id="m1">华语</span></a>
+                 <a href=""><span class="MenuItem " id="m2">欧美</span></a>
+                 <a href=""><span class="MenuItem " id="m3">韩国</span></a>
+                 <a href=""><span class="MenuItem " id="m4">日本</span></a>
+                </div>
+                <button class="playAll"><span class="icon icon-play">全部播放</span></button>
+			</div>
+			<div class="leftContent">
+				<div id="China">
+					<ul id="song1">
+						<li><a href=""><span class="songName">王俊凯 - 不完美小孩</span><span class="only" id="only">独家</span>
+                        <span class="songTime">04:20</span>
+                        </a>
+                         <span class="blueScreen"></span>
+
+	 				    <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+	 				   	<li><a href=""><span class="songName">何洁 - 小情书【小情书推广曲】</span><span class="only" id="only">独家</span>
+                        <span class="songTime">03:58</span>
+                        </a>
+                         <span class="blueScreen"></span>
+
+	 				    <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+	 				   	<li><a href=""><span class="songName">SING女团 - Run For More</span><span class="only" id="only">独家</span>
+                        <span class="songTime">03:00</span>
+                        </a>
+                         <span class="blueScreen"></span>
+
+	 				    <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">李宇春 - 天黑黑</span><span class="only" id="only">独家</span>
+                        <span class="songTime">03:54</span>
+                        </a>
+                         <span class="blueScreen"></span>
+
+	 				    <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">薛之谦、何洁 - 有没有 (Live)</span><span class="only" id="only">独家</span>
+                        <span class="songTime">04:15</span>
+                        </a>
+                         <span class="blueScreen"></span>
+
+	 				    <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">萧全 - 你是自己的太阳</span><span class="only" id="only">独家</span>
+                        <span class="songTime">03:40</span>
+                        </a>
+                         <span class="blueScreen"></span>
+
+	 				    <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">庄心妍 - 行李</span><span class="only" id="only">独家</span>
+                        <span class="songTime">04:18</span>
+                        </a>
+                         <span class="blueScreen"></span>
+
+	 				    <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">叶一茜 - 入梦</span><span class="only" id="only">独家</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        
+					</ul>
+				</div>
+				<div id="USA">
+					<ul id="song2">
+						<li><a href=""><span class="songName">Miley Cyrus - Malibu</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">Calvin Harris、Future、Khalid - Rollin</span><span class="only" id="only">独家</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">LINKIN PARK - Invisible</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">Harry Styles - Ever Since New York</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">Jason Derulo、Nicki Minaj、Ty Dolla $ign - Swalla (After Dark Remix)</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">Meghan Trainor - Throwback Love</span><span class="only" id="only">独家</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">The National - The System Only Dreams in Total Darkness</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">Lady Antebellum - Heart Break</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>								
+					</ul>
+				</div>
+				<div id="Korea">
+					<ul id="song3">
+						<li><a href=""><span class="songName">PSY - I LUV IT</span><span class="only" id="only">独家</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">DAY6 - DANCE DANCE</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">LOVELYZ - 现在,我们</span><span class="only" id="only">独家</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">龙俊亨、Heize - 会一直在吗</span><span class="only" id="only">独家</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">Triple H - 365 FRESH</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">SECHSKIES - SAD SONG</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">Suran、Changmo - 今日若醉 (Prod. SUGA)</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">HYUKOH - Leather Jacket</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+					</ul>
+				</div>
+				<div id="Japan">
+					<ul id="song4">
+						<li><a href=""><span class="songName">AKB48 - 願いごとの持ち腐れ</span><span class="only" id="only">独家</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">RADWIMPS - サイハテアイニt</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">劇団ひととせ - あ・え・い・う・え・お・あお!!【雏子的笔记 OP】</span><span class="only" id="only">独家</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">高橋優 - life song</span><span class="only" id="only">独家</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">佐咲紗花 - ID-0【ID-0 OP】</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">春奈るな - ステラブリーズ【路人女主的养成方法♭ OP】</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">fhána - Rebuilt world</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+                        <li><a href=""><span class="songName">ClariS - イロドリ</span>
+                        <span class="songTime">04:17</span>
+                        </a>
+                         <span class="blueScreen"></span>
+                         <div class="tobiao">
+	 				   				<a href="#"><img class="bofang" src="img/播放.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="img/下载.jpg" alt=""></a>
+	 				   	</div>
+                        </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="itemright">
+			<div class="rightTitle">
+              <h1 id="h4"><span>推荐</span>MV</h1><a href="" class="more">更多</a>
+            </div>
+            <div class="rightContent">
+	 		<div class="top_content">
+	 			<div class="top"><img src="img/top.jpg" class="topimg"></div>
+	 			<div class="top_font">
+	 				<p class="animal">动物世界</p>
+	 				<p class="xuezhiqian">薛之谦</p>
+	 			</div>
+	 			<span></span>
+	 		</div>
+	 		<div class="bottom_left_content">
+	 			<div class="bottom_left">
+	 			<img src="img/bottomleft.jpg" class="bottomleft">
+	 			<p class="left_font">你的过去我不介意</p>
+	 			</div>
+	 			<p class="tanggu">唐古</p>
+	 			<span></span>
+	 		</div>
+	 		<div class="bottom_right_content">
+	 			<div class="bottom_right">
+	 			<img src="img/bottomright.jpg" class="bottomright">
+	 			<p class="right_font">Malibu</p>
+	 			</div>
+	 			<p class="miley">Miley Cyrus</p>
+	 			<span></span>
+	 		</div>
+	 	</div>
+	 </div>
+	<div class="screen"> <img src="img/截屏.png" id="screen" width="1028px"></div>
+     
+		</div>
+	</div>
+      <div class="diantai">
+		<div class="dt">
+			<h1><span>热门</span>电台</h1>
+			<p class="gd">更多</p>
+			<div class="input_img1">
+				<li class="input_img11"><div class="o1"><img class="icon1" src="images/icon.jpg" width="30px" height="30px"></div><img src="images/radio_1.jpg"><p>KTV必点曲</p></li>
+				<li class="input_img12"><div class="o2"><img class="icon2" src="images/icon.jpg" width="30px" height="30px"></div><img src="images/radio_2.jpg"><p>中文DJ</p></li>
+				<li class="input_img13"><div class="o3"><img class="icon3" src="images/icon.jpg" width="30px" height="30px"></div><img src="images/radio_3.jpg"><p>酷狗热歌</p></li>
+				<li class="input_img14"><div class="o4"><img class="icon4" src="images/icon.jpg" width="30px" height="30px"></div><img src="images/radio_4.jpg"><p>网络红歌</p></li>
+				<li class="input_img15"><div class="o5"><img class="icon5" src="images/icon.jpg" width="30px" height="30px"></div><img src="images/radio_5.jpg"><p>经典</p></li>
+			</div>
+			<div class="input_img2">
+				<li class="input_img21"><div class="o6"><img class="icon6" src="images/icon.jpg" width="30px" height="30px"></div><img src="images/radio_6.jpg"><p>老情歌</p></li>
+				<li class="input_img22"><div class="o7"><img class="icon7" src="images/icon.jpg" width="30px" height="30px"></div><img src="images/radio_7.jpg"><p>新歌</p></li>
+				<li class="input_img23"><div class="o8"><img class="icon8" src="images/icon.jpg" width="30px" height="30px"></div><img src="images/radio_8.jpg"><p>动漫</p></li>
+				<li class="input_img24"><div class="o9"><img class="icon9" src="images/icon.jpg" width="30px" height="30px"></div><img src="images/radio_9.jpg"><p>轻音乐</p></li>
+				<li class="input_img25"><div class="o10"><img class="icon10" src="images/icon.jpg" width="30px" height="30px"></div><img src="images/radio_10.jpg"><p>最爱成名曲</p></li>
+			</div>
+		</div>
+		</div>
+		<div class="remen">
+			<div class="hot">
+				<h1><span>热门</span>歌手</h1>
+				<div class="hot1">
+					<ul class="hot2">
+						<li class="hu1"><span>华语</span></li>
+						<li class="hu2"><span>欧美</span></li>
+						<li class="hu3"><span>日韩</span></li>
+					</ul>
+					<p>更多</p>
+				</div>
+			</div>
+			<div class="singer">
+				<div class="roll1">
+					<li class="sing1"><span></span><img src="images/xzq2.jpg" width="160px" height="160px"><p class="name1">薛之谦</p></li>
+					<li class="sing2"><span></span><img src="images/zxy.jpg" width="160px" height="160px"><p class="name2">庄心妍</p></li>
+				</div>
+				<div class="roll2">
+					<li class="sing3"><span></span><img src="images/zjl.jpg" width="104px" height="104px"><p class="name3">周杰伦</p></li>
+					<li class="sing4"><span></span><img src="images/lm.jpg" width="104px" height="104px"><p class="name4">冷漠</p></li>
+					<li class="sing5"><span></span><img src="images/zj.jpg" width="104px" height="104px"><p class="name5">张杰</p></li>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="jietu">
+		<img src="images/jie.png" width="1020px">
+	</div>
+	<div class="partner">
+		<h1><span>合作</span>伙伴</h1>
+		<div class="partner_tu">
+			<img src="images/partner01.jpg">
+			<img src="images/partner02.jpg">
+			<img src="images/partner03.jpg">
+			<img src="images/partner04.jpg">
+			<img src="images/partner05.jpg">
+			<img src="images/partner06.jpg">
+			<img src="images/partner07.jpg">
+			<img src="images/partner08.jpg">
+			<img src="images/partner09.jpg">
+			<img src="images/partner10.jpg">
+			<img src="images/partner11.jpg">
+			<img src="images/partner12.jpg">
+			<img src="images/partner13.jpg">
+			<img src="images/partner14.jpg">
+			<img src="images/partner15.jpg">
+			<img src="images/partner16.jpg">
+			<img src="images/partner17.jpg">
+			<img src="images/partner18.jpg">
+			<img src="images/partner19.jpg">
+			<img src="images/partner20.jpg">
+			<img src="images/partner21.jpg">
+		</div>
+	</div>
+    
+    <div class="youq">
+		<div class="youql">
+			<h1><span>友情</span>链接</h1>
+			<p class="more_2">更多</p>
+		</div>
+		<div class="last">
+			<ul class="last_l">
+				<li>爱美网</li>
+				<li>央视网综艺频道</li>
+				<li>华数唱片</li>
+				<li>汽车论坛</li>
+				<li>IT之家</li>
+				<li>iPhone游戏</li>
+				<li>旅游攻略</li>
+				<li>悦声无限</li>
+				<li>华为商城</li>
+				<li>365音乐网</li>
+				<li>软件下载</li>
+				<li>漫漫看漫画</li>
+				<li>手机游戏</li>
+			</ul>
+		</div>
+	</div>
+
+    <div class="footer">
+		<div class="footeritem">
+			<ul>
+				<li class="f"><a href="#">关于酷狗</a></li>
+				<li class="formal"><a href="#">监督举报</a></li>
+				<li class="formal"><a href="#">广告服务</a></li>
+				<li class="formal"><a href="#">版权指引</a></li>
+				<li class="formal"><a href="#">隐私政策</a></li>
+				<li class="formal"><a href="#">用户服务协议</a></li>
+				<li class="formal"><a href="#">推广合作</a></li>
+				<li class="formal"><a href="#">酷狗音乐人</a></li>
+				<li class="formal"><a href="#">酷狗音乐推</a></li>
+				<li class="formal"><a href="#">招聘信息</a></li>
+				<li class="formal"><a href="#">客服中心</a></li>
+				<li class="l"><a href="#">用户体验提升计划</a></li>
+			</ul>
+		</div>
+		<div class="footercontent">
+			<p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>
+			<p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339<a href="#">粤ICP备09017694号-2</a></p>
+			<p>广播电视节目制作经营许可证（粤）字第01270号 营业性演出许可证穗天演440106026</p>
+			<p>穗公网监备案证第44010650010167 互联网药品信息服务资格证编号（粤）-非经营性-2012-0018</p>
+			<p>Copyright © 2004-2017 KuGou-Inc.All Rights Reserved</p>
+		</div>
+	</div>
+          
+<script>
+	var prev=document.getElementById("prev");
+	var next=document.getElementById("next");
+	var img=document.getElementById("img");
+	var num=1;
+		prev.onclick=function(){
+		num++;
+		if(num==4){
+			num=1;
+		}
+		show(num);
+	}
+	
+	next.onclick=function(){
+		num--;
+		if(num==0){
+			num=4;
+		}
+		show(num);
+		}
+	
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var img=document.getElementById("img"+i);
+			if(i==x){
+				img.style.display="block";
+			}else{
+				img.style.display="none";
+			}
+		}
+	}
+	function menu(){ 
+    var elem=document.getElementById("menu");
+    var ul=elem.getElementsByTagName("ul") 
+    for(var i=0;i<ul.length;i++){ 
+        ul[i].style.display="none"; 
+    } 
+           
+    var li=elem.getElementsByTagName("li"); 
+    for(var i=0;i<li.length;i++){ 
+        li[i].onmouseover=function(){ 
+            var inli=this.getElementsByTagName("ul"); 
+            for(var j=0;j<inli.length;j++){ 
+                inli[j].style.display="block"; 
+            }
+        }; 
+        li[i].onmouseout=function(){ 
+        var inli=this.getElementsByTagName("ul"); 
+        for(var j=0;j<inli.length;j++){ 
+            inli[j].style.display="none"; 
+            } 
+        } 
+    } 
+} 
+    window.onload=menu();
+
+    
+</script>
+</body>
+</html>
+<script>
+	var China=document.getElementById("China");
+	var USA=document.getElementById("USA");
+	var Korea=document.getElementById("Korea");
+	var Japan=document.getElementById("Japan");
+		document.getElementById("m1").onmouseover=function(){
+				China.style.display="block";
+				USA.style.display="none";
+				Korea.style.display="none";
+				Japan.style.display="none";
+			}
+		document.getElementById("m2").onmouseover=function(){
+				China.style.display="none";
+				USA.style.display="block";
+				Korea.style.display="none";
+				Japan.style.display="none";
+			}
+		document.getElementById("m3").onmouseover=function(){
+				China.style.display="none";
+				USA.style.display="none";
+				Korea.style.display="block";
+				Japan.style.display="none";
+			}
+
+		document.getElementById("m4").onmouseover=function(){
+				China.style.display="none";
+				USA.style.display="none";
+				Korea.style.display="none";
+				Japan.style.display="block";
+			}
+</script>
