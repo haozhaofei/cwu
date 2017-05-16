@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+   <ul id="uid">
+   	  <li><h3>龙应台</h3>目送</li>
+   	  <li>孩子你慢慢来</li>
+   	  <li>亲爱的安德烈</li>
+   </ul>
+</body>
+</html>
+<script type="text/javascript">
+   // HTML DOM
+	var list=document.getElementById("uid").getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		alert(list[i].innerHTML);
+	}
+	//XML DOM
+	var list2=document.getElementById("uid").childNodes;  //元素的子节点
+	for(var i=0;i<list2.length;i++){
+	   if(list2[i].nodeType==1){    //回车属于文本节点(3)  元素节点(1)
+           alert(list2[i].lastChild.nodeValue);  //nodeValue - 节点的值
+	   }
+	}
+	alert(list2[1].firstChild.firstChild.nodeValue);
+</script>

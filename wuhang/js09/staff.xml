@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stafflist>
+	<staff>
+		<name>张三</name>
+		<age>24</age>
+		<salary>5000</salary>
+	</staff>
+	<staff>
+		<name>李四</name>
+		<age>25</age>
+		<salary>6000</salary>
+	</staff>
+	<staff>
+		<name>王五</name>
+		<age>26</age>
+		<salary>7000</salary>
+	</staff>
+</stafflist>
