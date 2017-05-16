@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<iframe src="1.html" frameborder="1"></iframe>                 <!--  frames[0] -->
+	<iframe src="http://www.cwu.edu.cn/" frameborder="1"></iframe>  <!--  frames[1] -->
+	<button onclick="change()">style</button>
+</body>
+</html>
+<script type="text/javascript">
+	function change(){                   //frames[]返回窗口中所有命名的框架.
+		window.frames[0].document.getElementById("hid").style.color="red";
+	}
+	//frames[]:window对象的集合
+</script>

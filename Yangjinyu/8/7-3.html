@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li><input type="checkbox" value="JSP">JSP</li>
+		<li><input type="checkbox" value="JS">JS</li>
+		<li><input type="checkbox" value="数据库原理">数据库原理</li>
+		<li><input type="checkbox" value="计算机组成原理">计算机组成原理</li>
+		<li><input type="checkbox" value="概率论">概率论</li>
+	</ul>
+	<button onclick="select()">讨厌哪门课程</button>
+</body>
+</html>
+<script type="text/javascript">
+	function select(){
+		var list=document.getElementsByTagName("input");
+		var arr=new Array();
+		for(var i=0;i<list.length;i++){
+			if(list[i].checked&&list[i].type=="checkbox"){    //避免其它的input标签
+               arr[arr.length]=list[i].value;                 //arr.length属性
+			}
+		}
+		alert(arr);
+	}
+</script>
