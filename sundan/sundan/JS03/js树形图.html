@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>树形图</title>
+</head>
+<body>
+    <ul id="menu"> 
+        <li> 
+            属性 
+            <ul> 
+                <li>共享</li> 
+                <li>安全</li> 
+                <li>自定义</li> 
+            </ul> 
+        </li> 
+        <li> 
+           我的电脑
+            <ul> 
+                <li>图片</li> 
+                <li>保存的图片</li> 
+                <li>本机图片</li> 
+            </ul> 
+        </li> 
+        <li> 
+            开始
+            <ul> 
+                <li>程序</li> 
+                <li>附件</li> 
+                <li>画图</li> 
+            </ul> 
+        </li> 
+    </ul> 
+    <script> 
+    function menu(){ 
+        var elem=document.getElementById("menu"); 
+              
+        var ul=elem.getElementsByTagName("ul") 
+        for(var i=0;i<ul.length;i++){ 
+            ul[i].style.display="none"; 
+        } 
+           
+        var li=elem.getElementsByTagName("li"); 
+        for(var i=0;i<li.length;i++){ 
+            li[i].onmouseover=function(){ 
+                var inli=this.getElementsByTagName("ul"); 
+                for(var j=0;j<inli.length;j++){ 
+                        inli[j].style.display="block"; 
+                } 
+            li[i].onmouseout=function(){ 
+                var inli=this.getElementsByTagName("ul"); 
+                for(var j=0;j<inli.length;j++){ 
+                        inli[j].style.display="none"; 
+                } 
+            } 
+        } 
+          
+  
+    } 
+    window.onload=menu(); 
+    </script> 
+
+</body>
+</html>
