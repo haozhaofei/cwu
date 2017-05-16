@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id="uid">
+		<li><h3>...</h3>梨子</li>
+		<li>西瓜</li>
+		<li>香蕉</li>
+		<li>橙子</li>
+
+	</ul>
+</body>
+</html>
+<script>
+	var list1=document.getElementById('uid').getElementsByTagName('li');
+	//var i =list1.length;
+    //alert(i);
+    var list2=document.getElementById("uid").childNodes;
+    //var i =list2.length;
+    //alert(i);
+    for(var i=0;i<list2.length;i++){
+    if(list2[i].nodeType == 1){
+       alert(list2[i].firstChild.nodeValue);
+      }
+    }
+
+</script>

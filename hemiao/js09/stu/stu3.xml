@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stulist>
+	<the>
+	<name>xx</name>
+	<age>17</age>
+	<sex>nan</sex>
+    </the>
+
+    <the>
+	<name>zz</name>
+	<age>18</age>
+	<sex>nv</sex>
+    </the>
+
+    <the>
+	<name>yy</name>
+	<age>20</age>
+	<sex>nan</sex>
+    </the>
+</stulist> 

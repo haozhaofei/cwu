@@ -1,0 +1,19 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS事件操作</title>
+</head>
+<body>
+	<button onclick="fun1(this)">点我</button>
+	<button id="bid">再点我</button>
+	
+</body>
+<script>
+	function fun1(obj){
+		obj.style.color="green";
+	}
+	document.getElementById('bid').onclick=function(){
+		this.style.color="pink";
+	}
+</script>
