@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>节点类型</title>
+</head>
+<body>
+	<ul>
+		<li>ALmost lover</li>
+		<li>ALmost lover</li>
+		<li>ALmost lover</li>
+		<li>ALmost lover</li>
+	</ul>
+	<h4 id="hid">唐人</h4>
+</body>
+</html>
+<script type="text/javascript">
+	var oUl=document.getElementsByTagName('li')[3];
+	alert(oUl.nodeType);
+	var oHid=document.getElementById('hid');
+	alert(oHid.nodeType);
+	alert(oHid.firstChild.nodeType);
+</script>

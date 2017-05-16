@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this</title>
+</head>
+<body>
+	<ul>
+		<li>一剪梅</li>
+		<li>涛声依旧</li>
+		<li>新鸳鸯蝴蝶梦</li>
+		<li>贵妃醉酒</li>
+		<li>爱妃</li>
+	</ul>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick=function(){
+			alert(this.innerHTML);
+		}
+	}
+</script>
