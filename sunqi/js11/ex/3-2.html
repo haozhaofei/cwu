@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<table border="1" width="600">
+		<thead>
+			<th>id</th>
+			<th>name</th>
+			<th>age</th>
+			<th>gender</th>
+			<th>operate</th>
+		</thead>
+		<tbody id="tbody">
+			<tr>
+			    <td>1001</td>
+				<td>Andy</td>
+				<td>18</td>
+				<td>boy</td>
+				<td><button onclick="doDel(this)">delete</button></td>
+			</tr>
+			<tr>
+			    <td>1006</td>
+				<td>Ben</td>
+				<td>18</td>
+				<td>boy</td>
+				<td><button onclick="doDel(this)">delete</button></td>
+			</tr>
+			<tr>
+			    <td>1013</td>
+				<td>Cindy</td>
+				<td>18</td>
+				<td>girl</td>
+				<td><button onclick="doDel(this)">delete</button></td>
+			</tr>
+			<tr>
+			    <td>1018</td>
+				<td>Mike</td>
+				<td>19</td>
+				<td>boy</td>
+				<td><button onclick="doDel(this)">delete</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<form action="#" name="myform" onsubmit="return doAdd()">
+		id:<input type="text" name="id"><br>
+		name:<input type="text" name="name"><br>
+		age:<input type="text" name="age"><br>
+		gender:<input type="text" name="gender"><br>
+		<input type="submit" value="add">
+	</form>
+</body>
+</html>
+<script>
+	function doDel(obj){
+		obj.parentNode.parentNode.parentNode.removeChild(obj.parentNode.parentNode);
+
+	}
+	function doAdd(){
+		var data=new Array();
+		data[0]=document.myform.id.value;
+		data[1]=document.myform.name.value;
+		data[2]=document.myform.age.value;
+		data[3]=document.myform.gender.value;
+		var tr=document.createElement('tr');
+		for(var i=0;i<data.length;i++){
+			var tt=document.createTextNode(data[i]);
+			var td=document.createElement("td");
+			td.appendChild(tt);
+			tr.appendChild(td);
+		}
+		var td=document.createElement('td');
+		td.innerHTML="<button onclick='doDel(this)'>delete</button>";
+		tr.appendChild(td);
+		var tbody=document.getElementById("tbody");
+		tbody.appendChild(tr);
+		//不要忘记
+		return false;
+
+	}
+</script>
