@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易编辑器</title>
+</head>
+<body>
+<button id="jc">加粗 </button>
+<button id="xhx">下划线 </button>
+<button id="qx">倾斜 </button>
+<button id="bd">变大 </button>
+<button id="bx">变小 </button>
+<div><textarea id="tid"></textarea>></div>
+</body>
+<script type="text/javascript">
+	var i=0;
+	document.getElementById("jc").onclick=function(){
+		var a=["bold","normal"];
+		document.getElementById("tid").style.fontWeight=a[i%2];
+		i++;
+	}
+	var j=0;
+	document.getElementById("xhx").onclick=function(){
+		var b=["underline","none"];
+		document.getElementById("tid").style.textDecoration=b[j%2];
+		j++;
+	}
+
+	var t=0;
+	document.getElementById("qx").onclick=function(){
+    	var c=["oblique","normal"];
+    	document.getElementById("tid").style.fontStyle=c[t%2];
+    	t++;
+    } 
+    
+    var size=10;
+    document.getElementById("bd").onclick=function(){
+    	size+=10;
+    	document.getElementById("tid").style.fontSize=size+"px";
+    } 
+     document.getElementById("bx").onclick=function(){
+    	size-=10;
+    	document.getElementById("tid").style.fontSize=size+"px";
+    } 
+</script>
+</html>

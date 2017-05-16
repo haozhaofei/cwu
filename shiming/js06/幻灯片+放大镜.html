@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>幻灯片+放大镜</title>
+</head>
+<style>
+        #mid{
+        	width: 384px;
+        }
+		#did {
+			width:500px;
+            height:500px;
+            overflow:hidden; 
+            position:absolute;
+            display:none;}
+		#m1 {
+			width:93px;
+			height:50px;}
+
+	</style>
+
+<body>
+	<img id="mid" src="images/11.jpg" >
+	<div id="list">
+		<img src="images/11.jpg" id="m1" alt="">
+		<img src="images/22.jpg" id="m1" alt="">
+		<img src="images/33.jpg" id="m1" alt="">
+		<img src="images/44.jpg" id="m1" alt="">
+	</div>
+	<div id="did">
+	<img src="images/11.jpg"  id="dm">
+	</div>
+</body>
+</html>
+
+<script>
+   var mid=document.getElementById("mid")
+   var list= document.getElementById("list").getElementsByTagName("img");
+	for(var i=0;i<list.length;i++){
+		list[i].onmouseover = function(){
+			mid.src = this.src;
+			document.getElementById("dm").src=this.src;
+		}
+	}
+   var did=document.getElementById("did");
+    mid.onmouseover=function(){
+	  did.style.display="block";
+	  did.style.top=this.offsetTop+"px";
+	  did.style.left=this.offsetWidth+this.offsetLeft+10+"px";
+    }
+     mid.onmouseout=function(){
+        did.style.display="none";
+    }
+     mid.onmousemove=function(ent){
+        var event=window.event || ent;
+        var x=event.clientX-this.offsetLeft;
+        var y=event.clientY-this.offsetTop;
+        did.scrollTop=y*8-150;          
+        did.scrollLeft=x*8-150;
+}
+
+</script>
