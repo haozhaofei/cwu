@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="fun1()">按钮1</button>
+	<button id="nid">按钮2</button>
+	<button id="mid">按钮3</button>
+</body>
+</html>
+<script type="text/javascript">
+/*
+1.事件源
+2.事件
+3.处理程序
+ */
+//主动：代码可读性很好
+function fun1(){
+	alert("今天是周二");
+}
+
+//被动：代码可以分离，适合大项目
+document.getElementById("nid").onclick=function(){
+	alert("今天是周二");
+}
+
+var 
+</script>
