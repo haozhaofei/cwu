@@ -1,0 +1,23 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS</title>
+</head>
+<body>
+	<button onclick="fun1()">按钮1</button>
+	<button id="nid">按钮2</button>
+	<button id="mid">按钮3</button>
+</body>
+<script>
+	function fun1(){
+		alert("今天很开心");
+	}
+	document.getElementById('nid').onclick=function(){
+		alert("今天也很开心");
+	}
+	var mid=document.getElementById('mid');
+	mid.addEventListener('onclick',function(){
+		alert("今天非常开心");
+	});
+</script>
