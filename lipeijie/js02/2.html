@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="bid" disabled="true">10</button>
+</body>
+</html>
+<script>
+	var bid = document.getElementById('bid');
+	var m = 10;
+	var time = setInterval(function(){
+		m--;
+		bid.innerHTML = m;
+		if(m == 0){
+			bid.innerHTML = "同意";
+			bid.style.color="blue";
+			bid.disabled=false; //当倒数没到0时不可点击按钮
+			clearInterval(time);
+		}
+	},1000)
+	
+	
+	function stop(){
+		clearInterval(time);
+	}
+</script>
