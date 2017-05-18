@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>酷狗详情页</title>
+</head>
+<style>
+	 *{padding:0px;margin:0px;}
+	 .title{width:75%;margin:20px auto;position:relative;}
+    .search{width:300px;height:36px;border:1px solid #ccc;position:absolute;right:510px;top:0px;}
+    input{width:249px;height:24px;padding:5px 12px;border:none;}
+    .title li,.list li{float:left;list-style:none;text-align:center;color:white;}
+    .search li{width:16px;height:16px;float:right;margin:-24px 12px;background:url("images/search.png") no-repeat -39px 30%;}
+    .search li:hover{background-position:-39px 46%;}
+    .title ul{position:absolute;right:130px;top:4px;}
+    .title ul li{padding-right:32px;margin-top:5px;color:black;font-size:14px;}
+    .denglu{width:50px;height:30px;position:absolute;top:4px;right:60px;background:#169af3;border:1px solid #169af3;border-radius:2px;}
+    .title p{color:white;text-align:center;font-size:14px; padding-top:4px;}
+    .denglu:hover{background:#0c8ed9;}
+    .zhuce{width:50px;height:30px;position:absolute;top:4px;right:0px;border:1px solid #ccc;border-radius:2px;}
+    .zhuce p{color:black;}
+    .zhuce:hover{border-color:#169af3;}
+    .zhuce:hover p{color:#169af3;}
+	.list{height:55px;background:#2c323b;position:relative;}
+    .one li{padding: 17px 30px;}
+    .one li:hover{background:#0c8ed9;}
+	.shouye{margin-left:170px;}
+	.two{float:right;margin-right: 60px;}
+	.two li{width:100px;margin-top:18px;}
+	.two li{font-size:13px;background:url("images/sprite.png");}
+	.two li:hover,.title li:hover{color:#169af3;}
+	.two .first{margin-left:120px;background-position:16px -119px;}
+	.two .first:hover{background-position:16px -101px; }
+	.two .second{background-position:3px -155px;}
+	.two .second:hover{background-position:3px -137px;}
+	.two .third{background-position:8px -190px;}
+	.two .third:hover{background-position:8px -172px;}
+	.two .four{background-position:16px -226px;}
+	.two .four:hover{background-position:16px -208px;}
+	.two .five{background-position:16px -280px;}
+	.two .five:hover{background-position:16px -244px;}
+	.page{width:100%;height:490px;background:#292a2b;position:relative;}
+	.main{width:840px;height:480px;position:absolute;top:10px;left:19%;}
+	 #amore{position:absolute;top:-10px;background:black;color:white;left:235px;display:none;}
+	 #amore li{padding:8px 40px;margin:0px;list-style:none}
+	 #amore li:hover{background-color:#252b34;}
+	.image{float:left;width:262px;}
+	.load{width:230px;height:50px;background:url("images/downlaod_bg.png");margin:40px 0 0 16px;}
+	.load:hover{background-position:-230px 0px;}
+	.sing{width:460px;float:right;}
+	.biaoti{width:460px;height:40px}
+	h3{float:left;font-size:26px;color:white;font-weight:lighter;}
+	.biaoti span{display:block;float:left;width:25px;height:15px;background:url("images/btn.png") 0px -214px;margin:15px 0 0 10px;}
+	.biaoti span:hover{background-position:-35px -214px;}
+	.sing p{font-size:15px;color:#ccc;line-height:30px;}
+	.singer a{text-decoration:none;color:#ccc;line-height:24px;}
+	.text{margin-top:20px;width:460px;height:260px;overflow:hidden;position:relative;}
+	#did{position:absolute;width:230px;}
+	.scroll{position:absolute;top:0px;right:0px;width:8px;height:232px;}
+	 #sc{position:absolute;top:0px;right:0px;width:8px;height:74px;background:white;border-radius:8px;opacity:0.2;}
+	.bottom,.bkg{width:100%;height:80px;position:absolute;left:0px;bottom:0px;}
+     .bkg{background:black;opacity:0.3;}
+	.before{width:36px;height:36px;display:block;background:url("images/btn.png") 0 -143px;float:left;margin:20px 0 0 190px;}
+	.now{width:60px;height:60px;display:block;background:url("images/btn.png") 0 -60px;float:left;margin:9px 0 0 15px;}
+	.next{width:36px;height:36px;display:block;background:url("images/btn.png") -144px -143px;float:left;margin:20px 0 0 15px;}
+	.before:hover{background-position:-36px -143px;}
+	.next:hover{background-position:-180px -143px}
+	.img{float:left;margin:10px 0 0 40px;}
+	.pb{width:374px;height:42px;float:left;color:#555555;margin:10px 0 0 25px;}
+	.pb p{font-size: 12px;padding:5px 0 18px 5px;}
+	.bgleft,.bgright{width:2px;height:3px;display:block;background:url("images/btn.png") -217px -200px;float:left;}
+	.bgmiddle{width:370px;height:3px;display:block;background:url("images/middle.png") repeat-x;float:left;position:relative;}
+	.bgright{background-position:-237px -200px;}
+	#bar{width:0px;height:3px;background:url("images/bar_middle.png") repeat-x;position:absolute;display:block;left:0px;top:0px;}
+	#circle{width:12px;height:12px;background:url("images/btn.png") -217px -181px;position:absolute;display:block;left:0px;top:-5px;}
+	.tubiao{width:260px;float:left;margin:30px 0 0 60px;}
+	#voice,#cycle,.share,.la,.ls{width:16px;height:16px;display:block;background:url("images/btn.png") -64px -195px;float:left;}
+	#cycle{background-position:-64px -179px;margin-left:25px;}
+    .la{background-position:-240px -32px;margin-left:25px;}
+    .share{background-position:-240px 0px;margin-left:25px;}
+    .ls{width:60px;height:23px;background-position:0px -120px;margin:-5px 0 0 35px;position:relative;}
+    .pp{position:absolute;right:16px;top:2px;color:white;}
+    #voice:hover{background-position:-80px -195px;}
+    #cycle:hover{background-position:-80px -179px;}
+    .la:hover{background-position:-256px -32px;}
+    .share:hover{background-position:-256px 0px;}
+    .ls:hover{background-position:-61px -120px;}
+    .ls:hover .pp{color:#169af3;}
+    #ice{width:29px;height:114px;background:url("images/voice.png");position:absolute;bottom:80px;right:165px;display:none;}
+    #jce{width:120px;height:115px;position:absolute;bottom:80px;right:80px;background:url("images/style.png");display:none;}
+    #jce li{list-style:none;color:white;width:110px;margin:12px 0 0 18px;font-size:14px;}
+    #xunhuan,#xunhuan1,#xunhuan2{width:16px;height:16px;display:block;background:url("images/btn.png") -80px -179px;float:left;}
+    #xunhuan1{background-position:0px -179px;}
+    #xunhuan1:hover{background-position:-16px -179px;}
+    #xunhuan2{background-position:-128px -179px;} 
+    #xunhuan2:hover{background-position:-144px -179px;} 
+	.content{width:100%;height:490px;background:url("images/bg.jpg");opacity:0.4;}
+	#sf{width:26px;height:16px;display:block;background:url("images/bkg.png");position:absolute;bottom:80px;right:-230px;opacity:0.3}
+	#sfj{width:16px;height:16px;display:block;background:url("images/btn.png") -140px -211px;position:absolute;bottom:78px;right:-225px;}
+</style>
+<body>
+	<div class="title">
+  	  <img src="images/logo.png">
+  	  <ul>
+  	  	<li>客服中心</li>
+  	  	<li>招贤纳式</li>
+  	  	<li style="border-right:1px solid #ccc">会员中心</li>
+  	  </ul>
+  	  <div class="search">
+  	  	<input type="text" value="李玉刚 刚好遇见你">
+  	  	<li></li>
+  	  </div>
+  	  <div class="denglu">
+  	  <p>登录</p>
+  	  </div>
+  	  <div class="zhuce">
+  	  <p>注册</p>
+  	  </div>
+  	</div>
+  	<div class="list">
+	<ul class="one">
+		<li class="shouye">首页</li>
+		<li>榜单</li>
+		<li>下载客户端</li>
+		<li onmouseover="show()" onmouseout="disappear()" id="more">更多
+			<img src="images/arrowMored.png" style="padding-left:6px">
+		</li>
+    </ul>
+	<ul class="two">
+		<li><img src="images/t11.png" alt="" />音乐直播</li>
+		<li><img src="images/t22.jpg" alt="" />酷狗LIVE</li>
+		<li><img src="images/t33.png" alt="" />音乐人</li>
+		<li><img src="images/t44.png" alt="" />游戏</li>
+		<li><img src="images/t55.png" alt="" />商城</li>
+	</ul>
+  </div> 
+  <div class="page">
+   <div class="content">
+   </div>
+  	<div class="main">
+  	   <ul id="amore" onmouseover="show()" onmouseout="disappear()">
+		<li>电台</li>
+		<li>MV</li>
+		<li>歌手</li>
+		<li>歌单</li>
+	  </ul>
+       <div class="image">
+       	  <img src="images/xinyang.jpg" width="262" height="262">
+       	  <div class="load"></div>
+       </div>
+       <div class="sing">
+          <div class="biaoti">
+       	  	<h3>信仰</h3>
+       	  	<span></span>
+       	  </div>
+       	  <div class="singer">
+       	  	<p><a href="#">歌手：</a><a href="#" style="color:white">张信哲</a></p>
+          </div>
+          <div class="text">
+          	<div id="did">
+          	<p>信仰</p>
+          	<p>每当我听见忧郁的乐章 </p>
+          	<p>勾起回忆的伤 </p>
+          	<p>每当我看见白色的月光 </p>
+          	<p>想起你的脸庞</p>
+          	<p>明知不该去想不能去想</p>
+          	<p>偏又想到迷惘</p>
+          	<p>是谁让我心酸  谁让我牵挂  是你啊</p>
+          	<p>我知道那些不该说的话  让你负气流浪</p>
+          	<p>想知道多年漂浮的时光  是否你也想家</p>
+          	<p>如果当时吻你 当时抱你  也许结局难讲</p>
+          	<p>我那么多遗憾 那么多期盼 你知道吗 </p>
+          	<p>我爱你 是多么清楚 多么坚固的信仰</p>
+          	<p>我爱你 是多么温暖 多么勇敢的力量</p>
+          	<p>我不管心多伤 不管爱多慌 不管别人怎么想</p>
+          	<p>爱是一种信仰 把我带到你的身旁</p>
+          	<p>把我带到你的身旁</p>
+          	</div>
+          	<span class="scroll"></span>
+          	<span id="sc"></span>
+          </div>
+        </div>
+       <span id="ice"></span>
+       <div id="jce">
+       	  <li onclick="showCycle(1)"><span id="xunhuan"></span><span id="p1" style="margin-left:10px;color:#169af3;">列表循环</soan></li>
+          <li onclick="showCycle(2)"><span id="xunhuan1"></span><span id="p2" style="margin-left:10px">单曲循环</span></li>
+          <li onclick="showCycle(3)"><span id="xunhuan2"></span><span id="p3" style="margin-left:10px">列表循环</span></li>
+       </div>
+       <span id="sf"></span>
+       <span id="sfj" onclick="show2()"></span>
+    </div>
+   <div id="bm">
+    <span class="bkg"></span>
+    <div class="bottom">
+       	<span class="before"></span>
+       	<span class="now" onclick="start(this)" onmousemove="shadow(this)" onmouseout="none(this)"></span>
+       	<span class="next"></span>
+       	<div class="img">
+       		<img src="images/xinyang.jpg" width="60" height="60">
+       	</div>
+       	<div class="pb">
+       		<p><a style="font-size:14px">信仰 </a>
+       		<a id="bid" style="padding-left:70px;">00:00</a>/<a>02:33</a></p>
+
+            <span class="bgleft"></span>
+            <span class="bgmiddle">
+            	<span id="bar"></span>
+            	<span id="circle"></span>
+            </span>
+            <span class="bgright"></span>
+       	</div>
+       	<div class="tubiao">
+       		<span id="voice" onclick="show3()"></span>
+       		<span id="cycle" onclick="show1()"></span>
+       		<span class="la"></span>
+       		<span class="share"></span>
+       		<span class="ls"><span class="pp">2</span></span>
+       	</div>
+    </div>
+    </div>
+ </div>
+ <embed src="video/xinyang.mp3" hidden="true" autostart="true" loop="true">
+</body>
+</html>
+<script>
+	 //下拉菜单
+	 function show(){
+      	document.getElementById("amore").style.display="block";
+      	document.getElementById("more").getElementsByTagName("img")[0].src="images/arrow.png";
+      }
+      function disappear(){
+      	document.getElementById("amore").style.display="none";
+      	document.getElementById("more").getElementsByTagName("img")[0].src="images/arrowMored.png";
+      }
+     //滚动放映
+     var j=0;
+     var t=0;
+     var width=0;
+     var did=document.getElementById("did");
+     var list=did.getElementsByTagName("p");
+     var time;
+     function running(){
+     	time=setInterval(function(){
+     		for(var i=0;i<list.length;i++){
+     			if(i==j){
+     				list[i].style.color="#0c8ed9";
+     			}else{
+     				list[i].style.color="#ccc";
+     			}
+     	    }
+     		j++;
+     		if(j>4){
+            	t-=25;
+            	did.style.top=t+"px";
+            	if(t<=-400){
+             	 did.style.top="-400px";
+            	}
+     		}
+     	  width+=17;
+     	  document.getElementById("bar").style.width=width+"px";
+     	  document.getElementById("circle").style.left=width+"px";
+     	  if(width>370){
+     	  	clearInterval(time);
+     	  }
+         },2000)
+    }
+    running();
+    function stop(){
+      clearInterval(time);
+    }
+     //按钮控制播放与停止
+     var k=0;
+     function start(obj){
+         k++;
+         if(k%2!=0){
+            obj.style.backgroundPosition="0px 0px";
+            stop();
+         }else{
+         	obj.style.backgroundPosition="0px -60px";
+         	running();
+         }
+     }
+     function shadow(obj){
+     	if(k%2!=0){
+     		obj.style.backgroundPosition="-60px 0px";
+     	}else{
+     		obj.style.backgroundPosition="-60px -60px";
+     	}
+     }
+     function none(obj){
+     	if(k%2!=0){
+     		obj.style.backgroundPosition="0px 0px";
+     	}else{
+     		obj.style.backgroundPosition="0px -60px";
+     	}
+     }
+     //点击显示循环
+     var a=0;
+     function show1(){
+     	a++;
+        if(a%2!=0){
+        	document.getElementById("jce").style.display="block";
+        }else{
+        	document.getElementById("jce").style.display="none";
+        }
+     }
+     var cycle=document.getElementById("cycle");
+     function showCycle(x){
+     	if(x==1){
+          cycle.style.backgroundPosition="-64px -179px";
+          document.getElementById("xunhuan").style.backgroundPosition="-80px -179px";
+          document.getElementById("xunhuan1").style.backgroundPosition="0px -179px";
+          document.getElementById("xunhuan2").style.backgroundPosition="-128px -179px";
+        }
+     	if(x==2){
+          cycle.style.backgroundPosition="0px -179px";
+          document.getElementById("xunhuan").style.backgroundPosition="-64px -179px";
+          document.getElementById("xunhuan1").style.backgroundPosition="-32px -179px";
+          document.getElementById("xunhuan2").style.backgroundPosition="-128px -179px";
+     	}
+     	if(x==3){
+     	 cycle.style.backgroundPosition="-128px -179px";
+     	 document.getElementById("xunhuan").style.backgroundPosition="-64px -179px";
+         document.getElementById("xunhuan1").style.backgroundPosition="0px -179px";
+         document.getElementById("xunhuan2").style.backgroundPosition="-144px -179px";
+     	}
+     	for(var i=1;i<4;i++){
+     		if(i==x){
+     			document.getElementById("p"+i).style.color="#169af3";
+			}else{
+				document.getElementById("p"+i).style.color="#fff";
+			}
+     	}
+     }
+     //点击显示和隐藏下方的框
+     var b=0;
+     function show2(){
+     	b++;
+     	if(b%2!=0){
+          document.getElementById("bm").style.display="none";
+          document.getElementById("sf").style.bottom="0px";
+          document.getElementById("sfj").style.bottom="0px";
+          document.getElementById("sfj").style.backgroundPosition="-214px -211px";
+     	}else{
+     	  document.getElementById("bm").style.display="block";
+     	  document.getElementById("sf").style.bottom="80px";
+     	  document.getElementById("sfj").style.bottom="78px";
+     	  document.getElementById("sfj").style.backgroundPosition="-140px -211px";
+     	}
+     }
+     //点击音量(鼠标移上去效果未完成)
+     var c=0;
+     function show3(){
+     	c++;
+     	if(c%2!=0){
+     	  document.getElementById("voice").style.backgroundPosition="-128px -195px";
+     	}else{
+     	  document.getElementById("voice").style.backgroundPosition="-64px -195px";
+     	}
+     }
+     //数字显示
+     var oBid = document.getElementById('bid');
+	   var s = 00;
+	   var m = 00;
+	   var time  = setInterval(function(){
+      s++;
+		  oBid.innerHTML = m+":"+s;
+		  if(s == 0){
+        m++;
+        s = 60;
+        time();
+        oBid.disabled = true;
+			clearInterval(time);
+		}
+	},2000);  
+	
+      
+
+</script>
