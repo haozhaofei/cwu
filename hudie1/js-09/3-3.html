@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id="uid">
+		<li>Hello!</li>
+		<li>What's your name?</li>
+		<li>oh</li>
+		<li>Nice to meet you.</li>
+	</ul>
+</body>
+</html>
+<script>
+	var list=document.getElementById('uid').childNodes;
+	for(var i=0;i<list.length;i++){
+		if(list[i].nodeType==1){
+			alert(list[i].firstChild.nodeValue);
+		}
+	}
+</script>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+
+<script>
+	//参数多传了没事 少传了不行
+	function add(){
+		var res = 0;
+		for(var i=0;i<arguments.length;i++){
+			res+= arguments[i];
+		}
+		document.write(res);
+	}
+
+	add(10,20,30,40,50);
+</script>

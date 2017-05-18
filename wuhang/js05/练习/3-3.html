@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="fun(this)">主动调用</button>
+	<button id='bid'>被动调用</button>
+</body>
+</html>
+<script type="text/javascript">
+	function fun(obj){
+        obj.style.color="red";
+	}
+	document.getElementById("bid").onclick=function(){
+		this.style.color="green";
+	}
+</script>

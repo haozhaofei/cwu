@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击一个按钮在浏览器出一张背景图</title>
+</head>
+<style>
+	img{height:800px;width:1000px;}
+</style>
+<body id="did">
+	<center>
+		<button onclick="fun1()">换背景</button>
+	</center>
+</body>
+</html>
+<script>
+	var img=document.getElementById('did');
+	function fun1(){
+	var obj=Math.ceil(Math.random()*1000)%3;
+	if(obj==0){
+		img.style.backgroundImage="url(images/102.jpg)";
+	}else if(obj==1){
+		img.style.backgroundImage="url(images/103.jpg)";
+	}else{
+		img.style.backgroundImage="url(images/104.jpg)";
+	}
+        
+	}
+	
+</script>

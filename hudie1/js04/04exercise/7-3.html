@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		E<sub>aaaaa</sub>
+	</div>
+</body>
+</html>
+<script>
+	var str="ZhangSanFeng";
+	with(document){
+		write(str.charAt(3)+"<br>")
+		write(str.bold()+"<br>")
+		write(str.replace("SanFeng","JunBao")+"<br>")
+		write(str.substr(3,5)+"<br>")
+		write(str.substring(3,5)+"<br>") //不包括下标为5的
+		write(str.toLowerCase()+"<br>")
+		write(str.toUpperCase()+"<br>")
+		write(str.split("a")+"<br>")
+	}
+</script>

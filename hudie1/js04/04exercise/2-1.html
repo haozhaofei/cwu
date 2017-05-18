@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>妲己</li>
+		<li>孙悟空</li>
+		<li>亚瑟</li>
+		<li>孙尚香</li>
+	</ul>
+</body>
+</html>
+<script>
+     var ul=document.getElementsByTagName('li');     //var ul 返回的是一个集合
+     for(k in ul){
+     	document.write(k+"<br>");          //for...in..可以遍历对象中的所有属性或数组中的所有元素
+     }
+
+	//我们写特效的时候不要for...in..原因是因为它太啰嗦了，总是给我不想要的...(0123 length item named Item)
+
+	//推荐使用for
+	for(var i=0;i<ul.length;i++)
+	{
+		document.write(ul[i].innerHTML+"<br>");
+	}
+    
+</script>

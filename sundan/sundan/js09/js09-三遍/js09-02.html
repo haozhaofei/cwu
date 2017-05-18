@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	try 
+  {
+  xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+  }
+catch(e)
+  {
+  try 
+    {
+    xmlDoc=document.implementation.createDocument("","",null);
+    }
+  catch(e) {alert(e.message)}
+  }
+try 
+  {
+  xmlDoc.async=false;  
+  xmlDoc.load("stu.xml");
+  	var list = xmlDoc.getElementsByTagName('stu');
+  	for(var i=0;i<list.length;i++){
+  		var res = list[i].getElementsByTagName("name")[0].innerHTML+"<br>";
+  		document.write(res);
+  	}
+  }
+catch(e) {alert(e.message)}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+<script>
+  try 
+  {
+  xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+  }
+catch(e)
+  {
+  try 
+    {
+    xmlDoc=document.implementation.createDocument("","",null);
+    }
+  catch(e) {alert(e.message)}
+  }
+try 
+  {
+  xmlDoc.async=false;  
+  xmlDoc.load("stu.xml");
+    var list = xmlDoc.getElementsByTagName('stu');
+    for(var i=0;i<list.length;i++){
+      var res = list[i].getElementsByTagName("name")[0].innerHTML+"<br>";
+      document.write(res);
+    }
+  }
+catch(e) {alert(e.message)}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+<script>
+  try 
+  {
+  xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+  }
+catch(e)
+  {
+  try 
+    {
+    xmlDoc=document.implementation.createDocument("","",null);
+    }
+  catch(e) {alert(e.message)}
+  }
+try 
+  {
+  xmlDoc.async=false;  
+  xmlDoc.load("stu.xml");
+    var list = xmlDoc.getElementsByTagName('stu');
+    for(var i=0;i<list.length;i++){
+      var res = list[i].getElementsByTagName("name")[0].innerHTML+"<br>";
+      document.write(res);
+    }
+  }
+catch(e) {alert(e.message)}
+</script>

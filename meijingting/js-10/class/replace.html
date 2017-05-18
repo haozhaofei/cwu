@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>replace</title>
+</head>
+<body>
+<ul id="did">
+	<li>钟无艳</li>
+	<li>小乔</li>
+	<li>妲己</li>
+	<li>孙尚香</li>
+</ul>
+<button onclick="doChange()">变</button>			
+</body>
+</html>
+<script>
+	
+    function doChange(){
+    	var oid=document.getElementById('did').childNodes[1];
+    	//0,1浏览器不一样。
+    	var item=document.createTextNode('赵云');
+    	oid.replaceChild(item,oid.childNodes[0]);
+    }
+</script>

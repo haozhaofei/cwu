@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变大写</title>
+</head>
+<body>
+	<span>变大写：</span>
+	<input type="text" onkeypress="test(this)">
+</body>
+</html>
+<script>
+	function test(obj){
+		obj.value=obj.value.toUpperCase();
+	}
+</script>

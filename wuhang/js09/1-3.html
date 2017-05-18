@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	select{width:100px;height:200px;}
+</style>
+<body>
+	<select id="sid1" multiple>
+		<option>凉凉</option>
+		<option>三生三世</option>
+		<option>思慕</option>
+		<option>繁华</option>
+		<option>就算没有如果</option>
+	</select>
+	<button onclick="move('sid1','sid2')">>></button>
+	<button onclick="move('sid2','sid1')"><<</button>
+	<select id="sid2" multiple></select>
+</body>
+</html>
+<script type="text/javascript">
+	function move(sid1,sid2){
+		//options[]返回包含下拉列表中的所有选项的一个数组
+		var list=document.getElementById(sid1).options;
+		var sid2=document.getElementById(sid2);
+		for(var i=0;i<list.length;i++){
+			//判断是否选中
+			if(list[i].selected){
+				//设置selected的默认值
+				list[i].selected=false;
+				//向下拉列表添加一个选项
+				sid2.add(list[i]);
+				i--;     //解决同时选中问题
+			}
+		}
+	}
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	li{list-style:none;height:30px;line-height:30px;background:#ccc;margin-top:10px;}
+</style>
+<body>
+	<ul id="uid">
+	<li>目送</li>
+	<li>孩子你慢慢来</li>
+	<li>亲爱的安德烈</li>
+	</ul>
+	<input type="text" size="30" id="nid">
+	<button onclick="add()">添加</button>
+</body>
+</html>
+<script type="text/javascript">
+    //添加节点 - appendChild()
+    function add(){
+    	var ul=document.getElementById('uid');
+    	//获取input标签的值
+    	var text=document.getElementById("nid").value;
+    	//创建文本节点
+    	var newNode=document.createTextNode(text);
+    	//创建元素节点
+        var newElement=document.createElement("li");
+        ul.appendChild(newElement);
+        newElement.appendChild(newNode);
+    }
+</script>

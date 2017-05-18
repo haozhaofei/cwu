@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	var a=new Array();
+	var b=new Array(3);
+	b[0]="Thomas";
+	b[1]="George";
+	b[2]="John";
+	var c=new Array(4,5,6);
+	var d=[];
+	//任何对象都能通过obj["name"]=something的形式来添加属性，相当于obj.name=something
+	d["name"]="James";
+	d["age"]="102";
+	var e=[1,5,8,9,3];
+	document.write(b+"<br>");
+	document.write(b.reverse()+"<br>");
+	document.write(c+"<br>");
+	document.write(d.name+"<br>"+d.age+"<br>");
+	document.write(e.push(7)+"<br>");   //返回的是新的数组长度
+	document.write(e+"<br>");
+</script>

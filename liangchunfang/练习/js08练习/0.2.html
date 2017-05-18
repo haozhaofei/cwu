@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action=""></form>
+	<form action="" name="myform">
+		<input type="text" name="myname" value="请输入">
+	</form>
+</body>
+</html>
+<script>
+	document.write(document.all.length);
+	alert(document.forms[1].myname.value);
+	alert(document.forms['myform'].myname.value);
+	alert(document.myform.myname.value);
+	alert(document['myform'].myname.value);
+</script>

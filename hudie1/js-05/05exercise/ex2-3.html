@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS事件</title>
+</head>
+<body>
+	<button onclick="fun()">按钮1</button>
+	<button id="mid">按钮2</button>
+	<button id="nid">按钮3</button>
+
+</body>
+</html>
+<script>
+	function fun(){
+		alert("好好写作业！！");
+	}
+	document.getElementById('mid').onclick=function(){
+		alert("效率高点！！");
+	}
+	var nid=document.getElementById('nid');
+	nid.addEventListener('click',function(){
+		alert("别迷糊！！");
+	})
+</script>

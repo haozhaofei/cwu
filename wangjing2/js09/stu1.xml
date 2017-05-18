@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stulist>
+	<stu id='001'>
+		<name>reject</name>
+		<name>reject discard</name>
+		<gender>无</gender>
+		<age>100</age>
+	</stu>
+	<stu id='002'>
+		<name>reject two</name>
+		<name>reject two discard</name>
+		<gender>男</gender>
+		<age>87</age>
+	</stu>
+	<stu id='003'>
+		<name>reject three</name>
+		<name>reject three discard</name>
+		<gender>女</gender>
+		<age>110</age>
+	</stu>
+</stulist>

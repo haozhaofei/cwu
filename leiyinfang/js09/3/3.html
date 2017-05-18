@@ -1,0 +1,26 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="uid">
+    <li>山水之间</li>
+    <li>三寸天堂</li>
+    <li>清明雨上</li>
+    <li>断桥残雪</li>
+    <li>雨过天晴</li>
+  </ul>
+</body>
+</html>
+<script>
+  var list = document.getElementById('uid').getElementsByTagName('li');
+  var list2 = document.getElementById("uid").childNodes;
+  for(var i=0;i<list2.length;i++){
+    if(list2[i].nodeType == 1){
+      alert(list2[i].firstChild.nodeValue);
+    }
+  }
+</script>

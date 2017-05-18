@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+  #did{
+    width:300px;
+    height:300px;
+    position:absolute;
+    overflow: hidden;
+    display: none;
+  }
+</style>
+<body>
+<image id="mid" src="images/33.jpg" width="384">
+<div id="did">
+    <image src="images/33.jpg">
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    var mid=document.getElementById("mid");
+    var did=document.getElementById("did");
+
+    mid.onmouseover=function(){
+        did.style.display="block";
+        did.style.top=this.offsetTop+"px";      //必须加“px”
+        did.style.left=this.offsetLeft+this.offsetWidth+10+"px";
+    }
+
+    mid.onmouseout=function(){
+        did.style.display="none";
+    }
+
+    mid.onmousemove=function(ent){
+        var event=window.event || ent;
+        var x=event.clientX-this.offsetLeft;
+        var y=event.clientY-this.offsetTop;
+        did.scrollTop=y*4;                              //-150使图片显示居中
+        did.scrollLeft=x*5-150;                         //384*5=1920(原图片的宽度)
+    }
+</script>
+

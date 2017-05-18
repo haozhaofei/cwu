@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id="uid">
+		<li>dfj</li>
+		<li>fjdk</li>
+		<li>sdjkfh</li>
+	</ul>
+	<button onclick="doChange()">change</button>
+</html>
+</body>
+<script>
+	function doChange(){
+		//替换节点只能是替换子节点，所以要找到子节点
+		var oUid=document.getElementById('uid').childNodes[1];
+		//1是因为第0个是换行，文本节点
+		var item=document.createTextNode("赵云");
+		oUid.replaceChild(item,oUid.childNodes[0]);
+
+
+	}
+</script>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="hour">0</button>
+    <button id="1">小时</button>
+    <button id="minute">1</button>
+     <button id="2">分钟</button>
+    <button id="seconed">3</button>
+     <button id="3">秒</button>
+	<button onclick="stop()">暂停</button>
+</body>
+</html>
+<script>
+
+	var hour = document.getElementById('hour');
+    var minute = document.getElementById('minute');
+	var seconed = document.getElementById('seconed');
+	
+	var h = 0;
+	var m = 1;
+	var s = 3;
+	var time = setInterval(function(){
+		s--;
+		seconed.innerHTML = s;
+		minute.innerHTML = m;
+		hour.innerHTML = h;
+		if(s==0&&m!=0)
+		{
+			s=60;
+			m--;
+		}
+			
+		if(m==0&&h!=0)
+		{
+			m=60;
+			h--;
+		}
+		if(s==0&&m==0&&h==0)
+	    {
+		    
+			seconed.style.color = "yellow";
+			seconed.style.fontSize = "20px";                        clearInterval(time);		
+		}
+	},1000)
+	
+	
+	function stop(){
+		clearInterval(time);
+	}
+</script>

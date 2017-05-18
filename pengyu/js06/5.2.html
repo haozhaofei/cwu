@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	body,img,div{
+		padding:0;margin:0;
+	}
+	#did{
+		width:400px;height:400px;position:relative;
+		background:maroon;
+	}
+	#mid{
+		width:40px;height:40px;position: absolute;
+		background:palegreen;top:200px;left:100px;
+	}
+	#pd0,#pd1,#pd2,#pd3,#pd4,#pd5{
+		display: none;position: absolute;
+	}
+</style>
+<body>
+	<div id="did">
+		<img src="images/pd.png" id="pd0">
+		<img src="images/pd.png" id="pd1">
+		<img src="images/pd.png" id="pd2">
+		<img src="images/pd.png" id="pd3">
+		<img src="images/pd.png" id="pd4">
+		<img src="images/pd.png" id="pd5">
+		<div id="mid"></div>
+	</div>
+</body>
+</html>
+<script>
+	var mid=document.getElementById('mid');
+	window.onkeydown=function(ent){
+		var event=window.event||ent;
+		//alert(event.keyCode);
+		switch(event.keyCode){
+			case 37 :
+			mid.style.left=Math.max(0,mid.offsetLeft-5)+"px";break;
+			case 38 :
+			mid.style.top=Math.max(0,mid.offsetTop-5)+"px";break;
+			case 39 :
+			mid.style.left=Math.min(360,mid.offsetLeft+5)+"px";break;
+			case 40 :
+			mid.style.top=Math.min(360,mid.offsetTop+5)+"px";break;
+			case 13 :
+			fire(mid.offsetLeft+15,mid.offsetTop);break;
+		}
+	}
+	function fire(x,y){
+		for(var i=0;i<6;i++){
+			var pd=document.getElementById('pd'+i);
+			if(pd.style.display!="block"){
+				pd.style.top=y+"px";
+				pd.style.left=x+"px";
+				pd.style.display="block";
+				return;
+			}
+		}
+	}
+	function run(){
+		for(var i=0;i<6;i++){
+			var pd=document.getElementById('pd'+i);
+			if(pd.style.display=="block"){
+				pd.style.top=pd.offsetTop-25+"px";
+				if(pd.offsetTop<-23){
+					pd.style.display="none";
+				}
+			}
+		}
+		setTimeout('run()',33);
+	}
+	run();
+</script>

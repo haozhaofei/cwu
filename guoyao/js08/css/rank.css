@@ -1,0 +1,140 @@
+@charset "utf-8";
+/*
+* Copyright 2015, kugou.com
+* Creator: green
+* $Author: linweijian $
+* $Date: 2015年9月14日 $
+* $Desc:排行榜样式表
+*/
+
+/* layout
+--------------------------------------------*/
+body,html{background: #fff overflow: hidden; min-height: 1000px; height: auto !important; border:0 none; font:12px/1.5 \5FAE\8F6F\96C5\9ED1,simsun,sans-serif;color:#000; padding-right: 0px;}
+.pc_temp_wrap{margin: 40px auto;}
+.pc_temp_main{min-width:1000px;width: 1000px;width: 1000px!important;}
+.pc_rank_sidebar{overflow: hidden;position: relative;zoom: 1;border-top: 1px solid #f2f2f2;}
+.pc_rank_sidebar h3 a{display: block;height: 45px;padding-left: 15px;line-height: 45px;font-size: 16px;color: #555;position: relative;font-weight: normal;}
+.pc_rank_sidebar h3 a .pc_temp_arrow{position: absolute;top: 20px;right: 10px; background-position: -450px -120px;}
+.pc_rank_sidebar h3 a:hover .pc_temp_arrow{background-position: -450px -60px;}
+.pc_rank_sidebar ul{display: block;overflow: hidden;margin-top: 6px;}
+.pc_rank_sidebar li a{padding: 0 0 0 15px;margin-bottom: 4px;line-height: 36px;height: 36px;display:block;color: #555;font-size: 12px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;position:relative;cursor: pointer;}
+.pc_rank_sidebar li a span{cursor:pointer;float:left;width: 16px;height:16px;margin: 11px 5px 0 0;line-height:0;background-repeat:no-repeat;_background:none}
+.pc_rank_sidebar li a h4{width: 73px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;float: left;font-weight: normal;}
+.pc_rank_sidebar li a img.link_ads{position:absolute;top:4px;margin:0 0 0 5px;background-repeat:no-repeat;_background:none}
+.pc_rank_sidebar li a img.link_icon{float: left;margin: 0 0 0 5px;background-repeat: no-repeat;_background: none}
+.pc_rank_sidebar li a:hover{background-color:#f5f8fb;color:#288fe7;}
+.pc_rank_sidebar li a.current,.pc_rank_sidebar li a.current:hover{background:#169af3;color:#fff}
+.pc_rank_sidebar li a .pc_temp_arrow{position: absolute;top: 12px;right: 10px;background-position: -450px -120px;}
+.pc_rank_sidebar li a.current .pc_temp_arrow{background-position: -450px -90px;}
+.pc_rank_sidebar li.pc_rank_sidebar_collapse a .pc_temp_arrow{background-position: -480px -120px;}
+.pc_rank_sidebar li.pc_rank_sidebar_collapse a.current .pc_temp_arrow{background-position: -480px -90px;}
+.pc_rank_sidebar dd a{width:117px;line-height: 15px;height: 15px;border-bottom: 1px solid #f2f2f2;margin-left: 21px;font-size: 12px;}
+.pc_rank_sidebar dd a:hover,.pc_rank_sidebar dd a.current,.pc_rank_sidebar dd a.current:hover{color: #288fe7;background: #fff;}
+.pc_rank_sidebar .pc_rank_ku{height: 0;overflow: hidden;position: relative;zoom: 1;z-index: 0;}
+.pc_rank_sidebar_collapse h3 a .pc_temp_arrow{background-position: -480px -120px;}
+.pc_rank_sidebar_collapse h3 a:hover .pc_temp_arrow{background-position: -480px -60px;}
+.pc_rank_sidebar_collapse ul{margin-top: 0;}
+.pc_rank_sidebar_fix ul{margin-top: 7px;}
+.pc_rank_sidebar_first{border-top: 0 none;}
+.pc_rank_sidebar_2col{padding-right: 6px;}
+.pc_rank_sidebar_2col h3 a .pc_temp_arrow{right: 14px;}
+.pc_rank_sidebar_2col ul{margin: 5px 0 0 1px;}
+.pc_rank_sidebar_2col li{float:left;margin:0 0 2px 1px;}
+.pc_rank_sidebar_2col li a{height:26px;line-height:26px;width:56px;padding: 0 5px 0 4px;text-align:left;}
+
+.pc_rank_title{border-bottom: 1px dotted #cacaca;margin-bottom: 24px;zoom: 1;position: relative;}
+.pc_rank_title .pc_rank_update{float: right;line-height: 22px;height: 22px;padding: 0 10px;_padding-top:5px;_height:17px; border: 1px solid #d2d2d2;font-size:12px;color:#555;cursor: pointer;margin:0 10px 0 0;position: relative;top: -5px;background: #fff;}
+.pc_rank_title .pc_rank_update_only{float: right;line-height: 22px;padding: 0 10px; border: 1px solid #fff;font-size:12px;color:#555;cursor: default;margin:0 0 0 0;position: relative;top: -5px;}
+.pc_rank_title .pc_rank_update .pc_temp_arrow{margin-left: 10px;}
+.pc_rank_title .pc_rank_update_only .pc_temp_arrow{display: none;}
+.pc_rank_title .rank_uptime_hover{border-bottom-color: #fff;z-index: 1000;}
+.pc_rank_title .pc_temp_icon_warn{float: right;cursor: pointer;position: relative;top: 0;}
+.pc_rank_title .pc_temp_title{float: left;position: relative;top: 0;}
+
+/* rank_sort
+--------------------------------------------*/
+.rank_sort{width: 221px;overflow: hidden;padding: 3px 0 0 0;font-size: 14px;border-bottom: 5px solid #fff;font-family: 'Tahoma';zoom: 1;position: relative;}
+.rank_sort .sort_year{width: 34px;margin-bottom: -9999px;padding: 0 6px 9999px;height: 100%;border-right: 1px solid #ccc;float: left;}
+.rank_sort .sort_year a{line-height: 20px;display: block;color: #666;margin-bottom: 2px;position: relative;}
+.rank_sort .sort_year a:hover{color: #288ef7;}
+.rank_sort .sort_year a.current{color: #288ef7;}
+.rank_sort .sort_year a.current i{position: absolute;border-width: 4px;border-style: dashed solid dashed dashed;border-color: transparent #ccc transparent transparent;right: -7px; _right: 0;line-height: 0;top: 6px;}
+.rank_sort .sort_year a.current i i{border-color: transparent #fff transparent transparent;top: -4px;right: -5px;}
+.rank_sort .sort_list{float: right;}
+.rank_sort .sort_list,.rank_sort .sort_list .sort_item{width: 164px;height: 100%;overflow:hidden;}
+.rank_sort .sort_list .sort_item2{height: auto;overflow:hidden;width: 100%;}
+.rank_sort .sort_list .sort_item2 a{width: 41px;margin:0 0 2px 0px;height: 20px;text-align:center;line-height: 20px;overflow: hidden;float:left;background: #fff;color: #666;}
+.rank_sort .sort_list .sort_item2 a:hover{color: #288ef7;}
+.rank_sort .sort_list .sort_item2 a.current,.rank_sort .sort_list .sort_item2 a.current:hover{color: #fff;background: #288ef7;}
+.rank_sort .sort_list p{text-align: right;height: 19px;margin:3px 0 0 0;}
+.sort_list p a{ display:inline-block; vertical-align:middle;zoom: 1;height:17px; border:0 solid #ccc;font-size: 12px;}
+.sort_list p a span{ position:relative; float:left; display:inline;zoom:1; height:17px;line-height: 17px;background: #fff; width: 15px;overflow: hidden; border:1px solid #ccc;cursor:pointer;text-align: center;border-radius: 2px;}
+/*ie6~8 hack*/
+@media \0screen\,screen\9 {
+.sort_list p a{border-width: 1px 0;}
+.sort_list p a span{margin:0 -1px;border-width:0 1px;}
+}
+.rank_sort .sort_list p a.arrow_l{float: left;margin-left: 1px;}
+.rank_sort .sort_list p a.arrow_r{float: right;margin-right: 1px;}
+.rank_sort .sort_list p a.arrow_l .pc_temp_arrow{padding-left: 5px;height: 9px;background-position: -510px -0;vertical-align: 0;*vertical-align: 1px;}
+.rank_sort .sort_list p a.arrow_r .pc_temp_arrow{padding-left: 5px;height: 9px;background-position: -540px -0;vertical-align: 0;*vertical-align: 1px;}
+.rank_sort .sort_list p a.arrow_l:hover .pc_temp_arrow{background-position: -510px -90px;}
+.rank_sort .sort_list p a.arrow_r:hover .pc_temp_arrow{background-position: -540px -90px;}
+.rank_sort .sort_list p a.arrow_l:hover,.rank_sort .sort_list p a.arrow_r:hover{border-color: #169af3;}
+.rank_sort .sort_list p a.arrow_l:hover span,.rank_sort .sort_list p a.arrow_r:hover span{background: #169af3;border-color: #169af3;}
+.sort_list p a.arrow_l_cur,
+.sort_list p a.arrow_r_cur,
+.sort_list p a.arrow_l_cur span,
+.sort_list p a.arrow_r_cur span{border-color: #e9e9e9;background: #fff;cursor: default;}
+.rank_sort .sort_list p a.arrow_l_cur .pc_temp_arrow{padding-left: 5px;height: 9px;background-position: -510px -150px;}
+.rank_sort .sort_list p a.arrow_r_cur .pc_temp_arrow{padding-left: 5px;height: 9px;background-position: -540px -150px;}
+.rank_sort .sort_list p a.arrow_l_cur:hover,.rank_sort .sort_list p a.arrow_r_cur:hover{border-color: #ccc;cursor: default;}
+.rank_sort .sort_list p a.arrow_l_cur:hover span,.rank_sort .sort_list p a.arrow_r_cur:hover span{background: #fff;border-color: #e9e9e9;}
+.rank_sort .sort_list p a.arrow_l_cur:hover .pc_temp_arrow{background-position: -510px -150px;}
+.rank_sort .sort_list p a.arrow_r_cur:hover .pc_temp_arrow{background-position: -540px -150px;}
+#sort_wrap, #detail_wrap {position: absolute;z-index: 3;}
+.pc_temp_container{position: relative;}
+.sort_detail{padding:0 3px;margin-top: -3px;line-height: 22px;word-break: break-all;color: #999;}
+.pc_temp_2col_critical .pc_rank_sidebar{}
+.pc_temp_2col_critical .pc_rank_sidebar li a{font-size: 14px;}
+.pc_temp_2col_critical .pc_rank_sidebar li a h4{width: 133px;}
+.pc_temp_2col_critical .pc_rank_sidebar dd a{width:158px;}
+.pc_temp_2col_critical .pc_rank_sidebar li a .pc_temp_arrow{right: 10px;}
+.pc_temp_2col_critical .pc_rank_sidebar h3 a .pc_temp_arrow{right: 20px;}
+
+.pc_temp_icon_up{padding-left: 17px;background-position-x:-295px;}
+.pc_temp_icon_down{padding-left: 17px;background-position-x:-325px;}
+.pc_temp_icon_flat{padding-left: 17px;background-position-x:-355px;}
+
+.pc_rank_sidebar li a{font-size: 14px;}
+.pc_temp_2col_critical .pc_temp_side{width: 218px;}
+.pc_temp_side{border: 1px solid #eee;padding: 0;}
+.pc_temp_2col_critical .pc_temp_content{margin-left: -220px;}
+.pc_temp_container{}
+.pc_temp_2col_critical .pc_temp_container{margin-left: 220px; padding-left: 30px;border-left: none;width: 750px;}
+.pc_rank_30s{color: #169af3;text-decoration: underline;font-size: 14px;margin-left: 5px;}
+.pc_temp_songlist {overflow: hidden;width: 100%;}
+.pc_temp_songlist .pc_temp_songname{max-width: 65%;}
+.pc_temp_songlist ul li{height: 54px;line-height: 54px;}
+.pc_temp_songlist .pc_temp_tips_r{top: 10px;}
+.pc_rank_songlist_short .pc_temp_songname{max-width: 60%;}
+
+.pc_rank_title .pc_temp_title{float:none;font-size:0;}
+.pc_temp_title h3{font-size: 24px;padding: 0;margin-bottom: 33px;display: inline-block;margin-right: 20px;}
+.pc_rank_title .rank_update{color: #999;display: inline-block;font-size: 14px;}
+.pc_temp_title .pc_temp_bicon_play{float: right;margin-top: -6px;font-size: 14px;}
+.pc_temp_title .pc_temp_bicon_play i {background: url(../images/play_icon.png) no-repeat; display: inline-block;width: 0;left: 18px;}
+.pc_temp_bicon_play:hover i.t2 {background-position: 0px 0px; }
+.pc_temp_title .pc_temp_btn_s02 span{padding: 9px 20px 9px 34px;}
+
+.pc_temp_tips_r .pc_temp_time{display:inline-block; vertical-align:middle;height: 100%;color: #999;font-size: 14px;margin-top: -2px;margin-left: 20px;}
+.pc_temp_tips_r .pc_temp_btn_listen{visibility: hidden; margin-top: 5px;}
+.pc_temp_tips_r .pc_temp_btn_download{visibility: hidden; margin-top: 5px;}
+.pc_temp_tips_r .pc_temp_btn_share{visibility: hidden; margin-top: 5px;}
+.pc_temp_songlist ul li:hover .pc_temp_tips_r .pc_temp_btn_listen,
+.pc_temp_songlist ul li.fixIe6_songlist .pc_temp_tips_r .pc_temp_btn_listen,
+.pc_temp_songlist ul li:hover .pc_temp_tips_r .pc_temp_btn_download,
+.pc_temp_songlist ul li.fixIe6_songlist .pc_temp_tips_r .pc_temp_btn_download,
+.pc_temp_songlist ul li:hover .pc_temp_tips_r .pc_temp_btn_share,
+.pc_temp_songlist ul li.fixIe6_songlist .pc_temp_tips_r .pc_temp_btn_share
+{visibility: visible;}

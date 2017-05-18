@@ -4,22 +4,32 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
-<script type="text/javascript">
-	//主动调用不能直接获取，需要传参	
-	function fun1(obj)  {
-	obj.style.color="red";
-	}
-    window.onload = function(){
-	//主动调用不能直接获取，需要传参
 
-	//被动调用可以直接使用this
-	document.getElementById('bid').onclick= function(){
-		this.style.color="yellow";
-	}
-}
-</script>
 <body>
-	<button onclick="fun1(this)">按钮1</button>
-	<button id="bid">按钮2</button>
+
 </body>
 </html>
+<script>
+var currentIndex = 0;
+ 
+function changeBg(){
+ 
+    //定义要切换的背景图片，双引号里面，可以放任意多个
+ 
+    var bgImgs = ["img/5.png","img/2.png","img/3.png","img/4.png"];
+ 
+    if (currentIndex >= bgImgs.length)
+ 
+                currentIndex = 0;
+ 
+    var obj = document.getElementsByTagName_r("BODY")[0];
+ 
+    obj.style.backgroundImage="url("+bgImgs[currentIndex]+")";
+ 
+    currentIndex += 1;
+}
+ 
+setInterval("changeBg", 1000); //设定定时切换，单位为毫秒，比如：30分钟=1800秒=1800000毫秒
+ 
+//]]>
+</script>

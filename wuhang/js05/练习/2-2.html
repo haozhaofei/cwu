@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="fun()">主动调用</button>
+    <button id="bid">被动调用</button>
+</body>
+</html>
+<script type="text/javascript">
+	function fun(){
+		alert("我困了");
+	}
+	document.getElementById("bid").onclick=function(){
+		alert("我想睡觉");
+	}
+</script>

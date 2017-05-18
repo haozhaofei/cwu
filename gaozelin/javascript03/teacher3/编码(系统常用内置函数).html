@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变量作用域</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+
+	//编码目的为了保证数据的完整性
+	/*var str = "http://www.baidu.com/a/b/c.html";
+	document.write("原地址:"+str+"<br>");
+	document.write("编码地:"+escape(str)+"<br>");    escape()字串编码   unescape()字串反编码
+	document.write("反编码:"+unescape(str)+"<br>");*/
+
+
+	var str2 = "var name = 100;";
+	//后端返回字符串的时候如果想执行需要eval()
+	eval(str2);   //eval()将参数字符串作为脚本代码来执行。
+	alert(name);
+</script>

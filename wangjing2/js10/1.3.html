@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1 three</title>
+	<style>
+		ul,li{padding: 0px;margin:0px;}
+		ul{list-style: none;}
+		ul li{height: 30px;margin: 10px 0px;line-height: 30px;background: #ccc}
+		ul li:hover{background: green;}
+		ul li.cc{background: #fc0;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>rotate</li>
+		<li>evolve</li>
+		<li>stretch</li>
+		<li>adequate</li>
+		<li>thrust</li>
+		<li>sufficent</li>
+	</ul>
+	<button onclick="doDel()">删除</button>
+</body>
+</html>
+<script>
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			this.className = 'cc';
+		}
+	}
+
+	function doDel(){
+		for(var i=0;i<list.length;i++){
+			if(list[i].className == 'cc'){
+				list[i].parentNode.removeChild(list[i]);
+				i--;
+			}
+		}
+	}
+</script>

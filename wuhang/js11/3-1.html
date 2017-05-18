@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	img{width:100px;height:60px;}
+</style>
+<body>
+    <div id="did">
+		<img src="images/1.jpg">
+		<img src="images/2.jpg">
+		<img src="images/3.jpg">
+	</div>
+	<button onclick="doChange()">替换</button>
+</body>
+</html>
+<script>
+	function doChange(){
+	   //父节点.replaceChild(new,old)方法替换指定节点
+	   var did=document.getElementById("did");
+       var old=document.getElementById("did").childNodes[1];
+       var img=document.createElement("img");
+       img.src="images/4.jpg";
+       did.replaceChild(img,old);
+	}
+</script>

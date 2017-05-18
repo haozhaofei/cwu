@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<select id="province" onchange="change()">
+	</select>
+	<select id="city">
+	</select>
+</body>
+</html>
+<script type="text/javascript">
+	var p;
+	var c;
+	window.onload=function(){
+	p=document.getElementById("province");
+	c=document.getElementById("city");
+	p[0]=new Option("------省份------",0);
+	p[1]=new Option("辽宁省",1);
+	p[2]=new Option("吉林省",2);
+	p[3]=new Option("黑龙江省",3);
+	c[0]=new Option("------城市------",0);
+}
+
+	function change() {
+
+	var index=document.getElementById("province").selectedIndex;
+	switch (index) {
+	case 0:
+	c[0]=new Option("------城市------",0);
+	break;
+
+	case 1:
+	c[0]=new Option("阜新",0);
+	c[1]=new Option("沈阳",1);
+	c[2]=new Option("锦州",2);
+	c[3]=new Option("营口",3);
+	break;
+
+	case 2:
+	c[0]=new Option("长春",0);
+	c[1]=new Option("白城",1);
+	c[2]=new Option("四平",2);
+	c[3]=new Option("通化",3);
+	break;
+
+	case 3:
+	c[0]=new Option("齐齐哈尔",0);
+	c[1]=new Option("牡丹江",1);
+	c[2]=new Option("大庆",2);
+	c[3]=new Option("佳木斯",3);
+	break;
+}
+}
+</script>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<base href="http://www.sina.com">
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<a href="http://www.kugou.com" id="aid">酷狗</a>
+	
+	<button onclick="doChange()">go die</button>
+</body>
+</html>
+<script>
+	function doChange(){
+		var aid = document.getElementById('aid');
+		aid.title = "猝";
+		aid.href = "http://www.kugou.com";
+		aid.innerHTML = "猝";
+	}
+</script>

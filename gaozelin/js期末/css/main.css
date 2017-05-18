@@ -1,0 +1,2088 @@
+
+html {
+    -moz-text-size-adjust: none;
+    -moz-user-select: none;
+}
+a, blockquote, body, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, img, input, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+a, h1, h2, h3, h4, h5, h6, p {
+    font-size: 100%;
+}
+li, ol, ul {
+    list-style: outside none none;
+}
+table {
+    border-collapse: collapse;
+    border-style: none;
+}
+button {
+    border: 0 none;
+    cursor: pointer;
+    padding: 0;
+}
+iframe {
+    display: block;
+}
+img, input, select {
+    vertical-align: middle;
+}
+img {
+    border: 0 none;
+}
+input, select {
+    outline: medium none;
+}
+a, img, textarea {
+    outline: medium none;
+}
+textarea {
+    resize: vertical;
+}
+a {
+    text-decoration: none;
+}
+.clear {
+    clear: both;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    width: 100%;
+}
+.HotRadio .itemContent::after, .HotSongList .itemContent::after, .albumList .itemContent::after, .clearFix::after, .clear_fix::after, .clearfix::after, .friendLink .itemContent::after, .listItem a::after, .navWrap .homeNav::after, .navWrap .subNav::after, .newSongList .pages::after, .newSongList .tabC a::after, .selectSongList .itemContent::after, .subContentM::after, .topNav ul::after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+.HotRadio .itemContent, .HotSongList .itemContent, .albumList .itemContent, .clearFix, .clear_fix, .clearfix, .friendLink .itemContent, .listItem a, .navWrap .homeNav, .navWrap .subNav, .newSongList .pages, .newSongList .tabC a, .selectSongList .itemContent, .subContentM, .topNav ul {
+}
+.HotRadio, .HotRadio .itemContent li, .HotSinger .cptMid, .HotSinger .cptSmall, .albumList .cptBigL, .albumList .cptMidL, .fl, .friendLink .itemContent a, .itemTitle .tabT, .itemTitle h3, .listItem .list, .listItem img, .navWrap .homeNav, .navWrap .homeNav li, .navWrap .subNav li, .newSongList, .newSongList .tabC .songName, .newSongList .tabC .songTips, .selectSongList, .selectSongList .cptBig, .selectSongList .cptMid {
+    float: left;
+}
+.HotSinger, .HotSongList, .albumList, .fr, .itemTitle .playAll, .navWrap .subNav {
+    float: right;
+}
+.hide {
+    display: none;
+}
+.search_input input, body, button, html {
+    font: 13px/1.5 微软雅黑,simsun,sans-serif;
+}
+.icon-b_dot, .icon-b_dot_hover, .icon-big_arrow_right, .icon-fouce-hover-l {
+    background-image: url("../images/sprite.png");
+    background-position: 0 -22px;
+    height: 10px;
+    width: 10px;
+}
+.icon-b_dot_hover, .icon-big_arrow_right, .icon-fouce-hover-l {
+    background-position: 0 -37px;
+}
+.icon-big_arrow_right, .icon-fouce-hover-l {
+    background-position: 0 -322px;
+    height: 14px;
+    width: 7px;
+}
+.icon-fouce-hover-l {
+    background-position: 0 -880px;
+    height: 120px;
+    width: 60px;
+}
+.icon-fouce-hover-r, .icon-fouce-l, .icon-fouce-r, .icon-play, .icon-play_all {
+    background-image: url("../images/sprite.png");
+    background-position: 0 -1005px;
+    height: 120px;
+    width: 60px;
+}
+.icon-fouce-l, .icon-fouce-r, .icon-play, .icon-play_all {
+    background-position: 0 -755px;
+}
+.icon-fouce-r, .icon-play, .icon-play_all {
+    background-position: 0 -1130px;
+}
+.icon-play, .icon-play_all {
+    background-position: 0 -303px;
+    height: 14px;
+    width: 12px;
+}
+.icon-play_all {
+    background-position: 0 -52px;
+    height: 12px;
+    width: 10px;
+}
+.icon-play:hover, .icon-play_b, .icon-play_b:hover, .icon-play_hover {
+    background-image: url("../images/sprite.png");
+    background-position: 0 -542px;
+    height: 48px;
+    width: 48px;
+}
+.icon-play:hover, .icon-play_b:hover, .icon-play_hover {
+    background-position: 0 -489px;
+}
+.icon-play:hover, .icon-play_hover {
+    background-position: 0 -341px;
+    height: 14px;
+    width: 12px;
+}
+.icon-play_s, .icon-play_s:hover, .icon-radio-hover-bg, .icon-radio_play {
+    background-image: url("../images/sprite.png");
+    background-position: 0 -401px;
+    height: 36px;
+    width: 36px;
+}
+.icon-play_s:hover, .icon-radio-hover-bg, .icon-radio_play {
+    background-position: 0 -360px;
+}
+.icon-radio-hover-bg, .icon-radio_play {
+    background-position: 0 -650px;
+    height: 100px;
+    width: 101px;
+}
+.icon-radio_play {
+    background-position: 0 -442px;
+    height: 42px;
+    width: 42px;
+}
+.icon-s-dot, .icon-s_dot_hover, .icon-select_icon {
+    background-image: url("../images/sprite.png");
+    background-position: 0 -11px;
+    height: 6px;
+    width: 6px;
+}
+.icon-s_dot_hover, .icon-select_icon {
+    background-position: 0 0;
+}
+.icon-select_icon {
+    background-position: 0 -267px;
+    height: 14px;
+    width: 14px;
+}
+.icon {
+    display: inline-block;
+}
+.mainPage {
+    margin: 0 auto;
+    min-width: 1000px;
+    position: relative;
+    width: 100%;
+}
+.content, .copyRight, .header, .nav {
+    margin: 0 auto;
+    width: 1000px;
+}
+.content {
+    overflow: hidden;
+}
+.header, .search_wrapper {
+    height: 78px;
+    position: relative;
+}
+.search_wrapper {
+    height: 36px;
+    margin-left: 193px;
+    padding-top: 20px;
+    width: 300px;
+    z-index: 9999;
+}
+.search_input {
+    border: 1px solid #ccc;
+    height: 34px;
+    line-height: 34px;
+    position: relative;
+    width: 298px;
+}
+.search_input input {
+    border: medium none;
+    color: #666;
+    height: 24px;
+    left: 0;
+    line-height: 24px;
+    margin-left: 14px;
+    padding: 5px 0;
+    position: absolute;
+    top: 0;
+    width: 249px;
+}
+.search_input .searh_btn {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    cursor: pointer;
+    height: 34px;
+    margin: 0;
+    outline: medium none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 34px;
+}
+.search_input .searh_btn i {
+    background-position: -40px -56px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    margin: 9px 0 0 9px;
+    width: 16px;
+}
+.search_input .searh_btn:hover i {
+    background-position: -40px -86px;
+}
+.search_input .searh_btn span, .topNav li .logout {
+    display: none;
+}
+.search_histroy, .search_recommend {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #fff;
+    border-color: currentcolor #d6d6d6 #d6d6d6;
+    border-image: none;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    display: none;
+    left: 0;
+    top: 56px;
+    width: 298px;
+}
+.search_recommend {
+    position: absolute;
+    z-index: 10001;
+}
+.search_recommend h4 {
+    border-top: 1px solid #e5e5e5;
+    font-size: 14px;
+    padding: 13px 10px 0 33px;
+    position: relative;
+}
+.search_recommend h4 span {
+    background: rgba(0, 0, 0, 0) url("../images/arrow_down.png") no-repeat scroll 0 0;
+    left: 10px;
+    padding: 5px;
+    position: absolute;
+    top: 21px;
+}
+.search_histroy dl, .search_recommend dl {
+    padding: 5px;
+}
+.search_recommend dl.recommend_mv_list {
+    padding-top: 0;
+}
+.search_histroy dd, .search_recommend dd {
+    color: #666;
+    cursor: pointer;
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+    padding: 0 10px 0 33px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.search_recommend dd em {
+    color: #14a9ff;
+    font-style: normal;
+}
+.search_histroy .clear_histroy dt:hover, .search_histroy dd.hover, .search_histroy dd:hover, .search_recommend dd.hover, .search_recommend dd:hover, .topNav .login_area .user_menu ul li a:hover {
+    background-color: #f4f4f4;
+}
+.search_histroy {
+    z-index: 999;
+}
+.search_histroy dd {
+    padding: 0 10px;
+}
+.search_histroy .clear_histroy {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: #666;
+    cursor: pointer;
+    padding: 5px;
+}
+.search_histroy .clear_histroy dt {
+    color: #666;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 10px;
+}
+.logo, .search_histroy, .topNav {
+    position: absolute;
+}
+.logo {
+    background: rgba(0, 0, 0, 0) url("../images/logo.png") no-repeat scroll left top;
+    display: inline-block;
+    height: 37px;
+    left: 0;
+    text-indent: -999em;
+    top: 20px;
+    width: 153px;
+}
+.logo a {
+    display: block;
+}
+.topNav {
+    right: 0;
+    top: 30px;
+    width: 402px;
+}
+.topNav ul {
+    border-right: 1px solid #e6e6e6;
+    float: left;
+    padding-right: 11px;
+    text-align: right;
+    width: 250px;
+}
+.topNav li {
+    float: left;
+    padding: 0 15px;
+}
+.topNav li a {
+    color: #777;
+}
+.topNav li a:hover {
+    color: #009af3;
+    text-decoration: none;
+}
+.topNav li .kuLogin {
+    margin-right: 10px;
+}
+.topNav .login_area {
+    float: left;
+    margin-left: 30px;
+    margin-top: -5px;
+    position: relative;
+    width: 110px;
+}
+.topNav .login_area #login_in a {
+    background-color: #169af3;
+    border: 1px solid #169af3;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    width: 48px;
+}
+.topNav .login_area #login_in a:hover {
+    background-color: #158fe1;
+    border: 1px solid #158fe1;
+    color: #fff;
+}
+.topNav .login_area #login_in a.regin_btn {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    color: #777;
+    margin-left: 10px;
+}
+.topNav .login_area #login_in a.regin_btn:hover {
+    background-color: #fff;
+    border: 1px solid #009af3;
+    color: #009af3;
+}
+.topNav .login_area #login_out {
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+}
+.topNav .login_area #login_out .user_img {
+    border-radius: 15px;
+    float: left;
+    height: 30px;
+    margin-right: 10px;
+    width: 30px;
+}
+.topNav .login_area #login_out .user_name {
+    color: #777;
+    display: block;
+    overflow: hidden;
+    padding-top: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 70px;
+}
+.topNav .login_area .user_menu {
+    background-color: #fff;
+    border: 1px solid #d6d6d6;
+    display: none;
+    height: 59px;
+    padding: 4px;
+    position: absolute;
+    top: 40px;
+    width: 117px;
+    z-index: 9999;
+}
+.topNav .login_area .user_menu .topArrow1, .topNav .login_area .user_menu .topArrow2 {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent transparent #d6d6d6;
+    border-image: none;
+    border-style: solid;
+    border-width: 8px 8px 9px;
+    height: 0;
+    left: 30px;
+    position: relative;
+    top: -21px;
+    width: 0;
+    z-index: 999;
+}
+.topNav .login_area .user_menu .topArrow2 {
+    border-bottom: 9px solid #fff;
+    top: -36.5px;
+    z-index: 1000;
+}
+.topNav .login_area .user_menu ul {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -32px;
+    width: 117px;
+}
+.topNav .login_area .user_menu ul li {
+    float: none;
+    height: 28px;
+    line-height: 28px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+}
+.topNav .login_area .user_menu ul li span {
+    left: 10px;
+    padding: 8px;
+    position: absolute;
+    top: 8px;
+}
+.topNav .login_area .user_menu ul li .user_icon1 {
+    background: rgba(0, 0, 0, 0) url("../images/user_icon1.png") no-repeat scroll left top;
+}
+.topNav .login_area .user_menu ul li .user_icon2 {
+    background: rgba(0, 0, 0, 0) url("../images/user_icon2.png") no-repeat scroll left top;
+}
+.topNav .login_area .user_menu ul li a {
+    color: #666;
+    display: block;
+}
+.navWrap {
+    background-color: #2c323b;
+    height: 55px;
+    position: relative;
+    width: 100%;
+    z-index: 999;
+}
+.navWrap .nav {
+    position: relative;
+    width: 1000px;
+    z-index: 200;
+}
+.navWrap .nav a {
+    color: #ddd;
+    font-size: 16px;
+}
+.navWrap .homeNav {
+    display: inline-block;
+}
+.navWrap .homeNav li {
+    display: inline-block;
+    height: 55px;
+    line-height: 55px;
+}
+.navWrap .homeNav li a.normal {
+    display: block;
+    padding: 0 30px;
+}
+.navWrap .homeNav li a.normal.active, .navWrap .homeNav li a.normal:hover {
+    background-color: #0c8ed9;
+    color: #fff;
+}
+.navWrap .homeNav li.more {
+    width: 113px;
+}
+.navWrap .homeNav li.more.hover, .navWrap .homeNav li.more:hover {
+    background-color: #0c8ed9;
+    background-position: 70px -65px;
+    color: #fff;
+}
+.navWrap .homeNav li.more:hover a {
+    background-position: 70px -65px;
+    color: #fff;
+}
+.navWrap .homeNav li.more.hover a:hover, .navWrap .homeNav li.more:hover a:hover {
+    background: #0c8ed9 url("../images/arrowMoreu.png") no-repeat scroll 72px 8px;
+    color: #fff;
+}
+.navWrap .homeNav li.more.hover a {
+    background: rgba(0, 0, 0, 0) url("../images/arrowMoreu.png") no-repeat scroll 72px 8px;
+    color: #fff;
+}
+.navWrap .homeNav li.more a {
+    background: rgba(0, 0, 0, 0) url("../images/arrowMored.png") no-repeatno-repeat scroll 72px 8px;
+    display: inline;
+    margin-left: 5px;
+    padding: 0 30px;
+}
+.navWrap .homeNav li.more a.hover, .navWrap .homeNav li.more a:hover {
+    background: rgba(0, 0, 0, 0) url("../images/arrowMoreu.png") no-repeatno-repeat scroll 72px 8px;
+    color: #fff;
+}
+.navWrap .secondMenu {
+    background-color: #252a32;
+    display: none;
+    height: 146px;
+    left: 324px;
+    position: absolute;
+    top: 55px;
+    width: 113px;
+    z-index: 99;
+}
+.navWrap .secondMenu li, .navWrap .secondMenu li a {
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0;
+}
+.navWrap .secondMenu li {
+    float: none;
+    margin: 0;
+    width: 113px;
+}
+.navWrap .secondMenu li a {
+    background: #252b34 none repeat scroll 0 0;
+    color: #bbb;
+    font-size: 15px;
+    text-align: center;
+}
+.navWrap .secondMenu li a:hover {
+    background-color: #2d343d;
+    border-bottom: 1px solid #383d44;
+    border-top: 1px solid #383d44;
+    color: #fff;
+    line-height: 34px;
+}
+.navWrap .secondMenu li a:last-child {
+    border-bottom: medium none;
+}
+.navWrap .productMenu {
+    background-color: #fff;
+    display: none;
+    height: 38px;
+    left: 0;
+    line-height: 438px;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    width: 100%;
+    z-index: 88;
+}
+.navWrap .productMenu .productInnerMenu {
+    height: 38px;
+    line-height: 38px;
+    margin: 0 auto;
+    padding-left: 30px;
+    width: 970px;
+}
+.navWrap .productMenu .productInnerMenu a {
+    color: #777;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 40px;
+}
+.navWrap .productMenu .productInnerMenu a.hover, .navWrap .productMenu .productInnerMenu a:hover, .navWrap .subNav li a.hover, .navWrap .subNav li a:hover {
+    color: #14a9ff;
+}
+.navWrap .subNav {
+    display: inline-block;
+    height: 35px;
+    margin-top: 16px;
+    position: relative;
+}
+.navWrap .subNav li {
+    height: 100%;
+    margin-left: 30px;
+}
+.navWrap .subNav li .icon {
+    vertical-align: middle;
+}
+.navWrap .subNav li a, .sliderPages a {
+    background-image: url("../images/sprite.png");
+}
+.navWrap .subNav li a {
+    color: #bbb;
+    font-size: 13px;
+    padding-left: 20px;
+}
+.navWrap .subNav li a.icon-nav1 {
+    background-position: 0 -119px;
+}
+.navWrap .subNav li a.icon-nav1 .hover, .navWrap .subNav li a.icon-nav1:hover {
+    background-position: 0 -101px;
+}
+.navWrap .subNav li a.icon-nav2 {
+    background-position: 0 -155px;
+}
+.navWrap .subNav li a.icon-nav2 .hover, .navWrap .subNav li a.icon-nav2:hover {
+    background-position: 0 -137px;
+}
+.navWrap .subNav li a.icon-nav3 {
+    background-position: 0 -191px;
+}
+.navWrap .subNav li a.icon-nav3 .hover, .navWrap .subNav li a.icon-nav3:hover {
+    background-position: 0 -173px;
+}
+.navWrap .subNav li a.icon-nav4 {
+    background-position: 0 -226px;
+}
+.navWrap .subNav li a.icon-nav4 .hover, .navWrap .subNav li a.icon-nav4:hover {
+    background-position: 0 -208px;
+}
+.navWrap .subNav li a.icon-nav5 {
+    background-position: 0 -281px;
+}
+.navWrap .subNav li a.icon-nav5 .hover, .navWrap .subNav li a.icon-nav5:hover {
+    background-position: 0 -245px;
+}
+.playtips {
+    height: 160px;
+    left: 50%;
+    margin-left: -80px;
+    margin-top: -125px;
+    position: fixed;
+    top: 50%;
+    width: 250px;
+    z-index: 9999;
+}
+.playtips_bg, .relativeD {
+    height: 160px;
+    position: relative;
+    width: 250px;
+}
+.playtips_bg {
+    background-color: #000;
+    border-radius: 10px;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+}
+.playtips_icon {
+    left: 50%;
+    margin-left: -28px;
+    position: absolute;
+    top: 32px;
+}
+.tipstext {
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    top: 108px;
+    width: 100%;
+}
+.search_icon {
+    background: rgba(0, 0, 0, 0) url("../images/search.png") no-repeat scroll 0 0;
+}
+.content {
+    position: relative;
+}
+.banner {
+    height: 445px;
+    overflow: hidden;
+}
+.banner li {
+    float: left;
+    height: 445px;
+    width: 100%;
+}
+.banner li a {
+    display: block;
+    line-height: 500px;
+    text-align: center;
+}
+.banner li img {
+    margin: 0 auto;
+    vertical-align: top;
+}
+.sliderNext, .sliderPrev {
+    display: none;
+    height: 120px;
+    margin-top: -60px;
+    position: absolute;
+    text-indent: -999em;
+    top: 50%;
+    width: 60px;
+    z-index: 999;
+}
+.sliderPrev {
+    background-position: 0 -755px;
+    left: 0;
+}
+.sliderPrev:hover {
+    background-position: 0 -880px;
+}
+.sliderNext {
+    background-position: 0 -1130px;
+    right: 0;
+}
+.sliderNext:hover {
+    background-position: 0 -1005px;
+}
+.sliderPages {
+    bottom: 80px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.sliderPages div {
+    margin: 0 auto;
+}
+.sliderPages a {
+    background-position: 0 -22px;
+    display: inline-block;
+    font-size: 0;
+    height: 10px;
+    margin: 0 7px;
+    text-indent: -999em;
+    width: 12px;
+}
+.sliderPages a.active {
+    background-position: 0 -37px;
+}
+.downloadBlur, .overlayer {
+    height: 60px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+.downloadBlur {
+    overflow: hidden;
+    top: 518px;
+}
+.overlayer {
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    z-index: 10;
+}
+.download, .downloadWrapper {
+    position: absolute;
+}
+.downloadWrapper {
+    height: 500px;
+    left: 0;
+    line-height: 500px;
+    top: -400px;
+    width: 100%;
+    z-index: 9;
+}
+.download {
+    border-radius: 32px;
+    color: #dee2e7;
+    font-size: 24px;
+    height: 64px;
+    left: 50%;
+    line-height: 58px;
+    margin-left: -325px;
+    text-align: center;
+    top: 518px;
+    width: 745px;
+    z-index: 20;
+}
+.download span.line {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    margin-top: 25px;
+}
+.download a {
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 15px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 20px;
+    padding-left: 30px;
+    text-align: center;
+    width: 130px;
+}
+.download a:hover {
+    color: #ffffdf;
+}
+.download #pcDown {
+    background: rgba(0, 0, 0, 0) url("http://static.kgimg.com/public/root/images/pc.png") no-repeat scroll 20px center;
+    padding-right: 45px;
+}
+.download #pcDown:hover {
+    background: rgba(0, 0, 0, 0) url("http://static.kgimg.com/public/root/images/pc_hover.png") no-repeat scroll 20px center;
+}
+.download #iphoneDown {
+    background: rgba(0, 0, 0, 0) url("http://static.kgimg.com/public/root/images/mac.png") no-repeat scroll left center;
+    margin: 20px 0 0 55px;
+    padding-right: 45px;
+}
+.download #iphoneDown:hover {
+    background: rgba(0, 0, 0, 0) url("http://static.kgimg.com/public/root/images/mac_hover.png") no-repeat scroll left center;
+}
+.download #androidDown {
+    background: rgba(0, 0, 0, 0) url("http://static.kgimg.com/public/root/images/andriod.png") no-repeat scroll left center;
+    margin-left: 55px;
+}
+.download #androidDown:hover {
+    background: rgba(0, 0, 0, 0) url("http://static.kgimg.com/public/root/images/andriod_hover.png") no-repeat scroll left center;
+}
+.subContentM {
+    margin-top: 40px;
+}
+.limitHeight {
+    height: 355px;
+}
+.forSaleM {
+    margin-top: 40px;
+}
+.itemTitle {
+    height: 30px;
+    padding-bottom: 30px;
+}
+.itemTitle .more {
+    color: #999;
+    margin-top: 7px;
+}
+.itemTitle .tabT span.active, .itemTitle .tabT span:hover, .itemTitle a.more:hover {
+    color: #009af3;
+}
+.itemTitle .tabT {
+    line-height: 30px;
+}
+.itemTitle .tabT span {
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 20px;
+}
+.itemTitle .tabT span:last-child {
+    margin-right: 0;
+}
+.itemTitle .playAll {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 2px;
+    color: #555;
+    padding: 5px 10px;
+}
+.itemTitle .playAll .icon-play {
+    margin: -4px 5px 0 0;
+    vertical-align: middle;
+}
+.itemTitle .playAll em {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    font-style: normal;
+}
+.itemTitle .playAll:hover {
+    border: 1px solid #009af3;
+    color: #009af3;
+}
+.itemTitle .playAll:hover .icon-play {
+    background-position: 0 -341px;
+}
+.itemTitle h3 {
+    color: #555;
+    display: block;
+    font-size: 0;
+    height: 30px;
+    margin-right: 25px;
+    width: 120px;
+}
+.itemTitle h3 b {
+    color: #009af3;
+    font-weight: 400;
+}
+.hasBorder {
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 10px;
+}
+.cpt, .listItem {
+    position: relative;
+}
+.cpt .cptT {
+    background: rgba(0, 0, 0, 0) url("../images/cptTBg.png") no-repeat scroll right center;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    padding-right: 8px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+    width: 152px;
+    z-index: 2;
+}
+.cpt .Cover {
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+.cpt .Cover a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.cpt .Cover .playBtn {
+    cursor: pointer;
+    display: none;
+    left: 50%;
+    position: absolute;
+    text-indent: -999em;
+    top: 50%;
+    z-index: 9999;
+}
+.cpt .Cover .icon-play_b {
+    margin-left: -24px;
+    margin-top: -24px;
+}
+.cpt .Cover .icon-play_s {
+    margin-left: -18px;
+    margin-top: -18px;
+}
+.cpt .Cover, .cpt img, .listItem a .Cover {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.cpt img {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.cpt .cptB, .cpt .cptBg {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+}
+.cpt .cptB {
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    font-size: 14px;
+    height: 38px;
+    padding: 6px 8px;
+    width: 144px;
+}
+.cpt .cptB .songListName, .cpt .cptB .songListSinger, .listItem .list dd {
+    color: #fff;
+    line-height: 19px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cpt .cptB .songListSinger, .listItem .list dd {
+    color: #cfcfcf;
+}
+.cpt .cptBg {
+    display: none;
+    height: 50px;
+}
+.cpt a.hover .playBtn, .cpt a:hover .playBtn {
+    display: block;
+}
+.listItem {
+    background-color: #f6f6f6;
+    margin-bottom: 15px;
+}
+.listItem a .Cover {
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+    visibility: hidden;
+}
+.listItem a.hover .Cover, .listItem a:hover .Cover {
+    visibility: visible;
+}
+.listItem a .Cover, .listItem img {
+    height: 98px;
+    width: 98px;
+}
+.listItem .list {
+    font-size: 14px;
+    height: 68px;
+    overflow: hidden;
+    padding: 15px 10px;
+    width: 200px;
+}
+.listItem .list dt {
+    color: #333;
+    font-weight: 700;
+    line-height: 24px;
+}
+.listItem .list dd {
+    color: #555;
+    font-size: 14px;
+    line-height: 24px;
+    width: 180px;
+}
+.listItem .playBtn {
+    left: 31px;
+    margin-top: -18px;
+    position: absolute;
+    text-indent: -999em;
+    top: 50%;
+}
+.listItem .arrow {
+    margin-top: -7px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    z-index: 20;
+}
+.HotSongList, .selectSongList {
+    overflow: hidden;
+    width: 650px;
+}
+.selectSongList .itemTitle {
+    background: rgba(0, 0, 0, 0) url("../images/selectlist.jpg") no-repeat scroll 0 0;
+}
+.selectSongList .itemContent {
+    width: 660px;
+}
+.selectSongList .itemContent .icon-select_icon {
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+}
+.selectSongList .icon-play_s {
+    margin: 0;
+}
+.selectSongList .cptBig {
+    height: 325px;
+    margin-right: 5px;
+    width: 325px;
+}
+.selectSongList .cptBig .Cover {
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+    height: 325px;
+    visibility: hidden;
+    width: 325px;
+    z-index: 3;
+}
+.selectSongList .cptBig .Cover a, .selectSongList .cptMid .Cover a {
+    background: #000 none repeat scroll 0 0;
+    height: 325px;
+    opacity: 0;
+    width: 325px;
+}
+.selectSongList .cptBig .Cover .playBtn {
+    left: 300px;
+    top: 300px;
+    z-index: 99999999;
+}
+.selectSongList .cptBig .cptB {
+    width: 309px;
+}
+.selectSongList .cptBig .cptB .songListName, .selectSongList .cptBig .cptB .songListSinger {
+    width: 295px;
+}
+.selectSongList .cptBig .cptBg {
+    width: 325px;
+}
+.selectSongList .cptMid {
+    height: 160px;
+    margin: 0 5px 5px 0;
+    padding: 0;
+    width: 160px;
+}
+.selectSongList .cptMid .Cover {
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+    height: 160px;
+    visibility: hidden;
+    width: 160px;
+    z-index: 3;
+}
+.selectSongList .cptMid .Cover a {
+    height: 160px;
+    width: 160px;
+}
+.selectSongList .cptMid .Cover .playBtn {
+    left: 130px;
+    top: 135px;
+    z-index: 99999999;
+}
+.selectSongList .cptMid .cptB .songListName, .selectSongList .cptMid .cptB .songListSinger {
+    width: 100px;
+}
+.selectSongList .cptMid .cptBg {
+    width: 160px;
+}
+.selectSongList .cpt:hover .Cover {
+    visibility: visible;
+}
+.HotSongList {
+    width: 320px;
+}
+.HotSongList .itemTitle {
+    background: rgba(0, 0, 0, 0) url("../images/hotlist.jpg") no-repeat scroll 0 0;
+}
+.HotSongList .itemContent {
+    height: 325px;
+    overflow: hidden;
+}
+.hardWare {
+    margin-top: 10px;
+}
+.newSongList {
+    height: 375px;
+    overflow: hidden;
+    width: 650px;
+}
+.newSongList .itemTitle {
+    background: rgba(0, 0, 0, 0) url("../images/newlist.jpg") no-repeat scroll 0 0;
+    padding-bottom: 20px;
+}
+.newSongList .itemContent {
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+.newSongList .pages {
+    display: inline-block;
+    height: 9px;
+    margin: 10px auto 0;
+    padding-left: 290px;
+}
+.newSongList .pages div {
+    display: inline;
+}
+.newSongList .pages i {
+    font-style: normal;
+}
+.newSongList .pages .page {
+    color: #8d8d8d;
+    display: inline;
+    float: left;
+    font-size: 12px;
+    margin: 0 15px;
+}
+.newSongList .pages .next, .newSongList .pages .prev {
+    background: rgba(0, 0, 0, 0) url("../images/pageChange.jpg") no-repeat scroll 0 0;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 9px;
+    line-height: 9px;
+    margin-top: 5px;
+    text-indent: -999em;
+    width: 6px;
+}
+.newSongList .pages .prev, .newSongList .pages .prev:hover {
+    background-position: 0 -14px;
+}
+.newSongList .pages .next, .newSongList .pages .next:hover {
+    background-position: -13px -14px;
+}
+.newSongList .p .disable {
+    background-position: 0 0;
+    height: 9px;
+}
+.newSongList .n .disable {
+    background-position: -13px 0;
+    height: 9px;
+}
+.newSongList .tabC a, .newSongList .tabC li {
+    height: 35px;
+    line-height: 35px;
+}
+.newSongList .tabC a {
+    color: #333;
+    overflow: hidden;
+    padding: 0 10px;
+    position: relative;
+}
+.newSongList .tabC a.hover, .newSongList .tabC a:hover {
+    background-color: #f5f8fb;
+    color: #009af3;
+}
+.newSongList .tabC a, .newSongList .tabC a:hover .playBtn {
+    display: block;
+    z-index: 999;
+}
+.newSongList .tabC a:hover .songTips {
+    display: none;
+}
+.newSongList .tabC a.hover .playBtn {
+    display: block;
+}
+.newSongList .tabC .songName {
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.newSongList .tabC .songTime {
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+.newSongList .tabC .songTips {
+    background: rgba(0, 0, 0, 0) url("../images/first.png") no-repeat scroll 0 0;
+    margin: 12px 0 0 10px;
+    padding: 12px 0 0 21px;
+}
+.newSongList .tabC .downloadBtn, .newSongList .tabC .playBtn, .newSongList .tabC .shareBtn {
+    background: rgba(0, 0, 0, 0) url("http://static.kgimg.com/common/images/pc_temp_v2/icon_splice.png?20150814") no-repeat scroll 0 0;
+    display: none;
+    position: absolute;
+    top: 10px;
+    z-index: 999;
+}
+.newSongList .tabC .playBtn {
+    background-position: 0 0;
+    height: 14px;
+    right: 80px;
+    text-indent: 999em;
+    width: 12px;
+}
+.newSongList .tabC .playBtn:hover {
+    background-position: 0 -30px;
+}
+.newSongList .tabC .downloadBtn, .newSongList .tabC .shareBtn {
+    background-position: -90px 0;
+    height: 15px;
+    right: 55px;
+    width: 15px;
+}
+.newSongList .tabC .downloadBtn:hover {
+    background-position: -90px -30px;
+}
+.newSongList .tabC .downloadBtn:active {
+    background-position: -90px -60px;
+}
+.newSongList .tabC .shareBtn {
+    background-position: -298px 0;
+}
+.newSongList .tabC .shareBtn:hover {
+    background-position: -298px -30px;
+}
+.newSongList .tabC .shareBtn:active {
+    background-position: -298px -60px;
+}
+.albumList {
+    overflow: hidden;
+    width: 320px;
+}
+.albumList .itemTitle {
+    background: rgba(0, 0, 0, 0) url("../images/albumlist.jpg") no-repeat scroll 0 0;
+    padding-bottom: 20px;
+}
+.albumList .itemContent {
+    width: 332px;
+}
+.albumList .itemContent a:hover .songListName {
+    color: #009af3;
+}
+.albumList .cpt .Cover {
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+    visibility: hidden;
+}
+.albumList .cpt:hover .Cover {
+    visibility: visible;
+}
+.albumList .cptBigL {
+    height: 175px;
+    margin-bottom: 12px;
+    width: 320px;
+}
+.albumList .cptBigL a {
+    display: block;
+    height: 175px;
+    width: 320px;
+}
+.albumList .cptBigL a:hover .songListName {
+    color: #fff;
+}
+.albumList .cptBigL .cptB {
+    width: 304px;
+}
+.albumList .cptBigL .cptBg {
+    width: 320px;
+}
+.albumList .cptMidL {
+    height: 125px;
+    margin-right: 12px;
+    width: 154px;
+}
+.albumList .cptMidL a {
+    display: block;
+    height: 125px;
+    width: 154px;
+}
+.albumList .cptMidL img {
+    height: 84px;
+    position: static;
+}
+.albumList .cptMidL .Cover {
+    height: 84px;
+}
+.albumList .cptMidL .cptB {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    padding: 5px 0 0;
+    position: static;
+}
+.albumList .cptMidL .cptB .songListName {
+    color: #444;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 154px;
+}
+.albumList .cptMidL .cptB .songListSinger {
+    color: #888;
+    font-size: 12px;
+}
+.HotRadio, .HotSinger {
+    overflow: hidden;
+    width: 650px;
+}
+.HotRadio .itemTitle {
+    background: rgba(0, 0, 0, 0) url("../images/hotredio.jpg") no-repeat scroll 0 0;
+}
+.HotRadio .itemContent ul {
+    width: 700px;
+}
+.HotRadio .itemContent li {
+    margin-bottom: 25px;
+    margin-right: 37px;
+    width: 100px;
+}
+.HotRadio .itemContent a {
+    outline: medium none;
+    position: relative;
+}
+.HotRadio .itemContent a .Cover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 / 100% 100%;
+    height: 100px;
+    position: absolute;
+    visibility: visible;
+    width: 100px;
+    z-index: 999;
+}
+.HotRadio .itemContent a .playBtn {
+    display: none;
+    left: 50%;
+    margin-left: -21px;
+    margin-top: -21px;
+    position: absolute;
+    top: 50%;
+}
+.HotRadio .itemContent a:hover .Cover {
+    background: rgba(0, 0, 0, 0.2) url("../images/radio.png") no-repeat scroll left top;
+}
+.HotRadio .itemContent a:hover .playBtn {
+    display: block;
+}
+.HotRadio .itemContent a:hover .radioKind, .footer .links a:hover, .friendLink .itemContent a:hover {
+    color: #009af3;
+}
+.HotRadio .itemContent .radioLogo {
+    height: 100px;
+    margin-bottom: 10px;
+    margin-right: 0;
+    width: 100px;
+}
+.HotRadio .itemContent .radioKind, .ui-dialog-statusbar label:hover {
+    color: #333;
+}
+.HotRadio .itemContent .radioName {
+    color: #888;
+    display: none;
+}
+.HotRadio .itemContent .radioKind, .HotRadio .itemContent .radioName {
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100px;
+}
+.HotSinger {
+    width: 320px;
+}
+.HotSinger .itemTitle {
+    background: rgba(0, 0, 0, 0) url("../images/hotsinger.jpg") no-repeat scroll 0 0;
+    overflow: hidden;
+    width: 350px;
+}
+.HotSinger .itemTitle h3 {
+    margin-right: 15px;
+}
+.HotSinger .itemTitle .tabT {
+    width: 210px;
+}
+.HotSinger .itemContent, .partner {
+    overflow: hidden;
+    width: 330px;
+}
+.HotSinger .itemContent .firstUl {
+    height: 320px;
+    position: relative;
+    width: 100%;
+}
+.HotSinger .itemContent .firstUl li {
+    height: 320px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 330px;
+}
+.HotSinger .itemContent .firstUl li .Cover {
+    visibility: hidden;
+}
+.HotSinger .itemContent .firstUl li .tabC {
+    height: 6px;
+    line-height: 6px;
+    padding-top: 17px;
+    text-align: center;
+}
+.HotSinger .itemContent .firstUl li .tabC a {
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+.HotSinger .itemContent .secondUl {
+    height: 270px;
+    position: relative;
+    width: 330px;
+}
+.HotSinger .itemContent .secondUl li {
+    height: 270px;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.HotSinger .cptBg {
+    background: rgba(0, 0, 0, 0) url("../images/album_cpt_bg.png") repeat scroll right 0;
+}
+.HotSinger .cptB {
+    background: rgba(0, 0, 0, 0) url("../images/album_cpt_bg.png") no-repeat scroll left bottom;
+}
+.HotSinger .cptB .songListSinger {
+    color: #fff;
+    line-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.HotSinger .cptMid {
+    height: 160px;
+    margin: 0 5px 5px 0;
+    padding: 0;
+    width: 160px;
+}
+.HotSinger .cptMid .Cover {
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+    height: 160px;
+    width: 160px;
+}
+.HotSinger .cptMid .cptB {
+    width: 8142px;
+}
+.HotSinger .cptSmall {
+    height: 105px;
+    margin: 0 5px 0 0;
+    padding: 0;
+    width: 105px;
+}
+.HotSinger .cptSmall .Cover {
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+    height: 105px;
+    width: 105px;
+}
+.HotSinger .cptSmall .cptB {
+    width: 89px;
+}
+.partner {
+    margin-top: 40px;
+    width: 1000px;
+}
+.partner .itemTitle {
+    background: rgba(0, 0, 0, 0) url("../images/partner.jpg") no-repeat scroll 0 0;
+    padding-bottom: 30px;
+}
+.partner .hz_logo {
+    width: 1010px;
+}
+.partner .hz_logo a {
+    border: 1px dashed #ccc;
+    cursor: default;
+    float: left;
+    height: 58px;
+    margin: 0 12px 12px 0;
+    overflow: hidden;
+    padding: 0;
+    width: 130px;
+}
+.partner .hz_logo .r {
+    margin-right: 0;
+}
+.partner .hz_logo a img {
+    border: 0 none;
+    height: 58px;
+    width: 130px;
+}
+.friendLink {
+    margin-top: 30px;
+}
+.friendLink .itemTitle {
+    background: rgba(0, 0, 0, 0) url("../images/friendLink.jpg") no-repeat scroll 0 0;
+    padding-bottom: 30px;
+}
+.friendLink .itemContent {
+    padding-bottom: 20px;
+    width: 1000px;
+}
+.friendLink .itemContent a {
+    color: #555;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 125px;
+}
+.scrollTop {
+    bottom: 50px;
+    cursor: pointer;
+    display: none;
+    margin-right: -580px;
+    position: fixed;
+    right: 50%;
+    z-index: 9999;
+}
+.icon-scrollTop, .icon-scrollTop a {
+    height: 50px;
+    width: 50px;
+}
+.icon-scrollTop a {
+    background: rgba(0, 0, 0, 0) url("../images/scrollTop1.png") no-repeat scroll left top;
+    display: block;
+}
+.icon-scrollTop a:hover {
+    background: rgba(0, 0, 0, 0) url("../images/scrollTop2.png") no-repeat scroll left top;
+}
+.ui-dialog {
+    background-clip: padding-box;
+    background-color: #fff;
+    color: #333;
+    font-family: Helvetica,arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    opacity: 0;
+    outline: 0 none;
+    position: relative;
+    transform: scale(0);
+    transition: transform 0.15s ease-in-out 0s, opacity 0.15s ease-in-out 0s;
+}
+.ui-popup-show .ui-dialog {
+    opacity: 1;
+    transform: scale(1);
+}
+.ui-popup-focus .ui-dialog {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+.ui-popup-modal .ui-dialog {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16pc rgba(255, 255, 255, 0.3);
+}
+.ui-dialog-grid {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+}
+.ui-dialog-body, .ui-dialog-grid {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+}
+.ui-dialog-footer, .ui-dialog-header {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    text-align: left;
+}
+.ui-dialog-header {
+    border-bottom: 1px solid #e5e5e5;
+    white-space: nowrap;
+}
+.ui-dialog-close {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    color: #000;
+    cursor: pointer;
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 0 4px;
+    position: relative;
+    right: 13px;
+    text-shadow: 0 1px 0 #fff;
+    top: 13px;
+}
+.ui-dialog-close:focus, .ui-dialog-close:hover {
+    color: #000;
+    cursor: pointer;
+    opacity: 0.5;
+    outline: 0 none;
+    text-decoration: none;
+}
+.ui-dialog-title {
+    cursor: default;
+    font-weight: 700;
+    margin: 0;
+    min-height: 16.43px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ui-dialog-body {
+    padding: 20px;
+    text-align: center;
+}
+.ui-dialog-content {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+}
+.ui-dialog-footer {
+    padding: 0 20px 20px;
+}
+.ui-dialog-statusbar {
+    color: #888;
+    float: left;
+    font-size: 14px;
+    line-height: 1.42857;
+    margin-right: 20px;
+    padding: 6px 0;
+    white-space: nowrap;
+}
+.ui-dialog-statusbar .label, .ui-dialog-statusbar input {
+    vertical-align: middle;
+}
+.ui-dialog-button {
+    float: right;
+    white-space: nowrap;
+}
+.ui-dialog-footer button + button {
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+.ui-dialog-footer button {
+    -moz-user-select: none;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    overflow: visible;
+    padding: 6px 9pt;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+}
+.ui-dialog-footer button:focus {
+    outline: thin dotted #333;
+    outline-offset: -2px;
+    text-decoration: none;
+}
+.ui-dialog-footer button:hover {
+    text-decoration: none;
+}
+.ui-dialog-footer button:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125) inset;
+    outline: 0 none;
+}
+.ui-dialog-footer button[disabled] {
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.65;
+    pointer-events: none;
+}
+.ui-dialog-footer button:active, .ui-dialog-footer button:focus, .ui-dialog-footer button:hover {
+    background-color: #ebebeb;
+    border-color: #adadad;
+    color: #333;
+}
+.ui-dialog-footer button:active {
+    background-image: none;
+}
+.ui-dialog-footer button[disabled], .ui-dialog-footer button[disabled]:active, .ui-dialog-footer button[disabled]:focus, .ui-dialog-footer button[disabled]:hover {
+    background-color: #fff;
+    border-color: #ccc;
+}
+.ui-dialog-footer button.ui-dialog-autofocus {
+    background-color: #428bca;
+    border-color: #357ebd;
+    color: #fff;
+}
+.ui-dialog-footer button.ui-dialog-autofocus:active, .ui-dialog-footer button.ui-dialog-autofocus:focus, .ui-dialog-footer button.ui-dialog-autofocus:hover {
+    background-color: #3276b1;
+    border-color: #285e8e;
+    color: #fff;
+}
+.ui-dialog-footer button.ui-dialog-autofocus:active {
+    background-image: none;
+}
+.ui-popup-top .ui-dialog, .ui-popup-top-left .ui-dialog, .ui-popup-top-right .ui-dialog {
+    top: -8px;
+}
+.ui-popup-bottom .ui-dialog, .ui-popup-bottom-left .ui-dialog, .ui-popup-bottom-right .ui-dialog {
+    top: 8px;
+}
+.ui-popup-left .ui-dialog, .ui-popup-left-bottom .ui-dialog, .ui-popup-left-top .ui-dialog {
+    left: -8px;
+}
+.ui-popup-right .ui-dialog, .ui-popup-right-bottom .ui-dialog, .ui-popup-right-top .ui-dialog {
+    left: 8px;
+}
+.ui-dialog-arrow-a, .ui-dialog-arrow-b {
+    border: 8px dashed transparent;
+    display: none;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+}
+.ui-popup-follow .ui-dialog-arrow-a, .ui-popup-follow .ui-dialog-arrow-b {
+    display: block;
+}
+.ui-popup-top .ui-dialog-arrow-a, .ui-popup-top-left .ui-dialog-arrow-a, .ui-popup-top-right .ui-dialog-arrow-a {
+    border-top: 8px solid #7c7c7c;
+    bottom: -1pc;
+}
+.ui-popup-top .ui-dialog-arrow-b, .ui-popup-top-left .ui-dialog-arrow-b, .ui-popup-top-right .ui-dialog-arrow-b {
+    border-top: 8px solid #fff;
+    bottom: -15px;
+}
+.ui-popup-top-left .ui-dialog-arrow-a, .ui-popup-top-left .ui-dialog-arrow-b {
+    left: 15px;
+}
+.ui-popup-top .ui-dialog-arrow-a, .ui-popup-top .ui-dialog-arrow-b {
+    left: 50%;
+    margin-left: -8px;
+}
+.ui-popup-top-right .ui-dialog-arrow-a, .ui-popup-top-right .ui-dialog-arrow-b {
+    right: 15px;
+}
+.ui-popup-bottom .ui-dialog-arrow-a, .ui-popup-bottom-left .ui-dialog-arrow-a, .ui-popup-bottom-right .ui-dialog-arrow-a {
+    border-bottom: 8px solid #7c7c7c;
+    top: -1pc;
+}
+.ui-popup-bottom .ui-dialog-arrow-b, .ui-popup-bottom-left .ui-dialog-arrow-b, .ui-popup-bottom-right .ui-dialog-arrow-b {
+    border-bottom: 8px solid #fff;
+    top: -15px;
+}
+.ui-popup-bottom-left .ui-dialog-arrow-a, .ui-popup-bottom-left .ui-dialog-arrow-b {
+    left: 15px;
+}
+.ui-popup-bottom .ui-dialog-arrow-a, .ui-popup-bottom .ui-dialog-arrow-b {
+    left: 50%;
+    margin-left: -8px;
+}
+.ui-popup-bottom-right .ui-dialog-arrow-a, .ui-popup-bottom-right .ui-dialog-arrow-b {
+    right: 15px;
+}
+.ui-popup-left .ui-dialog-arrow-a, .ui-popup-left-bottom .ui-dialog-arrow-a, .ui-popup-left-top .ui-dialog-arrow-a {
+    border-left: 8px solid #7c7c7c;
+    right: -1pc;
+}
+.ui-popup-left .ui-dialog-arrow-b, .ui-popup-left-bottom .ui-dialog-arrow-b, .ui-popup-left-top .ui-dialog-arrow-b {
+    border-left: 8px solid #fff;
+    right: -15px;
+}
+.ui-popup-left-top .ui-dialog-arrow-a, .ui-popup-left-top .ui-dialog-arrow-b {
+    top: 15px;
+}
+.ui-popup-left .ui-dialog-arrow-a, .ui-popup-left .ui-dialog-arrow-b {
+    margin-top: -8px;
+    top: 50%;
+}
+.ui-popup-left-bottom .ui-dialog-arrow-a, .ui-popup-left-bottom .ui-dialog-arrow-b {
+    bottom: 15px;
+}
+.ui-popup-right .ui-dialog-arrow-a, .ui-popup-right-bottom .ui-dialog-arrow-a, .ui-popup-right-top .ui-dialog-arrow-a {
+    border-right: 8px solid #7c7c7c;
+    left: -1pc;
+}
+.ui-popup-right .ui-dialog-arrow-b, .ui-popup-right-bottom .ui-dialog-arrow-b, .ui-popup-right-top .ui-dialog-arrow-b {
+    border-right: 8px solid #fff;
+    left: -15px;
+}
+.ui-popup-right-top .ui-dialog-arrow-a, .ui-popup-right-top .ui-dialog-arrow-b {
+    top: 15px;
+}
+.ui-popup-right .ui-dialog-arrow-a, .ui-popup-right .ui-dialog-arrow-b {
+    margin-top: -8px;
+    top: 50%;
+}
+.ui-popup-right-bottom .ui-dialog-arrow-a, .ui-popup-right-bottom .ui-dialog-arrow-b {
+    bottom: 15px;
+}
+@keyframes ui-dialog-loading {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+@keyframes ui-dialog-loading {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+.ui-dialog-loading {
+    color: #666;
+    display: block;
+    font-size: 0;
+    height: 2pc;
+    margin: -1pc auto 0;
+    overflow: hidden;
+    position: relative;
+    text-indent: -999em;
+    top: 50%;
+    vertical-align: middle;
+    width: 2pc;
+}
+.ui-dialog-loading::after {
+    animation: 1.5s linear 0s normal none infinite running ui-dialog-loading;
+    border-radius: 100%;
+    box-shadow: 0 -10px 0 1px #ccc, 10px 0 #ccc, 0 10px #ccc, -10px 0 #ccc, -7px -7px 0 0.5px #ccc, 7px -7px 0 1.5px #ccc, 7px 7px #ccc, -7px 7px #ccc;
+    content: "";
+    height: 3px;
+    margin: 14.5px 0 0 14.5px;
+    position: absolute;
+    transform: rotate(360deg);
+    width: 3px;
+}
+.ui-dialog-grid {
+    width: 100%;
+}
+.ui-dialog-header {
+    background-color: #2c323b;
+    color: #fff;
+    font-style: normal;
+    padding: 0;
+}
+.ui-dialog-title {
+    font: 13px/1.5 微软雅黑,simsun,sans-serif;
+    height: 24px;
+    padding: 6px 15px;
+}
+.ui-dialog-close {
+    background: rgba(0, 0, 0, 0) url("http://static.kgimg.com/public/root/images/closeDialog.png") no-repeat scroll left top;
+    height: 11px;
+    opacity: 1;
+    text-indent: -999em;
+    width: 11px;
+}
+.download_popup {
+    height: 210px;
+    width: 430px;
+}
+.download_popup .dialogContent .contetText {
+    color: #000;
+    font-size: 15px;
+    height: 55px;
+    line-height: 25px;
+    padding-top: 20px;
+    text-align: center;
+}
+.download_popup .dialogContent .contetText p {
+    color: #000;
+    font-size: 15px;
+    height: 31px;
+    line-height: 31px;
+}
+.download_popup .dialogContent .contetText p.pFontColor {
+    color: #999;
+}
+.download_popup .dialogContent .contetText .warn_icon {
+    background: rgba(0, 0, 0, 0) url("http://static.kgimg.com/public/root/images/warn.png") no-repeat scroll left top;
+    display: block;
+    float: left;
+    height: 31px;
+    margin-right: 20px;
+    width: 31px;
+}
+.download_popup .dialogContent .dialogFooter {
+    height: 32px;
+    text-align: center;
+}
+.download_popup .dialogContent .dialogFooter .btnDl, .download_popup .dialogContent .dialogFooter .callClient {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    color: #555;
+    margin-right: 10px;
+    padding: 5px 15px;
+}
+.download_popup .dialogContent .dialogFooter .btnDl:hover {
+    background: #169af3 none repeat scroll 0 0;
+    border: 1px solid #169af3;
+    color: #fff;
+}
+.download_popup .dialogContent .dialogFooter .btnDl:active {
+    background: #169af3 none repeat scroll 0 0;
+    border: 1px solid #169af3;
+}
+.download_popup .dialogContent .dialogFooter .btnDl.disabled {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #999;
+}
+.download_popup .dialogContent .dialogFooter .callClient:hover {
+    background: #169af3 none repeat scroll 0 0;
+    border: 1px solid #169af3;
+    color: #fff;
+}
+.download_popup .dialogContent .dialogFooter .callClient:active {
+    background: #169af3 none repeat scroll 0 0;
+    border: 1px solid #169af3;
+}
+.download_popup .dialogContent .dialogFooter .callClient.disabled {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #999;
+}
+.download_popup .dialogContent .dialogFooter .btnOc {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    color: #555;
+    padding: 5px 15px;
+}
+.download_popup .dialogContent .dialogFooter .btnOc:hover {
+    background: #1a9de8 none repeat scroll 0 0;
+    border: 1px solid #1a9de8;
+    color: #fff;
+}
+.share_popup {
+    height: 300px;
+    width: 475px;
+}
+.share_popup #share_list {
+    height: 230px;
+    padding: 0 10px;
+    width: 410px;
+}
+.share_popup #share_list dl {
+    float: left;
+    padding: 70px 20px;
+}
+.share_popup #share_list dt {
+    cursor: pointer;
+    display: block;
+    height: 62px;
+    width: 62px;
+}
+.share_popup #share_list dt.share_weixin {
+    background: rgba(0, 0, 0, 0) url("http://static.kgimg.com/public/root/images/share_weixin.png") no-repeat scroll left top;
+}
+.share_popup #share_list dt.share_friend {
+    background: rgba(0, 0, 0, 0) url("http://static.kgimg.com/public/root/images/share_qq.png") no-repeat scroll left top;
+}
+.share_popup #share_list dt.share_qzone {
+    background: rgba(0, 0, 0, 0) url("http://static.kgimg.com/public/root/images/share_qqspace.png") no-repeat scroll left top;
+}
+.share_popup #share_list dt.share_weibo {
+    background: rgba(0, 0, 0, 0) url("http://static.kgimg.com/public/root/images/share_weibo.png") no-repeat scroll left top;
+}
+.share_popup #share_list dd {
+    color: #555;
+    height: 24px;
+    line-height: 24px;
+    padding-top: 5px;
+    position: relative;
+}
+.share_popup #share_list dd.qrcode {
+    background: rgba(0, 0, 0, 0) url("http://static.kgimg.com/public/root/images/weixin_bg.png") no-repeat scroll left top;
+    display: none;
+    height: 150px;
+    left: 95px;
+    padding: 0;
+    position: absolute;
+    top: 50px;
+    width: 125px;
+    z-index: 99;
+}
+.share_popup #share_list dd.qrcode img {
+    height: 106px;
+    margin: 10px;
+    padding: 0;
+    width: 106px;
+}
+.footer .links, .unshare .ui-dialog-content {
+    text-align: center;
+}
+.footerWrapper {
+    background: #2c323b none repeat scroll 0 0;
+}
+.footer {
+    padding-bottom: 50px;
+}
+.footer .links {
+    border-bottom: 1px solid #3d424a;
+    color: #b1b3b9;
+    font-size: 12px;
+    padding: 15px 0;
+    position: relative;
+}
+.footer .links a {
+    color: #b1b3b9;
+    padding: 10px;
+}
+.footer .copyright {
+    margin: 40px auto 0;
+    width: 1000px;
+}
+.footer .copyright p {
+    color: #b1b3b9;
+    line-height: 30px;
+    text-align: center;
+}
+.footer .copyright a.office-verification {
+    background: rgba(0, 0, 0, 0) url("http://www.kugou.com/common/images/logo_down.png") no-repeat scroll 0 0 / 20px 20px;
+    margin-left: 5px;
+    padding: 5px 10px;
+}
+.footer .copyright a.office-verification img {
+    height: 20px;
+    vertical-align: top;
+    width: 20px;
+}
+.footer .copyright .footerIcon, .footer .copyright .footerIcon a {
+    display: inline-block;
+    vertical-align: middle;
+}
+.footer .copyright .footerIcon {
+    background: rgba(0, 0, 0, 0) url("http://www.kugou.com/common/images/footer_icon.png") no-repeat scroll 0 0;
+    height: 16px;
+    margin-left: 5px;
+    margin-top: -2px;
+    width: 16px;
+}
+.footer .copyright .footerIcon a {
+    padding: 0;
+}
+.footer .copyright a {
+    color: #999;
+}

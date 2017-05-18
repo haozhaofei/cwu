@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>酷狗音乐 - 音乐总有新玩法</title> 
+	<link rel="stylesheet" href="css/index_3c9d996fd4.css">
+    <link rel="alternate" media="only screen and (max-width: 640px)"  href="">
+	<style>
+		.main{
+			width: 100%;
+			min-width: 1000px;
+			margin: 0 auto;
+			position: relative;
+		}
+		#m2{
+			float:right;	
+			display: block;
+			width: 48px;
+			height: 28px;
+			line-height: 28px;
+			border: 1px solid #C0C0C0;
+			border-radius: 2px;
+			text-align: center;
+			}
+		#m1{
+			float:right;
+			display: block;
+			width: 48px;
+			height: 28px;
+			line-height: 28px;
+			border: 1px solid #169af3;
+			border-radius: 2px;
+			text-align: center;
+			color: #fff;
+			background-color: #169af3;
+			padding-right: 10px;
+		}
+		#search { background:url(images/ss.png) no-repeat center right #FFFFFF; 
+			height:24px; 
+			width:249px; 
+			line-height: 24px;
+			color: #666;
+		}	
+		.h{
+			float:left;
+			margin-left: 160px;
+		}
+		.wenben{
+			margin-left: 300px;
+			margin-top: 30px;
+		}
+		.header{
+			height:90px;
+			width: 100%;
+			border:1px solid #fff;
+		}
+		.nav li{
+			float:left;
+			font-size: 10px;
+		    color:#2F4F4F;
+		}
+		.dh{
+			margin-left:40px;
+		}
+		.mid{
+			height:50px;
+			width: 340px;
+			font-size: 30px;
+			float:right;
+			margin-right: 300px;
+			margin-top: -40px;
+		}
+		#submit{
+			height:40px;
+			width: 80px;
+			
+			float:right;
+			margin-right: -400px;
+			margin-top: -30px;
+		}
+		#submit2{
+			height:40px;
+			width: 80px;
+			
+			float:right;
+			margin-right: -480px;
+			margin-top: -30px;
+		}	
+		.head1 {
+				    position: relative;
+				    z-index: 999;
+				    width: 100%;
+				    height: 55px;
+				    background-color: #2c323b;
+				    text-align: center;
+				}
+		.lm li{
+			float:left;
+			text-align:center;
+			list-style:none; 
+			font-size:20px;
+			margin-left:80px;
+		}
+		.lm a{
+			color:#ccc;
+			text-decoration:none;
+			border-right:1px solid #ccc;
+			padding:0px 15px;
+		}
+		.lm li:hover{
+			background:#0c8ed9;
+			text-decoration:none;
+		    color:#ccc;
+		}
+		.lm{
+			border:1px solid #2c323b;
+			height:50px;
+			width:600px;
+			color:#fff;
+		}
+		.rm li{
+			list-style:none;
+			float:left;
+			text-align:center;
+			float:right;
+			font-size: 15px;
+			margin-left:30px;
+			color:#545454 ;
+		}
+		
+		.rm{
+			height:50px;
+			width:700px;
+			margin-left: 500px;
+			color:#fff;
+			margin-top: -200px;
+		}
+		#sy{
+			background:#0c8ed9;
+		}
+		#second{
+			
+			height:300px;
+			width:100px;
+			border:1px solid #fff;
+		}
+		#bg1 {
+			    width: 100%;
+			    height: 400px;
+			}
+		#bg2 {
+			    width: 100%;
+			    height: 400px;
+			}	
+		#bg3 {
+			    width: 100%;
+			    height: 400px;
+			}
+		#bg4 {
+			    width: 100%;
+			    height: 400px;
+			}
+		#bg2,#bg3,#bg4{
+			display:none;
+		}
+		#mid1{
+			width:50px;
+			height:50px;
+			position:absolute;
+			top:50%;
+			left:10px;
+		}
+   		#mid2{width:50px;
+   			height:50px;
+   			position:absolute;
+   			top:50%;
+   			right:10px;
+   		}
+   		#download img{}
+		#download{
+			width:100%;
+			height:70px;
+			text-align: center;
+			margin-top: -72px;
+			
+		}
+		#part3{
+			margin-top: 18px;
+		}
+		.c1{
+			margin-right: 50px;
+			color:#fff;
+			font-weight:bold
+		}
+		.c2{
+			color:#fff;
+			font-weight:bold
+		}
+		.x{
+			font-size: 5px;
+			color:#fff;
+			margin-right: 50px;
+		}
+		#top1{
+			margin-left: 200px;
+			
+		}
+		#mm{
+			margin-bottom: 20px;
+		}
+		#more{
+			margin-left:500px;
+			color:#545454;
+			font-size: 15px;
+		}
+		#more2{
+			float:right;
+			margin-top: 20px;
+			color:#545454;
+			font-size: 15px;
+		}
+		#h1{
+			margin-left: 150px;
+		}
+		#h2{
+			margin-left: 0px;
+			margin-top: 20px;
+			margin-bottom: 20px;}
+		#max{
+			margin-left: 150px;
+			float:left;
+			width:330px;
+			height:330px;
+		}
+		#small{
+			width:350px;
+			height:330px;
+			margin-left: 460px;
+		}
+		#left1{
+			width:325px;
+			height:325px;
+		}
+		#i1{
+			width:160px;
+			height:160px;
+		}
+		#i2{
+			float:right;
+			width:160px;
+			height:160px;
+		}
+		#i3{
+			width:160px;
+			height:160px;
+		}
+		#i4{
+			float:right;
+			margin-top: -326px;
+			width:160px;
+			height:160px;
+		}
+		#right{
+			width:350px;
+			height:400px;
+			float:right;
+			margin-top: -405px;
+			margin-right: 140px;
+		}
+		#php1{
+			width:100%;
+			height:98px;
+			background: #F5F5F5;
+		}
+		#r1{
+			width:98px;
+			height:98px;
+		}
+		#php2{
+			width:100%;
+			height:98px;
+			background: #F5F5F5;
+			margin-top: 10px;
+		}
+		#r2{
+			width:98px;
+			height:98px;
+		}
+		#php3{
+			width:100%;
+			height:98px;
+			background: #F5F5F5;
+			margin-top: 10px;
+		}
+		#r3{
+			width:98px;
+			height:98px;
+		}
+		#right2{
+			float:right;
+			margin-top: -95px;
+			margin-right: 90px;
+		}
+		#right3{
+			clear:both;
+			float:right;
+			margin-top: -96px;
+			margin-right: 110px;
+		}
+		#right4{
+			clear:both;
+			float:right;
+			margin-top: -96px;
+			margin-right: 100px;
+		}
+		#h11{
+			font-size: 12px;
+			color:#333;
+		}
+		#p11{
+			font-size: 12px;
+			color:#555;
+		}
+		#theLast{
+			margin-left: 150px;
+		}
+		.hardWare{
+              margin-top:-100px;
+            
+		}
+		.newSongList{
+			 margin-left: 150px;
+		}
+		.albumList{
+			margin-right: 150px;
+		}
+		.HotRadio{
+			margin-left: 150px;
+		}
+		.HotSinger{
+			margin-right: 150px;
+		}
+		.partner,.friendLink{
+			margin-left: 150px;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+	
+		<div class="header">
+			<h1 class="h">
+				<img src="images/logo.png" alt="" />
+			</h1>
+			<div >
+				<div class="wenben">
+					<input id="search" placeholder="王冕 勉为其难" type="text">
+				</div>
+			</div>
+			<div class="mid" style="font-size:30px;">
+				<ul class="nav" type="none">
+				<li class="dh">客服中心</li>
+				<li class="dh">招贤纳士</li>
+				<li class="dh">会员中心</li>
+				</ul>
+			</div>
+			<div id="submit">
+				<div id="m1">登录</div>
+			</div>
+			<div id="submit2">
+				<div id="m2">注册</div>
+			</div>
+		</div>
+	
+
+		<div class="head1">
+			<div>
+				<div class="lm">
+				<ul>
+					<li id="sy">首页</li>
+					<li id="sy1">榜单</li>
+					<li id="sy2">下载客户端</li>
+					<li id="sy3">更多</li>
+				</ul>
+				</div>
+				
+				<div class="rm">
+				<ul>
+					<li><img src="images/t11.png" alt="" />音乐直播</li>
+					<li><img src="images/t22.jpg" alt="" />酷狗LIVE</li>
+					<li><img src="images/t33.png" alt="" />音乐人</li>
+					<li><img src="images/t44.png" alt="" />游戏</li>
+					<li><img src="images/t55.png" alt="" />商城</li>
+				</ul>
+				</div>
+				
+				</div>
+			</div>
+		</div>
+	
+
+		<div>
+			<img id="bg1" src="images/bg01.jpg" alt="" />
+			<img id="bg2" src="images/bg02.jpg" alt="" />
+			<img id="bg3" src="images/bg03.jpg" alt="" />
+			<img id="bg4" src="images/bg04.jpg" alt="" />
+			<img src="images/1.png" id="mid2" onclick="forward()">
+   			<img src="images/2.png" id="mid1" onclick="back()">
+		</div>
+	
+
+		<div id="download">
+			<div id="part3">
+				<img src="images/pc.png" alt="" />
+				<span class="c1">下载PC版</span>
+				<span class="x">|</span>
+				<img src="images/mac.png" alt="" />
+				<span class="c1">下载iPhone版</span>
+				<span class="x">|</span>
+				<img src="images/andriod.png" alt="" />
+				<span class="c2">下载Android</span>
+			</div>
+		</div>
+		
+		
+		<div id="three">
+			
+			<div id="left">
+				<div id="mm">
+					<img id="h1" src="images/selectlist.jpg" alt="" />
+					<span id="more">更多</span>
+				</div>
+				<div id="bottom1"> 
+					<div id="max">
+						<img id="left1" src="images/left.jpg" alt="" />
+					</div>
+					<div id="small">
+						<div>
+							<img id="i1" src="images/as01.jpg" alt="" />
+						</div>
+						<div>
+							<img id="i2" src="images/as02.jpg" alt="" />
+						</div>
+						<div>
+							<img id="i3" src="images/as03.jpg" alt="" />
+						</div>
+						<div>
+							<img id="i4" src="images/as04.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+			
+
+	
+			<div id="right">
+				<div id="top2">
+					<img id="h2" src="images/hotlist.jpg" alt="" />
+					<span id="more2">更多</span>
+				</div>
+				<div id="bottom2">
+					<div id="php1">
+						<div id="left2">
+							<img id="r1" src="images/right01.jpg" alt="" />
+						</div>
+						<div id="right2">
+							<a href="列表.html">酷狗飙升榜</a>
+							<p id="p11">1.X玖少年团-炫斗青春</p>
+							<p id="p11">2.蓝乐-并入膏盲【霸道...</p>
+						</div>
+					</div>
+					<div id="php2">
+						<div id="left3">
+							<img id="r2" src="images/right02.jpg" alt="" />
+						</div>
+						<div id="right3">
+							<h1 id="h11">酷狗Top500</h1>
+							<p id="p11">1.杨宗纬、张碧晨-凉凉</p>
+							<p id="p11">2.赵雷-成都</p>
+						</div>
+					</div>
+					<div id="php3">
+						<div id="left4">
+							<img id="r3" src="images/right03.jpg" alt=""  />
+						</div>
+						<div id="right4">
+							<h1 id="h11">网络红歌榜</h1>
+							<p id="p11">1.金南玲-逆流成河</p>
+							<p id="p11">2.庄心妍-走着走着就散了</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+	<div>
+		<img id="theLast" src="images/last.jpg" alt="" height:"80px" width:"1000px" />
+	</div>
+
+
+
+ <div class="hardWare"> <iframe scrolling="no" frameborder="0" width="1000" height="80" src="about:blank" _isrc="" width="100%" height="100%"></iframe></div>
+            <div class="subContentM">
+                <!-- 新歌首发 -->
+                <div class="itemM newSongList">
+                    <div class="itemTitle hasBorder">
+                        <h3><b>新歌</b>首发</h3>
+                        <div class="tabT" id="SongtabMenu">
+                            <span class="MenuItem active" data="0">华语</span>
+                            <span class="MenuItem " data="1">欧美</span>
+                            <span class="MenuItem " data="2">韩国</span>
+                            <span class="MenuItem " data="3">日本</span>
+                        </div>
+                        <button class="playAll"><span class="icon icon-play"></span><em>全部播放</em></button>
+                    </div>
+                    <div class="itemContent">
+                        <div class="tabC" id="SongtabContent">
+                            <ul>
+                                    <li  data=''>
+                                        <a href="">
+                                        <span class="songName">王俊凯 - 不完美小孩</span>                                  
+                                        <span class="songTime">04:20</span>                   
+                                        </a>
+                                    </li>
+                                
+
+                                    <li  data=''>
+                                        <a href="">
+                                        <span class="songName">SING女团 - Run For More</span>
+                                        <span class="songTime">03:00</span>
+                                        </a>
+                                    </li>
+                                
+
+                                    <li  data=''>
+                                        <a href="">
+                                       <span class="songName">何洁 - 小情书【小情书推广曲】</span>
+                                        <span class="songTime">03:58</span>
+                                        </a>
+                                    </li>
+                                
+                                    <li  data=''>
+                                        <a href="">
+                                        <span class="songName">薛之谦、何洁 - 有没有 (Live)</span>
+                                        
+                                        <span class="songTime">04:15</span>
+                                        </a>
+                                    </li>
+                                
+                                    <li  data=''>
+                                        <a href="">
+                                        <span class="songName">萧全 - 你是自己的太阳</span>
+                                        
+                                          
+                                        
+                                        <span class="songTime">03:40</span>
+                                           
+                                        </a>
+                                    </li>
+                                
+                                    <li  data=''>
+                                        <a href="">
+                                        <span class="songName">庄心妍 - 行李</span>
+                                        <span class="songTime">04:18</span>
+                                           
+                                        </a>
+                                    </li>
+                                
+                                    <li  data=''>
+                                        <a href="">
+                                        <span class="songName">李宇春 - 天黑黑</span>
+                                        
+                                        <span class="songTime">03:54</span>
+                                           
+                                        </a>
+                                    </li>
+                                
+                                    <li  data=''>
+                                        <a href="">
+                                        <span class="songName">叶一茜 - 入梦</span>
+
+                                        <span class="songTime">04:17</span>
+
+                                        </a>
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pages p">
+                        <a class="prev disable">上一页</a>
+                        <div class="page"><span class="currentPage">1</span>/<span class="allPage">3</span></div>
+                        <a class="next">下一页</a>
+                    </div>   
+                </div>
+
+
+
+
+ <div class="itemM albumList">
+                    <div class="itemTitle">
+                        <h3><b>推荐</b>MV</h3><a target="_blank" class="more fr">更多</a></div>
+                    <div class="itemContent">
+                  
+                                <div class="cpt cptBigL">
+                            
+                                    <a target="_blank" href="">
+                                        
+                                              <img src="images/xue.jpg" width="320" height="175" src="images/blank.gif" def="images/mv_defalut.jpg"/>
+                                        
+                                        <div class="Cover">
+                                            <div class="playBtn icon icon-play_b">播放</div>
+                                        </div>
+                                        <p class="cptBg"></p>
+                                        <div class="cptB">
+                                            <p class="songListName">动物世界</p>
+                                            <p class="songListSinger">薛之谦</p>
+                                        </div>
+                                    </a>
+                                </div>
+                        
+                            
+                                 <div class="cpt cptMidL">
+                            
+                                    <a target="_blank" href="">
+                                        
+                                               <img  src="images/20170512233415540763.jpg" width="154" height="84" src="images/blank.gif" def="images/mv_defalut.jpg">
+                                        
+                                        <div class="Cover">
+                                            <div class="playBtn icon icon-play_b">播放</div>
+                                        </div>
+                                        <p class="cptBg"></p>
+                                        <div class="cptB">
+                                            <p class="songListName">你的过去我不介意</p>
+                                            <p class="songListSinger">唐古</p>
+                                        </div>
+                                    </a>
+                                </div>
+                        
+                            
+                                 <div class="cpt cptMidL">
+                            
+                                    <a target="_blank" href="">
+                                        
+                                               <img  src="images/20170512160535783343.jpg" width="154" height="84" src="images/blank.gif" def="images/mv_defalut.jpg">
+                                        
+                                        <div class="Cover">
+                                            <div class="playBtn icon icon-play_b">播放</div>
+                                        </div>
+                                        <p class="cptBg"></p>
+                                        <div class="cptB">
+                                            <p class="songListName">Malibu</p>
+                                            <p class="songListSinger">Miley Cyrus</p>
+                                        </div>
+                                    </a>
+                                </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+             <div class="subContentM limitHeight">
+                <!-- 新歌首发 -->
+                <div class="itemM HotRadio">
+                      <div class="itemTitle">
+                        <h3><b>热门</b>电台</h3><a target="_blank" href="" class="more fr">更多</a></div>
+                    <div class="itemContent">
+                        <ul>
+                            <li>
+                                <a target="_blank" href="">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" src="images/radio_1.jpg" src="images/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">KTV必点曲</div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a target="_blank" href="">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play" style="display: none;"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" src="images/radio_2.jpg" src="images/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">中文DJ</div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a target="_blank" href="">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play" style="display: none;"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" src="images/radio_3.jpg" src="images/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">酷狗热歌</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play" style="display: none;"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" src="images/radio_4.jpg" src="images/blank.gif" class=" ">
+                                    </div>
+                                    <div class="radioKind">网络红歌</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play" style="display: none;"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" src="images/radio_5.jpg" src="images/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">经典</div>
+                                  
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" src="images/radio_6.jpg" src="images/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">老情歌</div>
+                                    
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" src="images/radio_7.jpg" src="images/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">新歌</div>
+                                    <div class="radioName">Owl City - Wolf Bite</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play" style="display: none;"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" src="images/radio_8.jpg" src="images/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">动漫</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play" style="display: none;"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" src="images/radio_9.jpg" src="images/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">轻音乐</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-radio_play" style="display: none;"></div>
+                                    </div>
+                                    <div class="radioLogo">
+                                        <img width="100" height="100" src="images/radio_10.jpg" src="images/blank.gif"  class=" ">
+                                    </div>
+                                    <div class="radioKind">最爱成名曲</div>
+                                   
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+ <div class="itemM HotSinger">
+                    <div class="itemTitle">
+                        <h3><b>热门</b>歌手</h3>
+                        <div class="tabT" id="tabMenu"><span class="active" data="0">华语</span><span data="1">欧美</span><span data="2">日韩</span><span data="3"><a class="more" href="">更多</a></span></div>
+                    </div>
+                    <div class="itemContent">
+                        <div>
+                            <ul class="firstUl clearFix" id="SingertabContent">
+                                <li class="item">
+                                    <ul class="chinaSinger secondUl clearFix" id="chinaSingerContent">
+                                        <li>
+                           
+                                                    <div class="cpt cptMid">
+                                                
+                                                        <a target="_blank" class="singerLink" href="">
+                                                            <img class="singerImg"  src="images/zhi.jpg">
+                                                            <div class="cptB">
+                                                                <p class="songListSinger">薛之谦</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                            
+                                                
+                                                    <div class="cpt cptMid">
+                                                
+                                                        <a target="_blank" class="singerLink" href="">
+                                                            <img class="singerImg" src="images/20161012161017418.jpg" >
+                                                   
+                                                            <div class="cptB">
+                                                                <p class="songListSinger">庄心妍</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                            
+                                                
+                                                     <div class="cpt cptSmall">
+                                                
+                                                        <a target="_blank" class="singerLink" href="">
+                                                            <img class="singerImg" src="images/20170119105146606.jpg" >
+                                                            <div class="cptB">
+                                                                <p class="songListSinger">周杰伦</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                            
+                                                
+                                                     <div class="cpt cptSmall">
+                                                
+                                                        <a target="_blank" class="singerLink" href="">
+                                                            <img class="singerImg" src="images/20160422165257968614.jpg" >
+                                                            <div class="cptB">
+                                                                <p class="songListSinger">冷漠</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                            
+                                                
+                                                     <div class="cpt cptSmall">
+                                                
+                                                        <a target="_blank" class="singerLink" href="">
+                                                            <img class="singerImg" src="images/20170111104600449.jpg" >
+                                                            <div class="cptB">
+                                                                <p class="songListSinger">张杰</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                            
+                                        
+                                        </li>
+                                    </ul>
+                                    <div class="tabC" id="subMenu">
+                                        <a class="icon icon-s-dot icon-s_dot_hover" data="0"></a>
+                                        <a class="icon icon-s-dot" data="1"></a>
+                                        <a class="icon icon-s-dot" data="2"></a>
+                                    </div>    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 推荐Mv -->
+            </div>
+                        <div class="partner itemM ">
+                <div class="itemTitle">
+                    <h3><b>合作</b>伙伴</h3></div>
+                <div class="itemContent">
+                    <div class="hz_logo clear_fix">
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="" width="130" height="58"  src="images/partner01.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="EMI" width="130" height="58" src="images/partner02.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="SONY" width="130" height="58" src="images/partner03.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="海蝶" width="130" height="58" src="images/partner04.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="丰华唱片" width="130" height="58" src="images/partner05.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="喜欢音乐" width="130" height="58"  src="images/partner06.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="种子音乐" width="130" height="58" src="images/partner07.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="亚神娱乐音乐" width="130" height="58"  src="images/partner08.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="bma" width="130" height="58"  src="images/partner09.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="中唱总公司" width="130" height="58"  src="images/partner10.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="中国好声音" width="130" height="58" src="images/partner11.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="孔雀唱片" width="130" height="58" src="images/partner12.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="简单快乐" width="130" height="58" src="images/partner13.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="鸟人艺术" width="130" height="58"  src="images/partner14.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="" width="130" height="58"  src="images/partner15.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title=""><img title="极韵文化" width="130" height="58"  src="images/partner16.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="天浩盛世" width="130" height="58" src="images/partner17.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="太合麦田" width="130" height="58"  src="images/partner18.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="东music" width="130" height="58"  src="images/partner19.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="music" width="130" height="58"  src="images/partner20.jpg" alt=""></a>
+                        <a href="javascript:;" hidefocus="true" title="" rel="nofollow"><img title="大国文化" width="130" height="58"  src="images/partner21.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="friendLink itemM ">
+                <div class="itemTitle">
+                    <h3><b>友情</b>链接</h3><a target="_blank" href="http://www.kugou.com/about/friendLink.html" class="more fr">更多</a></div>
+                <div class="itemContent">
+                    
+                     
+                        <a target="_blank" href="http://www.lady8844.com/" title="爱美网">爱美网</a>
+                    
+                        <a target="_blank" href="http://ent.cntv.cn/" title="央视网综艺频道">央视网综艺频道</a>
+                    
+                        <a target="_blank" href="http://www.warsu.com" title="华数唱片">华数唱片</a>
+                    
+                        <a target="_blank" href="http://baa.bitauto.com/" title="汽车论坛">汽车论坛</a>
+                    
+                        <a target="_blank" href="http://www.ithome.com/" title="IT之家">IT之家</a>
+                    
+                        <a target="_blank" href="http://www.25pp.com" title="iPhone游戏">iPhone游戏</a>
+                    
+                        <a target="_blank" href="http://you.ctrip.com/" title="旅游攻略">旅游攻略</a>
+                    
+                        <a target="_blank" href="http://www.yswxcn.com/" title="悦声无限">悦声无限</a>
+                    
+                        <a target="_blank" href="http://www.vmall.com/" title="华为商城">华为商城</a>
+                    
+                        <a target="_blank" href="http://www.yue365.com/" title="365音乐网">365音乐网</a>
+                    
+                        <a target="_blank" href="http://www.xiazaiba.com" title="软件下载">软件下载</a>
+                    
+                        <a target="_blank" href="http://www.manmankan.com/" title="漫漫看漫画">漫漫看漫画</a>
+                    
+                        <a target="_blank" href="http://www.9game.cn" title="手机游戏">手机游戏</a>
+                    
+                    
+                   
+                </div>
+            </div>
+        </div>
+	
+<link rel="stylesheet" data-embed href="css/footer.css">
+<div class="footerWrapper">
+	<div class="footer">
+		<div class="links">
+			<a hidefocus="true"  target="_blank">关于酷狗</a> | <a hidefocus="true" href="javascript:void(0);" id="report">监督举报</a> | <a hidefocus="true" target="_blank">广告服务</a> | <a hidefocus="true" target="_blank" >版权指引</a> |<a target="_blank" >隐私政策</a>| <a hidefocus="true" target="_blank" >用户服务协议</a> | <a hidefocus="true" target="_blank" >推广合作</a> | <a hidefocus="true" target="_blank" >酷狗音乐人</a> |<a hidefocus="true" target="_blank" >酷狗音乐推</a> |<a hidefocus="true"  target="_blank">招聘信息</a> | <a hidefocus="true"  target="_blank">客服中心</a> | <a hidefocus="true"  target="_blank">用户体验提升计划</a>
+		</div>
+		<div class="copyright">
+			<p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>
+            <p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;<a hidefocus="true" target="_blank" >粤ICP备09017694号-2</a><span class="footerIcon"><a target="_blank" >&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+            <p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026</p>
+            <p>穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018</p>
+            <p>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2017 KuGou-Inc.All Rights Reserved
+                <a hidefocus="true" class="office-verification"  target="_blank"></a> 
+            </p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<script>
+	var sy=document.getElementById("sy");
+	for(var i=1;i<4;i++){
+		var sy2=document.getElementById("sy"+i);
+		sy2.hover=function(){
+			sy.style.background="#2c323b";
+		}
+	}
+	var m=2;
+	function forward(){
+		for(var i=1;i<=4;i++){
+				var img = document.getElementById("bg"+i);
+				if(i == m){
+					img.style.display = "block";
+				}else{
+					img.style.display = "none";
+				}	
+		}
+		m++;
+		if(m==5){
+			m=1;
+		}
+	}
+	var n=4;
+	function back(){
+		for(var i=1;i<5;i++){
+			var img = document.getElementById("bg"+i);
+			if(i == n){
+					img.style.display = "block";
+			}else{
+				img.style.display = "none";
+			}	
+		}
+		n--;
+		if(n==0){
+			n=4;
+		}
+	}
+</script>

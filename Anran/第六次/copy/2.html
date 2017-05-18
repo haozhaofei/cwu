@@ -1,81 +1,95 @@
+<!-- 第一遍 -->
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>scroll方法</title>
 </head>
 <body>
-	<ul>
-		<li>爱情买卖</li>
-		<li>爱情转移</li>
-		<li>爱你不是两三天</li>
-		<li>纤夫的爱</li>
-	</ul>
-
-	<h3 id="hid">为爱痴狂</h3>
+	<div style="width:500px;height:500px;background:#ccc;"></div>
+	<div id="bid" style="width:500px;height:500px;background:#ddd;"></div>
 </body>
 </html>
-
 <script>
+	/*window.onscroll=function(){
+		document.documentElement.scrollTop;//获取滚动条的上距离
+		document.documentElement.scrollLeft;//滚动条的左距离
+	}*/
 
 
-	var oUl = document.getElementsByTagName('li')[0];
-	//alert(oUl.nodeType);
-	var oHid = document.getElementById("hid");
-
+	window.onscroll=function(){
+				//var top = document.documentElement.scrollTop;//获取滚动条的上距离
+                var scrollTop=0;     
+                if(document.documentElement&&document.documentElement.scrollTop){     
+                    scrollTop=document.documentElement.scrollTop;  
+                }else if(document.body){     
+                    scrollTop=document.body.scrollTop;                   
+                } 
+                
+                document.getElementById("bid").innerHTML = scrollTop;
+    }
 </script>
 
-<!-- 
+<!-- 第二遍 
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>scroll方法</title>
 </head>
 <body>
-	<ul>
-		<li>爱情买卖</li>
-		<li>爱情转移</li>
-		<li>爱你不是两三天</li>
-		<li>纤夫的爱</li>
-	</ul>
-
-	<h3 id="hid">为爱痴狂</h3>
+	<div style="width:500px;height:500px;background:#ccc;"></div>
+	<div id="bid" style="width:500px;height:500px;background:#ddd;"></div>
 </body>
 </html>
-
 <script>
+	/*window.onscroll=function(){
+		document.documentElement.scrollTop;//获取滚动条的上距离
+		document.documentElement.scrollLeft;//滚动条的左距离
+	}*/
 
 
-	var oUl = document.getElementsByTagName('li')[0];
-	//alert(oUl.nodeType);
-	var oHid = document.getElementById("hid");
+	window.onscroll=function(){
+				//var top = document.documentElement.scrollTop;//获取滚动条的上距离
+                var scrollTop=0;     
+                if(document.documentElement&&document.documentElement.scrollTop){     
+                    scrollTop=document.documentElement.scrollTop;  
+                }else if(document.body){     
+                    scrollTop=document.body.scrollTop;                   
+                } 
+                
+                document.getElementById("bid").innerHTML = scrollTop;
+    }
+</script>-->
 
-</script>
-
+<!-- 第三遍 
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>scroll方法</title>
 </head>
 <body>
-	<ul>
-		<li>爱情买卖</li>
-		<li>爱情转移</li>
-		<li>爱你不是两三天</li>
-		<li>纤夫的爱</li>
-	</ul>
-
-	<h3 id="hid">为爱痴狂</h3>
+	<div style="width:500px;height:500px;background:#ccc;"></div>
+	<div id="bid" style="width:500px;height:500px;background:#ddd;"></div>
 </body>
 </html>
-
 <script>
+	/*window.onscroll=function(){
+		document.documentElement.scrollTop;//获取滚动条的上距离
+		document.documentElement.scrollLeft;//滚动条的左距离
+	}*/
 
 
-	var oUl = document.getElementsByTagName('li')[0];
-	//alert(oUl.nodeType);
-	var oHid = document.getElementById("hid");
-
-</script> -->
+	window.onscroll=function(){
+				//var top = document.documentElement.scrollTop;//获取滚动条的上距离
+                var scrollTop=0;     
+                if(document.documentElement&&document.documentElement.scrollTop){     
+                    scrollTop=document.documentElement.scrollTop;  
+                }else if(document.body){     
+                    scrollTop=document.body.scrollTop;                   
+                } 
+                
+                document.getElementById("bid").innerHTML = scrollTop;
+    }
+</script>-->

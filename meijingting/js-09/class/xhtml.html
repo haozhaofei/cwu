@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>xhtml</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	//xhtml好像是水果 html好比是苹果
+	try //Internet Explorer
+  {
+  xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+  }
+catch(e)
+  {
+  try //Firefox, Mozilla, Opera, etc.
+    {
+    xmlDoc=document.implementation.createDocument("","",null);
+    }
+  catch(e) {alert(e.message)}
+  }
+try 
+  {
+  xmlDoc.async=false;//true异步 false同步
+  xmlDoc.load("xhtml.xml");
+  document.write("that's ok");
+  var list=xmlDoc.getElementsByTagName('bookstore');
+  for(var i=0;i<list.length;i++){
+  	var res=list[i].getElementsByTagName("book")[0].innerHTML+"<br>";
+  	document.write(res);
+  }
+}
+catch(e) {alert(e.message)}
+</script>
