@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<table border="1" width="600">
+		<thead>
+			<th>number</th>
+			<th>name</th>
+			<th>age</th>
+			<th>gender</th>
+			<th>do</th>
+		</thead>
+		<tbody id="tbody">
+			<tr>
+				<td>001</td>
+				<td>susan</td>
+				<td>23</td>
+				<td>female</td>
+				<td><button onclick="doDel(this)">delete</button></td>
+			</tr>
+			<tr>
+				<td>002</td>
+				<td>Tom</td>
+				<td>27</td>
+				<td>male</td>
+				<td><button onclick="doDel(this)">delete</button></td>
+			</tr>
+			<tr>
+				<td>003</td>
+				<td>John</td>
+				<td>25</td>
+				<td>male</td>
+				<td><button onclick="doDel(this)">delete</button></td>
+			</tr>
+			<tr>
+				<td>004</td>
+				<td>Cindy</td>
+				<td>20</td>
+				<td>female</td>
+				<td><button onclick="doDel(this)">delete</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<form action="#" name="myform" onsubmit="return doAdd()">
+		number:<input type="text" name="id"><br><br>
+		name  :<input type="text" name="name"><br><br>
+		age   :<input type="text" name="age"><br><br>
+		gender:<input type="text" name="gender"><br><br>
+		<input type="submit" value="添加">
+	</form>
+
+</body>
+</html>
+<script>
+	function doDel(aa){
+		aa.parentNode.parentNode.parentNode.removeChild(aa.parentNode.parentNode);
+	}
+
+	function doAdd(){
+		var data = new Array();
+		data[0] = document.myform.id.value;
+		data[1] = document.myform.name.value;
+		data[2] = document.myform.age.value;
+		data[3] = document.myform.gender.value;
+
+		var tr = document.createElement('tr');
+		for(var i=0;i<data.length;i++){
+			var td = document.createElement('td');
+			var tt = document.createTextNode(data[i]);
+			td.appendChild(tt);
+			tr.appendChild(td);
+
+		}
+		var tbody = document.getElementById('tbody');
+		var td = document.createElement('td');
+		td.innerHTML = '<button onclick = "doDel(this)">delete</button>';
+		tr.appendChild(td);
+		tbody.appendChild(tr);
+		return false;
+
+	}
+</script>
