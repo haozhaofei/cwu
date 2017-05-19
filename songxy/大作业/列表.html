@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+    *{padding: 0;margin: 0;}
+    .logo{margin-left: 80px;margin-top: 20px;}
+    #search1{position: relative;float: left;width: 300px;height: 35px;margin-left: 270px;margin-top: -40px}
+    .img1{position: relative;float: left;width: 50px;height: 30px;margin-left: 510px;margin-top: -35px;}
+    .img2{position: relative;float: left;width: 50px;height: 30px;margin-left: 510px;margin-top: -35px;}
+	.pic .img2{display: none;}
+    .pic:hover .img1{display: none;}
+    .pic:hover .img2{display: block;}
+    .list1{list-style-type: none;margin-left: 700px;margin-top: -30px;}
+    ul.list1_1 li{display:inline-block;width: 100px;}
+    ul.list1_1 a{display: block;text-decoration: none;text-align: center;color: 	#696969;}
+    ul.list1_1 a:hover{color:#4169E1;}
+    .line{position: relative;float: left;height: 20px;width: 1px;background:#696969;margin-left: 1030px;margin-top: -30px;}
+    .login{position: relative;float: left;width: 50px;height: 33px;line-height:33px;margin-left: 1070px;margin-top: -30px;background-color: #00BFFF;overflow:hidden;border: 1px solid #FFFFFF;}
+    .sign_up{position: relative;float: left;width: 50px;height: 33px;line-height: 33px;margin-left: 1140px;margin-top: -35px;overflow:hidden;border: 1px solid #696969;}
+    .login a{text-transform:none;text-decoration: none;color:#FFFFFF;}
+    .sign_up a{text-transform:none;text-decoration: none;color:#696969;}
+    .sign_up a:hover{color:#00BFFF; }
+    #list2{margin-top: 100px;width: 100%;height: 50px;background-color: #2c323b;text-align: center;}
+    ul.list2_1 li{position: relative;width: 80px;height: 50px;line-height:50px;margin-left: 80px;margin-top: -30px;background-color: #00BFFF;overflow:hidden;}
+    ul.list2_1 a{text-transform:none;text-decoration: none;color:#FFFFFF;}
+    #list3{position: relative;float: left;margin-left: 150px;margin-top: -50px;height: 50px;line-height: 50px;}
+    ul.list3_1,ul.list3_1 ul{list-style-type:none;}
+    ul.list3_1 li{display:inline-block;width: 100px;}
+    ul.list3_1 a{height:50px;display: block;text-decoration: none;text-align: center;color: #FFFFFF;}
+    ul.list3_1 a:hover{background-color: #00BFFF;}
+    ul.list3_1 ul li{background-color: #2c323b;text-align: center;display: block;width: 100px;z-index: -20px;}
+    ul.list3_1 ul{position:absolute;/*子列表移除屏幕*/margin:-5000px;}
+    ul.list3_1 ul a:hover{color: #696969;}
+    ul.list3_1 li:hover ul{margin: auto;}
+    #list4{position: relative;float: left;margin-left: 680px;margin-top: -50px;
+    	height: 50px;line-height: 50px;}
+    ul.list4_1 li{display:inline-block;width: 100px;}
+    ul.list4_1 a{height:50px;display: block;text-decoration: none;text-align: center;color: #FFFFFF;}
+    ul.list4_1 a:hover{background-color: #00BFFF;}
+
+    #bangdan{width: 200px;height: 1200px;border: 1px solid #D3D3D3;margin-left: 70px;margin-top: 40px;padding-top: 20px;padding-left: 20px;text-align: left;}
+    #bangdan1{width: 200px;height: 30px;margin-top:7px;list-style-type: none;}
+    #bangdan1 li{width: 220px;height: 40px;line-height: 40px;display: block;margin-left: -20px;}
+    #bangdan1 a{text-decoration: none;color: #696969;font-size: 14px;margin-left: 20px;}
+    #bangdan1 li:hover{background-color: #E6E6FA;}
+    #bangdan1 a p{margin-left: 43px;margin-top: -43px;}
+    #bangdan1 a p:hover{color: #00BFFF;}
+    #biaosheng li{display: block;width: 200px;height: 35px; background-color: #00BFFF;padding-top: 15px;margin-top: 20px;margin-left: -20px;padding-left: 20px;}
+    #li1 a{text-decoration: none;color: #FFFFFF;}
+    #biaosheng a p{margin-left: 23px;margin-top: -20px;}
+    
+    /* 特色音乐榜 */
+    #b2{width: 200px;height: 50px;line-height: 50px;margin-top: 460px;border-top: 1px solid #D3D3D3;margin-left: -20px;padding-left: 20px;}
+    #bangdan2{width: 200px;height: 30px;margin-top:10px;list-style-type: none;margin-left: 9px;}
+    #bangdan2 li{width: 210px;height: 40px;line-height: 40px;display: block;margin-left: -30px;padding-left: 11px;}
+    #bangdan2 a{text-decoration: none;color: #696969;font-size: 14px;margin-left: 10px;}
+    #bangdan2 li:hover{background-color: #E6E6FA;}
+    #bangdan2 a p{margin-left: 35px;margin-top: -43px;}
+    #bangdan2 a p:hover{color: #00BFFF;}
+
+    /* 全球榜 */
+    #b3{width: 200px;height: 50px;line-height: 50px;margin-top: 250px;border-top: 1px solid #D3D3D3;margin-left: -20px;padding-left: 20px;}
+    #bangdan3{width: 200px;height: 30px;margin-top:10px;list-style-type: none;margin-left: 9px;}
+    #bangdan3 li{width: 210px;height: 40px;line-height: 40px;display: block;margin-left: -30px;padding-left: 11px;}
+    #bangdan3 a{text-decoration: none;color: #696969;font-size: 14px;margin-left: 10px;}
+    #bangdan3 li:hover{background-color: #E6E6FA;}
+    #bangdan3 a p{margin-left: 35px;margin-top: -43px;}
+    #bangdan3 a p:hover{color: #00BFFF;}
+
+    /* 酷狗飙升榜 */
+    #bigbiao{margin-left: 320px; margin-top: -1212px;width: 65%;line-height: 50px;}
+    #btitle{position: absolute;font-size: 25px;width: 150px;height: 40px;line-height: 50px;}
+    #b5{position: absolute;margin-left: 120px;margin-top: 5px;
+    	color: #696969;width: 200px;height: 20px;}
+    #b6{position: relative;margin-left: 777px;height: 30px;line-height: 30px; width: 100px;background-color: #00BFFF;}
+    #b6:hover{background-color: #4169E1}
+    #b6 a{color: #FFFFFF;text-decoration: none;}
+    
+    /* 选项 */
+    #buttons{width: 100%;height: 50px;border-top: 1px solid #D3D3D3;line-height: 50px;margin-top: 50px;padding-left: -50px;}
+    #div{}
+  	#bangdan4{}
+  	#bangdan4 li{list-style-type: none;height: 56px;border-top: 1px solid #D3D3D3;border-bottom: 1px solid #D3D3D3;}
+  	#bangdan4 li:hover{background-color: #E6E6FA;}
+  	#bangdan4 a{margin-left: -980px;}
+  	#bangdan4 p{float: left; margin-left: 60px;margin-top: -10px;}
+  	#bangdan4 p:hover{color: #00BFFF;}
+  	#img1{margin-left: 20px;margin-top: -10px;}
+  	#bangdan4 span{float: right;}
+  	#bangdan4 span:hover{color: #00BFFF;}
+
+  	/* 下载客户端 */
+  	#kehu{margin-left: 300px;height: 30px;
+  		width: 920px;margin-top: 50px;}
+  	#xiazai{float: right; width: 150px;height: 50px;background-color: #00BFFF;margin-top: -30px;margin-right: 200px;line-height: 50px;}
+  	#xiazai a{font-size: 20px; color: #FFFFFF;text-decoration: none;}
+  	#end{width: 100%;height: 260px;background: #2c323b;margin-top: 230px;text-align: center;}
+  	#guanyu{font-size: 8px;margin-left: -10px;}
+  	#guanyu1{padding-left: -300px;}
+	#women{width: 100%;height: 200px;margin-top: 35px;}
+	#women p{line-height: 30px; color: #C0C0C0;text-align: center;font-size: 14px;}
+	#li2{display: inline-block;padding-left: 10px;margin-top: 20px;color: #C0C0C0;border-right: 1px solid #808080;padding-right: 10px;font-size: 14px;}
+	#li3{display: inline-block;padding-left: 10px;margin-top: 20px;color: #C0C0C0;padding-right: 10px;font-size: 14px;}
+</style>
+<body>
+	<header>
+	<div class="logo">
+		<img src="images\8.png">
+	</div>
+	<div class="search">
+		<input id="search1" type="text" class="aa" placeholder="  陈一发 童话镇"/>
+		<div class="pic">
+		<img class="img1" src="images\search1.jpg" />
+        <img class="img2" src="images\search2.jpg" />
+	</div>	
+	</div>
+	<div class="list1">
+	<ul class="list1_1">
+		<li><a href="#">客服中心</a></li>
+		<li><a href="#">招贤纳士</a></li>
+		<li><a href="#">会员中心</a></li>
+	</ul>
+	</div>
+	<div class="line"></div>
+	<div class="login" align="center">
+		<p><a href="#">登录</a></p>
+	</div>
+	<div class="sign_up" align="center">
+		<p><a href="#">注册</a></p>
+	</div>
+	</header>
+
+	<main id="main">
+		<div id="list2">
+		<ul class="list2_1">
+			<li><a href="#">首页</a></li>
+		</ul>
+		<div id="list3">
+			<ul class="list3_1">
+				<li><a href="#">榜单</a></li>
+				<li><a href="#">下载客户端</a></li>
+				<li><a href="#">更多</a>
+				<ul>
+					<li><a href="#">电台</a></li>
+					<li><a href="#">MV</a></li>
+					<li><a href="#">歌单</a></li>
+					<li><a href="#">歌手</a></li>
+				</ul>
+				</li>
+			</ul>
+			</div>
+
+	<div id="list4">
+		<ul class="list4_1">
+			<li><a href="#"><img src="images\音乐直播.png" alt="" />音乐直播</a></li>
+			<li><a href="#"><img src="images\酷狗.png" alt="" />酷狗LIVE</a></li>
+			<li><a href="#"><img src="images\音乐.png" alt="" />音乐人</a></li>
+			<li><a href="#"><img src="images\游戏.jpg" alt="" />游戏</a></li>
+			<li><a href="#"><img src="images\商城.png" alt="" />商城</a></li>
+		</ul>
+	</div>
+
+	<!-- 榜单 -->
+	<div id="bangdan">
+	<div id="b1">
+				<p>热门榜单</p>
+			</div>
+			<ul id="biaosheng">
+			<li id="li1">
+			<a href="#"><img src="images\小图标\酷狗飙升榜.png" id="i1"><p>酷狗飙升榜</p></a>
+			</li>
+			</ul>
+			<ul id="bangdan1">
+			<li>
+			<a href="#"><img src="images\小图标\酷狗TOP500.png" id="i2"><p>酷狗TOP500</p></a>
+			</li>
+			<li>
+			<a href="#"><img src="images\小图标\网络红歌榜.png" id="i3"><p>网络红歌榜</p></a>
+			</li>
+			<li>
+			<a href="#"><img src="images\小图标\DJ热歌榜.jpg" id="i4"><p>DJ热歌榜</p></a>
+			</li>
+			<li>
+			<a href="#"><img src="images\小图标\欧美新歌榜.png" id="i5"><p>欧美新歌榜</p></a>
+			</li>
+			<li>
+			<a href="#"><img src="images\小图标\韩国新歌榜.png" id="i6"><p>韩国新歌榜</p></a>
+			</li>
+			<li>
+			<a href="#"><img src="images\小图标\日本新歌榜.png" id="i7"><p>日本新歌榜</p></a>
+			</li>
+			<li>
+			<a href="#"><img src="images\小图标\金曲捞榜.jpg" id="i8"><p>金曲捞榜</p></a>			
+			</li>
+			<li>
+			<a href="#"><img src="images\小图标\原创音乐榜.png" id="i9"><p>原创音乐榜</p></a>
+			</li>
+			<li>
+			<a href="#"><img src="images\小图标\粤语新歌榜.png" id="i10"><p>粤语新歌榜</p></a>
+			</li>
+			<li>
+			<a href="#"><img src="images\小图标\酷狗分享榜.png" id="i11"><p>酷狗分享榜</p></a>
+			</li>
+			<li>
+			<a href="#"><img src="images\小图标\5sing音乐榜.png" id="i12"><p>5sing音乐榜</p></a>
+			</li>
+			<li>
+			<a href="#"><img src="images\小图标\繁星音乐榜.png" id="i13"><p>繁星音乐榜</p></a>
+			</li>
+		</ul>
+
+		<!-- 特色音乐榜 -->
+		<div id="b2">
+			<p>特色音乐榜</p>
+		</div>
+		<ul id="bangdan2">
+			<li>
+				<a href="#"><img src="images\小图标\校园歌曲榜.png">
+				<p>校园歌曲榜</p>
+				</a>
+			</li>
+			<li>
+				<a href="#"><img src="images\小图标\中文DJ.png">
+				<p>中文DJ</p>
+				</a>
+			</li>
+			<li>
+				<a href="#"><img src="images\小图标\伤感网络情歌.png">
+				<p>伤感网络情歌</p>
+				</a>
+			</li>
+			<li>
+				<a href="#"><img src="images\小图标\车载音乐.png">
+				<p>车载音乐</p>
+				</a>
+			</li>
+			<li>
+				<a href="#"><img src="images\小图标\KTV.png">
+				<p>KTV</p>
+				</a>
+			</li>
+			<li>
+				<a href="#"><img src="images\小图标\影视金曲.png">
+				<p>影视金曲</p>
+				</a>
+			</li>
+			<li>
+				<a href="#"><img src="images\小图标\纯音乐.png">
+				<p>纯音乐</p>
+				</a>
+			</li>
+		</ul>
+
+		<!-- 全球榜 -->
+		<div id="b3">
+			<p>全球榜</p>
+		</div>
+		<ul id="bangdan3">
+			<li>
+				<a href="#"><img src="images\小图标\美国BillBoard榜.png">
+				<p>美国BillBoard榜</p>
+				</a>
+			</li>
+			<li>
+				<a href="#"><img src="images\小图标\英国单曲榜.png">
+				<p>英国单曲榜</p>
+				</a>
+			</li>
+			<li>
+				<a href="#"><img src="images\小图标\日本公信榜.png">
+				<p>日本公信榜</p>
+				</a>
+			</li>
+			<li>
+				<a href="#"><img src="images\小图标\韩国音乐榜.png">
+				<p>韩国M-net榜</p>
+				</a>
+			</li>
+			<li>
+				<a href="#"><img src="images\小图标\中国TOP排行榜.png">
+				<p>中国TOP排行榜</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- 酷狗飙升榜（大） -->
+	<div id="bigbiao">
+		<div id="btitle">
+			<div id="b4">酷狗飙升榜</div>
+		</div>
+		<div id="b5">2017-05-15 更新</div>
+		<div id="b6">
+		<a href="#">
+			<p>播放全部</p>
+		</a>
+		</div>
+
+		<div id="quanxuan">
+		<div id="buttons">
+		<a>
+			<input id="an1" type="button" value="全选" onclick="CheckAll()"/>
+			<input id="an2" type="button" value="反选" onclick="OtherCheck()"/>
+			<input id="an3" type="button" value="取消" onclick="UnCheck()"/>
+			</a>
+		</div>
+			<div id="div">
+			<ul id="bangdan4">
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;1  王俊凯 - 不完美小孩</p><span>4:20</span></a><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;2  李宇春 - 天黑黑</p><span>3:54</span></a><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;3  Martinn Jensen - Solo Dance</p><span>2:54</span></a><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;4  薛之谦、何洁 - 有没有</p><span>4:15</span></a><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;5  张靓颖 - 献给母亲的歌</p><span>4:27</span></a><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;6  姜潮 - 过分亲密</p><span>4:40</span></a><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;7  SING女团 - 飞过时间的海</p><span>4:29</span></a><br /><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;8  赵雷 - 妈妈</p><span>5:44</span></a><br /><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;9  金志文、刘心 - 妈妈做的面</p><span>4；15</span></a><br /><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;10  高丽霞 - 一壶老酒</p><span>4:23</span></a><br /><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;11 刘和刚 - 娘</p><span>4:10</span></a><br /><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;12  高娜 - 婆婆也是妈</p><span>2:51</span></a><br /><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;13  琼雪卓玛 - 母亲</p><span>3:49</span></a><br /><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;14  王建房 - 在人间</p><span>3:54</span></a><br /><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;15  黑鸭子 = 母亲</p><span>4:46</span></a><br /><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;16  李克 - 妈妈</p><span>5:00</span></a><br /><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;17  倪尔萍 - 儿行千里妈牵挂</p><span>5:19</span></a><br /><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;18  荣忠豪 - 母亲节快乐</p><span>3:39</span></a><br /><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;19  李克勤、陈冰 - 大雨</p><span>4;11</span></a><br /><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;20 沙宝亮 - 没有爱情藏得住</p><span>4；04</span></a><br /><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;21 黄绮珊、陈艺搏 - 烛光里的妈妈+鲁冰花</p><span>5:34</span></a><br /><br /></li>
+				<li><a><p><input type="checkbox" /><img id="img1" src="images\小图标\new.png">&nbsp;&nbsp;22 李克勤 - 大雨</p><span>4:21</span></a><br /><br /></li>
+			</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- 下载客户端 -->
+	<div id="kehu">
+		<p>查看更多内容，请下载客户端</p>
+		<div id="xiazai">
+		<a href="#">立即下载</a>
+		</div>
+	</div>
+
+	<!-- 页底 -->
+	<div id="end">
+	<div id="guanyu">
+	<ul id="guanyu1">
+		<li id="li2">关于酷狗</li>
+		<li id="li2">监督举报</li>
+		<li id="li2">广告服务</li>
+		<li id="li2">版权指引</li>
+		<li id="li2">隐私政策</li>
+		<li id="li2">用户服务协议</li>
+		<li id="li2">推广合作</li>
+		<li id="li2">酷狗音乐人</li>
+		<li id="li2">酷狗音乐推</li>
+		<li id="li2">招聘信息</li>
+		<li id="li2">客服中心</li>
+		<li id="li3">用户体验提升计划</li>
+	</ul>
+	</div>
+	<div id="women">
+		<p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>
+		<p id="p1">信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339   粤ICP备09017694号-2<img src="images\小图标\last1.png" width="19px" height="19px"></p>
+		<p>广播电视节目制作经营许可证（粤）字第01270号   营业性演出许可证穗天演440106026</p>
+		<p>穗公网监备案证第44010650010167   互联网药品信息服务资格证编号（粤）-非经营性-2012-0018</p>
+		<p id"p2">Copyright   2004-2017 KuGou-Inc.All Rights Reserved<img src="images\小图标\lst2.png"  width="25px" height="21px"></p>
+	</div>
+	</div>	
+</body>
+</html>
+<script>
+	var CheckBox=div.getElementsByTagName('input');
+             
+            //全选
+            function CheckAll(){
+                for(i=0;i<CheckBox.length;i++){
+                	CheckBox[i].checked=true;
+                };
+            };
+             
+            //不选
+            function UnCheck(){
+                for(i=0;i<CheckBox.length;i++){
+                	CheckBox[i].checked=false;
+                };
+            };
+             
+            //反选
+            function OtherCheck(){
+                for(i=0;i<CheckBox.length;i++){
+                    if(CheckBox[i].checked==true){
+                     CheckBox[i].checked=false;
+                    }
+                    else{ 
+                    	CheckBox[i].checked=true
+                    }
+                }
+            };
+</script>
