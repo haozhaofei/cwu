@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1 one</title>
+</head>
+<body>
+	<ul>
+		<li>red</li>
+		<li>green</li>
+		<li>blue</li>
+	</ul>
+	<ol>	<!-- ol为有序列标题 -->
+		<li>11111</li>
+		<li>22222</li>
+	</ol>
+</body>
+</html>
+<script>
+	var list1 = document.getElementsByTagName('li');
+	var list2 = document.getElementsByTagName("ul")[0].getElementsByTagName("li");
+
+	for(var i=0;i<list2.length;i++){
+		list2[i].onclick=function(){
+			this.style.color=this.innerHTML;
+		}
+	}
+</script>

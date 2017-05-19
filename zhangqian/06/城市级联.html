@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>城市级联</title>
+	
+</head>
+<body>
+	<form>
+		<select name="city" id="city">
+			<option value="0">请选择省市</option>
+			<option value="1">北京</option>
+			<option value="2">上海</option>
+			<option value="3">天津</option>
+			<option value="4">西安</option>
+			<option value="5">甘肃</option>
+		</select>
+
+		<select name="area" id="area">
+			<option value="choose">请选择市区</option>
+		</select>
+	</form>
+</body>
+</html>
+
+<script>
+	var a = new Array();
+	a[0] = ['请选择市区'];
+	a[1] = ['东城区','西城区','海淀区','丰台区','朝阳区','房山区','通州区','顺义区','昌平区','大兴区','怀柔区','平谷区','延庆区','密云区','石景山区','门头沟区'];
+	a[2] = ['黄浦区','徐汇区','长宁区','静安区','普陀区','虹口区','杨浦区','闵行区','宝山区','嘉定区','浦东区','金山区','松江区','青浦区','奉贤区','崇明区'];
+	a[3] = ['滨海新区','和平区','河北区','河东区','河西区','南开区','红桥区','东丽区','西青区','津南区','北辰区','武清区','宝坻区','静海区','宁河区','蓟州区'];
+	a[4] = ['新城区','碑林区','莲湖区','灞桥区','未央区','雁塔区','阎良区','临潼区','长安区','高陵区','蓝田县','周至县 ','户县'];
+	a[5] = ['兰州市','嘉峪关市','金昌市','白银市','天水市','酒泉市','张掖市','武威市','定西市','陇南市','平凉市','庆阳市','临夏州','甘南州'];
+
+	var city = document.getElementById("city");
+	var area = document.getElementById("area");
+	
+	city.onchange = function(){
+		x = this.value;
+		area.length=0;
+		for(var i=0;i<a[x].length;i++){
+			area.add(new Option(a[x][i],i));
+				
+		}
+	}
+</script>

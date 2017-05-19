@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	//JS里面没有关联数组，全部都是索引
+	var a=new Array();
+	var b=new Array(5);
+	var c=new Array(1,2,3);
+
+	var d=[];
+	var e=[3,4,5];   //最常用
+    document.write(e.pop()+"<br>");  //删除数组中最后一个元素，返回是元素
+    document.write(e.shift()+"<br>")  //删除数组中第一个元素
+    e.push([7,8]);
+    for(var i=0;i<e.length;i++)
+    {
+    	document.write(e[i]+",")
+    }
+
+    //如果非要写成关联数组，则最后会转成一个对象
+    d['names']="monkey";
+    d['age']="100";      //相当于 var d={names:monkey,age:100};
+    document.write(d.names);
+</script>

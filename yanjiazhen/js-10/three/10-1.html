@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>删除节点</title>
+	<style>
+		ul{
+			list-style-type: none;
+		}
+		ul li{
+				
+			background-color: yellow;
+			color:azure;
+			height:30px;
+			line-height: 30px;
+			margin-top:10px;
+		}
+		ul li.bb{
+			background-color:teal;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>有何不可</li>
+		<li>为何不可</li>
+		<li>没有不可</li>
+		<li>不可不可</li>
+		<li>不可又如何</li>
+	</ul>
+	<button onclick="del()">删除</button>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName("li");
+		for(var i=0;i<list.length;i++)
+		{
+			list[i].onclick=function()
+			{
+				this.className="bb";
+
+			}
+		}
+	function del(){
+		for(var i=0;i<list.length;i++){
+			if(list[i].className=="bb"){
+				list[i].parentNode.removeChild(list[i]);
+					i--;
+			}
+		}
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>删除2</title>
+	<style>
+	ul li{
+		list-style-type: none;
+		height:30px;
+		margin-top: 10px;
+		background: teal;
+		line-height: 30px;
+	}
+	li:hover{
+		background:seagreen;
+	}
+	ul li.ll{
+		background: azure;
+	}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>70后</li>
+		<li>80后</li>
+		<li>90后</li>
+		<li>00后</li>
+	</ul>
+	<button onclick="del()">删除</button>
+</body>
+</html>
+<script type="text/javascript">
+	var list=document.getElementsByTagName("li");
+	for(var i=0;i<list.length;i++){
+		list[i].onclick=function(){
+			this.setAttribute("class","ll");
+		}
+	}
+	function del(){
+		for(var i=0;i<list.length;i++){
+		if(list[i].className=="ll"){
+			list[i].parentNode.removeChild(list[i]);
+			i--;
+		}
+	}
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>删除2</title>
+	<style>
+	ul li{
+		list-style-type: none;
+		height:30px;
+		margin-top: 10px;
+		background: azure;
+		line-height: 30px;
+	}
+	li:hover{
+		background:yellow;
+	}
+	ul li.aa{
+		background: teal;
+	}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>青春</li>
+		<li>散场</li>
+		<li>落幕</li>
+	</ul>
+	<button onclick="del()">删除</button>
+</body>
+</html>
+<script type="text/javascript">
+	var mulu=document.getElementsByTagName("li");
+	for(var i=0;i<mulu.length;i++)
+	{
+		mulu[i].onclick=function()
+		{
+			this.className="aa";
+		}
+	}
+	function del()
+	{
+		for(var i=0;i<mulu.length;i++)
+		{
+			if(mulu[i].className=="aa")
+			{
+				mulu[i].parentNode.removeChild(mulu[i]);
+				i--;
+			}
+		}
+	
+	}
+</script>

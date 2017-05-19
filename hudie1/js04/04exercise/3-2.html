@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	//重点表达的是在调用方法时，会自动转换为对象
+	var a=true;
+	document.write(typeof a+"<br>");   //Boolean类型
+	document.write(a.toString()+"<br>"); //Boolean类型暂时转换为bool对象
+
+    var b=new Boolean(false);
+    document.write(typeof b+"<br>");  //object类型
+    document.write(b.toString()+"<br>");
+
+</script>

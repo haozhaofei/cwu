@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scoll test</title>
+</head>
+<body>
+	<div style="width:500px;height:500px;background:#ccc;"></div>
+	<div id="bid" style="
+	width:500px;height:500px;background:#eee;"></div>
+</body>
+</html>
+<script>
+	/*window.onscroll=function(){
+	document.documentElement.scrollTop;//获取滚动条的上距离
+	document.documentElement.scrollLeft;//滚动条的左距离
+	}*/
+
+	window.onscroll=function(){
+		//var top=document.documentElement.scrollTop;//获取滚动条的上距离
+		var scrollTop=0;
+		if(document.documentElement&&document.documentElement.scrollTop){
+			scrollTop=document.documentElement.scrollTop;
+		}else if(document.body){
+			scrollTop=document.body.scrollTop;
+		}
+
+		document.getElementById("bid").innerHTML=
+		scrollTop;
+	}
+
+</script>

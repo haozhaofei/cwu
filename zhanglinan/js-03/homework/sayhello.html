@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>say hello!</title>
+</head>
+<style type="text/css">
+div{
+	width: 500px;
+	border-color: red;
+	background-color: blue;
+	font-size: 20px;
+	text-align: center;
+}
+
+</style>
+<body>
+	<div id='did'>
+
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+var data=new Date();
+var did=document.getElementById("did");
+var h=data.getHours();
+if(h>=6&&h<=10){
+	did.innerHTML="早上好";
+	did.style.background-color="pink";
+}
+if(h>=15&&h<=18){
+	did.innerHTML="下午好";
+	did.style.background-color="red";
+}
+if(h>=19&&h<=24){
+	did.innerHTML="晚上好";
+	did.style.background-color="blue";
+}
+</script>

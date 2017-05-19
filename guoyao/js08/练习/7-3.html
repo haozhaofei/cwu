@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li><input type="checkbox" value="星辰"> 星辰 </li>
+		<li><input type="checkbox" value="时差"> 时差 </li>
+		<li><input type="checkbox" value="镇命歌"> 镇命歌 </li>
+		<li><input type="checkbox" value="锦鲤抄"> 锦鲤抄 </li>
+		<li><input type="checkbox" value="东风志"> 东风志</li>
+	</ul>
+
+	<button onclick="doSelect()">喜欢的一首歌</button>
+</body>
+</html>
+
+<script>
+	
+	function doSelect(){
+		
+		var list = document.getElementsByTagName('input');
+		
+		var arr = new Array();
+		for(var i=0;i<list.length;i++){
+			
+			if(list[i].checked && list[i].type == "checkbox"){
+				arr[arr.length] = list[i].value;
+			}
+		}
+		alert(arr);
+	}
+</script>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="uid">
+    <li>穷开心</li>
+    <li>外滩十八号</li>
+    <li>九妹</li>
+    <li>追求</li>
+    <li>长相依</li>
+  </ul>
+</body>
+</html>
+<script>
+  //通过HTML DOM 获取所有的LI节点
+  var list = document.getElementById('uid').getElementsByTagName('li');
+  //XML DOM 获取所有 LI节点
+  var list2 = document.getElementById("uid").childNodes;
+  for(var i=0;i<list2.length;i++){
+    if(list2[i].nodeType == 1){
+      alert(list2[i].firstChild.nodeValue);
+    }
+  }
+</script>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	//alert document.write() console.log()
+	//typeof 检测数据类型
+
+	var str = 100;
+	document.write(str+"的数据类型是"+typeof(str)+"<br/>"); //Number
+
+	var str = 10.1;
+	document.write(str+"的数据类型是"+typeof(str)+"<br/>"); //Number
+
+	var str = "100";
+	document.write(str+"的数据类型是"+typeof(str)+"<br/>"); //String
+
+	var str = '100';
+	document.write(str+"的数据类型是"+typeof(str)+"<br/>");  //String
+
+	var str = [1,2,3];
+	document.write(str+"的数据类型是"+typeof(str)+"<br/>");  //object
+
+	var str = true;
+	document.write(str+"的数据类型是"+typeof(str)+"<br/>");  //boolean
+
+	var str = null;
+	document.write(str+"的数据类型是"+typeof(str)+"<br/>");  //object
+
+	var str = function(){};
+	document.write(str+"的数据类型是"+typeof(str)+"<br/>");  //function
+
+	var str = new Function();
+	document.write(str+"的数据类型是"+typeof(str)+"<br/>");  //function
+
+	var str = new Object();
+	document.write(str+"的数据类型是"+typeof(str)+"<br/>");  //object
+
+	var str = {}; ////JSON对象 
+	document.write(str+"的数据类型是"+typeof(str)+"<br/>");  //object
+
+	var str = new Array()
+	document.write(str+"的数据类型是"+typeof(str)+"<br/>");  //object
+
+	document.write(str+"的数据类型是"+typeof(str2)+"<br/>");  //object
+
+
+
+</script><!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS事件操作</title>
+</head>
+<body>
+	<button onclick="fun1()">按钮1</button>
+	<button id="nid">按钮2</button>
+	<button id="mid">按钮3</button>
+</body>
+</html>
+
+<script>
+/*
+1.事件源
+2.事件
+3.处理程序
+
+主动优点：代码的可读性比较好
+被动优点：代码可以分离，适合比较大的项目
+*/
+
+//主动调用
+	function fun1(){
+		alert("今天是周二")；
+	}
+
+//被动调用
+	document.getElementById('nid').onclick = function(){
+		alert("周日已经被我射熄火了，所以今天是周二");
+	}
+
+	var mid = document.getElementById('mid');
+	mid.addEventListener('click',function(){
+		alert('I love you');
+	});
+</script>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>换背景</title>
+</head>
+<body>
+	<button id="change">背景图</button>
+</body>
+</html>
+<script>
+	var img='url(img/1.jpg)';
+	var body=document.getElementsByTagName("body");
+	document.getElementById('change').onclick=function(){
+	body[0].style.backgroundImage=img;
+	}
+	
+</script>

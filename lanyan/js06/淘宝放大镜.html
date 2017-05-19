@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>taobao33</title>
+	<style>
+		div,img,ul,li{padding: 0px  ;margin: 0px ;}
+		#did img{width: 500px;height: 400px;}
+		#list img{width: 112px;height: 100px;}
+
+
+	</style>
+</head>
+<body>
+	<div id="did">
+	   <img id="mid" src="images/taobao1.jpg" id="m1" alt="">
+	</div>
+
+	<div id="nid"> 
+		<img src="images/taobao1.jpg" alt="">
+	</div>
+
+
+	<div id="list">
+		<img src="images/taobao1.jpg" id="m1" alt="">
+		<img src="images/taobao2.jpg" id="m1" alt="">
+		<img src="images/taobao4.jpg" id="m1" alt="">
+		<img src="images/taobao3.jpg" id="m1" alt="">
+	</div>
+</body>
+</html>
+
+<script>
+	
+	var list=document.getElementById("list").getElementsByTagName("img");
+	for(var i=0;i<list.length;i++){
+		list[i].onmouseover= function(){
+			document.getElementById("mid").src = this.src;
+		}
+	}
+
+	//***************
+
+   var mid = document.getElementById('mid');
+	var did = document.getElementById('did');
+	//当鼠标移上去 显示图片并指定上边距 和左边距
+	mid.onmouseover = function(){
+		did.style.display = "block";
+		did.style.top = this.offsetTop+"px";
+		did.style.left = this.offsetWidth + this.offsetLeft+ 10+"px";
+	}
+
+	//当鼠标离开隐藏
+	mid.onmouseout = function(){
+		did.style.display = "none";
+	}
+
+	//当鼠标移动的时候 获取鼠标的位置
+	mid.onmousemove = function(ent){
+		var event = window.event || ent;
+		var x = event.clientX - this.offsetLeft;
+		var y = event.clientY - this.offsetTop;
+		//*5:是因为要和放大的图片的宽度是一样的
+		//-150:是因为要在被放大的图片DIV的一半
+		did.scrollTop = y*5-250;
+		did.scrollLeft = x*5-200;
+	}
+
+        //***************
+</script>

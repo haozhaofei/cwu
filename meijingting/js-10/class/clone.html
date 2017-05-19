@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>克隆</title>
+	<style type="text/css">
+	img,div{
+		padding: 0px;
+		margin: 0px;
+	}
+	#did{
+		width: 300px;
+		height: 300px;
+		border: 1px solid #f0c;
+	}
+	img{
+		width: 100px;
+		height: 100px;
+	}
+	img:hover{
+		border: 1px solid #f0c;
+	}
+	</style>
+</head>
+<body>
+<div id="did">
+	
+</div>
+<img src="images/1.jpg" alt="">
+<img src="images/2.jpg" alt="">
+<img src="images/3.jpg" alt="">	
+				
+</body>
+</html>
+<script>
+	var oid=document.getElementById('did');
+	var list=document.getElementsByTagName('img');
+	for(var i=0;i<=list.length;i++){
+		list[i].onclick=function(){
+			oid.appendChild(this.cloneNode());
+		}
+
+	}
+</script>

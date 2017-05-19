@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2 three</title>
+	<style>
+		ul,li{padding: 0px;margin: 0px;}
+		ul{list-style: none;}
+		ul li{height: 30px;line-height: 30px;background: #ccc;margin: 10px 0px;}
+		ul li:hover{background: green;}
+	</style>
+</head>
+<body>
+	<ul id="uid">
+		<li>auxiliary</li>
+		<li>assemble</li>
+		<li>rally</li>
+		<li>isolate</li>
+	</ul>
+	word:<input type="text" id="nid" size="30">
+	<button onclick="doAdd()">添加</button>
+</body>
+</html>
+<script>
+	function doAdd(){
+		var name = document.getElementById('nid').value;
+		var tt = document.createTextNode(name);
+		var li = document.createElement('li');
+		var ul = document.getElementById('uid');
+		li.appendChild(tt);
+		ul.appendChild(li);
+	}
+</script>

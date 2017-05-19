@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+
+<script>
+	//JS里一切为对象
+	//对象里面除了属性 就是方法 带（）就是方法 不带的就是属性
+	//只出现了点“.” 点前面一定是个对象
+
+	//变量名不可能和函数名字重复
+	//表达式声明函数/构造函数来定义函数 没有优先加载
+
+	//第一种传统的声明方法
+
+	var fun1 = 100;
+	fun1();
+
+	function fun1(){
+		document.write(1111111111111111111);
+	}
+
+	fun2();
+	//第二种 匿名/表达式
+	var fun2 = function(){
+		document.write(2222222222222222222);
+	}
+
+	document.write(fun3(10,20));
+	//第三种 构造函数来定义函数
+	var fun3 = new Function("a","b","return a+b");
+</script>

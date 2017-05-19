@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	
+	var xiaoqiao=new Object();
+	xiaoqiao.name="xiaoqiao";
+	xiaoqiao.sex="男";
+	xiaoqiao.sanwei="85 50 85";
+	xiaoqiao.say=function(){
+		return "我是小乔";
+	}
+	console.log(xiaoqiao);
+
+	
+	function person(name,color,price){
+		this.name=name;
+		this.color=color;
+		this.price=price;
+		this.say=function(){
+			return "我是陈咬金";
+		}
+	}
+	var person=new person("后羿","yellow",20);
+	console.log(person);
+
+
+	
+	var p={
+		name:"亚瑟",
+		age:22,
+		say:function(){
+			return "我是亚瑟";
+		}
+
+	}
+</script>

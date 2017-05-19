@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body id="bid">
+	
+</body>
+</html>
+<script>
+	//定义三个颜色
+	var arr = ["red","green","blue"];
+	var index = Math.ceil(Math.random()*1000)%3;   //Math.ceil  math对象,对数进行上舍入
+	//获取的是一个集合(集合里面包含了多个对象)
+	//document.getElementsByTagName('body')[0].style.background = arr[index];
+
+	//获取的是一个对象
+	var back = document.getElementById('bid');
+	back.style.background = arr[index];
+
+</script>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <canvas> 标签定义图形，比如图表和其他图像。 -->
+	<canvas id="myCanvas"></canvas>
+</body>
+</html>
+<script type="text/javascript">
+	var canvas=document.getElementById('myCanvas');
+	var ctx=canvas.getContext('2d');    //返回一个用于在画布上绘图的环境。
+	ctx.fillStyle='#FF0000';
+	ctx.fillRect(0,0,80,100);
+</script>

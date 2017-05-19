@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+       li{
+       	list-style-type: none;
+        background: #ccc;
+       	height: 20px;
+       	color: #f0C;
+       	margin-top: 10px;
+       }
+
+      ul li:hover{
+          background: black;
+      }
+      ul li.cc{
+      	background: blue;
+      }
+      button{
+      	margin-top: 160px;
+      	background: gold;
+      }
+	</style>
+</head>
+<body>
+	<ul>
+		<li>周一</li>
+		<li>周二</li>
+		<li>周三</li>
+		<li>周四</li>
+		<li>周五</li>
+		<li>周六</li>
+		<li>周日</li>
+	</ul>
+	<button onclick="doDel()">删除</button>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName('li');
+	for (var i = 0; i < list.length; i++) {
+	       list[i].onclick=function() {
+	       	this.setAttribute("class","cc");
+	       } 
+	}
+
+	function doDel () {
+		var list=document.getElementsByTagName('li');
+		for (var i = 0; i < list.length; i++) {
+			if (list[i].className == "cc") {
+                list[i].parentNode.removeChild(list[i]);
+                i--;
+			}
+		}
+	}
+</script>

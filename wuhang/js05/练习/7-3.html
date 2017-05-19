@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	div,img{padding:0px;margin:0px;}
+	#m1,#m2,#m3,#m4,#m5{display:none;}
+</style>
+<body>
+<div onmousemove="stop()" onmouseout="start()" >
+     <img src="images/1.jpg" id="m0">
+     <img src="images/2.jpg" id="m1">
+     <img src="images/3.jpg" id="m2">
+     <img src="images/4.jpg" id="m3">
+     <img src="images/5.jpg" id="m4">
+     <img src="images/6.jpg" id="m5">
+ </div>
+</body>	
+<script type="text/javascript">
+     
+    
+    var m=0;
+    var time=null;
+    function start(){
+    	if(time==null){
+    		 time=setInterval(function(){
+     			show(m);
+     			m++;
+     			if(m>5){
+     				m=0;
+     			}
+
+     		},1000)
+ 		}
+ 	}
+
+ 	start();
+    
+    function stop(){
+    	if(time!=null){
+    		clearInterval(time);
+    	}
+    	time=null;
+    }
+
+ 	function show(x){
+     	for(var i=0;i<6;i++){
+     		var img=document.getElementById("m"+i);
+     		if(i==x){
+     			img.style.display="block";
+     		}else{
+     			img.style.display="none";
+     		}
+    	 }
+     }
+
+     
+</script>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{list-style-type: none;}
+		ul li{height: 30px;background: pink;margin-top: 10px;line-height: 30px;}
+		ul li:hover{background: yellow;}
+		ul li.cc{background: green;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>yi</li>
+		<li>er</li>
+		<li>san</li>
+		<li>si</li>
+	</ul>
+	<button onclick="doDel()">delete</button>
+</body>
+</html>
+
+<script>
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			this.setAttribute("class","cc");
+		}
+	}
+
+	function doDel(){
+		var list = document.getElementsByTagName('li');
+		for(var i=0;i<list.length;i++){
+			if(list[i].className == "cc"){
+				list[i].parentNode.removeChild(list[i]);
+				i--;
+			}
+		}
+	}
+</script>

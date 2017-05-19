@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1 one</title>
+	<style>
+		ul,li{padding: 0px;margin: 0px;}
+		ul{list-style-type: none;}
+		ul li{height: 30px;background: #ccc;margin: 10px 0px;line-height: 30px;}
+		ul li:hover{background: blue;}
+		ul li.cc{background: #fc0;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>appropriate</li>
+		<li>deficiency</li>
+		<li>scarce</li>
+		<li>remedy</li>
+		<li>grant</li>
+	</ul>
+	<button onclick="doDel()">delete</button>
+</body>
+</html>
+<script>
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			this.setAttribute('class','cc');
+		}
+	}
+
+	function doDel(){
+		var list = document.getElementsByTagName('li');
+		for(var i=0;i<list.length;i++){
+			if(list[i].className== 'cc'){
+				list[i].parentNode.removeChild(list[i]);
+				i--;
+			}
+		}
+	}
+</script>

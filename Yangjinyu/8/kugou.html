@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>酷狗音乐 - 音乐总有新玩法</title>
+</head>
+<style>
+	*{padding: 0; /*内边距*/	margin: 0; /*外边距*/}
+	li,ol,ul{list-style-type:none;}
+
+	a{text-decoration:none;}
+	
+	.header{
+		height:90px;width: 100%;border:1px solid #fff;
+		/*border:1px solid black;*/
+	}
+	.header a{
+		color: #777;	
+	}
+	.logo img{float:left;margin-left: 160px;height: 65px;}
+
+	.input input { background:url(img/so.png) no-repeat center right #FFFFFF; 
+			height:24px; 
+			width:249px; 
+			line-height: 24px;
+			color: #666;
+			position: absolute; 
+			margin-left: 20px;
+			margin-top: 15px;
+			padding: 5px 0; 
+	}
+
+	.topNav{
+		top: 20px;
+		right: 0px;
+		position: absolute;
+		float:right;
+		width: 402px;
+		margin-right: 200px;
+	}
+	.topNav li{
+		float: left;
+		width: 80px;
+		height: 20px;
+		padding: 7px 0;
+	}
+	.topNav li a:hover{
+		color: #169af3;
+	}
+	.login_area{
+		width: 110px;
+		height: 30px;
+		position: relative;
+		float:right;
+		line-height: 30px;
+		text-align: center;
+
+		/*border-left: 1px solid #777;*/
+	}
+	.login_btn a{
+		width: 50px;
+		height: 30px;
+		background-color: #169af3;
+		border:1px solid #169af3;
+		border-radius: 2px;
+		float: left;
+		color: #fff;
+	}
+	.login_btn a:hover{
+		background-color: #1285e2;
+	}
+	.regin_btn a{
+		width: 50px;
+		height: 30px;
+		float: right;	
+		border: 1px solid #777;
+		border-radius: 2px;
+	}
+
+
+	.regin_btn a:hover{
+		color: #0c8ed9;
+		border: 1px solid #0c8ed9;
+	}
+
+/*     ------------------------          */
+
+	.navWrap{
+		width: 100%;
+		height: 55px;
+		position: relative;
+		background-color: #2c323b;
+	}
+	.navWrap .homeNave li{
+		list-style-type: none;
+	}
+	ul.homeNav{
+		margin-left: 50px;
+		background-color: #2c323b;
+		float: left;
+	}
+	.navWrap .homeNave li.more a{
+		display: inline;
+		margin-left: 5px;
+		padding: 0 30px;
+		width: 92px;
+	
+	}
+	.navWrap .nav a{
+		font-size: 16px;
+		color: #ddd;
+	}
+
+	.navWrap .homeNav li{
+		display: inline-block;
+		height: 55px;
+		line-height: 55px;
+	}
+	.navWrap .homeNav li a.normal.active{
+		background-color: #0c8ed9;
+	}
+	.navWrap .homeNav li a.normal{
+		display: block;
+		padding: 0 30px;
+	}
+	.navWrap .homeNav li a.normal:hover{
+		background-color: #0c8ed9;
+	}
+	a,img,textarea{
+		outline: none;
+	}
+	
+	.navWrap .secondMenu{
+		position: absolute;
+		width: 113px;
+		height: 146px;
+		background-color: #252a32;
+		z-index: 99;
+	}
+	/*下拉菜单*/
+	ul.homeNav li{
+		display:inline-block;/*外侧水平显示*/
+	}
+	ul.homeNav ul.secondMenu li{
+		display:block;/*内侧垂直显示--默认显示方式*/
+	}
+	ul.homeNav ul.secondMenu{
+		position:absolute;/*子列表移除屏幕*/
+		margin:-1000px;
+	}
+	ul.homeNav li:hover ul{
+		margin:auto;/*鼠标移上时 默认形式显示*/
+	}
+	ul.homeNav a{
+		display:block;
+		background-color:#2c323b;
+		color:#000;	
+		text-decoration:none;
+		text-align:center;
+	}
+	ul.homeNav a:hover{
+		background-color: #0c8ed9;
+	}
+
+
+
+	/*  ---------------------------   */
+	.navWrap .subNav{
+
+		display: inline-block;
+		position: relative;
+		margin-top: 16px;
+		height:35px;
+		float: right;
+		width:445px;
+	}
+	.navWrap .subNav a{
+		font-size: 14px;
+	}
+	.navWrap .subNav a:hover{
+		color: #0c8ed9;
+	}
+	.navWrap .nav .subNav li{
+		float: left;
+		margin-left: 30px;
+		height: 100%;
+		
+	}
+
+
+
+/*-----------slide------------*/
+	#did{
+    width:100%;
+    height:520px;
+    position:relative;
+    float:left;
+  }
+	#m1,#m2,#m3,#m4{
+    display:none;
+  }
+
+    #mid1{
+
+      position:absolute;
+      top:45%;
+      left:0px;
+    }
+    #mid2{
+
+      position:absolute;
+      top:45%;
+      right:0px;
+    }
+	
+    
+	#p2,#p3{
+    display:none;
+  }
+    #mu{
+      position:absolute;
+      bottom:70px;
+      left:670px;
+    }
+    #mu:hover{
+      cursor: pointer;
+    }
+    #download{
+			width:100%;
+			height:70px;
+			text-align: center;
+			margin-top: -72px;
+			
+		}
+	#download a{
+      text-decoration:none;
+      font-size:20px;
+      color:#fff;
+    }
+    #download a:hover{
+      text-decoration:underline; 
+    }
+	#part3{
+			margin-top: 18px;
+		}
+	.c1{
+			margin-right: 50px;
+			color:#fff;
+			font-weight:bold
+		}
+	.c2{
+			color:#fff;
+			font-weight:bold
+		}
+	.x{
+			font-size: 3px;
+			color:#fff;
+			margin-right: 50px;
+		}
+	#top1{
+			margin-left: 200px;
+			
+		}
+	#mm{
+			margin-bottom: 20px;
+		}
+	#more{
+			margin-left:500px;
+			color:#545454;
+			font-size: 15px;
+		}
+	#more2{
+			float:right;
+			margin-top: 20px;
+			color:#545454;
+			font-size: 15px;
+		}
+	#h1{
+			margin-left: 150px;
+		}
+	#h2{
+			margin-left: 0px;
+			margin-top: 20px;
+			margin-bottom: 20px;}
+	#max{
+			margin-left: 150px;
+			float:left;
+			width:330px;
+			height:330px;
+		}
+	#small{
+			width:350px;
+			height:330px;
+			margin-left: 460px;
+		}
+		
+    #left1{
+			width:325px;
+			height:325px;
+		}
+	#i1{
+			width:160px;
+			height:160px;
+		}
+	#i2{
+			float:right;
+			width:160px;
+			height:160px;
+		}
+	#i3{
+			width:160px;
+			height:160px;
+		}
+	#i4{
+			float:right;
+			margin-top: -326px;
+			width:160px;
+			height:160px;
+		}
+	#right{
+			width:350px;
+			height:400px;
+			float:right;
+			margin-top: -405px;
+			margin-right: 140px;
+		}
+		
+	#bottom2 img{
+			width:100%;
+			height:98px;
+			margin-top: 5px;
+		}
+
+	#theLast{
+			margin-left: 200px;
+		}
+</style>
+<body><div id="page">
+	
+		<div class="header">
+			<h1 class="logo">
+				<img src="img/tubiao.png" alt="" />
+			</h1>
+
+            <div class="input">
+				<input type="text" placeholder="I Am You" type="text">
+			</div>
+
+            <div class="topNav">
+            	<ul>
+                    <li><a href="#">客服中心</a></li>
+                    <li><a href="#">招贤纳士</a></li>
+                    <li><a href="#">会员中心 </a></li>
+                </ul>
+                <div class="login_area">
+                    	<div class="login_btn"><a href="#">登录</a></div>
+                    	<div class="regin_btn"><a href="#">注册</a></div>
+                </div>
+            </div>
+
+		</div><!--header end-->
+		
+		<div class="navWrap">
+            <div class="nav">
+
+                <ul class="homeNav">
+                    <li><a class="normal active" href="#">首页</a></li>
+                    <li><a class="normal" href="#">榜单</a></li>
+                    <li><a class="normal" href="#">下载客户端</a></li>
+                    <li class="more" id="more"><a href="#" class="iconMore" id="showMore" >更多^</a>
+                    	<ul class="secondMenu" id="secondMenu">
+                    		<li><a href="#">电台</a></li>
+                    		<li><a href="#">MV</a></li>
+                    		<li><a href="#">歌单</a></li>
+                    		<li><a href="#">歌手</a></li>
+                		</ul>
+                    </li>
+                </ul>
+
+
+                <ul class="subNav">
+                    <li><a href="#" class="icon icon-nav1">音乐直播</a></li>
+                    <li><a href="#" class="icon icon-nav2">酷狗LIVE</a></li>
+                    <li><a href="#" class="icon icon-nav3">音乐人</a></li>
+                    <li><a href="#" class="icon icon-nav4">游戏</a></li>
+                    <li><a href="#" class="icon icon-nav5">商城</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+		
+
+
+		
+
+		<div class="banner" style="width:1349px; left:-2698px;">
+            <div id="did">
+		   	<img src="img/1.jpg" id="m0" width="1349" height="500">
+
+		   	<div id="download">
+			<div id="part3">
+				<img src="img/pc.png" alt="" />
+				<span class="c1">下载PC版</span>
+				<span class="x">|</span>
+				<img src="img/mac.png" alt="" />
+				<span class="c1">下载iPhone版</span>
+				<span class="x">|</span>
+				<img src="img/andriod.png" alt="" />
+				<span class="c2">下载Android</span>
+			</div>
+			</div>
+		   	<img src="img/1.jpg" id="m1">
+		   	<img src="img/2.jpg" id="m2">
+		   	<img src="img/3.jpg" id="m3">
+
+		   	<img src="img/1.png" id="mid2" onclick="forward()">
+		   	<img src="img/2.png" id="mid1" onclick="back()">
+
+		   	<div id="mu">
+			   	<img src="img/mu.png" onmouseover="show(1)">
+			   	<img src="img/mu.png" onmouseover="show(2)">
+			   	<img src="img/mu.png" onmouseover="show(3)"> 
+		   	</div>
+	   </div>
+       </div>
+	
+	   <div id="three">
+			<!--左侧歌单开始-->
+			<div id="left">
+				<div id="mm">
+					<img id="h1" src="img/selectlist.jpg" alt="" />
+					<span id="more">更多</span>
+				</div>
+				<div id="bottom1"> 
+					<div id="max">
+						<img id="left1" src="img/b1.png" alt="" />
+					</div>
+					<div id="small">
+						<div>
+							<img id="i1" src="img/b2.png" alt="" />
+						</div>
+						<div>
+							<img id="i2" src="img/b3.png" alt="" />
+						</div>
+						<div>
+							<img id="i3" src="img/b4.png" alt="" />
+						</div>
+						<div>
+							<img id="i4" src="img/b5.png" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="right">
+				<div id="top2">
+					<img id="h2" src="img/hotlist.jpg" alt="" />
+					<span id="more2">更多</span>
+				</div>
+				<div id="bottom2">
+					<div id="php1">
+						<div id="left2">
+							<img id="r1" src="img/r1.png" alt="" />
+						</div>
+						
+					</div>
+					<div id="php2">
+						<div id="left3">
+							<img id="r2" src="img/r2.png" alt="" />
+						</div>
+						
+					</div>
+					<div id="php3">
+						<div id="left4">
+							<img id="r3" src="img/r3.png" alt=""  />
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+			</div>
+	</div>
+	<div>
+		<img id="theLast" src="img/last.jpg" alt="" height:"80px" width:"1000px" />
+	</div>	
+
+
+</div></body>
+</html>
+
+<script>
+   var i=1;
+   var img=document.getElementById("m0");
+   var list=document.getElementById("download").getElementsByTagName("p");
+   function forward(){
+   	 i++;
+   	 if(i>4){
+   	 	i=1;
+   	 }
+     img.src=document.getElementById("m"+i).src;
+     for(var j=0;j<list.length;j++){
+     	if(j==i-1){
+          list[j].style.display="block";
+     	}else{
+     	  list[j].style.display="none";
+     	}
+     }
+   }
+   function back(){
+   	 i--;
+   	 if(i<1){
+   	 	i=4;
+   	 }
+   	 img.src=document.getElementById("m"+i).src;
+   	 for(var j=0;j<list.length;j++){
+     	if(j==i-1){
+          list[j].style.display="block";
+     	}else{
+     	  list[j].style.display="none";
+     	}
+     }
+   }
+   function show(x){
+     i=x;
+     img.src=document.getElementById("m"+i).src;
+     for(var j=0;j<list.length;j++){
+     	if(j==i-1){
+          list[j].style.display="block";
+     	}else{
+     	  list[j].style.display="none";
+     	}
+     }
+   }
+
+
+   </script>

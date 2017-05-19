@@ -1,122 +1,59 @@
-<!-- 第一次 -->
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>定时器时间</title>
 </head>
-<style>
-	ul,li{padding: 0px;margin:0px;}
-	ul{width:100px;border:1px solid #ccc;text-align: center;list-style-type: none;position: relative;display: none;}
-	ul li{height: 30px;margin-top: 10px;background: #ccc; width: 100px;line-height: 30px;font-size: 14px;}
-	li:hover{background: #fc0;}
-</style>
+	<style>
+		
+	</style>
 <body>
-	<ul id="uid">
-		<li>复制</li>
-		<li>粘贴</li>
-		<li>剪切</li>
-		<li>亚瑟</li>
-		<li>大桥</li>
-	</ul>
-	
+	<div id="did">
+		E<sub>aaaaa</sub>
+	</div>
 </body>
 </html>
+<!-- 第一遍 
 <script>
-	window.document.oncontextmenu=function(ent){
-		//兼容IE和火狐浏览器兼容
-		var event= ent || window.event;
-		//获取X坐标的位置
-		var x=event.clientX;
-		//获取Y坐标的位置
-		var y=event.clientY;
-		var uid = document.getElementById('uid');
-		uid.style.top = y+"px";
-		uid.style.left = x+"px";
-		uid.style.display = "block";
-		//屏蔽浏览器右键
-		return false;
-	}
-</script>
-
-<!-- 第二次 
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<style>
-	ul,li{padding: 0px;margin:0px;}
-	ul{width:100px;border:1px solid #ccc;text-align: center;list-style-type: none;position: relative;display: none;}
-	ul li{height: 30px;margin-top: 10px;background: #ccc; width: 100px;line-height: 30px;font-size: 14px;}
-	li:hover{background: #fc0;}
-</style>
-<body>
-	<ul id="uid">
-		<li>复制</li>
-		<li>粘贴</li>
-		<li>剪切</li>
-		<li>亚瑟</li>
-		<li>大桥</li>
-	</ul>
+	var str = "ZhangSanFeng";
+	document.write(str.charAt(3)+"<br>"); //n方法可返回指定位置的字符。
+	document.write(str.bold()+"<br>");  //加粗
+	document.write(str.replace("SanFeng","JunBao")+"<br>");  //替换
+	document.write(str.substr(2,3)+"<br>");  //截取
+	document.write(str.substring(2,3)+"<br>");  //截取
+	document.write(str.toLowerCase()+"<br>");  //大写
+	document.write(str.toUpperCase()+"<br>");  //小写
+	document.write(str.sub()+"<br>");  //小写
+	document.write(str.split("a")+"<br>");  //小写
 	
-</body>
-</html>
-<script>
-	window.document.oncontextmenu=function(ent){
-		//兼容IE和火狐浏览器兼容
-		var event= ent || window.event;
-		//获取X坐标的位置
-		var x=event.clientX;
-		//获取Y坐标的位置
-		var y=event.clientY;
-		var uid = document.getElementById('uid');
-		uid.style.top = y+"px";
-		uid.style.left = x+"px";
-		uid.style.display = "block";
-		//屏蔽浏览器右键
-		return false;
-	}
 </script>-->
 
-<!-- 第二次 
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<style>
-	ul,li{padding: 0px;margin:0px;}
-	ul{width:100px;border:1px solid #ccc;text-align: center;list-style-type: none;position: relative;display: none;}
-	ul li{height: 30px;margin-top: 10px;background: #ccc; width: 100px;line-height: 30px;font-size: 14px;}
-	li:hover{background: #fc0;}
-</style>
-<body>
-	<ul id="uid">
-		<li>复制</li>
-		<li>粘贴</li>
-		<li>剪切</li>
-		<li>亚瑟</li>
-		<li>大桥</li>
-	</ul>
-	
-</body>
-</html>
+<!-- 第二遍 
 <script>
-	window.document.oncontextmenu=function(ent){
-		//兼容IE和火狐浏览器兼容
-		var event= ent || window.event;
-		//获取X坐标的位置
-		var x=event.clientX;
-		//获取Y坐标的位置
-		var y=event.clientY;
-		var uid = document.getElementById('uid');
-		uid.style.top = y+"px";
-		uid.style.left = x+"px";
-		uid.style.display = "block";
-		//屏蔽浏览器右键
-		return false;
-	}
+	var str = "ZhangSanFeng";
+	document.write(str.charAt(3)+"<br>"); //n方法可返回指定位置的字符。
+	document.write(str.bold()+"<br>");  //加粗
+	document.write(str.replace("SanFeng","JunBao")+"<br>");  //替换
+	document.write(str.substr(2,3)+"<br>");  //截取
+	document.write(str.substring(2,3)+"<br>");  //截取
+	document.write(str.toLowerCase()+"<br>");  //大写
+	document.write(str.toUpperCase()+"<br>");  //小写
+	document.write(str.sub()+"<br>");  //小写
+	document.write(str.split("a")+"<br>");  //小写
+	
+</script>-->
+
+<!-- 第三遍 
+<script>
+	var str = "ZhangSanFeng";
+	document.write(str.charAt(3)+"<br>"); //n方法可返回指定位置的字符。
+	document.write(str.bold()+"<br>");  //加粗
+	document.write(str.replace("SanFeng","JunBao")+"<br>");  //替换
+	document.write(str.substr(2,3)+"<br>");  //截取
+	document.write(str.substring(2,3)+"<br>");  //截取
+	document.write(str.toLowerCase()+"<br>");  //大写
+	document.write(str.toUpperCase()+"<br>");  //小写
+	document.write(str.sub()+"<br>");  //小写
+	document.write(str.split("a")+"<br>");  //小写
+	
 </script>-->

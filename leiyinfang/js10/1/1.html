@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{list-style-type: none;}
+		ul li{height: 30px;background: #ccc;margin-top: 10px;line-height: 30px;}
+		ul li:hover{background: #f0c;}
+		ul li.cc{background: #fc0;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>断桥残雪</li>
+		<li>山水之间</li>
+		<li>清明雨上</li>
+		<li>星星点灯</li>
+		<li>你若成风</li>
+		<li>半尘烟沙</li>
+		<li>恋人心</li>
+	</ul>
+	<button onclick="doDel()">删除</button>
+</body>
+</html>
+
+<script>
+
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			this.setAttribute("class","cc");
+		}
+	}
+
+	function doDel(){
+		var list = document.getElementsByTagName('li');
+		for(var i=0;i<list.length;i++){
+			if(list[i].className == "cc"){
+				list[i].parentNode.removeChild(list[i]);
+				i--;
+			}
+		}
+	}
+</script>

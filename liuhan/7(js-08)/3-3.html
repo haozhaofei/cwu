@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3-3更改链接</title>
+</head>
+<body>
+	<a href="http://www.vancl.com" id="aid">凡客</a>
+	<button onclick="doChange()">变</button>
+</body>
+</html>
+<script>
+	function doChange(){
+		var aid = document.getElementById('aid');
+		aid.title = "百度";
+		aid.href = "http://www.baidu.com";
+		aid.innerHTML = "百度";
+	}
+</script>

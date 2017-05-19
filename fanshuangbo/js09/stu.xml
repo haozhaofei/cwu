@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<like>
+	<people id="11">
+		<name>smile</name>
+		<num>11</num>
+	</people>
+	<people id="22">
+		<name>an</name>
+		<num>22</num>
+	</people>
+	<animals>
+		<name>apple</name>
+		<id>02</id>
+	</animals>
+	<food>
+		<name>Ёхвс</name>
+		<id>03</id>
+	</food>
+	<food>
+		<name>кАдл</name>
+		<id>05</id>
+	</food>
+</like>

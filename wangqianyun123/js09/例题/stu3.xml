@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stulist>
+	<stu id='001'>
+		<name>enthusiasm one</name>
+		<gender>无</gender>
+		<age>100</age>
+	</stu>
+	<stu id='002'>
+		<name>enthusiasm two</name>
+		<gender>男</gender>
+		<age>87</age>
+	</stu>
+	<stu id='003'>
+		<name>enthusiasm three</name>
+		<gender>女</gender>
+		<age>110</age>
+	</stu>
+</stulist>

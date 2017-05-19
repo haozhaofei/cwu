@@ -1,0 +1,286 @@
+@charset "utf-8";
+
+*{
+	padding:0;
+	margin:0;
+	}
+body{
+	color: #333;
+}
+a{
+	text-decoration: none;
+	color:#333;
+}
+a:hover{
+	color: #7f0019;
+}
+li{
+	display: inline-block;
+	text-decoration: none;
+}
+#page{
+	margin:100px auto 0;
+	width:910px;
+}
+/*页头*/
+header{
+	width: 100%;
+	background: url("../img/header.png") repeat-x top; 
+	height: 68px;
+}
+header div{
+	margin: 0 auto;
+	width: 910px;
+	position: relative;
+}
+header div .logo{
+	margin:10px 0;
+	height: 18px;
+	width:113px;
+}
+header .daohang {
+	float: right;
+}
+header .daohang li {
+	margin:10px 7px;
+	font-size: 11px;
+	height: 25px;
+}
+header .daohang li a:hover{
+	color:#BF808C;
+}
+header #glo{
+	border: 1px solid #fff;
+	padding: 3px;
+}
+header .shopping{
+	position: absolute;
+	top: 37px;
+	left: 703px;
+	width: 192px;
+	border:1px solid #DCDAD2;
+}
+header ul li{
+	font-size: 12px;
+	line-height: 20px;
+	margin-right:15px;
+
+}
+header ul li a{color: #fff;}
+header ul li:first-child{
+	font-weight: bold;
+}
+header form{
+	margin-top:10px;
+	display: inline-block;
+}
+header form div{
+	border:1px solid #bbb;
+	border-radius: 3px 0 0 3px;
+	width: 372px;
+	height: 30px;
+	line-height: 30px;
+}
+header form select{
+	border: 0;
+	width: 100px;
+	padding:3px 10px;
+	border-right: 1px solid #e5e5e5;
+}
+header form input[type="text"]{
+	border: 0;
+	border-left: 1px solid #e5e5e5;
+	padding:3px 10px;
+}
+header form input[type="submit"]{
+	border: 0;
+	height: 32px;
+	width: 40px;
+	background-color: #666;
+	background: url(../img/icon_search.png) no-repeat #515151 center center;
+}
+header form input[type="submit"]:hover{
+	background: url(../img/icon_search.png) no-repeat #7f0019 center center;
+}
+#catalog{
+	margin-top:10px;
+}
+#catalog li{
+	color: #000;
+	background-color: #bbb;
+	font-size: 10px;
+	border-radius: 2px 0 0 2px;
+	padding: 0 6px 0 5px;
+	line-height: 19px
+}
+#catalog li:hover{
+	color:#7f0019;
+}
+#catalog .current{
+	color:#999;
+	background-color: #fff;
+}
+/*侧栏*/
+aside{
+	float:left;
+	border-bottom: 1px solid #CCC;
+	width: 150px;
+	font-size: 12px;
+	text-indent: center;
+}
+aside li, aside li a{
+	display: block;
+	color: #333;
+}
+aside .shop li{
+	border:1px dotted #C6C5BD;
+	padding: 2px 10px;
+	background-color: #F3F3F3;
+}
+aside ul {
+	margin: 5px 0 10px;
+	padding-bottom: 5px;
+}
+.biao li{
+	background:url(../img/biao.png) no-repeat 0 -178px;
+	padding: 2px 10px;
+}
+aside .shop li a:hover{
+	background: #E1E1E1;
+}
+aside .biao li a:hover{
+	background: #e6e6e6;
+}
+aside .shop .hei{
+	background-color: #666;
+	color:#fff;
+	border:0;
+}
+aside div h2{
+	border-bottom: 1px solid #000;
+	padding-bottom: 5px;
+	font-size: 15px;
+}
+aside div .biao{
+	border-bottom:  1px solid #e4e4e4;
+}
+aside div h3{
+	margin-top:5px;
+}
+/*main*/
+#main{
+	width: 720px;
+	float:right;
+	margin-bottom: 100px;
+}
+#main #s1 img{
+	float: left;
+	margin:20px 20px 0 0;
+}
+ #s1.descript {
+	font-size: 13px;
+	margin: 15px 0;
+	line-height: 20px;
+}
+.descript p{
+	margin-top: 15px;
+}
+ #s1.item a{
+	line-height: 80px;
+}
+#s2{
+	clear :both;
+	padding:5px;
+	margin: 20px 0;
+	display: block;
+	border: 1px solid #e4e4e4;
+}
+#s2 li{
+	width: 135px;
+	height: 100px;
+	padding-top: 15px;
+	border-radius: 3px;
+	background:url(../img/biao.png) no-repeat 8px -130px;
+	padding: 5px 10px 5px 16px;
+	text-decoration: underline;
+}
+
+#s2 li:hover{
+	color: #7f0019;
+	background-color: #ddd;
+}
+#s2 li span[style]{
+	height:50px;
+	width:50px;
+	display: inline-block;
+	margin: 3px;
+}
+#s3 li{
+	width: 160px;
+	display: inline-block;
+	margin-right: 15px;
+	margin-bottom: 10px;
+}
+#s3 div span{
+	border:1px solid #000;
+	padding: 1px 4px;
+	font-size: 10px;
+	display: inline;
+}
+#s3 div .newicon{
+	background-color: #7F0019;
+	color:#fff;
+	font-size: 10px;
+}
+.price .old{
+	font-size: 10px;
+	color:#999;
+	font-weight: bold;
+	line-height: 10px;
+}
+.price .new{
+	font-weight: bold;
+	color:#7F0019;
+}
+/*页尾*/
+footer{
+	clear:both;
+	margin:0 auto ;
+	border-top: 1px solid #999;
+	}
+footer ul{
+	float: right;
+	font-size: small;
+	padding: 5px;
+}
+footer ul li a{
+	color: #000;
+	text-decoration: underline;
+	padding: 5px;
+}
+footer div img{
+	
+	margin: 5px 0 10px;
+	float:right;
+	}
+footer span small{
+	font-size: 9px;
+}
+#chatBanner a{
+	background: url(../img/chat_icon.png) no-repeat 10px 9px;
+	padding: 5px 10px 7px 32px;
+	font-weight: bold;
+	color: #fff;
+	width: 94px;
+	font-size: 14px;
+}
+#chatBanner{
+	background: #666;
+	border-radius: 4px 4px 0 0;
+	line-height: 1.6;
+	margin: 0 -108px 0 auto;
+	width: 100px;
+	position: fixed;
+	bottom: 5px;
+	left: 1000px;
+}

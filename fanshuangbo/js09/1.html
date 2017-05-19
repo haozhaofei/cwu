@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>xml</title>
+</head>
+<body>
+</body>
+</html>
+
+	<script type="text/javascript">
+try //Internet Explorer
+  {
+  xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+  }
+catch(e)
+  {
+  try //Firefox, Mozilla, Opera, etc.
+    {
+    xmlDoc=document.implementation.createDocument("","",null);
+    }
+  catch(e) {alert(e.message)}
+  }
+try 
+  {
+  xmlDoc.async=false;
+  xmlDoc.load("stu.xml");
+  var list=xmlDoc.getElementsByTagName('people');
+  for(var i=0;i<list.length;i++){
+  	var res=list[i].getElementsByTagName("name")[0].innerHTML+"<br>"
+  document.write(res);
+    }
+  }
+catch(e) {alert(e.message)}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>xml2</title>
+</head>
+<body>
+ 
+</body>
+</html>
+ <script type="text/javascript">
+    try //Internet Explorer
+      {
+        xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+      }
+    catch(e)
+     {
+    try //Firefox, Mozilla, Opera, etc.
+      {
+        xmlDoc=document.implementation.createDocument("","",null);
+      }
+    catch(e) {alert(e.message)}
+    }
+      try 
+     {
+        xmlDoc.async=false;
+        xmlDoc.load("stu.xml");
+        var list = xmlDoc.getElementsByTagName('people');
+        for(var i=0;i<list.length;i++){
+      var res = list[i].getElementsByTagName("num")[0].innerHTML+"<br>";
+       document.write(res);
+      }
+    }
+    catch(e) {alert(e.message)
+    }
+    </script>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>xml-3</title>
+</head>
+<body>
+  
+</body>
+</html>
+<script type="text/javascript">
+  try //Internet Explorer
+  {
+    xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+  }
+  catch(e)
+  {
+    try //Firefox, Mozilla, Opera, etc.
+  {
+    xmlDoc=document.implementation.createDocument("","",null);
+  }
+  catch(e) {alert(e.message)
+  }
+  }
+    try 
+  {
+  xmlDoc.async=false;
+  xmlDoc.load("books.xml");
+  var list=xmlDoc.getElementsByTagName("food");
+  for(var i=0;i<list.length;i++)
+    {
+      var ite=list[i].getElementsByTagName("name")[0].innerHTML+"<br>";
+      document.write(ite);
+  }
+}
+catch(e) {alert(e.message)}
+</script>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1 three</title>
+</head>
+<body>
+	<ol>
+		<li>red</li>
+		<li>green</li>
+		<li>blue</li>
+	</ol>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName('ol')[0].getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick=function(){
+			this.style.color=this.innerHTML;
+		}
+	}
+</script>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+          select{
+              height: 100px;
+              width: 50px;
+              background-color: pink;
+              color: #f0c;
+              font-size: 12px;
+          }
+          button{
+          	background-color: #fc0;
+
+          }
+	</style>
+</head>
+<body>
+	<select id="bid1" multiple>
+		<option value="1">red</option>
+		<option value="2">pink</option>
+		<option value="3">blue</option>
+		<option value="4">white</option>
+	</select>
+	<button onclick="domove('bid1','bid2')"> >> </button>
+	<button onclick="domove('bid2','bid1')"> << </button>
+	<select id="bid2" multiple></select>
+</body>
+</html>
+<script>
+	function domove (bid1,bid2) {
+		var select1=document.getElementById(bid1);
+		var select2=document.getElementById(bid2);
+		var list=select1.options;
+		for (var i = 0; i < list.length; i++) {
+			if (list[i].selected) {
+				list[i].selected=false;
+				select2.add(list[i]);
+				i--;
+			}
+			
+		}
+	}
+</script>
