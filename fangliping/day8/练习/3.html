@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<img src="images/HLL-11_xuandong.gif" load="images/1.jpg">
+	<img src="images/HLL-11_xuandong.gif" load="images/2.jpg">
+	<img src="images/HLL-11_xuandong.gif" load="images/3.jpg">
+	<img src="images/HLL-11_xuandong.gif" load="images/4.jpg">
+</body>
+</html>
+<script>
+	setTimeout(function(){
+        var list=document.getElementsByTagName("img");
+        for(var i=0;i<list.length;i++){
+        	list[i].src=list[i].getAttribute("load");
+        	list[i].width="300";
+        	list[i].height="200";
+        }
+	},1000)
+</script>
