@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>随机背景色-1</title>
+</head>
+
+<body id="bid">
+</body>
+</html>
+<script>
+//定义三个颜色数组
+var arr=["pink","yellow","blue"];
+//Math.ceil();是向上取得一个最接近的整数
+//*1000 是将你所生成的小数乘以1000
+//应为是Math.ceil向上取值，所以不会产生0
+var index=Math.ceil(Math.random()*1000)%3;
+var back = document.getElementById('bid');
+back.style.background = arr[index];
+
+</script>

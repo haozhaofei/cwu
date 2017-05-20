@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+*{
+	padding:0;
+	margin:0;
+	}
+#page{
+	max-width:900px;
+	margin:0 auto ;
+	color:#333;
+	}
+li{
+	display:inline-block;
+	list-style:none;
+	}
+
+a{
+	text-decoration:none;
+	color:#666;
+	}
+
+/*导航栏*/
+header {
+	width:100%;
+	height: 32px;
+	border-bottom: 1px solid #ddd;
+}
+header .tubiao{
+	max-width:13%;
+	margin:5px;
+	float:left;
+	}
+.head{
+	margin: auto auto;
+	width:900px;
+	height: 32px;
+}
+.daohang{
+	float:right;
+	}
+.daohang a:hover{
+	color:#999;
+	}
+.daohang li{
+	clear:both;
+	font-size:11px;
+	margin:5px;
+	display:inline-block;
+	}
+#catalog{
+	margin-top:30px;
+}
+#catalog li{
+	
+	background-color: #bbb;
+	color:#000;
+	font-size: 10px;
+	border-radius: 2px 0 0 2px;
+	padding: 0 12px 0 5px;
+	line-height: 19px
+}
+#catalog li:hover{
+	color:#7f0019;
+}
+#catalog .current{
+	color:#999;
+	background-color: #fff;
+}
+/*主体*/
+#main{
+	float: left;
+	width:700px;
+	line-height: 1.6;
+	font-size: 15px;
+}
+
+h1{
+	font-size: 23px;
+	font-weight: bold;
+	margin: 20px 0 30px;
+}
+time{
+	color: #999;
+	font-size: small;
+	text-decoration: underline;
+}
+#main h2{
+	margin:50px 0;
+}
+#main p{
+	margin:50px 0;
+}
+#main p img{
+	float: right;
+	margin: 0 0 5px 25px;
+}
+/*侧栏*/
+aside{
+	float:right;
+	margin:50px 0 40px;
+	font-size: 12px;
+	width: 155px;
+
+}
+aside h2{
+	font-weight: bold;
+	font-size: 12px;
+	border-bottom: 1px solid #666;
+	padding-bottom: 5px;
+	margin:30px 0 10px;
+}
+aside li{
+	display:block;
+	background:url(../img/biao.png) no-repeat 0 -178px;
+	padding:3px 0 3px 10px;
+}
+aside .advice a{
+	margin-bottom: 5px;
+	font-size: 14px;
+	color:#000;
+	font-weight: bold;
+
+}
+aside .advice{
+	margin-top:20px;
+}
+aside .zhuanlan li{
+	text-decoration: underline;
+	background:none;
+	padding:10px 0;
+	border-bottom: 1px solid #eee;
+}
+aside .zhuanlan time{
+	font-size: 10px;
+	text-decoration: underline;
+}
+aside .advice a{
+	display: block;
+	text-decoration: underline;
+	color: #000;
+	font-size: 12px;
+}
+aside ul a:hover{
+	color:#7f0019;
+}
+aside .more{
+	border: 1px solid #aaa;
+	padding:5px;
+	text-align: center;
+}
+#dmore,#jiazai{
+	display: none;
+}
+#jiazai{
+	margin-left: 61px;
+}
+/*页脚*/
+footer{
+	clear:both;
+	margin:0 auto;
+	border-top: 1px solid #999;
+	}
+footer ul{
+	float: right;
+	font-size: small;
+	
+	padding: 5px;
+
+}
+footer ul li a{
+	color: #000;
+	text-decoration: underline;
+	padding: 5px;
+}
+footer div img{
+	
+	margin: 5px 0 10px;
+	float:right;
+	}
+footer span small{
+	font-size: 9px;
+}
+
+

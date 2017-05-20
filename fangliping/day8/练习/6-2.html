@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	#did{width:400px;height:300px;background:#ccc;}
+	#mid{width:100px;height:100px;background:red;}
+</style>
+<body>
+	<div id="did">
+		<div id="mid"></div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	document.getElementById("did").onclick=function(){
+		alert("did");
+	}
+	//事件冒泡
+	document.getElementById("mid").onclick=function(ent){ 
+	    var event=window.event || ent;   //兼容
+	    if(document.all){                //判断是否为IE浏览器
+	    	event.cancelBubble=true;     //IE阻止事件
+	    }else{
+	    	event.stopPropagation();     //火狐阻止事件
+	    }
+		alert("mid");
+	}
+</script>
