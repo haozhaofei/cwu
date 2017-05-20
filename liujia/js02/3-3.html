@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	
+</body>
+</html>
+<script>
+	
+	var num1 = 10;  //10
+	var num1 = "100";  //100
+	var num1 = "0000200" //200
+	var num1 = "";  //NAN
+	var num1 = "100iloveyou";  //100
+	var num1 = "iloveyou100";  //NAN
+	var num1 = 10.3;
+
+	document.write(parseInt(num1)+"<br>");  //NaN  Not a Number  不是一个数字 
+
+
+	var num1 = 10;  //10
+	var num1 = "100";  //100
+	var num1 = "0000200" //200
+	var num1 = "";  //NAN
+	var num1 = "100iloveyou";  //100
+	var num1 = "iloveyou100";  //NAN
+	var num1 = 10.3;  //和parseInt() 唯一区别就是浮点型这一块的转换
+	document.write(parseFloat(num1)+"<br>");  //NaN  Not a Number  不是一个数字 
+
+</script>
