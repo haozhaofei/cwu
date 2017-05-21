@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>xml-3</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	try //Internet Explorer
+	{
+		xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+	}
+	catch(e)
+	{
+		try //Firefox, Mozilla, Opera, etc.
+	    {
+	    	xmlDoc=document.implementation.createDocument("","",null);
+	    }
+		catch(e) {alert(e.message)}
+		}
+		try 
+		{
+	  		xmlDoc.async=false; 
+	  		xmlDoc.load("bookStore.xml");
+	  		var list = xmlDoc.getElementsByTagName('book');
+	  		for(var i=0;i<list.length;i++){
+	  			var res = list[i].getElementsByTagName("year")[0].innerHTML+"<br>";
+	  			document.write(res);
+	  	}
+	  }
+	catch(e) {alert(e.message)}
+</script>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="stop()">stop</button>
+	<button id="bid">10</button>
+</body>
+</html>
+<script>
+	var stop = document.getElementById('bid');
+	var m=10;
+	var time = setInterval(function(){
+		m--;
+		bid.innerHTML = m;
+		if(m == 0){
+			bid.style.color = "red";
+			bid.style.fontSize = "30px";
+			clearInterval(time);
+		}
+	},1000)
+	function stop(){
+		clearInterval(time);
+	}
+</script>

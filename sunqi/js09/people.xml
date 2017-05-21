@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<people>
+	<person id="1">
+		<name>sunny</name>
+		<age>18</age>
+		<sex>you</sex>
+	</person>
+	<person id="2">
+		<name>Lucy</name>
+		<age>16</age>
+		<sex>us</sex>
+	</person>
+	<person id="3">
+		<name>Andy</name>
+		<age>25</age>
+		<sex>unsure</sex>
+	</person>
+</people>

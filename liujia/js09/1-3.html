@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		select{width: 150px;height: 200px;}
+	</style>
+</head>
+<body>
+	<select name="" id="sid1" multiple> //multiple可多选
+		<option value="1">速度与激情8</option>
+		<option value="2">美女与野兽</option>
+		<option value="3">记忆大师</option>
+		<option value="4">嫌疑人x的献身</option>
+	</select>
+	<button onclick="doMove('sid1','sid2')"> >> </button>
+	<button onclick="doMove('sid2','sid1')"> << </button>
+
+	<select name="" id="sid2" multiple>
+		
+	</select>
+</body>
+</html>
+
+<script>
+	function doMove(sid1,sid2){
+		//获取sid1元素节点和sid2元素节点
+		var select1 = document.getElementById(sid1);
+		var select2 = document.getElementById(sid2);
+		//获取所有的list
+		var list = select1.options;
+		for(var i=0;i<list.length;i++){
+			//判断是否选中
+			if(list[i].selected){
+				//是否默认选中
+				list[i].selected = false;
+				//添加option到select2
+				select2.add(list[i]);
+				//解决js默认索引问题
+				i--;
+			}
+		}
+	}
+
+</script>

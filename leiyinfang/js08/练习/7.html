@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li><input type="checkbox" value="山水之间"> 山水之间 </li>
+		<li><input type="checkbox" value="断桥残雪"> 断桥残雪 </li>
+		<li><input type="checkbox" value="真英雄"> 真英雄 </li>
+		<li><input type="checkbox" value="半尘烟沙"> 半尘烟沙 </li>
+		<li><input type="checkbox" value="清明雨上"> 清明雨上</li>
+	</ul>
+
+	<button onclick="doSelect()">喜欢的一首歌</button>
+</body>
+</html>
+
+<script>
+	
+	function doSelect(){
+		var list = document.getElementsByTagName('input');
+		var arr = new Array();
+		for(var i=0;i<list.length;i++){
+			if(list[i].checked && list[i].type == "checkbox"){
+				arr[arr.length] = list[i].value;
+			}
+		}
+		alert(arr);
+	}
+</script>

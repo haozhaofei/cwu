@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>hello</li>
+		<li>how are you</li>
+		<li>what are you doing now?</li>
+		<li>I am doing homewrok.</li>
+		<li>so much</li>
+	</ul>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName("li");
+	for(var i=0;i<list.length;i++)
+	{
+		list[i].onclick=function(){
+			alert(this.innerHTML);
+		}
+	}
+</script>

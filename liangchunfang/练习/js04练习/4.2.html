@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	#did{
+		font-weight: bold;font-size: 60px;
+	}
+</style>
+<body>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+	setInterval(function(){
+		var today=new Date();
+		var year=today.getFullYear();
+		var month=today.getMonth();
+		var date=today.getDate();
+		var hour=today.getHours();
+		var minute=today.getMinutes();
+		var second=today.getSeconds();
+		document.getElementById('did').innerHTML=year+"-"+month+"-"+date+" "+hour+":"+minute+":"+second;
+	},1000);
+</script>

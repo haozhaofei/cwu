@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<table border="1px" width="400px">
+		<thead>
+			<th>学号</th>
+			<th>姓名</th>
+			<th>年龄</th>
+			<th>操作</th>
+		</thead>
+		<tbody id="tbody">
+			<tr>
+				<td>10001</td>
+				<td>张三</td>
+				<td>22</td>
+				<td><button onclick="doDel(this)">删除</button></td>
+			</tr>
+			<tr>
+				<td>1002</td>
+				<td>李四</td>
+				<td>27</td>
+				<td><button onclick="doDel(this)">删除</button></td>
+			</tr>
+			<tr>
+				<td>10003</td>
+				<td>王五</td>
+				<td>33</td>
+				<td><button onclick="doDel(this)">删除</button></td>
+			</tr>
+		</tbody>
+	</table>
+  <form action="" name="myform" onsubmit="return doAdd()">
+  	 <br>学号:<input type="text" name="id"><br>
+  	 <br>姓名:<input type="text" name="name"><br>
+  	 <br>年龄:<input type="text" name="age"><br>
+     <input type="submit" value="添加">
+  </form>
+</body>
+</html>
+<script type="text/javascript">
+	function doDel(obj){
+		//父节点.removeChild(子节点) 方法删除指定节点
+       obj.parentNode.parentNode.parentNode.removeChild(obj.parentNode.parentNode);
+	}
+	function doAdd(){
+		var array=new Array();
+		array[0]=document.myform.id.value;
+		array[1]=document.myform.name.value;
+		array[2]=document.myform.age.value;
+		var tr=document.createElement("tr");
+		for(var i=0;i<array.length;i++){
+			var td=document.createElement("td");
+			var text=document.createTextNode(array[i]);
+			td.appendChild(text);
+			tr.appendChild(td);
+		}
+		var td=document.createElement("td");
+		td.innerHTML="<button onclick='doDel(this)''>删除</button>";
+		tr.appendChild(td);
+		var tbody=document.getElementById("tbody");
+		tbody.appendChild(tr);
+		return false;
+	} 
+</script>

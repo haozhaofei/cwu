@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS事件操作</title>
+</head>
+<body>
+	<button onclick="fun1()">按钮1</button>
+	<button id="nid">按钮2</button>
+	<button id="mid">按钮3</button>
+</body>
+</html>
+<script>
+	//主动
+	function fun1 () {
+		alert("今天清明假第二天");
+	}
+	//被动
+	document.getElementById('nid').onclick=function(){
+		alert("假期第一天去玩了，所以今天是第二天");
+	}
+
+	var mid=document.getElementById('mid');
+	mid.addEventListener('click',function(){
+		alert('还想继续放假呐');
+	});
+</script>

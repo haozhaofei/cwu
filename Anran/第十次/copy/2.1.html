@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2 one</title>
+	<style>
+		ul,li{padding: 0px;margin: 0px;}
+		ul{list-style: none;}
+		ul li{height: 30px;line-height: 30px;background: #ccc;margin: 10px 0px;}
+		ul li:hover{background: #fc0;}
+	</style>
+</head>
+<body>
+	<ul id="uid">
+		<li>rotate</li>
+		<li>evolve</li>
+		<li>stretch</li>
+		<li>adequate</li>
+		<li>thrust</li>
+		<li>sufficent</li>
+	</ul>
+	vocabulary:<input type="text" id="nid" size="30">
+	<button onclick="doAdd()">添加</button>
+</body>
+</html>
+<script>
+	function doAdd(){
+		var name = document.getElementById('nid').value;
+		var tt = document.createTextNode(name);
+		var li = document.createElement('li');
+		var ul = document.getElementById('uid');
+
+		li.appendChild(tt);
+		ul.appendChild(li);
+	}
+</script>

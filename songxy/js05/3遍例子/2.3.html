@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS事件操作</title>
+</head>
+<body>
+	<button onclick="fun1()">按钮1</button>
+	<button id="nid">按钮2</button>
+	<button id="mid">按钮3</button>
+</body>
+</html>
+
+
+<script>
+	/**
+		1.事件源
+		2.事件
+		3.处理程序
+		主动优点:代码的可读性比较好
+		被动优点:代码可以分离,适合比较大的项目
+	**/
+	//主动调用
+	function fun1(){
+		alert("今天是周二");
+	}
+	//被动调用
+	document.getElementById('nid').onclick = function(){
+		alert("周日已经被我射熄火了,所以今天是周二");
+	}
+
+	var mid = document.getElementById('mid');
+		mid.addEventListener('click',function(){
+			alert('I love you');
+		});
+</script>

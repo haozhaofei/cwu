@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1 two</title>
+	<style>
+		select{width: 100px;height: 150px;}
+	</style>
+</head>
+<body>
+	<select name="" id="one" multiple="">
+		<option value="1">comparison</option>
+		<option value="2">fertilizer</option>
+		<option value="3">fertile</option>
+		<option value="4">ego</option>
+	</select>
+	<button onclick="doMove('one','two')"> >> </button>
+	<button onclick="doMove('two','one')"> << </button>
+	<select name="" id="two" multiple=""></select>
+</body>
+</html>
+<script>
+	function doMove(a,b){
+		var one = document.getElementById(a);
+		var two = document.getElementById(b);
+		var list = one.options;
+		for(var i=0;i<list.length;i++){
+			if(list[i].selected){
+				list[i].selected = false;
+				two.add(list[i]);
+				i--;
+			}
+		}
+	}
+</script>

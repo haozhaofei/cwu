@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变色</title>
+</head>
+<body>
+	<ul>
+		<li>yellow</li>
+		<li>pink</li>
+		<li>red</li>
+	</ul>
+	<ol id="ol">
+		<li>花儿为什么这么红</li>
+		<li>现在的你看到的我是蓝色的</li>
+	</ol>
+
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName('li');
+	var list2=document.getElementsByTagName('ul')[0].getElementsByTagName('li');
+	var list3=document.getElementsByTagName('ol').getElementsByTagName('li');
+	for (var i = 0; i <list.length; i++) {
+	     list2.onclick=function  () {
+	     	this.style.color=this.innerHTML;
+	     }
+	};
+</script>

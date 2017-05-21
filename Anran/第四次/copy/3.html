@@ -1,4 +1,3 @@
-<!--第一次  -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,66 +5,52 @@
 	<title>Document</title>
 </head>
 <body>
-	<button onclick="fun1(this)">点我</button>
-	<button id="bid">在点我</button>
+	
 </body>
 </html>
+<!-- 第一遍 
 <script>
-	//主调用不能直接获取,需要传参
-	function fun1(obj){
-		obj.style.color = "blue";
-	}
-	//别动调用可以直接使用this
-	document.getElementById('bid').onclick = function(){
-		this.style.color = "red";
-	}
+	//重点表达的是在调用方法时 会自动转换为对象
+	//bool类型
+	//在调用toString() 时 JavaScript 会内在地将这个布尔值转换成一个临时的 Boolean 对象
+	var a = true;
+	document.write(typeof a+"<br>");
 
-</script>
-
-<!--第一次 
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<button onclick="fun1(this)">点我</button>
-	<button id="bid">在点我</button>
-</body>
-</html>
-<script>
-	//主调用不能直接获取,需要传参
-	function fun1(obj){
-		obj.style.color = "blue";
-	}
-	//别动调用可以直接使用this
-	document.getElementById('bid').onclick = function(){
-		this.style.color = "red";
-	}
-
-</script> -->
-
-<!--第二次  
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<button onclick="fun1(this)">点我</button>
-	<button id="bid">在点我</button>
-</body>
-</html>
-<script>
-	//主调用不能直接获取,需要传参
-	function fun1(obj){
-		obj.style.color = "blue";
-	}
-	//别动调用可以直接使用this
-	document.getElementById('bid').onclick = function(){
-		this.style.color = "red";
-	}
-
+	document.write(a.toString()+"<br>");
+	//对象类型
+	var b = new Boolean(false);
+	document.write(typeof b+"<br>");
+	document.write(b.toString()+"<br>");
 </script>-->
+
+<!-- 第二遍 
+<script>
+	//重点表达的是在调用方法时 会自动转换为对象
+	//bool类型
+	//在调用toString() 时 JavaScript 会内在地将这个布尔值转换成一个临时的 Boolean 对象
+	var a = true;
+	document.write(typeof a+"<br>");
+
+	document.write(a.toString()+"<br>");
+	//对象类型
+	var b = new Boolean(false);
+	document.write(typeof b+"<br>");
+	document.write(b.toString()+"<br>");
+</script>-->
+
+<!-- 第三遍 
+<script>
+	//重点表达的是在调用方法时 会自动转换为对象
+	//bool类型
+	//在调用toString() 时 JavaScript 会内在地将这个布尔值转换成一个临时的 Boolean 对象
+	var a = true;
+	document.write(typeof a+"<br>");
+
+	document.write(a.toString()+"<br>");
+	//对象类型
+	var b = new Boolean(false);
+	document.write(typeof b+"<br>");
+	document.write(b.toString()+"<br>");
+</script>-->
+
+

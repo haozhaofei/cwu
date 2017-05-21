@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>列表页</title>
+  <link rel="stylesheet" href="css/main3.css">
+</head>
+<body> 
+	<div class="header">
+    <div class="logo">
+      <a href="http://www.kugou.com/">
+         <img src="images/logo.png">
+      </a>
+    </div>
+  
+    <div >
+        <div class="search_input">
+          <input type="text" placeholder="张杰 这就是爱">
+          <div class="searh_btn">
+            <span>搜索</span>
+          </div>
+        </div>
+    </div>    
+    
+    <div class="topNav">
+        <ul>
+            <li><a href="">客服中心</a></li>
+            <li><a href="">招贤纳士</a></li>
+            <li><a href="">会员中心 </a></li>
+        </ul>
+        <div class="login_area">
+            <div  class="clearfix">
+              <a  href="" class="login_btn" >登录</a>
+              <a  href="" class="regin_btn" >注册</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="navWrap">
+    <div class="nav">
+        <ul class="homeNav">
+            <li><a class="normal" href="">首页</a></li>
+            <li><a class="normal"  href="">榜单</a></li>
+            <li><a class="normal" href="">下载客户端</a></li>
+            <li class="more" >
+            <a href="" class="iconMore">更多</a>
+            </li>
+        </ul>
+        <ul class="secondMenu" id="secondMenu">
+            <li><a href="">电台</a></li>
+            <li><a href="">MV</a></li>
+            <li><a href="">歌单</a></li>
+            <li><a href="">歌手</a></li>
+        </ul>
+        <ul class="subNav">
+            <li><a  href="" class="icon icon-nav1">音乐直播</a></li>
+            <li><a  href="" class="icon icon-nav2">酷狗LIVE</a></li>
+            <li><a  href="" class="icon icon-nav3">音乐人</a></li>
+            <li><a  href="" class="icon icon-nav4">游戏</a></li>
+            <li><a  href="" class="icon icon-nav5">商城</a></li>
+        </ul>
+    </div>
+</div>
+
+<!--精选集内页-->
+<div class="wrap alm2 clear_fix specialPage">
+
+  <div class="mbx">我的位置 
+  	<a title="乐库" href="">首页</a>
+  	<a title="精选辑" href="">精选辑</a>
+  	<span>金曲捞 合辑</span>
+  </div>
+
+  <div class="l">
+      <div class="pic">
+          <img alt="金曲捞 合辑" src="images/41.jpg" height="148" width="148" />
+      </div>
+      <a href="" title="分享"  class="playall" >
+      <span><i class="t2"></i>分享</span></a>
+      <p class="detail">
+          <span>名称：</span>金曲捞 合辑<br />
+          <span>创建人：</span>纳蓝独孤<br />
+          <span>心情：</span><br />
+          <span>更新时间：</span>2017-05-12<br />
+      </p>
+      <div class="intro">
+      <p>
+      <span>简介：</span>
+      2017年，江苏卫视诚意打造的季播版音乐节目《金曲捞》，将致力打捞茫茫星河中蒙尘的星星，助其焕发新生。该节目将于4月14日起，每周五晚十点档在江苏卫视播出，酷狗音乐将第一时间为您提供节目无损音频。
+      </p>
+      </div>
+            <p class="more" onclick="show()">更多</p>
+            <p class="more_intro">2017年，江苏卫视诚意打造的季播版音乐节目《金曲捞》，将致力打捞茫茫星河中蒙尘的星星，助其焕发新生。该节目将于4月14日起，每周五晚十点档在江苏卫视播出，酷狗音乐将第一时间为您提供节目无损音频。<span></span></p>
+      </div>
+
+  <div class="r">
+      <div id="songs" class="list1">
+          <strong>金曲捞 合辑 - 歌曲列表</strong>
+          <h4 class="dq">
+          <a href="" onclick=""   title="播放" hidefocus="true"><span></i>播放</span></a>
+          <input type="checkbox" onclick="clickAll(1)" checked="checked">全选
+          <input type="checkbox" onclick="clickAll(2)" checked="checked">全不选
+           <input type="checkbox" onclick="clickAll(3)" checked="checked">反选
+          </h4>
+          <ul>
+                             
+              <li>
+                <a title="何洁 - 冲动【第五期】"  href="">
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">01</span>
+                <span class="text"><i>何洁 - 冲动【第五期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="沙宝亮 - 没有爱情藏得住【第五期】" hidefocus="true" href="javascript:;">
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span><span class="listen" title="播放"></span>
+                <span class="num1">02</span>
+                <span class="text"><i>沙宝亮 - 没有爱情藏得住【第五期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="沙宝亮、陶晶莹 - 没有爱情藏得住【第五期】" hidefocus="true" href="javascript:;">
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span><span class="listen" title="播放"></span>
+                <span class="num1">03</span>
+                <span class="text"><i>沙宝亮、陶晶莹 - 没有爱情藏得住【第五期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="陈冰 - 大雨【第五期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">04</span>
+                <span class="text"><i>陈冰 - 大雨【第五期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="李克勤、陈冰 - 大雨【第五期】" hidefocus="true" href="javascript:;">
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">05</span><span class="text"><i>李克勤、陈冰 - 大雨【第五期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="何洁 - 有没有【第五期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">06</span><span class="text"><i>何洁 - 有没有【第五期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="薛之谦、何洁 - 有没有【第五期】" hidefocus="true" href="javascript:;">
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span><span class="listen" title="播放"></span>
+                <span class="num1">07</span>
+                <span class="text"><i>薛之谦、何洁 - 有没有【第五期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="郁可唯 - 影子【第四期】" hidefocus="true" href="javascript:;">
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">08</span>
+                <span class="text"><i>郁可唯 - 影子【第四期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="郁可唯 - 从来没有想过【第四期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true" >
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">09</span><span class="text"><i>郁可唯 - 从来没有想过【第四期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="品冠、郁可唯 - 从来没有想过【第四期】" hidefocus="true" href="javascript:;">
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true" >
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">10</span>
+                <span class="text"><i>品冠、郁可唯 - 从来没有想过【第四期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="张芸京 - 留心【第四期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true" >
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">11</span>
+                <span class="text"><i>张芸京 - 留心【第四期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="大张伟、张芸京 - 留心【第四期】" hidefocus="true" href="javascript:;">
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true" >
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">12</span>
+                <span class="text"><i>大张伟、张芸京 - 留心【第四期】</i></span>
+              </a>
+            </li>
+        
+               
+              <li>  
+                <a title="金志文 - 不爱了也是一种爱【第四期】" hidefocus="true" href="javascript:;">
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">13</span>
+                <span class="text"><i>金志文 - 不爱了也是一种爱【第四期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="周蕙、金志文 - 不爱了也是一种爱【第四期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">14</span>
+                <span class="text"><i>周蕙、金志文 - 不爱了也是一种爱【第四期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="李好 - 今天等我来【第三期】" hidefocus="true" href="javascript:;">
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">15</span>
+                <span class="text"><i>李好 - 今天等我来【第三期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="杜丽莎 - 我还能爱谁【第三期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">16</span>
+                <span class="text"><i>杜丽莎 - 我还能爱谁【第三期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="许志安、杜丽莎 - 我还能爱谁【第三期】" hidefocus="true" href="javascript:;">
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">17</span>
+                <span class="text"><i>许志安、杜丽莎 - 我还能爱谁【第三期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="黄绮珊 - 长安长安【第三期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true" >
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">18</span>
+                <span class="text"><i>黄绮珊 - 长安长安【第三期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="郑钧、黄绮珊 - 长安长安【第三期】" hidefocus="true" href="javascript:;">
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">19</span>
+                <span class="text"><i>郑钧、黄绮珊 - 长安长安【第三期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="汪苏泷 - 东京铁塔的幸福【第三期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true" >
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">20</span>
+                <span class="text"><i>汪苏泷 - 东京铁塔的幸福【第三期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="江美琪、汪苏泷 - 东京铁塔的幸福【第三期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true" >
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">21</span>
+                <span class="text"><i>江美琪、汪苏泷 - 东京铁塔的幸福【第三期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="刘维 - 诱惑的街【第二期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">22</span>
+                <span class="text"><i>刘维 - 诱惑的街【第二期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="汪苏泷 - 人情世故【第二期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true" >
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">23</span>
+                <span class="text"><i>汪苏泷 - 人情世故【第二期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="杨千嬅、汪苏泷 - 人情世故【第二期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">24</span>
+                <span class="text"><i>杨千嬅、汪苏泷 - 人情世故【第二期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="曹轩宾 - 贪婪【第二期】" hidefocus="true" href="javascript:;">
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">25</span>
+                <span class="text"><i>曹轩宾 - 贪婪【第二期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="彭佳慧 - 贪婪【第二期】" hidefocus="true" href="javascript:;">
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">26</span>
+                <span class="text"><i>彭佳慧 - 贪婪【第二期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="A-Lin - 永远有多远【第二期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true" >
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">27</span>
+                <span class="text"><i>A-Lin - 永远有多远【第二期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="黄品源、A-Lin - 永远有多远【第二期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">28</span>
+                <span class="text"><i>黄品源、A-Lin - 永远有多远【第二期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="薛之谦、李好 - 为了遇见你【第一期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">29</span>
+                <span class="text"><i>薛之谦、李好 - 为了遇见你【第一期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="金志文 - 沉迷【第一期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">30</span>
+                <span class="text"><i>金志文 - 沉迷【第一期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="梁咏琪、金志文 - 沉迷【第一期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">31</span>
+                <span class="text"><i>梁咏琪、金志文 - 沉迷【第一期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="何洁 - 把你藏在歌里面【第一期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true" >
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">32</span>
+                <span class="text"><i>何洁 - 把你藏在歌里面【第一期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="谭咏麟、何洁 - 把你藏在歌里面【第一期】" hidefocus="true" href="javascript:;">
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">33</span>
+                <span class="text"><i>谭咏麟、何洁 - 把你藏在歌里面【第一期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="薛之谦 - 王子公主【第一期】" hidefocus="true" href="javascript:;" >
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true">
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">34</span>
+                <span class="text"><i>薛之谦 - 王子公主【第一期】</i></span>
+                </a>
+              </li>
+        
+               
+              <li>
+                <a title="张信哲、薛之谦 - 王子公主【第一期】" hidefocus="true" href="javascript:;">
+                <input type="checkbox" onclick="checkClkAll(event)" class="cb" checked="true" >
+                <span  class="share" title="分享" ></span>
+                <span class="listen" title="播放"></span>
+                <span class="num1">35</span>
+                <span class="text"><i>张信哲、薛之谦 - 王子公主【第一期】</i></span>
+                </a>
+              </li>
+        
+            </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--脚步-->
+<link rel="stylesheet">
+<div class="footerWrapper">
+    <div class="footer">
+        <div class="links">
+            <a hidefocus="true" href="http://www.kugou.com/about/aboutus.html" target="_blank">关于酷狗</a> | 
+            <a hidefocus="true" href="javascript:void(0);" id="report">监督举报</a> | 
+            <a hidefocus="true" href="http://www.kugou.com/about/adservice.html" target="_blank">广告服务</a> | 
+            <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/copyRightGuide.html">版权指引</a> |
+            <a  href=" ">隐私政策</a>| 
+            <a  href="">用户服务协议</a> | 
+            <a  href="">推广合作</a> | 
+            <a   href="">酷狗音乐人</a> |
+            <a   href="">酷狗音乐推</a> |
+            <a  href="" >招聘信息</a> | 
+            <a  href="">客服中心</a> | 
+            <a href="">用户体验提升计划</a>
+        </div>
+        <div class="copyright">
+           
+           <p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>
+            <p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 
+            <a hidefocus="true" target="_blank" href="http://www.miitbeian.gov.cn/">粤ICP备09017694号-2</a>
+            </p>
+            <p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026</p>
+            <p>穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018</p>
+            <p>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2017 KuGou-Inc.All Rights Reserved</p>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+  function clickAll(e){
+  var list = document.getElementsByTagName("input");
+  for(var i=0;i<list.length;i++){
+  	switch(e){
+  		case 1: list[i].checked = true;break;
+  		case 2: list[i].checked = false;break;
+  		case 3: list[i].checked = !list[i].checked;break;
+  	}
+  }
+}
+ </script>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	
+
+
+	function fun1(){
+		document.write("1111111"+"<br>");
+	}
+	fun1();
+
+
+	
+	var fun2=function(){
+		document.write("2222222"+"<br>");
+	}
+	fun2();
+	
+
+
+
+	
+	var fun3=new Function("a","b","return a+b");
+	document.write(fun3(10,20)+"<br>");
+</script>

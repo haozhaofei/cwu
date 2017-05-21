@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景无缝滚动</title>
+    <style type="text/css">
+    *{
+    	padding: 0px;
+    	margin: 0px;
+    }
+    #did{
+    	width:500px;
+    	height:500px;
+    	border:1px solid blue;
+    	background: url('images/bg2.png') no-repeat 0px -1036px;
+    	position:relative;
+    }
+    </style>
+</head>
+<body>
+	<div id="did"></div>
+</body>
+<script type="text/javascript">
+	var did=document.getElementById('did');
+	var bgh=-1036;
+	function running(){
+		bgh+=2;
+	    if(bgh>=-286)
+	    {
+	    	bgh=-1036;
+	    }
+	    did.style.backgroundPosition="0px "+bgh+"px";
+	    setTimeout("running()",33);
+	}
+	running();
+</script>
+</html>

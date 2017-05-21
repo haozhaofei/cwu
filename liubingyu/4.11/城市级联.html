@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>城市级联</title>
+</head>
+<body>
+	<select id="sid" name="sid">
+	    <option value="">--请选择--</option>
+		<option value="1">北京</option>
+		<option value="2">湖南</option>
+		<option value="3">山东</option>
+		<option value="4">湖北</option>
+		
+	</select>
+	<select id="cid"></select>
+
+	<script type="text/javascript">
+	var data = new Array();
+	data[1]=["东城区","西城区","朝阳区","海淀区","昌平区"];
+	data[2]=["常德市","长沙市","湘潭市"];
+	data[3]=["济南市","青岛市","威海市","菏泽市"];
+	data[4]=["武汉市","黄冈市","朝阳区","宜昌市","潜江市"];
+	var sid=document.getElementById("sid");
+	var cid=document.getElementById("cid");
+    sid.onchange=function(){
+    	   v=this.value;
+    	   cid.length=0;
+    	   for(var i=0;i<=data[v].length;i++){
+    	   	  cid.add(new Option(data[v][i],i));
+    	   }
+         
+	}
+	
+</script>
+</body>
+</html>

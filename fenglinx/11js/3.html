@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<table border="1" width="600">
+		<thead>
+			<th>学号</th>
+			<th>姓名</th>
+			<th>年龄</th>
+			<th>性别</th>
+			<th>操作</th>
+		</thead>
+		<tbody id="tbody">
+			<tr>
+				<td>10000</td>
+				<td>钟无艳</td>
+				<td>22</td>
+				<td>女</td>
+				<td><button onclick="doDel(this)">删除</button></td>
+			</tr>
+			<tr>
+				<td>10001</td>
+				<td>张飞</td>
+				<td>30</td>
+				<td>男</td>
+				<td><button onclick="doDel(this)">删除</button></td>
+			</tr>
+			<tr>
+				<td>10002</td>
+				<td>赵云</td>
+				<td>40</td>
+				<td>男</td>
+				<td><button onclick="doDel(this)">删除</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<form action="#" name="myform" onsubmit="return doAdd()">
+		学号:<input type="text" name="id"><br><br>
+		姓名:<input type="text" name="name"><br><br>
+		年龄:<input type="text" name="age"><br><br>
+		性别:<input type="text" name="sex"><br><br>
+		<input type="submit" value="添加">
+	</form>
+</body>
+</html>
+<script>
+	function doDel(obj){
+		obj.parentNode.parentNode.parentNode.removeChild(obj.parentNode.parentNode);
+	}
+
+	function doAdd(){
+		
+		var data = new Array();
+		data[0] = document.myform.id.value;
+		data[1] = document.myform.name.value;
+		data[2] = document.myform.age.value;
+		data[3] = document.myform.sex.value;
+		
+		var tr = document.createElement("tr");
+		for(var i=0;i<data.length;i++){
+			var td = document.createElement("td");
+	
+			var tt = document.createTextNode(data[i]);
+			
+			td.appendChild(tt);
+			
+			tr.appendChild(td);
+		}
+
+		var tbody = document.getElementById('tbody');
+		
+		var td = document.createElement("td");
+		td.innerHTML = '<button onclick="doDel(this)">删除</button>';
+		
+		tr.appendChild(td);
+		
+		tbody.appendChild(tr);
+		
+		return false;
+	}
+</script>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<table border="1" width="600">
+		<thead>
+			<th>学号</th>
+			<th>姓名</th>
+			<th>年龄</th>
+			<th>性别</th>
+			<th>操作</th>
+		</thead>
+		<tbody id="tbody">
+			<tr>
+				<td>10000</td>
+				<td>钟无艳</td>
+				<td>22</td>
+				<td>女</td>
+				<td><button onclick="doDel(this)">删除</button></td>
+			</tr>
+			<tr>
+				<td>10001</td>
+				<td>张飞</td>
+				<td>30</td>
+				<td>男</td>
+				<td><button onclick="doDel(this)">删除</button></td>
+			</tr>
+			<tr>
+				<td>10002</td>
+				<td>赵云</td>
+				<td>40</td>
+				<td>男</td>
+				<td><button onclick="doDel(this)">删除</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<form action="#" name="myform" onsubmit="return doAdd()">
+		学号:<input type="text" name="id"><br><br>
+		姓名:<input type="text" name="name"><br><br>
+		年龄:<input type="text" name="age"><br><br>
+		性别:<input type="text" name="sex"><br><br>
+		<input type="submit" value="添加">
+	</form>
+</body>
+</html>
+<script>
+	function doDel(obj){
+		obj.parentNode.parentNode.parentNode.removeChild(obj.parentNode.parentNode);
+	}
+
+	function doAdd(){
+		
+		var data = new Array();
+		data[0] = document.myform.id.value;
+		data[1] = document.myform.name.value;
+		data[2] = document.myform.age.value;
+		data[3] = document.myform.sex.value;
+		
+		var tr = document.createElement("tr");
+		for(var i=0;i<data.length;i++){
+			var td = document.createElement("td");
+	
+			var tt = document.createTextNode(data[i]);
+			
+			td.appendChild(tt);
+			
+			tr.appendChild(td);
+		}
+
+		var tbody = document.getElementById('tbody');
+		
+		var td = document.createElement("td");
+		td.innerHTML = '<button onclick="doDel(this)">删除</button>';
+		
+		tr.appendChild(td);
+		
+		tbody.appendChild(tr);
+		
+		return false;
+	}
+</script>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<table border="1" width="600">
+		<thead>
+			<th>学号</th>
+			<th>姓名</th>
+			<th>年龄</th>
+			<th>性别</th>
+			<th>操作</th>
+		</thead>
+		<tbody id="tbody">
+			<tr>
+				<td>10000</td>
+				<td>钟无艳</td>
+				<td>22</td>
+				<td>女</td>
+				<td><button onclick="doDel(this)">删除</button></td>
+			</tr>
+			<tr>
+				<td>10001</td>
+				<td>张飞</td>
+				<td>30</td>
+				<td>男</td>
+				<td><button onclick="doDel(this)">删除</button></td>
+			</tr>
+			<tr>
+				<td>10002</td>
+				<td>赵云</td>
+				<td>40</td>
+				<td>男</td>
+				<td><button onclick="doDel(this)">删除</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<form action="#" name="myform" onsubmit="return doAdd()">
+		学号:<input type="text" name="id"><br><br>
+		姓名:<input type="text" name="name"><br><br>
+		年龄:<input type="text" name="age"><br><br>
+		性别:<input type="text" name="sex"><br><br>
+		<input type="submit" value="添加">
+	</form>
+</body>
+</html>
+<script>
+	function doDel(obj){
+		obj.parentNode.parentNode.parentNode.removeChild(obj.parentNode.parentNode);
+	}
+
+	function doAdd(){
+		
+		var data = new Array();
+		data[0] = document.myform.id.value;
+		data[1] = document.myform.name.value;
+		data[2] = document.myform.age.value;
+		data[3] = document.myform.sex.value;
+		
+		var tr = document.createElement("tr");
+		for(var i=0;i<data.length;i++){
+			var td = document.createElement("td");
+	
+			var tt = document.createTextNode(data[i]);
+			
+			td.appendChild(tt);
+			
+			tr.appendChild(td);
+		}
+
+		var tbody = document.getElementById('tbody');
+		
+		var td = document.createElement("td");
+		td.innerHTML = '<button onclick="doDel(this)">删除</button>';
+		
+		tr.appendChild(td);
+		
+		tbody.appendChild(tr);
+		
+		return false;
+	}
+</script>

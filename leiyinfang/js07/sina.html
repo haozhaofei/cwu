@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>新浪军事频道</title>
+	<style>
+		*{margin:0 ; border:0; padding:0;}
+		#all{
+			width: 1000px;margin: 0 auto;position: relative;
+		}
+		#logo{
+			float: left;text-align: center;
+		}
+		#shou{
+			font-size:14px;height:22px;width:75px;
+			margin-top:22px;text-align:right;
+			border:0 solid #f00;float:right;
+			padding:0 25px 0 0;
+			background:url(./images/7.png) no-repeat 0 0;
+		}
+		#shu{
+			font-size:14px;height:22px;width:65px;
+			margin-top:22px;text-align:right;
+			border:0 solid #f00;float:right;
+			padding:0 25px 0 0;
+			background:url(./images/5.png) no-repeat 0 0;
+		}
+		#menu{
+			float: left;width: 990px;height: 40px;
+		}
+		#menu ul{
+			background-color: green;list-style:none;
+		}
+		#menu li{
+			display:inline;
+			line-height:40px;
+			border-right:1px solid white;
+		}
+		#menu a{
+			color:white;
+			text-decoration:none;
+			padding:5px 12px;
+			font-family:  "楷体";
+
+		}
+		#menu ul li a:hover{
+			background-color:#060;text-decoration: underline;
+		}
+		#yidong{
+			position: relative;top: 100px;
+		}
+		#pic{
+			display: none;
+		}
+		#p1{
+			border:1px solid;position: absolute;left: 0px;
+		}
+		#btn{
+			display:inline-block;position: absolute;left: 10px;bottom: -350px;
+		}
+		#b1,#b2,#b3{
+			width: 30px;height: 10px;background: #666;
+			float: left;margin-left: 5px;
+		}
+		#left{
+			position: absolute;left:10px;top: 280px;
+		}
+		#right{
+			position: absolute;left: 615px;top: 280px;
+		}
+		#news{
+			float: right;position: absolute;right: 10px;top: 100px
+		}
+		.yan a{color:red;}
+		
+		#news h1 a{
+			font-size: 18px;margin-left: 8px;color:black;
+		}
+		#news a{
+			font-size: 14px;text-decoration:none;margin-left: 2px;margin-top: 8px;font-family:  "微软雅黑";
+		}
+		#news a:hover{
+			color:red;cursor: hand;text-decoration: underline;
+		}
+		#fen{
+			color:gray;
+		}
+		
+	</style>
+</head>
+<body>
+<div id="all">
+	<div id="logo">
+		<a href="http://mil.news.sina.com.cn">
+		<img src="images/1.png" alt="">
+		</a>
+	</div>
+	
+	<div id="shou">
+		<a href="#" style="position:relative;top:3px;text-decoration:none;color: black;padding:5px;" >手机版</a>
+	</div>
+
+	<div id="shu">
+		<a href="#" style="position:relative;top:3px;text-decoration:none;color: black;">设书签</a>
+	</div>
+	
+	<div id="menu">
+		<ul>
+			<li>
+				<a href="#">首页</a>
+			</li>
+			<li>
+				<a href="#">滚动</a>
+			</li>
+			<li>
+				<a href="#">图片</a>
+			</li>
+			<li>
+				<a href="#">深度</a>
+			</li>
+			<li>
+				<a href="#">《出鞘》</a>
+			</li>
+			<li>
+				<a href="#">大国博弈</a>
+			</li>
+			<li>
+				<a href="#">军史</a>
+			</li>
+			<li>
+				<a href="#">东海形势</a>
+			</li>
+			<li>
+				<a href="#">南海局势</a>
+			</li>
+			<li>
+				<a href="#">新闻排行</a>
+			</li>
+			<li>
+				<a href="#">航空</a>
+			</li>
+			<li>
+				<a href="#">回顾</a>
+			</li>
+
+		</ul>
+	</div>
+	
+	<div id="yidong">
+		<img id="p1" src="http://n.sinaimg.cn/mil/transform/20170423/uQSr-fyepses7665722.jpg" alt="">
+		<div id="btn">
+			<div id="b1" onmouseover="show(1)"></div>
+			<div id="b2" onmouseover="show(2)"></div>
+			<div id="b3" onmouseover="show(3)"></div>
+		</div>
+		
+	</div>
+
+	<div id="left" onclick="play(1)">
+			<button>&nbsp;<&nbsp;</button>
+	</div>
+	<div id="right" onclick="play(2)">
+			<button>&nbsp;>&nbsp;</button>
+	</div>
+	
+	<div id="news">
+		<h1><a href="#">首艘国产航母今日或下水 船坞已始注水</a></h1>
+		<span class="yan"><a href="#">独家解析：国产航母开工3年就下水 多项性能超辽宁号</a></span></br>
+		<a href="#">01A航母下水有何意义 将令中国成全天候航母国家</a></br>
+		<a href="#">辽宁号舰载机安全起降咋保障 可能和这个装备有关</a><br>
+		<a href="#">国产航母早已具备下水条件 战力强悍难被导弹击沉</a></br></br>
+		<span class="yan"><a href="#" >国产航母编队防空能力有多强：368枚导弹组六层火网</a></span></br>
+		<a href="#" style="margin-top: 22px">解读国产航母：为什么继续采用滑跃起飞和常规动力</a></br>
+		<a href="#">中国海军成立68周年：目前已成功实现战略转型(图)</a></br></br>
+
+		<span id="fen">------------------------------------------</span>
+		
+		<h1><a href="#">美国副总统:卡尔文森航母数日内抵日本</a></h1>
+		<span class="yan"><a href="#">美军航母出乌龙令韩失望 川普曾称韩国是中国一部分</a></span></br>
+		<a href="#">菲律宾防长登中业岛被中国警告 菲方程每次去都这样</a></br>
+		<a href="#">俄战略轰炸机一周内4次抵近美海岸 秀肌肉一箭三雕</a>
+	</div>
+
+</div>
+</body>
+</html>
+
+<script>
+	function show(i){
+		var b1 = document.getElementById('b1');
+		var b2 = document.getElementById('b2');
+		var b3 = document.getElementById('b3');
+		var pic = document.getElementById('p1');
+		if (i==1) {
+			pic.src="http://n.sinaimg.cn/mil/transform/20170423/uQSr-fyepses7665722.jpg"
+			if (b1.style.background=="green") {
+				b1.style.background="gray";
+			}else{
+				b1.style.background="green";
+				b2.style.background="gray";
+				b3.style.background="gray"
+			}
+			
+		}else if (i==2) {
+			pic.src="http://n.sinaimg.cn/mil/transform/20170423/JTDJ-fyepsec0397220.jpg"
+			if (b2.style.background=="green") {
+				b2.style.background="gray";
+			}else{
+				b1.style.background="gray";
+				b2.style.background="green";
+				b3.style.background="gray";
+			}
+		}else if (i==3) {
+			pic.src="http://n.sinaimg.cn/mil/transform/20170423/amZA-fyepses7662841.jpg"
+			if (b3.style.background=="green") {
+				b3.style.background="gray";
+			}else{
+				b1.style.background="gray";
+				b2.style.background="gray";
+				b3.style.background="green";
+			}
+		
+		}
+	}
+		var m=3;
+		var n=2;
+	function play(a){
+		var pic = document.getElementById('p1');
+		if (m<1) {m=3;}
+		if (n>3) {n=1;}
+		if (a==1) {
+			show(m);
+			m--;
+		}else if (a==2) {
+			show(n);
+			n++;
+		}
+	}
+</script>

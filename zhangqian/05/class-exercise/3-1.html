@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="fun1(this)">点我</button>
+	<button id="bid">在点我</button>
+</body>
+</html>
+<script>
+	//主调用不能直接获取，需要传参
+	function fun1(obj){
+		obj.style.color = "blue";
+	}
+	//被动调用可以直接使用this
+	document.getElementById('bid').onclick = function(){
+		this.style.color = "red";
+	}
+</script>

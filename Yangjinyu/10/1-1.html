@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		ul{
+			list-style-type:none;
+		}
+		ul li{
+			height:30px;
+			background: #ccc;
+			margin-top:10px;
+			line-height: 30px;
+		}
+		ul li:hover{
+			background: #f0c;
+		}
+		ul li.cc{
+			background: #fc0;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>Hi!</li>
+		<li>Hi!</li>
+		<li>Hi!</li>
+		<li>where are you?</li>
+		<li>what?</li>
+		<li>please say it again</li>
+	</ul>
+	<button onclick="doDel()">delete</button>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick=function(){
+			this.className="cc";
+		}
+	}
+	function doDel(){
+		for(var i=0;i<list.length;i++){
+			if(list[i].className=="cc"){
+				//删除节点必须是从父节点开始删除
+				list[i].parentNode.removeChild(list[i]);
+				i--;
+			}
+		}
+
+	}
+</script>

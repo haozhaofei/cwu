@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/**{padding: 0px;margin: 0px;}*/
+	</style>
+</head>
+<body>
+	<ul id="uid">
+		<li>aaaaa</li>
+		<li>bbbbb</li>
+		<li>ccccc</li>
+	</ul>
+	<button onclick="doChange()">bian</button>
+</body>
+</html>
+<script>
+	function doChange(){
+		var oUid = document.getElementById('uid').childNodes[1];
+		var item = document.createTextNode('33333');
+		oUid.replaceChild(item,oUid.childNodes[0]);
+	}
+</script>

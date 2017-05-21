@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>magnifier</title>
+	<style>
+		div,img{
+			margin:0px;
+			padding:0px;
+		}
+		#large img{
+			width:384px;
+		}
+		#small img{
+			width:128px;
+		}
+		#did{width:300px;
+			height: 300px;
+			overflow: hidden;
+			position:absolute;
+			display: none;}
+	</style>
+</head>
+<body>
+	<div id="large">
+		<img id="img1" src="images/11.jpg" alt="">
+	</div>
+	<div id="small">
+		<img src="images/11.jpg" onmouseover="show(1)" alt="">
+		<img src="images/22.jpg" onmouseover="show(2)" alt="">
+		<img src="images/33.jpg" onmouseover="show(3)" alt="">
+	</div>
+	<div id="did">
+		<img id="img2" src="images/11.jpg" alt="">
+	</div>
+</body>
+</html>
+<script>
+	function show(m){
+		var img1=document.getElementById('img1');
+		var img2=document.getElementById('img2');
+		if(m==1){
+			img1.src="images/11.jpg";
+			img2.src="images/11.jpg";
+		}else if(m==2){
+			img1.src="images/22.jpg";
+			img2.src="images/22.jpg";
+		}else if(m==3){
+			img1.src="images/33.jpg";
+			img2.src="images/33.jpg";
+		}
+		img1.onmouseover=function(){
+			did.style.display="block";
+			did.style.left = this.offsetWidth+this.offsetLeft+10+"px";
+			did.style.top = this.offsetTop+"px";
+		}
+		img1.onmouseout=function(){
+			did.style.display="none";
+		}
+		img1.onmousemove=function(ent){
+			var event=window.event;
+			var x = event.clientX - this.offsetLeft;
+ 			var y = event.clientY - this.offsetTop;
+			did.scrollTop = y*5-150;
+			did.scrollLeft = x*5-150;
+		}
+	}
+</script>

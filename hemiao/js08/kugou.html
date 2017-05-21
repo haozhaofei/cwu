@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>酷狗音乐-音乐总有新玩法</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<style type="text/css">
+	.mainPage{
+		width: 1899px;
+		height: 2300px;
+	}
+	.header{
+		width: 1000px;
+		height: 78px;
+		margin-left: 450px; 
+		margin-top: 20px;
+	}
+	.nav{
+		width: 1899px;
+		height: 55px;
+	}
+	li{
+		text-decoration:none;
+		display: inline;
+	}
+	.logo img{
+		width: 153px;
+		height: 40px;	
+	}
+	.texts input{
+		padding-left: 15px;
+		width:300px;
+		height:36px;
+	}
+	.search img{
+		width:20px ;
+		height:20px;
+	}
+	.logo{
+		float: left;
+	}
+	.texts{
+		margin-left: 45px;
+		float: left;
+	}
+	.search{
+		margin-top:10px;
+		margin-left: -25px;
+		float: left;
+	}
+	.zhongxin{
+		margin-left: 60px;
+		float: left;
+	}
+
+	.zhongxin li:hover{
+		color: blue;
+		text-decoration:underline;
+	}
+	.xinxi{
+		margin-top: 10px;
+		margin-left: 40px;
+		float: left;
+		height: 40px;
+		width: 120px;
+	}
+	.log{
+		height: 30px;
+		width: 45px;
+		background:blue;
+		float:left;
+		text-align: center;
+	}
+	.reg{
+		margin-left: 20px;
+		height: 28px;
+		width: 45px;
+		float:left;
+		border: 1px solid gray;
+		text-align: center;
+	}
+	.log a{
+		text-decoration: none;
+		color: white;
+		line-height: 27px;
+	}
+	.reg a{
+		text-decoration: none;
+		color: black;
+		line-height: 27px;
+	}
+	.nav{
+		
+		height: 55px;
+		background:black;
+	}
+	.nav1{
+		margin-top: -16px;
+		margin-left: 500px;
+		height: 50px;
+		width: 520px;
+		float:left; 
+	}
+	.nav1 li{			
+		height: 55px;
+		width: 120px;
+		line-height: 55px;
+		float: left;
+		
+		text-align: center;
+	}
+	.nav li a{
+		height: 55px;
+		width: 60px;
+		text-decoration: none;
+		font-size: 18px;
+		color: white;
+	}
+	.shouye{
+		background: #0080FF;
+	}
+	.nav1 li:hover{
+		background: #0080FF;
+	}
+	.more ul{
+		display: none;
+	}
+	.more:hover ul{
+		display: block;
+		background: black;
+		width: 80px;
+		height: 130px;
+		position: absolute;
+	}
+	.more li {
+		text-align: center;
+		width: 55px;
+		height: 30px;
+		line-height: 30px;
+		color: white;
+	}
+	.more li:hover{
+		margin-left: -20px;
+		width: 80px;
+		background: gray;
+	}
+
+	.nav2{
+		margin-left: 100px;
+		width: 500px;
+		height: 35px;
+		float: left;
+	}
+	.nav2 li{
+		color: white;
+		margin-left: 20px;
+		font-size: 15px;
+	}
+	.nav2 li:hover{
+		color: blue;
+	}
+	img{
+		width: 1920px;
+		height: 445px;
+	}
+	#m2,#m3,#m4,#m5,#m6,#m7{
+		display: none;
+	}
+	.down{
+		margin-top: -60px;
+		width: 1920px;
+		height: 60px;
+		position: relative;
+		background:#666;
+		opacity:0.6;
+		z-index:10;
+	}
+	main{
+		width:1040px;
+		margin-left: 400px;
+	}
+	.main1{
+		width: 660px;
+		height: 420px;
+		float: left;
+	}
+	.iterm1{
+		height: 60px;
+		width: 650px;
+		float: left;
+	}
+	.jingxuan{
+		color: #555;
+		width: 140px;
+		height: 30px;
+		float: left;
+		display: block;
+		float: left;
+	}
+	.jingxuan b{
+		color: #009af3;
+		font-weight: 400;
+	}
+	.gengduo1{
+		float: right;
+		width: 50px;		
+		padding-top: 10px;
+		color: #555;
+	}
+	.gedan{
+		width: 680px;
+		margin-top: 80px;
+		height: 330px;
+	}
+	.first{
+		width: 325px;
+		height: 325px;
+		float: left;		
+	}
+	.first img{
+		width: 325px;
+		height: 325px;
+	}
+	.tupian1{
+		float: left;
+		margin-top: -62px;
+		opacity:0.6;
+		z-index:10;
+		background: #666;
+		width: 325px;
+		height: 60px;
+	}
+	.p1{
+		color: white;
+		font-size: 15px;
+		width: 315px;	
+		font-weight: bold;	
+		margin-left: 5px;		
+	}
+	.p2{
+		color: #ccc;
+		font-size: 15px;
+		width: 315px;
+		font-weight: bold;
+		margin-top: -10px;	
+		margin-left: 5px;
+	}
+	.second{
+		width: 160px;
+		height: 160px;
+		float: left;
+		margin-left: 5px;
+	}
+	.second img{
+		width: 160px;
+		height: 160px;
+		
+	}
+	.tupian2{
+		margin-top: -68px;
+		opacity:0.6;
+		z-index:10;
+		background: #666;
+		height: 50px;
+		width: 160px;
+	}
+	.p3{
+		clear: both;
+		padding-top: 7px;
+		line-height: 20px;
+		color: white;
+		font-size: 15px;
+	    font-weight: bold;
+	    margin-left: 5px;
+	}
+	.p4{
+		font-weight: bold;
+		clear: both;
+		margin-top: -13px;
+		margin-left: 5px;
+		line-height: 20px;
+		color: #ccc;
+		font-size: 15px;
+	}
+	.third{
+		margin-left: 5px;
+		width: 160px;
+		height: 160px;
+		float: left;
+	}
+	.third img{
+		width: 160px;
+		height: 160px;
+
+	}
+	.tupian3{
+		margin-top: -68px;
+		opacity:0.6;
+		z-index:10;
+		background: #666;
+		height: 50px;
+		width: 160px;
+	}
+	.fourth{
+		margin-top: 5px;
+		margin-left: 5px;
+		width: 160px;
+		height: 160px;
+		float: left;
+	}
+	.fourth img{
+		width: 160px;
+		height: 160px;
+	}
+	.tupian4{
+		margin-top: -68px;
+		opacity:0.6;
+		z-index:10;
+		background: #666;
+		height: 50px;
+		width: 160px;
+	}
+	.fifth{
+		margin-top: 5px;
+		margin-left: 5px;
+		width: 160px;
+		height: 160px;
+		float: left;
+	}
+	.fifth img{
+		width: 160px;
+		height: 160px;
+	}
+	.tupian5{
+		margin-top: -68px;
+		opacity:0.6;
+		z-index:10;
+		background: #666;
+		height: 50px;
+		width: 160px;
+	}
+	.main2{
+		float: right;
+		width: 350px;
+		height: 420px;
+	}
+	.iterm2{
+		float: right;
+		width: 320px;
+		height: 60px;
+	}
+	.gengduo2{
+		float: right;
+		width: 50px;		
+		padding-top: 10px;
+		color: #555;
+	}
+	.bangdan{
+		width: 320px;
+		height: 325px;
+		margin-left: 10px;
+	}
+	.one{
+		width: 320px;
+		margin-left: 26px;
+		margin-top: 80px;
+		height: 98px;
+		background: #eee;
+	}
+	.one img{
+		height: 98px;
+		width: 98px;
+	}
+	.kg1{
+		margin-left: 108px;
+		margin-top: -78px;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.kg{
+		margin-left: 108px;
+		margin-top: -6px;
+		font-size: 12px;
+		color: #555;
+	}
+	.two, .three{
+		width: 320px;
+		margin-left: 26px;
+		margin-top: 16px;
+		height: 98px;
+		background: #eee;
+	}
+	.two img,.three img{
+		height: 98px;
+		width: 98px;
+	}
+	.ad1{
+		margin-top: 5px;
+		width: 1040px;
+		height: 80px;
+	}
+	</style>
+<body>
+	<div class="mainPage">
+	<header>
+		<div class="header">
+			<div class="logo">
+				<img src="http://static.kgimg.com/public/root/images/logo.png" alt="">
+			</div>
+			<div class="texts">
+				<input type="text" placeholder="许云上 爱河" >
+			</div>
+			<div class="search">
+				<img src="images/搜索.png">	
+			</div>
+			<div class="zhongxin">
+				<ul>
+					<li>客服中心</li>
+					<li>招贤纳士</li>
+					<li>会员中心</li>
+				</ul>
+			</div>
+			<div class="xinxi">
+				<div class="log">
+					<a href="#">登录</a>
+				</div>
+				<div class="reg">
+					<a href="#">注册</a>
+				</div>	
+			</div>					
+		</div>
+		<div class="nav">
+			<div class="nav1">
+				<ul>
+					<li class="shouye"><a>首页</a></li>
+					<li><a href="liebiaoye.html">榜单</a></li>
+					<li><a>下载客户端</a></li>
+					<li class="more"><a>更多</a>
+						<ul >
+							<li>电台</li>
+							<li>MV</li>
+							<li>歌单</li>
+							<li>歌手</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="nav2">
+				<ul>
+					<li>☆音乐直播</li>
+					<li>♪酷狗LIVE</li>
+					<li>☊音乐人</li>
+					<li>✪游戏</li>
+					<li>☺商城</li>
+				</ul>
+			</div>
+		</div>
+		<div class="images">
+			<img src="http://imge.kugou.com/commendpic/20160713/20160713154957678313.jpg" id="m1">
+			<img src="http://imge.kugou.com/commendpic/20170220/20170220150607997002.jpg" id="m2">
+			<img src="http://imge.kugou.com/commendpic/20170112/20170112174112889575.jpg" id="m3">
+			<img src="http://imge.kugou.com/commendpic/20170512/20170512201158497274.jpg" id="m4">
+			<img src="http://imge.kugou.com/commendpic/20170512/20170512194501656769.jpg" id="m5">
+			<img src="http://imge.kugou.com/commendpic/20170512/20170512202711848527.jpg" id="m6">
+			<img src="http://imge.kugou.com/commendpic/20170512/20170512195642900204.jpg" id="m7">	
+		</div>
+		<div class="down">
+					
+		</div>
+	</header>
+	<main>
+	<div class="main1">
+		<div class="iterm1">
+			<h1 class="jingxuan">
+			<b>精选</b>歌单
+			</h1>
+			<h4 class="gengduo1">更多</h4>
+		</div>
+		<div class="gedan">
+			<div class="first">
+				<img src="http://imge.kugou.com/soft/collection/480/20170512/20170512095852532579.jpg">
+				<div class="tupian1">
+					<p class="p1">母亲节特辑：你守护我长大，我疼爱你到老</p>
+					<p class="p2">冷天祺</p>
+				</div>
+			</div>
+			<div class="second">
+				<img src="http://imge.kugou.com/soft/collection/150/20170512/20170512180642662865.jpg">
+				<div class="tupian2">
+					<p class="p3">愿我们不负美...</p>
+					<p class="p4">雪荷</p>
+				</div>
+			</div>
+			<div class="third">
+				<img src="http://imge.kugou.com/soft/collection/150/20170421/20170421230215840014.jpg">
+				<div class="tupian3">
+					<p class="p3">金曲捞  合辑</p>
+					<p class="p4">纳兰孤独</p>
+				</div>
+			</div>
+			<div class="fourth">
+				<img src="http://imge.kugou.com/soft/collection/150/20170512/20170512181100315147.jpg">
+				<div class="tupian4">
+					<p class="p3">国产优质影视...</p>
+					<p class="p4">执笔绘往昔</p>
+				</div>
+			</div>
+			<div class="fifth">
+				<img src="http://imge.kugou.com/soft/collection/150/20170502/20170502152647468352.jpg">
+				<div class="tupian5">
+					<p class="p3">让你惊艳的台...</p>
+					<p class="p4">宝贝不乖</p>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="main2">
+		<div class="iterm2">
+			<h1 class="jingxuan">
+			<b>热门</b>榜单
+			</h1>
+			<h4 class="gengduo2">更多</h4>
+		</div>
+		<div class="bangdan">
+			<div class="one">
+				<img src="http://imge.kugou.com/v2/rank_cover/T1M4h4BKKj1RCvBVdK.jpg_240x240.jpg">
+				<p class="kg1">酷狗飙升榜</p>
+				<p class="kg">1.何洁-有没有(live)</p>
+				<p class="kg">2.李克勤、陈冰-大雨（live）</p>
+			</div>
+			<div class="two">
+				<img src="http://imge.kugou.com/v2/rank_cover/T1fHd4BXd_1RCvBVdK.jpg_240x240.jpg">
+				<p class="kg1">酷狗TOP500</p>
+				<p class="kg">1.杨宗纬、张碧晨-凉凉</p>
+				<p class="kg">2.赵雷-成都</p>
+			</div>
+			<div class="three">
+				<img src="http://imge.kugou.com/v2/rank_cover/T1Fpd4BKbg1RCvBVdK.jpg_240x240.jpg">
+				<p class="kg1">网络红歌榜</p>
+				<p class="kg">1.金南玲-逆流成河</p>
+				<p class="kg">2.神马乐团-爱河</p>
+			</div>
+		</div>
+	</div>
+	<img class="ad1" src="http://ads.bssdl.kugou.com/07a09383bd6aa8a7c174fb9c26e26721.jpg">
+	</main>
+	</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var m=0;
+	var time=null;
+	function doStart(){
+		if(time==null){
+			time=setInterval(function(){
+				m++;
+				show(m);
+				if(m>=4){
+					m=0;
+				}
+			},2000)
+		}
+	}
+	doStart();
+	function doStop(){
+		if(time!=null){
+			clearInterval(time);
+		}
+		time=null;
+	}
+	function show(x){
+		for(var i=1;i<=4;i++){
+		var img=document.getElementById("m"+i);
+		if(i==x){
+			img.style.display="block";
+		}
+		else
+			img.style.display="none";
+		}
+		
+	}
+	</script>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this对象</title>
+</head>
+<body>
+	<ul>
+		<li>因为遇见你</li>		
+		<li>风月</li>
+		<li>桃花缘记</li>
+		<li>童话镇</li>
+		<li>Forever 21</li>
+	</ul>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick=function(){
+			alert(this.innerHTML);
+		}
+	}
+</script>

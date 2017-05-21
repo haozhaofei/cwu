@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>airplane game 等待您的到来</title>
+	<style type="text/css">
+	body,ul,li,img,div{}
+
+	</style>
+</head>
+<body>
+<div id="did">
+<img src="images/pd.png" id="pd0">
+<img src="images/pd.png" id="pd1">
+<img src="images/pd.png" id="pd2">
+<img src="images/pd.png" id="pd3">
+<img src="images/pd.png" id="pd4">
+<img src="images/pd.png" id="pd5">
+<img src="images/pd.png" id="pd6">
+<div id="mid"></div>
+	
+</div>
+	
+</body>
+</html>
+<script>
+	var mid=document.getElementById('mid');
+	// onekeydown 是键盘码
+	window.onkeydown=function(ent){
+		var event=window.event || ent;
+		switch(event.keyCode){
+			case 37://左
+			mid.style.left=Math.max(0,)
+
+
+		}
+
+
+	}
+</script>

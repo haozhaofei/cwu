@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>今天是周几?</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	var d=new Date();
+	// 创建数组方法一
+	// var weekday=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+	// 创建数组方法二
+	// var weekday=new Array(7);
+	// weekday[0]="星期日";
+	// weekday[1]="星期一";
+	// weekday[2]="星期二";
+	// weekday[3]="星期三";
+	// weekday[4]="星期四";
+	// weekday[5]="星期五";
+	// weekday[6]="星期六";
+	var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+	document.write("今天是"+weekday[d.getDay()]);
+</script>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<table border="1" width="600">
+		<thead>
+			<th>学号</th>
+			<th>姓名</th>
+			<th>年龄</th>
+			<th>性别</th>
+			<th>操作</th>
+		</thead>
+		<tbody id="tbody">
+			<tr>
+				<td>10000</td>
+				<td>钟无艳</td>
+				<td>22</td>
+				<td>女</td>
+				<td><button onclick="doDel(this)">删除</button></td>
+			</tr>
+			<tr>
+				<td>10001</td>
+				<td>张飞</td>
+				<td>30</td>
+				<td>男</td>
+				<td><button onclick="doDel(this)">删除</button></td>
+			</tr>
+			<tr>
+				<td>10002</td>
+				<td>赵云</td>
+				<td>40</td>
+				<td>男</td>
+				<td><button onclick="doDel(this)">删除</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<form action="#" name="myform" onsubmit="return doAdd()">
+		学号:<input type="text" name="id"><br><br>
+		姓名:<input type="text" name="name"><br><br>
+		年龄:<input type="text" name="age"><br><br>
+		性别:<input type="text" name="sex"><br><br>
+		<input type="submit" value="添加">
+	</form>
+</body>
+</html>
+<script>
+	function doDel(obj){
+		//通过节点一级一级的向上找,找到父亲,然后删除想要删除的(因为是删除子节点)
+		obj.parentNode.parentNode.parentNode.removeChild(obj.parentNode.parentNode);
+	}
+
+	function doAdd(){
+		//获取表单数据
+		var data = new Array();
+		data[0] = document.myform.id.value;
+		data[1] = document.myform.name.value;
+		data[2] = document.myform.age.value;
+		data[3] = document.myform.sex.value;
+		//创建tr元素节点
+		var tr = document.createElement("tr");
+		for(var i=0;i<data.length;i++){
+			var td = document.createElement("td");
+			//创建文本节点
+			var tt = document.createTextNode(data[i]);
+			//把tt文本放到td里
+			td.appendChild(tt);
+			//把td文本放到tr里
+			tr.appendChild(td);
+		}
+
+		var tbody = document.getElementById('tbody');
+		//创建td元素节点
+		var td = document.createElement("td");
+		td.innerHTML = '<button onclick="doDel(this)">删除</button>';
+		//把td文本放到tr里
+		tr.appendChild(td);
+		//把tr文本放到body里
+		tbody.appendChild(tr);
+		//不要忘记写,不然会刷新页面(阻止)
+		return false;
+	}
+</script>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li><input type="checkbox" value="薛之谦">薛之谦</li>
+		<li><input type="checkbox" value="周杰伦">周杰伦</li>
+	</ul>
+	<button onclick="dole()">喜欢的歌手</button>
+</body>
+</html>
+<script>
+	function dole(){
+		var list=document.getElementsByTagName("input");
+		var arr=[];
+		for(var i=0;i<list.length;i++){
+			if(list[i].checked &&list[i].type=="checkbox"){
+				arr[arr.length]=list[i].value;
+			}
+		}
+		alert(arr);
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2</title>
+</head>
+<body>
+	<br><input type="checkbox" value="想吃啥"> 想吃啥
+	<br><input type="checkbox" value="随便"> 随便
+	<br><button onclick="dodo()">选择</button>
+</body>
+</html>
+<script>
+	function dodo(){
+		var list=document.getElementsByTagName("input");
+		var a=[];
+		for(var i=0;i<list.length;i++){
+			if(list[i].checked &&list[i].type=="checkbox"){
+				a[a.length]=list[i].value;
+			}
+		}
+		alert(a);
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3</title>
+</head>
+<body>
+	<br><input type="checkbox" value="想吃啥"> 想吃啥
+	<br><input type="checkbox" value="随便"> 随便
+	<br><button onclick="dodo()">选择</button>
+</body>
+</html>
+<script>
+	function dodo(){
+		var list=document.getElementsByTagName("input");
+		var a=[];
+		for(var i=0;i<list.length;i++){
+			if(list[i].checked &&list[i].type=="checkbox"){
+				a[a.length]=list[i].value;
+			}
+		}
+		alert(a);
+	}
+</script>

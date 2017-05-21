@@ -1,20 +1,95 @@
-<!doctype html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>背景变色</title>
+<meta http-equiv="content-Type" content="text/html;charset=gb2312">
+<meta name="keywords" content="站长,网页特效,js特效,js脚本,脚本,广告代码,zzjs,zzjs.net,sky,www.zzjs.net,站长特效 网" />
+<meta name="description" content="www.zzjs.net,站长特效网，站长必备js特效及广告代码。大量高质量js特效，提供高质量广告代码下载,尽在站长特效网" />
+<title>网页特效 跟随页面飘浮的图片 站长特效网</title>
 </head>
-<body id="bid">
+<body>
+
+
+<div id="flo" STYLE="position:absolute;visibility:visible;">
+<!--Please delete this table and insert into your html elements-->
+<table border="0" cellspacing="0" cellpadding="0">
+
+
+<img src="img/quq.png" border="0">
+
+
+
+</table>
+
+</div>
+<script LANGUAGE="JavaScript1.2">
+var XX=20; 
+var xstep=1;
+var delay_time=60;
+
+var YY=0;
+var ch=0;
+var oh=0;
+var yon=0;
+var ns4=document.layers?1:0
+var ie=document.all?1:0
+var ns6=document.getElementById&&!document.all?1:0
+if(ie){
+YY=document.body.clientHeight;
+flo.style.top=YY;
+}
+else if (ns4){
+YY=window.innerHeight;
+document.flo.pageY=YY;
+document.flo.visibility="hidden";
+}
+else if (ns6){
+YY=window.innerHeight
+document.getElementById('flo').style.top=YY
+}
+function reloc1()
+{
+if(yon==0){YY=YY-xstep;}
+else{YY=YY+xstep;}
+if (ie){
+ch=document.body.clientHeight;
+oh=flo.offsetHeight;
+}
+else if (ns4){
+ch=window.innerHeight;
+oh=document.flo.clip.height;
+}
+else if (ns6){
+ch=window.innerHeight
+oh=document.getElementById("flo").offsetHeight
+}
+if(YY<0){yon=1;YY=0;}
+if(YY>=(ch-oh)){yon=0;YY=(ch-oh);}
+if(ie){
+flo.style.left=XX;
+flo.style.top=YY+document.body.scrollTop;
+}
+else if (ns4){
+document.flo.pageX=XX;
+document.flo.pageY=YY+window.pageYOffset;
+}
+else if (ns6){
+document.getElementById("flo").style.left=XX
+document.getElementById("flo").style.top=YY+window.pageYOffset
+}
+}
+function onad()
+{
+if(ns4)
+document.flo.visibility="visible";
+loopfunc();
+}
+function loopfunc()
+{
+reloc1();
+setTimeout('loopfunc()',delay_time);
+}
+if (ie||ns4||ns6)
+window.onload=onad
+</script>
+
 </body>
 </html>
-<script>
-	//	定义三种颜色
-	var arr=["red","yellow","blue"];
-	var index=Math.ceil(Math.random()*1000)%3;
-	//获取的是一个集合，集合里面包含了多个对象
-	//document.getElementsByTagName('body')[0].style.background = arr[index];
-
-	//获取的是一个对象
-	var back = document.getElementById('bid');
-	back.style.background= arr[index];
-</script>

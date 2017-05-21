@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>城市级联</title>
+</head>
+<body>
+	<select id="sid">
+		<option value="">-请选择-</option>
+		<option value="0">北京</option>
+		<option value="1">安徽</option>
+		<option value="2">河南</option>
+		<option value="3">陕西</option>
+		<option value="4">云南</option>
+	</select>
+	<select id="cid"></select>
+</body>
+</html>
+<script>
+	var array=new Array();
+	array[0]=["海淀区","朝阳区","昌平区","大兴区","丰台区"];
+	array[1]=["合肥市","蚌埠市","芜湖市","淮北市","黄山市"];
+	array[2]=["郑州市","洛阳市","永城市","开封市","信阳市"];
+	array[3]=["西安市","咸阳市","宝鸡市","安康市","延安市"];
+	array[4]=["昆明市","丽江市","普洱市","安宁市","玉溪市"];
+	var sid=document.getElementById('sid');
+	var cid=document.getElementById('cid');
+	sid.onchange=function(){
+		var j=this.value;
+		cid.length=0;
+		for(var i=0;i<array[j].length;i++){
+			cid.add(new Option(array[j][i],i));
+		}
+	}	
+</script>

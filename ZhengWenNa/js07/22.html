@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom 简介</title>
+</head>
+<body>
+	<button id="bid" value="11">按钮</button>
+</body>
+</html>
+<script>
+	var bid=document.getElementById('bid');
+	document.writeln(bid.nodeName);//名称为BUTTON
+	document.writeln(bid.nodeValue);//值为空
+	document.writeln(bid.nodeType);//类型1元素
+</script>

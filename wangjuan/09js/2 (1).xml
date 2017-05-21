@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stulist>
+	<stu id="10001">
+		<name>露可娜娜</name>
+		<name>露可娜娜 I love you</name>
+		<sex>女</sex>
+		<age>22</age>
+	</stu>
+	<stu id="10002">
+		<name>不知火舞</name>
+		<sex>女</sex>
+		<age>22</age>
+	</stu>
+	<stu id="10003">
+		<name>赵云</name>
+		<sex>女</sex>
+		<age>22</age>
+	</stu>
+</stulist>

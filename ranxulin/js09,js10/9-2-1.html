@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script type="text/javascript">
+ try //Internet Explorer
+   {
+   xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+   }
+catch(e)
+  {
+  try //Firefox, Mozilla, Opera, etc.
+    {
+    xmlDoc=document.implementation.createDocument("","",null);
+    }
+  catch(e) {alert(e.message)}
+  }
+try 
+  {
+  xmlDoc.async=false;
+  xmlDoc.load("stu.xml");
+  document.write("xmlDoc is loaded, ready for use");
+  }
+catch(e) {alert(e.message)}
+</script>

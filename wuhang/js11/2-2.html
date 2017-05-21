@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id="uid">
+		<li>休闲时光</li>
+		<li>轻life</li>
+		<li>失物招领</li>
+	</ul>
+	<button onclick="doChange()">替换</button>
+</body>
+</html>
+<script type="text/javascript">
+   //父节点.replaceChild(new,old)方法替换指定节点
+   function doChange(){
+   	var li=document.getElementById("uid").childNodes[1];
+	var text=document.createTextNode("北京皮影");
+	li.replaceChild(text,li.firstChild);
+   }
+</script>

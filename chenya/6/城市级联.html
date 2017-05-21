@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<select id="province" onchange="change()">
+	</select>
+
+	<select id="city">
+	</select>
+</body>
+</html>
+<script type="text/javascript">
+	var p;
+	var c;
+	window.onload=function(){
+	p=document.getElementById("province");
+	c=document.getElementById("city");
+	p[0]=new Option("---- 省份 ----",0);
+	p[1]=new Option("贵州省",1);
+	p[2]=new Option("云南省",2);
+	p[3]=new Option("四川省",3);
+	c[0]=new Option("---- 城市 ----",0);
+}
+
+	function change() {
+
+	var index=document.getElementById("province").selectedIndex;
+	switch (index) {
+	case 0:
+	c[0]=new Option("---- 城市 ----",0);
+	break;
+
+	case 1:
+	c[0]=new Option("贵阳",0);
+	c[1]=new Option("遵义",1);
+	c[2]=new Option("兴义",2);
+	c[3]=new Option("六盘水",3);
+	break;
+
+	case 2:
+	c[0]=new Option("昆明",0);
+	c[1]=new Option("玉溪",1);
+	c[2]=new Option("富源",2);
+	c[3]=new Option("曲靖",3);
+	break;
+
+	case 3:
+	c[0]=new Option("成都",0);
+	c[1]=new Option("绵阳",1);
+	c[2]=new Option("自贡",2);
+	c[3]=new Option("德阳",3);
+	break;
+}
+}
+
+</script>

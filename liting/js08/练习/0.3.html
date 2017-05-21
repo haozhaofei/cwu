@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action=""></form>
+	<form action="" name="form1">
+		<input type="text" name="iname" value="请输入">
+	</form>
+</body>
+</html>
+<script>
+document.write(document.all.length);
+alert(document.form1.iname.value);
+alert(document.forms[1].iname.value);
+alert(document.forms['form1'].iname.value);
+alert(document['form1'].iname.value);
+</script>

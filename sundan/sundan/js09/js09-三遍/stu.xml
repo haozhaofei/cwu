@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stulist>
+	<stu id="10001">
+		<name>鲍勃</name>
+		<name>鲍勃</name>
+		<sex>男</sex>
+		<age>21</age>
+	</stu>
+	<stu id="10002">
+		<name>波波</name>
+		<sex>男</sex>
+		<age>22</age>
+	</stu>
+	<stu id="10003">
+		<name>阿里</name>
+		<sex>女</sex>
+		<age>22</age>
+	</stu>
+</stulist>
+
+<?xml version="1.0" encoding="utf-8"?>
+<stulist>
+	<stu id="10001">
+		<name>鲍勃</name>
+		<name>鲍勃</name>
+		<sex>男</sex>
+		<age>21</age>
+	</stu>
+	<stu id="10002">
+		<name>波波</name>
+		<sex>男</sex>
+		<age>22</age>
+	</stu>
+	<stu id="10003">
+		<name>阿里</name>
+		<sex>女</sex>
+		<age>22</age>
+	</stu>
+</stulist>
+
+<?xml version="1.0" encoding="utf-8"?>
+<stulist>
+	<stu id="10001">
+		<name>鲍勃</name>
+		<name>鲍勃</name>
+		<sex>男</sex>
+		<age>21</age>
+	</stu>
+	<stu id="10002">
+		<name>波波</name>
+		<sex>男</sex>
+		<age>22</age>
+	</stu>
+	<stu id="10003">
+		<name>阿里</name>
+		<sex>女</sex>
+		<age>22</age>
+	</stu>
+</stulist>

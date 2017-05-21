@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>111</li>
+		<li>222</li>
+		<li>333</li>
+	</ul>
+
+	<ol id="oid">
+		<li>444</li>
+		<li>555</li>
+	</ol>
+</body>
+</html>
+
+<script>
+	var list = document.getElementsByTagName('li');
+	var list2 = document.getElementsByTagName("ul")[0].getElementsByTagName("li");
+	var list3 = document.getElementById("oid").getElementsByTagName("li");
+
+	for(var i=0;i<list2.length;i++){
+		list2[i].onclick = function(){
+			this.style.color = this.innerHTML;
+		}
+	}
+</script>

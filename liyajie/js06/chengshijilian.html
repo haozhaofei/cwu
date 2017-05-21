@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+    #sid{
+    	float:left;
+    	margin-right: 30px;
+    }
+	#s1,#s2,#s3,#s4,#s5{
+		display:none;
+		float:left;
+	}
+</style>
+<body>
+	<select id="sid">
+	    <option value="">请选择
+		<option value="1">北京
+		<option value="2">上海
+		<option value="3">湖北
+		<option value="4">江苏
+		<option value="5">广东
+	</select>
+	<select id="s1">
+		<option value="朝阳区">朝阳区
+		<option value="海淀区">海淀区
+		<option value="东城区">东城区
+		<option value="西城区">西城区
+		<option value="昌平区">昌平区
+	</select>
+	<select id="s2">
+		<option value="黄浦区">黄浦区
+		<option value="徐汇区">徐汇区
+		<option value="长宁区">长宁区
+		<option value="普陀区">普陀区
+		<option value="浦东新区">浦东新区
+	</select>
+	<select id="s3">
+		<option value="武汉">武汉
+		<option value="宜昌">宜昌
+		<option value="黄石">黄石
+		<option value="襄阳">襄阳
+		<option value="恩施">恩施
+	</select>
+	<select id="s4">
+		<option value="南京">南京
+		<option value="无锡">无锡
+		<option value="徐州">徐州
+		<option value="常州">常州
+		<option value="苏州">苏州
+	</select>
+	<select id="s5">
+		<option value="广州">广州
+		<option value="深圳">深圳
+		<option value="珠海">珠海
+		<option value="汕头">汕头
+		<option value="韶关">韶关
+	</select>
+</body>
+</html>
+<script type="text/javascript">
+    sid.onchange=function(){
+    	   for(var i=1;i<=5;i++){
+    	   	  if(i==this.value){
+    	   	  	document.getElementById("s"+i).style.display="block";
+    	   	  }else{
+    	   	  	document.getElementById("s"+i).style.display="none";
+    	   	  }
+    	   }
+         
+	}
+	
+</script>

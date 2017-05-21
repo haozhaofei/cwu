@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>酷狗音乐-音乐总有新玩法</title>
+</head>
+	<style type="text/css">
+	*{padding: 0;margin: 0;}
+    .logo{margin-left: 80px;margin-top: 20px;}
+    #search1{position: relative;float: left;width: 300px;height: 35px;margin-left: 270px;margin-top: -40px}
+    .img1{position: relative;float: left;width: 50px;height: 30px;margin-left: 510px;margin-top: -35px;}
+    .img2{position: relative;float: left;width: 50px;height: 30px;margin-left: 510px;margin-top: -35px;}
+	.pic .img2{display: none;}
+    .pic:hover .img1{display: none;}
+    .pic:hover .img2{display: block;}
+    .list1{list-style-type: none;margin-left: 700px;margin-top: -30px;}
+    ul.list1_1 li{display:inline-block;width: 100px;}
+    ul.list1_1 a{display: block;text-decoration: none;text-align: center;color: 	#696969;}
+    ul.list1_1 a:hover{color:#4169E1;}
+    .line{position: relative;float: left;height: 20px;width: 1px;background:#696969;margin-left: 1030px;margin-top: -30px;}
+    .login{position: relative;float: left;width: 50px;height: 33px;line-height:33px;margin-left: 1070px;margin-top: -30px;background-color: #00BFFF;overflow:hidden;border: 1px solid #FFFFFF;}
+    .sign_up{position: relative;float: left;width: 50px;height: 33px;line-height: 33px;margin-left: 1140px;margin-top: -35px;overflow:hidden;border: 1px solid #696969;}
+    .login a{text-transform:none;text-decoration: none;color:#FFFFFF;}
+    .sign_up a{text-transform:none;text-decoration: none;color:#696969;}
+    .sign_up a:hover{color:#00BFFF; }
+    #list2{margin-top: 100px;width: 100%;height: 50px;background-color: #2c323b;text-align: center;}
+    ul.list2_1 li{position: relative;width: 80px;height: 50px;line-height:50px;margin-left: 80px;margin-top: -30px;background-color: #00BFFF;overflow:hidden;}
+    ul.list2_1 a{text-transform:none;text-decoration: none;color:#FFFFFF;}
+    #list3{position: relative;float: left;margin-left: 150px;margin-top: -50px;height: 50px;line-height: 50px;}
+    ul.list3_1,ul.list3_1 ul{list-style-type:none;}
+    ul.list3_1 li{display:inline-block;width: 100px;}
+    ul.list3_1 a{height:50px;display: block;text-decoration: none;text-align: center;color: #FFFFFF;}
+    ul.list3_1 a:hover{background-color: #00BFFF;}
+    ul.list3_1 ul li{background-color: #2c323b;text-align: center;display: block;width: 100px;z-index: -20px;}
+    ul.list3_1 ul{position:absolute;/*子列表移除屏幕*/margin:-5000px;}
+    ul.list3_1 ul a:hover{color: #696969;}
+    ul.list3_1 li:hover ul{margin: auto;}
+    #list4{position: relative;float: left;margin-left: 680px;margin-top: -50px;
+    	height: 50px;line-height: 50px;}
+    ul.list4_1 li{display:inline-block;width: 100px;}
+    ul.list4_1 a{height:50px;display: block;text-decoration: none;text-align: center;color: #FFFFFF;}
+    ul.list4_1 a:hover{background-color: #00BFFF;}
+
+    #liyuchun{position: absolute; width: 250px;height: 250px;margin-left: 175px;margin-top: -540px;}
+    #xiazai{position: absolute; width: 200px;height: 50px;line-height: 50px; border: 1px solid #FFFFFF;margin-top: -250px;margin-left: 200px;text-align: center;}
+    #xiazai p{color: #FFFFFF;font-size: 20px;}
+    #img8{margin-top: 180px;}
+    #img9{float: right;margin-top: 200px;}
+    #div3{
+        width: 460px;height: 235px;
+        margin-top: -500px;
+        margin-left: 600px;
+        line-height: 20px;
+    }
+
+    #div3 p{color: #ffffff;}
+	#div5 p{line-height: 40px;}
+    .radio{position:fixed;
+           min-width: 940px;
+           width: 100%;
+          height: 80px;
+          bottom: 0;
+      	}
+    .module-bg {position: absolute;left: 0;
+          width: 100%;
+         height: 80px;
+         background-color: #000;
+         opacity: .3;
+         box-shadow: 0 -10px 20px #403f3f;
+         margin-top: 50px;}
+    .player{
+        position: relative;
+        width: 960px;
+        height: 80px;
+        margin: 0 auto;
+         }
+    .contral-left{position: absolute;
+        width: 160px;height: 80px;
+        display: block;
+        }
+    .icon{ display: block;cursor: pointer;
+         background: url(images/btn.png);
+         background-repeat: no-repeat;
+        }
+    a{  text-decoration: none;outline: none;
+        font-size: 100%;
+        }
+    .icon-playbar-prev { width: 36px; height: 36px;
+        background-position: 0 -143px;position: absolute;
+        margin-left: -7px;margin-top: 22px;}
+    .icon-playbar-play { position: absolute;margin-left: 43px;margin-top: 10px; width: 60px;
+        height: 60px;}
+    .icon-playbar-next {position: absolute;margin-left: 117px;margin-top: 22px;background-position: -144px -143px;width: 36px; height: 36px;}
+         .albumImg{
+               vertical-align: middle;
+                position: absolute;
+                cursor: pointer;
+                margin-left: 190px;
+                margin-top: 10px;
+                display: block;
+         }
+         .songName{position: absolute;word-wrap: break-word;white-space: nowrap;margin-left: 0;color: #c4c3c3; font-size: 13px; height: 24px; cursor: default;
+         }
+    
+    .icon-playbar-bgleft{position: absolute;background-position: -217px -200px;
+                width: 2px; height: 3px;}
+    .barBG {background: url(images/progress_bg_middle.png) repeat-x top left;}
+    .icon-playbar-bgright{position: absolute; margin-left: 371px;
+                         background-position: -237px -200px;
+                         width: 2px; height: 3px;}
+    .icon-playbar-progressleft {position: absolute;width: 2px; height: 3px;
+        background-position: -527px -387px;}
+    .progress-middle {position: absolute;margin-left: 2px;width: 370px;height: 3px;
+        overflow: hidden;}
+
+    .drag-playhead {position: absolute;margin-top: -8px;width: 371px;height: 12px;}
+    .icon-playbar-playhead { width: 12px;height: 12px;background-position: -217px -181px;position: absolute;}
+    #dl{width:100px;height:50px;   
+         border-radius: 15px;
+        margin-top: 3px;
+        padding-left: 8px;
+        text-align: center;
+        line-height: 25px;
+        font-size: 15px;
+    	background: #f0ffff;
+    	color: #0000ff;
+    	}
+    #full{
+    	border-radius: 2px;   	
+    	height:3px;
+    	width:370px;
+    	display:block;}
+
+
+	#div1{width: 100%;height: 20px;background-color: #696969;border: 1px solid red;margin-top: 65px;}
+	#lee{width: 80px;width: 80px;margin-left: 260px;margin-top: -20px;}
+
+	</style>
+<body>
+<header>
+	<div class="logo">
+		<img src="images\8.png">
+	</div>
+	<div class="search">
+		<input id="search1" type="text" class="aa" placeholder="  陈一发 童话镇"/>
+		<div class="pic">
+		<img class="img1" src="images\search1.jpg" />
+        <img class="img2" src="images\search2.jpg" />
+	</div>	
+	</div>
+	<div class="list1">
+	<ul class="list1_1">
+		<li><a href="#">客服中心</a></li>
+		<li><a href="#">招贤纳士</a></li>
+		<li><a href="#">会员中心</a></li>
+	</ul>
+	</div>
+	<div class="line"></div>
+	<div class="login" align="center">
+		<p><a href="#">登录</a></p>
+	</div>
+	<div class="sign_up" align="center">
+		<p><a href="#">注册</a></p>
+	</div>
+	</header>
+
+	<main id="main">
+		<div id="list2">
+		<ul class="list2_1">
+			<li><a href="#">首页</a></li>
+		</ul>
+		<div id="list3">
+			<ul class="list3_1">
+				<li><a href="#">榜单</a></li>
+				<li><a href="#">下载客户端</a></li>
+				<li><a href="#">更多</a>
+				<ul>
+					<li><a href="#">电台</a></li>
+					<li><a href="#">MV</a></li>
+					<li><a href="#">歌单</a></li>
+					<li><a href="#">歌手</a></li>
+				</ul>
+				</li>
+			</ul>
+			</div>
+
+	<div id="list4">
+		<ul class="list4_1">
+			<li><a href="#"><img src="images\音乐直播.png" alt="" />音乐直播</a></li>
+			<li><a href="#"><img src="images\酷狗.png" alt="" />酷狗LIVE</a></li>
+			<li><a href="#"><img src="images\音乐.png" alt="" />音乐人</a></li>
+			<li><a href="#"><img src="images\游戏.jpg" alt="" />游戏</a></li>
+			<li><a href="#"><img src="images\商城.png" alt="" />商城</a></li>
+		</ul>
+	</div>
+	</div>
+
+	<!-- 背景 -->
+	<div id="background">
+		<div id="img2">
+			<img src="images\背景1.jpg" width="100%" height="550px">
+		</div>
+		<div>
+			<img id="liyuchun" src="images\李宇春.jpg">
+		</div>
+	</div>
+	<div id="xiazai">
+		<p>下载这首歌</p>
+	</div>
+
+	    <div id="div3">
+		<marquee direction=up behavior=scroll loop=3 scrollamount=1 scrolldelay=10 align=top height=200 width=50% hspace=20 vspace=10 onmouseover=this.stop() onmouseout=this.start()>
+		<div id="div5">
+		<p>天黑黑</p>
+		<p>歌手：李宇春</p>
+		<p>作词：廖莹如、吴依铮</p>
+		<p>作曲：李偲松</p>
+		<p>编曲：牛子健</p>
+		<p>制作人：牛子健</p>
+		<p>我的小时候  吵闹任性的时候</p>
+		<p>我的外婆  总会唱歌哄我</p>
+		<p>夏天的午后</p>
+		<p>姥姥的歌安慰我</p>
+		<p>那首歌好像这样唱的</p>
+		<p>天黑黑 欲落雨</p>
+		<p>天黑黑 黑黑</p>
+<p></p>
+		<p>离开小时候</p>
+		<p>有了自己的生活</p>
+		<p>新鲜的歌 新鲜的念头</p>
+		<p>任性和冲动</p>
+		<p>无法控制的时候</p>
+		<p>我忘记 还有这样的歌</p>
+		<p>天黑黑 欲落雨</p>
+		<p>天黑黑 黑黑</p>
+<p></p>
+		<p>我爱上</p>
+		<p>让我奋不顾身的一个人</p>
+		<p>我以为</p>
+		<p>这就是我所追求的世界</p>
+		<p>然而横冲直撞被误解被骗</p>
+		<p>是否成人的世界背后</p>
+		<p>总有残缺</p>
+		<p>我走在</p>
+		<p>每天必须面对的分岔路</p>
+		<p>我怀念</p>
+		<p>过去单纯美好的小幸福</p>
+		<p>爱总是让人哭</p>
+		<p>让人觉得不满足</p>
+		<p>天空很大却看不清楚</p>
+		<p>好孤独</p>
+<p></p>
+		<p>天黑的时候</p>
+		<p>我又想起那首歌</p>
+		<p>突然期待 下起安静的雨</p>
+		<p>原来外婆的道理早就唱给我听</p>
+		<p>下起雨 也要勇敢前进</p>
+		<p>我相信 一切都会平息</p>
+		<p>我现在 好想回家去</p>
+		<p>天黑黑 欲落雨</p>
+		<p>天黑黑 黑黑</p>
+		</div>
+	</marquee>
+	</div>
+    <!---播放条-->
+<div class="radio">
+<div class="module-bg"></div>
+    <div class="player">
+        <div class="albumImg">
+            <img src="images\李宇春.jpg"  style="width: 60px;
+                height: 60px;">
+        </div>
+       
+        <div class="contral-bar" style="margin-left: 270px;width: 370px;position: absolute;height: 80px;display: block;">
+     
+            <div class="song-info" style=" padding-top: 18px;height: 24px;cursor: default;">
+             
+            <div class="like-song" style="float:left;
+    width: 290px;height: 24px;overflow: hidden;cursor: default;">
+               <span class="songName" id="songName">&nbsp;天黑黑</span></div>
+            
+             <div class="coding-duration" style="width:77px;height:24px;float:right;">
+                <span class="duration ie8" id="duration"
+                style="color: pink;font-size: 12px;opacity: .4;">                 
+                <i class="all-time" style="margin-left:50px;">03:54</i></span>
+             </div>
+             </div>
+
+                <div class="progress-bar" id="progress_bar" style="margin-top: -3px; cursor: pointer;height:3px;display:block;">
+                <progress max="200" value="0" id="full"></progress>
+                </div>
+                </div>
+                
+            </div>
+        </div>  
+        <div class="contral-right">
+            
+        </div>
+    </div>
+</div>
+
+	<div id="img8">
+	<img src="images\end1.png">
+	</div > 
+	
+	<audio src="music\天黑黑.wav" autoplay="controls"></audio>
+	</main>
+
+</body>
+</html>
+<script>
+	//下拉菜单
+      function list(){
+        document.getElementById("more").getElementsByTagName("ul")[0].style.display="block";
+        document.getElementById("more").getElementsByTagName("img")[0].src="images/小图标/arrow.png";
+      }
+      function disappear(){
+        document.getElementById("more").getElementsByTagName("ul")[0].style.display="none";
+        document.getElementById("more").getElementsByTagName("img")[0].src="images/小图标/arrowMored.png";
+      }
+		//定义一个变量
+    var full = document.getElementById('full'); 
+	var m = 0; //一开始进度为空
+	 setInterval(function(){
+		m++;
+		full.value = m;
+	},1000)
+
+</script>

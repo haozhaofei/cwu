@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加li</title>
+	<style>
+		ul{list-style-type: none;}
+		ul li{background: #ccc;margin-top: 10px;height:30px;line-height: 30px;}
+		ul li:hover{background: yellow;}
+		ul li.cc{background: green;}
+
+	</style>
+</head>
+<body>
+	<ul id="uid">
+		<li>yi</li>
+		<li>er</li>
+		<li>san</li>
+		<li>si</li>
+		<li>wu</li>
+	</ul>
+	<input type="text" id="nid" size="30">
+	<button onclick="doAdd()">add</button>
+</body>
+</html>
+<script>
+	function doAdd(){
+		var name = document.getElementById('nid').value;
+
+		var tt = document.createTextNode(name);
+
+		var li = document.createElement('li');
+
+		var ul = document.getElementById("uid");
+
+		li.appendChild(tt);
+		ul.appendChild(li);
+	}
+</script>

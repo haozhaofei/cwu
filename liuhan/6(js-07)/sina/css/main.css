@@ -1,0 +1,181 @@
+*{
+	padding: 0; /*内边距*/
+	margin: 0; /*外边距*/
+}
+#page{width: 1000px;height: 1000px;margin: 0 auto;}
+	
+	#biaotou{
+		border: 1px solid white;
+		width: 990px;
+		height: 50px;
+		
+	}
+	#btleft{
+		border: 1px solid white;
+		width: 200px;
+		height: 44px;
+		
+		position: relative;
+		float: left;
+	}
+	#btright{
+		border: 1px solid white;
+		width: 150px;
+		height: 44px;
+		margin: 1px;
+		position: relative;
+		float: right;
+		text-align: center;
+	}
+
+/*导航 样式*/
+	#ulid{
+		border: 1px solid #004100;
+		width: 990px;
+		height: 35px;
+		background-color: #004100;
+		padding: 0px 6px; /*上下5  左右25*/
+	}
+	ul,li{
+		height:25px;
+		float: left;
+		position: relative;
+		line-height: 1;
+		display: inline;  /*去掉默认的原点*/
+		padding: 0 6px; /*上下5  左右25*/
+	}
+	li a{
+		color: white;
+	}
+	li{
+		
+		width: 56px;
+		font-size: 14px;
+		border-right: 1px solid white;
+  		padding: 0px 6px; /*上下5  左右25*/
+  		padding-top: 9px;
+  		margin:0 6px ;
+  		background-color: #004100;
+	}
+	li:hover{
+		background-color: green;
+		cursor: pointer;
+		text-decoration:underline;
+	}
+/*导航 样式 end*/
+
+/*相册 样式*/
+	#xiangce{
+		border: 1px solid black;
+		width: 600px;
+		height: 384px;
+		position: relative;
+		float: left;
+		/*padding: 10px 0;*/
+		margin-top: 15px;
+		margin-bottom: 40px;
+	}
+	#p2,#p3,#p4,#p5{display: none;}
+	#wenzi{
+		width:600px; 
+		height:80px;
+		position:absolute;
+		bottom:0px;
+		background-color:rgba(10%,20%,30%,0.8);
+	}
+    #wenzi a{
+    	text-decoration:none;
+    	font-size:20px;
+    	color:#fff;
+    }
+    #wenzi a:hover{
+    	cursor: pointer;
+    	text-decoration: underline;
+    }
+	#lt{
+		position: absolute;
+		left: 3px;
+		top: 192px;
+		cursor:pointer;
+		width: 30px;
+		height: 30px;
+		z-index: 1;
+	}
+	#rt{
+		position: absolute;
+		right: 3px;
+		top: 192px;
+		cursor:pointer;
+		width: 30px;
+		height: 30px;
+		z-index: 1;
+	}	
+	#list img{
+		width: 20px;
+		height: 5px;
+		float: left;
+		margin-left: 5px;
+	}
+	#list img:hover{
+		cursor:pointer;
+	}
+	#list{
+		position: absolute;
+		left: 5px;
+		top: 372px;
+	}
+/*	#m2,#m3,#m4,#m5{display: none;}
+
+	#m{
+		width: 10px;
+		height: 10px;
+		background-color: gray;
+		border: 1px soild gray;
+		border-radius: 50%;
+		float: left;
+		margin-left: 5px;
+		position: relative;
+	}
+	#m:hover{
+		background-color: green;
+	}
+*/
+/*相册 样式 end*/
+/*新闻 样式*/
+	#news{
+		/*border: 1px solid black;*/
+		width:380px;
+		height: 410px;
+		position: relative;
+		float: right;
+		margin-top: 5px;
+	}
+	#news1,#news2,#news3{
+		/*border: 1px solid black;*/
+		margin-top: 5px;
+		padding: 7px;
+		/*text-align: center;文字居中*/
+	}
+	p{
+		font-size: 14px;
+		margin: 7px; /*外边距*/
+	}
+	p a{
+		color: black;
+		text-decoration:none;
+	}
+	p:hover{
+		cursor: pointer;
+		text-decoration:underline;
+		color: #e00000;
+	}
+	h3 a{
+		color: black;
+	}
+	h3:hover{
+		cursor: pointer;
+		text-decoration:underline;
+		color: #e00000;/*color="#ff0000"*/
+	}
+	
+/*新闻 样式 end*/

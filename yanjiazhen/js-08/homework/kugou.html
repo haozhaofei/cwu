@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>酷狗</title>
+	<style>
+		body{
+			margin:0px;
+			padding:0px;
+			}
+			a{
+				text-decoration:none;
+			}
+			/*第一个div里的内容样式编辑*/
+		#first{
+			top:25px;
+			left:100px;
+			float:left;
+			position:relative;
+		}
+		#first_input input{
+			height: 30px;
+			width: 280px;
+		}
+		#first_input{
+			top: 0px;
+			left: 200px;
+			position:absolute;			
+		}
+		#first_select img{
+			width:20px;
+			height:20px;
+			left:455px;
+			top:9px;
+			position:absolute;			
+		}
+		#first_list ul{
+			width:330px;
+			top:-5px;
+			left: 520px;
+			position:absolute;
+			border-right: 1px solid gray;
+		}
+		 #first_list ul li{
+			width:70px;
+			margin-left:30px;
+			list-style-type: none;
+			float:left;
+			top:10px;	
+		}
+		#first_list ul li a{
+			color:gray;
+			font-size: 15px;
+		}
+		#first_list ul li a:hover{
+			color:blue;		
+		}
+		#first_denglu{
+			width:200px;
+			left:930px;
+			top:10px;
+			position:absolute;
+		}
+		#first_denglu a{
+			width:55px;
+			height:30px;
+			margin-left:25px;
+			margin-top:1px;
+			float:left;
+			line-height:28px;
+		}
+		#first_denglu #one,#two{
+			display:block;
+			text-align:center;
+			border-radius: 2px;	
+		}
+		#first_denglu #one{			
+			background-color:azure;	
+		}
+		#first_denglu #two{		
+			border:1px solid gray;					
+		}		
+		/*第一个div里的内容样式编辑*/
+		/*第二个div里的内容样式编辑*/
+		#second {
+			width:100%;
+			height:60px;
+			background-color: black;
+			float:left;
+			margin-top:45px;
+			line-height: 58px;
+		}
+		#second li{
+			display: block;
+			list-style-type: none;
+			float:left;
+			padding:0px 20px;
+			line-height:30px;
+			text-align:center;
+		}
+		#second li a{		
+			color:white;
+		}
+		
+		#ful li:hover{
+			background-color: azure;
+		}
+		#ful #fli{
+			background-color: blue;
+			margin-left:130px;
+		}
+		#sul{
+			width:90px;
+			background-color: black;
+			padding:0px;
+			float:none;
+			top:140px;
+			position:absolute;
+			overflow: hidden;
+			display: none;		
+		}
+		#sul li{
+			width:50px;
+			text-align:center;
+			line-height: 30px
+		}
+		#sul li:hover{
+			background-color: gray;
+		}
+
+		#tli{
+			margin-left:300px;
+		}
+		#tul li {
+			display: block;
+			width:20px ;
+			line-height: 10px;		
+		}
+		#tul li a{
+			font-size: 13px;
+		}
+		#tul li a:hover{
+			color:blue;
+		}
+		/*第二个div里的内容样式编辑*/
+		/*第san个div里的内容样式编辑*/
+		#third ,#img1,#img2,#img3{
+			width:100%;
+			height:440px;
+		}
+		#img2,#img3{
+			display:none;
+		}
+		#left{
+			position:absolute;
+			left:0px;
+			top:300px;
+		}
+		#right{
+			position:absolute;
+			left:96%;
+			top:300px;
+		}
+		/*第san个div里的内容样式编辑*/
+		/*第四个div里的内容样式编辑*/
+		#fourth{
+			width:100%;
+			height:60px;
+			position:absolute;
+			top:527px;
+			background-color:#dee2e7;
+/*透明度设置*/background-color:rgba(0,0,0,0.5);
+			text-align:center;
+			font-size:24px;
+		}
+		#fourth #pc{
+			margin-left:24%;
+			background:url(images/pc.png) no-repeat 20px center;
+			padding-right:45px
+		}
+ 		#fourth #pc:hover{
+ 			background:url(images/pc1.png) no-repeat 20px center
+ 		}
+	    #fourth #iphone{
+	    	margin:20px 0 0 55px;
+	    	padding-right:45px;
+	    	background:url(images/mac.png) no-repeat left center
+	    }
+	    #fourth #iphone:hover{
+	    	background:url(images/mac1.png) no-repeat left center
+	    }
+		#fourth #android{
+			margin-left:55px;
+			background:url(images/andriod.png) no-repeat left center
+		}
+		#fourth #android:hover{
+			background:url(images/andriod1.png) no-repeat left center
+		}
+		#fourth a{
+			float:left;
+			display:block;
+			height:25px;
+			line-height:25px;
+			margin-top:20px;
+			width:130px;
+			padding-left:30px;
+			font-size:15px;
+			color:#fff;
+			text-align:center;
+			
+		}
+		#line{
+			float:left;
+			height:18px;
+			line-height:18px;
+			margin-top:25px;
+			border-right:1px solid rgba(255,255,255,.2);
+		}
+		/*第四个div里的内容样式编辑*/
+		/*第五个div里的内容样式编辑*/
+		#fifth_sixth{
+			width:100%;
+		}
+		#fifth{
+			width: 45%;
+			float:left;
+			position: absolute;
+			margin-left: 13%;
+			margin-top: 170px;
+		}
+		#jingxuan{
+			height:60px;
+		}
+		#fifth_sixth h3{
+			float:left;
+			display: block;
+			font-weight: 400;
+			width: 200px;
+			height:40px;
+			margin-right: 25px;
+			color: #555;			
+		}
+		#fifth_sixth h3 b{
+			font-weight:400;
+			color:#009af3;/*介于深蓝和蓝之间*/
+		}
+		#fifth_sixth a{
+			position:absolute;
+			left:90%;
+			top:20px;
+			color:#999;			
+		}
+		#song1,#song2,#song3,#song4,#song5{
+			float: left;
+			position:absolute;
+		}
+		#song1{
+			
+		}
+		#song2{
+			margin-left:333px;
+		}
+		#song3{
+			margin-left:500px;
+			
+		}
+		#song4{
+			margin-top:27%;
+			margin-left:333px;
+		}
+		#song5{
+			margin-top:27%;
+			margin-left:500px;
+		}
+		#num{
+			display: block;
+			line-height:7px;
+			position:absolute;
+			background:url(images/erji.png) no-repeat right center;
+			text-align:right;
+			background:black;
+			width:100%;
+			right:0;
+			background-color:rgba(0,0,0,0.4);
+		}
+		song1 #num{
+			width:160px;
+		}
+		.zhushi{
+			display: block;
+			line-height:15px;
+			position:absolute;
+			bottom:4px;
+			background:black;
+			height:38px;
+			background-color:rgba(0,0,0,0.3);
+			width:100%;
+			overflow:hidden;	
+		}
+		.zhushi p{
+			font-size: 14px;
+			text-decoration: none;
+		}
+		p{
+			color: white;
+		}
+		/*第五个div里的内容样式编辑*/
+		/*第六个div里的内容样式编辑*/
+		#sixth{
+			width: 40%;
+			float:left;
+			left:63%;
+			position: absolute;
+			margin-top: 170px;
+		}
+		#sixth a{
+			left:54%;
+			top:20px;
+			color:#999;			
+		}
+		#song6,#song7,#song8{
+			position: absolute;
+		}
+		#song6{
+			top:60px;
+		}
+		#song7{
+			top:175px;
+		}
+		#song8{
+			top:290px;
+		}
+		.list{
+			float:left;
+			width:235px;
+			height:98px;
+			background-color:#dee2e7;
+			position:absolute;
+			left:98px;
+			top:0px;
+		}
+		.list dd{
+			white-space: nowrap;
+			overflow: hidden;
+			width: 180px;
+			line-height: 24px;
+			font-size: 14px;
+			color: #555;
+		}
+		.list dt{
+			line-height: 24px;
+			color: #333;
+			font-weight: 700;
+			font-size: 14px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="first">
+		<a href="http://www.kugou.com"><img src="images/logo.png"></a>
+		<div id="first_input">
+		<input type="text" placeholder="薛之谦：暧昧">
+		</div>
+		<div id="first_select">
+		<a href="http://www.kugou.com"><img src="images/ss.png"></a>
+		</div>
+		<div id="first_list">
+			<ul>
+			    <li><a  href="http://www.kugou.com/shop/help/serviceCenter">客服中心</a></li>
+	            <li><a  href="http://kugou.hirede.com">招贤纳士</a></li>
+	            <li><a  href="http://vip.kugou.com/">会员中心 </a></li>
+        	</ul>
+		</div>
+		<div id="first_denglu">
+			<a id="one">登录</a>
+			<a id="two" href="http://www.kugou.com/reg/web/">注册</a>
+		</div>
+	</div>
+	<div id="second">
+		 <ul id="ful">
+            <li id="fli"><a href=" http://www.kugou.com/">首页</a></li>
+            <li><a href=" http://www.kugou.com/yy/html/rank.html">榜单</a></li>
+            <li><a href=" http://download.kugou.com/">下载客户端</a></li>
+            <li><a href="">更多</a>           
+            	<ul id="sul">
+            		<li><a href="http://www.kugou.com/fmweb/html/index.html">电台</a></li>
+            		<li><a href="http://www.kugou.com/mvweb/html/">MV</a></li>
+            		<li><a href="http://www.kugou.com/yy/html/special.html">歌单</a></li>
+           			<li><a href="http://www.kugou.com/yy/html/singer.html">歌手</a></li>
+           		 </ul>
+            </li>
+        </ul>
+        <ul class="tul">
+            <li id="tli"><a href="http://fanxing.kugou.com" >音乐直播</a></li>
+            <li><a href="http://live.kugou.com/" >酷狗LIVE</a></li>
+            <li><a href="http://www.kugou.com/imusic/">音乐人</a></li>
+            <li><a href="http://games.kugou.com">游戏</a></li>
+            <li><a href="http://www.kugou.com/shop">商城</a></li>
+        </ul>
+	</div>
+	<div id="third">
+		<img onclick="left()" id="left" src="images/n4.png">
+		<img src="images/n1.jpg" id="img1"> 
+		<img src="images/n2.jpg" id="img2">
+		<img src="images/n3.jpg" id="img3">
+		<img onclick="right()" id="right" src="images/n5.png">
+	</div>
+		<div id="fourth">
+            <a id="pc" href="http://download.kugou.com/download/kugou_pc" >下载PC版</a>
+            <span id="line"></span> 
+            <a id="iphone" href="http://download.kugou.com/download/kugou_iphone" >
+             下载iPhone版</a>
+             <span id="line"></span>
+            <a id="android" href="http://download.kugou.com/download/kugou_android">下载Android版</a>
+        </div>
+    <div id="fifth_sixth">
+
+    	<div id="fifth">
+	    	<div id="jingxuan">
+		    	<h3><b>精选</b>歌单</h3>
+		    	<a href="http://www.kugou.com/yy/html/special.html">更多</a>
+	    	</div>
+
+	 		<div id="song1">
+		         <div id="num"><p>112.7万</p></div>
+		         <img src="images/song1.jpg" width="325" height="325">
+	        <div class="zhushi">
+		        <p id="say0">兜风必备音乐，陪你旅程好心情</p>
+		        <p id="say1">笑侠</p>
+	        </div>
+	        </div>
+
+	        <div id="song2">
+	        <div id="num"><p>77.4万</p></div>
+		        <img  src="images/song2.jpg" width="160" height="160">
+	        <div class="zhushi">
+		        <p id="say2">时间治愈的是 愿意自渡之人</p>
+		        <p id="say3">烨＆锦麟ι</p>
+	        </div>
+	        </div>
+
+	        <div id="song3">
+	        	<div id="num"><p>201.2万</p></div>
+		        <img  src="images/song3.jpg" width="160" height="160" >
+	        <div class="zhushi">
+		        <p id="say2">金曲捞 合辑</p>
+		        <p id="say3">纳蓝独孤</p>
+	        </div>
+	        </div>
+
+	        <div id="song4">
+		        <div id="num"><p>119.4万</p></div>
+		        <img  src="images/song4.jpg" width="160" height="160">
+	        <div class="zhushi">
+		        <p class="songListName">悦耳的乡村音乐伴你行</p>
+		        <p class="songListSinger">梦随风飘</p>
+	    	</div>
+	        </div>
+
+	        <div id="song5">
+	        	<div id="num"><p>85.1万</p></div>
+		        <img  src="images/song5.jpg" width="160" height="160">
+	        <p class="zhushig"></p>
+	        <div class="zhushi">
+		        <p id="say2">温柔男嗓-你是我唇畔</p>
+		        <p id="say3">梦的边缘</p>
+	        </div>
+	        </div>
+		</div>
+
+
+        <div id="sixth">
+    	<div id="remen">
+    	<h3><b>热门</b>榜单</h3>
+    	<a href="http://www.kugou.com/yy/html/special.html">更多</a>
+    	</div>
+          	
+ 	    <div id="song6">
+	        <img  src="images/song6.jpg" width="98" height="98" >
+	        <div class="list">
+		        <dl>
+		        <dt>酷狗飙升榜</dt>
+		        <dd>1 . 汪苏泷-东京铁塔(Live)</dd>
+		        <dd>2 . 江美琪-东京铁塔(Live)</dd>
+		        </dl>
+	        </div>
+	    </div>
+
+	    <div id="song7">
+	        <img src="images/song7.jpg" width="98" height="98" >
+	        <div class="list">
+		        <dl>
+		        <dt>酷狗TOP500</dt>
+		        <dd>1 . 杨宗纬、张碧晨 - 凉凉</dd>
+		        <dd>2 . 赵雷 - 成都</dd>
+		        </dl>
+	        </div>
+	    </div>
+	    <div id="song8">
+	        <img src="images/song8.jpg" width="98" height="98" >
+	        <div class="list">
+		        <dl>
+		        <dt>网络红歌榜</dt>
+		        <dd>1 . 金南玲 - 逆流成河</dd>
+		        <dd>2 . 庄心妍 - 走着走着就散了</dd>
+		        </dl>
+	        </div>
+	    </div>
+    	</div>   
+    </div>
+</body>
+</html>
+<script>
+     var m=1;
+	function right(){
+		m++;
+		if(m>3){
+			m=1;
+		}
+		show(m);
+	}
+	function left(){
+		m--;
+		if(m<1){
+			m=3;
+		}
+		show(m);
+	}
+
+	function show(x){
+        for(var i=1;i<4;i++){
+			var img=document.getElementById('img'+i);
+			if(i==x){
+				img.style.display="block";
+			}
+			else{
+				img.style.display="none";
+			}
+		}
+	}
+</script>

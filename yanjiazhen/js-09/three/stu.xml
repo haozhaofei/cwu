@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<like>
+	<people id="11">
+		<name>严家珍</name>
+		<num>11</num>
+	</people>
+	<people id="22">
+		<name>严yan</name>
+		<num>22</num>
+	</people>
+	<animals>
+		<name>段亚琴</name>
+		<id>02</id>
+	</animals>
+	<food>
+		<name>橙子</name>
+		<id>03</id>
+	</food>
+	<food>
+		<name>酸奶</name>
+		<id>05</id>
+	</food>
+</like>

@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>酷狗音乐 - 音乐总有新玩法</title>
+  <link rel="icon" href="images/icon.png">
+</head>
+<style type="text/css">
+  .main{
+    padding: 0px;
+    margin: 0px;
+  }
+  #logo{
+    margin-top: 5px;
+  }
+  .zc{
+    float: left;
+    display: inline-block;
+    width: 48px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #ccc;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2px;
+    margin-left: 15px;
+    margin-top: 6px;
+    color: #a8a8a8;}
+  .ul1 span:hover{
+    color: #009af3;
+  }
+  .dl{
+    float: left;
+    display: inline-block;
+    width: 48px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #169af3;
+    text-align: center;
+    background: #158fe1; 
+    text-decoration: none;
+    margin-left: 35px;
+    border-radius: 2px;
+    margin-top: 6px;
+    }
+  .dl{color: white;}
+  .zc:hover{
+    border-color: #0080ff;
+    color: #169af3;
+  }
+  span{
+    color: #7e7e9e;
+  }
+  li a{
+    text-decoration: none;
+  }
+  #logo{
+    display: inline-block;
+    float:left;
+    width:200px;
+    margin-left: 170px;
+    height: 58px;
+    line-height: 58px;
+    margin-top: 13px;
+  }
+  #text{
+    display: inline-block;
+    float:left;
+    width:410px;
+    margin-top: 0px;
+    height: 58px;
+    line-height: 58px;
+  }
+  .one{
+    width: 1330px;
+    height: 58px;
+    line-height: 58px;
+  }
+  .li3{
+    height: 25px;
+    width: 230px;
+    float: left;
+    line-height: 25px;
+    margin-left: -65px;
+  }
+  .ul1{
+    height: 25px;
+    width: 230px;
+    line-height: 25px;
+    margin-top: 20px;
+    border-right: 1px solid #ccc;
+  }
+  .ul1 li{
+    display: inline-block;
+  }
+  #login{
+    float: left;
+    height: 25px;
+    width: 200px;
+    line-height: 25px;
+    margin-top: 11px;
+    margin-left: 80px;
+  }
+  .two{
+    height: 58px;
+    width: 1330px;
+    background: #3c3c3c;
+    position: absolute;
+    margin-top: 0px;
+    z-index: 2;
+  }
+  .two .menu{
+    float: left;
+    height: 58px;
+    line-height: 58px;
+    margin-left: 150px;
+    width: 400px;
+    margin-top: 0px;
+    width: 400px;
+  }
+  .two span{
+    color: white;
+  }
+
+  .lie{
+    display: none;
+  }
+  
+  .nchange:hover .lie{
+    display: block;
+  }
+  .menu li{
+    float: left;
+    list-style: none;
+    text-align: center;
+  }
+  .menu li a{
+    display: block;
+    padding: 0 20px;
+  }
+  .menu li a:hover{
+    background:#0080ff; 
+  }
+  .lie li a:hover{
+    background: #6c6c6c;
+  }
+  .two .change{
+    float: right;
+    height: 58px;
+    line-height: 58px;
+    margin-top: 0px;
+    margin-right: 178px;
+  }
+  .change li{
+    float: left; 
+    list-style: none;
+  }
+  .change li a{
+    display: block;
+    padding: 0 20px;
+    font-size: 13px;
+    color: #bebebe;
+    text-decoration: none;
+  }
+  .menu li a{
+    color: #fff;
+    text-decoration: none;
+  }
+  .menu ul li{
+    background: #2c323b;
+    height: 50px;
+    line-height: 56px;
+    border-bottom: 1px solid white;
+    text-align: center;
+    float: left;
+    width: 120px;
+    margin: 0;
+    margin-left: -40px;
+    margin-top: -1px;
+  }
+  .menu ul li span{
+    color: white;
+  }
+  .change span{
+    color: #bebebe;
+  }
+  .change span:hover{
+    color: #0080ff;
+  }
+  .peo{
+    width: 1330px;
+    height: 493px;
+    margin-top: 58px;
+    background: #171f2d;
+    z-index: 1;
+  }
+  .img1{
+    z-index: 2;
+    margin-left: 250px;
+    margin-top: 10px;
+  }
+  .left p{
+    color: white;
+    width: 210px;
+    height: 40px;
+    font-size: 28px;
+    margin-left: 275px;
+    margin-top: 50px;
+    border: 1px solid white;
+    border-radius: 25px ;
+    text-align: center;
+    padding-top: 10px;
+  }
+  .short{
+    width: 1330px;
+    height: 75px;
+    background: rgba(14,14,14,0.5);
+    margin-top: -75px;
+  }
+  .img_1{
+    margin-left: 300px;
+  }
+  .img_2{
+    margin-left: 15px;
+  }
+  .img_3{
+    margin-left: 20px;
+  }
+  .liuxj{
+    margin-left: 15px;
+    margin-top: 5px;
+  }
+  .love .p{
+    margin-top: -60px;
+    margin-left: 590px;
+    color: white;
+  }
+  .pp{
+    margin-top: -35px;
+    margin-left: 870px;
+    color: white;
+  }
+  #st{
+    margin-top: -15px;
+    margin-left: 580px;
+    height: 4px;
+    width: 400px;
+  } 
+  .right{
+    height: 300px;
+    margin-left: 700px;
+    margin-top: -380px;
+  }
+  .right p{
+    color: #888;
+  }
+  .span1{
+    font-size: 25px;
+    font-weight: bold;  }
+  .span1 span{
+    font-size: 15px;
+    color: white;
+  }
+  .right{
+        width: 460px;
+        height: 245px;
+        overflow: hidden;
+        margin-top: -340px;
+        font-size: 15px;
+        line-height: 30px;
+        color: #FFFFFF; 
+        overflow:auto;
+    }
+
+</style>
+<body>
+<div class="main">
+  <div class="one">
+    <div id="logo"><img src="images/logo.png"></div>
+    <div id="text"><input type="text" placeholder="搜索你喜欢的" style="height:28px;width:298px;"></div>
+    <div class="li3">
+      <ul class="ul1">
+        <li><a href=""><span>客服中心</span></a></li>
+        <li><a href=""><span>招贤纳士</span></a></li>
+        <li class="vip"><a href=""><span>会员中心</span></a></li>
+      </ul>
+    </div>
+
+    <div id="login">
+      <a href="" class="dl">登录</a>
+      <a href="" class="zc">注册</a>
+    </div>
+  </div>
+  <div class="two">
+    <ul class="menu">
+      <li class="sye"><a href=""><span>首页</span></a></li>
+      <li><a href=""><span>榜单</span></a></li>
+      <li><a href=""><span>下载客户端</span></a></li>
+      <li class="nchange"><a href="" ><span>更多  ^</span></a>
+        <ul class="lie">
+          <li><a href=""><span>电台</span></li>
+          <li><a href=""><span>MV</span></li>
+          <li><a href=""><span>歌单</span></li>
+          <li><a href=""><span>歌手</span></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="change">
+      <li><a href=""><span>音乐直播</span></a></li>
+      <li><a href=""><span>酷狗LIVE</span></a></li>
+      <li><a href=""><span>音乐人</span></a></li>
+      <li><a href=""><span>游戏</span></a></li>
+      <li><a href=""><span>商城</span></a></li>
+    </ul>
+  </div>
+  <div class="peo">
+    <div class="left">
+      <img class="img1" src="images/woyaoni.jpg" width="260px" height="260px">
+      <p>下载这首歌</p>
+    </div>
+    <div class="right">
+      <p class="span1">我要你 </p>
+      <p class="span1"><span>作词：樊冲 </span></p>
+      <p class="span1"><span>作曲：樊冲 </span></p>
+      <p class="span1"><span>演唱：任素汐 </span></p>
+      我要 你在我身旁<br>
+      我要 你为我梳妆<br>
+      这夜的风儿吹 <br>
+      吹得心痒痒 我的情郎 <br>
+      我在他乡 望着月亮<br>
+      都怪这月色 撩人的疯狂<br>
+      都怪这Guitar 弹得太凄凉 <br>
+      欧 我要唱着歌<br>
+      默默把你想 我的情郎<br>
+      你在何方 眼看天亮<br><br>
+      都怪这夜色 撩人的疯狂<br>
+      都怪这吉他 弹得太凄凉 <br>
+      欧 我要唱着歌 <br>
+      默默把你想 我的情郎 <br>
+      你在何方 眼看天亮<br>
+      我要 美丽的衣裳<br>
+      为你 对镜贴花黄<br>
+      这夜色太紧张<br>
+      时间太漫长 我的情郎 <br>
+      我在他乡 望着月亮 <br>
+
+    </div>
+  </div>
+  <div class="short">
+    <img class="img_1" src="images/left.png" width="30px">
+    <img class="img_2" src="images/next.png" width="40px">
+    <img class="img_3" src="images/right.png" width="30px">
+    <img class="liuxj" src="images/woyaoniya.jpg" width="65px" height="65px">
+    <div class="love">
+      <p class="p">我要你</p>
+      <p class="pp">00:00 / 02:34</p>
+      <progress value="0" max="150" id="st"></progress>
+      <audio src="music\我要你 - 任素汐.mp3" autoplay="controls"></audio>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+<script>
+  var m = 0; 
+  var t=setInterval(function(){
+    m++;
+    document.getElementById('st').width=m;
+    st.value=m;
+    if(m==150){
+       clearInterval(t);
+    }
+  },1000)  
+</script>

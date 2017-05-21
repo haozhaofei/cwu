@@ -1,0 +1,2457 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>酷狗音乐 - 音乐总有新玩法</title>
+	<link rel="shortcut icon" href="photos/timg.jpg" type="" />
+</head>
+<style type="text/css">
+	*{
+    		margin: 0;
+    		padding: 0;
+	}
+	.mainPage{
+		position: relative;
+	}
+	.header{
+		margin-left: 158px;
+		width: 75%;
+		margin-top: 5px;
+		height: 50px;
+		position: absolute;
+		z-index: 2;
+	}
+	.header .logo{
+		float: left;
+		margin-left: 0px;
+		width: 153px;
+	}
+	.header .login_in{
+		float: right;
+		margin-top: -35px;
+		height: 25px;
+		width: 170px;
+		border-left: 1px solid #ccc;
+	}
+	.login_in .denglu{
+		float: left;
+		width: 50px;
+		height: 30px;
+		background: #0080ff;
+		display: inline-block;
+		text-align: center;
+		line-height: 30px;
+		text-decoration:none;
+		color: #fff;
+		font-size: 14px;
+		margin-left: 60px;
+	}
+	.denglu:hover{
+		background: #0068cc;
+	}
+	.login_in .zhuce{
+		float: right;
+		width: 50px;height: 30px;
+		border:1px solid #ccc;
+		display:inline-block;
+		text-align: center;
+		line-height: 30px;
+		text-decoration:none;
+		color:#7b7b7b;
+		font-size: 14px;
+	}
+	.zhuce:hover{
+		border-color: #0080ff;
+		color:#0080ff; 
+	}
+	.search_input{
+		width: 300px;
+		margin-left: 205px;
+		margin-top:20px;
+		position: absolute;
+		margin-top: 4px;
+		height: 40px;
+	}
+	.search_input .input{
+		float: left;
+		height: 30px;
+		width: 255px;
+	}
+	.search_input .search_btn{
+		float: right;
+		margin-top: 7px;
+	}
+	.topNav{
+		height: 30px;
+		width:300px;
+		margin-left: 600px;
+		margin-top: 10px;
+	}
+	.topNav li{
+		float: left;
+		list-style: none;
+	}
+	.topNav li a{
+		text-decoration: none;
+		margin-left: 15px;
+		font-size: 13px;
+		color:#7b7b7b;
+	}
+	.sousuo{
+		font-size: 14px;
+	}
+	.sousuo:hover{
+		color:#0080ff; 
+	}
+	.list1 li a:hover{
+		color: #0080ff;
+	}
+	.navWrap{
+		height: 60px;
+		width: 100%;
+		background: #3c3c3c;
+		position: absolute;
+		margin-top: 50px;
+	}
+	.navWrap .homeNav{
+
+		float: left;
+		height: 57px;
+		line-height: 57px;
+		margin-left: 178px;
+		width: 400px;
+		position: absolute;
+	}
+	.homeNav li{
+		float: left;
+		list-style: none;
+		text-align: center;
+	}
+	.homeNav li a{
+		display: block;
+		padding: 0 20px;
+	}
+	.homeNav li a:hover{
+		background:#0080ff; 
+	}
+	.more_1{
+		width: 80px;
+
+	}
+	.secondNav{
+		float: none;
+		display: none;
+		width: 80px;
+		margin-left: 0px;
+		position: absolute;
+		z-index: 2;
+	}
+	.secondNav li a{
+		width: 39px;
+		background: #3c3c3c;
+	}
+	.more_1:hover .secondNav{
+		display: block;
+		position: absolute;
+		 }
+	.secondNav li a:hover{
+		background: #6c6c6c;
+	}
+	.navWrap .subNav{
+		float: right;
+		height: 57px;
+		line-height: 57px;
+		margin-right: 178px;
+	}
+	.subNav li{
+		float: left;
+	}
+	.subNav li a{
+		display: block;
+		padding: 0 20px;
+		font-size: 13px;
+		color: #bebebe;
+		text-decoration: none;
+	}
+	.homeNav li a{
+		color: #fff;
+		text-decoration: none;
+	}
+	.subNav li a:hover{
+		color: #0080ff;
+	}
+	.shouye{
+		background: #0080ff;
+	}
+	.banner{
+		position: absolute;
+		width: 100%;
+		height: 400px;
+		margin-top: 107px;
+		z-index: 1;
+	}
+	.banner .imgs img{
+		width: 100%;
+		z-index: 1;
+		position: absolute;
+		height: 100%;
+	}
+
+	.banner .downLoad{
+		height:50px;
+		position: absolute;
+		width: 100%;
+		z-index: 2;
+		margin-top: 350px;
+		text-align: center;
+		line-height: 50px;
+		background: rgba(14,14,14,0.5);
+	}
+	.banner .downLoad a{
+		display: inline-block;
+		width: 200px;
+		color: #fff;
+		text-decoration: none;
+		font-size: 15px;
+	}
+	.part3{
+		width: 80%;
+		margin-left: 158px;
+		position: absolute;
+		z-index: 2;
+		height: 425px;
+		margin-top: 530px;
+	}
+
+	.part3 .left{
+		width: 682px;
+		float: left;
+	}
+	.left .font{
+		height: 50px;
+		width: 682px;
+		line-height: 50px;
+	}
+	.font h3{
+		float: left;
+		font-weight:lighter;
+		font-size: 30px;
+	}
+	.font h3 span{
+		color: #0080ff;
+		font-weight: lighter;
+	}
+	.font a{
+		float: right;
+		text-decoration: none;
+		font-size: 14px;
+		color: #7b7b7b;
+	}
+	.font a:hover{
+		color: #0080ff;
+	}
+	.left .songList{
+		height: 360px;
+		width: 682px;
+	}
+	.songList .big_left {
+		width: 341px;
+		float: left;
+	}
+	.big_left #span{
+		width: 341px;
+		height: 341px;
+		z-index: 2;
+		background: rgba(14,14,14,0.5);
+		margin-top: 0px;
+		display: none;
+	}
+	.songList .big_left img{
+		width: 341px;
+		position: absolute;
+		z-index: 1;
+	}
+	.big_left div{
+		width:341px;
+		height: 50px;
+		background: rgba(14,14,14,0.5);
+		position: absolute;z-index: 3;
+		margin-top: 291px;
+	}
+	.big_left div p{
+		color: #fff;
+	}
+	.nihao{
+		margin-left: 10px;
+		font-size: 14px;
+		font-weight: bold;
+		margin-top: 5px;
+	}
+	.aa{
+		margin-left: 10px;
+		font-size: 15px;
+		margin-top: 5px;
+	}
+	.little_right{
+		width: 341px;
+		float: right;height: 100%;
+	}
+	
+	.little_right .little_top_left{
+		float: left;width: 150px;
+		position: relative;
+		height: 150px;
+		margin-left: 10px;
+	}
+	.songList .little_right .little_top_left img{
+		width: 165px;
+		position: absolute;
+		z-index: 1;
+	}
+	.little_right .little_top_left #span1{
+		width: 165px;
+		height: 165px;
+		z-index: 2;
+		background: rgba(14,14,14,0.5);
+		margin-top: 0px;
+		display: none;
+	}
+	.little_right .little_top_left div{
+		width:165px;
+		height: 50px;
+		background: rgba(14,14,14,0.5);
+		position: absolute;;z-index: 3;
+		margin-top:100px;
+	}
+	.little_right .little_top_left div p{
+		color: #fff;
+	}
+	.jiawu{
+		margin-left: 10px;
+		font-size: 14px;
+		font-weight: bold;
+		margin-top: 5px;
+	}
+	.hangchi{
+		margin-left: 10px;
+		font-size: 15px;
+		margin-top: 5px;
+	}
+	
+	.little_right .little_top_right{
+		float: left;width: 150px;
+		position: relative;
+		height: 150px;
+		margin-left:23px;
+	}
+	.songList .little_right .little_top_right img{
+		width: 165px;
+		position: absolute;
+		z-index: 1
+		;}
+	.little_right .little_top_right #span2{
+		width: 165px;
+		height: 165px;
+		z-index: 2;
+		background: rgba(14,14,14,0.5);
+		margin-top: 0px;display: none;
+	}
+	.little_right .little_top_right div{
+		width:165px;
+		height: 50px;
+		background: rgba(14,14,14,0.5);
+		position: absolute;z-index: 3;
+		margin-top:100px;
+	}
+	.little_right .little_top_right div p{
+		color: #fff;
+	}
+	.doufeng{
+		margin-left: 10px;
+		font-size: 14px;
+		font-weight: bold;
+		margin-top: 5px;
+	}
+	.xiaoxia{
+		margin-left: 10px;
+		font-size: 15px;
+		margin-top: 5px;
+	}
+
+	.little_right .little_bo_left{
+		float: left;width: 150px;
+		height: 150px;
+		margin-top: 23px;
+		margin-left: 10px;
+	}
+	.songList .little_right .little_bo_left img{
+		width: 165px;
+		position: absolute;
+		z-index: 1;
+	}
+	.little_right .little_bo_left #span3{
+		width: 165px;
+		height: 165px;
+		z-index: 2;
+		background: rgba(14,14,14,0.5);
+		margin-top: 0px;
+		display: none;
+	}
+	.little_right .little_bo_left div{
+		width:165px;
+		height: 50px;
+		background: rgba(14,14,14,0.5);
+		position: absolute;
+		z-index: 3;
+		margin-top:100px;
+	}
+	.little_right .little_bo_left div p{
+		color: #fff;
+	}
+	.shijian{
+		margin-left: 10px;
+		font-size: 14px;
+		font-weight: bold;
+		margin-top: 5px;
+	}
+	.ye{
+		margin-left: 10px;
+		font-size: 15px;
+		margin-top: 5px;
+	}
+	.little_right .little_bo_right{
+		float: left;
+		width: 150px;
+		height: 150px;
+		margin-left: 23px;
+		margin-top: 23px;
+	}
+	.songList .little_right .little_bo_right img{
+		width: 165px;
+		position: absolute;
+		z-index: 1;
+	}
+	.little_right .little_bo_right #span4{
+		width: 165px;
+		height: 165px;
+		z-index: 2;
+		background: rgba(14,14,14,0.5);
+		margin-top: 0px;
+		display: none;
+	}
+	.little_right .little_bo_right div{
+		width:165px;
+		height: 50px;
+		background: rgba(14,14,14,0.5);
+		position: absolute;
+		z-index: 3;
+		margin-top:100px;
+	}
+	.little_right .little_bo_right div p{
+		color: #fff;
+	}
+	.jinqu{
+		margin-left: 10px;
+		font-size: 14px;
+		font-weight: bold;
+		margin-top: 5px;
+	}
+	.nalan{
+		margin-left: 10px;
+		font-size: 15px;
+		margin-top: 5px;
+	}
+	.part3 .right{
+		width: 350px;
+		float: right;
+	}
+	.right .font_2{
+		height: 50px;
+		width: 350px;
+		line-height: 50px;
+	}
+	.font_2 h3{
+		float: left;
+		font-weight:lighter;
+		font-size: 30px;
+	}
+	.font_2 h3 span{
+		color: #0080ff;
+		font-weight: lighter;
+	}
+	.font_2 a{
+		float: right;
+		text-decoration: none;
+		font-size: 14px;
+		color: #7b7b7b;
+	}
+	.font_2 a:hover{
+		color: #0080ff;
+	}
+	.part3 .right .bangdan{
+		width: 350px;
+		height: 340px;
+	}
+	.bangdan .b1,.b2,.b3{
+		height: 100px;
+		background: #f0f0f0;
+
+	}
+	.b1 .img1 img,.b2 .img2 img,.b3 .img3 img{
+		height: 100px;
+		float: left;
+	}
+	.b1:hover{
+		background: rgba(14,14,14,0.2);
+	}
+	.b2:hover{
+		background: rgba(14,14,14,0.2);
+	}
+	.b3:hover{
+		background: rgba(14,14,14,0.2);
+	}
+	.b1 .wenzi1,.b2 .wenzi2,.b3 .wenzi3{
+		float: left;
+		margin-left: 10px;
+		margin-top: 20px;
+	}
+	.wenzi1 h4,.wenzi2 h4,.wenzi3 h4{
+		font-size: 14px;
+		display: inline-block;
+	}
+	.wenzi1 p,.wenzi2 p,.wenzi3 p{
+		margin-top: 7px;
+		font-size: 14px;
+	}
+	.b2,.b3{
+		margin-top: 20px;
+	}
+	.part4{
+		width: 80%;
+		margin-left: 158px;
+		position: absolute;
+		z-index: 2;
+		height: 425px;
+		margin-top: 995px;
+	}
+	.part4 .left_4{
+		width: 682px;
+		float: left;
+		height: 425px;
+	}
+	.left_4 .newSongItem{
+		height: 50px;
+		width: 682px;
+		line-height: 50px;
+	}
+	.newSongItem h3{
+		float: left;
+		font-weight:lighter;
+		font-size: 30px;
+		width: 140px;
+	}
+	.newSongItem h3 b{
+		color: #0080ff;
+		font-weight: lighter;
+	}
+	.newSongItem .item_new{
+		float: left;
+		width: 430px;
+		color: black;
+		font-size: 13px;
+		font-weight: bold;
+	}
+	.item_new a{
+		text-decoration: none;
+		color: black;
+	}
+	.item_new span{
+		margin-left: 20px;
+	}
+	.newSongItem #playAll{
+		float: right;
+		width: 90px; 
+		border: 1px solid #bebebe;
+		height: 30px;
+		line-height: 30px;
+		margin-top: 10px;
+	}
+	.newSongItem #playAll2{
+		float: right;
+		width: 90px; 
+		border: 1px solid #0080ff;
+		height: 30px;
+		line-height: 30px;
+		margin-top: 10px;
+	}
+	.aplayAll{
+		margin-left: 16px;
+		text-decoration: none;
+		color:#4f4f4f;
+		font-size: 14px; 
+	}
+	#playAll :hover {
+		border-color:  #0080ff; 
+	}
+	.left_4 .itemContent{
+		height: 360px;
+		width: 682px;
+	}
+	li{
+		list-style: none;
+	}
+	.songName{
+		color: #5b5b5b;
+		font-size: 14px;
+	}
+	.only{
+		border: 0.5px solid red;
+		background: #f64152;
+		font-size: 8px;
+		border-radius: 25%;
+		color: white;
+		margin-right: 7px;
+	}
+	.tubiao{
+		display: inline-block;
+		width: 60px;float: right;
+		margin-right: 20px;
+		display: none;
+	}
+	.bofang{
+		width: 20px;
+		height: 18px;
+	}
+	.xiazai{
+		width: 17px;
+	}
+	.songTime{
+		color: #3c3c3c;
+		font-size: 15px;
+		margin-right:5px; 
+		float: right;
+	}
+	.itemContent a{
+		text-decoration: none;
+	}
+	#China,#Occident,#Korea,#Japan{
+		height: 300px;
+		margin-top: 30px;
+		border-top: 1px solid #e0e0e0;
+	}
+	#Occident,#Korea,#Japan{
+		display: none;
+	}
+	#China li,#Occident li,#Korea li,#Japan li{
+		margin-top: 15px;
+	}
+	#China li:hover #China li .tubiao{
+		display: block;
+	}
+
+	.right_4{
+		width: 365px;
+		float: right;
+		height: 425px;
+	}
+	.right_4 .item_title{
+		height: 50px;
+		line-height: 50px;
+		width: 365px;
+	}
+	.item_title h3{
+		float: left;
+		font-weight:lighter;
+		font-size: 30px;
+		width: 140px;
+	}
+	.item_title h3 b{
+		color: #0080ff;
+		font-weight: lighter;
+	}
+	.more_f{
+		float: right;
+		text-decoration: none;
+		color:#4f4f4f;
+		font-size: 14px; 
+	}
+	.more_f:hover{
+		color: #0080ff;
+	}
+	.item_content{
+		width: 365px;
+		height: 370px; 
+	}
+	.kugou_part_4_top{
+		width: 365px;
+		position: absolute;
+		z-index: 1;
+		height: 205px;
+	}
+	.part_4_top{
+		width: 365px;
+		height:205px; 
+	}
+	.top_font{
+		width:365px;
+		height: 45px;
+		background: rgba(14,14,14,0.5); 
+		position: absolute;
+		z-index: 3;
+		margin-top: 160px;
+	}
+	.top_font p{
+		color: #fff;
+	}
+	.animal{
+		margin-left: 10px;
+		font-size: 14px;
+		font-weight: bold;
+		margin-top: 5px;
+	}
+	.xuezhiqian{
+		margin-left: 10px;
+		font-size: 15px;
+		margin-top: 5px;
+	}
+	.top_content span{
+		display:inline-block;
+		position: absolute;
+		width: 365px;
+		height:206px;
+		z-index: 2;
+		background: rgba(14,14,14,0.5);
+		margin-top: 0px;
+		display: none;
+	}
+	.top_content:hover span{
+		display: inline-block;
+	}
+	.bottom_left_content {
+		height:165px;
+		width: 182px;
+		margin-top: 206px;
+		float: left;
+	}
+	.bottom_right_content{
+		height: 165px;
+		width: 182px;
+		margin-top: 206px;
+		float: right;
+	}
+	.part_4_bottom_left{
+		width: 177px;
+		float: left;
+		margin-top: 11px;
+		position: absolute;
+		z-index: 1;
+	}
+	.left_font{
+		font-size: 13.5px;
+		display: inline-block;
+		margin-top: 117px;
+		color: #272727;
+	}
+	.left_font_name{
+		font-size: 12px;
+		display: inline-block;
+		color: #7b7b7b;
+	}
+	.part_4_bottom_right{
+		width: 177px;
+		float: right;
+		margin-top: 11px;
+		position: absolute;
+		z-index: 1;
+	}
+	.right_font{
+		font-size: 13.5px;
+		display: inline-block;
+		margin-top: 117px;
+		color: #272727;
+		margin-left: 6px;
+	}
+	.right_font_name{
+		font-size: 12px;
+		display: inline-block;
+		color: #7b7b7b;
+		margin-left: 6px;
+	}
+	.bottom_left span{
+		display:inline-block;
+		position: absolute;
+		width: 177px;
+		height:100px;
+		z-index: 2;
+		background: rgba(14,14,14,0.5);
+		margin-top: 10px;
+		margin-left: -112px;
+		display: none;
+	}
+	.bottom_left:hover span{
+		display: inline-block;
+	}
+	.bottom_left:hover p{
+		color: #0080ff;
+	}
+	.bottom_right span{
+		display:inline-block;
+		position: absolute;
+		width: 177px;
+		height:100px;
+		z-index: 2;
+		background: rgba(14,14,14,0.5);
+		margin-top: 10px;
+		margin-left: -48px;
+		display: none;
+	}
+	.bottom_right:hover span{
+		display: inline-block;
+	}
+	.bottom_right:hover p{
+		color: #0080ff;
+	}
+	.screen{
+		width: 1082px;
+		margin-left: 0px;
+		margin-top: 440px;
+	}
+	#screen{
+		width: 1082px;
+	}
+	.screen2{
+		width: 1082px;
+		margin-left: 0px;
+		margin-top: 440px;
+	}
+	#screen2{
+		width: 1082px;
+	}
+
+	.part5{
+		width: 1082px;
+		margin-left: 0px;
+		position: absolute;
+		z-index: 2;
+		height: 425px;
+		margin-top: 30px;
+	}
+	.part5 .left_5{
+		width: 682px;
+		float: left;
+		height: 425px;
+	}
+	.left_5 .left_item{
+		height: 50px;
+		width: 682px;
+		line-height: 50px;
+	}
+	.left_item h3{
+		float: left;
+		font-weight:lighter;
+		font-size: 30px;
+		width: 140px;
+	}
+	.left_item h3 b{
+		color: #0080ff;
+		font-weight: lighter;
+	}
+	.left_item a{
+		float: right;
+		line-height: 50px; 
+		text-decoration: none;
+		font-size: 14px;
+		color: #7b7b7b;
+	} 
+	.left_item a:hover{
+		color: #0080ff;
+	}
+	.content_5{
+		width: 682px;
+		margin-top: 25px;
+	}
+	.one,.six{
+		width: 100px;
+		height: 130px;
+		float: left;
+	}
+	.two,.three,.four,.five{
+		width: 100px;
+		height: 130px;
+		float: left;
+		margin-left: 43px;
+	}
+	.seven,.eight,.nine,.ten{
+		width: 100px;
+		height: 130px;
+		float: left;
+		margin-left: 43px;
+	}
+	.six,.seven,.eight,.nine,.ten{
+		margin-top: 30px;
+	}
+	.img1_1,.img2_1,.img3_1,.img4_1,.img5_1,.img6_1,.img7_1,.img8_1,.img9_1,.img10_1{
+		width: 100px;
+		position: absolute;
+		z-index: 1;
+	}
+	.img1_2,.img2_2,.img3_2,.img4_2,.img5_2,.img6_2,.img7_2,.img8_2,.img9_2,.img10_2{
+		width: 40px;
+		position: absolute;z-index: 3;
+		margin-left:30px; 
+		margin-top: 30px;
+		display: none;
+		border-radius:20px;
+		opacity: 0.6;
+	}
+	.one span,.two span,.three span,.four span,.five span,.six span,.seven span,.eight span,.nine span,.ten span{
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		z-index: 2;
+		background: rgba(14,14,14,0.5);
+		border-radius: 50px;
+		display: none;
+	}
+    .one p{
+    	display: inline-block;
+    	margin-top: 112px;
+    	font-size: 14px;
+    	margin-left: 16px;
+    	color: #3c3c3c;
+    }
+    .two p{
+    	display: inline-block;
+    	margin-top: 112px;
+    	font-size: 14px;
+    	margin-left: 26px;
+    	color: #3c3c3c;
+    }
+    .three p{
+    	display: inline-block;
+    	margin-top: 112px;
+    	font-size: 14px;
+    	margin-left: 22px;
+    	color: #3c3c3c;
+    }
+    .four p{
+    	display: inline-block;
+    	margin-top: 112px;
+    	font-size: 14px;
+    	margin-left: 23px;
+    	color: #3c3c3c;
+    }
+    .five p{
+    	display: inline-block;
+    	margin-top: 112px;
+    	font-size: 14px;
+    	margin-left: 37px;
+    	color: #3c3c3c;
+    }
+    .six p{
+    	display: inline-block;
+    	margin-top: 112px;
+    	font-size: 14px;
+    	margin-left: 24px;
+    	color: #3c3c3c;
+    }
+    .seven p{
+    	display: inline-block;
+    	margin-top: 112px;
+    	font-size: 14px;
+    	margin-left: 35px;
+    	color: #3c3c3c;
+    }
+    .eight p{
+    	display: inline-block;
+    	margin-top: 112px;
+    	font-size: 14px;
+    	margin-left: 35px;
+    	color: #3c3c3c;
+    }
+    .nine p{
+    	display: inline-block;
+    	margin-top: 112px;
+    	font-size: 14px;
+    	margin-left: 31px;
+    	color: #3c3c3c;
+    }
+    .ten p{
+    	display: inline-block;
+    	margin-top: 112px;
+    	font-size: 14px;
+    	margin-left: 16px;
+    	color: #3c3c3c;
+    }
+    .one:hover .img1_2{
+    	display: block;
+    }
+    .one:hover span{
+    	display: inline-block;
+    }
+    .one:hover p{
+    	color: #0080ff;
+    }
+    .two:hover .img2_2{
+    	display: block;
+    }
+    .two:hover span{
+    	display: inline-block;
+    }
+    .two:hover p{
+    	color: #0080ff;
+    }
+    .three:hover .img3_2{
+    	display: block;
+    }
+    .three:hover span{
+    	display: inline-block;
+    }
+    .three:hover p{
+    	color: #0080ff;
+	}
+    .four:hover .img4_2{
+    	display: block;
+    }
+    .four:hover span{
+    	display: inline-block;
+    }
+    .four:hover p{
+    	color: #0080ff;
+    }
+    .five:hover .img5_2{
+    	display: block;
+    }
+    .five:hover span{
+    	display: inline-block;
+    }
+    .five:hover p{
+    	color: #0080ff;
+    }
+    .six:hover .img6_2{
+    	display: block;
+    }
+    .six:hover span{
+    	display: inline-block;
+    }
+    .six:hover p{
+    	color: #0080ff;
+    }
+    .seven:hover .img7_2{
+    	display: block;
+    }
+    .seven:hover span{
+    	display: inline-block;
+    }
+    .seven:hover p{
+    	color: #0080ff;
+    }
+    .eight:hover .img8_2{
+    	display: block;
+    }
+    .eight:hover span{
+    	display: inline-block;
+    }
+    .eight:hover p{
+    	color: #0080ff;
+    }
+    .nine:hover .img9_2{
+    	display: block;
+    }
+    .nine:hover span{
+    	display: inline-block;
+    }
+    .nine:hover p{
+    	color: #0080ff;
+    }
+    .ten:hover .img10_2{
+    	display: block;
+    }
+    .ten:hover span{
+    	display: inline-block;
+    }
+    .ten:hover p{
+    	color: #0080ff;
+    }
+    .right_5{ 
+    	width: 365px;
+    	float: right;
+    	height: 425px;
+    }
+    .right_5 .right_item{
+    	height: 50px;
+    	width: 365px;
+    	line-height: 50px;
+    }
+    .right_item h3{
+    	float: left;
+    	font-weight:lighter;
+    	font-size: 30px;
+    	width: 140px;
+    	display: inline-block;
+    }
+	.right_item h3 b{
+		color: #0080ff;
+		font-weight: lighter;
+	}
+	.right_child_item{
+		width: 140px;
+		float: left;
+	}
+	.huayu{
+		color: black;
+		font-size: 13px;
+		text-decoration: none;
+	}
+	.ouyu,.rihan{
+		margin-left: 20px;
+		font-size: 13px;
+		text-decoration: none;
+		color: black;
+	}
+	.ouyu:hover{
+		color: #0080ff;
+	}
+	.huayu:hover{
+		color:#0080ff;
+	}
+	.rihan:hover{
+		color: #0080ff;
+	}
+	.right_item .more_f_f a{
+		float: right;
+		line-height: 50px; 
+		text-decoration: none;
+		font-size: 14px;
+		color: #7b7b7b;
+	} 
+	.right_item .more_f_f a:hover{
+		color: #0080ff;
+	}
+	.right_content{
+		width: 365px;
+		height: 370px;
+	}
+	.right_top_left{
+		width: 177px;
+		height: 177px;
+		float: left;
+		margin-top: 20px;
+	}
+	.right_top_left img{
+		width: 177px;
+		position: absolute;
+		z-index: 1;
+	}
+	.right_top_left .grey_back1{
+		width: 177px;
+		height: 177px;
+		position: absolute;
+		z-index: 2;
+		background: rgba(14,14,14,0.2);
+	}
+	.right_top_left .grey_back2{
+		width: 177px;
+		height: 177px;
+		position: absolute;
+		z-index: 3;
+		background: rgba(14,14,14,0.3);
+		display: none;
+	}
+	.right_top_left p{
+		display: inline-block;
+		position: absolute;
+		z-index: 4;
+		width: 170px;
+		height: 50px;
+		margin-top: 127px;
+		line-height: 50px;
+		font-size: 14px;
+		color: #fff;
+		font-weight: bold;
+		margin-left: 7px;
+	}
+	.right_top_left:hover .grey_back2{
+		display: block;
+	}
+	.right_top_right{
+		width: 177px;
+		height: 177px;
+		float: right;
+		margin-top: 20px;
+	}
+	.right_top_right img{
+		width: 177px;
+		position: absolute;
+		z-index: 1;
+	}
+	.right_top_right .grey_back1{
+		width: 177px;
+		height: 177px;
+		position: absolute;
+		z-index: 2;
+		background: rgba(14,14,14,0.2);
+	}
+	.right_top_right .grey_back2{
+		width: 177px;
+		height: 177px;
+		position: absolute;
+		z-index: 3;
+		background: rgba(14,14,14,0.3);
+		display: none;
+	}
+	.right_top_right p{
+		display: inline-block;
+		position: absolute;
+		z-index: 4;
+		idth: 170px;
+		height: 50px;
+		margin-top: 127px;
+		line-height: 50px;
+		font-size: 14px;
+		color: #fff;
+		font-weight: bold;
+		margin-left: 7px;
+	}
+	.right_top_right:hover .grey_back2{
+		display: block;
+	}
+	.right_bottom_left{
+		width: 113px;
+		height: 113px;
+		float: left;
+		margin-top: 11px;
+	}
+	.right_bottom_left img{
+		width: 114px;
+		position: absolute;
+		z-index: 1;
+	}
+	.right_bottom_left .grey_back1{
+		width: 114px;
+		height: 114px;
+		position: absolute;
+		z-index: 2;
+		background: rgba(14,14,14,0.2);
+	}
+	.right_bottom_left .grey_back2{
+		width: 114px;
+		height: 114px;
+		position: absolute;
+		z-index: 3;
+		background: rgba(14,14,14,0.3);
+		display: none;
+	}
+	.right_bottom_left p{
+		display: inline-block;
+		position: absolute;
+		z-index: 4;
+		width: 107px;
+		height: 32px;
+		margin-top: 82px;
+		line-height: 32px;
+		font-size: 12px;
+		color: #fff;
+		font-weight: bold;
+		margin-left: 5px;
+	}
+	.right_bottom_left:hover .grey_back2{
+		display: block;
+	}
+	.right_bottom_center{
+		width: 113px;
+		height: 113px;
+		float: left;
+		margin-top: 11px;
+		margin-left: 12px;
+	}
+	.right_bottom_center img{
+		width: 114px;
+		position: absolute;
+		z-index: 1;
+	}
+	.right_bottom_center .grey_back1{
+		width: 114px;
+		height: 114px;
+		position: absolute;
+		z-index: 2;
+		background: rgba(14,14,14,0.2);
+	}
+	.right_bottom_center .grey_back2{
+		width: 114px;
+		height: 114px;
+		position: absolute;
+		z-index: 3;
+		background: rgba(14,14,14,0.3);
+		display: none;
+	}
+	.right_bottom_center p{
+		display: inline-block;
+		position: absolute;
+		z-index: 4;
+		width: 107px;
+		height: 32px;
+		margin-top: 82px;
+		line-height: 32px;
+		font-size: 12px;
+		color: #fff;
+		font-weight: bold;
+		margin-left: 5px;
+	}
+	.right_bottom_center:hover .grey_back2{
+		display: block;
+	}
+	.right_bottom_right{
+		width: 113px;
+		height: 113px;
+		float: left;
+		margin-top: 11px;
+		margin-left: 12px;
+	}
+	.right_bottom_right img{
+		width: 114px;
+		position: absolute;
+		z-index: 1;
+	}
+	.right_bottom_right .grey_back1{
+		width: 114px;
+		height: 114px;
+		position: absolute;
+		z-index: 2;
+		background: rgba(14,14,14,0.2);
+	}
+	.right_bottom_right .grey_back2{
+		width: 114px;
+		height: 114px;
+		position: absolute;
+		z-index: 3;
+		background: rgba(14,14,14,0.3);
+		display: none;
+	}
+	.right_bottom_right p{
+		display: inline-block;
+		position: absolute;
+		z-index: 4;
+		width: 107px;
+		height: 32px;
+		margin-top: 82px;
+		line-height: 32px;
+		font-size: 12px;
+		color: #fff;
+		font-weight: bold;
+		margin-left: 5px;
+	}
+	.right_bottom_right:hover .grey_back2{
+		display: block;
+	}
+	.part_6{
+		width: 100%;
+		margin-left: 0px;
+		position: absolute;
+		z-index: 2;
+		height: 280px;
+		margin-top: 40px; 
+	}
+	.part_6 .part_6_item{
+		height: 50px;
+		width: 100%;
+		line-height: 50px;
+	}
+    .part_6_item h3{
+    	float: left;
+    	font-weight:lighter;
+    	font-size: 30px;
+    	width: 140px;
+    	display: inline-block;
+    }
+	.part_6_item h3 b{
+		color: #0080ff;
+		font-weight: lighter;
+	}
+	.part_6_content{
+		width: 100%;
+		height: 204px;
+		margin-top: 15px;
+	}
+	.line_1,.line_2,.line_3{
+		width: 100%;height: 58px;
+	}
+	.line_2,.line_3{
+		margin-top: 10px;
+	}
+	.partner1,.partner2,.partner3,.partner4,.partner5,.partner6,.partner7,.partner8,.partner9,.partner10,.partner11,.partner12,.partner13,.partner14,.partner15,.partner16,.partner17,.partner18,.partner19,.partner20,.partner21{
+		width: 130px;
+		float: left;
+		height: 58px;
+		border: 1px dashed #bebebe;
+	}
+	.partner2,.partner3,.partner4,.partner5,.partner6,.partner7,.partner9,.partner10,.partner11,.partner12,.partner13,.partner14,.partner16,.partner17,.partner18,.partner19,.partner20,.partner21{
+		margin-left: 25px;
+	}
+	.partner1 img,.partner2 img,.partner3 img,.partner4 img,.partner5 img,.partner6 img,.partner7 img{
+		width: 130px;
+	}
+
+	.part_7{
+		width: 100%;
+		height: 200px;
+		margin-top: 350px;
+	}
+	.part_7 .part_7_item{
+		height: 50px;
+		width: 100%;
+		line-height: 50px;
+	}
+    .part_7_item h3{
+    	float: left;
+    	font-weight:lighter;
+    	font-size: 30px;width: 140px;
+    	display: inline-block;
+    }
+	.part_7_item h3 b{
+		color: #0080ff;
+		font-weight: lighter;
+	}
+	.part_7_line1{
+		width: 100%;
+		height: 40px;
+		margin-top: 20px;
+		line-height: 40px;
+	}
+	.part_7_line1 li,.part_7_line2 li {
+		display: inline-block;
+		width: 100px;height: 40px;
+		line-height: 40px;
+	}
+	.part_7_line1 li a,.part_7_line2 li a{
+		text-decoration: none;
+		color: #4f4f4f;
+		font-size: 14px;
+		display: inline-block;
+		float: left;
+	}
+	.part_7_line1 li a:hover{
+		color: #0080ff;
+	}
+	.part_7_line2 li a:hover{
+		color: #0080ff;
+	}
+	.part_7_line2{
+		width: 100%;
+		height: 40px;
+		margin-top: 10px;
+		line-height: 40px;
+	}
+	.move{
+		margin-left: 10px;
+	}
+
+	.part_8{
+		width: 100%;
+		height: 250px;
+		margin-top: 2650px; 
+		position: absolute;
+		background: #2c323b;
+	}
+	.part_8 .part_8_item{
+		height: 50px;
+		width: 100%;
+		line-height: 50px;
+	}
+	.f{
+		margin-left: 130px;
+	}
+	.formal ,.f{
+		display: inline-block;
+		width: 90px;
+		height: 20px;
+		line-height: 20px;
+		border-right:1px solid #e0e0e0;
+		float: left;
+		text-align: center;
+		margin-top: 15px;
+	}
+	.l{
+		display: inline-block;
+		width: 110px;
+		height: 20px;
+		line-height: 20px;
+		float: left;
+		text-align: center;
+		margin-top: 15px;
+	}
+	.formal a ,.f a,.l a{
+		display: inline-block;
+	}
+	.formal a:hover{
+		color: #0080ff;
+	}
+	.f a:hover{
+		color: #0080ff;
+	}
+	.l a:hover{
+		color: #0080ff;
+	}
+	.part_8_item li a {
+		text-decoration: none;
+		color: #e0e0e0;
+		font-size: 13px;
+	}
+	.part_8_content{
+		margin-bottom: 0;
+		width: 100%;
+		height: 200px;
+		text-align: center;
+
+	}
+	.part_8_content p{
+		display: inline-block;
+		height: 20px;
+		margin-top: 10px;
+		width: 800px;
+		line-height: 20px;
+		font-size: 14px;
+		color: #e0e0e0;
+	} 
+	.part_8_content p a{
+		text-decoration: none;
+		font-size: 14px; 
+		color: #e0e0e0;
+	}
+</style>
+<body>
+	<div class="mainPage">
+		<div class="header">
+			<h1 class="logo"><a href="http://www.kugou.com/"><img src="photos/logo.png" alt=""></a></h1>
+			<div class="search_input">
+			<input type="text" placeholder="易烊千玺" class="input">
+			 			<div class="search_btn"><i></i><span class="sousuo">搜索</span></div>
+			</div>
+			<div class="topNav">
+				<ul class="list1">
+					<li><a href="#">客服中心</a></li>
+					<li><a href="#">招贤纳士</a></li>
+					<li><a href="#">会员中心</a></li>
+				</ul>
+			</div>
+			<div class="login_in"><a href="#" class="denglu">登录</a><a href="#" class="zhuce">注册</a></div>
+		</div>
+	
+	<div class="navWrap">
+		<div class="nav">
+			<ul class="homeNav">
+				<li><a href="#" class="shouye">首页</a></li>
+				<li><a href="#">榜单</a></li>
+				<li><a href="#">下载客户端</a></li>
+				<li class="more_1"><a href="#">更多</a>
+					<ul class="secondNav">
+					<li><a href="#">电台</a></li>
+					<li><a href="#">MV</a></li>
+					<li><a href="#">歌手</a></li>
+					<li><a href="#">歌单</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<ul class="subNav">
+				<li><a href="#">音乐直播</a></li>
+				<li><a href="#">酷狗LIVE</a></li>
+				<li><a href="#">音乐人</a></li>
+				<li><a href="#">游戏</a></li>
+				<li><a href="#">商城</a></li>
+			</ul>
+		</div>	
+	</div>
+
+	<div class="banner">
+		<div class="imgs" onmouseout="doStart()" onmouseover="doStop()">
+		<img src="photos/11.jpg" alt="" id="m1">
+		<img src="photos/22.jpg" alt="" id="m2">
+		</div>
+	 	<div class="downLoad">
+	 		<a href="#">下载PC版</a>
+	 		<a href="#">下载iPhone版</a>
+	 		<a href="#">下载Android版</a>
+	 	</div>
+	 </div>
+
+	 <div class="part3">
+	 	<div class="left">
+	 		<div class="font">
+	 			<h3><span>精选</span>歌单</h3>
+	 			<a href="#">更多</a>
+	 		</div>
+			<div class="songList">
+				<div class="big_left" id="big_left">
+					<img src="photos/大歌单.jpg" alt=""><div id="span"></div>
+					<div>
+					<p class="nihao">你好五月，你好夏天</p>
+					<p class="aa">啊啊</p>
+					</div>
+				</div>
+				<div class="little_right">
+				<div class="little_top_left" id="little_top_left">
+					<img src="photos/little_top.jpg"><div id="span1"></div>
+					<div>
+						<p class="jiawu">做家务必配的…</p>
+						<p class="hangchi">行痴</p>
+					</div>
+				</div>
+				<div class="little_top_right" id="little_top_right">
+					<img src="photos/little_top_right.jpg"><div id="span2"></div>
+					<div>
+						<p class="doufeng">兜风必备音乐…</p>
+						<p class="xiaoxia">笑侠</p>
+					</div>
+				</div>
+				<div class="little_bo_left" id="little_bo_left">
+					<img src="photos/little_bo_left.jpg"><div id="span3"></div>
+					<div>
+						<p class="shijian">时间治愈的是…</p>
+						<p class="ye">烨&锦麟l</p>
+					</div>
+				</div>
+				<div class="little_bo_right" id="little_bo_right">
+					<img src="photos/little_bo_right.jpg"><div id="span4"></div>
+					<div>
+						<p class="jinqu">金曲捞 合辑</p>
+						<p class="nalan">纳蓝独孤</p>
+					</div>
+				</div>
+				</div>
+			</div>
+	 	</div>
+	 	<div class="right">
+	 		<div class="font_2">
+	 			<h3><span>热门</span>榜单</h3>
+	 			<a href="#">更多</a>
+	 		</div>
+			<div class="bangdan">
+				<div class="b1">
+					<div class="img1">
+						<img src="photos/other_1.jpg">
+					</div>
+					<div class="wenzi1">
+						<h4>酷狗飙升榜</h4>
+						<p>1.汪苏泷-东京铁塔的幸福..</p>
+						<p>2.李好-今天等我来(Live)</p>
+					</div>
+				</div>
+				<div class="b2">
+					<div class="img2">
+						<img src="photos/other_2.jpg">
+					</div>
+					<div class="wenzi2">
+						<h4>酷狗TOP500</h4>
+						<p>1.杨宗纬、张碧晨-凉凉</p>
+						<p>2.赵雷-成都</p>
+					</div>
+				</div>
+				<div class="b3">
+					<div class="img3">
+						<img src="photos/other_3.jpg">
+					</div>
+					<div class="wenzi3">
+						<h4>网络红歌榜</h4>
+						<p>1.海绵宝宝</p>
+						<p>2.大鱼</p>
+					</div>
+				</div>
+			</div>
+	 	</div>
+	 </div>
+
+	<div class="part4">
+	 <div class="left_4">
+	 	<div class="newSongItem">
+	 		<h3><b>新歌</b>首发</h3>
+	 		<div class="item_new">
+	 			<a href="#"><span class="MenuItem" id="menu1">华语</span></a>
+                <a href="#"><span class="MenuItem" id="menu2">欧美</span></a>
+                <a href="#"><span class="MenuItem" id="menu3">韩国</span></a>
+                <a href="#"><span class="MenuItem" id="menu4">日本</span></a>
+	 		</div>
+	 		<div id="playAll"><a href="#" class="aplayAll">全部播放</a></div>
+	 	</div>
+	 	<div class="itemContent">
+	 		<div id="China">
+	 			<ul id="newSong1">
+	 				<li><a href="#"><span class="songName">郁可唯 - 心不由己【择天记插曲】</span>
+	 				   				<span class="only" id="only">独家</span>
+	 				   				
+	 				                <span class="songTime">03:32</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    
+	 				</li>
+	 				<li><a href="#"><span class="songName">李宇春 - 闷</span>
+	 								<span class="only">独家</span>
+	 				                <span class="songTime">03:27</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<a href="#"><img class="bofang" src="photos/icon_3.jpg" alt=""></a>
+	 				   				<a href="#"><img class="xiazai" src="photos/icon_1.jpg" alt=""></a>
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">庄心妍 - 我不相信</span>
+	 								<span class="only">独家</span>
+	 				                <span class="songTime">04:24</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">刘心、李炜、谭佑铭、武艺 - 义【毒诫推广曲】</span>
+	 								<span class="only">独家</span>
+	 				                <span class="songTime">03:25</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">简弘亦 - 天问【思美人插曲】</span>
+	 								<span class="only">独家</span>
+	 				                <span class="songTime">04:25</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">威仔 - 我会原谅</span>
+	 								<span class="only">独家</span>
+	 				                <span class="songTime">04:13</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#">
+	 								<span class="songName">徐千雅 - 岁月之影</span>
+	 								<span class="only">独家</span>
+	 				                <span class="songTime">05:07</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">张芸京、大张伟 - 留心 (Live)</span>
+	 								<span class="only">独家</span>
+	 				                <span class="songTime">04:15</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">蒋雪儿 - 爱河</span>
+	 								<span class="only">独家</span>
+	 				                <span class="songTime">03:38</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 			</ul>
+	 		</div>
+	 		<div id="Occident">
+	 			<ul id="newSong2">
+	 				<li><a href="#"><span class="songName">Harry Styles - Sweet Creature</span>
+	 				                <span class="songTime">03:44</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">Niall Horan - Slow Hands</span>
+	 				                <span class="songTime">03:07</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">Halsey - Eyes Closed</span>
+	 				                <span class="songTime">03:22</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">Galantis - Hunter</span>
+	 				                <span class="songTime">03:04</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">Paramore - Told You So</span>
+	 				                <span class="songTime">03:09</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">TLC - Haters</span>
+	 								<span class="only">独家</span>
+	 				                <span class="songTime">02:40</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">Jonas Blue、William Singe - Mama</span>
+	 				                <span class="songTime">03:04</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">HAIM - Want You Back</span>
+	 				                <span class="songTime">03:52</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">Mr. Probz - Tears Gone Bad</span>
+	 				                <span class="songTime">02:27</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 			</ul>
+	 		</div>
+	 		<div id="Korea">
+	 			<ul id="newSong3">
+	 				<li><a href="#"><span class="songName">DAY6 - DANCE DANCE</span>
+	 								<span class="only">独家</span>
+	 				                <span class="songTime">03:43</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">LOVELYZ - 现在,我们</span>
+	 				                <span class="songTime">03:16</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">龙俊亨、Heize - 会一直在吗</span>
+	 				                <span class="songTime">03:11</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">Triple H - 365 FRESH</span>
+	 				                <span class="songTime">03:40</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">SECHSKIES - SAD SONG</span>
+	 				                <span class="songTime">03:28</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">Suran、Changmo - 今日若醉 (Prod. SUGA)</span>
+	 				                <span class="songTime">03:52</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">HYUKOH - Leather Jacket</span>
+	 				                <span class="songTime">03:43</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">IU、G-DRAGON - Palette</span>
+	 				                <span class="songTime">03:37</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				<li><a href="#"><span class="songName">K.A.R.D - RUMOR</span>
+	 				                <span class="songTime">03:38</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 			</ul>
+	 		</div>
+	 		<div id="Japan">
+	 			<ul id="newSong4">
+	 				<li><a href="#"><span class="songName">Kis-My-Ft2 - Overture ~Music Colosseum~</span>
+	 				                <span class="songTime">02:38</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">絢香 - コトノハ【椿文具店 ～镰仓代笔物语～ TM】</span>
+	 				                <span class="songTime">03:59</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">西野カナ - パッ</span>
+	 				                <span class="songTime">04:26</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+
+	 				</li>
+	 				<li><a href="#"><span class="songName">Aimer - zero</span>
+	 				                <span class="songTime">03:08</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">伊藤美来 - Shocking Blue【武装少女Machiavellism OP】</span>
+	 				                <span class="songTime">03:57</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">fripSide - Clockwork Planet【时钟机关之星 OP】</span>
+	 				                <span class="songTime">04:47</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">BUMP OF CHICKEN - リボン</span>
+	 				                <span class="songTime">04:29</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">MiChi - I4U【怪怪守护神 ED】</span>
+	 				                <span class="songTime">04:12</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 				<li><a href="#"><span class="songName">BLUE ENCOUNT - さよなら</span>
+	 				                <span class="songTime">05:13</span>
+	 				    </a>
+	 				    <span class="blueScreen"></span>
+	 				    <div class="tubiao">
+	 				   				<img class="bofang" src="photos/icon_3.jpg" alt="">
+	 				   				<img class="xiazai" src="photos/icon_1.jpg" alt="">
+	 				   	</div>
+	 				</li>
+	 			</ul>
+	 		</div>
+	 	</div>
+	 </div>
+
+	 <div class="right_4">
+	 	<div class="item_title">
+	 		<h3><b>推荐</b>MV</h3>
+	 		<a href="#" class="more_f">更多</a>
+	 	</div>
+	 	<div class="item_content">
+	 		<div class="top_content">
+	 			<div class="kugou_part_4_top"><img src="photos/xzq1.jpg" class="part_4_top"></div>
+	 			<div class="top_font">
+	 				<p class="animal">动物世界</p>
+	 				<p class="xuezhiqian">薛之谦</p>
+	 			</div>
+	 			<span></span>
+	 		</div>
+	 		<div class="bottom_left_content">
+	 			<div class="bottom_left">
+	 			<img src="photos/tgu.jpg" class="part_4_bottom_left">
+	 			<p class="left_font">你的过去我不介意</p>
+	 			<span></span>
+	 			</div>
+	 			<p class="left_font_name">唐古</p>
+	 		</div>
+	 		<div class="bottom_right_content">
+	 			<div class="bottom_right">
+	 			<img src="photos/MM.jpg" class="part_4_bottom_right">
+	 			<p class="right_font">Malibu</p>
+	 			<span></span>
+	 			</div>
+	 			<p class="right_font_name">Miley Cyrus</p>
+	 		</div>
+	 	</div>
+	 </div>
+	<div class="screen"> <img src="photos/canvas.png" id="screen"></div>
+	
+
+	<div class="part5">
+		<div class="left_5"> 
+			<div class="left_item">
+				<h3><b>热门</b>电台</h3>
+				<a href="#">更多</a>
+			</div>
+			<div class="content_5">
+				<div class="one">
+					<img src="photos/radio_1.jpg" class="img1_1">
+					<img src="photos/icon_2.jpg" class="img1_2">
+					<span></span>
+					<p>KTV必点曲</p>
+				</div>
+				<div class="two">
+					<img src="photos/radio_2.jpg" class="img2_1">
+					<img src="photos/icon_2.jpg" class="img2_2">
+					<span></span>
+					<p>中文DJ</p>
+				</div>
+				<div class="three">
+					<img src="photos/radio_3.jpg" class="img3_1">
+					<img src="photos/icon_2.jpg" class="img3_2">
+					<span></span>
+					<p>酷狗热歌</p>
+				</div>
+				<div class="four">
+					<img src="photos/radio_4.jpg" class="img4_1">
+					<img src="photos/icon_2.jpg" class="img4_2">
+					<span></span>
+					<p>网络红歌</p>
+				</div>
+				<div class="five">
+					<img src="photos/radio_5.jpg" class="img5_1">
+					<img src="photos/icon_2.jpg" class="img5_2">
+					<span></span>
+					<p>经典</p>
+				</div>
+				<div class="six">
+					<img src="photos/radio_6.jpg" class="img6_1">
+					<img src="photos/icon_2.jpg" class="img6_2">
+					<span></span>
+					<p>老情歌</p>
+				</div>
+				<div class="seven">
+					<img src="photos/radio_7.jpg" class="img7_1">
+					<img src="photos/icon_2.jpg" class="img7_2">
+					<span></span>
+					<p>新歌</p>
+				</div>
+				<div class="eight">
+					<img src="photos/radio_8.jpg" class="img8_1">
+					<img src="photos/icon_2.jpg" class="img8_2">
+					<span></span>
+					<p>动漫</p>
+				</div>
+				<div class="nine">
+					<img src="photos/radio_9.jpg" class="img9_1">
+					<img src="photos/icon_2.jpg" class="img9_2">
+					<span></span>
+					<p>轻音乐</p>
+				</div>
+				<div class="ten">
+					<img src="photos/radio_10.jpg" class="img10_1">
+					<img src="photos/icon_2.jpg" class="img10_2">
+					<span></span>
+					<p>最爱成名曲</p>
+				</div>
+			</div>
+		</div>
+		<div class="right_5">
+			<div class="right_item">
+	 			<h3><b>热门</b>歌手</h3>
+	 			<div class="right_child_item">
+	 				<a href="#" class="huayu">华语</a>
+                	<a href="#" class="ouyu">欧语</a>
+                	<a href="#" class="rihan">日韩</a>
+	 			</div>
+	 			<div class="more_f_f"><a href="#">更多</a></div>
+	 		</div>
+	 		<div class="right_content">
+	 			<div class="right_top_left">
+	 				<img src="photos/xzq2.jpg">
+	 				<div class="grey_back1"></div>
+	 				<div class="grey_back2"></div>
+	 				<p>薛之谦</p>
+	 			</div>
+	 			<div class="right_top_right">
+	 				<img src="photos/zxy.jpg">
+	 				<div class="grey_back1"></div>
+	 				<div class="grey_back2"></div>
+	 				<p>庄心妍</p>
+	 			</div>
+	 			<div class="right_bottom_left">
+	 				<img src="photos/zjl.jpg">
+	 				<div class="grey_back1"></div>
+	 				<div class="grey_back2"></div>
+	 				<p>周杰伦</p>
+	 			</div>
+	 			<div class="right_bottom_center">
+	 				<img src="photos/lm.jpg">
+	 				<div class="grey_back1"></div>
+	 				<div class="grey_back2"></div>
+	 				<p>冷漠</p>
+	 			</div>
+	 			<div class="right_bottom_right">
+	 				<img src="photos/zj.jpg">
+	 				<div class="grey_back1"></div>
+	 				<div class="grey_back2"></div>
+	 				<p>张洁</p>
+	 			</div>
+	 		</div>
+		</div>
+	</div>
+
+	<div class="screen2"> <img src="photos/jie.png" id="screen2"></div>
+	
+	<div class="part_6">
+		<div class="part_6_item">
+			<h3><b>合作</b>伙伴</h3>
+		</div>
+		<div class="part_6_content">
+			<div class="line_1">
+				<div class="partner1">
+					<img src="photos/partner01.jpg">
+				</div>
+				<div class="partner2">
+					<img src="photos/partner02.jpg">
+				</div>
+				<div class="partner3">
+					<img src="photos/partner03.jpg">
+				</div>
+				<div class="partner4">
+					<img src="photos/partner04.jpg">
+				</div>
+				<div class="partner5">
+					<img src="photos/partner05.jpg">
+				</div>
+				<div class="partner6">
+					<img src="photos/partner06.jpg">
+				</div>
+				<div class="partner7">
+					<img src="photos/partner07.jpg">
+				</div>
+			</div>
+			<div class="line_2">
+				<div class="partner8">
+					<img src="photos/partner08.jpg">
+				</div>
+				<div class="partner9">
+					<img src="photos/partner09.jpg">
+				</div>
+				<div class="partner10">
+					<img src="photos/partner10.jpg">
+				</div>
+				<div class="partner11">
+					<img src="photos/partner11.jpg">
+				</div><div class="partner12">
+					<img src="photos/partner12.jpg">
+				</div><div class="partner13">
+					<img src="photos/partner13.jpg">
+				</div>
+				<div class="partner14">
+					<img src="photos/partner14.jpg">
+				</div>
+			</div>
+			<div class="line_3">
+				<div class="partner15">
+					<img src="photos/partner15.jpg">
+				</div>
+				<div class="partner16">
+					<img src="photos/partner16.jpg">
+				</div>
+				<div class="partner17">
+					<img src="photos/partner17.jpg">
+				</div>
+				<div class="partner18">
+					<img src="photos/partner18.jpg">
+				</div>
+				<div class="partner19">
+					<img src="photos/partner19.jpg">
+				</div>
+				<div class="partner20">
+					<img src="photos/partner20.jpg">
+				</div>
+				<div class="partner21">
+					<img src="photos/partner21.jpg">
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+
+	<div class="part_7">
+		<div class="part_7_item">
+	 		<h3><b>友情</b>链接</h3>
+	 		<a href="#" class="more_f">更多</a>
+	 	</div>
+	 	<div class="part_7_line1">
+	 		<ul>
+	 			<li><a href="#">爱美网</a></li>
+	 			<li class="move"><a href="#" >央视综艺频道</a></li>
+	 			<li class="move"><a href="#" >华数唱片</a></li>
+	 			<li class="move"><a href="#" >汽车论坛</a></li>
+	 			<li class="move"><a href="#" >IT之家</a></li>
+	 			<li class="move"><a href="#" >iPhone游戏</a></li>
+	 			<li class="move"><a href="#" >旅游攻略</a></li>
+	 			<li class="move"><a href="#" >悦声无限</a></li>
+	 		</ul>
+	 	</div>
+	 	<div class="part_7_line2">
+	 		<ul>
+	 			<li><a href="#">华为商城</a></li>
+	 			<li class="move"><a href="#" >365音乐网</a></li>
+	 			<li class="move"><a href="#" >软件下载</a></li>
+	 			<li class="move"><a href="#" >漫漫看漫画</a></li>
+	 			<li class="move"><a href="#" >手机游戏</a></li>
+	 		</ul>
+	 	</div>	
+	</div>
+
+	 </div>
+
+	 <div class="part_8">
+		<div class="part_8_item">
+			<ul>
+				<li class="f"><a href="#">关于酷狗</a></li>
+				<li class="formal"><a href="#">监督举报</a></li>
+				<li class="formal"><a href="#">广告服务</a></li>
+				<li class="formal"><a href="#">版权指引</a></li>
+				<li class="formal"><a href="#">隐私政策</a></li>
+				<li class="formal"><a href="#">用户服务协议</a></li>
+				<li class="formal"><a href="#">推广合作</a></li>
+				<li class="formal"><a href="#">酷狗音乐人</a></li>
+				<li class="formal"><a href="#">酷狗音乐推</a></li>
+				<li class="formal"><a href="#">招聘信息</a></li>
+				<li class="formal"><a href="#">客服中心</a></li>
+				<li class="l"><a href="#">用户体验提升计划</a></li>
+			</ul>
+		</div>
+		<div class="part_8_content">
+			<p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>
+			<p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339<a href="#">粤ICP备09017694号-2</a></p>
+			<p>广播电视节目制作经营许可证（粤）字第01270号 营业性演出许可证穗天演440106026</p>
+			<p>穗公网监备案证第44010650010167 互联网药品信息服务资格证编号（粤）-非经营性-2012-0018</p>
+			<p>Copyright © 2004-2017 KuGou-Inc.All Rights Reserved
+			<img src="photos/lst2.png" width="20" height="20"></p>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>
+	<script>
+	var m=0;
+	var time=null;
+	var imgs=document.getElementById("imgs");
+	function doStart(){
+		if(time==null){
+			time=setInterval(function(){
+				m++;
+				show(m);
+				if(m>=2)
+					m=0;
+			},2000)
+
+		}
+	}
+	function doStop(){
+		if (time!=null) {
+			clearInterval(time);
+		};
+		time=null;
+	}
+	doStart();
+	function show(x){
+		for(var i=1;i<=2;i++){
+			var img=document.getElementById("m"+i);
+			if(i==x){
+				img.style.display="block";
+			}else{
+				img.style.display="none";
+			}
+		}
+	}
+	
+	var big_left=document.getElementById("big_left");
+	big_left.onmouseover=function(){
+		document.getElementById("span").style.display="block";
+	}
+	big_left.onmouseout=function(){
+		document.getElementById("span").style.display="none";
+	}
+	var little_top_left=document.getElementById("little_top_left");
+	little_top_left.onmouseover=function(){
+		document.getElementById("span1").style.display="block";
+	}
+	little_top_left.onmouseout=function(){
+		document.getElementById("span1").style.display="none";
+	}
+	var little_top_right=document.getElementById("little_top_right");
+	little_top_right.onmouseover=function(){
+		document.getElementById("span2").style.display="block";
+	}
+	little_top_right.onmouseout=function(){
+		document.getElementById("span2").style.display="none";
+	}
+	var little_bo_left=document.getElementById("little_bo_left");
+	little_bo_left.onmouseover=function(){
+		document.getElementById("span3").style.display="block";
+	}
+	little_bo_left.onmouseout=function(){
+		document.getElementById("span3").style.display="none";
+	}
+	var little_bo_right=document.getElementById("little_bo_right");
+	little_bo_right.onmouseover=function(){
+		document.getElementById("span4").style.display="block";
+	}
+	little_bo_right.onmouseout=function(){
+		document.getElementById("span4").style.display="none";
+	}
+	for(var i=1;i<=4;i++){
+		var newSong=document.getElementById("newSong"+i).getElementsByTagName("li");
+		for(var k=0;k<newSong.length;k++){
+			newSong[k].onmouseover=function(){
+				this.childNodes[4].style.display="block";
+				if(this.childNodes[0].childNodes[2].innerHTML=="独家"){
+					this.childNodes[0].childNodes[2].style.display="none";
+					this.childNodes[0].childNodes[4].style.color="#0080ff";
+				}else{
+					this.childNodes[0].childNodes[2].style.color="#0080ff";
+				}
+				this.childNodes[0].childNodes[0].style.color="#0080ff";
+
+		}
+			newSong[k].onmouseout=function(){
+				this.childNodes[4].style.display="none";
+				if(this.childNodes[0].childNodes[2].innerHTML=="独家"){
+					this.childNodes[0].childNodes[2].style.display="inline-block";
+					this.childNodes[0].childNodes[4].style.color="#5b5b5b";
+				}else{
+					this.childNodes[0].childNodes[2].style.color="#5b5b5b";
+			}
+				this.childNodes[0].childNodes[0].style.color="#5b5b5b";
+
+		}
+	}
+
+	}
+	
+	var playAll=document.getElementById("playAll");
+	playAll.onmouseover=function(){
+		this.id="playAll2";
+		document.getElementById("playAll2").childNodes[0].style.color="#0080ff";
+	}
+
+	playAll.onmouseout=function(){
+		this.id="playAll";
+		document.getElementById("playAll").childNodes[0].style.color="#4f4f4f";
+	}
+	
+	var China=document.getElementById("China");
+	var Occident=document.getElementById("Occident");
+	var Korea=document.getElementById("Korea");
+	var Japan=document.getElementById("Japan");
+		document.getElementById("menu1").onmouseover=function(){
+				China.style.display="block";
+				Occident.style.display="none";
+				Korea.style.display="none";
+				Japan.style.display="none";
+			}
+		document.getElementById("menu2").onmouseover=function(){
+				China.style.display="none";
+				Occident.style.display="block";
+				Korea.style.display="none";
+				Japan.style.display="none";
+			}
+		document.getElementById("menu3").onmouseover=function(){
+				China.style.display="none";
+				Occident.style.display="none";
+				Korea.style.display="block";
+				Japan.style.display="none";Z
+			}
+
+		document.getElementById("menu4").onmouseover=function(){
+				China.style.display="none";
+				Occident.style.display="none";
+				Korea.style.display="none";
+				Japan.style.display="block";
+			}
+		
+
+	</script>

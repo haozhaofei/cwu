@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实时问候</title>
+</head>
+	<style type="text/css">
+	    #did{font-size: 50px;font-weight: bold;}
+	</style>
+<body>
+	<div id="did">
+
+	</div>
+</body>
+</html>
+<script>
+	    setInterval(function(){
+	    	var today = new Date();
+	    	var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			var res = h+":"+m+":"+s;
+			document.getElementById('did').innerHTML=res;
+	    },1000);
+		
+        //用if...else if...else...语句
+		function fun1(){
+					var today=new Date();
+					var h=today.getHours();
+					if(6<h&&h<12){
+						document.write("Good morning!");
+					}else if(12<h&&h<17){
+						document.write("Good afternoon!");
+					}else if(17<h&&h<22){
+						document.write("Good evening!");
+					}else if(22<h&&h<24){
+						document.write("Good night!");
+					}else{
+						document.write("At Drown!");
+					}
+				}
+		fun1();
+		//用switch语句
+		function fun2(){
+			var today=new Date();
+			var h=today.getHours();
+            switch(h){
+				case (6<h&&h<12):alert("Good morning!");break;
+				case (12<h&&h<17):alert("Good afternoon!");break;
+				case (17<h&&h<22):alert("Good evening!");break;
+				case (22<h&&h<24):alert("Good night!");break;
+				default:alert("At Drown!");
+			}
+		}
+		fun2();
+</script>

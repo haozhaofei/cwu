@@ -1,86 +1,71 @@
-<!-- 第一遍 -->
+<!--第一次  -->
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>this事件认识</title>
+	<title>Document</title>
 </head>
 <body>
-	<ul>
-		<li>刚好遇见你</li>
-		<li>爱情</li>
-		<li>为什么相爱的人不能在一起</li>
-		<li>因为爱情</li>
-		<li>这就是爱</li>
-	</ul>
+	<button onclick="fun1(this)">点我</button>
+	<button id="bid">在点我</button>
 </body>
 </html>
-
 <script>
-	//获取li集合  刻舟求剑  this代表的是本对象(点击谁就是谁了)
-	var list = document.getElementsByTagName('li');
-	for(var i=0;i<list.length;i++){
-		list[i].onclick = function(){
-			alert(this.innerHTML);
-			//alert(list[i].innerHTML);
-		}
+	//主调用不能直接获取,需要传参
+	function fun1(obj){
+		obj.style.color = "blue";
 	}
+	//别动调用可以直接使用this
+	document.getElementById('bid').onclick = function(){
+		this.style.color = "red";
+	}
+
 </script>
 
-<!-- 第二遍 -->
+<!--第一次 
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>this事件认识</title>
+	<title>Document</title>
 </head>
 <body>
-	<ul>
-		<li>刚好遇见你</li>
-		<li>爱情</li>
-		<li>为什么相爱的人不能在一起</li>
-		<li>因为爱情</li>
-		<li>这就是爱</li>
-	</ul>
+	<button onclick="fun1(this)">点我</button>
+	<button id="bid">在点我</button>
 </body>
 </html>
-
 <script>
-	//获取li集合  刻舟求剑  this代表的是本对象(点击谁就是谁了)
-	var list = document.getElementsByTagName('li');
-	for(var i=0;i<list.length;i++){
-		list[i].onclick = function(){
-			alert(this.innerHTML);
-			//alert(list[i].innerHTML);
-		}
+	//主调用不能直接获取,需要传参
+	function fun1(obj){
+		obj.style.color = "blue";
 	}
-</script>
+	//别动调用可以直接使用this
+	document.getElementById('bid').onclick = function(){
+		this.style.color = "red";
+	}
 
-<!-- 第三遍 -->
+</script> -->
+
+<!--第二次  
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>this事件认识</title>
+	<title>Document</title>
 </head>
 <body>
-	<ul>
-		<li>刚好遇见你</li>
-		<li>爱情</li>
-		<li>为什么相爱的人不能在一起</li>
-		<li>因为爱情</li>
-		<li>这就是爱</li>
-	</ul>
+	<button onclick="fun1(this)">点我</button>
+	<button id="bid">在点我</button>
 </body>
 </html>
-
 <script>
-	//获取li集合  刻舟求剑  this代表的是本对象(点击谁就是谁了)
-	var list = document.getElementsByTagName('li');
-	for(var i=0;i<list.length;i++){
-		list[i].onclick = function(){
-			alert(this.innerHTML);
-			//alert(list[i].innerHTML);
-		}
+	//主调用不能直接获取,需要传参
+	function fun1(obj){
+		obj.style.color = "blue";
 	}
-</script>
+	//别动调用可以直接使用this
+	document.getElementById('bid').onclick = function(){
+		this.style.color = "red";
+	}
+
+</script>-->

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<style>
+	#did{
+		float:left;
+	}
+	#one1,#two2{
+		display:none;
+		float:left;
+		margin-left:25px;
+	}
+</style>
+<body>
+	<form>
+	<select id="did">
+	<option value="">省份</option>
+	<option value="1">北京</option>
+	<option value="2">湖南</option>
+	</select>
+	<select id="one1">
+	<option>东城区</option>
+	<option>西城区</option>
+	<option>朝阳区</option>
+	<option>海淀区</option>
+	<option>通州区</option>
+	<option>顺义区</option>
+	<option>昌平区</option>
+
+	</select>
+	<select id="two2">
+	<option>长沙</option>
+	<option>张家界</option>
+	<option>怀化</option>
+	<option>衡阳</option>
+	<option>岳阳</option>
+	<option>株洲</option>
+	<option>常德</option>
+	</select>
+	</form>
+</body>
+</html>
+<script>
+	did.onchange=function(){
+		for(var i=1;i<=2;i++){
+			if(i==this.value){
+				document.getElementById("one"+i).style.display="block";
+			}else{
+				document.getElementById("two"+i).style.display="none";}
+		}
+	}
+	
+</script>

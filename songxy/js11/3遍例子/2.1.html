@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id="uid">
+		<li>钟无艳</li>
+		<li>扁鹊</li>
+		<li>关羽</li>
+	</ul>
+	<button onclick="doChange()">变</button>
+</body>
+</html>
+<script>
+	function doChange(){
+		// 重点:替换的是 子节点 所以要找的是子节点
+		//获取UID的第一个子元素节点
+		var oUid = document.getElementById('uid').childNodes[1];
+		//创建一个文本节点
+		var item = document.createTextNode("赵云");
+		oUid.replaceChild(item,oUid.childNodes[0]);
+	}
+</script>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li><input type="checkbox" value="1111"> 1111 </li>
+		<li><input type="checkbox" value="2222"> 2222 </li>
+		<li><input type="checkbox" value="3333"> 3333 </li>
+		<li><input type="checkbox" value="4444"> 4444 </li>
+		<li><input type="checkbox" value="5555"> 5555</li>
+	</ul>
+
+	<button onclick="doSelect()">喜欢的</button>
+</body>
+</html>
+
+<script>
+	
+	function doSelect(){
+		var list = document.getElementsByTagName('input');
+		var arr = new Array();
+		for(var i=0;i<list.length;i++){
+			if(list[i].checked && list[i].type == "checkbox"){
+				arr[arr.length] = list[i].value;
+			}
+		}
+		alert(arr);
+	}
+</script>

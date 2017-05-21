@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>蘑菇街-我的买手街</title>
+<link href="css/style.css" type="text/css"  rel="stylesheet" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<style>
+*{padding: 0px;
+margin: 0px;
+}
+.mainPage{
+	min-width: 1200px;
+}
+a,body,html{
+	color:#333; 
+	text-align: none;
+}
+ul,li{
+	list-style: none;
+	float: right;
+}
+.wrap-1{
+	width: 1300px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 20px;
+	background:#DBDFDE;
+	
+	line-height: 20px;
+	text-decoration: none;
+		color: #333;
+}
+a,body,button,input{
+	font: 12px/1.6 tahoma,arial,sans-serif;
+}
+.shouye{
+	margin-left: 100px;
+}
+.s5{
+	margin-right: 100px;
+}
+.header-top{
+	float: right;
+	overflow: hidden;
+	
+	color: #666;
+	line-height: 14px;
+	list-style: none;
+}
+.header-top li{
+	float: left;
+	width: 80px;
+	text-decoration: none;
+	text-align: center;
+}
+.wrap-2,.search{
+	height: 100px;
+	float: left;
+}
+.wrap-2{
+	margin-left: 100px;
+}
+.picture{
+	height: 100px;
+	float: right;
+	margin-right: 100px;
+}
+.search{
+	text-align: center;
+	margin-left: 300px;
+}
+.search a:hover{
+	color: pink;
+}
+.theme a{
+	font-size: 25px;
+}
+.theme{
+	float: left;
+	margin-left: 100px;
+	width: 1300px;
+	margin-top: 50px;
+
+}
+.shengqiantuangou{
+	margin-left: 80px;
+}
+.pinzhiyouxuan{
+	margin-left: 50px;
+}
+#p1,#p2,#p3,#p4{
+	display: none;
+}
+#mid1{
+	width:50px;
+	height:50px;
+	position:absolute;
+	top:55%;
+	left:22%; 
+}
+#mid2{
+	width:50px;
+	height:50px;
+	position:absolute;
+	top:55%;
+	right:22%;
+}
+.circle{
+	position:absolute;
+	bottom:75px;left:46%;
+}
+.circle li{
+	width:12px;
+	height:10px;
+	margin-right:10px;
+	background:url("images/sprite.png") no-repeat 0 -37px;}
+#p0{
+	margin-top: 50px;
+
+	}
+.list{
+	width: 250px;
+	height: 500px;
+	position: absolute;
+	margin-left: 100px;
+	margin-top: 200px;
+}
+span{
+	font-size: 20px;
+}
+#m0{
+	margin-left: 100px;
+}
+#a{
+	display: none;
+	width: 200px;
+	height: 100px;
+	background: yellow;
+	position: absolute;
+	left: 200px;
+	top: 10px;
+
+}
+
+	#footer{
+			background: #2c323b;
+			padding-bottom: 50px;
+			margin-top: 20px;
+			width: 100%;
+			float: right;		
+		}
+		.footerlink{
+			position: relative;
+			border-bottom: 1px solid #3d424a;
+			padding: 15px 0;
+			font-size: 12px;
+			color: #b1b3b9;
+			text-align: center;
+		}
+		.footerlink a{
+			color: #b1b3b9;
+			padding: 10px;
+			text-decoration: none;
+		}
+		.footerlink a:hover{
+			color:  #0c8ed9
+		}
+		.copyright {
+		    width: 1000px;
+		    margin: 40px auto 0;
+		}
+		.copyright p {
+		    line-height: 30px;
+		    text-align: center;
+		    color: #b1b3b9;
+		    font-size: 100%;
+		}
+		.copyright a {
+		    color: #999;
+		    text-decoration: none;
+		}
+
+input{
+	list-style: none;
+}
+
+</style>
+<body>
+<div class="mianPage">
+	<div class="header">
+		<div class="wrap-1">
+			<a href="#" class="shouye">蘑菇街首页</a>
+			<ul class="header-top">
+			<li class="s1"><a href="#">注册</a></li>
+			<li class="s2"><a href="#">登录</a></li>	
+			<li class="s3"><a href="#">我的订单</a></li>
+			<li class="s4"><a href="#">购物车</a></li>
+			<li class="s5"><a href="#">客户服务</a></li>
+			</ul>
+			
+			
+				
+		</div>
+		<div class="wrap-2">
+			<img src="images/icon.jpg" alt="">
+		</div>
+		<div class="search">
+			<!--搜索框-->
+			<input type="text" width="200" height="50">
+			<img src="images/search.jpg" alt="" width="100" height="50" onclick="#">
+			<div class="inner-search">
+				<a href="#">短裤</a>
+				<a href="#">拖鞋</a>
+				<a href="#">小白鞋</a>
+				<a href="#">连衣裙</a>
+				<a href="#">睡衣</a>
+				<a href="#">吊带背心</a>
+				<a href="shopping2.html">凉鞋</a>
+				<a href="#">短袖</a>
+			</div>
+			
+		</div>
+		<div class="picture">
+				<img src="images/erweima.jpg" alt="">
+		</div>
+	</div>
+
+	<div class="theme">
+	<img src="images/zhuti.jpg" alt="">
+	<a href="" class="shengqiantuangou">省钱团购</a>
+	<a href="" class="pinzhiyouxuan">品质优选</a>		
+	</div>
+
+	<div class="main">
+
+	<div class="list">
+		<p onmouseover="display()" onmouseout="disappear()"><span>上衣</span> <a >春夏上新</a>   时尚套装</p>
+		<p><span>裙子</span>   连衣裙  半身裙</p>
+		<p><span>裤子</span>  牛仔裤  休闲裤</p>
+		<p><span>女鞋</span>  单鞋  凉鞋</p>
+		<p><span>男友</span>  九分裤  凉拖鞋</p>
+		<p><span>内衣</span>  少女内衣  睡衣</p>
+		<p><span>包包</span>  斜挎包  拉杆箱</p>
+		<p><span>运动</span>  运动套装  运动鞋</p>
+		<p><span>美妆</span>  补水保湿  面膜</p>
+		<p><span>配饰</span>  耳环新品 手表</p>
+		<p><span>家居</span>  家居鞋  四件套</p>
+		<p><span>母婴</span>  童装  孕妇装</p>
+		<p><span>食品</span>  休闲食品  进口食品</p>
+		<p><span>家电</span>  手机  小家电</p>
+		
+		<div id="a">
+			<ul onmouseover="display()" onmouseout="disappear()">
+				<li>小清新外套</li>
+				<li>薄款毛衣</li>
+				<li>年轻的裤子</li>
+			</ul>
+		</div>
+	</div>
+	<center>
+	 <img id="p0" src="images/1.jpg" onmouseover="show()" onmouseout="no()">
+		<img src="images/1.jpg" alt="" id="p1">
+		<img src="images/2.jpg" alt="" id="p2">
+		<img src="images/3.jpg" alt="" id="p3">
+		<img src="images/4.jpg" alt="" id="p4">
+		<img src="images/5.png" id="mid2" onclick="goNext()" onmouseover="show()">
+   		<img src="images/4.png" id="mid1" onclick="goBack()" onmouseover="show()">
+   		<div class="circle">
+		<li onmouseover="show1(1)"></li>
+		<li onmouseover="show1(2)"></li>
+		<li onmouseover="show1(3)"></li>
+		<li onmouseover="show1(4)"></li>
+	</div>
+	</center>
+	
+	<script src="/demos/googlegg.js"></script>
+	<center>
+
+<div class="flash4" style="margin-top: 50px">
+	<ul>
+    	<li class="first">
+        	<div class="imgTop"><img src="images/21.jpg"   alt="" class="tm"></div>
+            <div class="imgCen">给你15分钟做“对”的时尚人</div>
+            <div class="imgBot"><a href=""><p class="bt_1">服饰</p><p class="bt_2"><span>封面明星故事</span><span>2015春夏趋势</span><span>我爱海淘</span></p></a></div>
+        </li>
+        <li>
+        	<div class="imgTop"><img src="images/22.jpg"   alt=""></div>
+            <div class="imgCen">蒂芙尼为你吟唱一曲自然颂</div>
+            <div class="imgBot"><a href=""><p class="bt_1">服饰</p><p class="bt_2"><span>封面明星故事</span><span>2015春夏趋势</span><span>我爱海淘</span></p></a></div>
+        </li>
+        <li>
+        	<div class="imgTop"><img src="images/23.jpg"   alt=""></div>
+            <div class="imgCen">瑞丽·妆 线上精品轻杂志</div>
+            <div class="imgBot"><a href=""><p class="bt_1">服饰</p><p class="bt_2"><span>封面明星故事</span><span>2015春夏趋势</span><span>我爱海淘</span></p></a></div>
+        </li>
+        <li>
+        	<div class="imgTop"><img src="images/24.jpg"   alt=""></div>
+            <div class="imgCen">《ar》刘海造型 女孩只需这样即刻焕然一新</div>
+            <div class="imgBot"><a href=""><p class="bt_1">服饰</p><p class="bt_2"><span>封面明星故事</span><span>2015春夏趋势</span><span>我爱海淘</span></p></a></div>
+        </li>
+        <li>
+        	<div class="imgTop"><img src="images/32.jpg"   alt=""></div>
+            <div class="imgCen">电影×大明星 见证传奇从戛纳诞生</div>
+            <div class="imgBot"><a href=""><p class="bt_1">服饰</p><p class="bt_2"><span>封面明星故事</span><span>2015春夏趋势</span><span>我爱海淘</span></p></a></div>
+        </li>
+        <li>
+        	<div class="imgTop"><img src="26.jpg"   alt=""></div>
+            <div class="imgCen">重返20岁试用周</div>
+            <div class="imgBot"><a href=""><p class="bt_1">服饰</p><p class="bt_2"><span>封面明星故事</span><span>2015春夏趋势</span><span>我爱海淘</span></p></a></div>
+        </li>
+      
+        <li class="fast">
+        	<div class="imgTop"><img src="images/31.jpg"   alt=""></div>
+            <div class="imgCen">玩美女孩盖天天 阳光女神进阶攻略</div>
+            <div class="imgBot"><a href=""><p class="bt_1">服饰</p><p class="bt_2"><span>封面明星故事</span><span>2015春夏趋势</span><span>我爱海淘</span></p></a></div>
+        </li>
+    </ul>
+    </center>	
+</div>
+
+<script src="js/script.js" type="text/javascript"></script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';color:white">
+
+</div>
+</body>
+</html>
+
+</div>
+<!-- footer -->
+	<div id="footer">
+		<div class="footerlink">
+			<a href="#">关于部落</a>|
+			<a href="#">监督举报</a>|
+			<a href="#">广告服务</a>|
+			<a href="#">版权指引</a>|
+			<a href="#">隐私政策</a>|
+			<a href="#">用户服务协议</a>|
+			<a href="#">推广合作</a>|
+			<a href="#">音乐人</a>|
+			<a href="#">音乐推</a>|
+			<a href="#">招聘信息</a>|
+			<a href="#">客服中心</a>|
+			<a href="#">用户提升计划</a>
+		</div>
+		<div class="copyright">
+                    <p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>
+                    <p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339
+                    <a href="#">粤ICP备09017694号-2</a>
+                    </p>
+                    <p>广播电视节目制作经营许可证（粤）字第01270号  营业性演出许可证穗天演440106026</p>
+                    <p>穗公网监备案证第44010650010167  互联网药品信息服务资格证编号（粤）-非经营性-2012-0018</p>
+                    <p>Copyright    2004-2017 KuGou-Inc.All Rights Reserved
+                    </p>
+        </div>
+
+
+	
+</body>
+</html>
+<script>
+
+
+   var i=1;
+     var img=document.getElementById("p0");
+     var time=null;
+     function start(){
+     	if(time==null){
+     	   time=setInterval(function(){
+     	 	 i++;
+             if(i>5){
+          	    i=1;
+             }
+             img.src=document.getElementById("p"+i).src;
+           },3000)
+        }
+    }
+     start();
+     var next=document.getElementById("next");
+     var back=document.getElementById("back");
+     function show(){
+     	next.style.display="block";
+     	back.style.display="block";
+     }
+     function no(){
+        next.style.display="none";
+     	back.style.display="none";
+     }
+     function goNext(){
+     	i++;
+     	if(i>5){
+          i=1;
+        }
+        img.src=document.getElementById("p"+i).src;
+        if(time!=null){
+        	 clearInterval(time);
+        }
+       time=null;
+       start();
+     }
+     function goBack(){
+     	i--;
+     	if(i<1){
+          i=5;
+        }
+        img.src=document.getElementById("p"+i).src;
+        if(time!=null){
+        	clearInterval(time);
+        }
+        time=null;
+        start();
+     }
+     function show1(x){
+     i=x;
+     img.src=document.getElementById("p"+i).src;
+     if(time!=null){
+        	clearInterval(time);
+        }
+        time=null;
+        start();
+   }
+   	function display(){
+		var a=document.getElementById("a");
+
+		           a.style.display="block";
+	}
+	function disappear(){
+		var a=document.getElementById("a");
+
+		           a.style.display="none";
+
+	}
+
+
+</script>

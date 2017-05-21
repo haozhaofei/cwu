@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>删除以及选中变色</title>
+	<style>
+	ul{list-style-type: none;}
+	  ul li{
+	  	width: 100%;
+	  	height: 30px;
+	  	background:#E6E6E6;
+	  	line-height: 30px;
+	  	margin-top: 10px;}
+
+	  ul li:hover{background: #FF99FF;}
+		ul li.cc{background: #FFFF33;}
+	</style>
+</head>
+<body>
+<ul>
+	<li>断桥残雪</li>
+	<li>庐州月光</li>
+	<li>星座书上</li>
+	<li>狮子座</li>
+	<li>高尚</li>
+	<li>暧昧</li>
+	<li>认真的雪</li>
+</ul>
+<button onclick="doClear()">删除</button>
+		
+</body>
+</html>
+<script>
+var list=document.getElementsByTagName('li');
+for(var i=0;i<list.length;i++){
+	list[i].onclick=function(){
+		this.className="cc";
+	// this.setAttribute("class","cc")
+	}
+}
+function doClear(){
+	var list=document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		if(list[i].className == #CE8CFB"cc"){
+			list[i].parentNode.removeChild(list[i]);
+			i--;
+		}
+	}
+
+}
+
+	
+</script>

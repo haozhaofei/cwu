@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<from action=""></from>
+	<from action="" name="myfrom">
+	<input type="text" name="uname" value=""></from>
+</body> 
+</html>
+<script>
+	document.write(document.all.length);
+	alert(document.myfrom.uname.value);
+	alert(document.forms[1].uname.value);
+	alert(document.forms['myfrom'].uname.value);
+	alert(document['myfrom'].uname.value);
+</script>

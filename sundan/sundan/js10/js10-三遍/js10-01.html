@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{list-style-type: none;}
+		ul li{height: 30px;background: #ccc;margin-top: 10px;line-height: 30px;}
+		ul li:hover{background: #f0c;}
+		ul li.cc{background: #fc0;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>一二三四</li>
+		<li>打靶归来</li>
+		<li>战士</li>
+		<li>革命气节歌</li>
+		<li>强军战歌</li>
+		<li>黄河大合唱</li>
+		<li>祖国</li>
+	</ul>
+	<button onclick="doDel()">删除</button>
+</body>
+</html>
+
+<script>
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			this.setAttribute("class","cc");
+		}
+	}
+	function doDel(){
+		var list = document.getElementsByTagName('li');
+		for(var i=0;i<list.length;i++){
+			if(list[i].className == "cc"){
+				list[i].parentNode.removeChild(list[i]);
+				i--;
+			}
+		}
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{list-style-type: none;}
+		ul li{height: 30px;background: #ccc;margin-top: 10px;line-height: 30px;}
+		ul li:hover{background: #f0c;}
+		ul li.cc{background: #fc0;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>一二三四</li>
+		<li>打靶归来</li>
+		<li>战士</li>
+		<li>革命气节歌</li>
+		<li>强军战歌</li>
+		<li>黄河大合唱</li>
+		<li>祖国</li>
+	</ul>
+	<button onclick="doDel()">删除</button>
+</body>
+</html>
+
+<script>
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			this.setAttribute("class","cc");
+		}
+	}
+	function doDel(){
+		var list = document.getElementsByTagName('li');
+		for(var i=0;i<list.length;i++){
+			if(list[i].className == "cc"){
+				list[i].parentNode.removeChild(list[i]);
+				i--;
+			}
+		}
+	}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{list-style-type: none;}
+		ul li{height: 30px;background: #ccc;margin-top: 10px;line-height: 30px;}
+		ul li:hover{background: #f0c;}
+		ul li.cc{background: #fc0;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>一二三四</li>
+		<li>打靶归来</li>
+		<li>战士</li>
+		<li>革命气节歌</li>
+		<li>强军战歌</li>
+		<li>黄河大合唱</li>
+		<li>祖国</li>
+	</ul>
+	<button onclick="doDel()">删除</button>
+</body>
+</html>
+
+<script>
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			this.setAttribute("class","cc");
+		}
+	}
+	function doDel(){
+		var list = document.getElementsByTagName('li');
+		for(var i=0;i<list.length;i++){
+			if(list[i].className == "cc"){
+				list[i].parentNode.removeChild(list[i]);
+				i--;
+			}
+		}
+	}
+</script>

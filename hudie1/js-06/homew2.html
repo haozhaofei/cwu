@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>缩略图和放大镜的结合</title>
+<style type="text/css">
+	div,img{
+		margin: 0;
+		padding: 0;
+		margin-top: 5px;
+	}
+	#p1,#p3,#p4{
+		display: none;
+	}
+	#dp1,#dp2,#dp3,#dp4{
+		width:300px;height: 300px;position: absolute;display: none;overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<div>
+	<img src="images/01.jpg" width="384" height="240" id="p1">
+	<img src="images/02.jpg" width="384" height="240" id="p2">
+	<img src="images/03.jpg" width="384" height="240" id="p3">
+	<img src="images/04.jpg" width="384" height="240" id="p4">
+
+</div>
+<div id="dp1"><img src="images/01.jpg"></div>
+<div id="dp2"><img src="images/02.jpg"></div>
+<div id="dp3"><img src="images/03.jpg"></div>
+<div id="dp4"><img src="images/04.jpg"></div>
+
+<div id="display">
+	<img src="images/01.jpg"  width="95" height="60" onclick="show(1)">
+	<img src="images/02.jpg" width="95" height="60" onclick="show(2)">
+	<img src="images/03.jpg" width="95" height="60" onclick="show(3)">
+	<img src="images/04.jpg" width="95" height="60" onclick="show(4)">
+</div>
+	
+</body>
+</html>
+<script>
+		function show(x){
+		for( var i=1; i<=4; i++){
+			var img = document.getElementById("p"+i);
+			if(i == x){
+				img.style.display = "block";
+			}else{
+				img.style.display = "none";
+			}
+		}
+	}
+	var p1 = document.getElementById('p1');
+	var dp1 = document.getElementById('dp1');
+	//当鼠标移上去 显示图片并指定上边距 和左边距
+	p1.onmouseover = function(){
+		dp1.style.display = "block";
+		dp1.style.top = this.offsetTop+"px";
+		dp1.style.left = this.offsetWidth + this.offsetLeft+ 10+"px";
+	}
+
+	//当鼠标离开隐藏
+	p1.onmouseout = function(){
+		dp1.style.display = "none";
+	}
+
+	//当鼠标移动的时候 获取鼠标的位置
+	p1.onmousemove = function(ent){
+		var event = window.event || ent;
+		var x = event.clientX - this.offsetLeft;
+		var y = event.clientY - this.offsetTop;
+		//*5:是因为要和放大的图片的宽度是一样的
+		//-150:是因为要在被放大的图片DIV的一半
+		dp1.scrollTop = y*5-150;
+		dp1.scrollLeft = x*5-150;
+	}
+	
+
+
+</script>

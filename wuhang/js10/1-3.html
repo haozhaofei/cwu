@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	li{list-style:none;height:30px;line-height:30px;background:#ccc;margin-top:10px;}
+	li:hover{background:blue;}
+	.gg{background:green}
+</style>
+<body>
+	<ul>
+	<li>目送</li>
+	<li>孩子你慢慢来</li>
+	<li>亲爱的安德烈</li>
+	</ul>
+	<button onclick="del()">删除</button>
+</body>
+</html>
+<script type="text/javascript">
+   	var list=document.getElementsByTagName("li");
+    for(var i=0;i<list.length;i++){
+    	list[i].onclick=function(){
+            // this.className="gg";
+            //setAttribute() 方法用于改变属性的值
+            this. setAttribute("class",'gg')
+
+    	}    
+    }
+   function del(){
+    	for(var i=0;i<list.length;i++){
+    	   if(list[i].className=="gg"){
+    	   	    //DOM删除节点
+    			list[i].parentNode.removeChild(list[i]);
+    			i--;  //可以同时删两个
+    		}
+    	}
+   }
+</script>

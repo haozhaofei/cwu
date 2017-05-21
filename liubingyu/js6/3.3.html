@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3</title>
+</head>
+<body>
+	<ul>
+		<li>xiye</li>
+		<li>mystic</li>
+		<li>zero</li>
+		<li>condi</li>
+		<li>957</li>
+	</ul>
+</body>
+</html>
+<script>
+	//获取li集合、this代表的是本对象（点击谁就是谁）
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			alert(this.innerHTML);
+		}
+	}
+</script>

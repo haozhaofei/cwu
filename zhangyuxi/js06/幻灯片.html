@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+    #mid{
+    	width:385px;
+    }
+    #xt{
+		width:123px;
+		height:78px;
+	}
+	#fid{
+		width:500px;
+		height:500px;
+		overflow:hidden; 
+		position:absolute;
+		display:none;
+    }
+</style>
+<body>
+	<img src="01.jpg" id="mid">
+	<div id="did">
+		<img src="01.jpg"  id="xt">
+		<img src="02.jpg"  id="xt">
+		<img src="03.jpg"  id="xt">
+	</div>
+	<div id="fid">
+		<img src="01.jpg" id="dm">
+	</div>
+</body>
+</html>
+<script>
+    var mid=document.getElementById("mid");
+     var dm=document.getElementById("dm");
+	var list=document.getElementById("did").getElementsByTagName("img");
+	for(var i=0;i<list.length;i++){
+		list[i].onmouseover=function(){
+			mid.src=this.src;
+			dm.src=this.src;
+		}
+	}
+    var fid=document.getElementById("fid");
+    mid.onmouseover=function(){
+        fid.style.display="block";
+        fid.style.top=this.offsetTop+"px";
+        fid.style.left=this.offsetWidth+this.offsetLeft+10+"px";
+    }
+    mid.onmouseout=function(){
+    	fid.style.display="none";
+    }
+    mid.onmousemove=function(ent){
+        var event=window.event || ent;
+        var x=event.clientX-this.offsetLeft;
+        var y=event.clientY-this.offsetTop;
+        fid.scrollTop=y*5-250;                  
+        fid.scrollLeft=x*5-250;
+    }
+</script>

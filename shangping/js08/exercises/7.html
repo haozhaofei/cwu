@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li><input type="checkbox" value="夏尔"> 夏尔 </li>
+		<li><input type="checkbox" value="塞巴斯蒂安"> 塞巴斯蒂安 </li>
+		<li><input type="checkbox" value="伊丽莎白"> 伊丽莎白 </li>
+		<li><input type="checkbox" value="葬仪屋"> 葬仪屋 </li>
+		<li><input type="checkbox" value="爱德华"> 爱德华</li>
+	</ul>
+
+	<button onclick="doSelect()">喜欢的人物</button>
+</body>
+</html>
+
+<script>
+	
+	function doSelect(){
+		//获取所有input
+		var list = document.getElementsByTagName('input');
+		//专明数组
+		var arr = new Array();
+		for(var i=0;i<list.length;i++){
+			//判断那些是选中的 并且必须是 checkbox
+			if(list[i].checked && list[i].type == "checkbox"){
+				arr[arr.length] = list[i].value;
+			}
+		}
+		alert(arr);
+	}
+</script>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action=""></form>
+	<form name="myform">
+		<input type="text" name="uname" value="wuhang">
+	</form>
+</body>
+</html>
+<script type="text/javascript">
+    //all[]提供对文档中所有HTML元素的访问。
+	document.write(document.all.length);     //html head meta title body script
+    //forms[]返回对文档中所有 Form 对象引用。
+    alert(document.myform.uname.value);
+    alert(document.forms[1].uname.value);
+    alert(document.forms['myform'].uname.value);
+    alert(document['myform'].uname.value);
+</script>

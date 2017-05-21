@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>飞机大战</title>
+</head>
+<style>
+	*{
+		margin-top: 0px;
+		padding: 0px;
+	}
+	#mid{
+		width:40px;
+		height:40px;
+		position: absolute;
+		background-image: url("img/plane.jpg");
+		top:225px;
+		left:225px;
+	}
+	#did{
+		width:500px;
+		height:500px;
+		position:relative;
+		background:url('img/bg2.png') no-repeat 0px -1036px;
+		overflow:hidden
+	}
+	img{
+		display: none;
+		position: absolute;
+	}
+
+</style>
+<body>
+<center>
+	<div id="did">
+		<img src="img/pd.png" id="pd0" alt="">
+		<img src="img/pd.png" id="pd1" alt="">
+		<img src="img/pd.png" id="pd2" alt="">
+		<img src="img/pd.png" id="pd3" alt="">
+		<img src="img/pd.png" id="pd4" alt="">
+		<img src="img/pd.png" id="pd5" alt="">
+		<div id="mid" ></div>
+	</div></center>
+</body>
+</html>
+<script>
+	var mid=document.getElementById('mid');
+	var did=document.getElementById("did");
+	window.onkeydown = function(ent){
+		var event = window.event || ent;
+		switch(event.keyCode){
+			case 37:{
+				mid.style.left=Math.max(0,mid.offsetLeft - 5)+"px";
+			}break;
+			case 38:{
+				mid.style.top=Math.max(0,mid.offsetTop - 5)+"px";
+			}break;
+			case 39:{
+				mid.style.left=Math.min(500,mid.offsetLeft + 5)+"px";
+			}break;
+			case 40:{
+				mid.style.top=Math.min(500,mid.offsetTop + 5)+"px";
+			}break;
+			case 32:{
+				fire(mid.offsetLeft+18,mid.offsetTop);
+			}break;
+		}
+	}
+	
+	function fire(a,b)
+	{
+		var list=document.getElementsByTagName('img');
+		for (var i = 0; i < list.length; i++) {
+			if(list[i].style.display!="block"){
+				list[i].style.display="block";
+				list[i].style.top=b+"px";
+				list[i].style.left=a+"px";
+			}
+			
+		};
+	}
+
+	function run(){
+		var pd=document.getElementsByTagName("img");
+		for (var i = 0; i < pd.length; i++) {
+			if(pd[i].style.display=="block"){
+				pd[i].style.top=pd[i].offsetTop-40+"px";
+				if(pd[i].offsetTop<0)
+					pd[i].style.display="none";
+			}
+		}
+	setTimeout("run()",50);
+	}
+	run();
+
+    var bgh=-1036;
+ 	function running(){
+        bgh+=2;
+        if(bgh>=-268){
+            bgh=-1036;
+        }
+        did.style.backgroundPosition="0px "+bgh+"px";
+        setTimeout("running()",33);
+       }
+    running();
+</script>

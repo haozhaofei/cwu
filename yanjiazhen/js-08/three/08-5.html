@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas对象</title>
+</head>
+<body>
+	<canvas id="myCanvas"></canvas>
+</body>
+</html>
+<script>
+	var canvas=document.getElementById("myCanvas");
+	//contextID 指定了您想要在画布上绘制的类型。当前唯一的合法值是 "2d"，它指定了二维绘图，并且导致这个方法返回一个环境对象，该对象导出一个二维绘图 API，
+	//getContext返回一个用于在画布上绘图的环境。
+	var can=canvas.getContext("2d");
+	can.fillStyle="azure";
+	//fillStyle 方法将其染成红色，fillRect 方法规定了形状、位置和尺寸。
+
+	can.fillRect(50,59,80,100);
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas对象</title>
+</head>
+<body>
+	<canvas id="can"></canvas>
+</body>
+</html>
+<script>
+	var can=document.getElementById("can");
+	var c=can.getContext("2d");
+	c.fillStyle="seagreen";
+	c.fillRect(0,0,80,100);
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3</title>
+</head>
+<body>
+	<canvas id="aa"></canvas>
+<body>
+</html>
+<script>
+	var aa=document.getElementById("aa");
+	var bb=aa.getContext("2d");
+	bb.fillStyle="teal";
+	bb.fillRect(50,20,60,70);
+	
+</script>

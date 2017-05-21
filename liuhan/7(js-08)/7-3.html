@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li><input type="checkbox" value="一">一</li>
+		<li><input type="checkbox" value="二">二</li>
+		<li><input type="checkbox" value="三">三</li>
+		<li><input type="checkbox" value="四">四</li>
+		<li><input type="checkbox" value="五">五</li>
+	</ul>
+
+	<button onclick="doSelect()">选择一个字</button>
+
+</body>
+</html>
+<script>
+	
+	function doSelect(){
+		var list = document.getElementsByTagName('input');
+
+		var arr = new Array();
+		for(var i=0;i<list.length;i++){
+			//判断那些是选中的 并且必须是 checkbox
+			if(list[i].checked && list[i].type == "checkbox"){
+				arr[arr.length] = list[i].value;
+			}
+		}
+		alert(arr);
+	}
+</script>

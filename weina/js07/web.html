@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>军事频道_最多军迷首选的军事门户_新浪网</title>
+	<style>
+		*{
+		 	padding:0;
+		 	margin:0;
+ 			}
+		header,nav,main,aside,footer,article,section,figure,figcaption{
+ 			display: block; 
+ 			}
+ 		.clearfix:before,
+ 		.clearfix:after {
+   			content: " ";
+ 	    	display: table;
+ 			}
+ 		.clearfix:after {
+ 			clear: both;
+ 			}
+
+ 		.clearfix {
+ 		  	*zoom: 1;
+ 			}
+
+		 #all{
+		 	max-width:1050px;
+		 	margin:20px auto 0;
+		 	}
+		 main{
+		 	float:left;
+		 	width:640px;
+		 	height: 360px;
+		 	margin:15px 0 30px 0;
+		 	position: absolute;
+		 	border: 1px solid #000;
+		 	}
+		 aside{
+		 	float:right;
+		 	width:380px;
+		 	margin:15px 0 30px 0;	
+		 	}
+		 
+		 li{
+		 	display:inline;
+			line-height:40px;
+			border-right:1px solid white;	
+		 	}
+		 ul{
+		 	background-color:green;
+		 	list-style:none;
+		 	width:100%;
+		 	height: 20px;
+		 	padding:12px;
+			}
+		 header a{
+		 	text-decoration:none;
+		 	color: #fff;
+		 	border-right: 0.5px solid #fff;
+		 	padding-left: 12px;
+		 	padding-right: 12px;
+		 	font-size: 14px;
+		 	}
+		 header div{
+		 	/*float: right;*/
+		 	position: absolute;
+		 	height: 16px;
+		 	top:23px;
+		 	left: 1030px;	
+		 	}
+		 header div img{
+		 	height: 16px;
+		 	}
+ 
+		 main img{
+		 	width:640px;
+		 	height: 360px;
+			}
+		 #p2,#p3,#p4,#p5{
+		 		display: none;
+		 	}
+		 #left,#right{
+		 	position: relative;
+		 	background-color: rgba(200,200,200,0.7);
+		 	width:40px;
+		 	height:40px;
+		 	border-radius: 50%;
+		 	z-index: 5px;
+		 	}
+		 #left{
+		 	left:10px;
+		 	top:-200px;
+		 	}
+		 #right{
+		 	left:590px;
+		 	top:-240px;
+		 	}
+		 #text{
+		 	position: relative;
+		 	z-index: 6px;
+		 	height: 80px;
+		 	width: 100%;
+		 	top:-165px;
+		 	background-color: rgba(0,0,0,0.5);
+		 	font-size: 24px;
+		 	color: #fff;
+		 	line-height: 80px; 	
+		 	}
+		 aside div{
+		 	text-align: 80px;
+		 	margin-bottom: 20px;
+		 	}
+		 aside .red{
+		 	color: red;
+		 	}
+		
+		 	#news h1 a{
+			font-size: 18px;margin-left: 8px;color:black;
+		}
+		#news h2 a{
+			font-size: 18px;margin-left: 8px;color:black;
+		}
+		#news a{
+			font-size: 16px;text-decoration:none;margin-left: 4px;margin-top: 10px;font-family:  "宋体";
+		}
+		#news a:hover{
+			color:red;cursor: hand;text-decoration: underline;
+		}
+		#xian{
+			color:gray;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="all">
+ 		<header role="banner">
+ 			<h1><img src="images/slogan6.png" alt="新浪军事"></h1>
+ 			<div>
+ 				<p style="margin-top:20px">
+ 				<img src="images/btn_news.png">
+ 				<span style="font-size: 12px; color: #333;font-family: "宋体";">设为书签</span>
+ 				<img src="images/sjbi.jpg">
+ 				<span style="font-size: 12px; color: #333;font-family: "宋体";">手机版</span>
+ 				</p>
+ 			</div>
+ 			<ul>
+ 				<li><a href="#"> 首页</a></li>  
+ 				<li><a href="#">滚动</a></li>  
+ 				<li><a href="#">图片</a></li>  
+ 				<li><a href="#">深度</a></li> 
+ 				<li><a href="#">《出鞘》</a></li>  
+ 				<li><a href="#">大国博弈</a></li>   
+ 				<li><a href="#">军史</a></li> 
+ 				<li><a href="#">东海局势</a></li>  
+ 				<li><a href="#">南海局势</a></li>   
+ 				<li><a href="#">新闻排行</a></li>  
+ 				<li><a href="#">航空</a></li>   
+ 				<li><a href="#">回顾</a></li>   
+ 			</ul>
+ 			
+ 		</header>	
+ 		<main>
+ 			<div >
+ 				<img src="images/11.jpg" width="683px" height="384px" id="p1" alt="">
+ 				<img src="images/22.jpg" width="683px" height="384px" id="p2" alt="">
+ 				<img src="images/33.gif" width="683px" height="384px" id="p3" alt="">
+ 				<img src="images/44.jpg" width="683px" height="384px" id="p4" alt="">
+ 				<img src="images/55.jpg" width="683px" height="384px" id="p5" alt="">
+ 			</div>
+ 			<div id="left" onclick="show(1)"></div>
+ 			<div id="right" onclick="show(2)"></div>
+ 			<div id="text">国产航母吊运小艇检查坞内情况：确保安全下水</div>
+ 		</main>
+ 		<aside>
+ 			<div id="news">
+ 				<h1><a href="#">媒体：中国第三艘航母或以惊人速度亮相</a></h1>
+ 				<span class="red">中国首艘国产航母下水已箭在弦上 就是三四天的事</span></br>
+ 				<a href="#">德称中国还不是航母强国</a></br>
+ 				<a href="#">001A航母将带来尊重和敬畏</a></br>
+ 				<a href="#">国产航母舰岛比之辽宁舰有三项大变化 一设计可隐身</a></br>
+ 				<a href="#">上合组织将接收印巴</a></br>
+ 				<a href="#">中俄哈吉塔五国边境互裁减军力</a></br></br>
+ 				<span class="red">美将领称中国打不起现代化战争 美媒批美军该清醒了</span></br>
+ 				<a href="#">俄媒评世界十佳战机大跌眼镜</a></br>
+ 				<a href="#">中国新机甩对手几条街</a></br>
+ 				<a href="#">一国获印度35亿援助 却欲拿去买20架歼10称性价比高</a></br></br>
+
+	            <span id="xian">------------------------------------------</span>
+
+ 				<h2><a href="#">朝鲜：美航母是肥硕变态动物 将一举击沉</a></h2>
+ 				<span class="red">朝警告澳:再追随美就用核武打你</span></br>
+ 				<a href="#">朝中社不点名批中国</a></br>
+ 				<a href="#">中国从巴基斯坦获一要塞40年经营权 令五角大楼不安</a>
+ 				<a href="#">印度放豪言称税改助GDP增速破8超中国 又被美媒打脸</a>
+ 			</div>
+
+ 		</aside>
+</body>
+</html>
+<script>
+	function show(i){
+		var b1 = document.getElementById('b1');
+		var b2 = document.getElementById('b2');
+		var b3 = document.getElementById('b3');
+		var pic = document.getElementById('p1');
+		if (i==1) {
+			pic.src="http://n.sinaimg.cn/mil/transform/20170423/uQSr-fyepses7665722.jpg"
+			if (b1.style.background=="green") {
+				b1.style.background="gray";
+			}else{
+				b1.style.background="green";
+				b2.style.background="gray";
+				b3.style.background="gray"
+			}
+			
+		}else if (i==2) {
+			pic.src="http://n.sinaimg.cn/mil/transform/20170423/JTDJ-fyepsec0397220.jpg"
+			if (b2.style.background=="green") {
+				b2.style.background="gray";
+			}else{
+				b1.style.background="gray";
+				b2.style.background="green";
+				b3.style.background="gray";
+			}
+		}else if (i==3) {
+			pic.src="http://n.sinaimg.cn/mil/transform/20170423/amZA-fyepses7662841.jpg"
+			if (b3.style.background=="green") {
+				b3.style.background="gray";
+			}else{
+				b1.style.background="gray";
+				b2.style.background="gray";
+				b3.style.background="green";
+			}
+		
+		}
+	}
+		var m=3;
+		var n=2;
+	function play(a){
+		var pic = document.getElementById('p1');
+		if (m<1) {m=3;}
+		if (n>3) {n=1;}
+		if (a==1) {
+			show(m);
+			m--;
+		}else if (a==2) {
+			show(n);
+			n++;
+		}
+	}
+
+</script>

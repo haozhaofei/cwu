@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div,ul,img,li{
+			padding: 0;
+			margin: 0;
+		}
+		#did{
+			width:340px;
+			height: 200px;
+			border:1px solid red;
+		}
+		img{
+			margin-left: 2px;
+		}
+		img:hover{
+			border:1px solid #f0c;
+		}
+	</style>
+</head>
+<body>
+	<div id="did">
+		
+	</div>
+	<ul>
+		<img src="img/11.jpg" width="80" alt="">
+		<img src="img/22.jpg" width="80" alt="">
+		<img src="img/33.jpg" width="80" alt="">
+		<img src="img/44.jpg" width="80" alt="">
+
+	</ul>
+</body>
+</html>
+
+<script>
+	var oDid = document.getElementById('did');
+	var list = document.getElementsByTagName('img');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			oDid.appendChild(this.cloneNode());
+		}
+	}
+</script>

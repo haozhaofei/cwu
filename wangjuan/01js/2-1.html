@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>在HTML中使用JS</title>
+</head>
+<body>
+	
+</body>
+</html>
+
+<!--第一种-->
+<script>
+	alert(1);
+</script>
+
+<!--第二种-->
+<script type="text/javascript">
+	alert(2);
+</script>
+
+<!--第三种-->
+<!--
+如果使用了外部导入的方式,那么标签里面一定一定不要不要写代码...因为代码都在外部导入的文件里面........................
+-->
+<script type="text/javascript" src="test.js">
+	alert(3);
+</script>
+<script>
+	fun();
+</script>

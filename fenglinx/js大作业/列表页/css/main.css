@@ -1,0 +1,75 @@
+
+.title{width: 100%;min-width: 1000px;margin: 0 auto;position: relative;}
+.dh:hover,.rm li:hover,#m2:hover{color:rgb(22,154,243);}
+#m2{float:right;display: block;width: 48px;height: 28px;line-height: 28px;border: 1px solid #C0C0C0;border-radius: 2px;text-align: center;}
+#m1{float:right;display: block;width: 48px;height: 28px;line-height: 28px;border: 1px solid #169af3;border-radius: 2px;text-align: center;color: #fff;background-color: #169af3;padding-right: 10px;}
+#search { background:url(images/ss.png) no-repeat center right #FFFFFF;height:24px;width:249px;line-height: 24px;color: #666;}	
+.h{float:left;margin-left: 160px;}
+.wenben{margin-left: 300px;margin-top: 30px;}
+.header{height:90px;width: 100%;border:1px solid #fff;}
+.nav li{float:left;font-size: 10px;color:#2F4F4F;}
+.dh{margin-left:40px;}
+.dh1{margin-left:40px;}
+.mid{height:50px;width: 340px;float:right;margin-right: 300px;margin-top: -40px;}
+#submit{height:40px;width: 80px;float:right;margin-right: -400px;margin-top: -30px;}
+#submit2{height:40px;width: 80px;float:right;margin-right: -480px;margin-top: -30px;}	
+.head1 {position: relative;z-index: 999;width: 100%;height: 55px;background-color: #2c323b;text-align: center;}
+.lm li{float:left;text-align:center;list-style:none;font-size:20px;margin-left:80px;}
+.lm a{color:#ccc;text-decoration:none;border-right:1px solid #ccc;padding:0px 15px;}
+.lm li:hover{background:#0c8ed9;text-decoration:none; color:#ccc;}
+.lm{border:1px solid #2c323b;height:50px;width:600px;color:#fff;}
+.xiala li{display:block;float:left;padding:5px 2px;text-align:center;width:60px;height:30px;background-color:#2c323b;margin: 0;padding:0;display:inline;}	
+.xiala li:hover{color:#999;}
+.xiala{position:absolute;margin:-1000px;}
+ul li:hover .xiala{margin:auto;display: block;}
+.rm li{list-style:none;float:left;text-align:center;float:right;font-size: 15px;margin-left:30px;color:#545454 ;}
+.rm{height:50px;width:700px;margin-left: 500px;color:#fff;margin-top: -200px;}
+/*标题结束*/
+
+
+/*正文开始*/
+.page{width:100%;height:500px;background:#292a2b;position:relative;}
+.main{width:840px;height:490px;position:absolute;top:10px;left:19%;}
+.sing{width:460px;float:right;margin-top: -280px;font-weight:lighter;line-height: 20px;color:white;}
+#did p{font-size: 15px;}
+h3{font-size: 24px;}
+.singer a{text-decoration: none;color:white;}
+.text{margin-top:20px;width:460px;height:260px;overflow:hidden;position:relative;}
+
+.scroll{position:absolute;top:0px;right:0px;width:8px;height:232px;}
+#sc{position:absolute;top:0px;right:0px;width:8px;height:74px;background:white;border-radius:8px;opacity:0.2;}
+
+#sf{width:26px;height:16px;display:block;position:absolute;bottom:80px;right:-230px;opacity:0.3;}
+.bottom,.bkg{width:100%;height:80px;position:absolute;left:0px;bottom:0px;}
+
+.bkg{background:black;opacity:0.3;}
+.now{width:60px;height:60px;float:left;margin:9px 0 0 15px;}
+.now img{margin-left: 5px;}
+.next{width:36px;height:36px;display:block;float:left;margin:20px 0 0 15px;}
+.before{width:36px;height:36px;display:block;float:left;margin:20px 0 0 190px;}
+.before:hover{background-position:-36px -143px;}
+.next:hover{background-position:-180px -143px}
+.img{float:left;margin:10px 0 0 40px;}
+.pb{width:374px;height:42px;float:left;color:#555555;margin:10px 0 0 25px;}
+.pb p{font-size: 12px;padding:5px 0 18px 5px;}
+.bgleft,.bgright,.bgmiddle{margin-top: -15px;}
+.bgleft,.bgright{width:2px;height:3px;display:block;background-color: #fff;float:left;}
+.bgmiddle{width:370px;height:3px;display:block;background-color: #fff;float:left;position:relative;}
+.bgright{background-position:-237px -200px;}
+#bar{width:0px;height:3px;border:1px solid #fff;position:absolute;display:block;left:0px;top:0px;}
+#circle{width:2px;height:12px;background-color: #fff;position:absolute;display:block;left:0px;top:-5px;}
+
+.tubiao{width:260px;float:left;margin:30px 0 0 60px;}
+#voice,#cycle,.share,.la,.ls{width:16px;height:16px;display:block;float:left;}
+
+#cycle{background-position:-64px -179px;margin-left:25px;}
+.la{background-position:-240px -32px;margin-left:25px;}
+.share{background-position:-240px 0px;margin-left:25px;}
+
+.pp{position:absolute;right:16px;top:2px;color:white;}
+#voice:hover{background-position:-80px -195px;}
+#cycle:hover{background-position:-80px -179px;}
+.la:hover{background-position:-256px -32px;}
+.share:hover{background-position:-256px 0px;}
+.ls:hover{background-position:-61px -120px;}
+.ls:hover .pp{color:#169af3;}

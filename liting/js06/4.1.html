@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	#did{
+		width:300px;height:300px;position:absolute;
+		display:none;overflow: hidden;
+	}
+</style>
+<body>
+	<img id="mid" src="images/22.jpg" alt="" width="384">
+	<div id="did">
+		<img src="images/22.jpg" alt=""> 
+	</div>
+</body>
+</html>
+<script>
+	var mid=document.getElementById('mid');
+	var did=document.getElementById('did');
+	mid.onmouseover=function(){
+		did.style.display="block";
+		did.style.top=this.offsetTop+"px";
+		did.style.left=this.offsetWidth+this.offsetLeft+10+"px";
+	}
+	mid.onmouseout=function(){
+		did.style.display="none";
+	}
+	mid.onmousemove=function(ent){
+		var event=window.event||ent;
+		var x=event.clientX-this.offsetLeft;
+		var y=event.clientY-this.offsetTop;
+		did.scrollTop=y*5-150;
+		did.scrollLeft=x*5-150;
+	}
+</script>

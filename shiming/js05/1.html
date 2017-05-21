@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小方块移动</title>
+	<style type="text/css">
+	body,ul,li,img,div{padding:0px;margin: 0px;}
+	#did{width: 400px;height: 400px;
+		position: relative;;background: #ccc;}
+	#mid{width: 40px;height: 40px;position: absolute;background: red;top: 250px;left: 100px;}
+	</style>
+</head>
+<body>	
+<div id="did">
+	<div id="mid"></div>
+</div>
+</body>
+</html>
+<script>
+	var mid=document.getElementById('mid');
+	window.onkeydown=function(ent){
+		var event=window.event||ent;
+	    switch(event.keyCode){
+			case 37 :  
+				mid.style.left = Math.max(0,mid.offsetLeft - 5)+"px";
+			break;
+			case 38 : 
+				mid.style.top = Math.max(0,mid.offsetTop - 5)+"px";
+			break;
+			case 39 : 
+				mid.style.left = Math.min(360,mid.offsetLeft + 5)+"px";
+			break;
+			case 40 : 
+				mid.style.top = Math.min(360,mid.offsetTop + 5)+"px";
+			break;
+			case 32 :
+				fire(mid.offsetLeft+18,mid.offsetTop);
+			break;
+		}
+	}
+	
+</script>

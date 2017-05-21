@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" name="myform">
+		时:<input type="text" name="hour" value="24" >
+		分:<input type="text" name="mins" value="00" >
+		秒:<input type="text" name="second" value="00" >
+	</form>
+	<button onclick=start()>开始</button>
+	<button onclick=stop()>暂停</button>
+	<button onclick=finish()>结束</button>
+</body>
+</html>
+<script type="text/javascript">  //代码类型
+    var time;
+	function start()
+	{
+	time= setInterval(function() 
+		{
+		  var h=document.myform.hour.value; //赋名于时分秒
+          var m=document.myform.mins.value;
+          var s=document.myform.second.value;
+		if(s==0&&m==0) //如果分秒均为零，时减一
+		{
+			h--;
+			document.myform.hour.value=h;
+			m=60-m;
+		}
+
+		if(s==0)
+		{
+			m--;
+			document.myform.mins.value=m;
+			s=60-s;
+		}
+
+			s--;
+			document.myform.second.value=s;
+		if(h==0&&m==0&&s==0)
+		{
+			clearInterval(time); //倒数结束
+		}
+		
+		},1000);
+	}	
+	function stop()
+	{
+		clearInterval(time);
+	}
+
+	function finish()  //finish的作用是恢复到初始状态
+	{
+		clearInterval(time); //停止倒数
+		document.myform.hour.value=24;
+		document.myform.mins.value=00;
+		document.myform.second.value=00;
+	}
+</script> 

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stulist>
+	<stu id="10001">
+		<name>诸葛亮</name>
+		<name>诸葛亮 great</name>
+		<sex>男</sex>
+		<age>22</age>
+	</stu>
+	<stu id="10002">
+		<name>白起</name>
+		<sex>男</sex>
+		<age>24</age>
+	</stu>
+	<stu id="10003">
+		<name>赵云</name>
+		<sex>男</sex>
+		<age>22</age>
+	</stu>
+</stulist>

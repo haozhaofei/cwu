@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>显示中文的星期</title>
+</head>
+<style>
+    div{
+        width:200px;
+        border: 1px solid black;
+        font-size: 20px;
+        background: red;
+    }
+</style>
+<body>
+       <div id="did"></div>
+</body>
+<script type="text/javascript">
+   var date=new Date();
+   var d=date.getDay();
+   var a=new Array('星期日','星期一','星期二','星期三','星期四','星期五','星期六');
+   var str=a[d];
+   document.getElementById("did").innerHTML=str;
+</script>
+</html>

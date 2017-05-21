@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+   *{padding:0px;margin:0px;}
+   div{width:410px;height:300px;border:1px solid red;}
+   img{width:100px;height:60px;}
+</style>
+<body>
+	<div id="did">
+	</div>
+	<ul>
+		<img src="images/1.jpg">
+		<img src="images/2.jpg">
+		<img src="images/3.jpg">
+		<img src="images/4.jpg">
+	</ul>
+</body>
+</html>
+<script type="text/javascript">
+    //cloneNode()方法创建指定节点的副本
+	var did=document.getElementById("did");
+	var list=document.getElementsByTagName("img");
+	for(var i=0;i<list.length;i++){
+		list[i].onclick=function(){
+			did.appendChild(this.cloneNode());
+		}
+	}
+</script>
