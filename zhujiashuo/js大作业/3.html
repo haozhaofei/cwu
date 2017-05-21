@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详情页</title>
+</head>
+<style type="text/css">
+  *{margin:0;padding:0}
+  a,h1,h2,h3,h4,h5,h6,p{font-size:100%}
+  li,ol,ul{list-style:none}
+  button{border:0 none;padding:0;cursor:pointer}
+  img,input,select{vertical-align:middle}
+  input,select{outline:none}
+  a,img,textarea{outline:none}
+  a{text-decoration:none}
+ /*top 菜单*/
+  .logo,.topNav{position:absolute;}
+  .logo{margin-top: 20px;}
+  .content,.header,.nav{width:1000px;margin:0 auto}
+  .header,.search_wrapper{height:78px;position:relative}
+  .search_input{position:absolute;width:298px;height:34px;border:1px solid #ccc;line-height:34px;margin-top: 20px;margin-left: 250px;}
+  .search_input input{position:absolute;left:0;top:0;width:249px;height:24px;line-height:24px;border:none;margin-left:14px;padding:5px 0;color:#666}
+  .searh_btn{display: none;}
+  .topNav{top:30px;right:0;width:402px}
+  .topNav ul{float:left;width:250px;border-right:1px solid #e6e6e6;padding-right:11px;text-align:right;display: inline-block;font-size: 12px;}
+  .topNav li{float:left;padding:0 15px}
+  .topNav li a{color:#777}
+  .topNav li a:hover{text-decoration:none;color:#009af3}
+  .login_area{position:relative;float:left;width:110px;margin-top:-5px;margin-left:30px}
+  .login_btn{float:left;display:block;width:48px;height:28px;line-height:28px;border:1px solid #169af3;border-radius:2px;text-align:center;color:#fff;cursor:pointer;background-color:#169af3;font-size: 12px;}
+  .login_btn:hover{color:#fff;border:1px solid #158fe1;background-color:#158fe1}
+  .login_area  a.regin_btn{border:1px solid #dbdbdb;background-color:#fff;margin-left:10px;color:#777;width: 48px;height: 28px;position: absolute;
+    text-align: center;}
+  .login_area a.regin_btn:hover{border:1px solid #009af3;background-color:#fff;color:#009af3}
+  .navWrap{position:relative;z-index:999;width:100%;height:55px;background-color:#2c323b}
+  .nav{width:1000px;position:relative;z-index:200}
+  .nav a{font-size:16px;color:#ddd}
+ .homeNav{display:inline-block}
+ .homeNav li{display:inline-block;height:55px;line-height:55px}
+ .normal{display:block;padding:0 30px}
+ .normal:hover{background-color:#0c8ed9;color:#fff}
+ .more{width:113px}
+ .more:hover{background-position:70px -65px;color:#fff;background-color:#0c8ed9;}
+ .more a{display:inline;height:20px;line-height:20px;margin-top:18px;margin-left:5px;padding:0 30px;}
+ .secondMenu{position:absolute;left:324px;top:55px;display:none;width:113px;height:146px;background-color:#252a32;z-index:99}
+ .secondMenu li,.navWrap .secondMenu li a{display:block;padding:0;height:36px;line-height:36px}
+ .secondMenu li{float:none;margin:0;width:113px}
+ .secondMenu li a{text-align:center;font-size:15px;color:#bbb;background:0 0;background-color:#252b34}
+ .secondMenu li a:hover{color:#fff;line-height:34px;border-top:1px solid #383d44;border-bottom:1px solid #383d44;background-color:#2d343d}
+  .subNav li a:hover{color:#14a9ff}
+   .subNav {margin-top: -35px;height:35px;position: absolute;margin-left: 570px;}
+   .subNav li{margin-left:30px;height:100%;display:inline-block;}
+   .subNav li a{padding-left:10px;font-size:13px;color:#bbb;}
+   .subNav li a.icon-nav1{background-position:0 -119px}.navWrap .subNav li a.icon-nav1 .hover,.navWrap .subNav li a.icon-nav1:hover{background-position:0 -101px}
+   .content{background-image: url(image/bei.jpg);width: 100%;}
+   .albumImg{margin-left: 250px;}
+   .audioName {float: left; white-space: nowrap;overflow: hidden;overflow-x: hidden;overflow-y: hidden;text-overflow: ellipsis;max-width: 420px;}
+    .songName {font-size: 24px;font-style: normal;color: #fff;width: 460px;font:20px/1.5 \5FAE\8F6F\96C5\9ED1,simsun,sans-serif; }
+   .songDetail {margin-top: 40px;position: absolute;}
+   .songDetail a{color: #fff;margin-left: -5px;}
+   .songDetail p{display: inline-block;margin-left: 3px;}
+   .songDetail span{}
+   .songContent {width: 460px;min-height: 500px;margin-top: -340px;margin-left: 640px;}
+   .jspPane{margin-top: 50px;}
+   input, body, button, html {font: 17px/1.5 \5FAE\8F6F\96C5\9ED1,simsun,sans-serif;}
+   .jspDrag {
+    background: #fff;
+    opacity: .2;
+    filter: alpha(opacity=20);
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.jspDrag, .jspTrack {
+    position: relative;
+}
+.songWordContent {
+    outline: 0;
+    height: 410px;
+    margin-top: 17px;
+    overflow: hidden;
+    font-size: 15px;
+    color: #fff;
+    line-height: 30px;
+}
+.module-bg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+    opacity: .3;
+    filter: alpha(opacity=30);
+    box-shadow: 0 -10px 20px #403f3f;
+
+}
+.player-module {
+    position: relative;
+    width: 960px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: -120px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+}
+.audio-module .controls-left {
+    position: absolute;
+    width: 160px;
+    height: 80px;
+}
+.icon-playbar-prev {
+    position: absolute;
+    margin-left: -7px;
+    margin-top: 22px;
+    width: 36px;
+    height: 36px;
+    background: url(image/btn.png);
+    background-position: 0 -143px;
+    background-position-x: 0px;
+    background-position-y: -143px;
+}
+.icon-playbar-play {
+    position: absolute;
+    margin-left: 43px;
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+	background: url(image/btn.png);
+}
+.icon-playbar-next {
+    position: absolute;
+    margin-left: 117px;
+    margin-top: 22px;
+    background: url(image/btn.png);
+    background-position: -144px -143px;
+    background-position-x: -144px;
+    background-position-y: -143px;
+    width: 36px;
+    height: 36px;
+}
+
+.bar-albumImg a, .bar-albumImg img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin-left: 200px;
+}
+.controls-bar {
+    margin-left: 270px;
+    width: 370px;
+}
+.like-song {
+    float: left;
+    width: 290px;
+    height: 24px;
+    overflow: hidden;
+}
+
+.controls-songName {
+    position: absolute;
+    width: 290px;
+    height: 24px;
+    overflow: hidden;
+    z-index: 99;
+    font:17px/1.5 \5FAE\8F6F\96C5\9ED1;
+}
+.coding-duration {
+    float: right;
+    height: 24px;
+}
+.duration {
+    color: #fff;
+    font-family: Tahoma,Arial,Verdana;
+    font-size: 12px;
+    opacity: .4;
+}
+ .bar {
+    margin-top: 11px;
+    height: 5px;
+    cursor: pointer;
+}
+.bar .bg, .bar .progress-bar {
+    cursor: pointer;
+    height: 3px;
+}
+.icon-playbar-bgleft {
+    background-position: -217px -200px;
+    background: url(image/btn.png);
+    display: block;
+    cursor: pointer;
+}
+.icon-playbar-bgright {
+	width: 2px;
+    height: 3px;
+    position: absolute;
+    margin-left: 371px;
+    background-position: -237px -200px;
+    background: url(image/btn.png);
+}
+.mode-volume-list {
+    position: absolute;
+    width: 260px;
+    height: 80px;
+}
+.volume-icon {
+    position: absolute;
+    margin-top: -2px;
+    width: 16px;
+    height: 50px;
+}
+.controls-right .mode-volume-list .volume-icon .icon-playbar-maxvox, .controls-right .mode-volume-list .volume-icon .icon-playbar-minvox, .controls-right .mode-volume-list .volume-icon .icon-playbar-silence {
+    position: absolute;
+    bottom: 0;
+}
+.icon-playbar-maxvox, .icon-playbar-silence {
+    width: 16px;
+    height: 16px;
+    background-position: -64px -195px;
+    background: url(image/btn.png);
+   display: block;
+    cursor: pointer;
+}
+.controls-right .mode-volume-list .icon-playbar-cycle, .controls-right .mode-volume-list .icon-playbar-randomcycle, .controls-right .mode-volume-list .icon-playbar-singlecycle {
+    float: left;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    margin-left: 70px;
+    margin-top: 32px;
+}
+.icon-playbar-cycle {
+    background-position: -64px -179px;
+    display: block;
+    cursor: pointer;
+    background: url(image/btn.png);
+}
+.btnDownloadClient {
+    display: block;
+    width: 230px;
+    height: 50px;
+    background: url(image/downlaod_bg.png) no-repeat;
+    cursor: pointer;
+    margin-left: 250px;
+    margin-top: 30px;
+}
+.jspPane {
+        height:400px;
+        overflow:auto;
+        width: 200px;
+        
+    }
+     
+ .jspPane::-webkit-scrollbar {
+        width:5px;
+        
+    }
+   #did{
+    position: absolute;
+   	width:450px;
+    height:9px;
+    background-color:pink;
+    border-radius:20px;
+    border:1px;
+    margin-top: 40px;
+   }
+
+   </style>
+</head>
+
+<body> 
+<bgsound src="song/张杰 - My Sunshine.mp3" type="video/mp3" />
+
+    <div class="header">
+    <div class="logo">
+      <a href="http://www.kugou.com/">
+         <img src="image/logo.png">
+      </a>
+    </div>
+  
+    <div >
+        <div class="search_input">
+          <input type="text" placeholder="张杰 这就是爱">
+          <div class="searh_btn">
+            <span>搜索</span>
+          </div>
+        </div>
+    </div>    
+    
+    <div class="topNav">
+        <ul>
+            <li><a href="">客服中心</a></li>
+            <li><a href="">招贤纳士</a></li>
+            <li><a href="">会员中心 </a></li>
+        </ul>
+        <div class="login_area">
+            <div  class="clearfix">
+              <a  href="" class="login_btn" >登录</a>
+              <a  href="" class="regin_btn" >注册</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="navWrap">
+    <div class="nav">
+        <ul class="homeNav">
+            <li><a class="normal" href="">首页</a></li>
+            <li><a class="normal"  href="">榜单</a></li>
+            <li><a class="normal" href="">下载客户端</a></li>
+            <li class="more" >
+            <a href="" class="iconMore">更多</a>
+            </li>
+        </ul>
+        <ul class="secondMenu" id="secondMenu">
+            <li><a href="">电台</a></li>
+            <li><a href="">MV</a></li>
+            <li><a href="">歌单</a></li>
+            <li><a href="">歌手</a></li>
+        </ul>
+        <ul class="subNav">
+            <li><a  href="" class="icon icon-nav1">音乐直播</a></li>
+            <li><a  href="" class="icon icon-nav2">酷狗LIVE</a></li>
+            <li><a  href="" class="icon icon-nav3">音乐人</a></li>
+            <li><a  href="" class="icon icon-nav4">游戏</a></li>
+            <li><a  href="" class="icon icon-nav5">商城</a></li>
+        </ul>
+    </div>
+</div>
+         <div class="content">
+            <div class="singerContent clearfix">
+                <div class="album fl">
+                    <div class="albumImg">
+                       <a class="fl" href="" title="拾">
+                       <img src="image/shi.jpg" width="260" height="260">
+                       </a>
+                    </div>
+                    <div class="btnArea2 clearfix">
+                        <a class="btnDownloadClient" ></a>
+                    </div>
+                </div>
+                <div class="songContent fl">
+                    <div class="songName clearfix" title="My Sunshine">
+                    	<span class="audioName">My Sunshine</span> 
+                    </div>
+                    <div class="songDetail clearfix">
+                        <p class="albumName fl">
+                            <span class="fontColor">专辑：</span>
+                            <a  href="" title="拾">拾</a>
+                        </p>
+                        <p class="singerName fl">
+                            <span class="fontColor">歌手：</span> 
+                            <a href="" title="张杰">张杰</a>
+                        </p>
+                    </div>
+                    <div class="displayNone"> 
+                       
+                    </div>
+                     <div class="songWordContent songWordContentM jsScrollable" style="height: 235px; padding: 0px; width: 460px;">
+                        <div class="jspContainer" style="width: 460px; height: 235px;">
+                            <div class="jspPane" style="padding: 0px; top: -1329px; width: 448px;">
+                                <p class="ie8FontColor">我们还没好好翻一翻</p>
+                                <p class="ie8FontColor">那错过的几年</p>
+                                <p class="ie8FontColor">那些迷惘路口有你陪我</p>
+                                <p class="ie8FontColor">流泪的夏天</p>
+                                <p class="ie8FontColor">阳光刺眼 有心跳的交响乐</p>
+                                <p class="ie8FontColor">想靠近一点</p>
+                                <p class="ie8FontColor">再看清一点 昨天</p>
+                                <p class="ie8FontColor">我们曾经尝试</p>
+                                <p class="ie8FontColor">不顾一切肤浅的快乐</p>
+                                <p class="ie8FontColor">才会一不小心的</p>
+                                <p class="ie8FontColor">让成长偷走了什么</p>
+                                <p class="ie8FontColor">时光 过客</p>
+                                <p class="ie8FontColor">还来不及去迎合</p>
+                                <p class="ie8FontColor">胸口的微热 总是恨不得</p>
+                                <p class="ie8FontColor">把你守护着</p>
+                                <p class="ie8FontColor">You are my pretty sunshine</p>
+                                <p class="ie8FontColor">没你的世界好好坏坏</p>
+                                <p class="ie8FontColor">只是无味空白</p>
+                                <p class="ie8FontColor">答应我 哪天走失了人海</p>
+                                <p class="ie8FontColor">一定站在最显眼路牌</p>
+                                <p class="ie8FontColor">等着我  一定会来</p>
+                                <p class="ie8FontColor">You are the pretty sunshine</p>
+                                <p class="ie8FontColor">of my life</p>
+                                <p class="ie8FontColor">等着我 不要再离开</p>
+                                <p class="ie8FontColor">怕是青春还没开始</p>
+                                <p class="ie8FontColor">就已划上了句点</p>
+                                <p class="ie8FontColor">怕是我们还没熟络</p>
+                                <p class="ie8FontColor">就已生疏的寒暄</p>
+                                <p class="ie8FontColor">往事浮现 没完的故事绵绵</p>
+                                <p class="ie8FontColor">时间还在变 我们还在变</p>
+                                <p class="ie8FontColor">但请你相信</p>
+                                <p class="ie8FontColor">You are my pretty sunshine</p>
+                                <p class="ie8FontColor">没你的世界好好坏坏</p>
+                                <p class="ie8FontColor">只是无味空白</p>
+                                <p class="ie8FontColor">答应我 哪天走失了人海</p>
+                                <p class="ie8FontColor">一定站在最显眼路牌</p>
+                                <p class="ie8FontColor">等着我  一定会来</p>
+                                <p class="ie8FontColor">You are my pretty sunshine</p>
+                                <p class="ie8FontColor">没你的世界好好坏坏</p>
+                                <p class="ie8FontColor">只是无味空白</p>
+                                <p class="ie8FontColor">答应我 哪天走失了人海</p>
+                                <p class="ie8FontColor">一定站在最显眼路牌</p>
+                                <p class="ie8FontColor">等着我 一定会来</p>
+                                <p class="ie8FontColor">You are the pretty sunshine</p>
+                                <p class="ie8FontColor">of my life</p>
+                                <p class="ie8FontColor playOver">等着我 不要再离开</p>
+                            </div>
+                            <span class="scroll"></span>
+                            <span id="sc"></span>
+                                   
+                    </div>
+                </div>
+            </div>
+            <div class="blurBgMask"></div>
+            <div id="blurBg"></div>
+        </div>
+        <!-- 播放条 -->
+        <div class="audio-module playerbg" id="audioModule">
+            <div class="module-bg"></div>
+            <div class="player-module">
+                <!--  模块左部分：上一首，播放，暂停，下一首  -->
+                <div class="controls-left">
+                    <a class="icon icon-playbar-prev" id="prev"></a>
+                    <button class="icon icon-playbar-play" onclick="play();" href="#" id="toggle"></button>
+                    <a class="icon icon-playbar-next" id="next"></a>
+                </div>
+                <!-- 专辑封面  -->
+                <div class="bar-albumImg">
+                    <img src="image/shi.jpg" width="60px" height="60px">
+                </div>
+                <!-- 模块中间部分：容器  -->
+                <div class="controls-bar">
+                    <!-- 模块中间部分：上半部分：歌曲信息 -->
+                    <div class="song-info">
+                        <!-- 歌曲名 -->
+                        <div class="like-song">
+                            <div class="controls-songName" title="">
+                                <span class="songName" id="songName">My Sunshine</span>
+                            </div>
+                            
+
+                        </div>
+                        <li id="did"></li> 
+                        <!-- 时长 -->
+                        <div class="coding-duration">
+                            <span class="duration ie8" id="duration"><i class="change-time">00:00</i> / <i class="all-time">04:26</i></span>
+                        </div>
+                    </div>
+                    <!-- 模块中间部分：下半部分：播放控制条容器 -->
+                    <div class="bar" id="bar">
+                        <!-- 播放进度背景（自适应） -->
+                        <div class="bg" id="progress_bg">
+                            <span class="icon icon-playbar-bgleft" id="bg_left"></span>
+                            <span class="bg-middle barBG" id="bg_middle"></span>
+                            <span class="icon icon-playbar-bgright" id="bg_right"></span>
+                        </div>
+                        <!-- 播放进度条（自适应） -->
+                        <div class="progress-bar" id="progress_bar">
+                            <span class="icon icon-playbar-progressleft" id="progress_left"></span>
+                            <div class="progress-middle" id="progress_middle">
+                                <span class="progress barProgress" id="progress"></span>
+                            </div>
+                        </div>
+                        <!-- 播放定位头（自适应） -->
+                        
+                </div>
+         
+            <div class="showHide-playbar">
+                <span class="showHide-bg"></span>
+                <span class="icon show-playbar-btn" id="showHide_playbar"></span>
+            </div>
+        </div>
+    </div>
+                   
+</body>
+</html>
+<script>
+	var isPlaying = false;
+	function play(){
+		var player = document.getElementById('test');
+		if(isPlaying){
+			player.pause();
+			player.src = '';
+			isPlaying = false;
+		}else{
+			player.src = '张杰 - My Sunshine.mp3';
+			player.play();
+			isPlaying = true;
+		}
+	}
+
+	function doStart(){
+                var m=0;
+               
+                var mytime = setInterval(function(){
+                    m++; 
+                    document.getElementById("did").style.width=m/10+"%";
+                    
+                    if(m==100){
+                        clearInterval(mytime); 
+                    }
+                },1000);
+            }
+
+            doStart();
+
+</script>

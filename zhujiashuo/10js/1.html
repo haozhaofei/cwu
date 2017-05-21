@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{list-style-type: none;}
+		ul li{height: 30px;background: #ccc;margin-top: 10px;line-height: 30px;}
+		ul li:hover{background: #f0c;}
+		ul li.cc{background: #fc0;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>断桥残雪</li>
+		<li>素颜</li>
+		<li>奇谈</li>
+		<li>老鼠爱大米</li>
+		<li>两只蝴蝶</li>
+		<li>千里之外</li>
+		<li>听妈妈的话</li>
+	</ul>
+	<button onclick="doDel()">删除</button>
+</body>
+</html>
+
+<script>
+	
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			
+			this.setAttribute("class","cc");
+		}
+	}
+
+	function doDel(){
+		var list = document.getElementsByTagName('li');
+		for(var i=0;i<list.length;i++){
+			if(list[i].className == "cc"){
+				
+				list[i].parentNode.removeChild(list[i]);
+				
+				i--;
+			}
+		}
+	}
+</script>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{list-style-type: none;}
+		ul li{height: 30px;background: #ccc;margin-top: 10px;line-height: 30px;}
+		ul li:hover{background: #f0c;}
+		ul li.cc{background: #fc0;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>断桥残雪</li>
+		<li>素颜</li>
+		<li>奇谈</li>
+		<li>老鼠爱大米</li>
+		<li>两只蝴蝶</li>
+		<li>千里之外</li>
+		<li>听妈妈的话</li>
+	</ul>
+	<button onclick="doDel()">删除</button>
+</body>
+</html>
+
+<script>
+	
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			
+			this.setAttribute("class","cc");
+		}
+	}
+
+	function doDel(){
+		var list = document.getElementsByTagName('li');
+		for(var i=0;i<list.length;i++){
+			if(list[i].className == "cc"){
+				
+				list[i].parentNode.removeChild(list[i]);
+				
+				i--;
+			}
+		}
+	}
+</script>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{list-style-type: none;}
+		ul li{height: 30px;background: #ccc;margin-top: 10px;line-height: 30px;}
+		ul li:hover{background: #f0c;}
+		ul li.cc{background: #fc0;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>断桥残雪</li>
+		<li>素颜</li>
+		<li>奇谈</li>
+		<li>老鼠爱大米</li>
+		<li>两只蝴蝶</li>
+		<li>千里之外</li>
+		<li>听妈妈的话</li>
+	</ul>
+	<button onclick="doDel()">删除</button>
+</body>
+</html>
+
+<script>
+	
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			
+			this.setAttribute("class","cc");
+		}
+	}
+
+	function doDel(){
+		var list = document.getElementsByTagName('li');
+		for(var i=0;i<list.length;i++){
+			if(list[i].className == "cc"){
+				
+				list[i].parentNode.removeChild(list[i]);
+				
+				i--;
+			}
+		}
+	}
+</script>

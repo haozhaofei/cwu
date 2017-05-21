@@ -4,11 +4,13 @@
 	<meta charset="UTF-8">
 	<title>酷狗音乐 - 音乐总有新玩法</title>
 	<style>
-		.main{
-			width: 100%;
+		.main{width: 100%;
 			min-width: 1000px;
 			margin: 0 auto;
 			position: relative;
+		}
+		.dh:hover,.rm li:hover,#m2:hover{
+			color:rgb(22,154,243);
 		}
 		#m2{
 			float:right;	
@@ -116,7 +118,29 @@
 			width:600px;
 			color:#fff;
 		}
-
+		.xiala li{
+			display:block;
+			float:left;
+			padding:5px 2px;
+			text-align:center;
+			width:60px;
+			height:30px;
+			background-color:#2c323b;
+			margin: 0;
+			padding:0;
+			display:inline;	
+		}	
+		 .xiala li:hover{
+			color:#999;
+			}
+		.xiala{
+			position:absolute;
+			margin:-1000px;
+			}
+		ul li:hover .xiala{
+			margin:auto;
+			display: block;
+			}
 		.rm li{
 			list-style:none;
 			float:left;
@@ -176,12 +200,13 @@
    			top:50%;
    			right:10px;
    		}
-   		#download img{}
+   		
 		#download{
 			width:100%;
 			height:70px;
 			text-align: center;
 			margin-top: -72px;
+			
 			
 		}
 		#part3{
@@ -324,6 +349,7 @@
 		#theLast{
 			margin-left: 150px;
 		}
+		#bofang{width:20px;height:20px;position:absolute;left:0px;top:0px;z-index:1;}
 	</style>
 </head>
 <body>
@@ -362,7 +388,13 @@
 					<li id="sy">首页</li>
 					<li id="sy1">榜单</li>
 					<li id="sy2">下载客户端</li>
-					<li id="sy3">更多^</li>
+					<li id="sy3">更多^
+					<ul  class="xiala">
+					<li>电台</li>
+					<br><li>MV</li></br>
+					<li>歌手</li>
+					<br><li>歌单</li></br>
+				</ul></li>
 				</ul>
 				</div>
 				<!--二级菜单-->
@@ -416,7 +448,9 @@
 				</div>
 				<div id="bottom1"> 
 					<div id="max">
+						<img id="bofang" src="images/sjx.png" alt="" />
 						<img id="left1" src="images/left.jpg" alt="" />
+						
 					</div>
 					<div id="small">
 						<div>
@@ -484,13 +518,6 @@
 </body>
 </html>
 <script>
-	var sy=document.getElementById("sy");
-	for(var i=1;i<4;i++){
-		var sy2=document.getElementById("sy"+i);
-		sy2.hover=function(){
-			sy.style.background="#2c323b";
-		}
-	}
 	var m=2;
 	function forward(){
 		for(var i=1;i<=4;i++){

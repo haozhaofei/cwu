@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 酷狗音乐-雅俗共赏</title>
+	<link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="title">
+    <!--header开始-->
+    <div class="header">
+      <h1 class="h">
+        <img src="images/logo.png" alt="" />
+      </h1>
+      <div >
+        <div class="wenben">
+          <input id="search" placeholder="王冕 勉为其难" type="text">
+        </div>
+      </div>
+      <div class="mid">
+        <ul class="nav" type="none">
+        <li class="dh">客服中心</li>
+        <li class="dh">招贤纳士</li>
+        <li class="dh1">会员中心</li>
+        </ul>
+      </div>
+      <div id="submit">
+        <div id="m1">登录</div>
+      </div>
+      <div id="submit2">
+        <div id="m2">注册</div>
+      </div>
+    </div>
+    <!--header结束-->
+
+    <!--搜索1开始-->
+    <div class="head1">
+      <div>
+        <div class="lm">
+          <ul>
+            <li id="sy">首页</li>
+            <li id="sy1">榜单</li>
+            <li id="sy2">下载客户端</li>
+            <li id="sy3">更多^
+      			<ul  class="xiala">
+      			<li>电台</li>
+      			<br><li>MV</li></br>
+      			<li>歌手</li>
+      			<br><li>歌单</li></br>
+      			</ul></li>
+          </ul>
+        </div>
+        <!--二级菜单-->
+        <div class="rm">
+          <ul>
+            <li><img src="images/t11.png" alt="" />商城</li>
+            <li><img src="images/t22.jpg" alt="" />游戏</li>
+            <li><img src="images/t33.png" alt="" />音乐人</li>
+            <li><img src="images/t44.png" alt="" />酷狗LIVE</li>
+            <li><img src="images/t55.png" alt="" />音乐直播</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div style="clear:both"></div>
+
+    
+    
+    <!--正文开始-->
+    <div class="page">
+    <!--main开始-->
+    <div class="main">
+      <div class="image">
+        <img src="images/vae+.jpg" width="260" height="260">
+      </div>
+      <!--sing开始-->
+      
+      <div class="sing">
+        <h3>雅俗共赏</h3>
+        <div class="singer">
+          <p>词曲:<a href="#">许嵩</a></p>
+        </div>
+        <!--text开始-->
+        <div class="text">
+            <div id="did">
+              <p>是否每一部戏都看得完整场</p>
+              <p>是否每一天过得都有多难忘 </p>
+              <p>表情迟钝可能因为比较爱想 </p>
+              <p>不擅长眉目表达 </p>
+              <p>总在盼望 总在失望</p>
+              <p>日子还不都这样</p>
+              <p>俗的无畏 雅的轻狂</p>
+              
+            </div>
+            <span class="scroll"></span>
+            <span id="sc"></span>
+          </div>
+          <!--text结束-->
+        </div>
+        <!--sing结束-->
+        
+        <span id="sf"><img src="images/arrowMored.png" alt="" /></span>
+    </div>
+    <!--main结束-->
+    
+    <!--bm开始-->
+    <div id="bm">
+      <span class="bkg"></span>
+      <!--bottom开始-->
+      <div class="bottom">
+        <span class="before"><img src="images/2.png" alt="" /></span>
+        <span class="now"><img src="images/btn2.png" alt="" /></span>
+        <span class="next"><img src="images/1.png" alt="" /></span>
+        <div class="img">
+          <img src="images/vae+.jpg" width="60" height="60">
+        </div>
+        <div class="pb">
+          <p><a style="font-size:14px">雅俗共赏 </a>
+          <a style="padding-left:70px;">00:00</a>/<a>02:33</a></p>
+          <span class="bgleft"></span>
+          <span class="bgmiddle">
+          <span id="bar"></span>
+          <span id="circle"></span>
+          </span>
+          <span class="bgright"></span>
+        </div>
+        <div class="tubiao">
+          <span id="voice"><img src="images/user_icon1.png" alt="" /></span>
+          <span id="cycle"><img src="images/user_icon2.png" alt="" /></span>
+          <span class="la"><img src="images/voice.gif" alt="" /></span>
+          <span class="share"><img src="images/user_icon1.png" alt="" /></span>
+          
+        </div>
+    </div>
+    <!--bottom结束-->
+    </div>
+    <!--bm结束-->
+  </div>
+  <!--page结束-->
+  <embed src="video/vae.mp3" hidden="true" autostart="true" loop="true">
+</body>
+</html>
+<script>
+  //滚动放映
+     var j=0;
+     var t=0;
+     var width=0;
+     var did=document.getElementById("did");
+     var list=did.getElementsByTagName("p");
+     var time;
+     function running(){
+      time=setInterval(function(){
+        for(var i=0;i<list.length;i++){
+          if(i==j){
+            list[i].style.color="#0c8ed9";
+          }else{
+            list[i].style.color="#ccc";
+          }
+        }
+        j++;
+        if(j==list.length){
+          j=0;
+        }
+        
+        <!--歌词结束-->
+
+        <!--滚动条开始-->
+        width+=17;
+        document.getElementById("bar").style.width=width+"px";
+        document.getElementById("circle").style.left=width+"px";
+        if(width>370){
+          clearInterval(time);
+        }
+         },2000)
+    }
+    running();
+    
+
+</script>
