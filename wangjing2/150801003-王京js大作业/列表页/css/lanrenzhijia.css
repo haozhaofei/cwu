@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* 代码整理：懒人之家 */
+body, ul, h2, p {
+	margin:0;
+	padding:0;
+}
+li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+#box {
+	width:1000px;
+	padding:10px 24px 20px;
+	background:#cff;
+	overflow:hidden;
+	margin:20px auto 0;
+}
+.left {
+	width:500px;
+	float:left;
+}
+.right {
+	width:500px;
+	float:right;
+}
+#box h2 {
+	height:38px;
+	border-bottom:1px solid #D2A1A1;
+	background:url(../images/H2_Bg.png) no-repeat 0 10px;
+	padding-left:20px;
+}
+#box h2 strong {
+	float:left;
+	line-height:38px;
+	color:#885050;
+	font-weight:normal;
+}
+#box h2 a {
+	float:right;
+	width:52px;
+	height:14px;
+	background:url(../images/a_bg.png) no-repeat;
+	font-size:12px;
+	text-indent:10px;
+	color:#fff;
+	line-height:12px;
+	font-weight:normal;
+	margin-top:10px;
+}
+#box li {
+	height:40px;
+	position:relative;
+	border-bottom:1px dashed #D1A1A1;
+}
+#box li div, #box li p {
+	height:40px;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+}
+#box li p {
+	background:#fff;
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+#box li div a, #box li div span {
+	line-height:30px;
+	font-size:12px;
+	height:30px;
+}
+#box li div a {
+	float:left;
+	background:url(../images/li_bg.gif) 8px 12px no-repeat;
+	padding-left:20px;
+	color:#7F5454;
+	width:172px;
+	overflow:hidden;
+}
+#box li div span {
+	padding-right:10px;
+	float:right;
+	color:#cf9494;
+}
