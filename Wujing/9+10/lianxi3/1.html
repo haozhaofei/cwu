@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		select{
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<select name="" id="do1" multiple=>
+		<option value="1">蔡文姬</option>
+		<option value="2">小乔</option>
+		<option value="3">安琪拉</option>
+		<option value="4">东皇太一</option>
+	</select>
+
+	<button onclick="doMove('do1','do2')"> >> </button>
+	<button onclick="doMove('do2','do1')"> << </button>
+
+	<select name="" id="do2" multiple=></select>
+</body>
+</html>
+<script>
+	function doMove (do1,do2) {
+		var select1 = document.getElementById(do1);
+
+		var select2 = document.getElementById(do2);
+
+		var list = select1.options;
+		for(var i =0;i<list.length;i++){
+			if(list[i].selected){
+				list[i].selected= false;
+				select2.add(list[i]);
+				i--;
+			}
+		}
+	}
+</script>

@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>酷狗音乐 - 音乐总有新玩法</title>
+	<link rel="shortcut icon" href="images/log.png" type="image/x-icon"/>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		.mainPage{
+		position: relative;
+	}
+	.header{
+		margin-left: 158px;
+		width: 75%;
+		margin-top: 30px;
+		height: 50px;
+		position: absolute;
+		z-index: 2;
+	}
+	.header .logo{
+		float: left;
+		margin-left: 0px;
+		width: 153px;
+	}
+	.header .login_in{
+		float: right;
+		margin-top: -35px;
+		height: 25px;
+		width: 170px;
+		border-left: 1px solid #ccc;
+	}
+	.login_in .denglu{
+		float: left;
+		width: 50px;
+		height: 30px;
+		background: #0080ff;
+		display: inline-block;
+		text-align: center;
+		line-height: 30px;
+		text-decoration:none;
+		color: #fff;
+		font-size: 14px;
+		margin-left: 60px;
+	}
+	.denglu:hover{
+		background: #0068cc;
+	}
+	.login_in .zhuce{
+		float: right;
+		width: 50px;height: 30px;
+		border:1px solid #ccc;
+		display:inline-block;
+		text-align: center;
+		line-height: 30px;
+		text-decoration:none;
+		color:#7b7b7b;
+		font-size: 14px;
+	}
+	.zhuce:hover{
+		border-color: #0080ff;
+		color:#0080ff; 
+	}
+	.search_input{
+		width: 300px;
+		margin-left: 205px;
+		margin-top:20px;
+		position: absolute;
+		margin-top: 4px;
+		height: 40px;
+	}
+	.search_input .input{
+		float: left;
+		height: 30px;
+		width: 255px;
+	}
+	.search_input .search_btn{
+		float: right;
+		margin-top: 7px;
+	}
+	.topNav{
+		height: 30px;
+		width:300px;
+		margin-left: 600px;
+		margin-top: 10px;
+	}
+	.topNav li{
+		float: left;
+		list-style: none;
+	}
+	.topNav li a{
+		text-decoration: none;
+		margin-left: 15px;
+		font-size: 13px;
+		color:#7b7b7b;
+	}
+	.sousuo{
+		font-size: 14px;
+	}
+	.sousuo:hover{
+		color:#0080ff; 
+	}
+	.list1 li a:hover{
+		color: #0080ff;
+	}
+	.navWrap{
+		height: 60px;
+		width: 100%;
+		background: #3c3c3c;
+		position: absolute;
+		margin-top: 90px;
+	}
+	.navWrap .homeNav{
+
+		float: left;
+		height: 57px;
+		line-height: 57px;
+		margin-left: 178px;
+		width: 400px;
+		position: absolute;
+	}
+	.homeNav li{
+		float: left;
+		list-style: none;
+		text-align: center;
+	}
+	.homeNav li a{
+		display: block;
+		padding: 0 20px;
+	}
+	.homeNav li a:hover{
+		background:#0080ff; 
+	}
+	.more_1{
+		width: 80px;
+
+	}
+	.secondNav{
+		float: none;
+		display: none;
+		width: 80px;
+		margin-left: 0px;
+		position: absolute;
+		z-index: 2;
+	}
+	.secondNav li a{
+		width: 39px;
+		background: #3c3c3c;
+	}
+	.more_1:hover .secondNav{
+		display: block;
+		position: absolute;
+		 }
+	.secondNav li a:hover{
+		background: #6c6c6c;
+	}
+	.navWrap .subNav{
+		float: right;
+		height: 57px;
+		line-height: 57px;
+		margin-right: 178px;
+	}
+	.subNav li{
+		float: left;
+	}
+	.subNav li a{
+		display: block;
+		padding: 0 20px;
+		font-size: 13px;
+		color: #bebebe;
+		text-decoration: none;
+	}
+	.homeNav li a{
+		color: #fff;
+		text-decoration: none;
+	}
+	.subNav li a:hover{
+		color: #0080ff;
+	}
+	.part1{
+		width: 100%;
+		height: 600px;
+		margin-top: 100px;
+		background:  #2c323b;
+		float: left;
+	}
+   .aside{
+		float: left;
+		margin-left: 200px;
+		margin-top: 150px;
+		width: 100px;
+		border: 1px solid  #2c323b;
+		border-radius: 25%;
+	}
+	.xinxi{
+		margin-top: 40px;
+		width: 300px;
+		border: 3px solid white;
+		border-radius: 30%;
+		text-align: center;
+	}
+	.aside a {
+    	font-size: 26px;
+    	color: white;
+    	text-decoration: none;
+    }
+    .rm{
+    	margin-left: 650px;
+    	color: white;
+    	margin-top: 50px;
+    }
+    .bofang{
+    	float: left;
+    	margin-left: 500px;
+    }
+    .topic{
+    	margin-top: 50px;
+    }
+    .aside .img{
+    	border-radius: 25%;
+    	
+    }
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<h1 class="logo"><a href="http://www.kugou.com/">
+			<img src="images/logo.png" alt="" width="100" height="35"></a></h1>
+			<div class="search_input">
+			<input type="text" placeholder="易烊千玺" class="input">
+			 			<div class="search_btn"><i></i><span class="sousuo">搜索</span></div>
+			</div>
+			<div class="topNav">
+				<ul class="list1">
+					<li><a href="#">客服中心</a></li>
+					<li><a href="#">招贤纳士</a></li>
+					<li><a href="#">会员中心</a></li>
+				</ul>
+			</div>
+			<div class="login_in"><a href="#" class="denglu">登录</a><a href="#" class="zhuce">注册</a></div>
+		</div>
+	
+	<div class="navWrap">
+		<div class="nav">
+			<ul class="homeNav">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">榜单</a></li>
+				<li><a href="#">下载客户端</a></li>
+				<li class="more_1"><a href="#">更多</a>
+					<ul class="secondNav">
+					<li><a href="#">电台</a></li>
+					<li><a href="#">MV</a></li>
+					<li><a href="#">歌手</a></li>
+					<li><a href="#">歌单</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<ul class="subNav">
+				<li><a href="#">音乐直播</a></li>
+				<li><a href="#">酷狗LIVE</a></li>
+				<li><a href="#">音乐人</a></li>
+				<li><a href="#">游戏</a></li>
+				<li><a href="#">商城</a></li>
+			</ul>
+			</div>	
+		</div>
+		<div class="part1">
+			<div class="aside">
+				<img src="images/wangyi.jpg" width="300" height="300" class="img">
+				<div class="xinxi">
+					<a href=""><p>下载这首歌</p></a>
+				</div>
+			</div>
+			<div class="rm">
+	<h3 class="topic">眉间雪</h3>
+	<small>作词：陆菱纱</small>
+	<div id="wrap" style="overflow:hidden;height:400px;">
+ 	 <ul id="box1">
+  				<li>眉间雪</li>
+						<li>作词</li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li>是不是 每种感情都不容沉溺放肆</li>
+						<li>交心淡如君子</li>
+						<li>只道是 那些无关风花雪月的相思</li>
+						<li>说来几人能知</li>
+						<li>院内冬初 昔年与你栽的桃树</li>
+						<li>叶落早做尘土</li>
+						<li>新雪来时 又将陈酒埋了几壶</li>
+						<li>盼你归来后对酌</li>
+						<li>穿过落雁修竹 看过月升日暮</li>
+						<li>你说有一日总会名扬天下实现你抱负</li>
+						<li>那时低头替你剑穗缠着新流苏</li>
+						<li>心愿未听清楚</li>
+						<li>还挂着流苏 是否应该满足</li>
+						<li>也为你缝好冬衣寄去书信一两句叮嘱</li>
+						<li>该庆幸至远至疏你我还未至陌路</li>
+						<li>是时光从来残酷</li>
+						<li>最害怕 酒肆闲谈时候听见你名字</li>
+						<li>语气七分熟识</li>
+						<li>回过神 笑问何方大侠姓名竟不知</li>
+						<li>笑容有多讽刺</li>
+						<li></li>
+						<li>斟酒独酌 细雪纷纷覆上眉目</li>
+						<li>清寒已然入骨</li>
+						<li>还忆最初 有你扯过衣袖轻拂</li>
+						<li>笑说雪融似泪珠</li>
+						<li>曾经相伴相护 说着初心不负</li>
+						<li>想起某一日陪你策马同游闹市中漫步</li>
+						<li>那时正逢扬州三月桃花铺满路</li>
+						<li>神情难免恍惚</li>
+						<li>江湖的尽头是否只剩孤独</li>
+						<li>都怪我玲珑心思执念太过以尘网自缚</li>
+						<li>前方太辽阔若问此去应去向何处</li>
+						<li>把来路当做归途</li>
+						<li>桃树下 那年落雪为你唱一段乐府</li>
+						<li>信了人不如故</li>
+						<li>只如今 茫茫大雪之中等着谁回顾</li>
+						<li>明知无人回顾</li>
+						<li>谁能初心不负</li>
+  </ul>
+  <ul id="box2"></ul>
+</div>
+</ul>
+<!-- 无他，放参考值尔 -->
+<div id="refer">
+</div>
+</div>
+			</div>
+		</div>
+	</div>
+<div class="bofang">
+	<audio src="images/mjx.mp3" controls="controls" loop="loop">
+		
+	</audio>
+</div>
+</body>
+</html>
+
+<script>
+	var speed=40;
+	var $$=function(id){
+		return document.getElementById(id);
+	}
+	$$('box2').innerHTML=box1.innerHTML;
+	function roll(){
+		if($$('box2').offsetTop-$$('wrap').scrollTop<=0)  { 
+			$$('wrap').scrollTop-=$$('box1').offsetHeight; 
+		}
+		else{
+			$$('wrap').scrollTop++ ;
+			$$('refer').innerHTML=$$('box2').offsetTop+' '+$$('wrap').offsetHeight+' '+$$('wrap').scrollTop  //无他，参考值尔
+		}
+  }
+var start=setInterval(roll,speed);
+$$('wrap').onmouseover=function() {clearInterval(start)};
+$$('wrap').onmouseout=function() {start=setInterval(roll,speed)};
+</script>
