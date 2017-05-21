@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul li{
+			list-style-type: none;
+		}
+		ul li{
+			height: 30px;
+			background: #ccc;
+			margin-top: 10px;
+			line-height: 30px;
+		}
+		ul li:hover{
+			background: #f0c;
+		}
+		ul li.cc{
+			background: #fc0;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>asd</li>
+		<li>fd</li>
+		<li>bggrr</li>
+		<li>eweerw</li>
+		<li>se</li>
+		<li>gfdd</li>
+	</ul>
+	<button onclick="doDel()">删除</button>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName('li');
+	for (var i = 0;i<list.length ; i++) {
+		list[i].onclick=function(){
+			this.className="cc";
+		}
+	}
+
+	function doDel(){
+		var list=document.getElementsByTagName('li');
+		for (var i = 0;i<list.length ; i ++) {
+			if (list[i].className=="cc") {
+				list[i].parentNode.removeChild(list[i]);
+				i--;
+			}
+		}
+	}
+</script>

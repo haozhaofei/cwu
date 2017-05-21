@@ -1,0 +1,897 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>酷狗飙升榜_排行榜_乐酷视频_酷狗网</title>
+	<link rel="shortcut icon" href="images/log.png" type="image/x-icon"/>
+	<style>
+		*{
+    		margin: 0;
+    		padding: 0;
+		}
+		.main{
+			position: relative;
+		}
+		.header{
+			margin-left: 150px;
+			width: 75%;
+			margin-top: 30px;
+			height: 50px;
+			position: absolute;
+			z-index: 2;
+		}
+		.header .logo{
+			float: left;
+			margin-left: 0px;
+			width: 153px;
+		}
+
+		.header .login_in{
+		float: right;
+		margin-top: -35px;
+		height: 25px;
+		width: 170px;
+		border-left: 1px solid #ccc;}
+	.login_in .denglu{
+		float: left;
+		width: 50px;
+		height: 30px;
+		background: #0080ff;
+		display: inline-block;
+		text-align: center;
+		line-height: 30px;
+		text-decoration:none;
+		color: #fff;
+		font-size: 14px;
+		margin-left: 60px;}
+	.denglu:hover{
+		background: #0068cc;}
+	.login_in .zhuce{
+		float: right;
+		width: 50px;height: 30px;
+		border:1px solid #ccc;
+		display:inline-block;
+		text-align: center;
+		line-height: 30px;
+		text-decoration:none;
+		color:#7b7b7b;
+		font-size: 14px;}
+	.zhuce:hover{
+		border-color: #0080ff;
+		color:#0080ff; }
+	.search_input{
+		width: 300px;
+		margin-left: 205px;
+		margin-top:20px;
+		position: absolute;
+		margin-top: 4px;
+		height: 40px;}
+	.search_input .input{
+		float: left;
+		height: 30px;
+		width: 255px;}
+	.search_input .search_btn{
+		float: right;
+		margin-top: 7px;}
+	.topNav{
+		height: 30px;
+		width:300px;
+		margin-left: 600px;
+		margin-top: 10px;}
+	.topNav li{
+		float: left;
+		list-style: none;}
+	.topNav li a{
+		text-decoration: none;
+		margin-left: 15px;
+		font-size: 13px;
+		color:#7b7b7b;}
+	.sousuo{font-size: 14px;}
+	.sousuo:hover{color:#0080ff; }
+	.list1 li a:hover{color: #0080ff;}
+	.navWrap{
+		height: 60px;
+		width: 100%;
+		background: #3c3c3c;
+		position: absolute;
+		margin-top: 100px;}
+	.navWrap .homeNav{
+		float: left;
+		height: 57px;
+		line-height: 60px;
+		margin-left: 178px;
+		width: 400px;
+		position: absolute;}
+	.homeNav li{
+		float: left;
+		list-style: none;
+		text-align: center;
+	}
+	.homeNav li a{
+		display: block;
+		padding: 0 20px;
+	}
+	.homeNav li a:hover{
+		background:#0080ff;
+    }
+	.more_1{width: 80px;}
+	.secondNav{
+		float: none;
+		display: none;
+		width: 80px;
+		margin-left: 0px;
+		position: absolute;
+		z-index: 2;}
+	.secondNav li a{
+		width: 39px;
+		background: #3c3c3c;}
+	.more_1:hover .secondNav{
+		display: block;
+		position: absolute;
+		 }
+	.secondNav li a:hover{
+		background: #6c6c6c;}
+	.navWrap .subNav{
+		float: right;
+		height: 57px;
+		line-height: 57px;
+		margin-right: 178px;}
+	.subNav li{
+		float: left;}
+	.subNav li a{
+		display: block;
+		padding: 0 20px;
+		font-size: 13px;
+		color: #bebebe;
+		text-decoration: none;}
+	.homeNav li a{
+		color: #fff;
+		text-decoration: none;}
+	.subNav li a:hover{color: #0080ff;}
+	.bangdan{background: #0080ff;}
+	.banner{
+		position: absolute;
+		width: 100%;
+		height: 400px;
+		margin-top: 107px;
+		z-index: 1;}
+	.banner .imgs img{
+		width: 100%;
+		z-index: 1;
+		position: absolute;
+		height: 100%;
+	}
+	.menu{
+		margin-left: 150px;
+		margin-top: 70px;
+		font-size: 26px;
+		
+	}
+	.menu li{
+		list-style: none;
+		color:red;
+
+	}
+	.biaoshen{
+		position: absolute;
+		width: 964px;
+		height: 800px;
+		margin-left: 180px;
+		margin-top: 90px;
+	}
+	.left_list1{
+		position: relative;
+		width: 250px;
+		height: 610px;
+		border: 1px solid #ccc;
+	}
+	.remen{
+		position: relative;
+		margin-top: 10px;
+		margin-left: 15px;
+	}
+	.remen p{
+		font-size: 18px;
+		color: #555;
+	}
+	.remen .pp0{
+		margin-top: -20px;
+		position: absolute;
+		color: black;
+	}
+	.remen .pp{
+		position: absolute;
+		margin-left: 200px;
+		margin-top: -33px;
+		font-size: 36px;
+		color: black;
+	}
+	.list_1{
+		width: 220px;
+		height: 555px;
+		margin-top: -40px;
+	}
+	.list_1 img{
+		margin-left: 20px;
+		margin-top: 20px;
+	}
+	.list_1 li{
+		list-style: none;
+	}
+	.limg_1,.limg_2,.limg_3,.limg_4,.limg_5,.limg_6,.limg_7,.limg_8,.limg_9,.limg_10,.limg_11,.limg_12,.limg_13,.limg_14{
+		position: relative;
+		width: 250px;
+		height: 35px;
+		margin-top: 5px;
+	}
+	.limg_2:hover,.limg_3:hover,.limg_4:hover,.limg_5:hover,.limg_6:hover,.limg_7:hover,.limg_8:hover,.limg_9:hover,.limg_10:hover,.limg_11:hover,.limg_12:hover,.limg_13:hover,.limg_14:hover{
+		width: 250px;
+		height: 35px;
+		background: #f5f8fb;
+	}
+	
+	.limg_1{
+		background: #169af3;
+	}
+	.limg_2 p,.limg_3 p,.limg_4 p,.limg_5 p,.limg_6 p,.limg_7 p,.limg_8 p,.limg_9 p,.limg_10 p,.limg_11 p,.limg_12 p,.limg_13 p,.limg_14 p{
+		position: relative;
+		margin-left: 45px;
+		margin-top: -20px;
+		color: #7c7c7c;
+		font-size: 15px;
+	}
+	.limg_1 p{
+		position: relative;
+		margin-left: 45px;
+		margin-top: -20px;
+		color: white;
+		font-size: 15px;
+	}
+	.limg_2 p:hover,.limg_3 p:hover,.limg_4 p:hover,.limg_5 p:hover,.limg_6 p:hover,.limg_7 p:hover,.limg_8 p:hover,.limg_9 p:hover,.limg_10 p:hover,.limg_11 p:hover,.limg_12 p:hover,.limg_13 p:hover,.limg_14 p:hover{
+		color: #169af3;
+	}
+	.left_list2{
+		position: relative;
+		width: 250px;
+		height: 405px;
+		border: 1px solid #ccc;
+		margin-top: -30px;
+		border-top: none;
+	}
+	.remen2{
+		position: relative;
+		margin-left: 15px;
+	}
+	.remen2 .pp1{
+		color: black;
+	}
+	.remen2 p{
+		position: relative;
+		font-size: 18px;
+		color: #555;
+		margin-top: 30px;
+		padding-top: 10px;
+	}
+	.remen2 .pp2{
+		position: relative;
+		margin-left: 200px;
+		margin-top: -46px;
+		font-size: 36px;
+		color: black;
+	}
+	.list_2{
+		width: 220px;
+		height: 410px;
+		margin-top: 20px;
+	}
+	.list_2 img{
+		margin-left: 20px;
+		margin-top: 10px;
+	}
+	.list_2 li{
+		list-style: none;
+	}
+	.limg_20,.limg_21,.limg_22,.limg_23,.limg_24,.limg_25,.limg_26,.limg_27,.limg_28{
+		position: relative;
+		width: 250px;
+		height: 35px;
+		margin-top: 5px;
+	}
+	.limg_20:hover,.limg_21:hover,.limg_22:hover,.limg_23:hover,.limg_24:hover,.limg_25:hover,.limg_26:hover,.limg_27:hover,.limg_28:hover{
+		width: 250px;
+		height: 35px;
+		background: #f5f8fb;
+	}
+	.limg_20 p,.limg_21 p,.limg_22 p,.limg_23 p,.limg_24 p,.limg_25 p,.limg_26 p,.limg_27 p,.limg_28 p{
+		position: relative;
+		margin-left: 45px;
+		margin-top: -20px;
+		color: #7c7c7c;
+		font-size: 15px;
+	}
+	.limg_20 p:hover,.limg_21 p:hover,.limg_22 p:hover,.limg_23 p:hover,.limg_24 p:hover,.limg_25 p:hover,.limg_26 p:hover,.limg_27 p:hover,.limg_28 p:hover{
+		color: #169af3;
+	}
+	.left_list3{
+		position: relative;
+		width: 250px;
+		height:245px;
+		border: 1px solid #ccc;
+		margin-top: -30px;
+		border-top: none;
+	}
+	.remen3{
+		position: relative;
+		margin-left: 15px;
+	}
+	.remen3 p{
+		position: relative;
+		font-size: 18px;
+		color: #555;
+		margin-top: 30px;
+		padding-top: 10px;
+	}
+	.remen3 .pp3{
+		color: black;
+	}
+	.remen3 .pp4{
+		position: relative;
+		margin-left: 200px;
+		margin-top: -46px;
+		font-size: 36px;
+		color: black;
+	}
+	.list_3{
+		width: 220px;
+		height: 410px;
+		margin-top: -40px;
+	}
+	.list_3 img{
+		margin-left: 20px;
+		margin-top: 10px;
+	}
+	.list_3 li{
+		list-style: none;
+	}
+	.limg_30,.limg_31,.limg_32,.limg_33,.limg_34{
+		position: relative;
+		width: 250px;
+		height: 35px;
+		margin-top: 5px;
+	}
+	.limg_30:hover,.limg_31:hover,.limg_32:hover,.limg_33:hover,.limg_34:hover{
+		width: 250px;
+		height: 35px;
+		background: #f5f8fb;
+	}
+	.limg_30 p,.limg_31 p,.limg_32 p,.limg_33 p,.limg_34 p{
+		position: relative;
+		margin-left: 45px;
+		margin-top: -20px;
+		color: #7c7c7c;
+		font-size: 15px;
+	}
+	.limg_30 p:hover,.limg_31 p:hover,.limg_32 p:hover,.limg_33 p:hover,.limg_34 p:hover{
+		color: #169af3;
+	}
+	.right_list{
+		position: relative;
+		width: 700px;
+		height: 1300px;
+		margin-left: 300px;
+		margin-top: -1266px;
+	}
+	.PlayAll{
+		position: relative;
+		width: 700px;
+		height: 60px;
+		border-bottom: 1px solid #ccc;
+	}
+	.PlayAll h2{
+		color: #333;
+		font-size: 26px;
+	}
+	.PlayAll .p1{
+		position: relative;
+		margin-left: 160px;
+		margin-top: -45px;
+		color: #999;
+	}
+	.PlayAll .play{
+		position: relative;
+		margin-left: 580px;
+		margin-top: 10px;
+		width: 90px;
+		height: 30px;
+		text-align: center;
+		font-size: 15px;
+		border: 1px solid #158fe1;
+		border-radius: 5%;
+		background: #169af3;
+	}
+	.play p{
+		margin-top:6px;
+	}
+	.play:hover{
+		background: #158fe1;
+	}
+	.play a{
+		text-decoration: none;
+		color: white;
+	}
+	.checks{
+		position: relative;
+		width: 700px;
+		height: 1218px;
+	}
+	.checkAll li{
+		list-style-type: none;
+		width: 700px;
+		height: 39px;
+		font-size: 14px;
+		color: #42426b;
+		margin-left: -40px;
+		padding-top: 17px;
+		padding-left: 5px;
+	}
+	.checkAll li:hover{
+		background: #f5f8fb;
+	}
+	.span1,.span2,.span3,.span4,.span5,.span6,.span7,.span8,.span9,.span10,.span11,.span12,.span13,.span14,.span15,.span16,.span17,.span18,.span19,.span20,.span21{
+		color: red;
+		font-size: 20px;
+	}
+	.span_1,.span_2,.span_3,.span_4,.span_5,.span_6,.span_7,.span_8,.span_9,.span_10,.span_11,.span_12,.span_13,.span_14,.span_15,.span_16,.span_17,.span_18,.span_19,.span_20,.span_21{
+		border: 0.5px solid red;
+		background: #f64152;
+		font-size: 8px;
+		border-radius: 25%;
+		color: white;
+		margin-right: 7px;
+	}
+	.checkAll p{
+		margin-left: 660px;
+		margin-top: -20px;
+	}
+	.checkAll li{
+		border-bottom: 1px solid #f1f1f1;
+	}
+	.checkAll li:hover{
+		color: #009af3;
+	}
+	#icon_1,#icon_2,#icon_3,#icon_4,#icon_5,#icon_6,#icon_7,#icon_8,#icon_9,#icon_10,#icon_110,#icon_12,#icon_13,#icon_14,#icon_15,#icon_16,#icon_17,#icon_18,#icon_19,#icon_20,#icon_21{
+		padding: 26px;
+		margin: 0px; 
+		height: 15px;
+		width: 15px;
+		position: relative;
+		margin-top: -95px;
+		margin-left: 550px;
+		display: none;
+	}
+	#icon_11,#icon_22,#icon_33,#icon_44,#icon_55,#icon_66,#icon_77,#icon_88,#icon_99,#icon_111,#icon_222,#icon_333,#icon_444,#icon_555,#icon_666,#icon_777,#icon_888,#icon_999,#icon_1111,#icon_2222,#icon_3333{
+		padding: 45px;
+		height: 15px;
+		width: 15px;
+		position: relative;
+		margin-left: -75px;
+		margin-top: -89px;
+		margin-left: 560px;
+		display: none;
+	}
+	.checkAll li:hover #icon_1{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_11{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_2{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_22{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_3{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_33{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_4{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_44{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_5{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_55{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_6{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_66{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_7{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_77{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_8{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_88{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_9{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_99{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_10{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_111{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_110{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_222{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_12{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_333{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_13{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_444{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_14{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_555{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_15{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_666{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_16{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_777{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_17{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_888{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_18{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_999{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_19{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_1111{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_20{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_2222{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_21{
+		display: inline-block;
+	}
+	.checkAll li:hover #icon_3333{
+		display: inline-block;
+	}
+	.end{
+		position: relative;
+		margin-left: 300px;
+		height: 30px;
+		width: 920px;
+		margin-top: 1450px;
+	}
+	.end p{
+		color: #555;
+		font-size: 16px;
+		text-align: center;
+	}
+	.likeButton{
+		position: relative;
+		margin-left:600px;
+		height: 30px;
+		width: 100px;
+		margin-top:-24px;
+		border: 1px solid #169af3;
+		background: #169af3;
+		border-radius: 8%;
+		text-align: center;
+	}
+	.likeButton a{
+		text-decoration: none;
+		color: white;
+	}
+	.likeButton:hover{
+		background: #158fe1;
+	}
+	.part_8{
+		width: 100%;
+		height: 250px;
+		margin-top: 50px; 
+		position: absolute;
+		background: #2c323b;
+	}
+	.part_8 .part_8_item{
+		height: 50px;
+		width: 100%;
+		line-height: 50px;
+	}
+	.f{
+		margin-left: 130px;
+	}
+	.formal ,.f{
+		display: inline-block;
+		width: 90px;
+		height: 20px;
+		line-height: 20px;
+		border-right:1px solid #e0e0e0;
+		float: left;
+		text-align: center;
+		margin-top: 15px;
+	}
+	.l{
+		display: inline-block;
+		width: 110px;
+		height: 20px;
+		line-height: 20px;
+		float: left;
+		text-align: center;
+		margin-top: 15px;
+	}
+	.formal a ,.f a,.l a{
+		display: inline-block;
+	}
+	.formal a:hover{
+		color: #0080ff;
+	}
+	.f a:hover{
+		color: #0080ff;
+	}
+	.l a:hover{
+		color: #0080ff;
+	}
+	.part_8_item li a {
+		text-decoration: none;
+		color: #e0e0e0;
+		font-size: 13px;
+	}
+	.part_8_content{
+		margin-bottom: 0;
+		width: 100%;
+		height: 200px;
+		text-align: center;
+
+	}
+	.part_8_content p{
+		display: inline-block;
+		height: 20px;
+		margin-top: 10px;
+		width: 800px;
+		line-height: 20px;
+		font-size: 14px;
+		color: #e0e0e0;
+	} 
+	.part_8_content p a{
+		text-decoration: none;
+		font-size: 14px; 
+		color: #e0e0e0;
+	}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<h1 class="logo"><a href="http://www.kugou.com/"><img src="images/logo.png" alt="" width="120" height="40"></a></h1>
+			<div class="search_input">
+			<input type="text" placeholder="易烊千玺" class="input">
+			 			<div class="search_btn"><i></i><span class="sousuo">搜索</span></div>
+			</div>
+			<div class="topNav">
+				<ul class="list1">
+					<li><a href="#">客服中心</a></li>
+					<li><a href="#">招贤纳士</a></li>
+					<li><a href="#">会员中心</a></li>
+				</ul>
+			</div>
+			<div class="login_in"><a href="#" class="denglu">登录</a><a href="#" class="zhuce">注册</a></div>
+		</div>
+
+		<div class="navWrap">
+		<div class="nav">
+			<ul class="homeNav">
+				<li><a href="#">首页</a></li>
+				<li><a href="#" class="bangdan">榜单</a></li>
+				<li><a href="#">下载客户端</a></li>
+				<li class="more_1"><a href="#">更多</a>
+					<ul class="secondNav">
+					<li><a href=" ">电台</a></li>
+					<li><a href=" ">MV</a></li>
+					<li><a href=" ">歌手</a></li>
+					<li><a href=" ">歌单</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<ul class="subNav">
+				<li><a href="#">音乐直播</a></li>
+				<li><a href="#">酷狗LIVE</a></li>
+				<li><a href="#">音乐人</a></li>
+				<li><a href="#">游戏</a></li>
+				<li><a href="#">商城</a></li>
+			</ul>
+		</div>	
+	<div class="biaoshen">
+		<div class="left_list">
+			<div class="left_list1">
+				<div class="remen">
+					<p class="pp0">热门榜单</p>
+					<p class="pp">^</p>
+				</div>
+				<div class="list_1">
+					<li class="limg_1"><img src="images/1.png"><p>酷狗飙升榜</p></li>
+					<li class="limg_2"><img src="images/2.png"><p>酷狗TOP500</p></li>
+					<li class="limg_3"><img src="images/3.png"><p>网络红歌榜</p></li>
+					<li class="limg_4"><img src="images/004.jpg"><p>DJ红歌榜</p></li>
+					<li class="limg_5"><img src="images/5.png"><p>华语新歌榜</p></li>
+					<li class="limg_6"><img src="images/6.png"><p>欧美新歌榜</p></li>
+					<li class="limg_7"><img src="images/7.png"><p>韩国新歌榜</p></li>
+					<li class="limg_8"><img src="images/8.png"><p>日本新歌榜</p></li>
+					<li class="limg_9"><img src="images/009.jpg"><p>金曲捞榜</p></li>
+					<li class="limg_10"><img src="images/10.png"><p>原唱音乐榜</p></li>
+					<li class="limg_11"><img src="images/11.png"><p>粤语新歌榜</p></li>
+					<li class="limg_12"><img src="images/12.png"><p>酷狗分享榜</p></li>
+					<li class="limg_13"><img src="images/13.png"><p>5sing音乐榜</p></li>
+					<li class="limg_14"><img src="images/14.png"><p>繁星音乐榜</p></li>
+				</div>
+			</div>
+			<div class="left_list2">
+				<div class="remen2">
+					<p class="pp1">特色音乐榜</p>
+					<p class="pp2">^</p>
+				</div>
+				<div class="list_2">
+					<li class="limg_20"><img src="images/20.png"><p>校园歌曲榜</p></li>
+					<li class="limg_21"><img src="images/21.png"><p>中文DJ</p></li>
+					<li class="limg_22"><img src="images/22.png"><p>洗脑神曲</p></li>
+					<li class="limg_23"><img src="images/23.png"><p>百大DJ</p></li>
+					<li class="limg_24"><img src="images/24.png"><p>伤感网络情歌</p></li>
+					<li class="limg_25"><img src="images/25.png"><p>车载音乐</p></li>
+					<li class="limg_26"><img src="images/26.png"><p>KTV</p></li>
+					<li class="limg_27"><img src="images/27.png"><p>影视金曲</p></li>
+					<li class="limg_28"><img src="images/28.png"><p>纯音乐</p></li>
+				</div>
+			</div>
+			<div class="left_list3">
+				<div class="remen3">
+					<p class="pp3">全球榜</p>
+					<p class="pp4">^</p>
+				</div>
+				<div class="list_3">
+					<li class="limg_30"><img src="images/30.png"><p>美国BillBoard榜</p></li>
+					<li class="limg_31"><img src="images/31.png"><p>英国单曲榜</p></li>
+					<li class="limg_32"><img src="images/32.png"><p>日本公信榜</p></li>
+					<li class="limg_33"><img src="images/33.png"><p>韩国M-net音乐榜</p></li>
+					<li class="limg_34"><img src="images/34.png"><p>中国TOP排行榜</p></li>
+				</div>
+			</div>
+		</div>
+		<div class="right_list">
+			<div class="PlayAll">
+				<h2>酷狗飙升榜</h2>
+				<p class="p1">2017-05-14更新</p>
+				<div class="play">
+					<p><a href="">播放全部</a></p>
+				</div>
+			</div>
+			<div class="checks">
+				<ul class="checkAll">
+					<li><input id="li1" type="checkbox" onclick="getAll()" />全选</li>
+					<li><input type="checkbox"/><span class="span1">1 </span><span class="span_1">new</span> 何洁 - 有没有(Live)<p>4:20</p><img  id="icon_1" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_11"></li>
+					<li><input type="checkbox"/><span class="span2">2 </span><span class="span_2">new</span>李克勤、陈冰 - 大雨(Live)<p>3:54</p><img  id="icon_2" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_22"></li>
+					<li><input type="checkbox"/><span class="span3">3 </span><span class="span_3">new</span>陈冰 - 大雨(Live)<p>2:54</p><img  id="icon_3" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_33"></li>
+					<li><input type="checkbox"/><span class="span4">4 </span><span class="span_4">new</span>薛之谦、何洁 - 有没有(Live)<p>4:15</p><img  id="icon_4" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_44"></li>
+					<li><input type="checkbox"/><span class="span5">5 </span><span class="span_5">new</span>何洁 - 小情书【小情书推广曲】<p>4:15</p><img  id="icon_5" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_55"></li>
+					<li><input type="checkbox"/><span class="span6">6 </span><span class="span_6">new</span>何洁 - 冲动(Live)<p>4:27</p><img  id="icon_6" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_66"></li>
+					<li><input type="checkbox"/><span class="span7">7 </span><span class="span_7">new</span>沙宝亮、陶晶莹 - 没有爱情藏得住(Live)<p>4:41</p><img  id="icon_7" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_77"></li>
+					<li><input type="checkbox"/><span class="span8">8 </span><span class="span_8">new</span>沙宝亮 - 没有爱情藏得住(Live)<p>4:29</p><img  id="icon_8" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_88"></li>
+					<li><input type="checkbox"/><span class="span9">9 </span><span class="span_9">new</span>李克勤 - 大雨<p>5:44</p><img  id="icon_9" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_99"></li>
+					<li><input type="checkbox"/><span class="span10">10 </span><span class="span_10">new</span>李宇春 - 好久不见<p>4:15</p><img  id="icon_10" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_111"></li>
+					<li><input type="checkbox"/><span class="span11">11 </span><span class="span_11">new</span>金志文、刘心 - 妈妈做的面(Live)<p>4:23</p><img  id="icon_110" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_222"></li>
+					<li><input type="checkbox"/><span class="span12">12 </span><span class="span_12">new</span>乔欣 - 想做你的疯女孩(Live)<p>4:10</p><img  id="icon_12" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_333"></li>
+					<li><input type="checkbox"/><span class="span13">13 </span><span class="span_13">new</span>SING 女团 - 飞过时间的海<p>2:51</p><img  id="icon_13" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_444"></li>
+					<li><input type="checkbox"/><span class="span14">14 </span><span class="span_14">new</span>戴荃 - 哪咤<p>3:49</p><img  id="icon_14" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_555"></li>
+					<li><input type="checkbox"/><span class="span15">15 </span><span class="span_15">new</span>乔欣、邓伦 - 我们的小世界(Live)<p>3:54</p><img  id="icon_15" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_666"></li>
+					<li><input type="checkbox"/><span class="span16">16 </span><span class="span_16">new</span>倪尔萍 - 儿行千里妈牵挂<p>4:46</p><img  id="icon_16" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_777"></li>
+					<li><input type="checkbox"/><span class="span17">17 </span><span class="span_17">new</span>防弹少年团(BTS) - 血、汗、镭<p>5:00</p><img  id="icon_17" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_888"></li>
+					<li><input type="checkbox"/><span class="span18">18 </span><span class="span_18">new</span>黑鸭子 - 母亲<p>5:19</p><img  id="icon_18" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_999"></li>
+					<li><input type="checkbox"/><span class="span19">19 </span><span class="span_19">new</span>牛奶咖啡 - 咖喱咖啡<p>3:39</p><img  id="icon_19" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_1111"></li>
+					<li><input type="checkbox"/><span class="span20">20 </span><span class="span_20">new</span>琼雪卓玛 - 母亲<p>4:11</p><img id="icon_20" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_2222"></li>
+					<li>
+					<input type="checkbox"/>
+					<span class="span21">21 </span>
+					<span class="span_21">new</span>LINKIN PAPK - Battle Symphony<p>4:04</p><img  id="icon_21" src="images/icon_1.jpg" id="icon_2" ><img src="images/icon_3.jpg" id="icon_3333"></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<div class="end">
+		<p>查看更多内容，请下载客户端</p>
+		<p class="likeButton"><a href="">立即下载</a></p>
+	</div>
+	<div class="part_8">
+		<div class="part_8_item">
+			<ul>
+				<li class="f"><a href="#">关于酷狗</a></li>
+				<li class="formal"><a href="#">监督举报</a></li>
+				<li class="formal"><a href="#">广告服务</a></li>
+				<li class="formal"><a href="#">版权指引</a></li>
+				<li class="formal"><a href="#">隐私政策</a></li>
+				<li class="formal"><a href="#">用户服务协议</a></li>
+				<li class="formal"><a href="#">推广合作</a></li>
+				<li class="formal"><a href="#">酷狗音乐人</a></li>
+				<li class="formal"><a href="#">酷狗音乐推</a></li>
+				<li class="formal"><a href="#">招聘信息</a></li>
+				<li class="formal"><a href="#">客服中心</a></li>
+				<li class="l"><a href="#">用户体验提升计划</a></li>
+			</ul>
+		</div>
+		<div class="part_8_content">
+			<p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>
+			<p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339<a href="#">粤ICP备09017694号-2</a></p>
+			<p>广播电视节目制作经营许可证（粤）字第01270号 营业性演出许可证穗天演440106026</p>
+			<p>穗公网监备案证第44010650010167 互联网药品信息服务资格证编号（粤）-非经营性-2012-0018</p>
+			<p>Copyright © 2004-2017 KuGou-Inc.All Rights Reserved
+			<img src="images/lst2.png" width="20" height="20"></p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<script>
+	function getAll(){
+		var li1 = document.getElementById('li1');
+		var list = document.getElementsByTagName("input");
+		for(var i=0;list.length;i++){
+			if(list[i].type == "checkbox"){
+				if(li1.checked == true){
+					list[i].checked=true;
+				}else{
+					list[i].checked=false;
+				}
+			
+			}
+		}
+	}
+	</script>

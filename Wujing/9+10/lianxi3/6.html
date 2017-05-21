@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul li{
+			list-style-type: none;
+		}
+		ul li{
+			height: 30px;
+			background: #ccc;
+			margin-top: 10px;
+			line-height: 30px;
+		}
+		ul li:hover{
+			background: #f0c;
+		}
+		ul li.cc{
+			background: #fc0;
+		}
+	</style>
+</head>
+<body>
+	<ul id="uid">
+		<li>asd</li>
+		<li>fd</li>
+		<li>bggrr</li>
+		<li>eweerw</li>
+		<li>se</li>
+		<li>gfdd</li>
+	</ul>
+	歌曲：<input type="text" id="nid" size="30">
+	<button onclick="doAdd()">添加</button>
+</body>
+</html>
+<script>
+	function doAdd(){
+		var name=document.getElementById('nid').value;
+		var tj=document.createTextNode(name);
+		var li=document.createElement('li');
+		var ul=document.getElementById('uid');
+		li.appendChild(tj);
+		ul.appendChild(li);
+	}
+
+</script>
