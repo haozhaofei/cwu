@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id="uid">
+		<li>白起</li>
+		<li>赵云</li>
+		<li>关羽</li>
+	</ul>
+	<button onclick="doChange()">变</button>
+</body>
+</html>
+<script>
+	
+	function doChange(){
+		var oUid = document.getElementById('uid').childNodes[1];
+		var item = document.createTextNode("诸葛亮");
+		oUid.replaceChild(item,oUid.childNodes[0]);
+
+		var oUid = document.getElementById('uid').childNodes[3];
+		var item = document.createTextNode("钟无艳");
+		oUid.replaceChild(item,oUid.childNodes[0]);
+	}
+</script>
