@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id="uid">
+		<li>一首歌</li>
+		<li>两首歌</li>
+		<li>三首歌</li>
+		<li>四首歌</li>
+	</ul>	
+</body>
+</html>
+<script>
+	//通过html dom获取所有的li节点
+	var list = document.getElementById('uid').getElementsByTagName('li');
+	//xml dom 获取所有li节点
+	var list2 = document.getElementById("uid").childNodes;
+	alert(list2.length);
+</script>
